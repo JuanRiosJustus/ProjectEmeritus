@@ -1,0 +1,217 @@
+[2025-04-13 09:50:37] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 09:50:37] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 09:50:37] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 09:50:37] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 09:50:37] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 09:50:37] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 09:50:37] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 09:50:37] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 09:50:37] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 09:50:37] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 09:50:37] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 09:50:37] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 09:50:37] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 09:50:37] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 09:50:37] [INFO] [Component] Setting dragon_Roqw_4e83dbd5-bde8-459a-a263-b727e6e6ff19 on to {"spawn_region":[],"collider":"","unit":"dragon_Roqw_4e83dbd5-bde8-459a-a263-b727e6e6ff19","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Roqw into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting dragon_Toxa_b3affbc8-8c2b-4103-bb0c-226d87682792 on to {"spawn_region":[],"collider":"","unit":"dragon_Toxa_b3affbc8-8c2b-4103-bb0c-226d87682792","column":0,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Toxa into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting earth_dragon_Maeyy_f9f68448-dbe8-47f5-a817-28bc6758d254 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Maeyy_f9f68448-dbe8-47f5-a817-28bc6758d254","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Maeyy into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting dark_dragon_Weaiik_cdfe4831-a859-40d0-8c98-e80157eb0bf6 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Weaiik_cdfe4831-a859-40d0-8c98-e80157eb0bf6","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Weaiik into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting light_dragon_Heiiu_5ab474bc-46da-4a97-bfa0-1e5b3adca45c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Heiiu_5ab474bc-46da-4a97-bfa0-1e5b3adca45c","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Heiiu into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting fire_dragon_Papiun_7ac52dd4-b537-437e-ac71-3259d9f1705b on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Papiun_7ac52dd4-b537-437e-ac71-3259d9f1705b","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Papiun into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting air_dragon_Pihnjk_99054a86-7f0d-4a0a-92a7-f91b41e79c0c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Pihnjk_99054a86-7f0d-4a0a-92a7-f91b41e79c0c","column":6,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Pihnjk into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting fire_dragon_Xihk_48a1b768-0d16-4c8e-adb7-cf87caa10d43 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xihk_48a1b768-0d16-4c8e-adb7-cf87caa10d43","column":7,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Xihk into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting air_dragon_Pozi_fe1e89e6-30cc-45e5-b051-9fe24c633b90 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Pozi_fe1e89e6-30cc-45e5-b051-9fe24c633b90","column":6,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Pozi into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting fire_dragon_Girl_2ad4f16f-0841-4bed-bdce-d079409f43c5 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Girl_2ad4f16f-0841-4bed-bdce-d079409f43c5","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit enemy:Girl into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting earth_dragon_Booom_e8df95ee-2986-42f9-942b-d16e16f0de6c on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Booom_e8df95ee-2986-42f9-942b-d16e16f0de6c","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit user:Booom into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting fire_dragon_Hegb_b807dc61-59cc-4009-9925-1694741c60a5 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Hegb_b807dc61-59cc-4009-9925-1694741c60a5","column":6,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit user:Hegb into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting dragon_Ailho_fed0fa8c-85cd-413c-924f-dbaaebe54e36 on to {"spawn_region":[],"collider":"","unit":"dragon_Ailho_fed0fa8c-85cd-413c-924f-dbaaebe54e36","column":1,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit user:Ailho into queue
+[2025-04-13 09:50:37] [INFO] [Component] Setting light_dragon_Vudyx_77434a6e-1278-4f14-9f35-937358393240 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Vudyx_77434a6e-1278-4f14-9f35-937358393240","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 09:50:37] [INFO] [SpeedQueue] Added unit user:Vudyx into queue
+[2025-04-13 09:50:37] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 09:50:37] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 09:50:37] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 09:50:37] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 09:50:38] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 09:50:38] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 09:50:38] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 09:50:38] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Heiiu_5ab474bc-46da-4a97-bfa0-1e5b3adca45c
+[2025-04-13 09:50:38] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Heiiu_5ab474bc-46da-4a97-bfa0-1e5b3adca45c
+[2025-04-13 09:50:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 09:50:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 09:50:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 09:50:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 09:50:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 09:50:38] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 09:50:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Heiiu_5ab474bc-46da-4a97-bfa0-1e5b3adca45c
+[2025-04-13 09:50:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Heiiu_5ab474bc-46da-4a97-bfa0-1e5b3adca45c
+[2025-04-13 09:50:38] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 09:50:38] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 09:50:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 09:50:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 09:50:38] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 09:50:38] [INFO] [VisualsSystem] Finished creating blurred background after 0.48179253935813904 seconds
+[2025-04-13 09:50:40] [INFO] [InputHandler] Gliding 0 camera to new tile 6_5_fc4e2f97-eb09-4109-9312-25920223b5b6
+[2025-04-13 09:50:40] [INFO] [InputHandler] Gliding 1 camera to new tile 6_5_fc4e2f97-eb09-4109-9312-25920223b5b6
+[2025-04-13 09:50:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 09:50:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Heiiu
+[2025-04-13 09:50:43] [INFO] [InputHandler] Gliding 0 camera to new tile 6_5_fc4e2f97-eb09-4109-9312-25920223b5b6
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement range to 5 for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to null for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement range to 5 for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to null for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 7] for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 7] for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 7] for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 7] for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 6] for Heiiu
+[2025-04-13 09:50:43] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 6] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 5] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 5] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 5] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 5] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 4] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 4] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 4] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 4] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 3] for Heiiu
+[2025-04-13 09:50:44] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 3] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 2] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 2] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 1] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 1] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 0] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 0] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 1] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [3, 1] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 1] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 1] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 2] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 2] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 3] for Heiiu
+[2025-04-13 09:50:45] [INFO] [MovementSystem] Updated movement path from [6, 5] to [4, 3] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 3] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 3] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 4] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 4] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 3] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 3] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 4] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 4] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 5] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [5, 5] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 6] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 6] for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to null for Heiiu
+[2025-04-13 09:50:46] [INFO] [MovementSystem] Updated movement path from [6, 5] to null for Heiiu
+[2025-04-13 09:50:47] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 7] for Heiiu
+[2025-04-13 09:50:47] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 7] for Heiiu
+[2025-04-13 09:50:47] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 7] for Heiiu
+[2025-04-13 09:50:47] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 7] for Heiiu
+[2025-04-13 09:50:47] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:47] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 6] for Heiiu
+[2025-04-13 09:50:48] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:48] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:48] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 4] for Heiiu
+[2025-04-13 09:50:48] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 4] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 5] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 5] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 5] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 6] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 6] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 7] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to [7, 7] for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to null for Heiiu
+[2025-04-13 09:50:49] [INFO] [MovementSystem] Updated movement path from [6, 5] to null for Heiiu
+[2025-04-13 09:50:51] [INFO] [InputHandler] Gliding 0 camera to new tile 6_5_fc4e2f97-eb09-4109-9312-25920223b5b6
+[2025-04-13 09:50:53] [INFO] [AbilityPanel] Selecting shine
+[2025-04-13 09:50:53] [INFO] [AbilitySystem] Heiiu is planning to use shine on null
+[2025-04-13 09:50:53] [INFO] [AbilitySystem] Updated area of sight for Heiiu, viewing 8 tiles
+[2025-04-13 09:50:53] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 0 tiles
+[2025-04-13 09:50:53] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 0 tiles
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Started constructing cost mappings for Heiiu to use shine
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Finished constructing cost mappings for Heiiu to use shine
+[2025-04-13 09:50:53] [INFO] [AbilitySystem] Heiiu is planning to use shine on [7, 7]
+[2025-04-13 09:50:53] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 3 tiles
+[2025-04-13 09:50:53] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:50:53] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:50:54] [INFO] [AbilitySystem] Heiiu is planning to use shine on [7, 6]
+[2025-04-13 09:50:54] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 3 tiles
+[2025-04-13 09:50:54] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:50:54] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:50:54] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Heiiu is planning to use shine on [6, 6]
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Heiiu is planning to use shine on [6, 5]
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 1 tiles
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Heiiu is planning to use shine on [6, 4]
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Heiiu is planning to use shine on [6, 3]
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Heiiu is planning to use shine on [6, 2]
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:21] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:21] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Heiiu is planning to use shine on [5, 1]
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Heiiu is planning to use shine on [4, 1]
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Heiiu is planning to use shine on [3, 0]
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Heiiu is planning to use shine on [2, 0]
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated line of sight for Heiiu, viewing 2 tiles
+[2025-04-13 09:51:22] [INFO] [AbilitySystem] Updated area of effect for Heiiu viewing 1 tiles
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Started constructing damage mappings for Heiiu to use shine
+[2025-04-13 09:51:22] [INFO] [CombatSystem] Finished constructing damage mappings for Heiiu to use shine

@@ -1,0 +1,165 @@
+[2025-04-13 18:12:02] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 18:12:02] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 18:12:02] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 18:12:02] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 18:12:02] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 18:12:02] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 18:12:02] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 18:12:02] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 18:12:02] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 18:12:02] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 18:12:02] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 18:12:02] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 18:12:02] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 18:12:02] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 18:12:02] [INFO] [Component] Setting earth_dragon_Disiez_388608fd-d568-4ed2-8833-9687b29d5b27 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Disiez_388608fd-d568-4ed2-8833-9687b29d5b27","column":5,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Disiez into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting light_dragon_Uimeg_26e97484-3ff1-4d3f-b1d8-cacfde620e0f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Uimeg_26e97484-3ff1-4d3f-b1d8-cacfde620e0f","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Uimeg into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting fire_dragon_Uyhvau_8b548f44-9c24-4950-aa9c-13bee54691ba on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Uyhvau_8b548f44-9c24-4950-aa9c-13bee54691ba","column":0,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Uyhvau into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting water_dragon_Faiiw_85367d7c-918e-4223-b5c1-b9af6e6ee0df on to {"spawn_region":[],"collider":"","unit":"water_dragon_Faiiw_85367d7c-918e-4223-b5c1-b9af6e6ee0df","column":7,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Faiiw into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting water_dragon_Dunw_376c2ea5-95fe-4eb8-967b-511d176b3cec on to {"spawn_region":[],"collider":"","unit":"water_dragon_Dunw_376c2ea5-95fe-4eb8-967b-511d176b3cec","column":1,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Dunw into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting dragon_Eawyyr_75dac425-4be5-46bf-97d4-118933e66299 on to {"spawn_region":[],"collider":"","unit":"dragon_Eawyyr_75dac425-4be5-46bf-97d4-118933e66299","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Eawyyr into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting light_dragon_Sigpu_666825e1-7ccd-4725-88b4-e076ff45f43b on to {"spawn_region":[],"collider":"","unit":"light_dragon_Sigpu_666825e1-7ccd-4725-88b4-e076ff45f43b","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Sigpu into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting fire_dragon_Wubovf_ffac22ea-79bf-41f1-a25d-8c73e053a337 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Wubovf_ffac22ea-79bf-41f1-a25d-8c73e053a337","column":6,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Wubovf into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting light_dragon_Cyycuy_65131664-4c91-4a71-990a-e9f9ec21ec84 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Cyycuy_65131664-4c91-4a71-990a-e9f9ec21ec84","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit enemy:Cyycuy into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting dragon_Lapyy_1787fef3-2131-4298-a6f6-f88c618c0a0d on to {"spawn_region":[],"collider":"","unit":"dragon_Lapyy_1787fef3-2131-4298-a6f6-f88c618c0a0d","column":2,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit user:Lapyy into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting air_dragon_Saofbr_122a115c-0d5e-4110-97a1-5b22431ebb0c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Saofbr_122a115c-0d5e-4110-97a1-5b22431ebb0c","column":2,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit user:Saofbr into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting air_dragon_Sydaa_d73a1ae2-3501-4921-b153-12b102bd3a0a on to {"spawn_region":[],"collider":"","unit":"air_dragon_Sydaa_d73a1ae2-3501-4921-b153-12b102bd3a0a","column":4,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit user:Sydaa into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting air_dragon_Cyvoo_a0ef65ba-8d19-4bae-b4cd-5e8fef83796e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Cyvoo_a0ef65ba-8d19-4bae-b4cd-5e8fef83796e","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit user:Cyvoo into queue
+[2025-04-13 18:12:02] [INFO] [Component] Setting fire_dragon_Paiyhy_2e367d16-1c8f-4a27-b730-9223c9b20104 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Paiyhy_2e367d16-1c8f-4a27-b730-9223c9b20104","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 18:12:02] [INFO] [SpeedQueue] Added unit user:Paiyhy into queue
+[2025-04-13 18:12:02] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 18:12:02] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 18:12:02] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 18:12:02] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 18:12:02] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 18:12:02] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 18:12:03] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 18:12:03] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Wubovf_ffac22ea-79bf-41f1-a25d-8c73e053a337
+[2025-04-13 18:12:03] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Wubovf_ffac22ea-79bf-41f1-a25d-8c73e053a337
+[2025-04-13 18:12:03] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 18:12:03] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 18:12:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 18:12:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 18:12:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 18:12:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 18:12:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Wubovf_ffac22ea-79bf-41f1-a25d-8c73e053a337
+[2025-04-13 18:12:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Wubovf_ffac22ea-79bf-41f1-a25d-8c73e053a337
+[2025-04-13 18:12:03] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 18:12:03] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 18:12:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 18:12:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 18:12:03] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 18:12:03] [INFO] [VisualsSystem] Finished creating blurred background after 0.48565831780433655 seconds
+[2025-04-13 18:12:04] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_82f312e0-5b19-422b-b191-f8a479944c71
+[2025-04-13 18:12:04] [INFO] [InputHandler] Gliding 1 camera to new tile 2_6_82f312e0-5b19-422b-b191-f8a479944c71
+[2025-04-13 18:12:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 18:12:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Wubovf
+[2025-04-13 18:12:06] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_82f312e0-5b19-422b-b191-f8a479944c71
+[2025-04-13 18:12:06] [INFO] [AbilityPanel] Selecting ember
+[2025-04-13 18:12:06] [INFO] [AbilitySystem] Wubovf is planning to use ember on null
+[2025-04-13 18:12:06] [INFO] [AbilitySystem] Updated area of sight for Wubovf, viewing 12 tiles
+[2025-04-13 18:12:06] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 0 tiles
+[2025-04-13 18:12:06] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 0 tiles
+[2025-04-13 18:12:06] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:06] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:06] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:06] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:06] [INFO] [CombatSystem] Started constructing cost mappings for Wubovf to use ember
+[2025-04-13 18:12:06] [INFO] [CombatSystem] Finished constructing cost mappings for Wubovf to use ember
+[2025-04-13 18:12:08] [INFO] [AbilitySystem] Wubovf is planning to use ember on [3, 7]
+[2025-04-13 18:12:08] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 3 tiles
+[2025-04-13 18:12:08] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:08] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:08] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:08] [INFO] [AbilitySystem] Wubovf is planning to use ember on [3, 6]
+[2025-04-13 18:12:08] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 2 tiles
+[2025-04-13 18:12:08] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:08] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:08] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:09] [INFO] [AbilitySystem] Wubovf is planning to use ember on [3, 5]
+[2025-04-13 18:12:09] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 3 tiles
+[2025-04-13 18:12:09] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Started constructing damage mappings after defense Wubovf to use ember
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Started calculating damage after modifiers for Wubovf
+[2025-04-13 18:12:09] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for ember
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Wubovf lands a Same-Type-Attack-Bonus with ember, for 15.0
+[2025-04-13 18:12:09] [INFO] [CombatSystem] 25.0 damage after modifiers for ember
+[2025-04-13 18:12:09] [INFO] [CombatSystem] Finished calculating damage after modifiers for Wubovf
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on [3, 6]
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 2 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on [4, 7]
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 4 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on null
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 0 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 0 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on [0, 7]
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 4 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on [0, 6]
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 3 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on [0, 5]
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 4 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings after defense Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started calculating damage after modifiers for Wubovf
+[2025-04-13 18:12:10] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Wubovf lands a Same-Type-Attack-Bonus with ember, for 15.0
+[2025-04-13 18:12:10] [INFO] [CombatSystem] 25.0 damage after modifiers for ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished calculating damage after modifiers for Wubovf
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on [0, 4]
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 4 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings after defense Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started calculating damage after modifiers for Wubovf
+[2025-04-13 18:12:10] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Wubovf lands a Same-Type-Attack-Bonus with ember, for 15.0
+[2025-04-13 18:12:10] [INFO] [CombatSystem] 25.0 damage after modifiers for ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished calculating damage after modifiers for Wubovf
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on [0, 3]
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 5 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 1 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Wubovf is planning to use ember on null
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated line of sight for Wubovf, viewing 0 tiles
+[2025-04-13 18:12:10] [INFO] [AbilitySystem] Updated area of effect for Wubovf viewing 0 tiles
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Started constructing damage mappings for Wubovf to use ember
+[2025-04-13 18:12:10] [INFO] [CombatSystem] Finished constructing damage mappings for Wubovf to use ember

@@ -1,0 +1,95 @@
+[2025-04-06 01:53:21] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 01:53:21] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 01:53:21] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 01:53:21] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 01:53:21] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 01:53:21] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 01:53:21] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 01:53:21] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 01:53:21] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 01:53:21] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 01:53:21] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 01:53:21] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 01:53:21] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 01:53:22] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 01:53:22] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 01:53:22] [INFO] [Component] Setting earth_dragon_Zyzao_63f68961-e74f-4c0b-b873-bfc3973e7c5d on to 13_10_3d61fec6-7e00-49b2-ab9d-ee90eaab6b8d.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Zyzao into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dragon_Yeig_cd90eeec-0f04-4960-9f4a-68d6c8cbe871 on to 5_3_9525048b-169e-4f48-abe9-36149ceb6a52.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Yeig into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dark_dragon_Nyzoe_0f9a1dcd-dd4d-4c47-b0ad-84ff57d025b8 on to 14_1_346e6c4b-9a6a-4281-880b-3f137034eeee.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Nyzoe into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dark_dragon_Qeva_983f149f-3887-47b8-b1f7-313ebf451188 on to 4_7_b8cdb26a-62d2-4cd4-b83b-262acc482f2e.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Qeva into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting earth_dragon_Reqa_990f6001-0ed3-4a92-bb51-58965ac0b846 on to 2_7_4c1c2871-f831-4499-8d01-37c50eec7379.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Reqa into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dark_dragon_Quxo_34fb4e09-fa23-4bf5-8886-1c081acc11b4 on to 5_11_8ad6f9e5-1632-41af-80c2-59fdd63dd96e.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Quxo into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting water_dragon_Hyluu_804741c9-8aa0-45a1-9634-f23f76bc2c26 on to 9_9_b88bfd37-1d71-439a-aa12-819734e07fce.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Hyluu into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting light_dragon_Ooej_24960656-4d0b-421f-bb1f-30bbd414f2bd on to 5_10_57ee715c-d4a4-4ed9-a9fb-4ec18328f307.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Ooej into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting fire_dragon_Qyeuo_32845cbd-70db-4cb5-b568-5740add122d3 on to 7_3_6f774f3d-8852-4301-82c1-d40f331ce33e.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Qyeuo into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting air_dragon_Wueiaa_4e67c3a3-5b18-4f64-970b-911d14882a91 on to 3_11_0d13dcff-446a-4fa6-a0ad-af6a5a07ace0.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Wueiaa into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dark_dragon_Ooto_e3a9c7f8-7ca4-4480-86d6-375b31096951 on to 8_2_3b508ace-b952-429d-9625-f376551e3b5e.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Ooto into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dark_dragon_Pumuu_022a5a9e-6bbb-4cad-adb1-121dd77fcf96 on to 9_12_4462536d-742b-404e-99d2-8969fd4321f2.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Pumuu into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting water_dragon_Eobau_8ffa1081-224c-494c-becd-567ec44399ac on to 5_6_ecefe069-2f47-4a0a-bf8b-420a33e93e58.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Eobau into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting water_dragon_Oewja_09558986-699a-4a5d-a38a-4f668fa2f54d on to 12_7_b92fbe52-2c8b-45a1-a4b0-4930cb9f5a4a.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Oewja into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting water_dragon_Nojrir_ea352e19-717e-4ae1-930c-f77ff4e76164 on to 7_0_f1bdf508-a349-42a7-93dd-3247cb3742ff.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Nojrir into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dragon_Haszae_35099c7f-6f93-46be-9b1a-bad28cd0c75a on to 8_13_cfdc8d93-aab7-4e3f-b783-c7612cf155a8.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Haszae into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting fire_dragon_Hyeixb_41720201-8291-4943-99d0-77c196c0a985 on to 5_8_d89d43c3-b42c-4358-9ee7-aa43710c7f20.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Hyeixb into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting dragon_Iulau_b7c069b2-18eb-4a76-874c-23bba5c1d1cb on to 7_2_b9e0a4b3-22e1-46f0-bd1e-3feafdaccef1.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Iulau into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting light_dragon_Xouoa_1752974e-c88a-4fde-94aa-a1300954abb6 on to 7_9_e777b3fc-9d13-4b95-bd25-8c3b1305e64a.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Xouoa into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting earth_dragon_Reoiyu_f92f14e0-3e4b-42f8-8386-26f1ceb8998c on to 10_1_6d995df3-15e5-4bb7-8b78-65b65b30955a.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Reoiyu into queue
+[2025-04-06 01:53:22] [INFO] [Component] Setting earth_dragon_Roqasi_b0da6936-8869-42a7-bea4-615a0d71106c on to 0_0_04f6d69f-cb4e-4673-89cb-18e4ea42053c.
+[2025-04-06 01:53:22] [INFO] [SpeedQueue] Added unit enemy:Roqasi into queue
+[2025-04-06 01:53:22] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 01:53:22] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 01:53:22] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 01:53:22] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 01:53:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 01:53:22] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 01:53:23] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 01:53:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 01:53:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 01:53:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 01:53:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 01:53:23] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Reoiyu_f92f14e0-3e4b-42f8-8386-26f1ceb8998c
+[2025-04-06 01:53:23] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 01:53:23] [INFO] [VisualsSystem] Finished creating blurred background after 0.4889197051525116 seconds
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Reoiyu Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Hyluu Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Pumuu Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Oewja Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Eobau Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Reqa Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Iulau Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Yeig Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Ooto Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Qyeuo Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Nyzoe Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Nojrir Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Qeva Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Hyeixb Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Quxo Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Haszae Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Roqasi Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Ooej Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Wueiaa Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Zyzao Triggered ability system
+[2025-04-06 01:53:23] [INFO] [AbilitySystem] Xouoa Triggered ability system
+[2025-04-06 02:30:53] [INFO] [MovementSystem] Reoiyu is planning to move from [10, 1] to [8, 1]
+[2025-04-06 02:30:53] [INFO] [MovementSystem] Updated movement area for Reoiyu
+[2025-04-06 02:30:53] [INFO] [MovementSystem] Updated movement path for Re

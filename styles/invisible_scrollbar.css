@@ -1,0 +1,34 @@
+/* Make the scrollbar transparent */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+/* Hide the scrollbar track (optional) */
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+/* Hide scrollbar thumb (handle) when not hovered */
+.scroll-bar .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hide scrollbar buttons */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-opacity: 0;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Hide the scrollbars */
+.scroll-pane > .scroll-bar:vertical,
+.scroll-pane > .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}

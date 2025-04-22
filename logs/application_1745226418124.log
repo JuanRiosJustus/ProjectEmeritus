@@ -1,0 +1,98 @@
+[2025-04-21 02:06:58] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 02:06:58] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 02:06:58] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 02:06:58] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 02:06:58] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 02:06:58] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 02:06:58] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 02:06:58] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 02:06:58] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 02:06:58] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 02:06:58] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 02:06:58] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 02:06:58] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 02:06:58] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 02:06:58] [INFO] [Component] Setting earth_dragon_Nogy_5e89788b-7be6-4fb9-afba-eb378ab07076 on to {"row":1,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Nogy_5e89788b-7be6-4fb9-afba-eb378ab07076","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit enemy:Nogy into queue
+[2025-04-21 02:06:58] [INFO] [Component] Setting dragon_Mavizt_5e062af0-1a37-40ec-917a-e2804b0f4356 on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Mavizt_5e062af0-1a37-40ec-917a-e2804b0f4356","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit enemy:Mavizt into queue
+[2025-04-21 02:06:58] [INFO] [Component] Setting dragon_Xefie_7d1a683e-81f5-4851-a1f7-6d75ead4d5b6 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Xefie_7d1a683e-81f5-4851-a1f7-6d75ead4d5b6","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit enemy:Xefie into queue
+[2025-04-21 02:06:58] [INFO] [Component] Setting air_dragon_Luzo_f4d45852-3459-4a50-8343-a1117f559513 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Luzo_f4d45852-3459-4a50-8343-a1117f559513","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit enemy:Luzo into queue
+[2025-04-21 02:06:58] [INFO] [Component] Setting dragon_Mawa_0d5ca6bf-c243-4290-9c1e-776d9e64e512 on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Mawa_0d5ca6bf-c243-4290-9c1e-776d9e64e512","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit enemy:Mawa into queue
+[2025-04-21 02:06:58] [INFO] [Component] Setting light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit user:Belym into queue
+[2025-04-21 02:06:58] [INFO] [Component] Setting earth_dragon_Cirm_1888c098-b43e-41ca-a98e-43cdeaf6280c on to {"row":0,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Cirm_1888c098-b43e-41ca-a98e-43cdeaf6280c","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit user:Cirm into queue
+[2025-04-21 02:06:58] [INFO] [Component] Setting fire_dragon_Xupfe_f0a1365d-09a3-4375-9aa5-17fc97fdd602 on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Xupfe_f0a1365d-09a3-4375-9aa5-17fc97fdd602","structure":""}.
+[2025-04-21 02:06:58] [INFO] [SpeedQueue] Added unit user:Xupfe into queue
+[2025-04-21 02:06:58] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-21 02:06:58] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-21 02:06:58] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-21 02:06:58] [INFO] [FontPool] Started initializing FontPool
+[2025-04-21 02:06:58] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-21 02:06:58] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-21 02:06:58] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-21 02:06:59] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-21 02:06:59] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-21 02:06:59] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-21 02:06:59] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-21 02:06:59] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Nogy_5e89788b-7be6-4fb9-afba-eb378ab07076
+[2025-04-21 02:06:59] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Nogy_5e89788b-7be6-4fb9-afba-eb378ab07076
+[2025-04-21 02:06:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 02:06:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 02:06:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 02:06:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 02:06:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:06:59] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-21 02:06:59] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-21 02:06:59] [INFO] [VisualsSystem] Finished creating blurred background after 0.49373799562454224 seconds
+[2025-04-21 02:07:01] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_bbb52c42-4892-4c88-8ccb-e5fb97d25431
+[2025-04-21 02:07:01] [INFO] [InputHandler] Gliding 1 camera to new tile 1_3_bbb52c42-4892-4c88-8ccb-e5fb97d25431
+[2025-04-21 02:07:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Nogy_5e89788b-7be6-4fb9-afba-eb378ab07076
+[2025-04-21 02:07:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Nogy_5e89788b-7be6-4fb9-afba-eb378ab07076
+[2025-04-21 02:07:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:07:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Nogy
+[2025-04-21 02:07:04] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:07:04] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e
+[2025-04-21 02:07:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:07:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Belym
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Mavizt_5e062af0-1a37-40ec-917a-e2804b0f4356
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Mavizt_5e062af0-1a37-40ec-917a-e2804b0f4356
+[2025-04-21 02:07:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:07:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Mavizt
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:07:06] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:07:10] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e
+[2025-04-21 02:07:10] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e
+[2025-04-21 02:07:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:07:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Belym
+[2025-04-21 02:07:10] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:07:10] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:07:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Mavizt_5e062af0-1a37-40ec-917a-e2804b0f4356
+[2025-04-21 02:07:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Mavizt_5e062af0-1a37-40ec-917a-e2804b0f4356
+[2025-04-21 02:07:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:07:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Mavizt
+[2025-04-21 02:07:12] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:07:12] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:07:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e
+[2025-04-21 02:07:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Belym_192938fd-6f5b-4b4e-85e6-5dafa158de3e
+[2025-04-21 02:07:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:07:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Belym
+[2025-04-21 02:07:14] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:07:14] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:07:20] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Luzo_f4d45852-3459-4a50-8343-a1117f559513
+[2025-04-21 02:07:20] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Luzo_f4d45852-3459-4a50-8343-a1117f559513
+[2025-04-21 02:07:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:07:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Luzo
+[2025-04-21 02:07:20] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:07:20] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:07:26] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_bbb52c42-4892-4c88-8ccb-e5fb97d25431
+[2025-04-21 02:07:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:07:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

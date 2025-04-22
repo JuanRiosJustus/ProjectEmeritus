@@ -1,0 +1,49 @@
+[2025-04-19 18:31:10] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 18:31:10] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 18:31:10] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 18:31:10] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 18:31:10] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 18:31:10] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 18:31:10] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 18:31:10] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 18:31:10] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 18:31:10] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 18:31:10] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 18:31:10] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 18:31:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 18:31:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 18:31:10] [INFO] [Component] Setting air_dragon_Giplui_975fe91e-0ac3-4ea5-9e97-69cfb9dfbc41 on to {"row":4,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Giplui_975fe91e-0ac3-4ea5-9e97-69cfb9dfbc41","structure":""}.
+[2025-04-19 18:31:10] [INFO] [SpeedQueue] Added unit enemy:Giplui into queue
+[2025-04-19 18:31:10] [INFO] [Component] Setting light_dragon_Qeurb_834a8fca-db4d-414f-87c0-2b282d52ac51 on to {"row":5,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qeurb_834a8fca-db4d-414f-87c0-2b282d52ac51","structure":""}.
+[2025-04-19 18:31:10] [INFO] [SpeedQueue] Added unit enemy:Qeurb into queue
+[2025-04-19 18:31:10] [INFO] [Component] Setting earth_dragon_Waayir_515a9f01-f0f1-4dcd-b983-70422164623d on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Waayir_515a9f01-f0f1-4dcd-b983-70422164623d","structure":""}.
+[2025-04-19 18:31:10] [INFO] [SpeedQueue] Added unit enemy:Waayir into queue
+[2025-04-19 18:31:10] [INFO] [Component] Setting light_dragon_Wyfil_eef3541e-cb02-4f54-98b2-65ce354de229 on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Wyfil_eef3541e-cb02-4f54-98b2-65ce354de229","structure":""}.
+[2025-04-19 18:31:10] [INFO] [SpeedQueue] Added unit enemy:Wyfil into queue
+[2025-04-19 18:31:10] [INFO] [Component] Setting water_dragon_Jybap_d3814684-e6e1-4466-ad7c-2c44840b8134 on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Jybap_d3814684-e6e1-4466-ad7c-2c44840b8134","structure":""}.
+[2025-04-19 18:31:10] [INFO] [SpeedQueue] Added unit user:Jybap into queue
+[2025-04-19 18:31:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 18:31:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 18:31:10] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 18:31:10] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 18:31:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 18:31:10] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 18:31:11] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 18:31:11] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 18:31:11] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_74b65f1c-e69f-4cbf-afd5-0b17fb8809b5
+[2025-04-19 18:31:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 18:31:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 18:31:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 18:31:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 18:31:11] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 18:31:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.4956219494342804 seconds
+[2025-04-19 18:31:14] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 18:31:14] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 18:31:16] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 18:31:16] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 18:31:17] [INFO] [MapEditorSceneEditorPanel] Started loading assets to add
+[2025-04-19 18:31:17] [INFO] [MapEditorSceneEditorPanel] Finished loading assets to add
+[2025-04-19 18:31:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 18:31:20] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 18:31:30] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:31:30] [INFO] [MapEditorScene] Finished updating cursor size

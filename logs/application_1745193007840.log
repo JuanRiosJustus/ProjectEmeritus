@@ -1,0 +1,304 @@
+[2025-04-20 16:50:07] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-20 16:50:07] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-20 16:50:07] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-20 16:50:07] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-20 16:50:07] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-20 16:50:07] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-20 16:50:07] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-20 16:50:07] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-20 16:50:07] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-20 16:50:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-20 16:50:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-20 16:50:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-20 16:50:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-20 16:50:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-20 16:50:08] [INFO] [Component] Setting light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342 on to {"row":6,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit enemy:Hotv into queue
+[2025-04-20 16:50:08] [INFO] [Component] Setting air_dragon_Kekdoe_083b5add-f7e4-4a43-a89f-fd715e49d891 on to {"row":2,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Kekdoe_083b5add-f7e4-4a43-a89f-fd715e49d891","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit enemy:Kekdoe into queue
+[2025-04-20 16:50:08] [INFO] [Component] Setting water_dragon_Jyzp_ffa656aa-d1e8-4e30-a951-97c294d35ff7 on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Jyzp_ffa656aa-d1e8-4e30-a951-97c294d35ff7","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit enemy:Jyzp into queue
+[2025-04-20 16:50:08] [INFO] [Component] Setting earth_dragon_Qoju_d7e99a0f-5fd9-4b1c-b692-d452d7cc9563 on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Qoju_d7e99a0f-5fd9-4b1c-b692-d452d7cc9563","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit enemy:Qoju into queue
+[2025-04-20 16:50:08] [INFO] [Component] Setting fire_dragon_Sewiy_3fd62a87-a928-4a92-ae84-e7486abf555d on to {"row":4,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Sewiy_3fd62a87-a928-4a92-ae84-e7486abf555d","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit user:Sewiy into queue
+[2025-04-20 16:50:08] [INFO] [Component] Setting earth_dragon_Saau_41ad47b5-0c40-4e6f-9284-7b3319cf06cd on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Saau_41ad47b5-0c40-4e6f-9284-7b3319cf06cd","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit user:Saau into queue
+[2025-04-20 16:50:08] [INFO] [Component] Setting light_dragon_Yeziet_354f1524-cbda-4689-9531-d22fdff299dc on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Yeziet_354f1524-cbda-4689-9531-d22fdff299dc","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit user:Yeziet into queue
+[2025-04-20 16:50:08] [INFO] [Component] Setting light_dragon_Lywyoo_e2de32d1-bc00-472c-b54a-d871b52f0138 on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Lywyoo_e2de32d1-bc00-472c-b54a-d871b52f0138","structure":""}.
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Added unit user:Lywyoo into queue
+[2025-04-20 16:50:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-20 16:50:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-20 16:50:08] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-20 16:50:08] [INFO] [FontPool] Started initializing FontPool
+[2025-04-20 16:50:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-20 16:50:08] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-20 16:50:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-20 16:50:08] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:08] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 16:50:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 16:50:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-20 16:50:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-20 16:50:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 16:50:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 16:50:08] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 16:50:08] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 16:50:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-20 16:50:09] [INFO] [VisualsSystem] Finished creating blurred background after 0.4896901249885559 seconds
+[2025-04-20 16:50:10] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_3b811035-1a4c-4ff7-a8ba-f9a8024100a5
+[2025-04-20 16:50:10] [INFO] [InputHandler] Gliding 1 camera to new tile 6_0_3b811035-1a4c-4ff7-a8ba-f9a8024100a5
+[2025-04-20 16:50:10] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:10] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 16:50:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Hotv
+[2025-04-20 16:50:12] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_3b811035-1a4c-4ff7-a8ba-f9a8024100a5
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement range to 7 for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement range to 7 for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 3] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 3] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 3] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 3] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 2] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 2] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 2] for Hotv
+[2025-04-20 16:50:12] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 2] for Hotv
+[2025-04-20 16:50:13] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 1] for Hotv
+[2025-04-20 16:50:13] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 1] for Hotv
+[2025-04-20 16:50:13] [INFO] [Component] Setting light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342 on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342","structure":""}.
+[2025-04-20 16:50:13] [INFO] [MovementSystem] Moved from [6, 0] to [5, 1]
+[2025-04-20 16:50:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 16:50:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Hotv
+[2025-04-20 16:50:13] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_db79f5bf-b84b-4e88-8889-35eb6b2b8a13
+[2025-04-20 16:50:13] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_db79f5bf-b84b-4e88-8889-35eb6b2b8a13
+[2025-04-20 16:50:14] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_db79f5bf-b84b-4e88-8889-35eb6b2b8a13
+[2025-04-20 16:50:21] [INFO] [AbilityPanel] Selecting blunt_attack
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on null
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated area of sight for Hotv, viewing 5 tiles
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 0 tiles
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 0 tiles
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [7, 3]
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 5 tiles
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [7, 2]
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 3 tiles
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [6, 2]
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 3 tiles
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [6, 1]
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 2 tiles
+[2025-04-20 16:50:21] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [6, 2]
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 3 tiles
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [7, 2]
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 3 tiles
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [7, 3]
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 5 tiles
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on [7, 4]
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 6 tiles
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Hotv is planning to use blunt_attack on null
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 0 tiles
+[2025-04-20 16:50:22] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 0 tiles
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use blunt_attack
+[2025-04-20 16:50:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:24] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_db79f5bf-b84b-4e88-8889-35eb6b2b8a13
+[2025-04-20 16:50:24] [INFO] [AbilityPanel] Selecting light_attack
+[2025-04-20 16:50:24] [INFO] [AbilitySystem] Hotv is planning to use light_attack on null
+[2025-04-20 16:50:24] [INFO] [AbilitySystem] Updated area of sight for Hotv, viewing 12 tiles
+[2025-04-20 16:50:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:24] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:24] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:24] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:24] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Hotv is planning to use light_attack on [7, 3]
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 5 tiles
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Hotv is planning to use light_attack on [7, 2]
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 3 tiles
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Hotv is planning to use light_attack on [7, 1]
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Updated line of sight for Hotv, viewing 3 tiles
+[2025-04-20 16:50:25] [INFO] [AbilitySystem] Updated area of effect for Hotv viewing 1 tiles
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hotv
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Hotv lands a Same-Type-Attack-Bonus with light_attack, for 12.0
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hotv
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yeziet
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Yeziet defends with Same-Type-Defense-Bonus from light_attack for 15.4
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yeziet
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for light_attack
+[2025-04-20 16:50:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Checking cost requirements for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Hotv is able to pay for light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Paying cost requirements for Hotv using light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilitySystem] Used from light_attack on [7, 1]
+[2025-04-20 16:50:26] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:26] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 16:50:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 16:50:26] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:26] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Hotv_2728d19a-2645-4352-861a-ee2337b1b342
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 16:50:26] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 16:50:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Started constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Finished constructing cost mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hotv
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Hotv lands a Same-Type-Attack-Bonus with light_attack, for 12.0
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hotv
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yeziet
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Yeziet defends with Same-Type-Defense-Bonus from light_attack for 15.4
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yeziet
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [CombatSystem] Started dealing damage with light_attack to Yeziet 
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hotv to use light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hotv
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Hotv lands a Same-Type-Attack-Bonus with light_attack, for 12.0
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hotv
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yeziet
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Yeziet defends with Same-Type-Defense-Bonus from light_attack for 15.4
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yeziet
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for light_attack
+[2025-04-20 16:50:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hotv to use light_attack

@@ -1,0 +1,114 @@
+[2025-04-05 09:34:10] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 09:34:10] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 09:34:10] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 09:34:10] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 09:34:10] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 09:34:10] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 09:34:10] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 09:34:10] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 09:34:10] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 09:34:10] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 09:34:10] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 09:34:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 09:34:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 09:34:10] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 09:34:10] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:34:10] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 09:34:10] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 09:34:10] [INFO] [Component] Setting cbf88df3-1b74-4a93-ab21-cd08b779b770 on to 8624e80b-7257-45d9-b08e-3a0e7a199e3e.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Purlt into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 7bb8e319-ab14-454d-9c24-395b78832725 on to bcdc2f9c-8bd0-46ee-b622-38915588ffc4.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Zaxyae into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting dd8328fa-47c9-4a88-8457-8047c6b8aead on to 8f4914a9-0f3b-470a-a238-20f6944a7236.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Tooxmw into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 7479a8d2-1900-49bd-a17c-f7d44897742d on to 4f599bb3-b6fb-4872-aa67-b1d59f5148f7.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Dagi into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting c6f69993-a50e-405f-a9ce-83b92c384afe on to fa7f2954-9502-47d9-861c-537001a42f29.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Yafi into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 1e5f1120-5ba7-493d-95fa-4fe94abee3a4 on to 790635fb-3546-447d-9d44-a7ed91b42b56.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Fizayy into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 0043dbf6-f2d8-4af2-bfc7-0f20866b3f63 on to 0eb46e01-15a1-4f2a-8095-de658821c677.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Diyive into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting c0451ab8-39c2-43ac-9638-b801a8b959a6 on to 9b8521e3-8565-4b9e-b945-96079de6cd4c.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Natiey into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 3b55f956-cad2-4ec2-955e-f892fbf303c4 on to deb68293-7bef-41f7-81d1-8ab636d3b575.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Wacyua into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting d6e01acd-311f-4f5e-ae5f-334173185144 on to 75207538-597e-40c7-a5be-093e349888de.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Reded into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 96ec7639-c3b9-4c2f-af28-ebc407b88ca0 on to 052c3766-95d0-4c05-b23e-9fb09d491315.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Lymu into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting b0b14c9a-a283-455c-893c-937c6e04f6c2 on to 7454187c-bd43-40ce-bdd1-2bc3c36cc591.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Wahpp into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 0761f032-5d8d-4977-963e-e9823f041dab on to 2364791a-3823-4141-a5fc-e5bbe16c09c1.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Yune into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting e9ce0b58-500c-4df6-ae90-e259c1ac41c1 on to 093ba998-48c2-4ef3-9c3f-33ffdb1b83c7.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Iuyp into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting dc2c8705-0785-490b-8da5-4d9c72f630b6 on to 3433947f-7ebe-4608-8ab1-96ad2c0507ca.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Weaoga into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting add4d86d-0b1a-48db-9917-c26deb14cb38 on to beea65b2-43a1-4560-a8d2-b6aa6efa4f9e.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Oiiy into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 27512767-4829-4bbd-ae52-8b32894cbfaf on to 811e4056-81b8-47cd-86bf-0f9287eb2875.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Vinoi into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 46538be4-d6c8-4f28-b68c-4a108b56cc78 on to df96a5a9-5e52-4ef7-af9e-52296196cd9f.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Oeqeay into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 134f1f57-a7ae-42b9-850e-4cd6524d1ee7 on to 1e8d9d98-eb02-4ac7-bf3c-2a110a89d9f0.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Bogibq into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 207daed9-539a-499d-8f8b-c7b0cc4af856 on to 88fabbf7-d8d1-4033-9c5c-871ea40ba06a.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Eina into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 53239cae-4f1a-4c04-a92c-05de793be461 on to b2198c8d-1c48-4f8a-bdf4-93faf9cd726b.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Yaei into queue
+[2025-04-05 09:34:10] [INFO] [Component] Setting 95e9116d-68b6-4a29-ab73-79a8218110d1 on to 410f7ec3-11f8-4d15-860e-4030426458d4.
+[2025-04-05 09:34:10] [INFO] [SpeedQueue] Added unit enemy:Uiyym into queue
+[2025-04-05 09:34:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 09:34:11] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 09:34:11] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 09:34:11] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 09:34:11] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 09:34:11] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 09:34:11] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 09:34:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:34:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:34:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 09:34:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 09:34:11] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 3b55f956-cad2-4ec2-955e-f892fbf303c4
+[2025-04-05 09:34:12] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 09:34:12] [INFO] [VisualsSystem] Finished creating blurred background after 0.49624472856521606 seconds
+[2025-04-05 09:34:12] [INFO] [MovementSystem] Wacyua is planning to move from [3, 10] to [3, 10]
+[2025-04-05 09:34:12] [INFO] [MovementSystem] Updated movement area for Wacyua
+[2025-04-05 09:34:12] [INFO] [MovementSystem] Updated movement path for Wacyua
+[2025-04-05 09:34:12] [INFO] [MovementSystem] Wacyua is planning to move from [3, 10] to [3, 10]
+[2025-04-05 09:34:12] [INFO] [MovementSystem] Updated movement area for Wacyua
+[2025-04-05 09:34:12] [INFO] [MovementSystem] Updated movement path for Wacyua
+[2025-04-05 09:34:14] [INFO] [MovementSystem] Wacyua is planning to move from [3, 10] to [4, 10]
+[2025-04-05 09:34:14] [INFO] [MovementSystem] Updated movement path for Wacyua
+[2025-04-05 09:34:14] [INFO] [Component] Setting 3b55f956-cad2-4ec2-955e-f892fbf303c4 on to b3a7d345-c1e3-4df6-8ad8-d5bfd763a4b5.
+[2025-04-05 09:34:14] [INFO] [MovementSystem] Moved from [3, 10] to [4, 10]
+[2025-04-05 09:34:14] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:34:14] [INFO] [DevPanel] Setting camera mode
+[2025-04-05 09:34:15] [INFO] [AbilitySystem] Wacyua Triggered ability system
+[2025-04-05 09:34:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:34:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:34:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 09:34:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Weaoga
+[2025-04-05 09:34:16] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 09:34:16] [INFO] [InputHandler] Gliding 0 camera to new tile 3433947f-7ebe-4608-8ab1-96ad2c0507ca
+[2025-04-05 09:34:16] [INFO] [InputHandler] Gliding 1 camera to new tile 3433947f-7ebe-4608-8ab1-96ad2c0507ca
+[2025-04-05 09:34:16] [INFO] [MovementSystem] Weaoga is planning to move from [14, 14] to [13, 14]
+[2025-04-05 09:34:16] [INFO] [MovementSystem] Updated movement area for Weaoga
+[2025-04-05 09:34:16] [INFO] [MovementSystem] Updated movement path for Weaoga
+[2025-04-05 09:34:16] [INFO] [Component] Setting dc2c8705-0785-490b-8da5-4d9c72f630b6 on to 21c8420a-6822-4228-bb35-3a9db69a20fc.
+[2025-04-05 09:34:16] [INFO] [MovementSystem] Moved from [14, 14] to [13, 14]
+[2025-04-05 09:34:16] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:34:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 09:34:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Weaoga
+[2025-04-05 09:34:16] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 09:34:16] [INFO] [InputHandler] Gliding 0 camera to new tile 21c8420a-6822-4228-bb35-3a9db69a20fc
+[2025-04-05 09:34:16] [INFO] [InputHandler] Gliding 1 camera to new tile 21c8420a-6822-4228-bb35-3a9db69a20fc

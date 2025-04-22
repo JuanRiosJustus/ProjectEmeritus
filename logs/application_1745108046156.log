@@ -1,0 +1,37 @@
+[2025-04-19 17:14:06] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 17:14:06] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 17:14:06] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 17:14:06] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 17:14:06] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 17:14:06] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 17:14:06] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 17:14:06] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 17:14:06] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 17:14:06] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 17:14:06] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 17:14:06] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 17:14:06] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 17:14:06] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 17:14:06] [INFO] [Component] Setting dragon_Dulu_e02df6e6-1236-41fd-9ae9-4d58381cc5ea on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Dulu_e02df6e6-1236-41fd-9ae9-4d58381cc5ea","structure":""}.
+[2025-04-19 17:14:06] [INFO] [SpeedQueue] Added unit enemy:Dulu into queue
+[2025-04-19 17:14:06] [INFO] [Component] Setting air_dragon_Kuweoy_8967982f-a5a9-4921-b17d-d10cdfa3d961 on to {"row":7,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Kuweoy_8967982f-a5a9-4921-b17d-d10cdfa3d961","structure":""}.
+[2025-04-19 17:14:06] [INFO] [SpeedQueue] Added unit enemy:Kuweoy into queue
+[2025-04-19 17:14:06] [INFO] [Component] Setting fire_dragon_Dafci_f67f254f-2033-4a83-81f5-316833b96ffc on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Dafci_f67f254f-2033-4a83-81f5-316833b96ffc","structure":""}.
+[2025-04-19 17:14:06] [INFO] [SpeedQueue] Added unit user:Dafci into queue
+[2025-04-19 17:14:06] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 17:14:06] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 17:14:06] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 17:14:06] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 17:14:06] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 17:14:06] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 17:14:06] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 17:14:07] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 17:14:07] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_0e9b815c-c48c-49ec-a75d-92f55c59eb8b
+[2025-04-19 17:14:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 17:14:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 17:14:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:14:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:14:07] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 17:14:07] [INFO] [VisualsSystem] Finished creating blurred background after 0.4922904372215271 seconds
+[2025-04-19 17:14:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:14:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

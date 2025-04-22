@@ -1,0 +1,59 @@
+[2025-04-13 09:59:22] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 09:59:22] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 09:59:22] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 09:59:22] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 09:59:22] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 09:59:22] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 09:59:22] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 09:59:22] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 09:59:22] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 09:59:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 09:59:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 09:59:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 09:59:23] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 09:59:23] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 09:59:23] [INFO] [Component] Setting light_dragon_Noft_a8712e44-63fb-4df6-a846-f4d298020ea0 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Noft_a8712e44-63fb-4df6-a846-f4d298020ea0","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Noft into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting fire_dragon_Dunia_26475d4e-7989-472f-a033-e59c7e6a6ed1 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Dunia_26475d4e-7989-472f-a033-e59c7e6a6ed1","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Dunia into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting earth_dragon_Fazxma_bca43385-c0c6-459a-8d89-c14181cbb26a on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Fazxma_bca43385-c0c6-459a-8d89-c14181cbb26a","column":7,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Fazxma into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting air_dragon_Petga_6662acb3-08a3-44f7-904b-2e9f2e7a5942 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Petga_6662acb3-08a3-44f7-904b-2e9f2e7a5942","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Petga into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting earth_dragon_Nahyey_fff06d61-5699-4c05-98e9-b1c9996283cb on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Nahyey_fff06d61-5699-4c05-98e9-b1c9996283cb","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Nahyey into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting dark_dragon_Noosy_ea9c87fc-a993-41b4-a2a2-69fa3ac5a377 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Noosy_ea9c87fc-a993-41b4-a2a2-69fa3ac5a377","column":7,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Noosy into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting dark_dragon_Suxa_1c2cac26-7e48-4a05-8c7c-49d36709ea6a on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Suxa_1c2cac26-7e48-4a05-8c7c-49d36709ea6a","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Suxa into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting dark_dragon_Jevwc_b8a90460-00a3-4118-9cc5-8a59378f9dff on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Jevwc_b8a90460-00a3-4118-9cc5-8a59378f9dff","column":3,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit enemy:Jevwc into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting water_dragon_Deza_cc3b9cc5-2886-4852-90aa-6df1f13b215f on to {"spawn_region":[],"collider":"","unit":"water_dragon_Deza_cc3b9cc5-2886-4852-90aa-6df1f13b215f","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit user:Deza into queue
+[2025-04-13 09:59:23] [INFO] [Component] Setting light_dragon_Cursuy_c5f9dc56-17fc-4889-9799-6a9ddd967fe8 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Cursuy_c5f9dc56-17fc-4889-9799-6a9ddd967fe8","column":5,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Added unit user:Cursuy into queue
+[2025-04-13 09:59:23] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 09:59:23] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 09:59:23] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 09:59:23] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 09:59:23] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 09:59:23] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 09:59:23] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 09:59:23] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Dunia_26475d4e-7989-472f-a033-e59c7e6a6ed1
+[2025-04-13 09:59:23] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Dunia_26475d4e-7989-472f-a033-e59c7e6a6ed1
+[2025-04-13 09:59:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 09:59:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 09:59:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 09:59:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 09:59:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 09:59:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 09:59:23] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Dunia_26475d4e-7989-472f-a033-e59c7e6a6ed1
+[2025-04-13 09:59:23] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Dunia_26475d4e-7989-472f-a033-e59c7e6a6ed1
+[2025-04-13 09:59:23] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 09:59:23] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 09:59:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 09:59:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 09:59:23] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 09:59:24] [INFO] [VisualsSystem] Finished creating blurred background after 0.48713237047195435 seconds
+[2025-04-13 09:59:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 09:59:24] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

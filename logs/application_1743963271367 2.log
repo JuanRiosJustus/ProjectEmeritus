@@ -1,0 +1,262 @@
+[2025-04-06 11:14:31] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 11:14:31] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 11:14:31] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 11:14:31] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 11:14:31] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 11:14:31] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 11:14:31] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 11:14:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 11:14:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 11:14:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 11:14:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 11:14:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 11:14:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 11:14:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 11:14:31] [INFO] [Component] Setting fire_dragon_Koqu_05343ac8-ea3d-4331-8d1f-f8a61d8c6418 on to 8_9_f00f2fc5-66c4-4a4f-be79-997156aa2204.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Koqu into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting dragon_Xukk_180ab73a-43ce-48e7-a585-8c4aedc93a2f on to 14_11_c218c373-d836-4669-a7ff-c33414e5b8f4.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Xukk into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting fire_dragon_Cyzei_a3854138-475c-4d6a-8c06-346f653f30e2 on to 3_12_45c1d629-10e9-496b-912e-13edfc44cc20.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Cyzei into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting dark_dragon_Cygxju_6fb5c278-9a7b-437d-91e6-f4dcba0628af on to 6_7_b81ce8f1-70fd-4b35-8b13-433f44174c25.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Cygxju into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting air_dragon_Qeefee_bf127971-60c0-4b3d-954a-bda4acbfb9f8 on to 1_5_ffcccffe-d403-4637-bb06-ed802bd004c0.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Qeefee into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting fire_dragon_Pomuia_c3d5c416-76b6-400a-9e2e-e64e703d2cd7 on to 12_14_bb46f89f-9ccd-4f70-9e42-5675fe97df10.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Pomuia into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting light_dragon_Yeasa_2c675d01-d19b-4969-8b2f-957306bacc2c on to 2_0_6171ef0d-e1cd-4e8a-8fe3-173239c16a97.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Yeasa into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting air_dragon_Yadla_f23b77e5-d02d-41d2-82d3-f49ad142507f on to 0_7_c885a190-ba60-4ded-adf2-258c7fb1d2b7.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Yadla into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting water_dragon_Yexy_532c044c-195d-4bb4-a437-0f8432f07d82 on to 13_2_51e7b7b6-05f9-41d3-903a-6d9a042ec29f.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Yexy into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting dragon_Muwiu_90762141-092b-4836-8ffc-97c115a2af02 on to 5_0_1a5d711a-7ced-461c-be48-45016e07ab9e.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Muwiu into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting dark_dragon_Xetc_7c08c53a-e251-45ac-a1a0-e266b36ab08c on to 5_10_31a429e6-16b5-409a-8197-af1aca74d31a.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Xetc into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting air_dragon_Oayv_a604036b-0972-44ba-bf83-2b0ae17c8ab4 on to 10_8_529c40ef-6e09-473c-8e44-9657dc2ac013.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Oayv into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting fire_dragon_Oasua_46792f33-4625-4448-8f7e-578abe225213 on to 8_4_1ac29ce1-4532-48d0-b9c4-d33401c2643e.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Oasua into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting dark_dragon_Leku_a2fba2bf-2b8f-4e6f-8782-55540e0d9931 on to 12_10_805ff2e2-f8ab-434c-9eb0-f44cc72e29c9.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Leku into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting fire_dragon_Oejaju_71beb729-6f72-4723-9158-c74edeffbc87 on to 6_14_0cb34996-f3d6-4dae-adc7-dbb4ebf611ae.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Oejaju into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting earth_dragon_Baxde_afa7eeca-19b9-48ba-b23e-66eae0afcffc on to 13_4_7cbb2a17-45fa-4c7c-b0a5-ef241b29d2f4.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Baxde into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting air_dragon_Heldxz_82ba4f84-64f9-4c09-8c28-7b19273aa4bb on to 14_7_09752c42-a255-445d-92a9-6d13b63930e1.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Heldxz into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting earth_dragon_Komoy_1e94c330-f0d0-422d-89c0-e7c6b76c76ee on to 0_3_dd8c36a5-7285-47fc-ab6c-9d3af36be233.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Komoy into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting dark_dragon_Zagq_9e910ac4-9dd9-4872-8f43-81db4ab332d6 on to 12_2_5e6bb53d-3296-4a7e-b9e7-6888aa59a96a.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Zagq into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting light_dragon_Liuo_acf0a5bb-765f-4e0a-972b-4d4e19a3dbec on to 7_14_f8ae2406-7b43-4e61-a84b-1422148e9779.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Liuo into queue
+[2025-04-06 11:14:31] [INFO] [Component] Setting air_dragon_Myfixi_035c1311-ac5f-4078-bf3c-6798b8b5a62b on to 3_7_a06b7b2f-a0b7-4f1c-a5a0-52cf69115579.
+[2025-04-06 11:14:31] [INFO] [SpeedQueue] Added unit enemy:Myfixi into queue
+[2025-04-06 11:14:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 11:14:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 11:14:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 11:14:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 11:14:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 11:14:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 11:14:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:14:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:14:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 11:14:32] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dark_dragon_Xetc_7c08c53a-e251-45ac-a1a0-e266b36ab08c
+[2025-04-06 11:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 11:14:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.48823705315589905 seconds
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Xetc Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Myfixi Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Yadla Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Baxde Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Koqu Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Heldxz Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Qeefee Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Pomuia Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Oasua Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Cyzei Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Cygxju Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Komoy Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Muwiu Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Oayv Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Leku Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Liuo Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Oejaju Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Zagq Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Xukk Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Yexy Triggered ability system
+[2025-04-06 11:14:32] [INFO] [AbilitySystem] Yeasa Triggered ability system
+[2025-04-06 11:14:32] [INFO] [MovementSystem] Updated movement range for Xetc
+[2025-04-06 11:14:32] [INFO] [MovementSystem] Updated movement path for Xetc
+[2025-04-06 11:14:32] [INFO] [Component] Setting dark_dragon_Xetc_7c08c53a-e251-45ac-a1a0-e266b36ab08c on to 6_11_cfc327ba-d0fb-4fe6-80c6-724efdf525ce.
+[2025-04-06 11:14:32] [INFO] [MovementSystem] Moved from [5, 10] to [6, 11]
+[2025-04-06 11:14:32] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:33] [INFO] [MovementSystem] Updated movement range for Yeasa
+[2025-04-06 11:14:33] [INFO] [MovementSystem] Updated movement path for Yeasa
+[2025-04-06 11:14:33] [INFO] [Component] Setting light_dragon_Yeasa_2c675d01-d19b-4969-8b2f-957306bacc2c on to 3_0_5e5b6568-38ba-4037-9f59-8c7f89ff4a1e.
+[2025-04-06 11:14:33] [INFO] [MovementSystem] Moved from [2, 0] to [3, 0]
+[2025-04-06 11:14:33] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:34] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 11:14:34] [INFO] [AbilitySystem] Xetc Triggered ability system
+[2025-04-06 11:14:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:35] [INFO] [MovementSystem] Updated movement range for Yexy
+[2025-04-06 11:14:35] [INFO] [MovementSystem] Updated movement path for Yexy
+[2025-04-06 11:14:35] [INFO] [Component] Setting water_dragon_Yexy_532c044c-195d-4bb4-a437-0f8432f07d82 on to 13_0_84515df4-b01f-433c-bb65-ff10989de516.
+[2025-04-06 11:14:35] [INFO] [MovementSystem] Moved from [13, 2] to [13, 0]
+[2025-04-06 11:14:35] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:36] [INFO] [AbilitySystem] Yeasa Triggered ability system
+[2025-04-06 11:14:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:36] [INFO] [MovementSystem] Updated movement range for Xukk
+[2025-04-06 11:14:36] [INFO] [MovementSystem] Updated movement path for Xukk
+[2025-04-06 11:14:36] [INFO] [Component] Setting dragon_Xukk_180ab73a-43ce-48e7-a585-8c4aedc93a2f on to 14_12_b584e9af-1ba9-4f24-9067-5788b79e839b.
+[2025-04-06 11:14:36] [INFO] [MovementSystem] Moved from [14, 11] to [14, 12]
+[2025-04-06 11:14:36] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:37] [INFO] [AbilitySystem] Yexy Triggered ability system
+[2025-04-06 11:14:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:37] [INFO] [MovementSystem] Updated movement range for Zagq
+[2025-04-06 11:14:37] [INFO] [MovementSystem] Updated movement path for Zagq
+[2025-04-06 11:14:37] [INFO] [Component] Setting dark_dragon_Zagq_9e910ac4-9dd9-4872-8f43-81db4ab332d6 on to 12_3_2f5df400-8325-4d85-a172-ba6c62b4b944.
+[2025-04-06 11:14:37] [INFO] [MovementSystem] Moved from [12, 2] to [12, 3]
+[2025-04-06 11:14:37] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:38] [INFO] [AbilitySystem] Xukk Triggered ability system
+[2025-04-06 11:14:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:38] [INFO] [MovementSystem] Updated movement range for Oejaju
+[2025-04-06 11:14:38] [INFO] [MovementSystem] Updated movement path for Oejaju
+[2025-04-06 11:14:38] [INFO] [Component] Setting fire_dragon_Oejaju_71beb729-6f72-4723-9158-c74edeffbc87 on to 4_14_624349cc-71ba-41ff-a6b9-770818e08524.
+[2025-04-06 11:14:38] [INFO] [MovementSystem] Moved from [6, 14] to [4, 14]
+[2025-04-06 11:14:38] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:39] [INFO] [AbilitySystem] Zagq Triggered ability system
+[2025-04-06 11:14:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:39] [INFO] [MovementSystem] Updated movement range for Liuo
+[2025-04-06 11:14:39] [INFO] [MovementSystem] Updated movement path for Liuo
+[2025-04-06 11:14:39] [INFO] [Component] Setting light_dragon_Liuo_acf0a5bb-765f-4e0a-972b-4d4e19a3dbec on to 8_13_070d5502-4796-4fbc-9e2d-234dc1f05d49.
+[2025-04-06 11:14:39] [INFO] [MovementSystem] Moved from [7, 14] to [8, 13]
+[2025-04-06 11:14:39] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:40] [INFO] [AbilitySystem] Oejaju Triggered ability system
+[2025-04-06 11:14:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:40] [INFO] [MovementSystem] Updated movement range for Leku
+[2025-04-06 11:14:40] [INFO] [MovementSystem] Updated movement path for Leku
+[2025-04-06 11:14:40] [INFO] [Component] Setting dark_dragon_Leku_a2fba2bf-2b8f-4e6f-8782-55540e0d9931 on to 12_11_9d961dfc-febd-4ab2-83d2-f84dec6479b5.
+[2025-04-06 11:14:40] [INFO] [MovementSystem] Moved from [12, 10] to [12, 11]
+[2025-04-06 11:14:40] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:41] [INFO] [AbilitySystem] Liuo Triggered ability system
+[2025-04-06 11:14:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:41] [INFO] [MovementSystem] Updated movement range for Oayv
+[2025-04-06 11:14:41] [INFO] [MovementSystem] Updated movement path for Oayv
+[2025-04-06 11:14:41] [INFO] [Component] Setting air_dragon_Oayv_a604036b-0972-44ba-bf83-2b0ae17c8ab4 on to 10_7_c0f11eeb-954c-452e-82d7-2621c0e28829.
+[2025-04-06 11:14:41] [INFO] [MovementSystem] Moved from [10, 8] to [10, 7]
+[2025-04-06 11:14:41] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:42] [INFO] [AbilitySystem] Leku Triggered ability system
+[2025-04-06 11:14:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:42] [INFO] [MovementSystem] Updated movement range for Muwiu
+[2025-04-06 11:14:42] [INFO] [MovementSystem] Updated movement path for Muwiu
+[2025-04-06 11:14:42] [INFO] [Component] Setting dragon_Muwiu_90762141-092b-4836-8ffc-97c115a2af02 on to 7_0_d1e36729-5d79-46ee-bd74-a9a508f19890.
+[2025-04-06 11:14:42] [INFO] [MovementSystem] Moved from [5, 0] to [7, 0]
+[2025-04-06 11:14:42] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:43] [INFO] [AbilitySystem] Oayv Triggered ability system
+[2025-04-06 11:14:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:43] [INFO] [MovementSystem] Updated movement range for Komoy
+[2025-04-06 11:14:43] [INFO] [MovementSystem] Updated movement path for Komoy
+[2025-04-06 11:14:43] [INFO] [Component] Setting earth_dragon_Komoy_1e94c330-f0d0-422d-89c0-e7c6b76c76ee on to 1_4_238eb129-5320-4c84-9e3a-60a00e5184e2.
+[2025-04-06 11:14:43] [INFO] [MovementSystem] Moved from [0, 3] to [1, 4]
+[2025-04-06 11:14:43] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:44] [INFO] [AbilitySystem] Muwiu Triggered ability system
+[2025-04-06 11:14:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:44] [INFO] [MovementSystem] Updated movement range for Cygxju
+[2025-04-06 11:14:44] [INFO] [MovementSystem] Updated movement path for Cygxju
+[2025-04-06 11:14:44] [INFO] [Component] Setting dark_dragon_Cygxju_6fb5c278-9a7b-437d-91e6-f4dcba0628af on to 7_8_9113f7d9-f0f2-4f72-8d56-04302844f5fd.
+[2025-04-06 11:14:44] [INFO] [MovementSystem] Moved from [6, 7] to [7, 8]
+[2025-04-06 11:14:44] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:45] [INFO] [AbilitySystem] Komoy Triggered ability system
+[2025-04-06 11:14:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:45] [INFO] [MovementSystem] Updated movement range for Cyzei
+[2025-04-06 11:14:45] [INFO] [MovementSystem] Updated movement path for Cyzei
+[2025-04-06 11:14:45] [INFO] [Component] Setting fire_dragon_Cyzei_a3854138-475c-4d6a-8c06-346f653f30e2 on to 3_13_063101e1-f25c-4bf7-bf9e-c3757c94c034.
+[2025-04-06 11:14:45] [INFO] [MovementSystem] Moved from [3, 12] to [3, 13]
+[2025-04-06 11:14:45] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:46] [INFO] [AbilitySystem] Cygxju Triggered ability system
+[2025-04-06 11:14:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:46] [INFO] [MovementSystem] Updated movement range for Oasua
+[2025-04-06 11:14:46] [INFO] [MovementSystem] Updated movement path for Oasua
+[2025-04-06 11:14:46] [INFO] [Component] Setting fire_dragon_Oasua_46792f33-4625-4448-8f7e-578abe225213 on to 7_4_68d07ce0-ae86-4df8-a9c0-cec753bb39f9.
+[2025-04-06 11:14:46] [INFO] [MovementSystem] Moved from [8, 4] to [7, 4]
+[2025-04-06 11:14:46] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:47] [INFO] [AbilitySystem] Cyzei Triggered ability system
+[2025-04-06 11:14:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:47] [INFO] [MovementSystem] Updated movement range for Pomuia
+[2025-04-06 11:14:47] [INFO] [MovementSystem] Updated movement path for Pomuia
+[2025-04-06 11:14:47] [INFO] [Component] Setting fire_dragon_Pomuia_c3d5c416-76b6-400a-9e2e-e64e703d2cd7 on to 12_12_6d81f9f2-cf91-467e-a1d5-4da26b55b9f5.
+[2025-04-06 11:14:47] [INFO] [MovementSystem] Moved from [12, 14] to [12, 12]
+[2025-04-06 11:14:47] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:48] [INFO] [AbilitySystem] Oasua Triggered ability system
+[2025-04-06 11:14:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:48] [INFO] [MovementSystem] Updated movement range for Qeefee
+[2025-04-06 11:14:48] [INFO] [MovementSystem] Updated movement path for Qeefee
+[2025-04-06 11:14:48] [INFO] [Component] Setting air_dragon_Qeefee_bf127971-60c0-4b3d-954a-bda4acbfb9f8 on to 1_6_2618e8c6-8b34-4155-a60e-4861e7a35d82.
+[2025-04-06 11:14:48] [INFO] [MovementSystem] Moved from [1, 5] to [1, 6]
+[2025-04-06 11:14:48] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:49] [INFO] [AbilitySystem] Pomuia Triggered ability system
+[2025-04-06 11:14:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:49] [INFO] [MovementSystem] Updated movement range for Heldxz
+[2025-04-06 11:14:49] [INFO] [MovementSystem] Updated movement path for Heldxz
+[2025-04-06 11:14:49] [INFO] [Component] Setting air_dragon_Heldxz_82ba4f84-64f9-4c09-8c28-7b19273aa4bb on to 13_6_e08d32a6-8ad2-45dc-ac55-5b2a031364a3.
+[2025-04-06 11:14:49] [INFO] [MovementSystem] Moved from [14, 7] to [13, 6]
+[2025-04-06 11:14:49] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:50] [INFO] [AbilitySystem] Qeefee Triggered ability system
+[2025-04-06 11:14:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:50] [INFO] [MovementSystem] Updated movement range for Koqu
+[2025-04-06 11:14:50] [INFO] [MovementSystem] Updated movement path for Koqu
+[2025-04-06 11:14:50] [INFO] [Component] Setting fire_dragon_Koqu_05343ac8-ea3d-4331-8d1f-f8a61d8c6418 on to 8_10_f24309c5-504b-4435-962c-132b53e2411f.
+[2025-04-06 11:14:50] [INFO] [MovementSystem] Moved from [8, 9] to [8, 10]
+[2025-04-06 11:14:50] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:51] [INFO] [AbilitySystem] Heldxz Triggered ability system
+[2025-04-06 11:14:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:51] [INFO] [MovementSystem] Updated movement range for Baxde
+[2025-04-06 11:14:51] [INFO] [MovementSystem] Updated movement path for Baxde
+[2025-04-06 11:14:51] [INFO] [Component] Setting earth_dragon_Baxde_afa7eeca-19b9-48ba-b23e-66eae0afcffc on to 13_3_4a843b61-0165-4ef0-a201-4b90ae06feaa.
+[2025-04-06 11:14:51] [INFO] [MovementSystem] Moved from [13, 4] to [13, 3]
+[2025-04-06 11:14:51] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:52] [INFO] [AbilitySystem] Koqu Triggered ability system
+[2025-04-06 11:14:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:52] [INFO] [MovementSystem] Updated movement range for Yadla
+[2025-04-06 11:14:52] [INFO] [MovementSystem] Updated movement path for Yadla
+[2025-04-06 11:14:52] [INFO] [Component] Setting air_dragon_Yadla_f23b77e5-d02d-41d2-82d3-f49ad142507f on to 2_7_12d49a1b-816c-4da6-8192-9f6c72b19b7c.
+[2025-04-06 11:14:52] [INFO] [MovementSystem] Moved from [0, 7] to [2, 7]
+[2025-04-06 11:14:52] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:53] [INFO] [AbilitySystem] Baxde Triggered ability system
+[2025-04-06 11:14:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:53] [INFO] [MovementSystem] Updated movement range for Myfixi
+[2025-04-06 11:14:53] [INFO] [MovementSystem] Updated movement path for Myfixi
+[2025-04-06 11:14:53] [INFO] [Component] Setting air_dragon_Myfixi_035c1311-ac5f-4078-bf3c-6798b8b5a62b on to 5_7_a6f316e1-c5e6-4882-b68f-f2bad6a18b83.
+[2025-04-06 11:14:53] [INFO] [MovementSystem] Moved from [3, 7] to [5, 7]
+[2025-04-06 11:14:53] [INFO] [MovementSystem] {} has moved
+[2025-04-06 11:14:54] [INFO] [AbilitySystem] Yadla Triggered ability system
+[2025-04-06 11:14:54] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:14:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:14:54] [INFO] [MovementSystem] Updated movement range for Xetc
+[2025-04-06 11:14:54

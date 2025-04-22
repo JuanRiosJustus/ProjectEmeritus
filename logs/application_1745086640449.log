@@ -1,0 +1,26 @@
+[2025-04-19 11:17:20] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 11:17:20] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 11:17:20] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 11:17:20] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 11:17:20] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 11:17:20] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 11:17:20] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 11:17:20] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 11:17:20] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 11:17:20] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 11:17:20] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 11:17:20] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 11:17:20] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 11:17:20] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 11:17:20] [INFO] [Component] Setting earth_dragon_Zaxbao_0e5a32c3-a11d-4ffb-8b1b-16a371194d51 on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Zaxbao_0e5a32c3-a11d-4ffb-8b1b-16a371194d51","structure":""}.
+[2025-04-19 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Zaxbao into queue
+[2025-04-19 11:17:20] [INFO] [Component] Setting air_dragon_Yecj_0c716711-8280-41f9-81cf-a1834d94cc2c on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Yecj_0c716711-8280-41f9-81cf-a1834d94cc2c","structure":""}.
+[2025-04-19 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Yecj into queue
+[2025-04-19 11:17:20] [INFO] [Component] Setting fire_dragon_Varw_3eb64a32-5778-422d-b093-1c24c677da5f on to {"row":7,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Varw_3eb64a32-5778-422d-b093-1c24c677da5f","structure":""}.
+[2025-04-19 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Varw into queue
+[2025-04-19 11:17:20] [INFO] [Component] Setting water_dragon_Modyh_a3e3fd02-3701-466e-84f8-000751d7f4d0 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Modyh_a3e3fd02-3701-466e-84f8-000751d7f4d0","structure":""}.
+[2025-04-19 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Modyh into queue
+[2025-04-19 11:17:20] [INFO] [Component] Setting light_dragon_Yezu_795be6d2-d45d-4bcc-9c76-7c73fb9ddf22 on to {"row":1,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Yezu_795be6d2-d45d-4bcc-9c76-7c73fb9ddf22","structure":""}.
+[2025-04-19 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Yezu into queue
+[2025-04-19 11:17:20] [INFO] [Component] Setting air_dragon_Maqosy_914970a7-e5b0-4e89-ad47-d3a978f885ed on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Maqosy_914970a7-e5b0-4e89-ad47-d3a978f885ed","structure":""}.
+[2025-04-19 11:17:20] [INFO] [SpeedQueue] Added unit user

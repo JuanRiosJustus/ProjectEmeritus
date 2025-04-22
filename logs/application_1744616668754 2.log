@@ -1,0 +1,76 @@
+[2025-04-14 00:44:28] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-14 00:44:28] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-14 00:44:28] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-14 00:44:28] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-14 00:44:28] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-14 00:44:28] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-14 00:44:28] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-14 00:44:28] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-14 00:44:28] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-14 00:44:28] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-14 00:44:28] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-14 00:44:28] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-14 00:44:28] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-14 00:44:28] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-14 00:44:29] [INFO] [Component] Setting water_dragon_Qymgie_cbd04418-865b-4bee-a775-129e27cd3ab7 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Qymgie_cbd04418-865b-4bee-a775-129e27cd3ab7","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-14 00:44:29] [INFO] [SpeedQueue] Added unit enemy:Qymgie into queue
+[2025-04-14 00:44:29] [INFO] [Component] Setting light_dragon_Vaiuu_f3722d21-abe5-427c-907b-8ffb2e8ace65 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Vaiuu_f3722d21-abe5-427c-907b-8ffb2e8ace65","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-14 00:44:29] [INFO] [SpeedQueue] Added unit enemy:Vaiuu into queue
+[2025-04-14 00:44:29] [INFO] [Component] Setting dark_dragon_Vuceuy_69707b99-13b4-4fdb-944a-977057a3d0e6 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Vuceuy_69707b99-13b4-4fdb-944a-977057a3d0e6","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-14 00:44:29] [INFO] [SpeedQueue] Added unit enemy:Vuceuy into queue
+[2025-04-14 00:44:29] [INFO] [Component] Setting fire_dragon_Quixo_3bd206fd-e270-4b2b-a6af-0ba44d6e1e91 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Quixo_3bd206fd-e270-4b2b-a6af-0ba44d6e1e91","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-14 00:44:29] [INFO] [SpeedQueue] Added unit enemy:Quixo into queue
+[2025-04-14 00:44:29] [INFO] [Component] Setting light_dragon_Augy_b9d94bd8-c9ed-4611-b092-fdc60be9bc06 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Augy_b9d94bd8-c9ed-4611-b092-fdc60be9bc06","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-14 00:44:29] [INFO] [SpeedQueue] Added unit user:Augy into queue
+[2025-04-14 00:44:29] [INFO] [Component] Setting water_dragon_Yyje_4ed3b509-76e1-45f8-b639-a73f00eb179c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Yyje_4ed3b509-76e1-45f8-b639-a73f00eb179c","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-14 00:44:29] [INFO] [SpeedQueue] Added unit user:Yyje into queue
+[2025-04-14 00:44:29] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-14 00:44:29] [INFO] [FontPool] Started initializing FontPool
+[2025-04-14 00:44:29] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-14 00:44:29] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-14 00:44:29] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-14 00:44:29] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Qymgie_cbd04418-865b-4bee-a775-129e27cd3ab7
+[2025-04-14 00:44:29] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Qymgie_cbd04418-865b-4bee-a775-129e27cd3ab7
+[2025-04-14 00:44:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-14 00:44:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-14 00:44:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-14 00:44:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-14 00:44:29] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Qymgie_cbd04418-865b-4bee-a775-129e27cd3ab7
+[2025-04-14 00:44:29] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Qymgie_cbd04418-865b-4bee-a775-129e27cd3ab7
+[2025-04-14 00:44:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-14 00:44:29] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-14 00:44:29] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-14 00:44:29] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-14 00:44:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-14 00:44:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-14 00:44:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-14 00:44:30] [INFO] [VisualsSystem] Finished creating blurred background after 0.31422579288482666 seconds
+[2025-04-14 00:44:32] [INFO] [InputHandler] Gliding 0 camera to new tile 0_7_41bd93bb-c2df-4144-bf71-c3be8f358f0a
+[2025-04-14 00:44:32] [INFO] [InputHandler] Gliding 1 camera to new tile 0_7_41bd93bb-c2df-4144-bf71-c3be8f358f0a
+[2025-04-14 00:44:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-14 00:44:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Qymgie
+[2025-04-14 00:44:33] [INFO] [InputHandler] Gliding 0 camera to new tile 0_7_41bd93bb-c2df-4144-bf71-c3be8f358f0a
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement range to 6 for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to null for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement range to 6 for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to null for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to [2, 7] for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to [2, 7] for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 7] for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 7] for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Qymgie
+[2025-04-14 00:44:33] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [2, 6] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [2, 6] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 5] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 5] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 5] for Qymgie
+[2025-04-14 00:44:34] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 5] for Qymgie
+[2025-04-14 00:44:35] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 4] for Qymgie
+[2025-04-14 00:44:35] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 4] for Qymgie
+[2025-04-14 00:44:35] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 3] for Qymgie
+[2025-04-14 00:44:35] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 3] for Qymgie
+[2025-04-14 00:44:35] [INFO] [MovementSystem] Updated movement path from [0, 7] to null for Qymgie
+[2025-04-14 00:44:35] [INFO] [MovementSystem] Updated movement path from [0, 7] to null for Qymgie

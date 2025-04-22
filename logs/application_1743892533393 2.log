@@ -1,0 +1,62 @@
+[2025-04-05 15:35:33] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 15:35:33] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 15:35:33] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 15:35:33] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 15:35:33] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 15:35:33] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 15:35:33] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 15:35:33] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 15:35:33] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 15:35:33] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 15:35:33] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 15:35:33] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 15:35:33] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 15:36:05] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 15:36:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 15:36:05] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 15:36:05] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 15:36:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 15:36:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 15:38:01] [INFO] [Component] Setting light_dragon_Lohe_380b6e6f-4bbd-42f9-813d-bf933c474717 on to 11_14_3ac47f41-bb93-4e6a-ba30-a8c41bc9ec79.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Lohe into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting water_dragon_Eibu_6c81f692-424d-47f9-b5fa-eb73e4acfa48 on to 3_8_ddb188f6-e90b-4b07-bc36-9d3c00a04b9b.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Eibu into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting water_dragon_Xipwrk_01b4435c-107a-4235-9b2c-48e955250b44 on to 6_6_1e318cbb-865e-4e53-bf6c-84a59b623ac9.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Xipwrk into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting water_dragon_Lovaaa_4dccb199-7706-4769-a0b0-3150d08d36e5 on to 2_8_110194a9-afdf-4627-bd07-0b9d5fab998b.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Lovaaa into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting air_dragon_Zedpln_8ff1b2b7-3271-46d3-b66c-734ad6d4c1ba on to 5_7_abbcd308-0e90-4325-b740-43d75daa6ed8.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Zedpln into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting water_dragon_Zaioe_ca2659e5-e4ce-4b9e-8514-1574197640dc on to 3_9_b07bbd4c-016b-4499-80e2-1d5b1e54630b.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Zaioe into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting dark_dragon_Fyanio_f3f9dd20-9153-4617-8165-b3c8029934ed on to 10_14_33431e43-6759-4faf-b6ae-b601d080c5fe.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Fyanio into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting air_dragon_Dyrko_cc4161a9-2084-4e60-a907-5b65bf7e3364 on to 3_2_fe4941bc-6d75-4683-9062-082bc6a7056b.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Dyrko into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting air_dragon_Pymuco_dda5bbee-f736-424a-ba5b-351f7f57e289 on to 1_14_0de1bae9-d130-4c7a-893e-9854b23fc430.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Pymuco into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting dragon_Lyqgw_3796bccb-8bc5-4d7b-860d-576260ff5359 on to 14_12_2fc5e3fc-cd27-494b-869b-b8b170e4c282.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Lyqgw into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting air_dragon_Zyur_85505997-2b50-4f40-91a4-851f0ec2af60 on to 2_7_127682dd-ed1e-460f-bd04-55a698760928.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Zyur into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting water_dragon_Sunyoe_4ca3fa23-0ea5-4e8c-8518-3361db0705f2 on to 10_10_963d094a-d817-48b0-a730-f003f74649e8.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Sunyoe into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting dragon_Kiwe_ab79fc23-1b8c-489f-ab5c-838ec55cb5f7 on to 2_2_000b482d-961d-4615-8ed2-6b1a8cc10fcd.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Kiwe into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting air_dragon_Gyvuyg_f6a95794-1454-4c74-870e-7c9581c7f294 on to 5_13_de1e43c5-c194-4d42-bac1-13da570fd7f6.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Gyvuyg into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting light_dragon_Sijsi_b0d4c8d9-01f5-49e0-8f4a-66fff7097d89 on to 8_8_c171a36c-885d-4721-b34a-211cfffdbfb1.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Sijsi into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting dragon_Uout_880f08c7-acae-4155-b25b-2e1f44251336 on to 0_9_feb589ee-d02d-4e80-b6ef-4d79142c215d.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Uout into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting air_dragon_Poqo_0100a91e-d4ec-4e61-b709-1efcda5d6586 on to 14_2_0e53fbca-ca90-486e-b944-82b5e94ee4cb.
+[2025-04-05 15:38:01] [INFO] [SpeedQueue] Added unit enemy:Poqo into queue
+[2025-04-05 15:38:01] [INFO] [Component] Setting light_dragon_Oidj_50ee44bc-380f-4a2d-91f8-fa961c3a3e7a on to 14_3_e93369a2-104d-4d20-a9

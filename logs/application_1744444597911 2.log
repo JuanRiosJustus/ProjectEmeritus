@@ -1,0 +1,259 @@
+[2025-04-12 00:56:37] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-12 00:56:37] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-12 00:56:37] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-12 00:56:37] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-12 00:56:37] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-12 00:56:37] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-12 00:56:37] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-12 00:56:37] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-12 00:56:37] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-12 00:56:37] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-12 00:56:37] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-12 00:56:37] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-12 00:56:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-12 00:56:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-12 00:56:38] [INFO] [Component] Setting air_dragon_Nuco_0f794264-c0e0-467d-a57a-63ea833ecb70 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Nuco_0f794264-c0e0-467d-a57a-63ea833ecb70","column":14,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Nuco into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting earth_dragon_Wyaey_d3d00435-9b34-426b-a958-006b9be55bb4 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Wyaey_d3d00435-9b34-426b-a958-006b9be55bb4","column":13,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Wyaey into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting fire_dragon_Relii_36d70b8e-c52c-493d-bfd8-ed47504efed0 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Relii_36d70b8e-c52c-493d-bfd8-ed47504efed0","column":7,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Relii into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Iyjy_6522479e-8b5c-4bf9-93f9-db368812ceb5 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iyjy_6522479e-8b5c-4bf9-93f9-db368812ceb5","column":0,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Iyjy into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Wako_795862cf-b32e-456f-93f6-5390aa38c151 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Wako_795862cf-b32e-456f-93f6-5390aa38c151","column":6,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Wako into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c","column":13,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Oauiag into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting water_dragon_Syqn_f768cbd1-eba8-4caa-9852-911d1b4c8f2b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Syqn_f768cbd1-eba8-4caa-9852-911d1b4c8f2b","column":12,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Syqn into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Lawa_31847c5b-5263-4692-9b20-0e62b348d13c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Lawa_31847c5b-5263-4692-9b20-0e62b348d13c","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Lawa into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Ponio_0525e3cb-ce55-4c3a-807a-d8013982c4c7 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ponio_0525e3cb-ce55-4c3a-807a-d8013982c4c7","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Ponio into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting air_dragon_Ieya_c0a2adcc-8900-4ef8-bb5a-2f13a4995c98 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Ieya_c0a2adcc-8900-4ef8-bb5a-2f13a4995c98","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Ieya into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting earth_dragon_Wipoi_f76388f3-54d1-4f62-8f3d-d8254a0b93b0 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Wipoi_f76388f3-54d1-4f62-8f3d-d8254a0b93b0","column":11,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Wipoi into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Wiuuvu_5458f344-dca2-40c7-9edd-2883fea5530f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Wiuuvu_5458f344-dca2-40c7-9edd-2883fea5530f","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Wiuuvu into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Uufi_fce97c2f-39bd-4f4a-95ed-4e76ad654571 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uufi_fce97c2f-39bd-4f4a-95ed-4e76ad654571","column":4,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Uufi into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Gewsri_8a69d3ff-6a76-4db7-af48-61a52ffb5f88 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Gewsri_8a69d3ff-6a76-4db7-af48-61a52ffb5f88","column":3,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Gewsri into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Yezo_be20f4e0-b698-4ed9-b80e-7d95c0adb909 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Yezo_be20f4e0-b698-4ed9-b80e-7d95c0adb909","column":2,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Yezo into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Wahiyf_8d805837-681e-4ad0-a041-be23e59dce91 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Wahiyf_8d805837-681e-4ad0-a041-be23e59dce91","column":10,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Wahiyf into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting earth_dragon_Oovqio_1ac51249-67ea-463b-8368-7de97c37c620 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Oovqio_1ac51249-67ea-463b-8368-7de97c37c620","column":10,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Oovqio into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting fire_dragon_Iaonu_c8205f61-21c3-4e20-aeaa-fa72f975993c on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Iaonu_c8205f61-21c3-4e20-aeaa-fa72f975993c","column":2,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Iaonu into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dragon_Sieo_5951b280-48b4-419a-aa30-5fcc81bd1861 on to {"spawn_region":[],"collider":"","unit":"dragon_Sieo_5951b280-48b4-419a-aa30-5fcc81bd1861","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Sieo into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting fire_dragon_Muknhu_aa6e2206-1cb0-44fb-bb6c-803976cbe323 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Muknhu_aa6e2206-1cb0-44fb-bb6c-803976cbe323","column":8,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Muknhu into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Iimi_f646b3c5-1b00-4713-937b-191b01783569 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iimi_f646b3c5-1b00-4713-937b-191b01783569","column":12,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Iimi into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting earth_dragon_Eytvi_607a39a7-4964-4edb-8884-f11a1677643e on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Eytvi_607a39a7-4964-4edb-8884-f11a1677643e","column":1,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Eytvi into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting fire_dragon_Meziy_5860b36f-4fca-4a9e-8035-f6105c3cd7a4 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Meziy_5860b36f-4fca-4a9e-8035-f6105c3cd7a4","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit enemy:Meziy into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Vooy_74b04427-59e9-49e7-ab1c-1e8cd0b0f5ee on to {"spawn_region":[],"collider":"","unit":"light_dragon_Vooy_74b04427-59e9-49e7-ab1c-1e8cd0b0f5ee","column":4,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Vooy into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Uoyb into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Ramy_d543042a-1cc7-47c0-ab7e-2ad70e9b0bf7 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Ramy_d543042a-1cc7-47c0-ab7e-2ad70e9b0bf7","column":8,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Ramy into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Cicpyh_b6e8a942-8880-45ac-97ea-c0fce924bcd0 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Cicpyh_b6e8a942-8880-45ac-97ea-c0fce924bcd0","column":6,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Cicpyh into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting fire_dragon_Wiua_7015f815-e1f3-4070-8fc8-94e9288c551f on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Wiua_7015f815-e1f3-4070-8fc8-94e9288c551f","column":8,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Wiua into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Toptds_2c6f7991-d431-47c3-987c-204fa620129a on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Toptds_2c6f7991-d431-47c3-987c-204fa620129a","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Toptds into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dragon_Qaxd_198c878a-b22e-49c1-ae19-5bb5566654b2 on to {"spawn_region":[],"collider":"","unit":"dragon_Qaxd_198c878a-b22e-49c1-ae19-5bb5566654b2","column":13,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Qaxd into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Lomuyh_bb614d02-2484-447b-ae15-6db4dcad0f55 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Lomuyh_bb614d02-2484-447b-ae15-6db4dcad0f55","column":14,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Lomuyh into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Pake_242beaee-12a7-4229-9853-58bd14baff57 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Pake_242beaee-12a7-4229-9853-58bd14baff57","column":2,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Pake into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting dark_dragon_Iaves_0450d736-d1b6-4739-8193-f2da4312527c on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iaves_0450d736-d1b6-4739-8193-f2da4312527c","column":9,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Iaves into queue
+[2025-04-12 00:56:38] [INFO] [Component] Setting light_dragon_Vyjksy_48c3e911-9301-4368-bde3-151f56a29f2f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Vyjksy_48c3e911-9301-4368-bde3-151f56a29f2f","column":3,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 00:56:38] [INFO] [SpeedQueue] Added unit user:Vyjksy into queue
+[2025-04-12 00:56:38] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-12 00:56:38] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-12 00:56:38] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-12 00:56:38] [INFO] [FontPool] Started initializing FontPool
+[2025-04-12 00:56:38] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-12 00:56:38] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-12 00:56:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-12 00:56:39] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:39] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 00:56:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 00:56:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 00:56:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 00:56:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 00:56:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 00:56:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:39] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 00:56:39] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 00:56:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 00:56:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 00:56:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-12 00:56:39] [INFO] [VisualsSystem] Finished creating blurred background after 0.49303144216537476 seconds
+[2025-04-12 00:56:40] [INFO] [MovementSystem] Updated movement range to 5 for Uoyb
+[2025-04-12 00:56:40] [INFO] [MovementSystem] Updated movement path from [7, 4] to [6, 3] for Uoyb
+[2025-04-12 00:56:40] [INFO] [Component] Setting earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 00:56:40] [INFO] [MovementSystem] Moved from [7, 4] to [6, 3]
+[2025-04-12 00:56:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 00:56:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Uoyb
+[2025-04-12 00:56:40] [INFO] [InputHandler] Gliding 0 camera to new tile 6_3_63c45ae8-3b05-4cb0-a22f-2474ddc2079a
+[2025-04-12 00:56:40] [INFO] [InputHandler] Gliding 1 camera to new tile 6_3_63c45ae8-3b05-4cb0-a22f-2474ddc2079a
+[2025-04-12 00:56:40] [INFO] [InputHandler] Gliding 0 camera to new tile 6_3_63c45ae8-3b05-4cb0-a22f-2474ddc2079a
+[2025-04-12 00:56:40] [INFO] [InputHandler] Gliding 1 camera to new tile 6_3_63c45ae8-3b05-4cb0-a22f-2474ddc2079a
+[2025-04-12 00:56:41] [INFO] [AbilitySystem] Uoyb is planning to use ember on [4, 3]
+[2025-04-12 00:56:41] [INFO] [AbilitySystem] Updated area of sight for Uoyb, viewing 12 tiles
+[2025-04-12 00:56:41] [INFO] [AbilitySystem] Updated line of sight for Uoyb, viewing 3 tiles
+[2025-04-12 00:56:41] [INFO] [AbilitySystem] Updated area of effect for Uoyb viewing 1 tiles
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Started constructing cost mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Finished constructing cost mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Checking cost requirements for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Uoyb is able to pay for ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Started constructing cost mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Finished constructing cost mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Paying cost requirements for Uoyb using ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-12 00:56:41] [INFO] [AbilitySystem] Used from ember on [4, 3]
+[2025-04-12 00:56:41] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:41] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 00:56:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Uoyb_e9d09d56-868c-414b-b4aa-85eb78a03307
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 00:56:41] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Started constructing damage mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Started constructing cost mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Finished constructing cost mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Started constructing damage mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uoyb to use ember
+[2025-04-12 00:56:41] [INFO] [CombatSystem] Started dealing damage with ember to Vyjksy 
+[2025-04-12 00:56:41] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-12 00:56:41] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-12 00:56:41] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-12 00:56:41] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c
+[2025-04-12 00:56:41] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c
+[2025-04-12 00:56:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 00:56:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 00:56:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 00:56:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 00:56:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 00:56:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Oauiag
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 00:56:41] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 00:56:41] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 00:56:41] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 00:56:42] [INFO] [InputHandler] Gliding 0 camera to new tile 11_13_b71be192-c8d1-4c75-8bf1-5827dcdf0d19
+[2025-04-12 00:56:42] [INFO] [InputHandler] Gliding 1 camera to new tile 11_13_b71be192-c8d1-4c75-8bf1-5827dcdf0d19
+[2025-04-12 00:56:43] [INFO] [InputHandler] Gliding 0 camera to new tile 11_13_b71be192-c8d1-4c75-8bf1-5827dcdf0d19
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement range to 8 for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to null for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement range to 8 for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to null for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to [13, 14] for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to [13, 14] for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 14] for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 14] for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 13] for Oauiag
+[2025-04-12 00:56:43] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 13] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 12] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 12] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 12] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 12] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 11] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 11] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 12] for Oauiag
+[2025-04-12 00:56:44] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 12] for Oauiag
+[2025-04-12 00:56:45] [INFO] [Component] Setting light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Oauiag_8c2750a9-a184-4fcc-b59e-511839c3084c","column":12,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-12 00:56:45] [INFO] [MovementSystem] Moved from [11, 13] to [11, 12]
+[2025-04-12 00:56:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 00:56:45] [INFO] [SelectedTilePanel] Updated selected tile display to view Oauiag
+[2025-04-12 00:56:45] [INFO] [InputHandler] Gliding 0 camera to new tile 11_12_ffb053c9-2005-4a36-8b35-2ef3c0a55c75
+[2025-04-12 00:56:45] [INFO] [InputHandler] Gliding 1 camera to new tile 11_12_ffb053c9-2005-4a36-8b35-2ef3c0a55c75
+[2025-04-12 00:56:45] [INFO] [InputHandler] Gliding 0 camera to new tile 11_12_ffb053c9-2005-4a36-8b35-2ef3c0a55c75
+[2025-04-12 00:56:47] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:56:47] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:47] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:47] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:47] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:48] [INFO] [AbilityPanel] Selecting slash
+[2025-04-12 00:56:48] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use slash
+[2025-04-12 00:56:48] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use slash
+[2025-04-12 00:56:48] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use slash
+[2025-04-12 00:56:48] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use slash
+[2025-04-12 00:56:49] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:56:49] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:49] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:49] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:49] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:50] [INFO] [AbilityPanel] Selecting slash
+[2025-04-12 00:56:50] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use slash
+[2025-04-12 00:56:50] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use slash
+[2025-04-12 00:56:50] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use slash
+[2025-04-12 00:56:50] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use slash
+[2025-04-12 00:56:52] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:56:52] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:52] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:52] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:52] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:54] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:56:54] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:54] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:54] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:54] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:55] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:56:55] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:55] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:56:55] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:55] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:56:58] [INFO] [InputHandler] Gliding 0 camera to new tile 11_12_ffb053c9-2005-4a36-8b35-2ef3c0a55c75
+[2025-04-12 00:56:58] [INFO] [InputHandler] Gliding 1 camera to new tile 11_12_ffb053c9-2005-4a36-8b35-2ef3c0a55c75
+[2025-04-12 00:57:00] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:57:00] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:00] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:00] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:00] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:26] [INFO] [InputHandler] Gliding 0 camera to new tile 2_8_0be391ec-0970-478d-a5f6-c092ce4013a5
+[2025-04-12 00:57:26] [INFO] [InputHandler] Gliding 1 camera to new tile 2_8_0be391ec-0970-478d-a5f6-c092ce4013a5
+[2025-04-12 00:57:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 00:57:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Muknhu
+[2025-04-12 00:57:27] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:57:27] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:27] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:27] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:27] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:28] [INFO] [AbilityPanel] Selecting slash
+[2025-04-12 00:57:28] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use slash
+[2025-04-12 00:57:28] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use slash
+[2025-04-12 00:57:28] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use slash
+[2025-04-12 00:57:28] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use slash
+[2025-04-12 00:57:30] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:57:30] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:30] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:30] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:30] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:35] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 00:57:35] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:35] [INFO] [CombatSystem] Finished constructing damage mappings for Oauiag to use ember
+[2025-04-12 00:57:35] [INFO] [CombatSystem] Started constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:35] [INFO] [CombatSystem] Finished constructing cost mappings for Oauiag to use ember
+[2025-04-12 00:57:39] [INFO] [AbilityPanel] Selecting slash
+[2025-04-12 00:57:39] [INFO] [CombatSystem] Started constructing damage mappings for Oauiag to use slash
+[2025-04-12 00:

@@ -1,0 +1,39 @@
+[2025-04-18 16:34:08] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-18 16:34:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-18 16:34:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-18 16:34:08] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-18 16:34:08] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-18 16:34:08] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-18 16:34:08] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-18 16:34:08] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-18 16:34:08] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-18 16:34:08] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-18 16:34:08] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-18 16:34:08] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-18 16:34:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-18 16:34:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-18 16:34:08] [INFO] [Component] Setting air_dragon_Nuhuak_224af84f-e2d0-4958-b6eb-f2b3114ceebf on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Nuhuak_224af84f-e2d0-4958-b6eb-f2b3114ceebf","structure":""}.
+[2025-04-18 16:34:08] [INFO] [SpeedQueue] Added unit user:Nuhuak into queue
+[2025-04-18 16:34:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-18 16:34:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-18 16:34:08] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-18 16:34:08] [INFO] [FontPool] Started initializing FontPool
+[2025-04-18 16:34:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-18 16:34:09] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-18 16:34:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:34:09] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Nuhuak_224af84f-e2d0-4958-b6eb-f2b3114ceebf
+[2025-04-18 16:34:09] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Nuhuak_224af84f-e2d0-4958-b6eb-f2b3114ceebf
+[2025-04-18 16:34:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-18 16:34:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-18 16:34:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:34:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:34:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Nuhuak_224af84f-e2d0-4958-b6eb-f2b3114ceebf
+[2025-04-18 16:34:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Nuhuak_224af84f-e2d0-4958-b6eb-f2b3114ceebf
+[2025-04-18 16:34:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:34:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:34:09] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-18 16:34:09] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-18 16:34:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-18 16:34:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-18 16:34:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-18 16:34:09] [INFO] [VisualsSystem] Finished creating blurred background after 0.49023279547691345 seconds

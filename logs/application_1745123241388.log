@@ -1,0 +1,55 @@
+[2025-04-19 21:27:21] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 21:27:21] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 21:27:21] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 21:27:21] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 21:27:21] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 21:27:21] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 21:27:21] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 21:27:21] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 21:27:21] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 21:27:21] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 21:27:21] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 21:27:21] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 21:27:21] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 21:27:21] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 21:27:21] [INFO] [Component] Setting dark_dragon_Hesua_91a50089-9b11-40ce-9908-ea04ddad2c8f on to {"row":7,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Hesua_91a50089-9b11-40ce-9908-ea04ddad2c8f","structure":""}.
+[2025-04-19 21:27:21] [INFO] [SpeedQueue] Added unit enemy:Hesua into queue
+[2025-04-19 21:27:21] [INFO] [Component] Setting light_dragon_Tirt_97666e9f-5aa8-4580-8778-a25e8649d213 on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Tirt_97666e9f-5aa8-4580-8778-a25e8649d213","structure":""}.
+[2025-04-19 21:27:21] [INFO] [SpeedQueue] Added unit enemy:Tirt into queue
+[2025-04-19 21:27:21] [INFO] [Component] Setting light_dragon_Qahiee_fe713677-30b3-4622-bc7d-a8452d71ec69 on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qahiee_fe713677-30b3-4622-bc7d-a8452d71ec69","structure":""}.
+[2025-04-19 21:27:21] [INFO] [SpeedQueue] Added unit enemy:Qahiee into queue
+[2025-04-19 21:27:21] [INFO] [Component] Setting fire_dragon_Baheg_b846f23b-06bc-4a57-aefa-341a52a349a9 on to {"row":4,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Baheg_b846f23b-06bc-4a57-aefa-341a52a349a9","structure":""}.
+[2025-04-19 21:27:21] [INFO] [SpeedQueue] Added unit enemy:Baheg into queue
+[2025-04-19 21:27:21] [INFO] [Component] Setting dark_dragon_Uyajey_efcd15fb-77c4-4d9a-8631-0d0e6ff09605 on to {"row":5,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Uyajey_efcd15fb-77c4-4d9a-8631-0d0e6ff09605","structure":""}.
+[2025-04-19 21:27:21] [INFO] [SpeedQueue] Added unit user:Uyajey into queue
+[2025-04-19 21:27:21] [INFO] [Component] Setting dragon_Ryrvyu_0e52e370-ae23-482a-9d1f-453882a01ad5 on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Ryrvyu_0e52e370-ae23-482a-9d1f-453882a01ad5","structure":""}.
+[2025-04-19 21:27:21] [INFO] [SpeedQueue] Added unit user:Ryrvyu into queue
+[2025-04-19 21:27:21] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 21:27:21] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 21:27:21] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-19 21:27:21] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 21:27:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 21:27:22] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-19 21:27:22] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-19 21:27:22] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Tirt_97666e9f-5aa8-4580-8778-a25e8649d213
+[2025-04-19 21:27:22] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Tirt_97666e9f-5aa8-4580-8778-a25e8649d213
+[2025-04-19 21:27:22] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-19 21:27:22] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-19 21:27:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 21:27:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 21:27:22] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Tirt_97666e9f-5aa8-4580-8778-a25e8649d213
+[2025-04-19 21:27:22] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Tirt_97666e9f-5aa8-4580-8778-a25e8649d213
+[2025-04-19 21:27:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 21:27:22] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 21:27:22] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-19 21:27:22] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-19 21:27:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-19 21:27:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-19 21:27:22] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 21:27:22] [INFO] [VisualsSystem] Finished creating blurred background after 0.4924248456954956 seconds
+[2025-04-19 21:27:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 21:27:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 21:27:26] [INFO] [InputHandler] Gliding 0 camera to new tile 3_6_d089ef30-4b16-41fd-91c2-096446239681
+[2025-04-19 21:27:26] [INFO] [InputHandler] Gliding 1 camera to new tile 3_6_d089ef30-4b16-41fd-91c2-096446239681
+[2025-04-19 21:27:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 21:27:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Tirt

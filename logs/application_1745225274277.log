@@ -1,0 +1,104 @@
+[2025-04-21 01:47:54] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 01:47:54] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 01:47:54] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 01:47:54] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 01:47:54] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 01:47:54] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 01:47:54] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 01:47:54] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 01:47:54] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 01:47:54] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 01:47:54] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 01:47:54] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 01:47:54] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 01:47:54] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 01:47:54] [INFO] [Component] Setting fire_dragon_Bapgee_a0d5f5a6-b506-4870-8c2a-68ab3ed730dd on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Bapgee_a0d5f5a6-b506-4870-8c2a-68ab3ed730dd","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit enemy:Bapgee into queue
+[2025-04-21 01:47:54] [INFO] [Component] Setting dark_dragon_Sooi_e5026269-d8df-4d0a-bfd9-78c3173892d5 on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Sooi_e5026269-d8df-4d0a-bfd9-78c3173892d5","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit enemy:Sooi into queue
+[2025-04-21 01:47:54] [INFO] [Component] Setting fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad on to {"row":7,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit enemy:Mywyu into queue
+[2025-04-21 01:47:54] [INFO] [Component] Setting fire_dragon_Zyta_30b96e75-7cfd-4839-ae7d-534bc76f33d3 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Zyta_30b96e75-7cfd-4839-ae7d-534bc76f33d3","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit enemy:Zyta into queue
+[2025-04-21 01:47:54] [INFO] [Component] Setting light_dragon_Kofby_7b8576d2-6a5d-40eb-ac5a-feb4aed49811 on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Kofby_7b8576d2-6a5d-40eb-ac5a-feb4aed49811","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit enemy:Kofby into queue
+[2025-04-21 01:47:54] [INFO] [Component] Setting fire_dragon_Cain_20f02599-ac34-46ca-8abf-2b6e653512b5 on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Cain_20f02599-ac34-46ca-8abf-2b6e653512b5","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit user:Cain into queue
+[2025-04-21 01:47:54] [INFO] [Component] Setting earth_dragon_Vine_c81226a7-167d-44a0-a59f-59c2a10f9eb4 on to {"row":0,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Vine_c81226a7-167d-44a0-a59f-59c2a10f9eb4","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit user:Vine into queue
+[2025-04-21 01:47:54] [INFO] [Component] Setting light_dragon_Vibcf_a26c6660-be2f-4a29-b6df-5a23ead6e022 on to {"row":7,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Vibcf_a26c6660-be2f-4a29-b6df-5a23ead6e022","structure":""}.
+[2025-04-21 01:47:54] [INFO] [SpeedQueue] Added unit user:Vibcf into queue
+[2025-04-21 01:47:54] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-21 01:47:54] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-21 01:47:54] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-21 01:47:54] [INFO] [FontPool] Started initializing FontPool
+[2025-04-21 01:47:54] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-21 01:47:54] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-21 01:47:55] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-21 01:47:55] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-21 01:47:55] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-21 01:47:55] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-21 01:47:55] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-21 01:47:55] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad
+[2025-04-21 01:47:55] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad
+[2025-04-21 01:47:55] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 01:47:55] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 01:47:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 01:47:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 01:47:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:47:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-21 01:47:55] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-21 01:47:55] [INFO] [VisualsSystem] Finished creating blurred background after 0.48975834250450134 seconds
+[2025-04-21 01:47:57] [INFO] [InputHandler] Gliding 0 camera to new tile 7_3_df516160-2c60-492b-ad14-96237975c2f8
+[2025-04-21 01:47:57] [INFO] [InputHandler] Gliding 1 camera to new tile 7_3_df516160-2c60-492b-ad14-96237975c2f8
+[2025-04-21 01:47:57] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad
+[2025-04-21 01:47:57] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad
+[2025-04-21 01:47:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:47:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Mywyu
+[2025-04-21 01:47:58] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:47:58] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:48:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Vibcf_a26c6660-be2f-4a29-b6df-5a23ead6e022
+[2025-04-21 01:48:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Vibcf_a26c6660-be2f-4a29-b6df-5a23ead6e022
+[2025-04-21 01:48:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Vibcf
+[2025-04-21 01:48:02] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:48:02] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:48:05] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad
+[2025-04-21 01:48:05] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Mywyu_ec5ee09b-e3a6-4125-abee-45184fdd36ad
+[2025-04-21 01:48:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Mywyu
+[2025-04-21 01:48:05] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:48:05] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:48:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Bapgee_a0d5f5a6-b506-4870-8c2a-68ab3ed730dd
+[2025-04-21 01:48:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Bapgee_a0d5f5a6-b506-4870-8c2a-68ab3ed730dd
+[2025-04-21 01:48:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Bapgee
+[2025-04-21 01:48:06] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:48:06] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:48:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-04-21 01:48:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-21 01:48:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Sooi_e5026269-d8df-4d0a-bfd9-78c3173892d5
+[2025-04-21 01:48:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Sooi_e5026269-d8df-4d0a-bfd9-78c3173892d5
+[2025-04-21 01:48:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Sooi
+[2025-04-21 01:48:09] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:48:09] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:48:10] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Zyta_30b96e75-7cfd-4839-ae7d-534bc76f33d3
+[2025-04-21 01:48:10] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Zyta_30b96e75-7cfd-4839-ae7d-534bc76f33d3
+[2025-04-21 01:48:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Zyta
+[2025-04-21 01:48:10] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:48:10] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:48:11] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Sooi_e5026269-d8df-4d0a-bfd9-78c3173892d5
+[2025-04-21 01:48:11] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Sooi_e5026269-d8df-4d0a-bfd9-78c3173892d5
+[2025-04-21 01:48:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Sooi
+[2025-04-21 01:48:11] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:48:11] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:48:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Zyta_30b96e75-7cfd-4839-ae7d-534bc76f33d3
+[2025-04-21 01:48:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Zyta_30b96e75-7cfd-4839-ae7d-534bc76f33d3
+[2025-04-21 01:48:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:48:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Zyta
+[2025-04-21 01:48:12] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:48:12] [INFO] [StatisticsPanel] Finished updating statistics information panel

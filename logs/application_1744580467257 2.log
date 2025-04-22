@@ -1,0 +1,236 @@
+[2025-04-13 14:41:07] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 14:41:07] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 14:41:07] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 14:41:07] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 14:41:07] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 14:41:07] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 14:41:07] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 14:41:07] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 14:41:07] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 14:41:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 14:41:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 14:41:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 14:41:07] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 14:41:07] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 14:41:07] [INFO] [Component] Setting earth_dragon_Dufyoa_e6777520-cb64-437f-94aa-1641e3329577 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Dufyoa_e6777520-cb64-437f-94aa-1641e3329577","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Dufyoa into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting fire_dragon_Teme_6d021b07-9fea-46b2-b943-b80430795497 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Teme_6d021b07-9fea-46b2-b943-b80430795497","column":3,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Teme into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting fire_dragon_Zase_fafdb8e0-05c6-4ae2-a790-2ba9e1fa3dfb on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Zase_fafdb8e0-05c6-4ae2-a790-2ba9e1fa3dfb","column":2,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Zase into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting dark_dragon_Laksio_1fe9b767-5050-4d17-91fc-3426b5f2ba22 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Laksio_1fe9b767-5050-4d17-91fc-3426b5f2ba22","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Laksio into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting dragon_Pafaw_ab856c0d-b90d-44bb-9869-c71f563b9165 on to {"spawn_region":[],"collider":"","unit":"dragon_Pafaw_ab856c0d-b90d-44bb-9869-c71f563b9165","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Pafaw into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting water_dragon_Mibaeq_4008a64f-1913-404f-a1f8-8c3f326c09ca on to {"spawn_region":[],"collider":"","unit":"water_dragon_Mibaeq_4008a64f-1913-404f-a1f8-8c3f326c09ca","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Mibaeq into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting water_dragon_Ayqlu_67161852-e2c4-49aa-9f41-95a46623be70 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ayqlu_67161852-e2c4-49aa-9f41-95a46623be70","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Ayqlu into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06","column":4,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Tyhxs into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting fire_dragon_Zegzi_10fe665f-2b9d-4cd8-a0c2-e9dcd046e19d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Zegzi_10fe665f-2b9d-4cd8-a0c2-e9dcd046e19d","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit enemy:Zegzi into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit user:Xeweg into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting air_dragon_Fonlyb_d5a726c4-efaa-4aea-a0a2-2bf6484ab9ef on to {"spawn_region":[],"collider":"","unit":"air_dragon_Fonlyb_d5a726c4-efaa-4aea-a0a2-2bf6484ab9ef","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit user:Fonlyb into queue
+[2025-04-13 14:41:07] [INFO] [Component] Setting water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c","column":3,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 14:41:07] [INFO] [SpeedQueue] Added unit user:Kysul into queue
+[2025-04-13 14:41:07] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 14:41:07] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 14:41:07] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 14:41:07] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 14:41:07] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 14:41:07] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 14:41:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 14:41:08] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481
+[2025-04-13 14:41:08] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481
+[2025-04-13 14:41:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 14:41:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 14:41:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 14:41:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 14:41:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 14:41:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 14:41:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481
+[2025-04-13 14:41:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481
+[2025-04-13 14:41:08] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 14:41:08] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 14:41:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 14:41:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 14:41:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 14:41:08] [INFO] [VisualsSystem] Finished creating blurred background after 0.48511895537376404 seconds
+[2025-04-13 14:41:09] [INFO] [MovementSystem] Updated movement range to 8 for Xeweg
+[2025-04-13 14:41:09] [INFO] [MovementSystem] Updated movement path from [3, 0] to [5, 0] for Xeweg
+[2025-04-13 14:41:09] [INFO] [Component] Setting fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xeweg_639deb97-4219-480f-bb2f-38ae9b1bc481","column":0,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 14:41:09] [INFO] [MovementSystem] Moved from [3, 0] to [5, 0]
+[2025-04-13 14:41:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 14:41:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Xeweg
+[2025-04-13 14:41:09] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_0d758a5e-5578-496f-a71d-852a678801c3
+[2025-04-13 14:41:09] [INFO] [InputHandler] Gliding 1 camera to new tile 5_0_0d758a5e-5578-496f-a71d-852a678801c3
+[2025-04-13 14:41:10] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c
+[2025-04-13 14:41:10] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c
+[2025-04-13 14:41:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 14:41:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 14:41:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 14:41:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Kysul
+[2025-04-13 14:41:10] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 14:41:10] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 14:41:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 14:41:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 14:41:10] [INFO] [InputHandler] Gliding 0 camera to new tile 5_3_a6e5843e-558d-4a54-b928-28c71d26c176
+[2025-04-13 14:41:10] [INFO] [InputHandler] Gliding 1 camera to new tile 5_3_a6e5843e-558d-4a54-b928-28c71d26c176
+[2025-04-13 14:41:11] [INFO] [MovementSystem] Updated movement range to 7 for Kysul
+[2025-04-13 14:41:11] [INFO] [MovementSystem] Updated movement path from [5, 3] to [4, 2] for Kysul
+[2025-04-13 14:41:11] [INFO] [Component] Setting water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 14:41:11] [INFO] [MovementSystem] Moved from [5, 3] to [4, 2]
+[2025-04-13 14:41:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 14:41:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Kysul
+[2025-04-13 14:41:11] [INFO] [InputHandler] Gliding 0 camera to new tile 4_2_8004935c-cb40-4671-8555-36e2f995e120
+[2025-04-13 14:41:11] [INFO] [InputHandler] Gliding 1 camera to new tile 4_2_8004935c-cb40-4671-8555-36e2f995e120
+[2025-04-13 14:41:12] [INFO] [AbilitySystem] Kysul is planning to use ember on [3, 2]
+[2025-04-13 14:41:12] [INFO] [AbilitySystem] Updated area of sight for Kysul, viewing 9 tiles
+[2025-04-13 14:41:12] [INFO] [AbilitySystem] Updated line of sight for Kysul, viewing 2 tiles
+[2025-04-13 14:41:12] [INFO] [AbilitySystem] Updated area of effect for Kysul viewing 1 tiles
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Started constructing cost mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Finished constructing cost mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Checking cost requirements for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Kysul is able to pay for ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Started constructing cost mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Finished constructing cost mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Paying cost requirements for Kysul using ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-13 14:41:12] [INFO] [AbilitySystem] Used from ember on [3, 2]
+[2025-04-13 14:41:12] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c
+[2025-04-13 14:41:12] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c
+[2025-04-13 14:41:12] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 14:41:12] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 14:41:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c
+[2025-04-13 14:41:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Kysul_de8c14b8-27ec-4f91-b798-c2f8b04fee4c
+[2025-04-13 14:41:12] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 14:41:12] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 14:41:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Started constructing damage mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Finished constructing damage mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Started constructing cost mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [CombatSystem] Finished constructing cost mappings for Kysul to use ember
+[2025-04-13 14:41:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 14:41:13] [INFO] [CombatSystem] Started constructing damage mappings for Kysul to use ember
+[2025-04-13 14:41:13] [INFO] [CombatSystem] Finished constructing damage mappings for Kysul to use ember
+[2025-04-13 14:41:13] [INFO] [CombatSystem] Started dealing damage with ember to Mibaeq 
+[2025-04-13 14:41:13] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 14:41:13] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 14:41:13] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 14:41:13] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06
+[2025-04-13 14:41:13] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06
+[2025-04-13 14:41:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 14:41:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 14:41:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 14:41:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 14:41:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 14:41:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Tyhxs
+[2025-04-13 14:41:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06
+[2025-04-13 14:41:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06
+[2025-04-13 14:41:13] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 14:41:13] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 14:41:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 14:41:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 14:41:13] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_552ea186-9e68-44ea-a7ad-2abc793a1a46
+[2025-04-13 14:41:13] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_552ea186-9e68-44ea-a7ad-2abc793a1a46
+[2025-04-13 14:41:14] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_552ea186-9e68-44ea-a7ad-2abc793a1a46
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement range to 7 for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement path from [5, 4] to null for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement range to 7 for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement path from [5, 4] to null for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement path from [5, 4] to [7, 7] for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement path from [5, 4] to [7, 7] for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement path from [5, 4] to [7, 6] for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement path from [5, 4] to [7, 6] for Tyhxs
+[2025-04-13 14:41:14] [INFO] [MovementSystem] Updated movement path from [5, 4] to [6, 6] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [6, 6] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [6, 5] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [6, 5] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [6, 4] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [6, 4] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [5, 4] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [5, 4] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [5, 3] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Updated movement path from [5, 4] to [5, 3] for Tyhxs
+[2025-04-13 14:41:15] [INFO] [Component] Setting dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Tyhxs_5fe613fc-0529-4ef2-99ab-b1420e156b06","column":3,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 14:41:15] [INFO] [MovementSystem] Moved from [5, 4] to [5, 3]
+[2025-04-13 14:41:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 14:41:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Tyhxs
+[2025-04-13 14:41:15] [INFO] [InputHandler] Gliding 0 camera to new tile 5_3_a6e5843e-558d-4a54-b928-28c71d26c176
+[2025-04-13 14:41:15] [INFO] [InputHandler] Gliding 1 camera to new tile 5_3_a6e5843e-558d-4a54-b928-28c71d26c176
+[2025-04-13 14:41:16] [INFO] [InputHandler] Gliding 0 camera to new tile 5_3_a6e5843e-558d-4a54-b928-28c71d26c176
+[2025-04-13 14:41:17] [INFO] [AbilityPanel] Selecting quash
+[2025-04-13 14:41:17] [INFO] [AbilitySystem] Tyhxs is planning to use quash on null
+[2025-04-13 14:41:17] [INFO] [AbilitySystem] Updated area of sight for Tyhxs, viewing 10 tiles
+[2025-04-13 14:41:17] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 0 tiles
+[2025-04-13 14:41:17] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 0 tiles
+[2025-04-13 14:41:17] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:17] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:17] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:17] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:17] [INFO] [CombatSystem] Started constructing cost mappings for Tyhxs to use quash
+[2025-04-13 14:41:17] [INFO] [CombatSystem] Finished constructing cost mappings for Tyhxs to use quash
+[2025-04-13 14:41:18] [INFO] [AbilitySystem] Tyhxs is planning to use quash on [7, 3]
+[2025-04-13 14:41:18] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 3 tiles
+[2025-04-13 14:41:18] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 1 tiles
+[2025-04-13 14:41:18] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:18] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:18] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:18] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:18] [INFO] [CombatSystem] Started constructing damage mappings after defense Tyhxs to use quash
+[2025-04-13 14:41:18] [INFO] [CombatSystem] 20 = Raw Damage
+[2025-04-13 14:41:18] [INFO] [CombatSystem] 20 = Damage after modifiers
+[2025-04-13 14:41:18] [INFO] [CombatSystem] 18 = Damage after defenses
+[2025-04-13 14:41:18] [INFO] [CombatSystem] Finished constructing damage mappings after for Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [AbilitySystem] Tyhxs is planning to use quash on [7, 2]
+[2025-04-13 14:41:38] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 3 tiles
+[2025-04-13 14:41:38] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 1 tiles
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Started constructing damage mappings after defense Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [CombatSystem] 20 = Raw Damage
+[2025-04-13 14:41:38] [INFO] [CombatSystem] 20 = Damage after modifiers
+[2025-04-13 14:41:38] [INFO] [CombatSystem] 18 = Damage after defenses
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Finished constructing damage mappings after for Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [AbilitySystem] Tyhxs is planning to use quash on [6, 2]
+[2025-04-13 14:41:38] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 3 tiles
+[2025-04-13 14:41:38] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 1 tiles
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:38] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Tyhxs is planning to use quash on [6, 1]
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 4 tiles
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 1 tiles
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Tyhxs is planning to use quash on [6, 0]
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 5 tiles
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 1 tiles
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Tyhxs is planning to use quash on [5, 0]
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 4 tiles
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 1 tiles
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Started constructing damage mappings after defense Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] 20 = Raw Damage
+[2025-04-13 14:41:39] [INFO] [CombatSystem] 20 = Damage after modifiers
+[2025-04-13 14:41:39] [INFO] [CombatSystem] 18 = Damage after defenses
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Finished constructing damage mappings after for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Tyhxs is planning to use quash on [4, 0]
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 5 tiles
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 1 tiles
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Tyhxs is planning to use quash on null
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated line of sight for Tyhxs, viewing 0 tiles
+[2025-04-13 14:41:39] [INFO] [AbilitySystem] Updated area of effect for Tyhxs viewing 0 tiles
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Started constructing damage mappings for Tyhxs to use quash
+[2025-04-13 14:41:39] [INFO] [CombatSystem] Finished constructing damage mappings for Tyhxs to use quash

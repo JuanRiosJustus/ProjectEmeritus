@@ -1,0 +1,352 @@
+[2025-04-13 21:04:45] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 21:04:45] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 21:04:45] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 21:04:45] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 21:04:45] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 21:04:45] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 21:04:45] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 21:04:45] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 21:04:45] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 21:04:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 21:04:45] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 21:04:45] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 21:04:45] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 21:04:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 21:04:45] [INFO] [Component] Setting fire_dragon_Yuhe_3ddb88b9-7a69-46ad-9b91-7923ccffd90c on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Yuhe_3ddb88b9-7a69-46ad-9b91-7923ccffd90c","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit enemy:Yuhe into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting light_dragon_Fiwyu_dde3ee8c-8403-4599-972f-384ce1b49ea4 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Fiwyu_dde3ee8c-8403-4599-972f-384ce1b49ea4","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit enemy:Fiwyu into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting air_dragon_Qiey_3de32ec0-c085-4bff-af1f-0354dbca6eb9 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Qiey_3de32ec0-c085-4bff-af1f-0354dbca6eb9","column":3,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit enemy:Qiey into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting dragon_Oijtgc_c2c124c7-f90c-4f08-ab42-4e527abb1e98 on to {"spawn_region":[],"collider":"","unit":"dragon_Oijtgc_c2c124c7-f90c-4f08-ab42-4e527abb1e98","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit enemy:Oijtgc into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting water_dragon_Mouoq_64031e1b-89e5-48e1-bc3c-33b0de31a6a5 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Mouoq_64031e1b-89e5-48e1-bc3c-33b0de31a6a5","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit enemy:Mouoq into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting dragon_Kygi_aad89a02-0e70-49dc-bb05-0d8cec40b650 on to {"spawn_region":[],"collider":"","unit":"dragon_Kygi_aad89a02-0e70-49dc-bb05-0d8cec40b650","column":5,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit enemy:Kygi into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting water_dragon_Pazhp_0586b34b-10ca-4a39-b146-6b4a40ba56b4 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Pazhp_0586b34b-10ca-4a39-b146-6b4a40ba56b4","column":1,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit enemy:Pazhp into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting earth_dragon_Fugu_c18f3b25-db88-4db6-ad59-913541dd77e0 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Fugu_c18f3b25-db88-4db6-ad59-913541dd77e0","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit user:Fugu into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting dark_dragon_Lyyj_516351af-880c-4256-87af-6863d3ce48c8 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Lyyj_516351af-880c-4256-87af-6863d3ce48c8","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit user:Lyyj into queue
+[2025-04-13 21:04:45] [INFO] [Component] Setting air_dragon_Zufyu_9c143437-c615-4a3b-82f3-c7a723f4760e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Zufyu_9c143437-c615-4a3b-82f3-c7a723f4760e","column":2,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:04:45] [INFO] [SpeedQueue] Added unit user:Zufyu into queue
+[2025-04-13 21:04:45] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 21:04:46] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 21:04:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 21:04:46] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 21:04:46] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 21:04:46] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 21:04:46] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 21:04:46] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Qiey_3de32ec0-c085-4bff-af1f-0354dbca6eb9
+[2025-04-13 21:04:46] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Qiey_3de32ec0-c085-4bff-af1f-0354dbca6eb9
+[2025-04-13 21:04:46] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:04:46] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:04:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:04:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:04:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:04:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 21:04:46] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Qiey_3de32ec0-c085-4bff-af1f-0354dbca6eb9
+[2025-04-13 21:04:46] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Qiey_3de32ec0-c085-4bff-af1f-0354dbca6eb9
+[2025-04-13 21:04:46] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:04:46] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:04:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:04:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 21:04:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.4835994243621826 seconds
+[2025-04-13 21:04:48] [INFO] [InputHandler] Gliding 0 camera to new tile 5_3_75405ae9-ece6-4b6e-a5ba-5d909a00628a
+[2025-04-13 21:04:48] [INFO] [InputHandler] Gliding 1 camera to new tile 5_3_75405ae9-ece6-4b6e-a5ba-5d909a00628a
+[2025-04-13 21:04:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:04:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Qiey
+[2025-04-13 21:04:49] [INFO] [InputHandler] Gliding 0 camera to new tile 5_3_75405ae9-ece6-4b6e-a5ba-5d909a00628a
+[2025-04-13 21:04:49] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 21:04:49] [INFO] [AbilitySystem] Qiey is planning to use gust on null
+[2025-04-13 21:04:49] [INFO] [AbilitySystem] Updated area of sight for Qiey, viewing 13 tiles
+[2025-04-13 21:04:49] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 0 tiles
+[2025-04-13 21:04:49] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 0 tiles
+[2025-04-13 21:04:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:49] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:49] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:49] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:04:49] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:04:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:04:52] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 21:04:53] [INFO] [AbilityPanel] Selecting ember
+[2025-04-13 21:04:53] [INFO] [AbilitySystem] Qiey is planning to use ember on null
+[2025-04-13 21:04:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:53] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:53] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:53] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use ember
+[2025-04-13 21:04:53] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use ember
+[2025-04-13 21:04:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:04:54] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 21:04:54] [INFO] [AbilitySystem] Qiey is planning to use gust on null
+[2025-04-13 21:04:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:54] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:54] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:54] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:04:54] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:04:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:04:55] [INFO] [AbilityPanel] Selecting ember
+[2025-04-13 21:04:55] [INFO] [AbilitySystem] Qiey is planning to use ember on null
+[2025-04-13 21:04:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:55] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:55] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use ember
+[2025-04-13 21:04:55] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use ember
+[2025-04-13 21:04:55] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use ember
+[2025-04-13 21:04:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:04:57] [INFO] [AbilityPanel] Selecting shine
+[2025-04-13 21:04:57] [INFO] [AbilitySystem] Qiey is planning to use shine on null
+[2025-04-13 21:04:57] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use shine
+[2025-04-13 21:04:57] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use shine
+[2025-04-13 21:04:57] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:57] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use shine
+[2025-04-13 21:04:57] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use shine
+[2025-04-13 21:04:57] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use shine
+[2025-04-13 21:04:57] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use shine
+[2025-04-13 21:04:57] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:04:58] [INFO] [AbilityPanel] Selecting slam
+[2025-04-13 21:04:58] [INFO] [AbilitySystem] Qiey is planning to use slam on null
+[2025-04-13 21:04:58] [INFO] [AbilitySystem] Updated area of sight for Qiey, viewing 5 tiles
+[2025-04-13 21:04:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use slam
+[2025-04-13 21:04:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use slam
+[2025-04-13 21:04:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:58] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use slam
+[2025-04-13 21:04:58] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use slam
+[2025-04-13 21:04:58] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use slam
+[2025-04-13 21:04:58] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use slam
+[2025-04-13 21:04:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:04:59] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 21:04:59] [INFO] [AbilitySystem] Qiey is planning to use gust on null
+[2025-04-13 21:04:59] [INFO] [AbilitySystem] Updated area of sight for Qiey, viewing 13 tiles
+[2025-04-13 21:04:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:04:59] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:59] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:04:59] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:04:59] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:04:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:00] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [7, 7]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 4 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [6, 6]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 4 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [5, 5]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 3 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [5, 4]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 2 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [4, 4]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 3 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [4, 3]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 2 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [3, 3]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 3 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [4, 3]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 2 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Qiey is planning to use gust on [4, 2]
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 3 tiles
+[2025-04-13 21:05:01] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qiey
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Qiey lands a Same-Type-Attack-Bonus with gust, for 12.0
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qiey
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yuhe
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yuhe
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] 20.0 damage after defenses for gust
+[2025-04-13 21:05:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on [4, 3]
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 2 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on [4, 4]
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 3 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on [5, 5]
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 3 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on [5, 6]
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 4 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qiey
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Qiey lands a Same-Type-Attack-Bonus with gust, for 12.0
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qiey
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mouoq
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mouoq
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] 20.0 damage after defenses for gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on [6, 6]
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 4 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on [6, 7]
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 4 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on [7, 7]
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 4 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 1 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Qiey is planning to use gust on null
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated line of sight for Qiey, viewing 0 tiles
+[2025-04-13 21:05:03] [INFO] [AbilitySystem] Updated area of effect for Qiey viewing 0 tiles
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing damage mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Started constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [CombatSystem] Finished constructing cost mappings for Qiey to use gust
+[2025-04-13 21:05:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

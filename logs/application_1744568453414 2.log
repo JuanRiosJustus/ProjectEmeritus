@@ -1,0 +1,323 @@
+[2025-04-13 11:20:53] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 11:20:53] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 11:20:53] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 11:20:53] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 11:20:53] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 11:20:53] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 11:20:53] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 11:20:53] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 11:20:53] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 11:20:53] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 11:20:53] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 11:20:53] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 11:20:53] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 11:20:53] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 11:20:53] [INFO] [Component] Setting fire_dragon_Fiuox_a8dbc276-ed6a-4598-873f-2323457d3a98 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Fiuox_a8dbc276-ed6a-4598-873f-2323457d3a98","column":0,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Fiuox into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting fire_dragon_Aare_7570b7cd-854f-42cf-b61c-d258f570fb83 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Aare_7570b7cd-854f-42cf-b61c-d258f570fb83","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Aare into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting air_dragon_Kyhiu_b505329a-59be-4ef8-90e4-2a4911f3f9fb on to {"spawn_region":[],"collider":"","unit":"air_dragon_Kyhiu_b505329a-59be-4ef8-90e4-2a4911f3f9fb","column":5,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Kyhiu into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting dark_dragon_Sevae_e029b237-35c8-459a-b427-62bed690d5fc on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Sevae_e029b237-35c8-459a-b427-62bed690d5fc","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Sevae into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting fire_dragon_Peyv_194dcbe1-cc45-4199-83eb-df97a424eef5 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Peyv_194dcbe1-cc45-4199-83eb-df97a424eef5","column":2,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Peyv into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting dark_dragon_Nofa_89de12e5-741f-4738-b74d-471133e77482 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Nofa_89de12e5-741f-4738-b74d-471133e77482","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Nofa into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting dark_dragon_Ninvuy_72d83914-aa32-48f9-bdee-da6912622c99 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ninvuy_72d83914-aa32-48f9-bdee-da6912622c99","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Ninvuy into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting earth_dragon_Raec_0999da11-bf2f-4671-b8af-16b5537b583b on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Raec_0999da11-bf2f-4671-b8af-16b5537b583b","column":7,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Raec into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting light_dragon_Yenii_0d7bc05e-be93-4d7e-b6d7-1e86dafaf87f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Yenii_0d7bc05e-be93-4d7e-b6d7-1e86dafaf87f","column":2,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit enemy:Yenii into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting water_dragon_Hufrei_ffcceaf8-07d7-4747-a253-7a8080a91820 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Hufrei_ffcceaf8-07d7-4747-a253-7a8080a91820","column":0,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit user:Hufrei into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting fire_dragon_Oegabe_eddade18-d485-4d6f-97e9-7d59c83dc29d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oegabe_eddade18-d485-4d6f-97e9-7d59c83dc29d","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit user:Oegabe into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting water_dragon_Feyxiy_f021f470-8006-4604-b6d0-f858d9b45f6d on to {"spawn_region":[],"collider":"","unit":"water_dragon_Feyxiy_f021f470-8006-4604-b6d0-f858d9b45f6d","column":0,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit user:Feyxiy into queue
+[2025-04-13 11:20:53] [INFO] [Component] Setting dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a","column":3,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 11:20:53] [INFO] [SpeedQueue] Added unit user:Ougi into queue
+[2025-04-13 11:20:53] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 11:20:53] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 11:20:53] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 11:20:53] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 11:20:53] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 11:20:54] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 11:20:54] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 11:20:54] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a
+[2025-04-13 11:20:54] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a
+[2025-04-13 11:20:54] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 11:20:54] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 11:20:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 11:20:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 11:20:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:20:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 11:20:54] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a
+[2025-04-13 11:20:54] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a
+[2025-04-13 11:20:54] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 11:20:54] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 11:20:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 11:20:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 11:20:54] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 11:20:54] [INFO] [VisualsSystem] Finished creating blurred background after 0.48037558794021606 seconds
+[2025-04-13 11:20:55] [INFO] [MovementSystem] Updated movement range to 10 for Ougi
+[2025-04-13 11:20:55] [INFO] [MovementSystem] Updated movement path from [3, 3] to [2, 4] for Ougi
+[2025-04-13 11:20:55] [INFO] [Component] Setting dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ougi_d4b533c4-b4d3-4ceb-a3df-7af19db5707a","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 11:20:55] [INFO] [MovementSystem] Moved from [3, 3] to [2, 4]
+[2025-04-13 11:20:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:20:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Ougi
+[2025-04-13 11:20:55] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_e20fa0e9-a6b6-4926-af89-43c831b30175
+[2025-04-13 11:20:55] [INFO] [InputHandler] Gliding 1 camera to new tile 2_4_e20fa0e9-a6b6-4926-af89-43c831b30175
+[2025-04-13 11:20:56] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Ninvuy_72d83914-aa32-48f9-bdee-da6912622c99
+[2025-04-13 11:20:56] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Ninvuy_72d83914-aa32-48f9-bdee-da6912622c99
+[2025-04-13 11:20:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 11:20:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 11:20:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:20:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Ninvuy
+[2025-04-13 11:20:56] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 11:20:56] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 11:20:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 11:20:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 11:20:56] [INFO] [InputHandler] Gliding 0 camera to new tile 5_6_8787ae22-cc17-4f3e-83f7-66c8cb8c83b2
+[2025-04-13 11:20:56] [INFO] [InputHandler] Gliding 1 camera to new tile 5_6_8787ae22-cc17-4f3e-83f7-66c8cb8c83b2
+[2025-04-13 11:21:00] [INFO] [InputHandler] Gliding 0 camera to new tile 5_6_8787ae22-cc17-4f3e-83f7-66c8cb8c83b2
+[2025-04-13 11:21:02] [INFO] [AbilityPanel] Selecting quash
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Ninvuy is planning to use quash on null
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Updated area of sight for Ninvuy, viewing 12 tiles
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 0 tiles
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 0 tiles
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Started constructing cost mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Finished constructing cost mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [6, 7]
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [5, 7]
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:02] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:02] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 7]
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:03] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:03] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 6]
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:03] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:03] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [3, 6]
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:03] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:03] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:03] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 6]
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 5]
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [5, 5]
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 5]
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 6]
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:04] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:04] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:05] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 7]
+[2025-04-13 11:21:05] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:05] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:05] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:05] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:05] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [5, 7]
+[2025-04-13 11:21:05] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:05] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:05] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:05] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 7]
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 6]
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 5]
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 6]
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 7]
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [5, 7]
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:06] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:06] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 7]
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:17] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:17] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 6]
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:17] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:17] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 5]
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:17] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:17] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:17] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 6]
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:18] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:18] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Ninvuy is planning to use quash on [4, 7]
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:18] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:18] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Ninvuy is planning to use quash on null
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 0 tiles
+[2025-04-13 11:21:18] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 0 tiles
+[2025-04-13 11:21:18] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:18] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use quash
+[2025-04-13 11:21:19] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 11:21:19] [INFO] [AbilitySystem] Ninvuy is planning to use gust on null
+[2025-04-13 11:21:19] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:19] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:19] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:19] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:19] [INFO] [CombatSystem] Started constructing cost mappings for Ninvuy to use gust
+[2025-04-13 11:21:19] [INFO] [CombatSystem] Finished constructing cost mappings for Ninvuy to use gust
+[2025-04-13 11:21:20] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [6, 7]
+[2025-04-13 11:21:20] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:20] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:20] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [5, 7]
+[2025-04-13 11:21:20] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:20] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [4, 7]
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [4, 6]
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 2 tiles
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [3, 6]
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 3 tiles
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [3, 5]
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 4 tiles
+[2025-04-13 11:21:24] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:24] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [3, 4]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 4 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [2, 2]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 8 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [2, 1]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [1, 0]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [1, 1]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 9 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [2, 1]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [3, 2]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [4, 2]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 6 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [3, 2]
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:25] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:25] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [3, 1]
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [2, 1]
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [1, 1]
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 9 tiles
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Ninvuy is planning to use gust on [1, 0]
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 7 tiles
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 1 tiles
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Ninvuy is planning to use gust on null
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated line of sight for Ninvuy, viewing 0 tiles
+[2025-04-13 11:21:26] [INFO] [AbilitySystem] Updated area of effect for Ninvuy viewing 0 tiles
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Started constructing damage mappings for Ninvuy to use gust
+[2025-04-13 11:21:26] [INFO] [CombatSystem] Finished constructing damage mappings for Ninvuy to use gust

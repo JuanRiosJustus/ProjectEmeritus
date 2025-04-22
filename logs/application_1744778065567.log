@@ -1,0 +1,26 @@
+[2025-04-15 21:34:25] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 21:34:25] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 21:34:25] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 21:34:25] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 21:34:25] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 21:34:25] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 21:34:25] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 21:34:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 21:34:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 21:34:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 21:34:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 21:34:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 21:34:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 21:34:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 21:34:25] [INFO] [Component] Setting water_dragon_Oeiycf_d68e806f-a630-45a4-a02a-ebbd788a9728 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Oeiycf_d68e806f-a630-45a4-a02a-ebbd788a9728","column":7,"row":2,"structure":"","height":0}.
+[2025-04-15 21:34:25] [INFO] [SpeedQueue] Added unit enemy:Oeiycf into queue
+[2025-04-15 21:34:25] [INFO] [Component] Setting air_dragon_Uyay_858cd6c9-8c6b-4270-acc1-9ca095b1c39c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Uyay_858cd6c9-8c6b-4270-acc1-9ca095b1c39c","column":4,"row":6,"structure":"","height":0}.
+[2025-04-15 21:34:25] [INFO] [SpeedQueue] Added unit enemy:Uyay into queue
+[2025-04-15 21:34:25] [INFO] [Component] Setting water_dragon_Mavvw_5d81617c-df1f-4748-9c77-e647cb4bf88e on to {"spawn_region":[],"collider":"","unit":"water_dragon_Mavvw_5d81617c-df1f-4748-9c77-e647cb4bf88e","column":0,"row":4,"structure":"","height":0}.
+[2025-04-15 21:34:25] [INFO] [SpeedQueue] Added unit enemy:Mavvw into queue
+[2025-04-15 21:34:25] [INFO] [Component] Setting earth_dragon_Aozo_ac21f575-b544-4707-8af7-71adcd9dc812 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Aozo_ac21f575-b544-4707-8af7-71adcd9dc812","column":2,"row":2,"structure":"","height":0}.
+[2025-04-15 21:34:25] [INFO] [SpeedQueue] Added unit enemy:Aozo into queue
+[2025-04-15 21:34:25] [INFO] [Component] Setting water_dragon_Ouby_ce59a9b5-4b5a-4e28-be7d-acdb308c74f4 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ouby_ce59a9b5-4b5a-4e28-be7d-acdb308c74f4","column":1,"row":6,"structure":"","height":0}.
+[2025-04-15 21:34:25] [INFO] [SpeedQueue] Added unit user:Ouby into queue
+[2025-04-15 21:34:25] [INFO] [Component] Setting air_dragon_Veduo_abf92d1e-433a-42cc-9b93-c05a5c7e43fc on to {"spawn_region":[],"collider":"","unit":"air_dragon_Veduo_abf92d1e-433a-42cc-9b93-c05a5c7e43fc","column":6,"row":3,"structure":"","height":0}.
+[2025-04-15 21:34:25] [INFO] [SpeedQueue] Added unit user:

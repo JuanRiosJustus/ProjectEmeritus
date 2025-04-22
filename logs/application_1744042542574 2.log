@@ -1,0 +1,58 @@
+[2025-04-07 09:15:42] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-07 09:15:42] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-07 09:15:42] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-07 09:15:42] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-07 09:15:42] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-07 09:15:42] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-07 09:15:42] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-07 09:15:42] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-07 09:15:42] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-07 09:15:42] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-07 09:15:42] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-07 09:15:42] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-07 09:15:42] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-07 09:15:42] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-07 09:15:43] [INFO] [Component] Setting earth_dragon_Aorua_24418fcb-cbe6-4bcf-8400-326777672201 on to 8_7_90433931-b88a-4e04-bd02-023b401279ea.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Aorua into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting earth_dragon_Fokfuq_fbbd56c1-0597-42b8-9b99-428742fca987 on to 6_8_224a727d-1e7b-4fe7-b834-d43c82551e53.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Fokfuq into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting fire_dragon_Aiciu_5494de72-eaa8-4d56-aa08-1983445d29f2 on to 12_9_7f06a525-06ed-4483-a890-bf6da277a9b7.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Aiciu into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting light_dragon_Xuetyt_081ec375-0326-426c-a2c6-929dd46b6d61 on to 13_2_b0f19f9b-b1d3-4990-9f53-dbd94bbb7d68.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Xuetyt into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting air_dragon_Tawaei_c6590198-62b2-4f35-9d37-f0632789f205 on to 11_2_58c91bbd-6d9e-4b99-9c22-8f5e57ff9934.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Tawaei into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting air_dragon_Feri_f649f589-f439-414b-88c2-f8b8829cb6b5 on to 5_9_620a70cf-a903-4190-9ccc-fd72e1f40db8.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Feri into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting air_dragon_Debxt_567c2d64-005b-4085-b8e4-ca39202dea58 on to 6_9_00c5c2cc-7cb3-4879-84a1-3841b6c39864.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Debxt into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting dark_dragon_Napg_27d4217d-1708-4d09-8428-034a6c38e886 on to 6_2_244b72fb-35fa-4884-be45-9b739cac4c84.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Napg into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting water_dragon_Hotyp_ec2dcf82-f257-40b7-b127-8628a84e19cb on to 2_5_b53b807a-8cac-4852-9307-210e5582834f.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Hotyp into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting dark_dragon_Kenseu_7cc7e5da-0712-4e17-ade4-7650a44b50dd on to 10_12_bf42307d-0129-4a6e-b09f-4fb2c544686f.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Kenseu into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting dark_dragon_Byqaai_0b4d6d17-e2e6-4de7-b5b3-9399289c9654 on to 1_3_d7ff7e92-f7cb-4b8d-99ff-fc0740658476.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Byqaai into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting dragon_Vuhaai_cf5a794a-e250-4b32-a4f1-c03fcf4bf59e on to 10_5_e7f6de33-bec4-4944-b1c6-0839a95d688c.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Vuhaai into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting light_dragon_Hamcie_92de5586-9faa-4468-a7fe-74d378e000a2 on to 3_11_cbfd24ff-477c-4f4b-94dd-41ba60471ec5.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Hamcie into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting light_dragon_Ducm_47012785-4609-4c40-84ad-29cde5d91809 on to 12_3_e24ce3d7-3777-4e73-be56-84fbf49fdb48.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Ducm into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting dragon_Lyhe_ed393395-2af5-4b70-9f39-30a890d0af6f on to 10_13_dcd8d8bf-daf9-417f-b36d-63de9c882a9b.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Lyhe into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting earth_dragon_Haxii_90877656-ec6f-4157-ab9c-2cf95c7ac6fa on to 9_2_1f3139f0-413d-4518-9fec-11f716439c02.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Haxii into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting earth_dragon_Iozkso_8ea63f74-13bd-4d3f-a9d5-fe56bb19b23a on to 4_9_c0bdaca6-b998-48a0-b52c-946e9ae2a73c.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Iozkso into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting dark_dragon_Vyuiig_0fda9e30-1756-4397-8cba-c5085221690c on to 10_3_6739693f-212c-4544-9f2d-5890f2ee08bd.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Vyuiig into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting air_dragon_Youioa_259b8f0d-e01c-4812-aad3-e0f52cd9a69b on to 9_6_cba6a4b1-4c57-4f23-b4eb-66f36c37318e.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Youioa into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting fire_dragon_Zealkm_ffc20e04-6604-4ba8-a2e1-eaa1d9c26820 on to 8_8_7d78ab13-2769-4302-abf4-fdcf009d1850.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Zealkm into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting earth_dragon_Lettg_b01f313d-3dd7-47f0-a4fb-cfeb233129d7 on to 6_6_0d032991-3b35-4931-8809-45eca266d2af.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Lettg into queue
+[2025-04-07 09:15:43] [INFO] [Component] Setting earth_dragon_Uexe_3928405b-99c5-4c7f-b614-a9bd939f3d26 on to 6_4_ecc0d75c-abe1-4bd7-b5b1-28daaade12ae.
+[2025-04-07 09:15:43] [INFO] [SpeedQueue] Added unit enemy:Uexe into qu

@@ -1,0 +1,58 @@
+[2025-04-13 21:29:11] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 21:29:11] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 21:29:11] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 21:29:11] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 21:29:11] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 21:29:11] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 21:29:11] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 21:29:11] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 21:29:11] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 21:29:11] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 21:29:11] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 21:29:11] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 21:29:12] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 21:29:12] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 21:29:12] [INFO] [Component] Setting dark_dragon_Gacoy_aa442b5c-3c18-4507-87b9-72cefbf8f178 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Gacoy_aa442b5c-3c18-4507-87b9-72cefbf8f178","column":6,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit enemy:Gacoy into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting water_dragon_Jymw_13ecf72e-9256-47fc-b9f4-d0e046d4c999 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Jymw_13ecf72e-9256-47fc-b9f4-d0e046d4c999","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit enemy:Jymw into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting light_dragon_Qacad_696c6adb-0fec-4cda-99fe-9042dbced1c4 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Qacad_696c6adb-0fec-4cda-99fe-9042dbced1c4","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit enemy:Qacad into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting earth_dragon_Wuiiy_b18d348a-9797-4667-805a-9953fa190055 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Wuiiy_b18d348a-9797-4667-805a-9953fa190055","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit enemy:Wuiiy into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting air_dragon_Yyaiu_d9e2c49d-83c8-483c-88c9-81bc0b6a4d77 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Yyaiu_d9e2c49d-83c8-483c-88c9-81bc0b6a4d77","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit enemy:Yyaiu into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting earth_dragon_Rulai_82f1f156-c1a1-40e6-bae8-e153ba8214fb on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Rulai_82f1f156-c1a1-40e6-bae8-e153ba8214fb","column":6,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit enemy:Rulai into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting earth_dragon_Qyaiz_2d0c6840-843c-4e61-8711-18a6d6e2a0ef on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Qyaiz_2d0c6840-843c-4e61-8711-18a6d6e2a0ef","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit user:Qyaiz into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting water_dragon_Dijn_0c304b68-fba0-42c7-8f21-e43876f8372f on to {"spawn_region":[],"collider":"","unit":"water_dragon_Dijn_0c304b68-fba0-42c7-8f21-e43876f8372f","column":0,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit user:Dijn into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting dragon_Noms_d1641fc6-13ab-4402-9cab-1f136e324603 on to {"spawn_region":[],"collider":"","unit":"dragon_Noms_d1641fc6-13ab-4402-9cab-1f136e324603","column":3,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit user:Noms into queue
+[2025-04-13 21:29:12] [INFO] [Component] Setting earth_dragon_Fava_6250ff1a-0c0b-4ca3-bcd8-1f8d5c86a7d4 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Fava_6250ff1a-0c0b-4ca3-bcd8-1f8d5c86a7d4","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Added unit user:Fava into queue
+[2025-04-13 21:29:12] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 21:29:12] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 21:29:12] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 21:29:12] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 21:29:12] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 21:29:12] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 21:29:12] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 21:29:12] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Gacoy_aa442b5c-3c18-4507-87b9-72cefbf8f178
+[2025-04-13 21:29:12] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Gacoy_aa442b5c-3c18-4507-87b9-72cefbf8f178
+[2025-04-13 21:29:12] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:29:12] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:29:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:29:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:29:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Gacoy_aa442b5c-3c18-4507-87b9-72cefbf8f178
+[2025-04-13 21:29:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Gacoy_aa442b5c-3c18-4507-87b9-72cefbf8f178
+[2025-04-13 21:29:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:29:12] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 21:29:12] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:29:12] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:29:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:29:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:29:12] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 21:29:13] [INFO] [VisualsSystem] Finished creating blurred background after 0.48653995990753174 seconds
+[2025-04-13 21:29:14] [INFO] [InputHandler] Gliding 0 camera to new tile 4_6_5f5ee132-4e73-4eaf-8716-8c1b6b8b57cd

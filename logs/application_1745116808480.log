@@ -1,0 +1,41 @@
+[2025-04-19 19:40:08] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 19:40:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 19:40:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 19:40:08] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 19:40:08] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 19:40:08] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 19:40:08] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 19:40:08] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 19:40:08] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 19:40:08] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 19:40:08] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 19:40:08] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 19:40:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 19:40:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 19:40:08] [INFO] [Component] Setting air_dragon_Eobe_8f0b162c-fba9-4c32-afdb-8cf070b36420 on to {"row":3,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Eobe_8f0b162c-fba9-4c32-afdb-8cf070b36420","structure":""}.
+[2025-04-19 19:40:08] [INFO] [SpeedQueue] Added unit enemy:Eobe into queue
+[2025-04-19 19:40:08] [INFO] [Component] Setting earth_dragon_Dieaae_ae2f2fd1-c48b-4d62-8ac8-9c98fb90dde0 on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Dieaae_ae2f2fd1-c48b-4d62-8ac8-9c98fb90dde0","structure":""}.
+[2025-04-19 19:40:08] [INFO] [SpeedQueue] Added unit enemy:Dieaae into queue
+[2025-04-19 19:40:08] [INFO] [Component] Setting light_dragon_Poooti_86b5acec-e25a-41e3-8465-5622f09e6207 on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Poooti_86b5acec-e25a-41e3-8465-5622f09e6207","structure":""}.
+[2025-04-19 19:40:08] [INFO] [SpeedQueue] Added unit enemy:Poooti into queue
+[2025-04-19 19:40:08] [INFO] [Component] Setting air_dragon_Depxm_658777aa-6694-4014-ae40-06cd59770eb9 on to {"row":7,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Depxm_658777aa-6694-4014-ae40-06cd59770eb9","structure":""}.
+[2025-04-19 19:40:08] [INFO] [SpeedQueue] Added unit enemy:Depxm into queue
+[2025-04-19 19:40:08] [INFO] [Component] Setting light_dragon_Zysyy_def4fe46-2f6d-43d2-a4ac-77165dc09ea6 on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Zysyy_def4fe46-2f6d-43d2-a4ac-77165dc09ea6","structure":""}.
+[2025-04-19 19:40:08] [INFO] [SpeedQueue] Added unit enemy:Zysyy into queue
+[2025-04-19 19:40:08] [INFO] [Component] Setting dark_dragon_Nesaqd_47688a73-ea1b-4222-810c-b56e1eca85f2 on to {"row":4,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Nesaqd_47688a73-ea1b-4222-810c-b56e1eca85f2","structure":""}.
+[2025-04-19 19:40:08] [INFO] [SpeedQueue] Added unit user:Nesaqd into queue
+[2025-04-19 19:40:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 19:40:09] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 19:40:09] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 19:40:09] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 19:40:09] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 19:40:09] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 19:40:09] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 19:40:09] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 19:40:09] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_59a759c9-ac00-48ed-be85-131621bc9cbc
+[2025-04-19 19:40:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 19:40:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 19:40:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 19:40:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 19:40:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 19:40:10] [INFO] [VisualsSystem] Finished creating blurred background after 0.4980706572532654 seconds

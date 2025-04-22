@@ -1,0 +1,245 @@
+[2025-04-13 11:06:29] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 11:06:29] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 11:06:29] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 11:06:29] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 11:06:29] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 11:06:29] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 11:06:29] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 11:06:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 11:06:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 11:06:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 11:06:29] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 11:06:29] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 11:06:29] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 11:06:29] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 11:06:29] [INFO] [Component] Setting earth_dragon_Nelco_58662c7d-80d6-40f6-a45c-3a6009eba334 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Nelco_58662c7d-80d6-40f6-a45c-3a6009eba334","column":0,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Nelco into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting air_dragon_Tyarir_f4d00d9a-1020-474e-ae19-535f997d982c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Tyarir_f4d00d9a-1020-474e-ae19-535f997d982c","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Tyarir into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting dragon_Rucieu_9ae7a4bc-cdc4-4f05-aa77-5a1749f0d0f0 on to {"spawn_region":[],"collider":"","unit":"dragon_Rucieu_9ae7a4bc-cdc4-4f05-aa77-5a1749f0d0f0","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Rucieu into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting fire_dragon_Yeefr_d5c2eab0-4136-4b1a-a4c7-89fb424f0c3b on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Yeefr_d5c2eab0-4136-4b1a-a4c7-89fb424f0c3b","column":3,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Yeefr into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting dragon_Aeql_cf4acd35-0bdc-48ab-9dde-3e0c1e5c1d54 on to {"spawn_region":[],"collider":"","unit":"dragon_Aeql_cf4acd35-0bdc-48ab-9dde-3e0c1e5c1d54","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Aeql into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting dragon_Iatun_aa09a1d4-dbb3-41ca-bb3d-7f10772bd182 on to {"spawn_region":[],"collider":"","unit":"dragon_Iatun_aa09a1d4-dbb3-41ca-bb3d-7f10772bd182","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Iatun into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting dark_dragon_Fiqai_88254546-9d49-4897-abfc-385cc6a03b87 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Fiqai_88254546-9d49-4897-abfc-385cc6a03b87","column":7,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Fiqai into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting dragon_Kezoko_413944e7-845d-41e3-8a2c-533f212dd056 on to {"spawn_region":[],"collider":"","unit":"dragon_Kezoko_413944e7-845d-41e3-8a2c-533f212dd056","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit enemy:Kezoko into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7 on to {"spawn_region":[],"collider":"","unit":"dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7","column":6,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit user:Uyxs into queue
+[2025-04-13 11:06:29] [INFO] [Component] Setting water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Added unit user:Iazujo into queue
+[2025-04-13 11:06:29] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 11:06:29] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 11:06:29] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 11:06:29] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 11:06:29] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 11:06:29] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 11:06:29] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 11:06:29] [INFO] [AbilityPanel] Updating ability selection for dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:29] [INFO] [AbilityPanel] Finished ability selection for dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 11:06:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 11:06:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 11:06:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 11:06:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:06:29] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 11:06:29] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:29] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:29] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 11:06:29] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 11:06:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 11:06:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 11:06:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 11:06:30] [INFO] [VisualsSystem] Finished creating blurred background after 0.4876270294189453 seconds
+[2025-04-13 11:06:31] [INFO] [AbilitySystem] Uyxs is planning to use slam on [4, 7]
+[2025-04-13 11:06:31] [INFO] [AbilitySystem] Updated area of sight for Uyxs, viewing 5 tiles
+[2025-04-13 11:06:31] [INFO] [AbilitySystem] Updated line of sight for Uyxs, viewing 2 tiles
+[2025-04-13 11:06:31] [INFO] [AbilitySystem] Updated area of effect for Uyxs viewing 1 tiles
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Started constructing cost mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Finished constructing cost mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Checking cost requirements for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Uyxs is able to pay for slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Started constructing cost mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Finished constructing cost mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Paying cost requirements for Uyxs using slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use slam
+[2025-04-13 11:06:31] [INFO] [AbilitySystem] Used from slam on [4, 7]
+[2025-04-13 11:06:31] [INFO] [AbilityPanel] Updating ability selection for dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:31] [INFO] [AbilityPanel] Finished ability selection for dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 11:06:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 11:06:31] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7
+[2025-04-13 11:06:31] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 11:06:31] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 11:06:31] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Started constructing damage mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Finished constructing damage mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Started constructing cost mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Finished constructing cost mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Started constructing damage mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Finished constructing damage mappings for Uyxs to use slam
+[2025-04-13 11:06:31] [INFO] [CombatSystem] Started dealing damage with slam to Fiqai 
+[2025-04-13 11:06:31] [INFO] [CombatSystem] 20 = Raw Damage
+[2025-04-13 11:06:31] [INFO] [CombatSystem] 20 = Damage after modifiers
+[2025-04-13 11:06:31] [INFO] [CombatSystem] 18 = Damage after defenses
+[2025-04-13 11:06:32] [INFO] [InputHandler] Gliding 0 camera to new tile 4_6_4bcadc9e-5402-4cc8-bfa9-991b7e402312
+[2025-04-13 11:06:32] [INFO] [InputHandler] Gliding 1 camera to new tile 4_6_4bcadc9e-5402-4cc8-bfa9-991b7e402312
+[2025-04-13 11:06:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:06:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyxs
+[2025-04-13 11:06:32] [INFO] [MovementSystem] Updated movement range to 10 for Uyxs
+[2025-04-13 11:06:32] [INFO] [MovementSystem] Updated movement path from [4, 6] to [3, 7] for Uyxs
+[2025-04-13 11:06:32] [INFO] [Component] Setting dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7 on to {"spawn_region":[],"collider":"","unit":"dragon_Uyxs_7ebb48b6-f036-4a5a-858a-f83b2b253ae7","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 11:06:32] [INFO] [MovementSystem] Moved from [4, 6] to [3, 7]
+[2025-04-13 11:06:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:06:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyxs
+[2025-04-13 11:06:32] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_b0e0a3d3-af97-4e77-85e6-2a7de5637b8f
+[2025-04-13 11:06:32] [INFO] [InputHandler] Gliding 1 camera to new tile 3_7_b0e0a3d3-af97-4e77-85e6-2a7de5637b8f
+[2025-04-13 11:06:33] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:33] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 11:06:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 11:06:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 11:06:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 11:06:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:06:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Iazujo
+[2025-04-13 11:06:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:33] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 11:06:33] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 11:06:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 11:06:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 11:06:33] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_78dc7095-a5ad-48a7-b227-bc99601439fb
+[2025-04-13 11:06:33] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_78dc7095-a5ad-48a7-b227-bc99601439fb
+[2025-04-13 11:06:34] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_78dc7095-a5ad-48a7-b227-bc99601439fb
+[2025-04-13 11:06:34] [INFO] [MovementSystem] Updated movement range to 10 for Iazujo
+[2025-04-13 11:06:34] [INFO] [MovementSystem] Updated movement path from [1, 4] to [0, 5] for Iazujo
+[2025-04-13 11:06:34] [INFO] [Component] Setting water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 11:06:34] [INFO] [MovementSystem] Moved from [1, 4] to [0, 5]
+[2025-04-13 11:06:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:06:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Iazujo
+[2025-04-13 11:06:34] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_202a6fee-31da-4107-a331-5b24d94ace91
+[2025-04-13 11:06:34] [INFO] [InputHandler] Gliding 1 camera to new tile 0_5_202a6fee-31da-4107-a331-5b24d94ace91
+[2025-04-13 11:06:35] [INFO] [AbilitySystem] Iazujo is planning to use soak on [0, 7]
+[2025-04-13 11:06:35] [INFO] [AbilitySystem] Updated area of sight for Iazujo, viewing 9 tiles
+[2025-04-13 11:06:35] [INFO] [AbilitySystem] Updated line of sight for Iazujo, viewing 3 tiles
+[2025-04-13 11:06:35] [INFO] [AbilitySystem] Updated area of effect for Iazujo viewing 1 tiles
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Started constructing cost mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Finished constructing cost mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Checking cost requirements for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Iazujo is able to pay for soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Started constructing cost mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Finished constructing cost mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Paying cost requirements for Iazujo using soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use soak
+[2025-04-13 11:06:35] [INFO] [AbilitySystem] Used from soak on [0, 7]
+[2025-04-13 11:06:35] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:35] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 11:06:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Iazujo_6e0126a3-15bd-4902-b10e-eb8ab5991e40
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 11:06:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Started constructing damage mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Finished constructing damage mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Started constructing cost mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Finished constructing cost mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Started constructing damage mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Finished constructing damage mappings for Iazujo to use soak
+[2025-04-13 11:06:35] [INFO] [CombatSystem] Started dealing damage with soak to Rucieu 
+[2025-04-13 11:06:35] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 11:06:35] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 11:06:35] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 11:06:35] [INFO] [AbilityPanel] Updating ability selection for dragon_Iatun_aa09a1d4-dbb3-41ca-bb3d-7f10772bd182
+[2025-04-13 11:06:35] [INFO] [AbilityPanel] Finished ability selection for dragon_Iatun_aa09a1d4-dbb3-41ca-bb3d-7f10772bd182
+[2025-04-13 11:06:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 11:06:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 11:06:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 11:06:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 11:06:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 11:06:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Iatun
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Iatun_aa09a1d4-dbb3-41ca-bb3d-7f10772bd182
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Iatun_aa09a1d4-dbb3-41ca-bb3d-7f10772bd182
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 11:06:35] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 11:06:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 11:06:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 11:06:35] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_07a26ca2-a902-4dfc-b93e-e4013ac1ba76
+[2025-04-13 11:06:35] [INFO] [InputHandler] Gliding 1 camera to new tile 1_6_07a26ca2-a902-4dfc-b93e-e4013ac1ba76
+[2025-04-13 11:06:36] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_07a26ca2-a902-4dfc-b93e-e4013ac1ba76
+[2025-04-13 11:06:36] [INFO] [InputHandler] Gliding 1 camera to new tile 1_6_07a26ca2-a902-4dfc-b93e-e4013ac1ba76
+[2025-04-13 11:06:37] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_07a26ca2-a902-4dfc-b93e-e4013ac1ba76
+[2025-04-13 11:06:38] [INFO] [AbilityPanel] Selecting soak
+[2025-04-13 11:06:38] [INFO] [AbilitySystem] Iatun is planning to use soak on null
+[2025-04-13 11:06:38] [INFO] [AbilitySystem] Updated area of sight for Iatun, viewing 11 tiles
+[2025-04-13 11:06:38] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 0 tiles
+[2025-04-13 11:06:38] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 0 tiles
+[2025-04-13 11:06:38] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:38] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:38] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:38] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:38] [INFO] [CombatSystem] Started constructing cost mappings for Iatun to use soak
+[2025-04-13 11:06:38] [INFO] [CombatSystem] Finished constructing cost mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [3, 7]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 4 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [3, 6]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 3 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [3, 5]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 4 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [2, 5]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 3 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [2, 4]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 4 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [2, 3]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 5 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [1, 3]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 4 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [1, 2]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 5 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [0, 2]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 6 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on [0, 1]
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 7 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 1 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Iatun is planning to use soak on null
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated line of sight for Iatun, viewing 0 tiles
+[2025-04-13 11:06:39] [INFO] [AbilitySystem] Updated area of effect for Iatun viewing 0 tiles
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Started constructing damage mappings for Iatun to use soak
+[2025-04-13 11:06:39] [INFO] [CombatSystem] Finished constructing damage mappings for Iatun to use soak

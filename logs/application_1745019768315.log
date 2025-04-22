@@ -1,0 +1,76 @@
+[2025-04-18 16:42:48] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-18 16:42:48] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-18 16:42:48] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-18 16:42:48] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-18 16:42:48] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-18 16:42:48] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-18 16:42:48] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-18 16:42:48] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-18 16:42:48] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-18 16:42:48] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-18 16:42:48] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-18 16:42:48] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-18 16:42:48] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-18 16:42:48] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-18 16:42:48] [INFO] [Component] Setting light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db","structure":""}.
+[2025-04-18 16:42:48] [INFO] [SpeedQueue] Added unit user:Qunue into queue
+[2025-04-18 16:42:48] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-18 16:42:48] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-18 16:42:48] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-18 16:42:48] [INFO] [FontPool] Started initializing FontPool
+[2025-04-18 16:42:48] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-18 16:42:49] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-18 16:42:49] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:42:49] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db
+[2025-04-18 16:42:49] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db
+[2025-04-18 16:42:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-18 16:42:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-18 16:42:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:42:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:42:49] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db
+[2025-04-18 16:42:49] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db
+[2025-04-18 16:42:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:42:49] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-18 16:42:49] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-18 16:42:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-18 16:42:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-18 16:42:49] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-18 16:42:49] [INFO] [VisualsSystem] Finished creating blurred background after 0.48832252621650696 seconds
+[2025-04-18 16:42:51] [INFO] [MovementSystem] Updated movement range to 10 for Qunue
+[2025-04-18 16:42:51] [INFO] [MovementSystem] Updated movement path from [1, 6] to [0, 7] for Qunue
+[2025-04-18 16:42:51] [INFO] [Component] Setting light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db on to {"row":0,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db","structure":""}.
+[2025-04-18 16:42:51] [INFO] [MovementSystem] Moved from [1, 6] to [0, 7]
+[2025-04-18 16:42:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Qunue
+[2025-04-18 16:42:51] [INFO] [InputHandler] Gliding 0 camera to new tile 0_7_b72483bb-b4c3-4f9c-8444-f35a56d5481d
+[2025-04-18 16:42:51] [INFO] [InputHandler] Gliding 1 camera to new tile 0_7_b72483bb-b4c3-4f9c-8444-f35a56d5481d
+[2025-04-18 16:42:52] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:42:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:42:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:42:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:42:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:42:54] [INFO] [MovementSystem] Updated movement range to 4 for Qunue
+[2025-04-18 16:42:54] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 6] for Qunue
+[2025-04-18 16:42:54] [INFO] [Component] Setting light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db on to {"row":0,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db","structure":""}.
+[2025-04-18 16:42:54] [INFO] [MovementSystem] Moved from [0, 7] to [0, 6]
+[2025-04-18 16:42:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Qunue
+[2025-04-18 16:42:54] [INFO] [InputHandler] Gliding 0 camera to new tile 0_6_bdcb7ca0-bd06-48eb-be38-9944f2b868c0
+[2025-04-18 16:42:54] [INFO] [InputHandler] Gliding 1 camera to new tile 0_6_bdcb7ca0-bd06-48eb-be38-9944f2b868c0
+[2025-04-18 16:42:54] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:42:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:42:55] [INFO] [MovementSystem] Updated movement range to 7 for Qunue
+[2025-04-18 16:42:55] [INFO] [MovementSystem] Updated movement path from [0, 6] to [1, 5] for Qunue
+[2025-04-18 16:42:55] [INFO] [Component] Setting light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qunue_cd70e95f-290d-447d-80d3-94fae01c28db","structure":""}.
+[2025-04-18 16:42:55] [INFO] [MovementSystem] Moved from [0, 6] to [1, 5]
+[2025-04-18 16:42:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Qunue
+[2025-04-18 16:42:55] [INFO] [InputHandler] Gliding 0 camera to new tile 1_5_4eaf7996-f7ac-4956-8722-9a2853a06b38
+[2025-04-18 16:42:55] [INFO] [InputHandler] Gliding 1 camera to new tile 1_5_4eaf7996-f7ac-4956-8722-9a2853a06b38
+[2025-04-18 16:42:56] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:42:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:42:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

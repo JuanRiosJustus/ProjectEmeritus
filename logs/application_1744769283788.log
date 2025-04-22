@@ -1,0 +1,43 @@
+[2025-04-15 19:08:03] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 19:08:03] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 19:08:03] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 19:08:03] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 19:08:03] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 19:08:03] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 19:08:03] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 19:08:03] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 19:08:03] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 19:08:03] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 19:08:03] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 19:08:03] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 19:08:04] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 19:08:04] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 19:08:04] [INFO] [Component] Setting earth_dragon_Iuje_1daaa8a2-5a9e-48be-9d73-3f1a09a90fab on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iuje_1daaa8a2-5a9e-48be-9d73-3f1a09a90fab","column":6,"row":6,"structure":"","height":0}.
+[2025-04-15 19:08:04] [INFO] [SpeedQueue] Added unit enemy:Iuje into queue
+[2025-04-15 19:08:04] [INFO] [Component] Setting light_dragon_Eakbl_288af953-8133-48fe-8a0e-4dd478aa0ecb on to {"spawn_region":[],"collider":"","unit":"light_dragon_Eakbl_288af953-8133-48fe-8a0e-4dd478aa0ecb","column":3,"row":4,"structure":"","height":0}.
+[2025-04-15 19:08:04] [INFO] [SpeedQueue] Added unit enemy:Eakbl into queue
+[2025-04-15 19:08:04] [INFO] [Component] Setting air_dragon_Aeygie_fa47c4ff-7a3f-4c93-8f30-9039a85a9063 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Aeygie_fa47c4ff-7a3f-4c93-8f30-9039a85a9063","column":1,"row":7,"structure":"","height":0}.
+[2025-04-15 19:08:04] [INFO] [SpeedQueue] Added unit enemy:Aeygie into queue
+[2025-04-15 19:08:04] [INFO] [Component] Setting dragon_Bysyk_6626d433-b600-45fe-91b6-af65839ddc23 on to {"spawn_region":[],"collider":"","unit":"dragon_Bysyk_6626d433-b600-45fe-91b6-af65839ddc23","column":3,"row":3,"structure":"","height":0}.
+[2025-04-15 19:08:04] [INFO] [SpeedQueue] Added unit enemy:Bysyk into queue
+[2025-04-15 19:08:04] [INFO] [Component] Setting water_dragon_Iobpey_49c65255-f8f8-4b3b-a3a6-7057b8eb7258 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Iobpey_49c65255-f8f8-4b3b-a3a6-7057b8eb7258","column":0,"row":6,"structure":"","height":0}.
+[2025-04-15 19:08:04] [INFO] [SpeedQueue] Added unit enemy:Iobpey into queue
+[2025-04-15 19:08:04] [INFO] [Component] Setting air_dragon_Xiow_e077794d-3186-4be3-998d-c13a3ac97b11 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Xiow_e077794d-3186-4be3-998d-c13a3ac97b11","column":2,"row":7,"structure":"","height":0}.
+[2025-04-15 19:08:04] [INFO] [SpeedQueue] Added unit user:Xiow into queue
+[2025-04-15 19:08:04] [INFO] [Component] Setting light_dragon_Dutsy_a202b842-d905-47df-83f8-3cce9432cbab on to {"spawn_region":[],"collider":"","unit":"light_dragon_Dutsy_a202b842-d905-47df-83f8-3cce9432cbab","column":6,"row":3,"structure":"","height":0}.
+[2025-04-15 19:08:04] [INFO] [SpeedQueue] Added unit user:Dutsy into queue
+[2025-04-15 19:08:04] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 19:08:04] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 19:08:04] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-15 19:08:04] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 19:08:04] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 19:08:04] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-15 19:08:04] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-15 19:08:04] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-15 19:08:04] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_e186a3c1-14ef-46e8-a20a-946c7277cf7d
+[2025-04-15 19:08:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 19:08:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 19:08:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 19:08:04] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 19:08:04] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 19:08:05] [INFO] [VisualsSystem] Finished creating blurred background after 0.4918878674507141 seconds

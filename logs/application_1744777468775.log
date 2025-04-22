@@ -1,0 +1,26 @@
+[2025-04-15 21:24:28] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 21:24:28] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 21:24:28] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 21:24:28] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 21:24:28] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 21:24:28] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 21:24:28] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 21:24:28] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 21:24:28] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 21:24:28] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 21:24:28] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 21:24:28] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 21:24:29] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 21:24:29] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 21:24:29] [INFO] [Component] Setting light_dragon_Yybk_f7cdffec-01b7-4c1b-82ba-ab963ff7f04d on to {"spawn_region":[],"collider":"","unit":"light_dragon_Yybk_f7cdffec-01b7-4c1b-82ba-ab963ff7f04d","column":4,"row":2,"structure":"","height":0}.
+[2025-04-15 21:24:29] [INFO] [SpeedQueue] Added unit enemy:Yybk into queue
+[2025-04-15 21:24:29] [INFO] [Component] Setting fire_dragon_Geye_cc82997d-b6ef-403e-a4c0-ebf9fe646dad on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Geye_cc82997d-b6ef-403e-a4c0-ebf9fe646dad","column":3,"row":7,"structure":"","height":0}.
+[2025-04-15 21:24:29] [INFO] [SpeedQueue] Added unit enemy:Geye into queue
+[2025-04-15 21:24:29] [INFO] [Component] Setting water_dragon_Qaer_f28d07eb-3632-4ae3-89ad-3bac87bc4eba on to {"spawn_region":[],"collider":"","unit":"water_dragon_Qaer_f28d07eb-3632-4ae3-89ad-3bac87bc4eba","column":4,"row":0,"structure":"","height":0}.
+[2025-04-15 21:24:29] [INFO] [SpeedQueue] Added unit enemy:Qaer into queue
+[2025-04-15 21:24:29] [INFO] [Component] Setting earth_dragon_Rooa_5c5948f9-051b-405d-90b7-3f5083646715 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Rooa_5c5948f9-051b-405d-90b7-3f5083646715","column":4,"row":7,"structure":"","height":0}.
+[2025-04-15 21:24:29] [INFO] [SpeedQueue] Added unit enemy:Rooa into queue
+[2025-04-15 21:24:29] [INFO] [Component] Setting light_dragon_Hatgcy_a8a0b289-26ab-48f4-81a7-1fc76f58fa2f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Hatgcy_a8a0b289-26ab-48f4-81a7-1fc76f58fa2f","column":3,"row":0,"structure":"","height":0}.
+[2025-04-15 21:24:29] [INFO] [SpeedQueue] Added unit enemy:Hatgcy into queue
+[2025-04-15 21:24:29] [INFO] [Component] Setting earth_dragon_Yobzio_0049fef8-f8d0-406e-a049-7822b4aae68b on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Yobzio_0049fef8-f8d0-406e-a049-7822b4aae68b","column":0,"row":2,"structure":"","height":0}.
+[2025-04-15 21:24:29] [INFO] [SpeedQueue] Added unit

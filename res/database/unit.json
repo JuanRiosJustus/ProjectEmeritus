@@ -1,0 +1,213 @@
+[
+    {
+        "id": "dragon",
+        "unit": "dragon",
+
+        "type": [ "normal" ],
+
+        "abilities": {
+            "basic": "water_attack",
+            "passive": "water_attack",
+            "other": [ "water_attack", "blunt_attack", "pierce_attack", "slash_attack" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "light_dragon",
+        "unit": "light_dragon",
+
+        "type": [ "light" ],
+
+        "abilities": {
+            "basic": "light_attack",
+            "passive": "light_force",
+            "other": [ "oblation",  "blunt_attack", "pierce_attack", "slash_attack" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "air_dragon",
+        "unit": "air_dragon",
+
+        "type": [ "air" ],
+
+        "abilities": {
+            "basic": "air_attack",
+            "passive": "air_force",
+            "other": [ "oblation",  "blunt_attack", "pierce_attack", "slash_attack" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "water_dragon",
+        "unit": "water_dragon",
+
+        "type": [ "water" ],
+
+        "abilities": {
+            "basic": "water_attack",
+            "passive": "water_force",
+            "other": [ "oblation",  "blunt_attack", "pierce_attack", "slash_attack" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "dark_dragon",
+        "unit": "dark_dragon",
+
+        "type": [ "dark" ],
+
+        "abilities": {
+            "basic": "dark_attack",
+            "passive": "dark_force",
+            "other": [ "oblation", "blunt_attack", "pierce_attack", "slash_attack" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "fire_dragon",
+        "unit": "fire_dragon",
+
+        "type": [ "fire" ],
+
+        "abilities": {
+            "basic": "fire_attack",
+            "passive": "fire_force",
+            "other": [ "oblation",  "blunt_attack", "pierce_attack", "slash_attack" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "earth_dragon",
+        "unit": "earth_dragon",
+        "rarity": "rare",
+
+        "type": [ "earth" ],
+
+        "abilities": {
+            "basic": "earth_attack",
+            "passive": "earth_force",
+            "other": [ "oblation", "blunt_attack", "pierce_attack", "slash_attack" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    }
+]

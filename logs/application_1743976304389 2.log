@@ -1,0 +1,190 @@
+[2025-04-06 14:51:44] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 14:51:44] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 14:51:44] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 14:51:44] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 14:51:44] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 14:51:44] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 14:51:44] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 14:51:44] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 14:51:44] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 14:51:44] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 14:51:44] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 14:51:44] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 14:51:44] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 14:51:44] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 14:51:44] [INFO] [Component] Setting water_dragon_Eeleea_d2b08770-a63b-460b-a841-3e0ebb319615 on to 5_5_9da7d7e4-d056-4d3f-b3d1-6e1e836b42fb.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Eeleea into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Dila_c3658c26-3990-4c9b-8a31-456c0b6282df on to 3_12_ff94eec0-e168-486f-8129-5788e0db957c.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Dila into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Fiox_c1a8693d-572b-4d7b-994c-13f4a3f84a1b on to 1_2_6ba1ecdf-db3e-4239-a3f5-f35f029f3368.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Fiox into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting air_dragon_Zoqaaq_0ecfaa09-84f6-4a0b-8c45-94d94fe59a0a on to 12_10_a2a4a26a-95b0-4e68-9fae-8d03d9a8fa1f.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Zoqaaq into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting air_dragon_Qomuk_b2b60e44-dd9c-468e-bd63-a5063d79627d on to 12_6_9c47c749-eb3b-4092-b78d-42d0fbc35690.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Qomuk into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting dark_dragon_Auaudx_b4ebb47a-eebe-4f7f-b995-cf3c7da8f844 on to 14_2_df8e2905-2bc9-4749-ab85-577176d087fb.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Auaudx into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Uocoqk_ccbcbdbd-1435-4c45-bb16-eb3b3bf08ded on to 5_7_0ebaf8f1-ced6-461f-bbe0-b5aaa7ada478.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Uocoqk into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Oazye_7c0e1267-5f99-4ad3-884c-9ac5040ec988 on to 10_3_120b1a1c-b9b1-4874-8564-70a239c0c5ee.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Oazye into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting earth_dragon_Uyquoa_d0f91b0d-91d3-47c7-a575-10e694731fa0 on to 8_9_40db85fa-85bd-4442-9e2a-f1c551fb8282.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Uyquoa into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting light_dragon_Debua_3f5284cc-29f4-4a39-bc15-34a3fd396522 on to 11_8_4b1f0d02-1c35-4e3d-8bdd-124190c8c493.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Debua into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting earth_dragon_Sivyy_06d49d48-3482-4f38-8f59-89c015ef1c1b on to 1_7_3e155898-30c6-431d-8dfc-d397e6bf5b70.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Sivyy into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting light_dragon_Aaameg_6647cc35-9e62-4ab5-bde7-8b9d1a3c1d47 on to 10_0_811bac78-5bd2-44d6-909b-95df4d99d2f1.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Aaameg into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting dark_dragon_Vyseo_aca13ec8-b79a-416a-b004-fa858bdbbe56 on to 6_5_6e45cadf-092e-41d5-9cde-e0fe8c529b52.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Vyseo into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting dragon_Goot_8d33802e-689c-47a7-bf59-9ef3a24d8a4d on to 8_14_281c35a8-2af9-4f1e-950d-a863bc75a5ca.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Goot into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting dragon_Uuay_98396c98-8bb1-408e-bacf-6f4b324f974f on to 7_0_a2deb73e-2047-4850-901a-2a14c97f4dec.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Uuay into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting dragon_Bafd_13fd407b-76bb-49ab-8536-4d9c49ac293a on to 13_13_7eabe779-69df-4c72-a46a-c44160e8537b.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Bafd into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Keto_e38a8f15-7fd5-4125-8aa0-8e75c80364a0 on to 11_0_ed54bb36-dcd4-473f-ae0a-f0d90f87df72.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Keto into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting earth_dragon_Ciofme_f43800c3-20a6-4d2e-8e1f-1ffa2516d859 on to 14_13_4ca1a51b-1e9d-477d-9a6d-b64af4722556.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Ciofme into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Xiao_e462dc3b-4b96-475d-8d14-c504bd5afdf6 on to 5_1_cc24a330-be6c-46d8-9e35-ac91217b85e6.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Xiao into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting air_dragon_Losuai_ee89ed67-6d03-46da-b366-1b0cb8b6293f on to 3_14_13e356ac-3cf9-4ecf-b6f7-772c2a8bffa2.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Losuai into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting earth_dragon_Sidc_808df894-a624-4716-adb7-f75e9fbe48bd on to 9_6_d8efe877-297c-45ab-b071-2c2c2a9a1b56.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Sidc into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Eexu_885b07d5-027a-4672-9f0d-ccef9eb0eb85 on to 11_5_b071471d-305e-4e91-b845-0511debb11cc.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Eexu into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting earth_dragon_Jergta_00993d36-fbf0-4fb5-b76b-eb3434676c37 on to 10_10_88b57c40-f9f8-4db7-bd0f-8dd2fae1e4c7.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit enemy:Jergta into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting air_dragon_Tyqe_97361d73-8a98-4c4e-9c5f-bae6644fa036 on to 2_13_1faf1a4e-eb90-47fc-8364-19904ec025a7.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Tyqe into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting light_dragon_Mirk_fb03453e-1d03-4194-a24c-90df756330b2 on to 13_9_10ab1f39-58d3-48e3-995a-f07783c01a48.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Mirk into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting water_dragon_Feppi_60ddefc3-16e0-4bc8-b78e-cd3ea6d53c19 on to 12_12_5afbc18b-5f45-4463-94c2-c0d01c3429d5.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Feppi into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting water_dragon_Faagy_634e89ee-f58a-4eeb-924d-3c96c32356ad on to 2_11_8f1f29d3-414b-428c-b46d-7c7984f2f87d.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Faagy into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting light_dragon_Uodm_ac343cf3-3c9a-426d-832a-4dea735a5ff4 on to 5_8_8fda9d9e-e8a4-4f3b-889c-f3a998e31839.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Uodm into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting fire_dragon_Hawh_0f732e0b-203a-4a5b-be6f-aa62cb5185c6 on to 10_7_db7f69de-b9df-4882-9f6c-94d0af21685a.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Hawh into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting earth_dragon_Aipyt_023793c8-ad06-4870-a606-a0595fdd72f5 on to 6_12_2b4bd4a9-0529-46dc-a53c-66199a4fbc9b.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Aipyt into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting earth_dragon_Zoaibg_81608d55-4118-4dff-a4ec-63767792405c on to 12_8_2eeff317-f6c5-41ad-844e-1abd97136356.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Zoaibg into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting dark_dragon_Butug_74712993-e27a-40b8-8028-57f8cd1e141d on to 7_11_d53be5fe-8aba-4f61-bd7d-95cdc5779ac6.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Butug into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting dragon_Fazioi_f174b0ee-9a8a-4bf0-ad01-c60d3a8b7d75 on to 11_13_36be2948-287b-491e-84ab-d0111c9fec15.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Fazioi into queue
+[2025-04-06 14:51:44] [INFO] [Component] Setting air_dragon_Xaku_ee926e8d-67b4-419b-a296-2f4092a93be4 on to 3_0_aa58fe0c-39bf-468a-875d-171015d7a44e.
+[2025-04-06 14:51:44] [INFO] [SpeedQueue] Added unit user:Xaku into queue
+[2025-04-06 14:51:44] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 14:51:45] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 14:51:45] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 14:51:45] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 14:51:45] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 14:51:45] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 14:51:45] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 14:51:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 14:51:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 14:51:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 14:51:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 14:51:46] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Ciofme_f43800c3-20a6-4d2e-8e1f-1ffa2516d859
+[2025-04-06 14:51:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 14:51:46] [INFO] [VisualsSystem] Finished creating blurred background after 0.4907551407814026 seconds
+[2025-04-06 14:51:46] [INFO] [MovementSystem] Updated movement range for Ciofme
+[2025-04-06 14:51:46] [INFO] [MovementSystem] Updated movement path for Ciofme
+[2025-04-06 14:51:46] [INFO] [Component] Setting earth_dragon_Ciofme_f43800c3-20a6-4d2e-8e1f-1ffa2516d859 on to 14_11_384d56ac-e85f-4312-b834-36322d89cad8.
+[2025-04-06 14:51:46] [INFO] [MovementSystem] Moved from [14, 13] to [14, 11]
+[2025-04-06 14:51:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 14:51:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 14:51:53] [INFO] [AbilitySystem] Sidc is planning to use energy_beam on [10, 7]
+[2025-04-06 14:51:53] [INFO] [AbilitySystem] Updated area of sight for Sidc, viewing 12 tiles
+[2025-04-06 14:51:53] [INFO] [AbilitySystem] Updated line of sight for Sidc, viewing 3 tiles
+[2025-04-06 14:51:53] [INFO] [AbilitySystem] Updated area of effect for Sidc viewing 1 tiles
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Started constructing cost mappings for Sidc to use energy_beam
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Finished constructing cost mappings for Sidc to use energy_beam
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Checking cost requirements for Sidc to use energy_beam
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Sidc is able to pay for energy_beam
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Started constructing cost mappings for Sidc to use energy_beam
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Finished constructing cost mappings for Sidc to use energy_beam
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Paying cost requirements for Sidc using energy_beam
+[2025-04-06 14:51:53] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 14:51:53] [INFO] [AbilitySystem] Used from energy_beam on [10, 7]
+[2025-04-06 14:51:54] [INFO] [CombatSystem] Started constructing damage mappings for Sidc to use energy_beam
+[2025-04-06 14:51:54] [INFO] [CombatSystem] Finished constructing damage mappings for Sidc to use energy_beam
+[2025-04-06 14:51:54] [INFO] [CombatSystem] Started dealing damage with energy_beam to Hawh 
+[2025-04-06 14:51:54] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 14:51:54] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 14:51:54] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 14:51:55] [INFO] [MovementSystem] Updated movement range for Sidc
+[2025-04-06 14:51:55] [INFO] [MovementSystem] Updated movement path for Sidc
+[2025-04-06 14:51:55] [INFO] [Component] Setting earth_dragon_Sidc_808df894-a624-4716-adb7-f75e9fbe48bd on to 9_5_1126e176-c685-4859-a37d-694cb01c9123.
+[2025-04-06 14:51:55] [INFO] [MovementSystem] Moved from [9, 6] to [9, 5]
+[2025-04-06 14:51:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 14:51:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 14:51:56] [INFO] [MovementSystem] Updated movement range for Auaudx
+[2025-04-06 14:51:56] [INFO] [MovementSystem] Updated movement path for Auaudx
+[2025-04-06 14:51:56] [INFO] [Component] Setting dark_dragon_Auaudx_b4ebb47a-eebe-4f7f-b995-cf3c7da8f844 on to 13_1_2c78d392-10c9-4dd3-8513-865a0f7dfbd9.
+[2025-04-06 14:51:56] [INFO] [MovementSystem] Moved from [14, 2] to [13, 1]
+[2025-04-06 14:51:58] [INFO] [InputHandler] Gliding 0 camera to new tile 13_1_2c78d392-10c9-4dd3-8513-865a0f7dfbd9
+[2025-04-06 14:51:58] [INFO] [InputHandler] Gliding 1 camera to new tile 13_1_2c78d392-10c9-4dd3-8513-865a0f7dfbd9
+[2025-04-06 14:51:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 14:51:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Auaudx
+[2025-04-06 14:51:58] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 14:51:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 14:51:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 14:52:01] [INFO] [InputHandler] Gliding 0 camera to new tile 13_9_10ab1f39-58d3-48e3-995a-f07783c01a48
+[2025-04-06 14:52:01] [INFO] [InputHandler] Gliding 1 camera to new tile 13_9_10ab1f39-58d3-48e3-995a-f07783c01a48
+[2025-04-06 14:52:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 14:52:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Mirk
+[2025-04-06 14:52:01] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 14:52:04] [INFO] [InputHandler] Gliding 0 camera to new tile 13_9_10ab1f39-58d3-48e3-995a-f07783c01a48
+[2025-04-06 14:52:04] [INFO] [MovementSystem] Updated movement range for Mirk
+[2025-04-06 14:52:04] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:04] [INFO] [MovementSystem] Updated movement range for Mirk
+[2025-04-06 14:52:04] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:05] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:06] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk
+[2025-04-06 14:52:07] [INFO] [MovementSystem] Updated movement path for Mirk

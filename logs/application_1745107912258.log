@@ -1,0 +1,67 @@
+[2025-04-19 17:11:52] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 17:11:52] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 17:11:52] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 17:11:52] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 17:11:52] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 17:11:52] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 17:11:52] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 17:11:52] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 17:11:52] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 17:11:52] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 17:11:52] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 17:11:52] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 17:11:52] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 17:11:52] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 17:11:52] [INFO] [Component] Setting dragon_Sothq_d00f9f43-82f3-4459-9451-fcb9fa9c43c0 on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Sothq_d00f9f43-82f3-4459-9451-fcb9fa9c43c0","structure":""}.
+[2025-04-19 17:11:52] [INFO] [SpeedQueue] Added unit enemy:Sothq into queue
+[2025-04-19 17:11:52] [INFO] [Component] Setting water_dragon_Eymhi_eb630110-4583-44c3-a28f-a52d94032fd3 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Eymhi_eb630110-4583-44c3-a28f-a52d94032fd3","structure":""}.
+[2025-04-19 17:11:52] [INFO] [SpeedQueue] Added unit enemy:Eymhi into queue
+[2025-04-19 17:11:52] [INFO] [Component] Setting dark_dragon_Aybyur_3643576c-e458-49ef-ad90-d72c1f1ff7f0 on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Aybyur_3643576c-e458-49ef-ad90-d72c1f1ff7f0","structure":""}.
+[2025-04-19 17:11:52] [INFO] [SpeedQueue] Added unit enemy:Aybyur into queue
+[2025-04-19 17:11:52] [INFO] [Component] Setting earth_dragon_Vura_24c14dfc-6b00-4d04-ae7e-3d84c2dc35ff on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Vura_24c14dfc-6b00-4d04-ae7e-3d84c2dc35ff","structure":""}.
+[2025-04-19 17:11:52] [INFO] [SpeedQueue] Added unit enemy:Vura into queue
+[2025-04-19 17:11:52] [INFO] [Component] Setting fire_dragon_Iabaea_3aaef8cd-ca21-4b8b-be8f-6ec64ad70cfa on to {"row":1,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Iabaea_3aaef8cd-ca21-4b8b-be8f-6ec64ad70cfa","structure":""}.
+[2025-04-19 17:11:52] [INFO] [SpeedQueue] Added unit enemy:Iabaea into queue
+[2025-04-19 17:11:52] [INFO] [Component] Setting earth_dragon_Wyhi_ff9885e6-d4c8-4ec2-a641-c2683c4ae92b on to {"row":4,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Wyhi_ff9885e6-d4c8-4ec2-a641-c2683c4ae92b","structure":""}.
+[2025-04-19 17:11:52] [INFO] [SpeedQueue] Added unit user:Wyhi into queue
+[2025-04-19 17:11:52] [INFO] [Component] Setting light_dragon_Iote_2f30d2f8-1f30-40bf-9445-385e01ff7759 on to {"row":0,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Iote_2f30d2f8-1f30-40bf-9445-385e01ff7759","structure":""}.
+[2025-04-19 17:11:52] [INFO] [SpeedQueue] Added unit user:Iote into queue
+[2025-04-19 17:11:52] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 17:11:52] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 17:11:52] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 17:11:52] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 17:11:52] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 17:11:52] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 17:11:53] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 17:11:53] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 17:11:53] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_c2189e8e-78ab-4ef8-9d4a-4300d682ad63
+[2025-04-19 17:11:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 17:11:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 17:11:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:11:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:11:53] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 17:11:53] [INFO] [VisualsSystem] Finished creating blurred background after 0.4913111627101898 seconds
+[2025-04-19 17:11:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:11:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:11:57] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 17:11:57] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 17:11:59] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 17:11:59] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 17:12:01] [INFO] [MapEditorSceneEditorPanel] Started loading assets to add
+[2025-04-19 17:12:01] [INFO] [MapEditorSceneEditorPanel] Finished loading assets to add
+[2025-04-19 17:12:12] [INFO] [MapEditorSceneEditorPanel] Started loading assets to add
+[2025-04-19 17:12:12] [INFO] [MapEditorSceneEditorPanel] Finished loading assets to add
+[2025-04-19 17:12:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:12:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:13:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:13:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:13:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:13:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:13:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:13:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:13:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:13:20] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:13:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:13:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 17:13:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 17:13:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

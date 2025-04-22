@@ -1,0 +1,57 @@
+[2025-04-20 00:29:29] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-20 00:29:29] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-20 00:29:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-20 00:29:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-20 00:29:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-20 00:29:30] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-20 00:29:30] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-20 00:29:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-20 00:29:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-20 00:29:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-20 00:29:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-20 00:29:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-20 00:29:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-20 00:29:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-20 00:29:30] [INFO] [Component] Setting dragon_Eoda_d179ee3c-38de-4cdd-aa25-54539e0fcb4c on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Eoda_d179ee3c-38de-4cdd-aa25-54539e0fcb4c","structure":""}.
+[2025-04-20 00:29:30] [INFO] [SpeedQueue] Added unit enemy:Eoda into queue
+[2025-04-20 00:29:30] [INFO] [Component] Setting dragon_Fytaq_7cfd3be5-4f88-42a4-983c-59f557a81cb9 on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Fytaq_7cfd3be5-4f88-42a4-983c-59f557a81cb9","structure":""}.
+[2025-04-20 00:29:30] [INFO] [SpeedQueue] Added unit enemy:Fytaq into queue
+[2025-04-20 00:29:30] [INFO] [Component] Setting dragon_Suvymy_16ecda22-41b4-47f4-800c-69580090d5ee on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Suvymy_16ecda22-41b4-47f4-800c-69580090d5ee","structure":""}.
+[2025-04-20 00:29:30] [INFO] [SpeedQueue] Added unit enemy:Suvymy into queue
+[2025-04-20 00:29:30] [INFO] [Component] Setting dark_dragon_Fulxze_390ae92c-84b9-44a4-8c56-9bdd01188de3 on to {"row":3,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Fulxze_390ae92c-84b9-44a4-8c56-9bdd01188de3","structure":""}.
+[2025-04-20 00:29:30] [INFO] [SpeedQueue] Added unit enemy:Fulxze into queue
+[2025-04-20 00:29:30] [INFO] [Component] Setting water_dragon_Toxyet_04982b4e-5e0d-448a-9795-9e4a6e1ca54e on to {"row":6,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Toxyet_04982b4e-5e0d-448a-9795-9e4a6e1ca54e","structure":""}.
+[2025-04-20 00:29:30] [INFO] [SpeedQueue] Added unit enemy:Toxyet into queue
+[2025-04-20 00:29:30] [INFO] [Component] Setting dragon_Qizyl_fb852cea-4dbc-4e52-be1f-d126c06dca37 on to {"row":0,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Qizyl_fb852cea-4dbc-4e52-be1f-d126c06dca37","structure":""}.
+[2025-04-20 00:29:30] [INFO] [SpeedQueue] Added unit user:Qizyl into queue
+[2025-04-20 00:29:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-20 00:29:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-20 00:29:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-20 00:29:30] [INFO] [FontPool] Started initializing FontPool
+[2025-04-20 00:29:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-20 00:29:30] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-20 00:29:30] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-20 00:29:30] [INFO] [AbilityPanel] Updating ability selection for dragon_Eoda_d179ee3c-38de-4cdd-aa25-54539e0fcb4c
+[2025-04-20 00:29:30] [INFO] [AbilityPanel] Finished ability selection for dragon_Eoda_d179ee3c-38de-4cdd-aa25-54539e0fcb4c
+[2025-04-20 00:29:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 00:29:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 00:29:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-20 00:29:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-20 00:29:30] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Eoda_d179ee3c-38de-4cdd-aa25-54539e0fcb4c
+[2025-04-20 00:29:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Eoda_d179ee3c-38de-4cdd-aa25-54539e0fcb4c
+[2025-04-20 00:29:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 00:29:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 00:29:31] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 00:29:31] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 00:29:31] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 00:29:31] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 00:29:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-20 00:29:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.5044678449630737 seconds
+[2025-04-20 00:29:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 00:29:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 00:29:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 00:29:35] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 00:29:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 00:29:36] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 00:29:47] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_fef3575c-af0c-419d-9209-ec0466da8d3b
+[2025-04-20 00:29:47] [INFO] [MovementSystem] Updated mov

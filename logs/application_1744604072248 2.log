@@ -1,0 +1,302 @@
+[2025-04-13 21:14:32] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 21:14:32] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 21:14:32] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 21:14:32] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 21:14:32] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 21:14:32] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 21:14:32] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 21:14:32] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 21:14:32] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 21:14:32] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 21:14:32] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 21:14:32] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 21:14:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 21:14:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 21:14:32] [INFO] [Component] Setting dragon_Oahrb_ff16ce0a-b2a3-4e03-a412-6e96c1e2aff3 on to {"spawn_region":[],"collider":"","unit":"dragon_Oahrb_ff16ce0a-b2a3-4e03-a412-6e96c1e2aff3","column":7,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Oahrb into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting light_dragon_Noomqe_07663a6b-184d-4a27-9c29-0979c7a35923 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Noomqe_07663a6b-184d-4a27-9c29-0979c7a35923","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Noomqe into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting earth_dragon_Zewe_edb5981e-3ff2-4e78-b189-95e33fd69ff7 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Zewe_edb5981e-3ff2-4e78-b189-95e33fd69ff7","column":2,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Zewe into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting light_dragon_Ritvia_44925831-aade-489c-93f4-6083f6c5fb98 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Ritvia_44925831-aade-489c-93f4-6083f6c5fb98","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Ritvia into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting fire_dragon_Ruei_774853d3-0659-42e5-af6c-82c488e59558 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Ruei_774853d3-0659-42e5-af6c-82c488e59558","column":1,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Ruei into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting fire_dragon_Dimo_c790f0a0-7e75-427d-be4a-fef10757b1a7 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Dimo_c790f0a0-7e75-427d-be4a-fef10757b1a7","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Dimo into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting dark_dragon_Eeho_4a441044-fdff-42f8-9102-c485d84f74f6 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Eeho_4a441044-fdff-42f8-9102-c485d84f74f6","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Eeho into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting air_dragon_Uijzke_56b838f4-8cd7-4bd7-8a7b-ffbefd4e13a3 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Uijzke_56b838f4-8cd7-4bd7-8a7b-ffbefd4e13a3","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Uijzke into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting dark_dragon_Uulgat_99662a86-cf01-46c1-b0cc-f4556c5c9b70 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uulgat_99662a86-cf01-46c1-b0cc-f4556c5c9b70","column":2,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Uulgat into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting fire_dragon_Heyig_a0c2d761-83c7-4653-b01e-1dff7bc8dd54 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Heyig_a0c2d761-83c7-4653-b01e-1dff7bc8dd54","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit enemy:Heyig into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e","column":4,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit user:Aowey into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting light_dragon_Saciyj_38c6f4d3-2619-4788-9f91-db2727e1c7e9 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Saciyj_38c6f4d3-2619-4788-9f91-db2727e1c7e9","column":6,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit user:Saciyj into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting dragon_Wufqa_e7245a94-c8f9-4569-be34-d3640d8bd5ff on to {"spawn_region":[],"collider":"","unit":"dragon_Wufqa_e7245a94-c8f9-4569-be34-d3640d8bd5ff","column":6,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit user:Wufqa into queue
+[2025-04-13 21:14:32] [INFO] [Component] Setting light_dragon_Ieyao_ed3bfbb4-1019-4dc8-9884-392e221b2c3b on to {"spawn_region":[],"collider":"","unit":"light_dragon_Ieyao_ed3bfbb4-1019-4dc8-9884-392e221b2c3b","column":1,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:14:32] [INFO] [SpeedQueue] Added unit user:Ieyao into queue
+[2025-04-13 21:14:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 21:14:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 21:14:32] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 21:14:32] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 21:14:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 21:14:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 21:14:33] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 21:14:33] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:33] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:14:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:14:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:14:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:14:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:14:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 21:14:33] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:14:33] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:14:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 21:14:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.48475518822669983 seconds
+[2025-04-13 21:14:34] [INFO] [AbilitySystem] Aowey is planning to use shine on [6, 4]
+[2025-04-13 21:14:34] [INFO] [AbilitySystem] Updated area of sight for Aowey, viewing 9 tiles
+[2025-04-13 21:14:34] [INFO] [AbilitySystem] Updated line of sight for Aowey, viewing 2 tiles
+[2025-04-13 21:14:34] [INFO] [AbilitySystem] Updated area of effect for Aowey viewing 1 tiles
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Started constructing cost mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Finished constructing cost mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Checking cost requirements for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Aowey is able to pay for shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Started constructing cost mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Finished constructing cost mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Paying cost requirements for Aowey using shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use shine
+[2025-04-13 21:14:34] [INFO] [AbilitySystem] Used from shine on [6, 4]
+[2025-04-13 21:14:34] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:34] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:14:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:14:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e
+[2025-04-13 21:14:34] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:14:34] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:14:34] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Started constructing damage mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Finished constructing damage mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Started constructing cost mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [CombatSystem] Finished constructing cost mappings for Aowey to use shine
+[2025-04-13 21:14:34] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aowey to use shine
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aowey to use shine
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Aowey to use shine
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aowey
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for shine
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aowey
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uijzke
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for shine
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uijzke
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] 9.090909 damage after defenses for shine
+[2025-04-13 21:14:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Aowey to use shine
+[2025-04-13 21:14:35] [INFO] [CombatSystem] Started dealing damage with shine to Uijzke 
+[2025-04-13 21:14:35] [INFO] [MovementSystem] Updated movement range to 8 for Aowey
+[2025-04-13 21:14:35] [INFO] [MovementSystem] Updated movement path from [5, 4] to [3, 4] for Aowey
+[2025-04-13 21:14:35] [INFO] [Component] Setting fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Aowey_807739b5-f9b9-4423-9d10-575e0d31871e","column":4,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:14:35] [INFO] [MovementSystem] Moved from [5, 4] to [3, 4]
+[2025-04-13 21:14:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:14:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Aowey
+[2025-04-13 21:14:35] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_26fbc16b-6656-4f61-9c68-029739b58112
+[2025-04-13 21:14:35] [INFO] [InputHandler] Gliding 1 camera to new tile 3_4_26fbc16b-6656-4f61-9c68-029739b58112
+[2025-04-13 21:14:36] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Noomqe_07663a6b-184d-4a27-9c29-0979c7a35923
+[2025-04-13 21:14:36] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Noomqe_07663a6b-184d-4a27-9c29-0979c7a35923
+[2025-04-13 21:14:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:14:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:14:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:14:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:14:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Noomqe_07663a6b-184d-4a27-9c29-0979c7a35923
+[2025-04-13 21:14:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Noomqe_07663a6b-184d-4a27-9c29-0979c7a35923
+[2025-04-13 21:14:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:14:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Noomqe
+[2025-04-13 21:14:36] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:14:36] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:14:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:36] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:36] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:36] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:36] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:38] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:38] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:39] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:39] [INFO] [MovementSystem] Updated movement range to 7 for Noomqe
+[2025-04-13 21:14:39] [INFO] [MovementSystem] Updated movement path from [1, 4] to null for Noomqe
+[2025-04-13 21:14:39] [INFO] [MovementSystem] Updated movement range to 7 for Noomqe
+[2025-04-13 21:14:39] [INFO] [MovementSystem] Updated movement path from [1, 4] to null for Noomqe
+[2025-04-13 21:14:42] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_34c525f0-d3cc-4f1f-b5d7-5a6b14371287
+[2025-04-13 21:14:43] [INFO] [AbilityPanel] Selecting shine
+[2025-04-13 21:14:43] [INFO] [AbilitySystem] Noomqe is planning to use shine on null
+[2025-04-13 21:14:43] [INFO] [AbilitySystem] Updated area of sight for Noomqe, viewing 8 tiles
+[2025-04-13 21:14:43] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 0 tiles
+[2025-04-13 21:14:43] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 0 tiles
+[2025-04-13 21:14:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:43] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:43] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:43] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:43] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:45] [INFO] [AbilitySystem] Noomqe is planning to use shine on [3, 7]
+[2025-04-13 21:14:45] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 5 tiles
+[2025-04-13 21:14:45] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:45] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:45] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:45] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:45] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Noomqe is planning to use shine on [2, 6]
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 4 tiles
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Noomqe is planning to use shine on [2, 5]
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 2 tiles
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Noomqe is planning to use shine on [2, 4]
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 2 tiles
+[2025-04-13 21:14:46] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noomqe
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Noomqe lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noomqe
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Dimo
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Dimo
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] 20.0 damage after defenses for shine
+[2025-04-13 21:14:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Noomqe is planning to use shine on [1, 4]
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 1 tiles
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noomqe
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Noomqe lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noomqe
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Noomqe
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Noomqe defends with Same-Type-Defense-Bonus from shine for 15.4
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Noomqe
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Noomqe is planning to use shine on [1, 3]
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 2 tiles
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Noomqe is planning to use shine on [0, 3]
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 3 tiles
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Noomqe is planning to use shine on [0, 2]
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 2 tiles
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noomqe
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Noomqe lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noomqe
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uulgat
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uulgat
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] 20.0 damage after defenses for shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Noomqe is planning to use shine on [0, 1]
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 2 tiles
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 1 tiles
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Noomqe is planning to use shine on null
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated line of sight for Noomqe, viewing 0 tiles
+[2025-04-13 21:14:50] [INFO] [AbilitySystem] Updated area of effect for Noomqe viewing 0 tiles
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing damage mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Started constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [CombatSystem] Finished constructing cost mappings for Noomqe to use shine
+[2025-04-13 21:14:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

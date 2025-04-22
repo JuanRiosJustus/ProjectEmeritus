@@ -1,0 +1,469 @@
+[2025-04-20 01:01:36] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-20 01:01:36] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-20 01:01:36] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-20 01:01:36] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-20 01:01:36] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-20 01:01:36] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-20 01:01:36] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-20 01:01:36] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-20 01:01:36] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-20 01:01:36] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-20 01:01:36] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-20 01:01:36] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-20 01:01:36] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-20 01:01:36] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-20 01:01:36] [INFO] [Component] Setting fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7 on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit enemy:Uudipi into queue
+[2025-04-20 01:01:36] [INFO] [Component] Setting fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026 on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit enemy:Lotur into queue
+[2025-04-20 01:01:36] [INFO] [Component] Setting air_dragon_Ioeu_0743feea-32f3-4db0-9066-586fa9ed2a31 on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Ioeu_0743feea-32f3-4db0-9066-586fa9ed2a31","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit enemy:Ioeu into queue
+[2025-04-20 01:01:36] [INFO] [Component] Setting earth_dragon_Byxl_3dc18fef-d9b8-4228-823f-1044ad1fabaf on to {"row":4,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Byxl_3dc18fef-d9b8-4228-823f-1044ad1fabaf","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit enemy:Byxl into queue
+[2025-04-20 01:01:36] [INFO] [Component] Setting fire_dragon_Wivuic_481b36b9-f878-4868-937f-aaeb25e55efd on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Wivuic_481b36b9-f878-4868-937f-aaeb25e55efd","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit user:Wivuic into queue
+[2025-04-20 01:01:36] [INFO] [Component] Setting water_dragon_Zotau_26a1af28-4bdd-48c9-84b4-70ceff8d3c4a on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Zotau_26a1af28-4bdd-48c9-84b4-70ceff8d3c4a","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit user:Zotau into queue
+[2025-04-20 01:01:36] [INFO] [Component] Setting air_dragon_Boqah_2a9b0bca-7bfa-41ac-81d4-235a8f61e957 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Boqah_2a9b0bca-7bfa-41ac-81d4-235a8f61e957","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit user:Boqah into queue
+[2025-04-20 01:01:36] [INFO] [Component] Setting fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6 on to {"row":1,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6","structure":""}.
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Added unit user:Gyse into queue
+[2025-04-20 01:01:36] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-20 01:01:36] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-20 01:01:36] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-20 01:01:36] [INFO] [FontPool] Started initializing FontPool
+[2025-04-20 01:01:36] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-20 01:01:36] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-20 01:01:36] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-20 01:01:36] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:36] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:01:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:01:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-20 01:01:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-20 01:01:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:01:36] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 01:01:36] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:01:36] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:01:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:01:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:01:37] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-20 01:01:37] [INFO] [VisualsSystem] Finished creating blurred background after 0.4922730624675751 seconds
+[2025-04-20 01:01:38] [INFO] [InputHandler] Gliding 0 camera to new tile 2_7_9974c124-5cda-4764-bfbc-7a10854169e5
+[2025-04-20 01:01:38] [INFO] [InputHandler] Gliding 1 camera to new tile 2_7_9974c124-5cda-4764-bfbc-7a10854169e5
+[2025-04-20 01:01:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:01:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Uudipi
+[2025-04-20 01:01:39] [INFO] [InputHandler] Gliding 0 camera to new tile 2_7_9974c124-5cda-4764-bfbc-7a10854169e5
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement range to 4 for Uudipi
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement path from [2, 7] to [4, 7] for Uudipi
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement range to 4 for Uudipi
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement path from [2, 7] to [4, 7] for Uudipi
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement path from [2, 7] to [4, 6] for Uudipi
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement path from [2, 7] to [4, 6] for Uudipi
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement path from [2, 7] to [3, 6] for Uudipi
+[2025-04-20 01:01:40] [INFO] [MovementSystem] Updated movement path from [2, 7] to [3, 6] for Uudipi
+[2025-04-20 01:01:41] [INFO] [Component] Setting fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7 on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7","structure":""}.
+[2025-04-20 01:01:41] [INFO] [MovementSystem] Moved from [2, 7] to [3, 6]
+[2025-04-20 01:01:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:01:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Uudipi
+[2025-04-20 01:01:41] [INFO] [InputHandler] Gliding 0 camera to new tile 3_6_93647544-b5f5-483f-9f43-7e4defe229e9
+[2025-04-20 01:01:41] [INFO] [InputHandler] Gliding 1 camera to new tile 3_6_93647544-b5f5-483f-9f43-7e4defe229e9
+[2025-04-20 01:01:42] [INFO] [InputHandler] Gliding 0 camera to new tile 3_6_93647544-b5f5-483f-9f43-7e4defe229e9
+[2025-04-20 01:01:44] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Uudipi is planning to use oblation on null
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Updated area of sight for Uudipi, viewing 9 tiles
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Updated line of sight for Uudipi, viewing 0 tiles
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Updated area of effect for Uudipi viewing 0 tiles
+[2025-04-20 01:01:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Started constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Finished constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Uudipi is planning to use oblation on [6, 7]
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Updated line of sight for Uudipi, viewing 3 tiles
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Updated area of effect for Uudipi viewing 1 tiles
+[2025-04-20 01:01:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Started constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Finished constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Uudipi is planning to use oblation on [5, 7]
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Updated line of sight for Uudipi, viewing 3 tiles
+[2025-04-20 01:01:44] [INFO] [AbilitySystem] Updated area of effect for Uudipi viewing 1 tiles
+[2025-04-20 01:01:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Started constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [CombatSystem] Finished constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:01:45] [INFO] [AbilitySystem] Uudipi is planning to use oblation on [5, 6]
+[2025-04-20 01:01:45] [INFO] [AbilitySystem] Updated line of sight for Uudipi, viewing 3 tiles
+[2025-04-20 01:01:45] [INFO] [AbilitySystem] Updated area of effect for Uudipi viewing 1 tiles
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wivuic
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wivuic
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 5.0 Raw damage before modifiers for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 5.0 damage after modifiers for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wivuic
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 5.0 Raw damage after defenses for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wivuic
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] 4.5454545 damage after defenses for oblation
+[2025-04-20 01:01:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:01:45] [INFO] [CombatSystem] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [CombatSystem] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [CombatSystem] Started constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [CombatSystem] Finished constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Started constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Finished constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Checking cost requirements for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Uudipi is able to pay for oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Started constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Finished constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Paying cost requirements for Uudipi using oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilitySystem] Used from oblation on [5, 6]
+[2025-04-20 01:01:50] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:50] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:50] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:01:50] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:01:50] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:50] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Uudipi_f910a678-37c7-48bd-a5db-04c3469890f7
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:01:50] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:01:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Started constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Finished constructing cost mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.5 Raw damage before modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.5 damage after modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.5 Raw damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.090909 damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [CombatSystem] Started dealing damage with oblation to Wivuic 
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uudipi to use oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.5 Raw damage before modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.5 damage after modifiers for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uudipi
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.5 Raw damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wivuic
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] 4.090909 damage after defenses for oblation
+[2025-04-20 01:01:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uudipi to use oblation
+[2025-04-20 01:01:53] [INFO] [AbilityPanel] Selecting fire_attack
+[2025-04-20 01:02:06] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:06] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:06] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:02:06] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:02:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-20 01:02:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-20 01:02:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:02:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Gyse
+[2025-04-20 01:02:06] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:02:06] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:02:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:06] [INFO] [InputHandler] Gliding 0 camera to new tile 1_7_d12fa249-e2d5-4cf7-9e40-cabe40692cc9
+[2025-04-20 01:02:06] [INFO] [InputHandler] Gliding 1 camera to new tile 1_7_d12fa249-e2d5-4cf7-9e40-cabe40692cc9
+[2025-04-20 01:02:07] [INFO] [MovementSystem] Updated movement range to 6 for Gyse
+[2025-04-20 01:02:07] [INFO] [MovementSystem] Updated movement path from [1, 7] to [0, 6] for Gyse
+[2025-04-20 01:02:07] [INFO] [Component] Setting fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6 on to {"row":0,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6","structure":""}.
+[2025-04-20 01:02:07] [INFO] [MovementSystem] Moved from [1, 7] to [0, 6]
+[2025-04-20 01:02:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:02:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Gyse
+[2025-04-20 01:02:07] [INFO] [InputHandler] Gliding 0 camera to new tile 0_6_82bd7e4c-004b-438c-aeff-1a5a572f36e4
+[2025-04-20 01:02:07] [INFO] [InputHandler] Gliding 1 camera to new tile 0_6_82bd7e4c-004b-438c-aeff-1a5a572f36e4
+[2025-04-20 01:02:08] [INFO] [AbilitySystem] Gyse is planning to use oblation on [2, 6]
+[2025-04-20 01:02:08] [INFO] [AbilitySystem] Updated area of sight for Gyse, viewing 8 tiles
+[2025-04-20 01:02:08] [INFO] [AbilitySystem] Updated line of sight for Gyse, viewing 3 tiles
+[2025-04-20 01:02:08] [INFO] [AbilitySystem] Updated area of effect for Gyse viewing 1 tiles
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Started constructing cost mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Finished constructing cost mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Checking cost requirements for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Gyse is able to pay for oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Started constructing cost mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Finished constructing cost mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Paying cost requirements for Gyse using oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use oblation
+[2025-04-20 01:02:08] [INFO] [AbilitySystem] Used from oblation on [2, 6]
+[2025-04-20 01:02:08] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:08] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:02:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Gyse_e535cd78-fd2a-4b2a-af37-d1f3937050c6
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:02:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Started constructing damage mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Finished constructing damage mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Started constructing cost mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Finished constructing cost mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Gyse
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Gyse lands a CRIT bonus with oblation for 18.75
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 31.25 damage after modifiers for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Gyse
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lotur
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 31.25 Raw damage after defenses for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lotur
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 28.409092 damage after defenses for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Gyse
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 4.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 4.5 damage after modifiers for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Gyse
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lotur
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 4.5 Raw damage after defenses for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lotur
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] 4.090909 damage after defenses for oblation
+[2025-04-20 01:02:08] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Gyse to use oblation
+[2025-04-20 01:02:08] [INFO] [CombatSystem] Started dealing damage with oblation to Lotur 
+[2025-04-20 01:02:08] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:08] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:02:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:02:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-20 01:02:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:02:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Lotur
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:02:08] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:02:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:08] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_856c8556-b26d-4aa1-b45b-8aadde4b2398
+[2025-04-20 01:02:08] [INFO] [InputHandler] Gliding 1 camera to new tile 2_6_856c8556-b26d-4aa1-b45b-8aadde4b2398
+[2025-04-20 01:02:11] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_856c8556-b26d-4aa1-b45b-8aadde4b2398
+[2025-04-20 01:02:12] [INFO] [MovementSystem] Updated movement range to 8 for Lotur
+[2025-04-20 01:02:12] [INFO] [MovementSystem] Updated movement path from [2, 6] to [2, 7] for Lotur
+[2025-04-20 01:02:12] [INFO] [MovementSystem] Updated movement range to 8 for Lotur
+[2025-04-20 01:02:12] [INFO] [MovementSystem] Updated movement path from [2, 6] to [2, 7] for Lotur
+[2025-04-20 01:02:12] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 7] for Lotur
+[2025-04-20 01:02:12] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 7] for Lotur
+[2025-04-20 01:02:13] [INFO] [Component] Setting fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026 on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026","structure":""}.
+[2025-04-20 01:02:13] [INFO] [MovementSystem] Moved from [2, 6] to [3, 7]
+[2025-04-20 01:02:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:02:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Lotur
+[2025-04-20 01:02:13] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_0110aa77-a45b-4895-93fa-18d4c8656132
+[2025-04-20 01:02:13] [INFO] [InputHandler] Gliding 1 camera to new tile 3_7_0110aa77-a45b-4895-93fa-18d4c8656132
+[2025-04-20 01:02:14] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_0110aa77-a45b-4895-93fa-18d4c8656132
+[2025-04-20 01:02:16] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-20 01:02:16] [INFO] [AbilitySystem] Lotur is planning to use oblation on null
+[2025-04-20 01:02:16] [INFO] [AbilitySystem] Updated area of sight for Lotur, viewing 8 tiles
+[2025-04-20 01:02:16] [INFO] [AbilitySystem] Updated line of sight for Lotur, viewing 0 tiles
+[2025-04-20 01:02:16] [INFO] [AbilitySystem] Updated area of effect for Lotur viewing 0 tiles
+[2025-04-20 01:02:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Started constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Finished constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:16] [INFO] [AbilitySystem] Lotur is planning to use oblation on [4, 7]
+[2025-04-20 01:02:16] [INFO] [AbilitySystem] Updated line of sight for Lotur, viewing 2 tiles
+[2025-04-20 01:02:16] [INFO] [AbilitySystem] Updated area of effect for Lotur viewing 1 tiles
+[2025-04-20 01:02:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Started constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [CombatSystem] Finished constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:17] [INFO] [AbilitySystem] Lotur is planning to use oblation on [3, 7]
+[2025-04-20 01:02:17] [INFO] [AbilitySystem] Updated line of sight for Lotur, viewing 1 tiles
+[2025-04-20 01:02:17] [INFO] [AbilitySystem] Updated area of effect for Lotur viewing 1 tiles
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.5 damage after modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.5 Raw damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.0 damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 4.0 Raw damage before modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 4.0 damage after modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 4.0 Raw damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 3.6363637 damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Started constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Finished constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:17] [INFO] [AbilitySystem] Lotur is planning to use oblation on [3, 6]
+[2025-04-20 01:02:17] [INFO] [AbilitySystem] Updated line of sight for Lotur, viewing 2 tiles
+[2025-04-20 01:02:17] [INFO] [AbilitySystem] Updated area of effect for Lotur viewing 1 tiles
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.5 damage after modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uudipi
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.5 Raw damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uudipi
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 5.0 damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 4.0 Raw damage before modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 4.0 damage after modifiers for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uudipi
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 4.0 Raw damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uudipi
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] 3.6363637 damage after defenses for oblation
+[2025-04-20 01:02:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Started constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [CombatSystem] Finished constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Started constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Finished constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Checking cost requirements for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Lotur is able to pay for oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Started constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Finished constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Paying cost requirements for Lotur using oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilitySystem] Used from oblation on [3, 6]
+[2025-04-20 01:02:19] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:19] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:02:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:02:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Lotur_1b7fa3a7-752a-4052-b6e4-648b89e08026
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:02:19] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:02:19] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Started constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Finished constructing cost mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.5 damage after modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.5 Raw damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.0 damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.5 damage after modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.5 Raw damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.1818182 damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [CombatSystem] Started dealing damage with oblation to Uudipi 
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lotur to use oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.5 damage after modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.5 Raw damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 5.0 damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.5 Raw damage before modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.5 damage after modifiers for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lotur
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.5 Raw damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uudipi
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] 3.1818182 damage after defenses for oblation
+[2025-04-20 01:02:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lotur to use oblation
+[2025-04-20 01:02:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:02:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Uudipi
+[2025-04-20 01:02:25] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_0110aa77-a45b-4895-93fa-18d4c8656132
+[2025-04-20 01:02:28] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_0110aa77-a45b-4895-93fa-18d4c8656132
+[2025-04-20 01:02:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:02:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Lotur
+[2025-04-20 01:02:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:02:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Uudipi

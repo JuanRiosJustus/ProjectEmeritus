@@ -1,0 +1,62 @@
+[2025-04-14 09:38:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-14 09:38:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-14 09:38:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-14 09:38:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-14 09:38:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-14 09:38:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-14 09:38:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-14 09:38:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-14 09:38:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-14 09:38:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-14 09:38:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-14 09:38:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-14 09:38:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-14 09:38:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-14 09:38:58] [INFO] [Component] Setting water_dragon_Vyro_cead4947-224a-4c43-90be-e0c08ab86a44 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Vyro_cead4947-224a-4c43-90be-e0c08ab86a44","column":0,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-14 09:38:58] [INFO] [SpeedQueue] Added unit enemy:Vyro into queue
+[2025-04-14 09:38:58] [INFO] [Component] Setting fire_dragon_Vajo_d5d18a62-c2b5-4a47-ba48-646a0f84fc36 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vajo_d5d18a62-c2b5-4a47-ba48-646a0f84fc36","column":7,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-14 09:38:58] [INFO] [SpeedQueue] Added unit enemy:Vajo into queue
+[2025-04-14 09:38:58] [INFO] [Component] Setting air_dragon_Curuhe_9ae55fce-7db8-463b-84bc-e605ec283a50 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Curuhe_9ae55fce-7db8-463b-84bc-e605ec283a50","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-14 09:38:58] [INFO] [SpeedQueue] Added unit enemy:Curuhe into queue
+[2025-04-14 09:38:58] [INFO] [Component] Setting air_dragon_Maiiln_ba6ad4ba-300e-421a-b64d-a92f6db55ad6 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Maiiln_ba6ad4ba-300e-421a-b64d-a92f6db55ad6","column":2,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-14 09:38:58] [INFO] [SpeedQueue] Added unit enemy:Maiiln into queue
+[2025-04-14 09:38:58] [INFO] [Component] Setting dragon_Raoi_09275f22-b7c5-4e88-b8a5-b3ba15edafd0 on to {"spawn_region":[],"collider":"","unit":"dragon_Raoi_09275f22-b7c5-4e88-b8a5-b3ba15edafd0","column":0,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-14 09:38:58] [INFO] [SpeedQueue] Added unit user:Raoi into queue
+[2025-04-14 09:38:58] [INFO] [Component] Setting air_dragon_Kiue_986afc9c-f722-4893-ab06-116c143bec2f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Kiue_986afc9c-f722-4893-ab06-116c143bec2f","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-14 09:38:58] [INFO] [SpeedQueue] Added unit user:Kiue into queue
+[2025-04-14 09:38:58] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-14 09:38:58] [INFO] [FontPool] Started initializing FontPool
+[2025-04-14 09:38:58] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-14 09:38:58] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-14 09:38:58] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-14 09:38:58] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_c9599e85-dbd1-40c5-9960-e3403387514a
+[2025-04-14 09:38:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-14 09:38:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-14 09:38:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-14 09:38:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-14 09:38:58] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-14 09:38:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-14 09:38:59] [INFO] [VisualsSystem] Finished creating blurred background after 0.2828478515148163 seconds
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 728,249
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 728,258
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 728,271
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 728,280
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 728,291
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 728,302
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 729,316
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 731,327
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 732,338
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 734,352
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 735,357
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 737,377
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 738,386
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 739,397
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 740,400
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 741,407
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 742,414
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 743,418
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 744,422
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 745,425
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 745,426
+[2025-04-14 09:38:59] [INFO] [MapEditorScene] Updated hoveredTilePanes 745,427
+[2025-04-14 09:38:59] [I

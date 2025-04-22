@@ -1,0 +1,45 @@
+[2025-04-14 21:24:08] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-14 21:24:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-14 21:24:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-14 21:24:08] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-14 21:24:08] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-14 21:24:08] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-14 21:24:08] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-14 21:24:08] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-14 21:24:08] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-14 21:24:09] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-14 21:24:09] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-14 21:24:09] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-14 21:24:09] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-14 21:24:09] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-14 21:24:09] [INFO] [Component] Setting air_dragon_Taos_8ace75c0-6b39-4fa4-8345-d7a739762e9f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Taos_8ace75c0-6b39-4fa4-8345-d7a739762e9f","column":3,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-14 21:24:09] [INFO] [SpeedQueue] Added unit enemy:Taos into queue
+[2025-04-14 21:24:09] [INFO] [Component] Setting water_dragon_Yuyfy_1784d444-b7d4-446e-a7e1-89375f9374ee on to {"spawn_region":[],"collider":"","unit":"water_dragon_Yuyfy_1784d444-b7d4-446e-a7e1-89375f9374ee","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-14 21:24:09] [INFO] [SpeedQueue] Added unit enemy:Yuyfy into queue
+[2025-04-14 21:24:09] [INFO] [Component] Setting fire_dragon_Dutio_305dc059-86a7-4dbd-98a4-5684ae0d220a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Dutio_305dc059-86a7-4dbd-98a4-5684ae0d220a","column":5,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-14 21:24:09] [INFO] [SpeedQueue] Added unit enemy:Dutio into queue
+[2025-04-14 21:24:09] [INFO] [Component] Setting water_dragon_Deaica_305f2f16-6d88-4add-90da-a0db050c4b50 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Deaica_305f2f16-6d88-4add-90da-a0db050c4b50","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-14 21:24:09] [INFO] [SpeedQueue] Added unit user:Deaica into queue
+[2025-04-14 21:24:09] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-14 21:24:09] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-14 21:24:09] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-14 21:24:09] [INFO] [FontPool] Started initializing FontPool
+[2025-04-14 21:24:09] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-14 21:24:09] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-14 21:24:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-14 21:24:09] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Dutio_305dc059-86a7-4dbd-98a4-5684ae0d220a
+[2025-04-14 21:24:09] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Dutio_305dc059-86a7-4dbd-98a4-5684ae0d220a
+[2025-04-14 21:24:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-14 21:24:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-14 21:24:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-14 21:24:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-14 21:24:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Dutio_305dc059-86a7-4dbd-98a4-5684ae0d220a
+[2025-04-14 21:24:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Dutio_305dc059-86a7-4dbd-98a4-5684ae0d220a
+[2025-04-14 21:24:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-14 21:24:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-14 21:24:09] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-14 21:24:09] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-14 21:24:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-14 21:24:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-14 21:24:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-14 21:24:10] [INFO] [VisualsSystem] Finished creating blurred background after 0.4865298867225647 seconds

@@ -1,0 +1,221 @@
+[2025-04-13 21:45:48] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 21:45:48] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 21:45:48] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 21:45:48] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 21:45:48] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 21:45:48] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 21:45:48] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 21:45:48] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 21:45:48] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 21:45:48] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 21:45:48] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 21:45:48] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 21:45:48] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 21:45:48] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 21:45:48] [INFO] [Component] Setting dark_dragon_Aerek_f15a1a18-59bb-4b8a-9fb2-e2c0bc0a4b0e on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Aerek_f15a1a18-59bb-4b8a-9fb2-e2c0bc0a4b0e","column":4,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Aerek into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting light_dragon_Mudj_e7e15014-7894-4e44-a4b0-8ad2401a2ed5 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Mudj_e7e15014-7894-4e44-a4b0-8ad2401a2ed5","column":5,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Mudj into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Cyei into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting dark_dragon_Ceise_f521be72-9837-41b4-a929-b7205bd54cda on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ceise_f521be72-9837-41b4-a929-b7205bd54cda","column":1,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Ceise into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting air_dragon_Xagqe_74cae030-62ef-4d3d-96c6-886f67fc6ed2 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Xagqe_74cae030-62ef-4d3d-96c6-886f67fc6ed2","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Xagqe into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting dragon_Gygojv_d5baabdd-f235-4cbf-bad9-8b5d7be45b76 on to {"spawn_region":[],"collider":"","unit":"dragon_Gygojv_d5baabdd-f235-4cbf-bad9-8b5d7be45b76","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Gygojv into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting air_dragon_Heio_3be7b65b-c374-4f04-9160-8c3f82c388bd on to {"spawn_region":[],"collider":"","unit":"air_dragon_Heio_3be7b65b-c374-4f04-9160-8c3f82c388bd","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Heio into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting dragon_Juuo_5b52ac02-7168-4adf-9599-5872bba628bd on to {"spawn_region":[],"collider":"","unit":"dragon_Juuo_5b52ac02-7168-4adf-9599-5872bba628bd","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Juuo into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting earth_dragon_Aioeay_476dccdd-9690-4b11-94f0-868e3cbb7525 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Aioeay_476dccdd-9690-4b11-94f0-868e3cbb7525","column":5,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Aioeay into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting fire_dragon_Mepeoi_8ff15d06-8750-4233-88b4-914ce6515b8d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Mepeoi_8ff15d06-8750-4233-88b4-914ce6515b8d","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit enemy:Mepeoi into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting air_dragon_Gyqlo_d12374ec-ce88-4cb2-8030-b1ecab975072 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Gyqlo_d12374ec-ce88-4cb2-8030-b1ecab975072","column":6,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit user:Gyqlo into queue
+[2025-04-13 21:45:48] [INFO] [Component] Setting dark_dragon_Byhfq_5ea86fe2-a0bd-4199-9697-d9529e02ca09 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Byhfq_5ea86fe2-a0bd-4199-9697-d9529e02ca09","column":7,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Added unit user:Byhfq into queue
+[2025-04-13 21:45:48] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 21:45:48] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 21:45:48] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 21:45:48] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 21:45:48] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 21:45:48] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 21:45:48] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 21:45:48] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae
+[2025-04-13 21:45:48] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae
+[2025-04-13 21:45:48] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:45:48] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:45:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:45:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:45:48] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae
+[2025-04-13 21:45:48] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae
+[2025-04-13 21:45:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:45:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 21:45:48] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:45:48] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:45:48] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:48] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:45:49] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 21:45:49] [INFO] [VisualsSystem] Finished creating blurred background after 0.4889444410800934 seconds
+[2025-04-13 21:45:50] [INFO] [InputHandler] Gliding 0 camera to new tile 0_3_b45f55a5-2726-4ed7-9fb8-12095317e634
+[2025-04-13 21:45:52] [INFO] [InputHandler] Gliding 0 camera to new tile 0_3_b45f55a5-2726-4ed7-9fb8-12095317e634
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement range to 6 for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to null for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement range to 6 for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to null for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [2, 7] for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [2, 7] for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [2, 6] for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [2, 6] for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [1, 5] for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [1, 5] for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [1, 4] for Cyei
+[2025-04-13 21:45:52] [INFO] [MovementSystem] Updated movement path from [0, 3] to [1, 4] for Cyei
+[2025-04-13 21:45:53] [INFO] [Component] Setting fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Cyei_76f09c22-8a66-4767-9c99-094e66f885ae","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:45:53] [INFO] [MovementSystem] Moved from [0, 3] to [1, 4]
+[2025-04-13 21:45:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:45:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Cyei
+[2025-04-13 21:45:53] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_51f369b8-57df-46da-9930-b2f57c90a714
+[2025-04-13 21:45:53] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_51f369b8-57df-46da-9930-b2f57c90a714
+[2025-04-13 21:45:53] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_51f369b8-57df-46da-9930-b2f57c90a714
+[2025-04-13 21:45:54] [INFO] [AbilityPanel] Selecting ember
+[2025-04-13 21:45:54] [INFO] [AbilitySystem] Cyei is planning to use ember on null
+[2025-04-13 21:45:54] [INFO] [AbilitySystem] Updated area of sight for Cyei, viewing 7 tiles
+[2025-04-13 21:45:54] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 0 tiles
+[2025-04-13 21:45:54] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 0 tiles
+[2025-04-13 21:45:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:54] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:54] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:54] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:54] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Cyei is planning to use ember on [3, 7]
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 2 tiles
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Cyei is planning to use ember on [2, 7]
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 2 tiles
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Cyei is planning to use ember on [2, 6]
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 2 tiles
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Cyei is planning to use ember on [1, 6]
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 2 tiles
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Cyei is planning to use ember on [1, 5]
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 2 tiles
+[2025-04-13 21:45:55] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cyei
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Cyei lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cyei
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Aioeay
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Aioeay
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-13 21:45:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:45:56] [INFO] [AbilitySystem] Cyei is planning to use ember on [1, 4]
+[2025-04-13 21:45:56] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 1 tiles
+[2025-04-13 21:45:56] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cyei
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Cyei lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cyei
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Cyei
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Cyei defends with Same-Type-Defense-Bonus from ember for 15.4
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Cyei
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for ember
+[2025-04-13 21:45:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:45:56] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:45:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Cyei is planning to use ember on [0, 4]
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 2 tiles
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:46:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Cyei is planning to use ember on [0, 2]
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 2 tiles
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 1 tiles
+[2025-04-13 21:46:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Cyei is planning to use ember on null
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Updated line of sight for Cyei, viewing 0 tiles
+[2025-04-13 21:46:00] [INFO] [AbilitySystem] Updated area of effect for Cyei viewing 0 tiles
+[2025-04-13 21:46:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Started constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Finished constructing damage mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Started constructing cost mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [CombatSystem] Finished constructing cost mappings for Cyei to use ember
+[2025-04-13 21:46:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

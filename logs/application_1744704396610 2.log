@@ -1,0 +1,121 @@
+[2025-04-15 01:06:36] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 01:06:36] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 01:06:36] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 01:06:36] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 01:06:36] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 01:06:36] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 01:06:36] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 01:06:36] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 01:06:36] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 01:06:36] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 01:06:36] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 01:06:36] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 01:06:36] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 01:06:36] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 01:06:36] [INFO] [Component] Setting dark_dragon_Uoctyu_d919afb6-2726-43ee-adb8-806b9e0eb2ca on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uoctyu_d919afb6-2726-43ee-adb8-806b9e0eb2ca","column":3,"row":6,"structure":"","height":0}.
+[2025-04-15 01:06:36] [INFO] [SpeedQueue] Added unit enemy:Uoctyu into queue
+[2025-04-15 01:06:36] [INFO] [Component] Setting water_dragon_Oulay_efb561d3-9054-439c-a1c6-f10910dedd9c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Oulay_efb561d3-9054-439c-a1c6-f10910dedd9c","column":1,"row":4,"structure":"","height":0}.
+[2025-04-15 01:06:36] [INFO] [SpeedQueue] Added unit enemy:Oulay into queue
+[2025-04-15 01:06:36] [INFO] [Component] Setting air_dragon_Zirle_9188c42a-f9c2-4af2-ae78-fcab5541275f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Zirle_9188c42a-f9c2-4af2-ae78-fcab5541275f","column":0,"row":4,"structure":"","height":0}.
+[2025-04-15 01:06:36] [INFO] [SpeedQueue] Added unit enemy:Zirle into queue
+[2025-04-15 01:06:36] [INFO] [Component] Setting dark_dragon_Uuwuk_6dc6b3b8-3b0d-42b0-a691-0d0840d9004b on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uuwuk_6dc6b3b8-3b0d-42b0-a691-0d0840d9004b","column":1,"row":5,"structure":"","height":0}.
+[2025-04-15 01:06:36] [INFO] [SpeedQueue] Added unit enemy:Uuwuk into queue
+[2025-04-15 01:06:36] [INFO] [Component] Setting fire_dragon_Outaa_c417aaf2-b2ab-46ce-a72e-806ac801ce29 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Outaa_c417aaf2-b2ab-46ce-a72e-806ac801ce29","column":1,"row":1,"structure":"","height":0}.
+[2025-04-15 01:06:36] [INFO] [SpeedQueue] Added unit user:Outaa into queue
+[2025-04-15 01:06:36] [INFO] [Component] Setting light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56","column":3,"row":7,"structure":"","height":0}.
+[2025-04-15 01:06:36] [INFO] [SpeedQueue] Added unit user:Hars into queue
+[2025-04-15 01:06:36] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 01:06:37] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 01:06:37] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-15 01:06:37] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 01:06:37] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 01:06:37] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-15 01:06:37] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-15 01:06:37] [INFO] [UpdateSystem] New Round
+[2025-04-15 01:06:37] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:37] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:37] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-15 01:06:37] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-15 01:06:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 01:06:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 01:06:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 01:06:37] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 01:06:37] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-15 01:06:37] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-15 01:06:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 01:06:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 01:06:37] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 01:06:38] [INFO] [VisualsSystem] Finished creating blurred background after 0.49430111050605774 seconds
+[2025-04-15 01:06:39] [INFO] [MovementSystem] Updated movement range to 6 for Hars
+[2025-04-15 01:06:39] [INFO] [MovementSystem] Updated movement path from [7, 3] to [6, 4] for Hars
+[2025-04-15 01:06:39] [INFO] [Component] Setting light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56","column":4,"row":6,"structure":"","height":0}.
+[2025-04-15 01:06:39] [INFO] [MovementSystem] Moved from [7, 3] to [6, 4]
+[2025-04-15 01:06:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 01:06:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Hars
+[2025-04-15 01:06:39] [INFO] [InputHandler] Gliding 0 camera to new tile 6_4_29c01522-2fac-4b6f-9276-75178a220138
+[2025-04-15 01:06:39] [INFO] [InputHandler] Gliding 1 camera to new tile 6_4_29c01522-2fac-4b6f-9276-75178a220138
+[2025-04-15 01:06:39] [INFO] [InputHandler] Gliding 0 camera to new tile 6_4_29c01522-2fac-4b6f-9276-75178a220138
+[2025-04-15 01:06:39] [INFO] [InputHandler] Gliding 1 camera to new tile 6_4_29c01522-2fac-4b6f-9276-75178a220138
+[2025-04-15 01:06:40] [INFO] [AbilitySystem] Hars is planning to use shine on [6, 3]
+[2025-04-15 01:06:40] [INFO] [AbilitySystem] Updated area of sight for Hars, viewing 11 tiles
+[2025-04-15 01:06:40] [INFO] [AbilitySystem] Updated line of sight for Hars, viewing 2 tiles
+[2025-04-15 01:06:40] [INFO] [AbilitySystem] Updated area of effect for Hars viewing 1 tiles
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Started constructing cost mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Finished constructing cost mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Checking cost requirements for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Hars is able to pay for shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Started constructing cost mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Finished constructing cost mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Paying cost requirements for Hars using shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use shine
+[2025-04-15 01:06:40] [INFO] [AbilitySystem] Used from shine on [6, 3]
+[2025-04-15 01:06:40] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:40] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-15 01:06:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Hars_3db70a2b-cdf3-4f93-8d14-f3eff4fa8c56
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-15 01:06:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Started constructing damage mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Finished constructing damage mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Started constructing cost mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Finished constructing cost mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hars to use shine
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hars
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Hars lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hars
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uoctyu
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uoctyu
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] 20.0 damage after defenses for shine
+[2025-04-15 01:06:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hars to use shine
+[2025-04-15 01:06:40] [INFO] [CombatSystem] Started dealing damage with shine to Uoctyu 
+[2025-04-15 01:06:40] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Oulay_efb561d3-9054-439c-a1c6-f10910dedd9c
+[2025-04-15 01:06:40] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Oulay_efb561d3-9054-439c-a1c6-f10910dedd9c
+[2025-04-15 01:06:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-15 01:06:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-15 01:06:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 01:06:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Oulay_efb561d3-9054-439c-a1c6-f10910dedd9c
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Oulay_efb561d3-9054-439c-a1c6-f10910dedd9c
+[2025-04-15 01:06:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 01:06:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Oulay
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-15 01:06:40] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-15 01:06:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 01:06:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 01:06:40] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_72e44874-03a5-4141-9904-e859dccbd999
+[2025-04-15 01:06:40] [INFO] [InputHandler] Gliding 1 camera to new tile 4_1_72e44874-03a5-4141-9904-e859dccbd999
+[2025-04-15 01:06:41] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_72e44874-03a5-4141-9904-e859dccbd999
+[2025-04-15 01:06:41] [INFO] [InputHandler] Gliding 1 camera to new tile 4_1_72e44874-03a5-4141-9904-e859dccbd999
+[2025-04-15 01:06:42] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_72e44874-03a5-4141-9904-e859dccbd999
+[2025-04-15 01:06:43] [INFO] [AbilityPanel] Selecting soak

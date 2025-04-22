@@ -1,0 +1,69 @@
+[2025-04-12 20:44:48] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-12 20:44:48] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-12 20:44:48] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-12 20:44:48] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-12 20:44:48] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-12 20:44:48] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-12 20:44:48] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-12 20:44:48] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-12 20:44:48] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-12 20:44:48] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-12 20:44:48] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-12 20:44:48] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-12 20:44:48] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-12 20:44:48] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-12 20:44:48] [INFO] [Component] Setting light_dragon_Jefo_4bdbf539-9eb8-40df-b4c2-5189972ae576 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jefo_4bdbf539-9eb8-40df-b4c2-5189972ae576","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit enemy:Jefo into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting dark_dragon_Sohjiy_ce0e1ef7-9975-4fb8-99b3-1c8575dc8e6c on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Sohjiy_ce0e1ef7-9975-4fb8-99b3-1c8575dc8e6c","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit enemy:Sohjiy into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting light_dragon_Cippu_346371bd-eae7-48c1-afc8-e096fd6ec5dc on to {"spawn_region":[],"collider":"","unit":"light_dragon_Cippu_346371bd-eae7-48c1-afc8-e096fd6ec5dc","column":3,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit enemy:Cippu into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting dark_dragon_Uibioy_3e6b12f9-c075-448e-ba15-f0d432563562 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uibioy_3e6b12f9-c075-448e-ba15-f0d432563562","column":1,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit enemy:Uibioy into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting fire_dragon_Nofkd_5ee0875b-0175-4487-ac90-4ff3e7de092d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Nofkd_5ee0875b-0175-4487-ac90-4ff3e7de092d","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit enemy:Nofkd into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting water_dragon_Tiup_293c52ca-e07b-4ac5-890a-0107f6af72f8 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Tiup_293c52ca-e07b-4ac5-890a-0107f6af72f8","column":2,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit enemy:Tiup into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting fire_dragon_Aupue_dba2e1b5-fa3f-4295-8d78-ca4c42d59826 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Aupue_dba2e1b5-fa3f-4295-8d78-ca4c42d59826","column":4,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit enemy:Aupue into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting light_dragon_Fiaml_960991f0-ea2a-48c4-8e18-10e5b70fa4e3 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Fiaml_960991f0-ea2a-48c4-8e18-10e5b70fa4e3","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit user:Fiaml into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting water_dragon_Jiynn_bfca29e7-380d-42dd-ab67-acfa0318f482 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Jiynn_bfca29e7-380d-42dd-ab67-acfa0318f482","column":0,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit user:Jiynn into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting air_dragon_Beby_e736915e-ccd7-4792-b045-742eab530641 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Beby_e736915e-ccd7-4792-b045-742eab530641","column":5,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit user:Beby into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting dragon_Hopua_fd363369-dca6-496d-8cdb-0febbda84ff5 on to {"spawn_region":[],"collider":"","unit":"dragon_Hopua_fd363369-dca6-496d-8cdb-0febbda84ff5","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit user:Hopua into queue
+[2025-04-12 20:44:48] [INFO] [Component] Setting earth_dragon_Iugu_0f6cc739-89cb-47f2-9f99-507b1c872d25 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iugu_0f6cc739-89cb-47f2-9f99-507b1c872d25","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 20:44:48] [INFO] [SpeedQueue] Added unit user:Iugu into queue
+[2025-04-12 20:44:48] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-12 20:44:49] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-12 20:44:49] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-12 20:44:49] [INFO] [FontPool] Started initializing FontPool
+[2025-04-12 20:44:49] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-12 20:44:49] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-12 20:44:49] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-12 20:44:49] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Nofkd_5ee0875b-0175-4487-ac90-4ff3e7de092d
+[2025-04-12 20:44:49] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Nofkd_5ee0875b-0175-4487-ac90-4ff3e7de092d
+[2025-04-12 20:44:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 20:44:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 20:44:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 20:44:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 20:44:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 20:44:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 20:44:49] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Nofkd_5ee0875b-0175-4487-ac90-4ff3e7de092d
+[2025-04-12 20:44:49] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Nofkd_5ee0875b-0175-4487-ac90-4ff3e7de092d
+[2025-04-12 20:44:49] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 20:44:49] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 20:44:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 20:44:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 20:44:49] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-12 20:44:50] [INFO] [VisualsSystem] Finished creating blurred background after 0.49182695150375366 seconds
+[2025-04-12 20:44:51] [INFO] [InputHandler] Gliding 0 camera to new tile 7_4_1dcf2298-23b0-428a-85cb-90b457ac55ae
+[2025-04-12 20:44:51] [INFO] [InputHandler] Gliding 1 camera to new tile 7_4_1dcf2298-23b0-428a-85cb-90b457ac55ae
+[2025-04-12 20:44:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 20:44:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Nofkd
+[2025-04-12 20:44:51] [INFO] [InputHandler] Gliding 0 camera to new tile 6_2_5fa8cefa-249c-49da-910a-a8f5e3e77d84
+[2025-04-12 20:44:51] [INFO] [InputHandler] Gliding 1 camera to new tile 6_2_5fa8cefa-249c-49da-910a-a8f5e3e77d84
+[2025-04-12 20:44:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 20:44:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Tiup

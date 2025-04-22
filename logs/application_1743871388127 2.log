@@ -1,0 +1,234 @@
+[2025-04-05 09:43:08] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 09:43:08] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 09:43:08] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 09:43:08] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 09:43:08] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 09:43:08] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 09:43:08] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 09:43:08] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 09:43:08] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 09:43:08] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 09:43:08] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 09:43:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 09:43:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 09:43:08] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 09:43:08] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:43:08] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 09:43:08] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 09:43:08] [INFO] [Component] Setting ac97df78-f7e3-423b-87af-3d81eec23dc9 on to 4410f120-1694-4cff-91c5-b69ef547ce82.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Ryyyb into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting a8c8b09d-d403-4fc9-a0a6-5b9a413040dd on to e86caf31-6ffe-43ff-901b-9850c808253c.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Lygip into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting b400d498-fd88-41fa-850a-17043b432960 on to f7aeca36-5a7a-4613-8956-4923b05b8f55.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Boaa into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting e0c9b4f8-26b0-4f4a-8c13-a83572783efc on to ff3dff4e-6445-4292-b89b-ec08e6e08ceb.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Uiibe into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting e7f98577-25e2-4a5b-b430-ad5004a8972c on to 11744cb1-6614-4607-be92-6acf93283b51.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Yuge into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 02cb5e31-4e6b-441f-8b9d-4f11090a0550 on to 8c4aac32-5796-4550-b865-091537bc5c16.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Ciwuye into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 9bf58ecf-6747-4a7a-81a3-29d899ed7f42 on to a4e3b2fe-7309-44aa-ab9a-187b59f0ded2.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Eaefby into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 290893f9-d725-40ee-968c-0a1178fb3b83 on to 4eb0efc9-f9e7-4ceb-a976-db88d05e4a25.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Zugvi into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 9c9d67db-1b3a-438e-9bf1-0e2af15d2a5a on to 4582ab99-2bc9-44c0-bf3d-476e4c2bf933.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Pazetu into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting a7c04a27-cf60-4eb4-8548-ece132a69834 on to 2a7b25a9-0cea-46c2-9cb6-395fdf7e9d21.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Heljuy into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 88d7e8d1-16bb-4213-a519-4a94158038b9 on to 9ce65e05-4c18-4ea2-b5a6-90b0e176445f.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Uoce into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting f5e207be-64ef-413f-b9ef-33e50e12fdd8 on to a681f03c-6252-452d-adfe-44fd1e8e0e73.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Iusku into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 715c9fc0-eef5-4f7f-be9e-afc060697aac on to c69b1099-0f42-4676-8ab7-96c783a45cb4.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Qyhxta into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 003bce3f-debf-4b09-8a9d-74560710d49a on to 4e018bc5-5f7c-41ed-8986-8442f9a503dd.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Zysee into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting e0ade4be-f05a-44d7-8582-d28ee5958db9 on to b455decf-6137-4ba8-b429-46594cd93a46.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Lora into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting bd2ca04e-c9eb-421b-9efa-77e48e7fff93 on to 7456aad8-e387-4aa5-a918-e05e08883af4.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Zyawo into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 15bdb69c-bfaf-4871-a7f2-b05b7d92ab2a on to abe943c5-01f2-4e4e-bc44-e62a10f6d234.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Zeuaya into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 45d81186-e097-42b0-9dc8-14584509e207 on to 5aa033ac-76ec-4ca6-9a84-3031e5dd9508.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Rifiia into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 898240c4-d0a5-48c2-a881-5a8e5b7d555c on to b74588c3-bb94-4ab5-a535-f1eb605cd156.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Yosoyc into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting a61d1ce0-4bd1-4419-800f-230f420e96cc on to 3d5411c2-e77a-4674-a59b-93ac83bd9305.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Xube into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting f2b36d88-65ef-4fe8-9578-c4472f3b57cf on to f5792959-266b-432b-8014-0437bd0eb874.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Uuttia into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting a736f5c3-5aca-490d-b760-f7c15530d31c on to c1763541-b37a-4a16-82ae-a8e9493daa8d.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Bieea into queue
+[2025-04-05 09:43:08] [INFO] [Component] Setting 9387e3ae-d7c6-4546-a9b3-2135f84d7ac7 on to dd4fc50d-abe4-408b-8cf6-6454230bfb83.
+[2025-04-05 09:43:08] [INFO] [SpeedQueue] Added unit enemy:Iezoa into queue
+[2025-04-05 09:43:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 09:43:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 09:43:08] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 09:43:08] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 09:43:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 09:43:09] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 09:43:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 09:43:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 09:43:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 09:43:09] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 9c9d67db-1b3a-438e-9bf1-0e2af15d2a5a
+[2025-04-05 09:43:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 09:43:10] [INFO] [VisualsSystem] Finished creating blurred background after 0.490449994802475 seconds
+[2025-04-05 09:43:10] [INFO] [MovementSystem] Pazetu is planning to move from [14, 10] to [14, 8]
+[2025-04-05 09:43:10] [INFO] [MovementSystem] Updated movement area for Pazetu
+[2025-04-05 09:43:10] [INFO] [MovementSystem] Updated movement path for Pazetu
+[2025-04-05 09:43:10] [INFO] [Component] Setting 9c9d67db-1b3a-438e-9bf1-0e2af15d2a5a on to 9302e166-ca59-4d59-881e-85efc97b5f46.
+[2025-04-05 09:43:10] [INFO] [MovementSystem] Moved from [14, 10] to [14, 8]
+[2025-04-05 09:43:10] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:11] [INFO] [AbilitySystem] Pazetu Triggered ability system
+[2025-04-05 09:43:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:12] [INFO] [MovementSystem] Lora is planning to move from [6, 7] to [6, 8]
+[2025-04-05 09:43:12] [INFO] [MovementSystem] Updated movement area for Lora
+[2025-04-05 09:43:12] [INFO] [MovementSystem] Updated movement path for Lora
+[2025-04-05 09:43:12] [INFO] [Component] Setting e0ade4be-f05a-44d7-8582-d28ee5958db9 on to c3af4837-d1ff-4959-a628-c08e59490e52.
+[2025-04-05 09:43:12] [INFO] [MovementSystem] Moved from [6, 7] to [6, 8]
+[2025-04-05 09:43:12] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:13] [INFO] [AbilitySystem] Lora Triggered ability system
+[2025-04-05 09:43:14] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:14] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:14] [INFO] [MovementSystem] Bieea is planning to move from [5, 7] to [4, 6]
+[2025-04-05 09:43:14] [INFO] [MovementSystem] Updated movement area for Bieea
+[2025-04-05 09:43:14] [INFO] [MovementSystem] Updated movement path for Bieea
+[2025-04-05 09:43:14] [INFO] [Component] Setting a736f5c3-5aca-490d-b760-f7c15530d31c on to 866a9e5b-80bb-40c2-96f3-c68f6bb7ea95.
+[2025-04-05 09:43:14] [INFO] [MovementSystem] Moved from [5, 7] to [4, 6]
+[2025-04-05 09:43:14] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:15] [INFO] [AbilitySystem] Bieea Triggered ability system
+[2025-04-05 09:43:15] [INFO] [DevPanel] Setting camera mode
+[2025-04-05 09:43:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:16] [INFO] [MovementSystem] Eaefby is planning to move from [14, 11] to [14, 13]
+[2025-04-05 09:43:16] [INFO] [MovementSystem] Updated movement area for Eaefby
+[2025-04-05 09:43:16] [INFO] [MovementSystem] Updated movement path for Eaefby
+[2025-04-05 09:43:16] [INFO] [Component] Setting 9bf58ecf-6747-4a7a-81a3-29d899ed7f42 on to 1f2d47f0-0303-4adc-96a1-e6bc90e013ca.
+[2025-04-05 09:43:16] [INFO] [MovementSystem] Moved from [14, 11] to [14, 13]
+[2025-04-05 09:43:16] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:17] [INFO] [AbilitySystem] Eaefby Triggered ability system
+[2025-04-05 09:43:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:18] [INFO] [MovementSystem] Zugvi is planning to move from [14, 3] to [13, 3]
+[2025-04-05 09:43:18] [INFO] [MovementSystem] Updated movement area for Zugvi
+[2025-04-05 09:43:18] [INFO] [MovementSystem] Updated movement path for Zugvi
+[2025-04-05 09:43:18] [INFO] [Component] Setting 290893f9-d725-40ee-968c-0a1178fb3b83 on to 9f50b26f-0688-47d2-90da-45e4f7d8e2c9.
+[2025-04-05 09:43:18] [INFO] [MovementSystem] Moved from [14, 3] to [13, 3]
+[2025-04-05 09:43:18] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:19] [INFO] [AbilitySystem] Zugvi Triggered ability system
+[2025-04-05 09:43:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:20] [INFO] [MovementSystem] Qyhxta is planning to move from [7, 12] to [8, 12]
+[2025-04-05 09:43:20] [INFO] [MovementSystem] Updated movement area for Qyhxta
+[2025-04-05 09:43:20] [INFO] [MovementSystem] Updated movement path for Qyhxta
+[2025-04-05 09:43:20] [INFO] [Component] Setting 715c9fc0-eef5-4f7f-be9e-afc060697aac on to c7b0cdcd-3cbe-4f08-a2d9-d5d098afaad0.
+[2025-04-05 09:43:20] [INFO] [MovementSystem] Moved from [7, 12] to [8, 12]
+[2025-04-05 09:43:20] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:21] [INFO] [AbilitySystem] Qyhxta Triggered ability system
+[2025-04-05 09:43:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:22] [INFO] [MovementSystem] Xube is planning to move from [5, 2] to [4, 1]
+[2025-04-05 09:43:22] [INFO] [MovementSystem] Updated movement area for Xube
+[2025-04-05 09:43:22] [INFO] [MovementSystem] Updated movement path for Xube
+[2025-04-05 09:43:22] [INFO] [Component] Setting a61d1ce0-4bd1-4419-800f-230f420e96cc on to fa97b0a5-8b42-4631-b268-96ae6943ee73.
+[2025-04-05 09:43:22] [INFO] [MovementSystem] Moved from [5, 2] to [4, 1]
+[2025-04-05 09:43:22] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:23] [INFO] [AbilitySystem] Xube Triggered ability system
+[2025-04-05 09:43:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:24] [INFO] [MovementSystem] Rifiia is planning to move from [11, 10] to [11, 10]
+[2025-04-05 09:43:24] [INFO] [MovementSystem] Updated movement area for Rifiia
+[2025-04-05 09:43:24] [INFO] [MovementSystem] Updated movement path for Rifiia
+[2025-04-05 09:43:24] [INFO] [MovementSystem] Rifiia is planning to move from [11, 10] to [11, 10]
+[2025-04-05 09:43:24] [INFO] [MovementSystem] Updated movement area for Rifiia
+[2025-04-05 09:43:24] [INFO] [MovementSystem] Updated movement path for Rifiia
+[2025-04-05 09:43:25] [INFO] [MovementSystem] Rifiia is planning to move from [11, 10] to [12, 10]
+[2025-04-05 09:43:25] [INFO] [MovementSystem] Updated movement path for Rifiia
+[2025-04-05 09:43:25] [INFO] [Component] Setting 45d81186-e097-42b0-9dc8-14584509e207 on to 49d6fc22-fd12-4074-b44d-30307e045ace.
+[2025-04-05 09:43:25] [INFO] [MovementSystem] Moved from [11, 10] to [12, 10]
+[2025-04-05 09:43:25] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:26] [INFO] [AbilitySystem] Rifiia Triggered ability system
+[2025-04-05 09:43:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:27] [INFO] [MovementSystem] Zeuaya is planning to move from [8, 5] to [8, 5]
+[2025-04-05 09:43:27] [INFO] [MovementSystem] Updated movement area for Zeuaya
+[2025-04-05 09:43:27] [INFO] [MovementSystem] Updated movement path for Zeuaya
+[2025-04-05 09:43:27] [INFO] [MovementSystem] Zeuaya is planning to move from [8, 5] to [8, 5]
+[2025-04-05 09:43:27] [INFO] [MovementSystem] Updated movement area for Zeuaya
+[2025-04-05 09:43:27] [INFO] [MovementSystem] Updated movement path for Zeuaya
+[2025-04-05 09:43:28] [INFO] [MovementSystem] Zeuaya is planning to move from [8, 5] to [7, 4]
+[2025-04-05 09:43:28] [INFO] [MovementSystem] Updated movement path for Zeuaya
+[2025-04-05 09:43:28] [INFO] [Component] Setting 15bdb69c-bfaf-4871-a7f2-b05b7d92ab2a on to e7665c7a-0331-4cbf-9a47-6a3feb96b361.
+[2025-04-05 09:43:28] [INFO] [MovementSystem] Moved from [8, 5] to [7, 4]
+[2025-04-05 09:43:28] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:29] [INFO] [AbilitySystem] Zeuaya Triggered ability system
+[2025-04-05 09:43:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:30] [INFO] [MovementSystem] Uiibe is planning to move from [9, 14] to [9, 14]
+[2025-04-05 09:43:30] [INFO] [MovementSystem] Updated movement area for Uiibe
+[2025-04-05 09:43:30] [INFO] [MovementSystem] Updated movement path for Uiibe
+[2025-04-05 09:43:30] [INFO] [MovementSystem] Uiibe is planning to move from [9, 14] to [9, 14]
+[2025-04-05 09:43:30] [INFO] [MovementSystem] Updated movement area for Uiibe
+[2025-04-05 09:43:30] [INFO] [MovementSystem] Updated movement path for Uiibe
+[2025-04-05 09:43:31] [INFO] [MovementSystem] Uiibe is planning to move from [9, 14] to [10, 14]
+[2025-04-05 09:43:31] [INFO] [MovementSystem] Updated movement path for Uiibe
+[2025-04-05 09:43:31] [INFO] [Component] Setting e0c9b4f8-26b0-4f4a-8c13-a83572783efc on to cbb0fde3-a560-444b-9e37-2cd9d8b5a053.
+[2025-04-05 09:43:31] [INFO] [MovementSystem] Moved from [9, 14] to [10, 14]
+[2025-04-05 09:43:31] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:32] [INFO] [AbilitySystem] Uiibe Triggered ability system
+[2025-04-05 09:43:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:33] [INFO] [MovementSystem] Boaa is planning to move from [8, 6] to [10, 6]
+[2025-04-05 09:43:33] [INFO] [MovementSystem] Updated movement area for Boaa
+[2025-04-05 09:43:33] [INFO] [MovementSystem] Updated movement path for Boaa
+[2025-04-05 09:43:33] [INFO] [Component] Setting b400d498-fd88-41fa-850a-17043b432960 on to 370d907b-371d-4059-a734-76d300700390.
+[2025-04-05 09:43:33] [INFO] [MovementSystem] Moved from [8, 6] to [10, 6]
+[2025-04-05 09:43:33] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:34] [INFO] [AbilitySystem] Boaa Triggered ability system
+[2025-04-05 09:43:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:35] [INFO] [MovementSystem] Iezoa is planning to move from [3, 11] to [3, 13]
+[2025-04-05 09:43:35] [INFO] [MovementSystem] Updated movement area for Iezoa
+[2025-04-05 09:43:35] [INFO] [MovementSystem] Updated movement path for Iezoa
+[2025-04-05 09:43:35] [INFO] [Component] Setting 9387e3ae-d7c6-4546-a9b3-2135f84d7ac7 on to 8f0e9202-9c5c-46c2-a28b-0bd6f4785779.
+[2025-04-05 09:43:35] [INFO] [MovementSystem] Moved from [3, 11] to [3, 13]
+[2025-04-05 09:43:35] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:36] [INFO] [AbilitySystem] Iezoa Triggered ability system
+[2025-04-05 09:43:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:37] [INFO] [MovementSystem] Zysee is planning to move from [10, 7] to [9, 7]
+[2025-04-05 09:43:37] [INFO] [MovementSystem] Updated movement area for Zysee
+[2025-04-05 09:43:37] [INFO] [MovementSystem] Updated movement path for Zysee
+[2025-04-05 09:43:37] [INFO] [Component] Setting 003bce3f-debf-4b09-8a9d-74560710d49a on to c3d2588e-7c9b-4d6e-bb11-9f7aee7194a4.
+[2025-04-05 09:43:37] [INFO] [MovementSystem] Moved from [10, 7] to [9, 7]
+[2025-04-05 09:43:37] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:38] [INFO] [AbilitySystem] Zysee Triggered ability system
+[2025-04-05 09:43:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:39] [INFO] [MovementSystem] Heljuy is planning to move from [0, 5] to [0, 7]
+[2025-04-05 09:43:39] [INFO] [MovementSystem] Updated movement area for Heljuy
+[2025-04-05 09:43:39] [INFO] [MovementSystem] Updated movement path for Heljuy
+[2025-04-05 09:43:39] [INFO] [Component] Setting a7c04a27-cf60-4eb4-8548-ece132a69834 on to f264fbdc-35b0-481b-b8a6-52fdc081385c.
+[2025-04-05 09:43:39] [INFO] [MovementSystem] Moved from [0, 5] to [0, 7]
+[2025-04-05 09:43:39] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:40] [INFO] [AbilitySystem] Heljuy Triggered ability system
+[2025-04-05 09:43:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:43:41] [INFO] [MovementSystem] Uoce is planning to move from [13, 12] to [11, 12]
+[2025-04-05 09:43:41] [INFO] [MovementSystem] Updated movement area for Uoce
+[2025-04-05 09:43:41] [INFO] [MovementSystem] Updated movement path for Uoce
+[2025-04-05 09:43:41] [INFO] [Component] Setting 88d7e8d1-16bb-4213-a519-4a94158038b9 on to 5d73f6e2-4039-4f61-8580-9ef55b881ee3.
+[2025-04-05 09:43:41] [INFO] [MovementSystem] Moved from [13, 12] to [11, 12]
+[2025-04-05 09:43:41] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:43:42] [INFO] [AbilitySystem] Uoce Triggered ability system

@@ -1,0 +1,39 @@
+[2025-04-19 19:12:02] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 19:12:02] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 19:12:03] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 19:12:03] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 19:12:03] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 19:12:03] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 19:12:03] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 19:12:03] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 19:12:03] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 19:12:03] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 19:12:03] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 19:12:03] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 19:12:03] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 19:12:03] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 19:12:03] [INFO] [Component] Setting water_dragon_Xiza_48dd8020-c0f1-43df-9f01-5c592c0edc54 on to {"row":0,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Xiza_48dd8020-c0f1-43df-9f01-5c592c0edc54","structure":""}.
+[2025-04-19 19:12:03] [INFO] [SpeedQueue] Added unit enemy:Xiza into queue
+[2025-04-19 19:12:03] [INFO] [Component] Setting dragon_Rugy_545fc305-c83e-4d68-8730-9c9940bc1ceb on to {"row":0,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Rugy_545fc305-c83e-4d68-8730-9c9940bc1ceb","structure":""}.
+[2025-04-19 19:12:03] [INFO] [SpeedQueue] Added unit enemy:Rugy into queue
+[2025-04-19 19:12:03] [INFO] [Component] Setting fire_dragon_Wixay_dd09c459-0b47-4e4d-9e23-ca725251f589 on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Wixay_dd09c459-0b47-4e4d-9e23-ca725251f589","structure":""}.
+[2025-04-19 19:12:03] [INFO] [SpeedQueue] Added unit enemy:Wixay into queue
+[2025-04-19 19:12:03] [INFO] [Component] Setting fire_dragon_Iuueio_f54c2519-320b-4415-b8b9-75c2613420a8 on to {"row":4,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Iuueio_f54c2519-320b-4415-b8b9-75c2613420a8","structure":""}.
+[2025-04-19 19:12:03] [INFO] [SpeedQueue] Added unit enemy:Iuueio into queue
+[2025-04-19 19:12:03] [INFO] [Component] Setting light_dragon_Xezeue_0e999438-0f39-46ed-8ce4-d91bbc13ac13 on to {"row":7,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Xezeue_0e999438-0f39-46ed-8ce4-d91bbc13ac13","structure":""}.
+[2025-04-19 19:12:03] [INFO] [SpeedQueue] Added unit enemy:Xezeue into queue
+[2025-04-19 19:12:03] [INFO] [Component] Setting earth_dragon_Iullu_11a9ce13-e796-43e1-86e2-910b8eb1f093 on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Iullu_11a9ce13-e796-43e1-86e2-910b8eb1f093","structure":""}.
+[2025-04-19 19:12:03] [INFO] [SpeedQueue] Added unit user:Iullu into queue
+[2025-04-19 19:12:03] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 19:12:03] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 19:12:03] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 19:12:03] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 19:12:03] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 19:12:03] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 19:12:03] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 19:12:03] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 19:12:03] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_31bf0f03-720d-48ce-a60a-6a5b119c955a
+[2025-04-19 19:12:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 19:12:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 19:12:04] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 19:12:04] [INFO] [VisualsSystem] Finished creating blurred background after 0.49216732382774353 seconds

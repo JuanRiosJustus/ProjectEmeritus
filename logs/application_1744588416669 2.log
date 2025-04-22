@@ -1,0 +1,1247 @@
+[2025-04-13 16:53:36] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 16:53:36] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 16:53:36] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 16:53:36] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 16:53:36] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 16:53:36] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 16:53:36] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 16:53:36] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 16:53:36] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 16:53:36] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 16:53:36] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 16:53:36] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 16:53:36] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 16:53:36] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 16:53:36] [INFO] [Component] Setting earth_dragon_Gehy_fb8978b4-6b95-4320-891f-d9294a909fe4 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Gehy_fb8978b4-6b95-4320-891f-d9294a909fe4","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Gehy into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting dragon_Gaqo_1a114895-528f-4e8c-a257-0072725f9b25 on to {"spawn_region":[],"collider":"","unit":"dragon_Gaqo_1a114895-528f-4e8c-a257-0072725f9b25","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Gaqo into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting dragon_Iuymie_34cfc98b-012d-4abc-a737-c0f4379e0e8f on to {"spawn_region":[],"collider":"","unit":"dragon_Iuymie_34cfc98b-012d-4abc-a737-c0f4379e0e8f","column":0,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Iuymie into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting air_dragon_Vafym_8bf19934-884a-47a5-b0a1-c281f02e7e2b on to {"spawn_region":[],"collider":"","unit":"air_dragon_Vafym_8bf19934-884a-47a5-b0a1-c281f02e7e2b","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Vafym into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d on to {"spawn_region":[],"collider":"","unit":"dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d","column":4,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Uuiz into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting light_dragon_Xucxoa_e449208d-cbaf-4003-88da-aafd8ce7040e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Xucxoa_e449208d-cbaf-4003-88da-aafd8ce7040e","column":1,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Xucxoa into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting air_dragon_Wepcfz_a255c760-5b84-464b-abaf-4660adc9b408 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Wepcfz_a255c760-5b84-464b-abaf-4660adc9b408","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Wepcfz into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting dark_dragon_Aaia_97c2f7c3-ab2c-4fcf-98cb-f741836974fd on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Aaia_97c2f7c3-ab2c-4fcf-98cb-f741836974fd","column":4,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Aaia into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting fire_dragon_Faiyov_35302724-12df-44ac-b244-35f8e725ac9b on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Faiyov_35302724-12df-44ac-b244-35f8e725ac9b","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Faiyov into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting light_dragon_Suio_cdb64bd7-e944-445c-92a3-9a20a21e91fd on to {"spawn_region":[],"collider":"","unit":"light_dragon_Suio_cdb64bd7-e944-445c-92a3-9a20a21e91fd","column":2,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit enemy:Suio into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting water_dragon_Aesaia_6b5c09f3-fd96-4c18-92ab-751c9dd65598 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Aesaia_6b5c09f3-fd96-4c18-92ab-751c9dd65598","column":2,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit user:Aesaia into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting dragon_Hytze_7bce4c75-4d01-4319-9429-4471c739a69e on to {"spawn_region":[],"collider":"","unit":"dragon_Hytze_7bce4c75-4d01-4319-9429-4471c739a69e","column":2,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit user:Hytze into queue
+[2025-04-13 16:53:36] [INFO] [Component] Setting air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 16:53:36] [INFO] [SpeedQueue] Added unit user:Faaiu into queue
+[2025-04-13 16:53:36] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 16:53:37] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 16:53:37] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 16:53:37] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 16:53:37] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 16:53:37] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 16:53:37] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 16:53:37] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:37] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:37] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 16:53:37] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 16:53:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 16:53:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 16:53:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 16:53:37] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 16:53:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:37] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 16:53:37] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 16:53:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 16:53:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 16:53:37] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 16:53:38] [INFO] [VisualsSystem] Finished creating blurred background after 0.48947328329086304 seconds
+[2025-04-13 16:53:39] [INFO] [MovementSystem] Updated movement range to 4 for Faaiu
+[2025-04-13 16:53:39] [INFO] [MovementSystem] Updated movement path from [7, 3] to [7, 2] for Faaiu
+[2025-04-13 16:53:39] [INFO] [Component] Setting air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 16:53:39] [INFO] [MovementSystem] Moved from [7, 3] to [7, 2]
+[2025-04-13 16:53:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 16:53:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Faaiu
+[2025-04-13 16:53:39] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_51aaa31c-9a06-4397-a887-1e912e629bd5
+[2025-04-13 16:53:39] [INFO] [InputHandler] Gliding 1 camera to new tile 7_2_51aaa31c-9a06-4397-a887-1e912e629bd5
+[2025-04-13 16:53:40] [INFO] [AbilitySystem] Faaiu is planning to use slam on [6, 2]
+[2025-04-13 16:53:40] [INFO] [AbilitySystem] Updated area of sight for Faaiu, viewing 4 tiles
+[2025-04-13 16:53:40] [INFO] [AbilitySystem] Updated line of sight for Faaiu, viewing 2 tiles
+[2025-04-13 16:53:40] [INFO] [AbilitySystem] Updated area of effect for Faaiu viewing 1 tiles
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Started constructing cost mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Finished constructing cost mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Checking cost requirements for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Faaiu is able to pay for slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Started constructing cost mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Finished constructing cost mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Paying cost requirements for Faaiu using slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use slam
+[2025-04-13 16:53:40] [INFO] [AbilitySystem] Used from slam on [6, 2]
+[2025-04-13 16:53:40] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:40] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 16:53:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Faaiu_715d4df2-9c4c-4b82-95be-274ca49d4e1c
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 16:53:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Started constructing damage mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Finished constructing damage mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Started constructing cost mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Finished constructing cost mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Started constructing damage mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Finished constructing damage mappings for Faaiu to use slam
+[2025-04-13 16:53:40] [INFO] [CombatSystem] Started dealing damage with slam to Hytze 
+[2025-04-13 16:53:40] [INFO] [CombatSystem] 20 = Raw Damage
+[2025-04-13 16:53:40] [INFO] [CombatSystem] 20 = Damage after modifiers
+[2025-04-13 16:53:40] [INFO] [CombatSystem] 18 = Damage after defenses
+[2025-04-13 16:53:40] [INFO] [AbilityPanel] Updating ability selection for dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d
+[2025-04-13 16:53:40] [INFO] [AbilityPanel] Finished ability selection for dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d
+[2025-04-13 16:53:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 16:53:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 16:53:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 16:53:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 16:53:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 16:53:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Uuiz
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 16:53:40] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 16:53:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 16:53:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 16:53:40] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_52d5cf38-9321-451d-8a80-2a2e8018ad27
+[2025-04-13 16:53:40] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_52d5cf38-9321-451d-8a80-2a2e8018ad27
+[2025-04-13 16:53:40] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_52d5cf38-9321-451d-8a80-2a2e8018ad27
+[2025-04-13 16:53:40] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_52d5cf38-9321-451d-8a80-2a2e8018ad27
+[2025-04-13 16:53:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 16:53:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 16:53:51] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_52d5cf38-9321-451d-8a80-2a2e8018ad27
+[2025-04-13 16:53:52] [INFO] [AbilityPanel] Selecting soak
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Uuiz is planning to use soak on [6, 6]
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated area of sight for Uuiz, viewing 10 tiles
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing cost mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing cost mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Uuiz is planning to use soak on [6, 5]
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 5]
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:53:52] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:53:52] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:53:52] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:53:52] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:53:52] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:53:52] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:53:52] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:54:40] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:54:40] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:40] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:40] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 3]
+[2025-04-13 16:54:40] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:40] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:40] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 2]
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Uuiz is planning to use soak on [6, 2]
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:41] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:41] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 2]
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 3]
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:41] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:41] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:41] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:41] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:41] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:54:46] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:46] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:54:46] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:46] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:46] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:46] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:46] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:46] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:54:47] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:47] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:54:47] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:47] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:47] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:47] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:47] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:47] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:54] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 5]
+[2025-04-13 16:54:54] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:54] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:54] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:54] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:56] [INFO] [AbilitySystem] Uuiz is planning to use soak on [6, 7]
+[2025-04-13 16:54:56] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 5 tiles
+[2025-04-13 16:54:56] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:56] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:56] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:56] [INFO] [AbilitySystem] Uuiz is planning to use soak on null
+[2025-04-13 16:54:56] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 0 tiles
+[2025-04-13 16:54:56] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 0 tiles
+[2025-04-13 16:54:56] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:56] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Uuiz is planning to use soak on [7, 6]
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Uuiz is planning to use soak on [7, 5]
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 4 tiles
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Uuiz is planning to use soak on [6, 5]
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:57] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:57] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:57] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:57] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:57] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:57] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:54:58] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:58] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:58] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:58] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 5]
+[2025-04-13 16:54:58] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:58] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:58] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:54:59] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:54:59] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:59] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:59] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:54:59] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:54:59] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:54:59] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:54:59] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:54:59] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:54:59] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:55:00] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:00] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:00] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:01] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 5]
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 5]
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 5]
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:01] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:01] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:02] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:02] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:02] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:02] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:02] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:02] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:02] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:02] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:02] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:02] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:02] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:02] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:03] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:55:03] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:03] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:03] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:03] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:03] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 3]
+[2025-04-13 16:55:03] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:03] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:03] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:03] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:04] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:55:04] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:04] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:04] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:04] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:09] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:09] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 4]
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:09] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:09] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:09] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:09] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:09] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:13] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 3]
+[2025-04-13 16:55:13] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:13] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:13] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:13] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:14] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:55:14] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:14] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:14] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:14] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:14] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:14] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:14] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:14] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:14] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:14] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:14] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 4]
+[2025-04-13 16:55:15] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:15] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:55:15] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:15] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:15] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:15] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:15] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:15] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 4]
+[2025-04-13 16:55:16] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:16] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:16] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:16] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:16] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:16] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:16] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:16] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:55:17] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:55:17] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:17] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:17] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 5]
+[2025-04-13 16:55:17] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:17] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:17] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:18] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 4]
+[2025-04-13 16:55:18] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 1 tiles
+[2025-04-13 16:55:18] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:18] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:18] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:18] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:18] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:18] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:18] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:18] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:18] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:18] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:55:19] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:55:19] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:55:19] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:55:19] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:19] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:19] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:19] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:55:19] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:55:19] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:55:19] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:55:19] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:55:19] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:56:44] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 5]
+[2025-04-13 16:56:44] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:44] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:44] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:44] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 5]
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 5]
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:45] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:56:45] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:56:45] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:56:45] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:56:45] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:56:49] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 4]
+[2025-04-13 16:56:49] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:49] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:49] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:49] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:49] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:56:49] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:49] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:49] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:49] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:50] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 2]
+[2025-04-13 16:56:50] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:50] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:50] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:50] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:50] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:56:50] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:50] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:50] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:50] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 5]
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 5]
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 4]
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:56:51] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:56:51] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:56:51] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:20] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 3]
+[2025-04-13 16:59:20] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:20] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:20] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:20] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:20] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:20] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:20] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:20] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:20] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 4]
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 4]
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:21] [INFO] [CombatSystem] dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d lands a critical hit! for 18.0
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 28 = Damage after modifiers
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 25 = Damage after defenses
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:21] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:21] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:21] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 4]
+[2025-04-13 16:59:23] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:23] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:23] [INFO] [CombatSystem] dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d lands a critical hit! for 18.0
+[2025-04-13 16:59:23] [INFO] [CombatSystem] 28 = Damage after modifiers
+[2025-04-13 16:59:23] [INFO] [CombatSystem] 25 = Damage after defenses
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:59:23] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:23] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:23] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:23] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:23] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:23] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 4]
+[2025-04-13 16:59:24] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:24] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:24] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:24] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 4]
+[2025-04-13 16:59:24] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:24] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:24] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:24] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:24] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:24] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:25] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 4]
+[2025-04-13 16:59:25] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:25] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:25] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:25] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:25] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 4]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:26] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:26] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:28] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:28] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:29] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:29] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:29] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:29] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:29] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:30] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:30] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:31] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:31] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:31] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:31] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:31] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:31] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 3]
+[2025-04-13 16:59:31] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:31] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:31] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:31] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 2]
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 1]
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 6 tiles
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 1]
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:32] [INFO] [CombatSystem] dragon_Uuiz_86caaece-9a4b-4883-b63d-d80641d43c5d lands a critical hit! for 18.0
+[2025-04-13 16:59:32] [INFO] [CombatSystem] 28 = Damage after modifiers
+[2025-04-13 16:59:32] [INFO] [CombatSystem] 25 = Damage after defenses
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 0]
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 7 tiles
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 0]
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Uuiz is planning to use soak on [0, 0]
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:32] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:32] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:33] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_52d5cf38-9321-451d-8a80-2a2e8018ad27
+[2025-04-13 16:59:33] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_52d5cf38-9321-451d-8a80-2a2e8018ad27
+[2025-04-13 16:59:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 16:59:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Uuiz
+[2025-04-13 16:59:33] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 0]
+[2025-04-13 16:59:33] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:33] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:33] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:33] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:33] [INFO] [AbilitySystem] Uuiz is planning to use soak on null
+[2025-04-13 16:59:33] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 0 tiles
+[2025-04-13 16:59:33] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 0 tiles
+[2025-04-13 16:59:33] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:33] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 0]
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 7 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 0]
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 5 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 1]
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 6 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 1]
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 5 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:34] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:34] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 1]
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 4 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on [6, 1]
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 4 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on [7, 1]
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Uuiz is planning to use soak on null
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 0 tiles
+[2025-04-13 16:59:34] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 0 tiles
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:34] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Uuiz is planning to use soak on [7, 2]
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:36] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:36] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Uuiz is planning to use soak on [6, 2]
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:36] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:36] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 2]
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 3 tiles
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Uuiz is planning to use soak on [5, 3]
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 3]
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Uuiz is planning to use soak on [4, 2]
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 4 tiles
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 2]
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:36] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:36] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [AbilitySystem] Uuiz is planning to use soak on [3, 1]
+[2025-04-13 16:59:39] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 6 tiles
+[2025-04-13 16:59:39] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 1]
+[2025-04-13 16:59:39] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:39] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Started constructing damage mappings after defense Uuiz to use soak
+[2025-04-13 16:59:39] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 16:59:39] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 16:59:39] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 16:59:39] [INFO] [CombatSystem] Finished constructing damage mappings after for Uuiz to use soak
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Uuiz is planning to use soak on [2, 0]
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 7 tiles
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:40] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:40] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Uuiz is planning to use soak on [1, 0]
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:40] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:40] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Uuiz is planning to use soak on [0, 0]
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Updated line of sight for Uuiz, viewing 2 tiles
+[2025-04-13 16:59:40] [INFO] [AbilitySystem] Updated area of effect for Uuiz viewing 1 tiles
+[2025-04-13 16:59:40] [INFO] [CombatSystem] Started constructing damage mappings for Uuiz to use soak
+[2025-04-13 16:59:40] [INFO] [CombatSystem] Finished constructing damage mappings for Uuiz to use soak

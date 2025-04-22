@@ -1,0 +1,286 @@
+[2025-04-11 11:15:45] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-11 11:15:45] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-11 11:15:45] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-11 11:15:45] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-11 11:15:45] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-11 11:15:45] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-11 11:15:45] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-11 11:15:45] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-11 11:15:45] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-11 11:15:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-11 11:15:45] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-11 11:15:45] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-11 11:15:46] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-11 11:15:46] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-11 11:15:46] [INFO] [Component] Setting dark_dragon_Ziievu_144f0ad1-7672-41ef-8760-19d50c0c3c3a on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ziievu_144f0ad1-7672-41ef-8760-19d50c0c3c3a","column":0,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Ziievu into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting air_dragon_Cafctv_ef7c7315-1cab-4547-a556-d2e3d5372888 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Cafctv_ef7c7315-1cab-4547-a556-d2e3d5372888","column":4,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Cafctv into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting fire_dragon_Cayuwd_f8f595aa-09e0-4cc9-8dcf-d118665a6242 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Cayuwd_f8f595aa-09e0-4cc9-8dcf-d118665a6242","column":1,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Cayuwd into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting earth_dragon_Iaputy_9ef43460-9570-4105-856f-9b3463ff1053 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iaputy_9ef43460-9570-4105-856f-9b3463ff1053","column":1,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Iaputy into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting fire_dragon_Lycc_dc0539ba-9198-4559-9a2e-6441e1565bc8 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Lycc_dc0539ba-9198-4559-9a2e-6441e1565bc8","column":9,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Lycc into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting light_dragon_Neazu_ef74ac61-a2a7-4285-b0a0-fbf00e31a35c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Neazu_ef74ac61-a2a7-4285-b0a0-fbf00e31a35c","column":6,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Neazu into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting dragon_Eefbey_60de7db7-d55c-431e-ac62-107936b349b3 on to {"spawn_region":[],"collider":"","unit":"dragon_Eefbey_60de7db7-d55c-431e-ac62-107936b349b3","column":3,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Eefbey into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting water_dragon_Auzoil_6f60c9d8-21b6-40ad-9d0a-4e5c1add8711 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Auzoil_6f60c9d8-21b6-40ad-9d0a-4e5c1add8711","column":13,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Auzoil into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting air_dragon_Oimoa_9c015762-2646-4252-9154-5c50a153a749 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Oimoa_9c015762-2646-4252-9154-5c50a153a749","column":12,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Oimoa into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting air_dragon_Rehyiy_b4028c56-fc4d-4de2-8387-58aa3a0a25f7 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Rehyiy_b4028c56-fc4d-4de2-8387-58aa3a0a25f7","column":14,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Rehyiy into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting air_dragon_Uohoe_1712f2a1-ea1b-4c2d-8ad8-c9a7d1aea87e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Uohoe_1712f2a1-ea1b-4c2d-8ad8-c9a7d1aea87e","column":10,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Uohoe into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting air_dragon_Aitde_14759113-14d0-4a1e-9144-e92b8552fb2e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Aitde_14759113-14d0-4a1e-9144-e92b8552fb2e","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Aitde into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting light_dragon_Wuji_8fa7bdfa-2191-4a24-b112-b49541da098b on to {"spawn_region":[],"collider":"","unit":"light_dragon_Wuji_8fa7bdfa-2191-4a24-b112-b49541da098b","column":14,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Wuji into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting earth_dragon_Kyekav_68ead523-d029-4b66-a284-f34c5efaadc7 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Kyekav_68ead523-d029-4b66-a284-f34c5efaadc7","column":4,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Kyekav into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting dragon_Xeheun_efb0580b-5848-4adf-ba68-b49e5c6f74df on to {"spawn_region":[],"collider":"","unit":"dragon_Xeheun_efb0580b-5848-4adf-ba68-b49e5c6f74df","column":5,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Xeheun into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting water_dragon_Gagxn_18c833b1-92ea-4147-aca8-0198fe64384f on to {"spawn_region":[],"collider":"","unit":"water_dragon_Gagxn_18c833b1-92ea-4147-aca8-0198fe64384f","column":1,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Gagxn into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting fire_dragon_Zypu_78fd8fdb-51b9-449a-a8b3-e805324d504a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Zypu_78fd8fdb-51b9-449a-a8b3-e805324d504a","column":0,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Zypu into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting fire_dragon_Feteu_ca12c415-474f-44af-a244-5fc78ab93b96 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Feteu_ca12c415-474f-44af-a244-5fc78ab93b96","column":11,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Feteu into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting earth_dragon_Nijaa_8fa86651-8686-4c8f-8084-65697b782952 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Nijaa_8fa86651-8686-4c8f-8084-65697b782952","column":3,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Nijaa into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting fire_dragon_Wyfq_aa639d38-304d-46f1-bf28-92e2d741c65d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Wyfq_aa639d38-304d-46f1-bf28-92e2d741c65d","column":4,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Wyfq into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting air_dragon_Wuboze_6e638f47-9c90-48f3-a0cd-c4c299933844 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Wuboze_6e638f47-9c90-48f3-a0cd-c4c299933844","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Wuboze into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting earth_dragon_Zuss_7b569a7f-7597-49da-bb9f-76225d3674c5 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Zuss_7b569a7f-7597-49da-bb9f-76225d3674c5","column":10,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Zuss into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting dark_dragon_Xaeie_f666c077-cad5-4eed-b27f-9fb42be26958 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Xaeie_f666c077-cad5-4eed-b27f-9fb42be26958","column":3,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit enemy:Xaeie into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673","column":4,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Jahec into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting water_dragon_Kupyfi_518ca8f9-6fc7-496f-b89f-4bebe36df37c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Kupyfi_518ca8f9-6fc7-496f-b89f-4bebe36df37c","column":11,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Kupyfi into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting light_dragon_Guwojo_c2762d3d-0d9d-4b2e-a475-999a4198c93b on to {"spawn_region":[],"collider":"","unit":"light_dragon_Guwojo_c2762d3d-0d9d-4b2e-a475-999a4198c93b","column":5,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Guwojo into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting light_dragon_Xive_9287d69d-221a-404d-890f-17f471d9e7ee on to {"spawn_region":[],"collider":"","unit":"light_dragon_Xive_9287d69d-221a-404d-890f-17f471d9e7ee","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Xive into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242","column":4,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Yyyy into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting light_dragon_Cingw_619da6f0-ba7d-403b-a125-73130cb07e1c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Cingw_619da6f0-ba7d-403b-a125-73130cb07e1c","column":9,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Cingw into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting dragon_Cuuch_a22e2310-a2a5-4abd-98c0-3ac2b901066c on to {"spawn_region":[],"collider":"","unit":"dragon_Cuuch_a22e2310-a2a5-4abd-98c0-3ac2b901066c","column":8,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Cuuch into queue
+[2025-04-11 11:15:46] [INFO] [Component] Setting earth_dragon_Baniu_0eb8a782-58b4-4b9b-9d96-5b200b0039e5 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Baniu_0eb8a782-58b4-4b9b-9d96-5b200b0039e5","column":14,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 11:15:46] [INFO] [SpeedQueue] Added unit user:Baniu into queue
+[2025-04-11 11:15:46] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-11 11:15:46] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-11 11:15:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-11 11:15:46] [INFO] [FontPool] Started initializing FontPool
+[2025-04-11 11:15:46] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-11 11:15:46] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-11 11:15:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-11 11:15:47] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:47] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:47] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 11:15:47] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 11:15:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 11:15:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 11:15:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:15:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 11:15:47] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:47] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:47] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:15:47] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:15:47] [INFO] [GreaterAbilityInformationPanel] Started updating Greater Ability Information Panel
+[2025-04-11 11:15:47] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater Ability Information Panel
+[2025-04-11 11:15:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-11 11:15:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.49262699484825134 seconds
+[2025-04-11 11:15:48] [INFO] [AbilitySystem] Jahec is planning to use ember on [13, 5]
+[2025-04-11 11:15:48] [INFO] [AbilitySystem] Updated area of sight for Jahec, viewing 8 tiles
+[2025-04-11 11:15:48] [INFO] [AbilitySystem] Updated line of sight for Jahec, viewing 3 tiles
+[2025-04-11 11:15:48] [INFO] [AbilitySystem] Updated area of effect for Jahec viewing 1 tiles
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Started constructing cost mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Finished constructing cost mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Checking cost requirements for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Jahec is able to pay for ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Started constructing cost mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Finished constructing cost mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Paying cost requirements for Jahec using ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-11 11:15:48] [INFO] [AbilitySystem] Used from ember on [13, 5]
+[2025-04-11 11:15:48] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:48] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:48] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 11:15:48] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 11:15:48] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:48] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673
+[2025-04-11 11:15:48] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:15:48] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:15:48] [INFO] [GreaterAbilityInformationPanel] Started updating Greater Ability Information Panel
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Started constructing damage mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Finished constructing damage mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Started constructing cost mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Finished constructing cost mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater Ability Information Panel
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Started constructing damage mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Finished constructing damage mappings for Jahec to use ember
+[2025-04-11 11:15:48] [INFO] [CombatSystem] Started dealing damage with ember to Guwojo 
+[2025-04-11 11:15:48] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-11 11:15:48] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-11 11:15:48] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-11 11:15:48] [INFO] [InputHandler] Gliding 0 camera to new tile 14_4_c56146ea-b09c-4a89-ae0c-bb025fb629f5
+[2025-04-11 11:15:48] [INFO] [InputHandler] Gliding 1 camera to new tile 14_4_c56146ea-b09c-4a89-ae0c-bb025fb629f5
+[2025-04-11 11:15:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:15:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Jahec
+[2025-04-11 11:15:49] [INFO] [MovementSystem] Updated movement range to 6 for Jahec
+[2025-04-11 11:15:49] [INFO] [MovementSystem] Updated movement path from [14, 4] to [14, 5] for Jahec
+[2025-04-11 11:15:49] [INFO] [Component] Setting light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jahec_8ae68a6e-f47e-4a14-93f7-37674919b673","column":5,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 11:15:49] [INFO] [MovementSystem] Moved from [14, 4] to [14, 5]
+[2025-04-11 11:15:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:15:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Jahec
+[2025-04-11 11:15:49] [INFO] [InputHandler] Gliding 0 camera to new tile 14_5_4c1b5166-0a4c-4dcf-906b-cf5513430366
+[2025-04-11 11:15:49] [INFO] [InputHandler] Gliding 1 camera to new tile 14_5_4c1b5166-0a4c-4dcf-906b-cf5513430366
+[2025-04-11 11:15:49] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:49] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:49] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 11:15:49] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 11:15:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 11:15:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 11:15:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:15:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Yyyy
+[2025-04-11 11:15:49] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:49] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:49] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:15:49] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:15:49] [INFO] [GreaterAbilityInformationPanel] Started updating Greater Ability Information Panel
+[2025-04-11 11:15:49] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater Ability Information Panel
+[2025-04-11 11:15:49] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_e1d768cb-c6e0-45b1-bbc3-dcbf7b10af5c
+[2025-04-11 11:15:49] [INFO] [InputHandler] Gliding 1 camera to new tile 3_4_e1d768cb-c6e0-45b1-bbc3-dcbf7b10af5c
+[2025-04-11 11:15:50] [INFO] [MovementSystem] Updated movement range to 11 for Yyyy
+[2025-04-11 11:15:50] [INFO] [MovementSystem] Updated movement path from [3, 4] to [1, 4] for Yyyy
+[2025-04-11 11:15:50] [INFO] [Component] Setting dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 11:15:50] [INFO] [MovementSystem] Moved from [3, 4] to [1, 4]
+[2025-04-11 11:15:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:15:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Yyyy
+[2025-04-11 11:15:50] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_715d2bc4-2819-4cb3-901f-b81cc6cc1ec5
+[2025-04-11 11:15:50] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_715d2bc4-2819-4cb3-901f-b81cc6cc1ec5
+[2025-04-11 11:15:51] [INFO] [AbilitySystem] Yyyy is planning to use ember on [0, 4]
+[2025-04-11 11:15:51] [INFO] [AbilitySystem] Updated area of sight for Yyyy, viewing 9 tiles
+[2025-04-11 11:15:51] [INFO] [AbilitySystem] Updated line of sight for Yyyy, viewing 2 tiles
+[2025-04-11 11:15:51] [INFO] [AbilitySystem] Updated area of effect for Yyyy viewing 1 tiles
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Started constructing cost mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Finished constructing cost mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Checking cost requirements for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Yyyy is able to pay for ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Started constructing cost mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Finished constructing cost mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Paying cost requirements for Yyyy using ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-11 11:15:51] [INFO] [AbilitySystem] Used from ember on [0, 4]
+[2025-04-11 11:15:51] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:51] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:51] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 11:15:51] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 11:15:51] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:51] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Yyyy_eebfd5d5-ace5-45c2-8e90-6057c252c242
+[2025-04-11 11:15:51] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:15:51] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:15:51] [INFO] [GreaterAbilityInformationPanel] Started updating Greater Ability Information Panel
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Started constructing damage mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Finished constructing damage mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Started constructing cost mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [CombatSystem] Finished constructing cost mappings for Yyyy to use ember
+[2025-04-11 11:15:51] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater Ability Information Panel
+[2025-04-11 11:15:52] [INFO] [CombatSystem] Started constructing damage mappings for Yyyy to use ember
+[2025-04-11 11:15:52] [INFO] [CombatSystem] Finished constructing damage mappings for Yyyy to use ember
+[2025-04-11 11:15:52] [INFO] [CombatSystem] Started dealing damage with ember to Wyfq 
+[2025-04-11 11:15:52] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-11 11:15:52] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-11 11:15:52] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-11 11:15:52] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Wyfq_aa639d38-304d-46f1-bf28-92e2d741c65d
+[2025-04-11 11:15:52] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Wyfq_aa639d38-304d-46f1-bf28-92e2d741c65d
+[2025-04-11 11:15:52] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 11:15:52] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 11:15:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 11:15:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 11:15:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:15:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Wyfq
+[2025-04-11 11:15:52] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity fire_dragon_Wyfq_aa639d38-304d-46f1-bf28-92e2d741c65d
+[2025-04-11 11:15:52] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity fire_dragon_Wyfq_aa639d38-304d-46f1-bf28-92e2d741c65d
+[2025-04-11 11:15:52] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:15:52] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:15:52] [INFO] [GreaterAbilityInformationPanel] Started updating Greater Ability Information Panel
+[2025-04-11 11:15:52] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater Ability Information Panel
+[2025-04-11 11:15:52] [INFO] [InputHandler] Gliding 0 camera to new tile 0_4_9640adb1-f5ef-446c-aab7-91bcdcbb8bef
+[2025-04-11 11:15:52] [INFO] [InputHandler] Gliding 1 camera to new tile 0_4_9640adb1-f5ef-446c-aab7-91bcdcbb8bef
+[2025-04-11 11:15:54] [INFO] [InputHandler] Gliding 0 camera to new tile 0_4_9640adb1-f5ef-446c-aab7-91bcdcbb8bef
+[2025-04-11 11:15:54] [INFO] [InputHandler] Gliding 1 camera to new tile 0_4_9640adb1-f5ef-446c-aab7-91bcdcbb8bef
+[2025-04-11 11:15:56] [INFO] [InputHandler] Gliding 0 camera to new tile 0_4_9640adb1-f5ef-446c-aab7-91bcdcbb8bef
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement range to 1 for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 8] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement range to 1 for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 8] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 10] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 10] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 9] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 9] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 8] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 8] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 7] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 7] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 7] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 7] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 6] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 6] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 5] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 5] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 5] for Wyfq
+[2025-04-11 11:15:56] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 5] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 6] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 6] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 7] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 7] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 7] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 7] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 8] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 8] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 9] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 9] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 9] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 9] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 10] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 10] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 9] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 9] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 8] for Wyfq
+[2025-04-11 11:15:57] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 8] for Wyfq
+[2025-04-11 11:16:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:16:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Xive
+[2025-04-11 11:16:00] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:16:00] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:16:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:16:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Wyfq
+[2025-04-11 11:16:01] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:16:01] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:16:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:16:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Yyyy
+[2025-04-11 11:16:02] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:16:02] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:16:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:16:02] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 11:16:02] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:16:02] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:16:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:16:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Cafctv
+[2025-04-11 11:16:03] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:16:03] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:16:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:16:04] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 11:16:04] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:16:04] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 11:16:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 11:16:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Guwojo
+[2025-04-11 11:16:06] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 11:16:06] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel

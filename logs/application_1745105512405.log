@@ -1,0 +1,26 @@
+[2025-04-19 16:31:52] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 16:31:52] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 16:31:52] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 16:31:52] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 16:31:52] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 16:31:52] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 16:31:52] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 16:31:52] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 16:31:52] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 16:31:52] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 16:31:52] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 16:31:52] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 16:31:52] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 16:31:52] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 16:31:52] [INFO] [Component] Setting dark_dragon_Aamio_d21b1d4a-f183-4360-a026-ce4c30a8942d on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Aamio_d21b1d4a-f183-4360-a026-ce4c30a8942d","structure":""}.
+[2025-04-19 16:31:52] [INFO] [SpeedQueue] Added unit enemy:Aamio into queue
+[2025-04-19 16:31:52] [INFO] [Component] Setting earth_dragon_Iozhco_cf475dd4-4fc1-49d9-a005-05f28da1f784 on to {"row":2,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Iozhco_cf475dd4-4fc1-49d9-a005-05f28da1f784","structure":""}.
+[2025-04-19 16:31:52] [INFO] [SpeedQueue] Added unit enemy:Iozhco into queue
+[2025-04-19 16:31:52] [INFO] [Component] Setting air_dragon_Aykuev_4f1dccaf-b12b-4046-86ec-25864023e952 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Aykuev_4f1dccaf-b12b-4046-86ec-25864023e952","structure":""}.
+[2025-04-19 16:31:52] [INFO] [SpeedQueue] Added unit enemy:Aykuev into queue
+[2025-04-19 16:31:52] [INFO] [Component] Setting fire_dragon_Iislow_a8996c97-fe83-4a5b-9ca1-972b2312b67d on to {"row":1,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Iislow_a8996c97-fe83-4a5b-9ca1-972b2312b67d","structure":""}.
+[2025-04-19 16:31:52] [INFO] [SpeedQueue] Added unit enemy:Iislow into queue
+[2025-04-19 16:31:52] [INFO] [Component] Setting dark_dragon_Zeei_115fad8d-755a-496e-bdf7-6ee022ac2d06 on to {"row":7,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Zeei_115fad8d-755a-496e-bdf7-6ee022ac2d06","structure":""}.
+[2025-04-19 16:31:52] [INFO] [SpeedQueue] Added unit enemy:Zeei into queue
+[2025-04-19 16:31:52] [INFO] [Component] Setting fire_dragon_Aicua_cc0d936c-dce3-40db-98ac-4d72933ea648 on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Aicua_cc0d936c-dce3-40db-98ac-4d72933ea648","structure":""}.
+[2025-04-19 16:31:52] [INFO] [SpeedQueue] Added u

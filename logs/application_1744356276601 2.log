@@ -1,0 +1,199 @@
+[2025-04-11 00:24:36] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-11 00:24:36] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-11 00:24:36] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-11 00:24:36] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-11 00:24:36] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-11 00:24:36] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-11 00:24:36] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-11 00:24:36] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-11 00:24:36] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-11 00:24:36] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-11 00:24:36] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-11 00:24:36] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-11 00:24:36] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-11 00:24:36] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-11 00:24:37] [INFO] [Component] Setting earth_dragon_Pocqz_909ee3c4-97ed-427e-82d1-316383127f06 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Pocqz_909ee3c4-97ed-427e-82d1-316383127f06","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Pocqz into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Tuutea_1973df2a-bd82-44c5-a000-901b817c5d04 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Tuutea_1973df2a-bd82-44c5-a000-901b817c5d04","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Tuutea into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting fire_dragon_Uekfju_8d3e89da-6783-4531-8488-1d189a62f70e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Uekfju_8d3e89da-6783-4531-8488-1d189a62f70e","column":6,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Uekfju into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting earth_dragon_Iiqy_60729349-7f2a-43ed-b49e-b238cfe0f7a1 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iiqy_60729349-7f2a-43ed-b49e-b238cfe0f7a1","column":7,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Iiqy into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Yopw_cf71ac95-25b7-4150-aa2e-2a2f1ec30c1b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Yopw_cf71ac95-25b7-4150-aa2e-2a2f1ec30c1b","column":12,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Yopw into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dark_dragon_Iaiiay_dc8aa133-c5ad-4cbf-9c91-24a4379a6aa7 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iaiiay_dc8aa133-c5ad-4cbf-9c91-24a4379a6aa7","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Iaiiay into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dark_dragon_Yydic_39dad9a9-eeb9-47f6-8f9f-a8de403c10cd on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Yydic_39dad9a9-eeb9-47f6-8f9f-a8de403c10cd","column":2,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Yydic into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Aych_cf592a54-6313-4d67-a5e5-5fcd06061739 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Aych_cf592a54-6313-4d67-a5e5-5fcd06061739","column":8,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Aych into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Mejash_653b85ad-1715-4cb6-9356-17bef728daef on to {"spawn_region":[],"collider":"","unit":"water_dragon_Mejash_653b85ad-1715-4cb6-9356-17bef728daef","column":12,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Mejash into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Oauiyy_18b08edc-b216-4855-81e8-893eb6abaec2 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Oauiyy_18b08edc-b216-4855-81e8-893eb6abaec2","column":10,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Oauiyy into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Aueveu_b458167d-4ba9-4a01-9771-1411958ae086 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Aueveu_b458167d-4ba9-4a01-9771-1411958ae086","column":13,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Aueveu into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dark_dragon_Uiooyw_5a824520-c9a7-4984-835d-a89ed2dd2161 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uiooyw_5a824520-c9a7-4984-835d-a89ed2dd2161","column":13,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Uiooyw into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Luuea_723d724a-6e21-48fe-a8a7-4956a9e6a894 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Luuea_723d724a-6e21-48fe-a8a7-4956a9e6a894","column":0,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Luuea into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting air_dragon_Fuxfy_f1a1298f-9270-45ec-9c04-0461c1f93558 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Fuxfy_f1a1298f-9270-45ec-9c04-0461c1f93558","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Fuxfy into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dark_dragon_Pujuie_cde4393c-d8c4-4cbe-adf2-74db43bf8ee3 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Pujuie_cde4393c-d8c4-4cbe-adf2-74db43bf8ee3","column":8,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Pujuie into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dark_dragon_Dupiai_0609a1dd-9eaf-4249-87ef-9a543ad5840b on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Dupiai_0609a1dd-9eaf-4249-87ef-9a543ad5840b","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Dupiai into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Vevm_6c4e20a6-728e-4aa7-8afb-066d48cb4b63 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Vevm_6c4e20a6-728e-4aa7-8afb-066d48cb4b63","column":1,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Vevm into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dragon_Kusha_6822eb5b-3080-41a8-9d8d-b45a40a89e98 on to {"spawn_region":[],"collider":"","unit":"dragon_Kusha_6822eb5b-3080-41a8-9d8d-b45a40a89e98","column":14,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Kusha into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting air_dragon_Feuae_fd3bff50-bfa8-4ce0-8fdb-5904af55bde4 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Feuae_fd3bff50-bfa8-4ce0-8fdb-5904af55bde4","column":10,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Feuae into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Zykoeh_e131b63c-3b45-4c35-9359-98f1e1278ecd on to {"spawn_region":[],"collider":"","unit":"water_dragon_Zykoeh_e131b63c-3b45-4c35-9359-98f1e1278ecd","column":11,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Zykoeh into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting light_dragon_Tamy_db1c27ae-67a6-4a6f-a16b-3f034993efe3 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Tamy_db1c27ae-67a6-4a6f-a16b-3f034993efe3","column":6,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit enemy:Tamy into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting light_dragon_Wuoa_40128a2e-9000-43da-826d-aa9a76c0a4c1 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Wuoa_40128a2e-9000-43da-826d-aa9a76c0a4c1","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Wuoa into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dragon_Syri_6487213f-fa90-42c2-85a1-d583609f2cfb on to {"spawn_region":[],"collider":"","unit":"dragon_Syri_6487213f-fa90-42c2-85a1-d583609f2cfb","column":11,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Syri into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dragon_Oyyogu_2ff3b45b-b178-44c3-8196-172daaf471af on to {"spawn_region":[],"collider":"","unit":"dragon_Oyyogu_2ff3b45b-b178-44c3-8196-172daaf471af","column":5,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Oyyogu into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting fire_dragon_Yuxt_6a98550e-b239-4338-ad7f-d773adea6669 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Yuxt_6a98550e-b239-4338-ad7f-d773adea6669","column":0,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Yuxt into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dark_dragon_Eyxuu_fa0038da-68fb-4491-aaed-616945d5f723 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Eyxuu_fa0038da-68fb-4491-aaed-616945d5f723","column":8,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Eyxuu into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting water_dragon_Pujyuy_64b132d1-fd29-416c-8061-4cdc98af38f4 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Pujyuy_64b132d1-fd29-416c-8061-4cdc98af38f4","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Pujyuy into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting dark_dragon_Ceyee_d21e1bd6-7ccc-40eb-95f0-1330123e53a1 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ceyee_d21e1bd6-7ccc-40eb-95f0-1330123e53a1","column":2,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Ceyee into queue
+[2025-04-11 00:24:37] [INFO] [Component] Setting light_dragon_Feyi_dbe16529-f9d4-4277-84cf-dd96b24a9949 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Feyi_dbe16529-f9d4-4277-84cf-dd96b24a9949","column":1,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 00:24:37] [INFO] [SpeedQueue] Added unit user:Feyi into queue
+[2025-04-11 00:24:37] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-11 00:24:37] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-11 00:24:37] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-11 00:24:37] [INFO] [FontPool] Started initializing FontPool
+[2025-04-11 00:24:37] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-11 00:24:37] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-11 00:24:38] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-11 00:24:38] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Pujuie_cde4393c-d8c4-4cbe-adf2-74db43bf8ee3
+[2025-04-11 00:24:38] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Pujuie_cde4393c-d8c4-4cbe-adf2-74db43bf8ee3
+[2025-04-11 00:24:38] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 00:24:38] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 00:24:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 00:24:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 00:24:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 00:24:38] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 00:24:38] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Pujuie_cde4393c-d8c4-4cbe-adf2-74db43bf8ee3
+[2025-04-11 00:24:38] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Pujuie_cde4393c-d8c4-4cbe-adf2-74db43bf8ee3
+[2025-04-11 00:24:38] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-11 00:24:38] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-11 00:24:38] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-11 00:24:38] [INFO] [VisualsSystem] Finished creating blurred background after 0.48718053102493286 seconds
+[2025-04-11 00:24:42] [INFO] [InputHandler] Gliding 0 camera to new tile 7_8_e83efb0c-1faa-4d68-8973-de9e33e8a8f7
+[2025-04-11 00:24:44] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-11 00:24:44] [INFO] [AbilitySystem] Pujuie is planning to use ember on [2, 0]
+[2025-04-11 00:24:44] [INFO] [AbilitySystem] Updated area of sight for Pujuie, viewing 13 tiles
+[2025-04-11 00:24:44] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:44] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:44] [INFO] [CombatSystem] Started constructing damage mappings for Pujuie to use ember
+[2025-04-11 00:24:44] [INFO] [CombatSystem] Finished constructing damage mappings for Pujuie to use ember
+[2025-04-11 00:24:44] [INFO] [CombatSystem] Started constructing cost mappings for Pujuie to use ember
+[2025-04-11 00:24:44] [INFO] [CombatSystem] Finished constructing cost mappings for Pujuie to use ember
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [10, 12]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [10, 11]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [9, 11]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [9, 10]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [9, 9]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [8, 9]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [8, 8]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 2 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [8, 7]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [7, 7]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 2 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Pujuie is planning to use ember on [7, 6]
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:45] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [7, 7]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 2 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [8, 7]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [9, 8]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [10, 9]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 5 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [10, 10]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 6 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [11, 10]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 7 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [11, 11]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 7 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [10, 11]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [10, 10]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 6 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [9, 9]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [8, 8]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 2 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [7, 7]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 2 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [7, 6]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 3 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [6, 5]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 5 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [6, 4]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [5, 4]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 7 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [5, 3]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [5, 2]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Pujuie is planning to use ember on [4, 2]
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:46] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Pujuie is planning to use ember on [4, 1]
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Pujuie is planning to use ember on [3, 1]
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Pujuie is planning to use ember on [2, 0]
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Updated line of sight for Pujuie, viewing 4 tiles
+[2025-04-11 00:24:47] [INFO] [AbilitySystem] Updated area of effect for Pujuie viewing 1 tiles

@@ -1,0 +1,26 @@
+[2025-04-21 00:41:47] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 00:41:47] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 00:41:47] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 00:41:47] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 00:41:47] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 00:41:47] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 00:41:47] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 00:41:47] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 00:41:47] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 00:41:47] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 00:41:47] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 00:41:47] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 00:41:47] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 00:41:47] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 00:41:48] [INFO] [Component] Setting dark_dragon_Uezowt_8c3c93c8-4e00-48a8-8b1c-66457bc21e18 on to {"row":4,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Uezowt_8c3c93c8-4e00-48a8-8b1c-66457bc21e18","structure":""}.
+[2025-04-21 00:41:48] [INFO] [SpeedQueue] Added unit enemy:Uezowt into queue
+[2025-04-21 00:51:17] [INFO] [Component] Setting fire_dragon_Eunei_685d3e22-5d22-44f6-b186-3cf5236e8cad on to {"row":0,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Eunei_685d3e22-5d22-44f6-b186-3cf5236e8cad","structure":""}.
+[2025-04-21 00:51:17] [INFO] [SpeedQueue] Added unit enemy:Eunei into queue
+[2025-04-21 00:51:17] [INFO] [Component] Setting dragon_Uepaub_cb67d0a8-6c95-49ab-8189-e690115fe8c5 on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Uepaub_cb67d0a8-6c95-49ab-8189-e690115fe8c5","structure":""}.
+[2025-04-21 00:51:17] [INFO] [SpeedQueue] Added unit enemy:Uepaub into queue
+[2025-04-21 00:51:17] [INFO] [Component] Setting earth_dragon_Vamiie_c0de7ef3-33a0-4e88-a1ae-6ad168796421 on to {"row":5,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Vamiie_c0de7ef3-33a0-4e88-a1ae-6ad168796421","structure":""}.
+[2025-04-21 00:51:17] [INFO] [SpeedQueue] Added unit enemy:Vamiie into queue
+[2025-04-21 00:51:17] [INFO] [Component] Setting light_dragon_Qaoey_a2cb6f03-b9af-4e8d-b4e2-7c5c1f6277c3 on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qaoey_a2cb6f03-b9af-4e8d-b4e2-7c5c1f6277c3","structure":""}.
+[2025-04-21 00:51:17] [INFO] [SpeedQueue] Added unit user:Qaoey into queue
+[2025-04-21 00:51:17] [INFO] [Component] Setting dark_dragon_Vicfay_18c0f966-3256-4393-b6a6-6c29bfad2215 on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Vicfay_18c0f966-3256-4393-b6a6-6c29bfad2215","structure":""}.
+[2025-04-21 00:51:17] [INFO] [SpeedQueue] Added uni

@@ -1,0 +1,60 @@
+[2025-04-18 16:51:41] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-18 16:51:41] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-18 16:51:41] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-18 16:51:41] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-18 16:51:41] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-18 16:51:41] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-18 16:51:41] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-18 16:51:41] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-18 16:51:41] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-18 16:51:41] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-18 16:51:41] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-18 16:51:41] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-18 16:51:41] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-18 16:51:41] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-18 16:51:41] [INFO] [Component] Setting dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d on to {"row":6,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d","structure":""}.
+[2025-04-18 16:51:41] [INFO] [SpeedQueue] Added unit user:Uyzuvg into queue
+[2025-04-18 16:51:41] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-18 16:51:41] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-18 16:51:41] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-18 16:51:41] [INFO] [FontPool] Started initializing FontPool
+[2025-04-18 16:51:41] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-18 16:51:42] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-18 16:51:42] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:51:42] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d
+[2025-04-18 16:51:42] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d
+[2025-04-18 16:51:42] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-18 16:51:42] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-18 16:51:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:51:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:51:42] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d
+[2025-04-18 16:51:42] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d
+[2025-04-18 16:51:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:51:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:51:42] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-18 16:51:42] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-18 16:51:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-18 16:51:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-18 16:51:42] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-18 16:51:42] [INFO] [VisualsSystem] Finished creating blurred background after 0.48339059948921204 seconds
+[2025-04-18 16:51:44] [INFO] [MovementSystem] Updated movement range to 6 for Uyzuvg
+[2025-04-18 16:51:44] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 2] for Uyzuvg
+[2025-04-18 16:51:44] [INFO] [Component] Setting dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d","structure":""}.
+[2025-04-18 16:51:44] [INFO] [MovementSystem] Moved from [6, 0] to [6, 2]
+[2025-04-18 16:51:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:51:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyzuvg
+[2025-04-18 16:51:44] [INFO] [InputHandler] Gliding 0 camera to new tile 6_2_d8d1c44a-ae36-41ca-9ea1-952ef5bf40ac
+[2025-04-18 16:51:44] [INFO] [InputHandler] Gliding 1 camera to new tile 6_2_d8d1c44a-ae36-41ca-9ea1-952ef5bf40ac
+[2025-04-18 16:51:45] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:51:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:51:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:51:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:51:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:51:47] [INFO] [MovementSystem] Updated movement range to 12 for Uyzuvg
+[2025-04-18 16:51:47] [INFO] [MovementSystem] Updated movement path from [6, 2] to [6, 4] for Uyzuvg
+[2025-04-18 16:51:47] [INFO] [Component] Setting dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d on to {"row":6,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Uyzuvg_47733cac-0d1b-4c6e-b4f8-9d8faccfc99d","structure":""}.
+[2025-04-18 16:51:47] [INFO] [MovementSystem] Moved from [6, 2] to [6, 4]
+[2025-04-18 16:51:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:51:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyzuvg
+[2025-04-18 16:51:47] [INFO] [InputHandler] Gliding 0 camera to new tile 6_4_7b92e416-8892-4ea8-b923-f498cf10b4a8
+[2025-04-18 16:51:47] [INFO] [InputHandler] Gliding 1 camera to new tile 6_4_7b92e416-8892-4ea8-b923-f498cf10b4a8

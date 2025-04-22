@@ -1,0 +1,212 @@
+[2025-04-12 04:00:54] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-12 04:00:54] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-12 04:00:54] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-12 04:00:54] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-12 04:00:54] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-12 04:00:54] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-12 04:00:54] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-12 04:00:54] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-12 04:00:54] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-12 04:00:54] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-12 04:00:54] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-12 04:00:54] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-12 04:00:54] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-12 04:00:54] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-12 04:00:54] [INFO] [Component] Setting light_dragon_Zeou_6189580f-cac7-4c7f-b3f2-f7c1913ac952 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Zeou_6189580f-cac7-4c7f-b3f2-f7c1913ac952","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Zeou into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Qozyod_3c3667a4-2b37-4172-9514-dac2aa7e9def on to {"spawn_region":[],"collider":"","unit":"water_dragon_Qozyod_3c3667a4-2b37-4172-9514-dac2aa7e9def","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Qozyod into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Wexeui_3b1e2674-d979-442c-88cd-c5eb6ff08425 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Wexeui_3b1e2674-d979-442c-88cd-c5eb6ff08425","column":3,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Wexeui into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting fire_dragon_Coma_d136330c-a6c7-477d-947f-e6465e2913f3 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Coma_d136330c-a6c7-477d-947f-e6465e2913f3","column":8,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Coma into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Oeyi_ea415c00-2b91-479e-85bc-80370e44315a on to {"spawn_region":[],"collider":"","unit":"water_dragon_Oeyi_ea415c00-2b91-479e-85bc-80370e44315a","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Oeyi into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Naxu_4ac04beb-0fa7-4792-b9e4-b32f4cf513b1 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Naxu_4ac04beb-0fa7-4792-b9e4-b32f4cf513b1","column":11,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Naxu into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf","column":0,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Gazjda into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting earth_dragon_Mycsye_55c50d5b-2434-4e4c-bf60-9c0da04d0e9d on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Mycsye_55c50d5b-2434-4e4c-bf60-9c0da04d0e9d","column":9,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Mycsye into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting fire_dragon_Oyznne_efe5a281-cdd4-4750-b5db-edc116dac80e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oyznne_efe5a281-cdd4-4750-b5db-edc116dac80e","column":2,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Oyznne into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Jehfs_d59cde19-7b73-43e5-a4fd-1382c588d664 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Jehfs_d59cde19-7b73-43e5-a4fd-1382c588d664","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Jehfs into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Fysey_fbaaf580-3de9-479d-b407-b557e26ec92c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Fysey_fbaaf580-3de9-479d-b407-b557e26ec92c","column":8,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Fysey into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Hyeg_727891ae-9886-417e-82e1-22b80c7f50d4 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Hyeg_727891ae-9886-417e-82e1-22b80c7f50d4","column":11,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Hyeg into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Uiras_6688705d-f92b-4015-b439-64600fe6fa5b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Uiras_6688705d-f92b-4015-b439-64600fe6fa5b","column":10,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Uiras into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting dark_dragon_Zuvuud_2881b192-e6a6-4874-b821-a054ca8869ec on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zuvuud_2881b192-e6a6-4874-b821-a054ca8869ec","column":12,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Zuvuud into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting fire_dragon_Loyea_1a3137f6-088c-4331-8f4b-b90a03385777 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Loyea_1a3137f6-088c-4331-8f4b-b90a03385777","column":2,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Loyea into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting dragon_Eutey_c1a228a9-3f96-4fde-ad67-5bc3961969ff on to {"spawn_region":[],"collider":"","unit":"dragon_Eutey_c1a228a9-3f96-4fde-ad67-5bc3961969ff","column":10,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Eutey into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting light_dragon_Hadee_0b5673fd-e99d-45d6-85a0-457dfd957166 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Hadee_0b5673fd-e99d-45d6-85a0-457dfd957166","column":11,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Hadee into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting dragon_Fofuaa_54235aaa-c8b7-4252-8614-dfdab2b7c835 on to {"spawn_region":[],"collider":"","unit":"dragon_Fofuaa_54235aaa-c8b7-4252-8614-dfdab2b7c835","column":13,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Fofuaa into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting light_dragon_Pyzoo_d1840b8e-8d53-4bab-9a74-7f62ec41187e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Pyzoo_d1840b8e-8d53-4bab-9a74-7f62ec41187e","column":11,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Pyzoo into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting air_dragon_Nagiuo_2ff08169-e523-476f-87b0-adb11ab211d6 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Nagiuo_2ff08169-e523-476f-87b0-adb11ab211d6","column":8,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Nagiuo into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting light_dragon_Wizy_1fc2dfef-e25a-4ef7-90a9-c371b66b7b2d on to {"spawn_region":[],"collider":"","unit":"light_dragon_Wizy_1fc2dfef-e25a-4ef7-90a9-c371b66b7b2d","column":11,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Wizy into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting dragon_Hocak_774c2d56-809a-4c18-897a-c2b7b97c27b9 on to {"spawn_region":[],"collider":"","unit":"dragon_Hocak_774c2d56-809a-4c18-897a-c2b7b97c27b9","column":12,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit enemy:Hocak into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting dragon_Qazya_63463554-0d99-403a-8348-7700f21c53cc on to {"spawn_region":[],"collider":"","unit":"dragon_Qazya_63463554-0d99-403a-8348-7700f21c53cc","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Qazya into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Bejyy_ca674d92-7679-427f-9b99-478657d6c84b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Bejyy_ca674d92-7679-427f-9b99-478657d6c84b","column":13,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Bejyy into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb on to {"spawn_region":[],"collider":"","unit":"water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb","column":7,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Laguqu into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting dark_dragon_Eajo_33b193ee-ea94-4535-bff9-4e594e46df00 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Eajo_33b193ee-ea94-4535-bff9-4e594e46df00","column":10,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Eajo into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Dazo_de70536e-6720-47ce-b75f-d742a07895e1 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Dazo_de70536e-6720-47ce-b75f-d742a07895e1","column":6,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Dazo into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting dark_dragon_Mowgaa_123c19bb-3fc8-4eed-9dea-90f39bac5fb6 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Mowgaa_123c19bb-3fc8-4eed-9dea-90f39bac5fb6","column":14,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Mowgaa into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting air_dragon_Poregy_9cc06637-8415-47b9-aab7-943bb0b8cef7 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Poregy_9cc06637-8415-47b9-aab7-943bb0b8cef7","column":14,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Poregy into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting light_dragon_Iazy_b4ca5ca2-28a8-4faf-85ac-fedf9078a65e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iazy_b4ca5ca2-28a8-4faf-85ac-fedf9078a65e","column":5,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Iazy into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting water_dragon_Hokeau_6b01d9e9-dc01-4a2c-9bbc-dfb363980ee6 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Hokeau_6b01d9e9-dc01-4a2c-9bbc-dfb363980ee6","column":9,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Hokeau into queue
+[2025-04-12 04:00:54] [INFO] [Component] Setting air_dragon_Qywi_62164ab4-da5a-4ffc-bd5b-ad3e425a0154 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Qywi_62164ab4-da5a-4ffc-bd5b-ad3e425a0154","column":1,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-12 04:00:54] [INFO] [SpeedQueue] Added unit user:Qywi into queue
+[2025-04-12 04:00:54] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-12 04:00:55] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-12 04:00:55] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-12 04:00:55] [INFO] [FontPool] Started initializing FontPool
+[2025-04-12 04:00:55] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-12 04:00:55] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-12 04:00:55] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-12 04:00:55] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:00:55] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:00:55] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 04:00:55] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 04:00:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 04:00:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 04:00:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 04:00:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 04:00:55] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:00:55] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:00:55] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 04:00:55] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 04:00:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 04:00:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 04:00:55] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-12 04:00:56] [INFO] [VisualsSystem] Finished creating blurred background after 0.49625420570373535 seconds
+[2025-04-12 04:00:57] [INFO] [MovementSystem] Updated movement range to 9 for Laguqu
+[2025-04-12 04:00:57] [INFO] [MovementSystem] Updated movement path from [6, 7] to [7, 7] for Laguqu
+[2025-04-12 04:00:57] [INFO] [Component] Setting water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb on to {"spawn_region":[],"collider":"","unit":"water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb","column":7,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 04:00:57] [INFO] [MovementSystem] Moved from [6, 7] to [7, 7]
+[2025-04-12 04:00:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 04:00:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Laguqu
+[2025-04-12 04:00:57] [INFO] [InputHandler] Gliding 0 camera to new tile 7_7_5ba4f5b7-c10a-48a9-ba3b-4b0f2bc41b74
+[2025-04-12 04:00:57] [INFO] [InputHandler] Gliding 1 camera to new tile 7_7_5ba4f5b7-c10a-48a9-ba3b-4b0f2bc41b74
+[2025-04-12 04:01:01] [INFO] [AbilitySystem] Laguqu is planning to use soak on [7, 8]
+[2025-04-12 04:01:01] [INFO] [AbilitySystem] Updated area of sight for Laguqu, viewing 12 tiles
+[2025-04-12 04:01:01] [INFO] [AbilitySystem] Updated line of sight for Laguqu, viewing 2 tiles
+[2025-04-12 04:01:01] [INFO] [AbilitySystem] Updated area of effect for Laguqu viewing 1 tiles
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Started constructing cost mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Finished constructing cost mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Checking cost requirements for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Laguqu is able to pay for soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Started constructing cost mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Finished constructing cost mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Paying cost requirements for Laguqu using soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use soak
+[2025-04-12 04:01:01] [INFO] [AbilitySystem] Used from soak on [7, 8]
+[2025-04-12 04:01:01] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:01:01] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:01:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 04:01:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 04:01:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:01:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Laguqu_3807949a-9d16-4381-a173-1165d1beb4eb
+[2025-04-12 04:01:01] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 04:01:01] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 04:01:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Started constructing damage mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Finished constructing damage mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Started constructing cost mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [CombatSystem] Finished constructing cost mappings for Laguqu to use soak
+[2025-04-12 04:01:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 04:01:02] [INFO] [CombatSystem] Started constructing damage mappings for Laguqu to use soak
+[2025-04-12 04:01:02] [INFO] [CombatSystem] Finished constructing damage mappings for Laguqu to use soak
+[2025-04-12 04:01:02] [INFO] [CombatSystem] Started dealing damage with soak to Coma 
+[2025-04-12 04:01:02] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-12 04:01:02] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-12 04:01:02] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-12 04:01:02] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf
+[2025-04-12 04:01:02] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf
+[2025-04-12 04:01:02] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 04:01:02] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 04:01:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 04:01:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 04:01:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 04:01:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Gazjda
+[2025-04-12 04:01:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf
+[2025-04-12 04:01:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf
+[2025-04-12 04:01:02] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 04:01:02] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 04:01:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 04:01:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 04:01:02] [INFO] [InputHandler] Gliding 0 camera to new tile 7_0_c594d99e-f31b-407b-becd-adc8f5f19f2f
+[2025-04-12 04:01:02] [INFO] [InputHandler] Gliding 1 camera to new tile 7_0_c594d99e-f31b-407b-becd-adc8f5f19f2f
+[2025-04-12 04:01:05] [INFO] [InputHandler] Gliding 0 camera to new tile 7_0_c594d99e-f31b-407b-becd-adc8f5f19f2f
+[2025-04-12 04:01:05] [INFO] [InputHandler] Gliding 1 camera to new tile 7_0_c594d99e-f31b-407b-becd-adc8f5f19f2f
+[2025-04-12 04:01:06] [INFO] [InputHandler] Gliding 0 camera to new tile 7_0_c594d99e-f31b-407b-becd-adc8f5f19f2f
+[2025-04-12 04:01:06] [INFO] [MovementSystem] Updated movement range to 5 for Gazjda
+[2025-04-12 04:01:06] [INFO] [MovementSystem] Updated movement path from [7, 0] to [10, 4] for Gazjda
+[2025-04-12 04:01:06] [INFO] [MovementSystem] Updated movement range to 5 for Gazjda
+[2025-04-12 04:01:06] [INFO] [MovementSystem] Updated movement path from [7, 0] to [10, 4] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [9, 4] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [9, 4] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [9, 3] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [9, 3] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [8, 3] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [8, 3] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [8, 2] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [8, 2] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [7, 2] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [7, 2] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [7, 1] for Gazjda
+[2025-04-12 04:01:07] [INFO] [MovementSystem] Updated movement path from [7, 0] to [7, 1] for Gazjda
+[2025-04-12 04:01:08] [INFO] [Component] Setting earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Gazjda_73334dc3-18bb-4a51-88de-73fe4469dccf","column":1,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 04:01:08] [INFO] [MovementSystem] Moved from [7, 0] to [7, 1]
+[2025-04-12 04:01:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 04:01:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Gazjda
+[2025-04-12 04:01:08] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_56902802-e583-4d0e-85fd-acb68ffda08a
+[2025-04-12 04:01:08] [INFO] [InputHandler] Gliding 1 camera to new tile 7_1_56902802-e583-4d0e-85fd-acb68ffda08a
+[2025-04-12 04:01:08] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_56902802-e583-4d0e-85fd-acb68ffda08a
+[2025-04-12 04:01:13] [INFO] [AbilityPanel] Selecting leafage
+[2025-04-12 04:01:14] [INFO] [AbilityPanel] Selecting leafage
+[2025-04-12 04:01:16] [INFO] [InputHandler] Gliding 0 camera to new tile 2_10_b57bb823-b311-4ec3-bbdc-fc080b37f7dc
+[2025-04-12 04:01:16] [INFO] [InputHandler] Gliding 1 camera to new tile 2_10_b57bb823-b311-4ec3-bbdc-fc080b37f7dc
+[2025-04-12 04:01:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 04:01:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Eutey
+[2025-04-12 04:01:16] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_56902802-e583-4d0e-85fd-acb68ffda08a
+[2025-04-12 04:01:16] [INFO] [InputHandler] Gliding 1 camera to new tile 7_1_56902802-e583-4d0e-85fd-acb68ffda08a
+[2025-04-12 04:01:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 04:01:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Gazjda
+[2025-04-12 04:01:18] [INFO] [AbilityPanel] Selecting leafage
+[2025-04-12 04:01:22] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_56902802-e583-4d0e-85fd-acb68ffda08a
+[2025-04-12 04:01:23] [INFO] [AbilityPanel] Selecting gust
+[2025-04-12 04:01:23] [INFO] [AbilitySystem] Gazjda is planning to use gust on [9, 5]
+[2025-04-12 04:01:23] [INFO] [AbilitySystem] Updated area of sight for Gazjda, viewing 12 tiles
+[2025-04-12 04:01:23] [INFO] [AbilitySystem] Updated line of sight for Gazjda, viewing 3 tiles
+[2025-04-12 04:01:23] [INFO] [AbilitySystem] Updated area of effect for Gazjda viewing 1 tiles
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Started constructing damage mappings for Gazjda to use gust
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Finished constructing damage mappings for Gazjda to use gust
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Started constructing cost mappings for Gazjda to use gust
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Finished constructing cost mappings for Gazjda to use gust
+[2025-04-12 04:01:23] [INFO] [AbilityPanel] Selecting ember
+[2025-04-12 04:01:23] [INFO] [AbilitySystem] Gazjda is planning to use ember on [9, 5]
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Started constructing damage mappings for Gazjda to use ember
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Finished constructing damage mappings for Gazjda to use ember
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Started constructing cost mappings for Gazjda to use ember
+[2025-04-12 04:01:23] [INFO] [CombatSystem] Finished constructing cost mappings for Gazjda to use ember
+[2025-04-12 04:01:24] [INFO] [AbilityPanel] Selecting leafage

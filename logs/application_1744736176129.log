@@ -1,0 +1,39 @@
+[2025-04-15 09:56:16] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 09:56:16] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 09:56:16] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 09:56:16] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 09:56:16] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 09:56:16] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 09:56:16] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 09:56:16] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 09:56:16] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 09:56:16] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 09:56:16] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 09:56:16] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 09:56:16] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 09:56:16] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 09:56:16] [INFO] [Component] Setting water_dragon_Iugevx_40826cbd-e07a-4f95-b672-35f78d8e4c8d on to {"spawn_region":[],"collider":"","unit":"water_dragon_Iugevx_40826cbd-e07a-4f95-b672-35f78d8e4c8d","column":7,"row":6,"structure":"","height":0}.
+[2025-04-15 09:56:16] [INFO] [SpeedQueue] Added unit enemy:Iugevx into queue
+[2025-04-15 09:56:16] [INFO] [Component] Setting air_dragon_Mudac_4dc7c151-ca8a-45a0-adef-28736863b4d2 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Mudac_4dc7c151-ca8a-45a0-adef-28736863b4d2","column":6,"row":0,"structure":"","height":0}.
+[2025-04-15 09:56:16] [INFO] [SpeedQueue] Added unit enemy:Mudac into queue
+[2025-04-15 09:56:16] [INFO] [Component] Setting air_dragon_Vosaen_72c7e314-8684-4952-bcab-45d5d45e4748 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Vosaen_72c7e314-8684-4952-bcab-45d5d45e4748","column":2,"row":4,"structure":"","height":0}.
+[2025-04-15 09:56:16] [INFO] [SpeedQueue] Added unit enemy:Vosaen into queue
+[2025-04-15 09:56:16] [INFO] [Component] Setting fire_dragon_Vorsum_ed2cff7c-5cde-4afa-8ed8-984ae5a055a7 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vorsum_ed2cff7c-5cde-4afa-8ed8-984ae5a055a7","column":6,"row":1,"structure":"","height":0}.
+[2025-04-15 09:56:16] [INFO] [SpeedQueue] Added unit enemy:Vorsum into queue
+[2025-04-15 09:56:16] [INFO] [Component] Setting light_dragon_Babuyt_0d8ce39c-d200-4872-a193-35d2e3c93f57 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Babuyt_0d8ce39c-d200-4872-a193-35d2e3c93f57","column":2,"row":3,"structure":"","height":0}.
+[2025-04-15 09:56:16] [INFO] [SpeedQueue] Added unit enemy:Babuyt into queue
+[2025-04-15 09:56:16] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 09:56:16] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 09:56:16] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-15 09:56:16] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 09:56:16] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 09:56:16] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-15 09:56:16] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-15 09:56:16] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-15 09:56:16] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_0d8df09f-54db-4150-b194-bd992d20964a
+[2025-04-15 09:56:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 09:56:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 09:56:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 09:56:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 09:56:17] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 09:56:17] [INFO] [VisualsSystem] Finished creating blurred background after 0.4953494071960449 seconds

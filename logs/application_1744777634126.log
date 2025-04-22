@@ -1,0 +1,28 @@
+[2025-04-15 21:27:14] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 21:27:14] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 21:27:14] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 21:27:14] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 21:27:14] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 21:27:14] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 21:27:14] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 21:27:14] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 21:27:14] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 21:27:14] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 21:27:14] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 21:27:14] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 21:27:14] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 21:27:14] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 21:27:14] [INFO] [Component] Setting water_dragon_Nyiy_827eeb5e-d3b2-49d2-99da-3a9f75a68894 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Nyiy_827eeb5e-d3b2-49d2-99da-3a9f75a68894","column":7,"row":4,"structure":"","height":0}.
+[2025-04-15 21:27:14] [INFO] [SpeedQueue] Added unit enemy:Nyiy into queue
+[2025-04-15 21:27:14] [INFO] [Component] Setting dragon_Yabybu_0ea07cd3-0cb3-4828-9f3f-51c1c02e9421 on to {"spawn_region":[],"collider":"","unit":"dragon_Yabybu_0ea07cd3-0cb3-4828-9f3f-51c1c02e9421","column":0,"row":6,"structure":"","height":0}.
+[2025-04-15 21:27:14] [INFO] [SpeedQueue] Added unit enemy:Yabybu into queue
+[2025-04-15 21:27:14] [INFO] [Component] Setting fire_dragon_Vyruw_2889e8d0-d176-4f05-bdcc-8c79847cc72a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vyruw_2889e8d0-d176-4f05-bdcc-8c79847cc72a","column":4,"row":1,"structure":"","height":0}.
+[2025-04-15 21:27:14] [INFO] [SpeedQueue] Added unit enemy:Vyruw into queue
+[2025-04-15 21:27:14] [INFO] [Component] Setting water_dragon_Zaoyc_74e64ca9-aa77-4a01-87bc-855301fda21c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Zaoyc_74e64ca9-aa77-4a01-87bc-855301fda21c","column":2,"row":7,"structure":"","height":0}.
+[2025-04-15 21:27:14] [INFO] [SpeedQueue] Added unit user:Zaoyc into queue
+[2025-04-15 21:27:14] [INFO] [Component] Setting earth_dragon_Aurai_d03c59bd-5150-4db0-94b7-c9a5fa4c151f on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Aurai_d03c59bd-5150-4db0-94b7-c9a5fa4c151f","column":5,"row":4,"structure":"","height":0}.
+[2025-04-15 21:27:14] [INFO] [SpeedQueue] Added unit user:Aurai into queue
+[2025-04-15 21:27:14] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 21:27:14] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 21:27:14] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-15 21:27:14] [INFO] [FontPool] Started initiali

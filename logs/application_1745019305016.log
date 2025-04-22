@@ -1,0 +1,32 @@
+[2025-04-18 16:35:05] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-18 16:35:05] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-18 16:35:05] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-18 16:35:05] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-18 16:35:05] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-18 16:35:05] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-18 16:35:05] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-18 16:35:05] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-18 16:35:05] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-18 16:35:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-18 16:35:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-18 16:35:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-18 16:35:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-18 16:35:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-18 16:35:05] [INFO] [Component] Setting water_dragon_Gicyv_02dc112a-e75d-4e4b-b227-cf84d5da2d87 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Gicyv_02dc112a-e75d-4e4b-b227-cf84d5da2d87","structure":""}.
+[2025-04-18 16:35:05] [INFO] [SpeedQueue] Added unit user:Gicyv into queue
+[2025-04-18 16:35:05] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-18 16:35:05] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-18 16:35:05] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-18 16:35:05] [INFO] [FontPool] Started initializing FontPool
+[2025-04-18 16:35:05] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-18 16:35:05] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-18 16:35:05] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:35:05] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Gicyv_02dc112a-e75d-4e4b-b227-cf84d5da2d87
+[2025-04-18 16:35:05] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Gicyv_02dc112a-e75d-4e4b-b227-cf84d5da2d87
+[2025-04-18 16:35:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-18 16:35:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-18 16:35:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:35:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:35:05] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Gicyv_02dc112a-e75d-4e4b-b227-cf84d5da2d87
+[2025-04-18 16:35:05] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Gicyv_02dc112a-e75d-4e4b-b227-cf84d5da2d87
+[2025-04-18 16:35:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selecte

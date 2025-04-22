@@ -1,0 +1,26 @@
+[2025-04-19 19:37:46] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 19:37:46] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 19:37:46] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 19:37:46] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 19:37:46] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 19:37:46] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 19:37:46] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 19:37:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 19:37:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 19:37:46] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 19:37:46] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 19:37:46] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 19:37:46] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 19:37:46] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 19:37:46] [INFO] [Component] Setting earth_dragon_Yynoi_4837fbbb-ec37-4b40-968e-263cc01d4858 on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Yynoi_4837fbbb-ec37-4b40-968e-263cc01d4858","structure":""}.
+[2025-04-19 19:37:46] [INFO] [SpeedQueue] Added unit enemy:Yynoi into queue
+[2025-04-19 19:37:46] [INFO] [Component] Setting dark_dragon_Hasoei_f9695ae4-5970-44dd-aa7c-ff22d2751d83 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Hasoei_f9695ae4-5970-44dd-aa7c-ff22d2751d83","structure":""}.
+[2025-04-19 19:37:46] [INFO] [SpeedQueue] Added unit enemy:Hasoei into queue
+[2025-04-19 19:37:46] [INFO] [Component] Setting fire_dragon_Pyboa_ccfe5b08-7c4b-4a44-ab33-659bcadae5b4 on to {"row":2,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Pyboa_ccfe5b08-7c4b-4a44-ab33-659bcadae5b4","structure":""}.
+[2025-04-19 19:37:46] [INFO] [SpeedQueue] Added unit enemy:Pyboa into queue
+[2025-04-19 19:37:46] [INFO] [Component] Setting air_dragon_Runsej_045c2995-a3d7-4cc1-a359-8ff5fe816afb on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Runsej_045c2995-a3d7-4cc1-a359-8ff5fe816afb","structure":""}.
+[2025-04-19 19:37:46] [INFO] [SpeedQueue] Added unit enemy:Runsej into queue
+[2025-04-19 19:37:46] [INFO] [Component] Setting light_dragon_Woyxfj_f8f951d5-4af2-4d15-8522-4ba3a2e4c918 on to {"row":7,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Woyxfj_f8f951d5-4af2-4d15-8522-4ba3a2e4c918","structure":""}.
+[2025-04-19 19:37:46] [INFO] [SpeedQueue] Added unit enemy:Woyxfj into queue
+[2025-04-19 19:37:46] [INFO] [Component] Setting fire_dragon_Payqay_326b936c-ec51-42e4-bb76-c9d42753af90 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Payqay_326b936c-ec51-42e4-bb76-c9d42753af90","structure":""}.
+[2025-04-19 19:37:46] [INFO] [SpeedQueue] 

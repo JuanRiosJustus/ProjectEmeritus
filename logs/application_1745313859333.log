@@ -1,0 +1,118 @@
+[2025-04-22 02:24:19] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-22 02:24:19] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-22 02:24:19] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-22 02:24:19] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-22 02:24:19] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-22 02:24:19] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-22 02:24:19] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-22 02:24:19] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-22 02:24:19] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-22 02:24:19] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-22 02:24:19] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-22 02:24:19] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-22 02:24:19] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-22 02:24:19] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-22 02:24:19] [INFO] [Component] Setting light_dragon_Cuxc_fcfd74fb-4b05-491c-a646-914210fd8109 on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Cuxc_fcfd74fb-4b05-491c-a646-914210fd8109","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit enemy:Cuxc into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting dragon_Japgiy_56a05dc7-464d-4c69-8a2a-2de7f04fa357 on to {"row":3,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Japgiy_56a05dc7-464d-4c69-8a2a-2de7f04fa357","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit enemy:Japgiy into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404 on to {"row":4,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit enemy:Dooeei into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting water_dragon_Xiiiv_2386e1e0-34a1-41a9-b0e5-bfcc5fcd40ad on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Xiiiv_2386e1e0-34a1-41a9-b0e5-bfcc5fcd40ad","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit enemy:Xiiiv into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting fire_dragon_Wanuo_3556ef84-b15a-404e-bdd0-2ab366809798 on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Wanuo_3556ef84-b15a-404e-bdd0-2ab366809798","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit enemy:Wanuo into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting earth_dragon_Dozyu_70cabb77-9735-47f2-9441-d4758ac5e6e1 on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Dozyu_70cabb77-9735-47f2-9441-d4758ac5e6e1","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit user:Dozyu into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting earth_dragon_Rexux_3951a674-63d4-4ce5-a390-1d0a77751341 on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Rexux_3951a674-63d4-4ce5-a390-1d0a77751341","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit user:Rexux into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting dragon_Tanic_0d884fb1-311f-4921-9698-c9c5697833d6 on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Tanic_0d884fb1-311f-4921-9698-c9c5697833d6","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit user:Tanic into queue
+[2025-04-22 02:24:19] [INFO] [Component] Setting earth_dragon_Xuku_d9d5b8fe-a0f3-4c56-b0a3-e67314e54951 on to {"row":3,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Xuku_d9d5b8fe-a0f3-4c56-b0a3-e67314e54951","structure":""}.
+[2025-04-22 02:24:19] [INFO] [SpeedQueue] Added unit user:Xuku into queue
+[2025-04-22 02:24:19] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-22 02:24:19] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-22 02:24:19] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:24:19] [INFO] [FontPool] Started initializing FontPool
+[2025-04-22 02:24:19] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-22 02:24:20] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-22 02:24:20] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-22 02:24:20] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:24:20] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-22 02:24:20] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-22 02:24:20] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-22 02:24:20] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404
+[2025-04-22 02:24:20] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404
+[2025-04-22 02:24:20] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:24:20] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:24:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-22 02:24:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-22 02:24:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:24:20] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-22 02:24:20] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-22 02:24:21] [INFO] [VisualsSystem] Finished creating blurred background after 0.49364471435546875 seconds
+[2025-04-22 02:24:22] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_74b98c87-5e06-44d1-850b-87854b96e6fd
+[2025-04-22 02:24:22] [INFO] [InputHandler] Gliding 1 camera to new tile 4_0_74b98c87-5e06-44d1-850b-87854b96e6fd
+[2025-04-22 02:24:22] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404
+[2025-04-22 02:24:22] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404
+[2025-04-22 02:24:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:24:22] [INFO] [SelectedTilePanel] Updated selected tile display to view Dooeei
+[2025-04-22 02:24:24] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_74b98c87-5e06-44d1-850b-87854b96e6fd
+[2025-04-22 02:24:24] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:24:24] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:24:24] [INFO] [MovementSystem] Updated movement range to 8 for Dooeei
+[2025-04-22 02:24:24] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Dooeei
+[2025-04-22 02:24:24] [INFO] [MovementSystem] Updated movement range to 8 for Dooeei
+[2025-04-22 02:24:24] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 5] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 5] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 4] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 4] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 3] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 3] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Dooeei
+[2025-04-22 02:24:25] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Dooeei
+[2025-04-22 02:24:26] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Dooeei
+[2025-04-22 02:24:26] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Dooeei
+[2025-04-22 02:24:34] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Dooeei
+[2025-04-22 02:24:34] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Dooeei
+[2025-04-22 02:24:34] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Dooeei
+[2025-04-22 02:24:34] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Dooeei
+[2025-04-22 02:24:34] [INFO] [Component] Setting dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404 on to {"row":3,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Dooeei_22208e32-695e-4f63-b75b-32ef8b755404","structure":""}.
+[2025-04-22 02:24:34] [INFO] [MovementSystem] Moved from [4, 0] to [3, 0]
+[2025-04-22 02:24:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:24:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Dooeei
+[2025-04-22 02:24:34] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_f54631c9-e06b-41fd-9afe-12d75928de48
+[2025-04-22 02:24:34] [INFO] [InputHandler] Gliding 1 camera to new tile 3_0_f54631c9-e06b-41fd-9afe-12d75928de48
+[2025-04-22 02:24:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Xuku_d9d5b8fe-a0f3-4c56-b0a3-e67314e54951
+[2025-04-22 02:24:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Xuku_d9d5b8fe-a0f3-4c56-b0a3-e67314e54951
+[2025-04-22 02:24:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:24:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Xuku
+[2025-04-22 02:24:38] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:24:38] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:24:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Japgiy_56a05dc7-464d-4c69-8a2a-2de7f04fa357
+[2025-04-22 02:24:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Japgiy_56a05dc7-464d-4c69-8a2a-2de7f04fa357
+[2025-04-22 02:24:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:24:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Japgiy
+[2025-04-22 02:24:41] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:24:41] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:24:42] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Wanuo_3556ef84-b15a-404e-bdd0-2ab366809798
+[2025-04-22 02:24:42] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Wanuo_3556ef84-b15a-404e-bdd0-2ab366809798
+[2025-04-22 02:24:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:24:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Wanuo
+[2025-04-22 02:24:42] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:24:42] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:24:44] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Xuku_d9d5b8fe-a0f3-4c56-b0a3-e67314e54951
+[2025-04-22 02:24:44] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Xuku_d9d5b8fe-a0f3-4c56-b0a3-e67314e54951
+[2025-04-22 02:24:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:24:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Xuku
+[2025-04-22 02:24:44] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:24:44] [INFO] [StatisticsPanel] Finished updating statistics information panel

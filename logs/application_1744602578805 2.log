@@ -1,0 +1,341 @@
+[2025-04-13 20:49:38] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 20:49:38] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 20:49:38] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 20:49:38] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 20:49:38] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 20:49:38] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 20:49:38] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 20:49:38] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 20:49:38] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 20:49:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 20:49:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 20:49:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 20:49:39] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 20:49:39] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 20:49:39] [INFO] [Component] Setting earth_dragon_Miby_66ab810d-9c94-465c-beef-8756950bbdd1 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Miby_66ab810d-9c94-465c-beef-8756950bbdd1","column":1,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Miby into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting fire_dragon_Wuuyu_71647670-8fdc-4144-abd3-25d05a6cc23e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Wuuyu_71647670-8fdc-4144-abd3-25d05a6cc23e","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Wuuyu into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting dragon_Zolyek_0449019d-5aef-4bcb-8af1-61f70b934584 on to {"spawn_region":[],"collider":"","unit":"dragon_Zolyek_0449019d-5aef-4bcb-8af1-61f70b934584","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Zolyek into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting air_dragon_Aele_87270983-fee9-45c8-a436-938aa684643a on to {"spawn_region":[],"collider":"","unit":"air_dragon_Aele_87270983-fee9-45c8-a436-938aa684643a","column":7,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Aele into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting fire_dragon_Tubq_934103a9-9432-4348-8703-eb8aa6f66ecf on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Tubq_934103a9-9432-4348-8703-eb8aa6f66ecf","column":1,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Tubq into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting dark_dragon_Giuyo_62b67528-84ec-4157-bb34-edc8d23da041 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Giuyo_62b67528-84ec-4157-bb34-edc8d23da041","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Giuyo into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting light_dragon_Uyqkc_f7ce565c-47a1-44bf-affe-c29deeb8a888 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Uyqkc_f7ce565c-47a1-44bf-affe-c29deeb8a888","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Uyqkc into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting water_dragon_Sydt_75528ba8-523f-41ca-9b05-ff6ad824c3c0 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Sydt_75528ba8-523f-41ca-9b05-ff6ad824c3c0","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit enemy:Sydt into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting dragon_Sosyii_8114c01c-53c6-47d8-a641-a1694d47fdb9 on to {"spawn_region":[],"collider":"","unit":"dragon_Sosyii_8114c01c-53c6-47d8-a641-a1694d47fdb9","column":6,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit user:Sosyii into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting fire_dragon_Yyeuir_88cfe1f1-4413-419e-8a6c-e29430f42d0b on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Yyeuir_88cfe1f1-4413-419e-8a6c-e29430f42d0b","column":6,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit user:Yyeuir into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting light_dragon_Nylcuu_1ed4d202-394e-4ceb-86dd-bce79d1b6b2e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Nylcuu_1ed4d202-394e-4ceb-86dd-bce79d1b6b2e","column":2,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit user:Nylcuu into queue
+[2025-04-13 20:49:39] [INFO] [Component] Setting dragon_Kaclze_7974ed8f-a1f2-44c5-8f13-0c69980c9591 on to {"spawn_region":[],"collider":"","unit":"dragon_Kaclze_7974ed8f-a1f2-44c5-8f13-0c69980c9591","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Added unit user:Kaclze into queue
+[2025-04-13 20:49:39] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 20:49:39] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 20:49:39] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 20:49:39] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 20:49:39] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 20:49:39] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 20:49:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 20:49:39] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Uyqkc_f7ce565c-47a1-44bf-affe-c29deeb8a888
+[2025-04-13 20:49:39] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Uyqkc_f7ce565c-47a1-44bf-affe-c29deeb8a888
+[2025-04-13 20:49:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 20:49:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 20:49:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 20:49:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 20:49:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 20:49:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 20:49:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Uyqkc_f7ce565c-47a1-44bf-affe-c29deeb8a888
+[2025-04-13 20:49:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Uyqkc_f7ce565c-47a1-44bf-affe-c29deeb8a888
+[2025-04-13 20:49:39] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 20:49:39] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 20:49:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 20:49:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 20:49:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 20:49:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.48362547159194946 seconds
+[2025-04-13 20:50:59] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_44d93ace-8818-41a0-acb6-28648f24075c
+[2025-04-13 20:50:59] [INFO] [AbilityPanel] Selecting shine
+[2025-04-13 20:50:59] [INFO] [AbilitySystem] Uyqkc is planning to use shine on null
+[2025-04-13 20:50:59] [INFO] [AbilitySystem] Updated area of sight for Uyqkc, viewing 11 tiles
+[2025-04-13 20:50:59] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 0 tiles
+[2025-04-13 20:50:59] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 0 tiles
+[2025-04-13 20:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [2, 7]
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 4 tiles
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [2, 6]
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yyeuir
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yyeuir
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 20.0 damage after defenses for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 6]
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 5]
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 2 tiles
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 4]
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 1 tiles
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Uyqkc defends with Same-Type-Defense-Bonus from shine for 15.4
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 3]
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 2 tiles
+[2025-04-13 20:51:02] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wuuyu
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wuuyu
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] 20.0 damage after defenses for shine
+[2025-04-13 20:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 4]
+[2025-04-13 20:51:03] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 1 tiles
+[2025-04-13 20:51:03] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Uyqkc defends with Same-Type-Defense-Bonus from shine for 15.4
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [2, 4]
+[2025-04-13 20:51:03] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 2 tiles
+[2025-04-13 20:51:03] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [2, 5]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [3, 6]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [3, 7]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on null
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 0 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 0 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [4, 7]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [3, 7]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [3, 6]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [2, 5]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 4]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Uyqkc defends with Same-Type-Defense-Bonus from shine for 15.4
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 3]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 2 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wuuyu
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wuuyu
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 20.0 damage after defenses for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [0, 3]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [0, 2]
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 2 tiles
+[2025-04-13 20:51:04] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Nylcuu
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Nylcuu defends with Same-Type-Defense-Bonus from shine for 15.4
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Nylcuu
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for shine
+[2025-04-13 20:51:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [0, 3]
+[2025-04-13 20:51:05] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:05] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 3]
+[2025-04-13 20:51:05] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 2 tiles
+[2025-04-13 20:51:05] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wuuyu
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wuuyu
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] 20.0 damage after defenses for shine
+[2025-04-13 20:51:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [1, 4]
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Uyqkc lands a Same-Type-Attack-Bonus with shine, for 12.0
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyqkc
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Uyqkc defends with Same-Type-Defense-Bonus from shine for 15.4
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyqkc
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [2, 4]
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 2 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [2, 5]
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [3, 5]
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 4 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [3, 6]
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [3, 7]
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on [4, 7]
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 3 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 1 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Uyqkc is planning to use shine on null
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated line of sight for Uyqkc, viewing 0 tiles
+[2025-04-13 20:51:06] [INFO] [AbilitySystem] Updated area of effect for Uyqkc viewing 0 tiles
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyqkc to use shine
+[2025-04-13 20:51:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyqkc to use shine

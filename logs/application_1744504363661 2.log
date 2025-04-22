@@ -1,0 +1,116 @@
+[2025-04-12 17:32:43] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-12 17:32:43] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-12 17:32:43] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-12 17:32:43] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-12 17:32:43] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-12 17:32:43] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-12 17:32:43] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-12 17:32:43] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-12 17:32:43] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-12 17:32:43] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-12 17:32:43] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-12 17:32:43] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-12 17:32:43] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-12 17:32:43] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-12 17:32:43] [INFO] [Component] Setting water_dragon_Viwoy_80cf3736-4534-45d1-b480-3bd7c6d7c5c6 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Viwoy_80cf3736-4534-45d1-b480-3bd7c6d7c5c6","column":5,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit enemy:Viwoy into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting dragon_Qyiou_0a34d47d-05db-4c8e-98af-d5a5d7ea5a3f on to {"spawn_region":[],"collider":"","unit":"dragon_Qyiou_0a34d47d-05db-4c8e-98af-d5a5d7ea5a3f","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit enemy:Qyiou into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting air_dragon_Iawoeo_23a576c6-6465-43f2-9097-b0bf56502ba2 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Iawoeo_23a576c6-6465-43f2-9097-b0bf56502ba2","column":5,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit enemy:Iawoeo into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting dragon_Aeyljo_ca270585-e062-4a81-9181-5507cee7f3a6 on to {"spawn_region":[],"collider":"","unit":"dragon_Aeyljo_ca270585-e062-4a81-9181-5507cee7f3a6","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit enemy:Aeyljo into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting light_dragon_Zeug_51961740-43a0-4591-9569-ce10fd8f9e24 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Zeug_51961740-43a0-4591-9569-ce10fd8f9e24","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit enemy:Zeug into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting dragon_Pajy_aee36089-47ac-4335-b19c-d9e6ddb6e085 on to {"spawn_region":[],"collider":"","unit":"dragon_Pajy_aee36089-47ac-4335-b19c-d9e6ddb6e085","column":1,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit enemy:Pajy into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting air_dragon_Iyzaba_5a630e35-88ef-42e9-a983-3895721f37a3 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Iyzaba_5a630e35-88ef-42e9-a983-3895721f37a3","column":7,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit enemy:Iyzaba into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting air_dragon_Myca_1c80ac03-8766-493d-8b7b-6ca4b783d3d5 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Myca_1c80ac03-8766-493d-8b7b-6ca4b783d3d5","column":1,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit user:Myca into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting air_dragon_Jelo_2fb5b760-66c8-4e47-bfca-bedbffcc4bfa on to {"spawn_region":[],"collider":"","unit":"air_dragon_Jelo_2fb5b760-66c8-4e47-bfca-bedbffcc4bfa","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit user:Jelo into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting light_dragon_Fure_4d2ba47d-dbf2-4e33-99c7-6cff5ee66d8a on to {"spawn_region":[],"collider":"","unit":"light_dragon_Fure_4d2ba47d-dbf2-4e33-99c7-6cff5ee66d8a","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit user:Fure into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting fire_dragon_Refeai_88f8ea0d-403d-44d5-83a5-803b36a28ce2 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Refeai_88f8ea0d-403d-44d5-83a5-803b36a28ce2","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit user:Refeai into queue
+[2025-04-12 17:32:43] [INFO] [Component] Setting water_dragon_Ruvaoe_bb80cbe5-a7f2-4fa3-a988-722c52205dfb on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ruvaoe_bb80cbe5-a7f2-4fa3-a988-722c52205dfb","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 17:32:43] [INFO] [SpeedQueue] Added unit user:Ruvaoe into queue
+[2025-04-12 17:32:43] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-12 17:32:44] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-12 17:32:44] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-12 17:32:44] [INFO] [FontPool] Started initializing FontPool
+[2025-04-12 17:32:44] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-12 17:32:44] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-12 17:32:44] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-12 17:32:44] [INFO] [AbilityPanel] Updating ability selection for dragon_Aeyljo_ca270585-e062-4a81-9181-5507cee7f3a6
+[2025-04-12 17:32:44] [INFO] [AbilityPanel] Finished ability selection for dragon_Aeyljo_ca270585-e062-4a81-9181-5507cee7f3a6
+[2025-04-12 17:32:44] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 17:32:44] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 17:32:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 17:32:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 17:32:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 17:32:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 17:32:44] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Aeyljo_ca270585-e062-4a81-9181-5507cee7f3a6
+[2025-04-12 17:32:44] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Aeyljo_ca270585-e062-4a81-9181-5507cee7f3a6
+[2025-04-12 17:32:44] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 17:32:44] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 17:32:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 17:32:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 17:32:44] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-12 17:32:45] [INFO] [VisualsSystem] Finished creating blurred background after 0.4873965382575989 seconds
+[2025-04-12 17:32:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 17:32:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 17:32:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 17:32:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 17:32:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 17:32:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 17:32:50] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_940aa211-c8b9-4bf9-8587-59a88f26765c
+[2025-04-12 17:32:50] [INFO] [InputHandler] Gliding 1 camera to new tile 3_7_940aa211-c8b9-4bf9-8587-59a88f26765c
+[2025-04-12 17:32:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 17:32:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Aeyljo
+[2025-04-12 17:32:52] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_940aa211-c8b9-4bf9-8587-59a88f26765c
+[2025-04-12 17:32:52] [INFO] [MovementSystem] Updated movement range to 5 for Aeyljo
+[2025-04-12 17:32:52] [INFO] [MovementSystem] Updated movement path from [3, 7] to null for Aeyljo
+[2025-04-12 17:32:52] [INFO] [MovementSystem] Updated movement range to 5 for Aeyljo
+[2025-04-12 17:32:52] [INFO] [MovementSystem] Updated movement path from [3, 7] to null for Aeyljo
+[2025-04-12 17:32:53] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_940aa211-c8b9-4bf9-8587-59a88f26765c
+[2025-04-12 17:32:54] [INFO] [AbilityPanel] Selecting soak
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Aeyljo is planning to use soak on null
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated area of sight for Aeyljo, viewing 9 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 0 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 0 tiles
+[2025-04-12 17:32:54] [INFO] [CombatSystem] Started constructing damage mappings for Aeyljo to use soak
+[2025-04-12 17:32:54] [INFO] [CombatSystem] Finished constructing damage mappings for Aeyljo to use soak
+[2025-04-12 17:32:54] [INFO] [CombatSystem] Started constructing cost mappings for Aeyljo to use soak
+[2025-04-12 17:32:54] [INFO] [CombatSystem] Finished constructing cost mappings for Aeyljo to use soak
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [5, 7]
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [4, 7]
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 2 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [4, 6]
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [4, 5]
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:54] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [3, 5]
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [4, 5]
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [4, 6]
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [5, 6]
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Aeyljo is planning to use soak on [5, 7]
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 3 tiles
+[2025-04-12 17:32:55] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 1 tiles
+[2025-04-12 17:32:58] [INFO] [AbilitySystem] Aeyljo is planning to use soak on null
+[2025-04-12 17:32:58] [INFO] [AbilitySystem] Updated line of sight for Aeyljo, viewing 0 tiles
+[2025-04-12 17:32:58] [INFO] [AbilitySystem] Updated area of effect for Aeyljo viewing 0 tiles

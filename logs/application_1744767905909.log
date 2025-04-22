@@ -1,0 +1,43 @@
+[2025-04-15 18:45:05] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 18:45:05] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 18:45:05] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 18:45:05] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 18:45:05] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 18:45:05] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 18:45:05] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 18:45:05] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 18:45:05] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 18:45:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 18:45:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 18:45:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 18:45:06] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 18:45:06] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 18:45:06] [INFO] [Component] Setting dark_dragon_Qaxa_49a85a38-13c3-4d78-b542-21126496f894 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Qaxa_49a85a38-13c3-4d78-b542-21126496f894","column":6,"row":5,"structure":"","height":0}.
+[2025-04-15 18:45:06] [INFO] [SpeedQueue] Added unit enemy:Qaxa into queue
+[2025-04-15 18:45:06] [INFO] [Component] Setting light_dragon_Tabyra_4d19e4b7-b2f3-4161-84bf-7f576034f4f6 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Tabyra_4d19e4b7-b2f3-4161-84bf-7f576034f4f6","column":0,"row":2,"structure":"","height":0}.
+[2025-04-15 18:45:06] [INFO] [SpeedQueue] Added unit enemy:Tabyra into queue
+[2025-04-15 18:45:06] [INFO] [Component] Setting light_dragon_Qauoae_4da7e49e-4d53-47d2-b6fc-85bc29512df4 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Qauoae_4da7e49e-4d53-47d2-b6fc-85bc29512df4","column":3,"row":3,"structure":"","height":0}.
+[2025-04-15 18:45:06] [INFO] [SpeedQueue] Added unit enemy:Qauoae into queue
+[2025-04-15 18:45:06] [INFO] [Component] Setting dragon_Cupp_708184a4-355e-40f2-a1ec-675238d0a78a on to {"spawn_region":[],"collider":"","unit":"dragon_Cupp_708184a4-355e-40f2-a1ec-675238d0a78a","column":7,"row":2,"structure":"","height":0}.
+[2025-04-15 18:45:06] [INFO] [SpeedQueue] Added unit enemy:Cupp into queue
+[2025-04-15 18:45:06] [INFO] [Component] Setting air_dragon_Souyby_418d5f75-eaca-4ecb-805f-ac9512814d22 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Souyby_418d5f75-eaca-4ecb-805f-ac9512814d22","column":1,"row":4,"structure":"","height":0}.
+[2025-04-15 18:45:06] [INFO] [SpeedQueue] Added unit enemy:Souyby into queue
+[2025-04-15 18:45:06] [INFO] [Component] Setting air_dragon_Eiwioo_7dd73eec-2706-4e14-a3f1-caca6820e7b0 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Eiwioo_7dd73eec-2706-4e14-a3f1-caca6820e7b0","column":0,"row":1,"structure":"","height":0}.
+[2025-04-15 18:45:06] [INFO] [SpeedQueue] Added unit user:Eiwioo into queue
+[2025-04-15 18:45:06] [INFO] [Component] Setting water_dragon_Fyvyip_e01bbe91-aa83-47f3-a0e6-d2c96c00e4a9 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Fyvyip_e01bbe91-aa83-47f3-a0e6-d2c96c00e4a9","column":1,"row":5,"structure":"","height":0}.
+[2025-04-15 18:45:06] [INFO] [SpeedQueue] Added unit user:Fyvyip into queue
+[2025-04-15 18:45:06] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 18:45:06] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 18:45:06] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-15 18:45:06] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 18:45:06] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 18:45:06] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-15 18:45:06] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-15 18:45:06] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-15 18:45:06] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_4ef19242-39f4-4506-b1b1-e3d26f42a332
+[2025-04-15 18:45:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 18:45:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 18:45:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 18:45:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 18:45:07] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 18:45:07] [INFO] [VisualsSystem] Finished creating blurred background after 0.49303504824638367 seconds

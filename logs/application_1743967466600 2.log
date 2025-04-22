@@ -1,0 +1,172 @@
+[2025-04-06 12:24:26] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 12:24:26] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 12:24:26] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 12:24:26] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 12:24:26] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 12:24:26] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 12:24:26] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 12:24:26] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 12:24:26] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 12:24:26] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 12:24:26] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 12:24:26] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 12:24:26] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 12:24:26] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 12:24:26] [INFO] [Component] Setting earth_dragon_Bulycu_0dfa7081-0cf6-4eda-a16c-397085ec9a7d on to 7_5_9238ea3f-19f8-4af9-b2e6-d90ced9aa1c2.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Bulycu into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dragon_Xiwao_f0d30425-d4b7-4144-a364-0197748b14be on to 11_11_248e1db2-87af-4f13-ae4b-68af3f54b1a6.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Xiwao into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting water_dragon_Eafrko_0d28bc7c-ef69-45d7-af76-6d28b3351885 on to 7_12_103e4909-a22e-4263-a067-f4fbdbacef62.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Eafrko into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dragon_Zoyieo_f2fa9b38-fa52-4b44-b216-7dd8c445f13e on to 7_3_ebc9322c-bcb7-4518-927a-57fd15bd5059.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Zoyieo into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting water_dragon_Lyqyr_fc15882c-21ff-42c1-87d7-390aaa13ca59 on to 12_1_e0323cb6-0fbe-4792-8314-0e81aa879d41.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Lyqyr into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting light_dragon_Fojym_3684c2e5-840f-4e27-9255-8d8188030c5e on to 4_8_4c1b2cca-c3c2-40c9-bebc-ef119e427494.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Fojym into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dark_dragon_Lyoca_528f07b7-00c9-4cad-bfd8-847d714484b9 on to 3_5_bf1e1ac2-c325-4a82-aebc-13961b86ccf2.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Lyoca into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting light_dragon_Oaeu_65d40431-33ff-4ac3-9377-51bd56bd00b2 on to 0_12_5614214d-cb2b-4bdf-aaaf-a28f026a5888.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Oaeu into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting earth_dragon_Neus_d623b4c6-ecfb-41bb-82aa-a4a3f5a0f8ec on to 13_3_5560a724-517c-46d5-8787-72fa20c2ceef.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Neus into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dragon_Uyviid_9df82b08-e7ce-42d4-b1e6-4a3a69d77db2 on to 11_13_e0870cfb-67b0-40ff-a56d-61bf8380ec63.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Uyviid into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting earth_dragon_Vexm_021a245a-08d1-4b94-a06f-cd8406491e64 on to 4_10_0a5bccee-1977-4565-b437-892959c3bcce.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Vexm into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dark_dragon_Uaxja_0d4bb23b-b50b-4693-9310-6d1d19cbe6a5 on to 6_1_b4b28008-d2fa-4aa6-abcd-f3224e958bd4.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Uaxja into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dragon_Aoloek_f1897a83-8a83-4253-8625-0e58a92e0e16 on to 0_1_3287fb2d-1641-44f0-9ea2-9c743d2102bc.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Aoloek into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting fire_dragon_Byws_ee479e0c-9f23-4da6-8e3a-fab038ae7d3a on to 6_3_e8e54bad-5504-4c94-beca-b1ad8e6c7a72.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Byws into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dark_dragon_Oyzjoe_7e12974d-c9ac-49ed-b24f-b80b00ffe0d9 on to 8_4_c486f870-e0cf-48ea-9b61-12d95efefb1f.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Oyzjoe into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting fire_dragon_Rapo_dcc37174-3dea-44af-b739-e354d66e452b on to 5_6_78f617a9-b565-40f7-85db-676242ca0344.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Rapo into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dragon_Eoqxu_471ddaa9-585d-4502-97e3-47bb9599efde on to 14_9_a7841f8d-6b4c-49d8-abae-5f8f0290dc47.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Eoqxu into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting air_dragon_Kinjea_b06f099b-409d-47ba-a598-72900f665c3c on to 12_12_6383e829-9698-4241-922f-22ffe198c522.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit enemy:Kinjea into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dragon_Besns_ae933334-acfa-42c9-9a62-c2b85eb2fcc0 on to 6_2_8444c0b1-a9e7-40ab-993e-5a2cf4c10523.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Besns into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dark_dragon_Uyzo_157413f4-94df-4985-8b3a-1e49eb201adb on to 12_13_13a65073-b30b-4d03-b565-56f574060a70.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Uyzo into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dark_dragon_Fiek_848ce17b-ae7d-4291-9841-2db10e73a858 on to 4_2_6b05616d-17c4-457a-864d-87965ed0cefe.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Fiek into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting fire_dragon_Bulatu_e27f50ec-7faf-42eb-8515-d4709aced439 on to 3_8_10483166-e7ec-4e8c-8f7c-fdb84173b99b.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Bulatu into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting water_dragon_Cuneuk_b94ad333-cee1-404e-b3fe-60f85a2e2849 on to 3_10_ad4f7ce0-2039-40fa-9cb7-80900b1d5601.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Cuneuk into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dark_dragon_Ayciuj_93af8587-55c0-4017-ad7f-8751c3d4ecb0 on to 3_7_15ddafbc-68d6-4e9a-aa55-560c1e277510.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Ayciuj into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting water_dragon_Seho_36189e23-0cad-49df-bae0-045e20bf6200 on to 0_9_ead5340c-f057-47ca-94a1-0858fefa11f1.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Seho into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting dragon_Bekah_8c853c9c-703f-4ac6-a222-0635bf6e56df on to 11_3_36b2f097-1f1a-4441-acc7-648464173489.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Bekah into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting earth_dragon_Hooyqy_ca700b1b-78f8-4699-bd69-7f86566f3146 on to 10_14_fb41febd-9f17-449d-95e5-624bfe8eade2.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Hooyqy into queue
+[2025-04-06 12:24:26] [INFO] [Component] Setting earth_dragon_Miuari_f0cda75e-0bfa-4032-a54e-3993afd1c51d on to 12_5_33f86159-7d62-4682-a533-dd2c30506d50.
+[2025-04-06 12:24:26] [INFO] [SpeedQueue] Added unit user:Miuari into queue
+[2025-04-06 12:24:26] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 12:24:27] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 12:24:27] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 12:24:27] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 12:24:27] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 12:24:27] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 12:24:27] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 12:24:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:24:27] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 12:24:27] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Vexm_021a245a-08d1-4b94-a06f-cd8406491e64
+[2025-04-06 12:24:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 12:24:28] [INFO] [VisualsSystem] Finished creating blurred background after 0.49149927496910095 seconds
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Vexm Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Oaeu Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Rapo Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Aoloek Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Eafrko Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Zoyieo Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Kinjea Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Uyviid Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Uaxja Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Byws Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Oyzjoe Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Xiwao Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Bulycu Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Eoqxu Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Lyqyr Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Fojym Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Neus Triggered ability system
+[2025-04-06 12:24:28] [INFO] [AbilitySystem] Lyoca Triggered ability system
+[2025-04-06 12:24:28] [INFO] [MovementSystem] Updated movement range for Vexm
+[2025-04-06 12:24:28] [INFO] [MovementSystem] Updated movement path for Vexm
+[2025-04-06 12:24:28] [INFO] [Component] Setting earth_dragon_Vexm_021a245a-08d1-4b94-a06f-cd8406491e64 on to 5_9_3a9c8e3d-7b0d-4a2c-a065-6406ff8a95f5.
+[2025-04-06 12:24:28] [INFO] [MovementSystem] Moved from [4, 10] to [5, 9]
+[2025-04-06 12:24:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:29] [INFO] [MovementSystem] Updated movement range for Lyoca
+[2025-04-06 12:24:29] [INFO] [MovementSystem] Updated movement path for Lyoca
+[2025-04-06 12:24:29] [INFO] [Component] Setting dark_dragon_Lyoca_528f07b7-00c9-4cad-bfd8-847d714484b9 on to 2_4_e30273fa-2884-4fd2-a67e-42112fc9d4e7.
+[2025-04-06 12:24:29] [INFO] [MovementSystem] Moved from [3, 5] to [2, 4]
+[2025-04-06 12:24:30] [INFO] [AbilitySystem] Vexm Triggered ability system
+[2025-04-06 12:24:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:30] [INFO] [MovementSystem] Updated movement range for Neus
+[2025-04-06 12:24:30] [INFO] [MovementSystem] Updated movement path for Neus
+[2025-04-06 12:24:30] [INFO] [Component] Setting earth_dragon_Neus_d623b4c6-ecfb-41bb-82aa-a4a3f5a0f8ec on to 12_3_b262cd61-8bc8-493c-bcc6-7f8397b3600c.
+[2025-04-06 12:24:30] [INFO] [MovementSystem] Moved from [13, 3] to [12, 3]
+[2025-04-06 12:24:31] [INFO] [AbilitySystem] Lyoca Triggered ability system
+[2025-04-06 12:24:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:24:32] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 12:24:32] [INFO] [AbilitySystem] Neus Triggered ability system
+[2025-04-06 12:24:33] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_15ddafbc-68d6-4e9a-aa55-560c1e277510
+[2025-04-06 12:24:33] [INFO] [InputHandler] Gliding 1 camera to new tile 3_7_15ddafbc-68d6-4e9a-aa55-560c1e277510
+[2025-04-06 12:24:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:24:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Ayciuj
+[2025-04-06 12:24:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 12:24:35] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_15ddafbc-68d6-4e9a-aa55-560c1e277510
+[2025-04-06 12:24:40] [INFO] [AbilitySelectionPanel] Selecting slam
+[2025-04-06 12:24:40] [INFO] [AbilitySystem] Ayciuj is planning to use slam on [8, 12]
+[2025-04-06 12:24:40] [INFO] [AbilitySystem] Updated area of sight for Ayciuj, viewing 5 tiles
+[2025-04-06 12:24:40] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 3 tiles
+[2025-04-06 12:24:40] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:41] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 12:24:41] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [8, 12]
+[2025-04-06 12:24:41] [INFO] [AbilitySystem] Updated area of sight for Ayciuj, viewing 12 tiles
+[2025-04-06 12:24:42] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 12:24:42] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [8, 11]
+[2025-04-06 12:24:42] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 10 tiles
+[2025-04-06 12:24:42] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:42] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [8, 5]
+[2025-04-06 12:24:42] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 8 tiles
+[2025-04-06 12:24:42] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [7, 5]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 7 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [7, 4]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 4 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [6, 4]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 4 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [6, 3]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 8 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [5, 3]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 7 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [5, 2]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 8 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [4, 1]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 5 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [4, 0]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 5 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Ayciuj is planning to use slash on [3, 0]
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated line of sight for Ayciuj, viewing 5 tiles
+[2025-04-06 12:24:43] [INFO] [AbilitySystem] Updated area of effect for Ayciuj viewing 1 tiles

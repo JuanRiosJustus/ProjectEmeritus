@@ -1,0 +1,155 @@
+[2025-04-07 18:07:12] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-07 18:07:12] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-07 18:07:12] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-07 18:07:12] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-07 18:07:12] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-07 18:07:12] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-07 18:07:12] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-07 18:07:12] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-07 18:07:12] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-07 18:07:12] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-07 18:07:12] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-07 18:07:12] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-07 18:07:12] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-07 18:07:12] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-07 18:07:12] [INFO] [Component] Setting dark_dragon_Fied_985c5ecf-ab43-49ea-b9a6-ac9b16fb9335 on to 4_7_b6fd9f0c-bfbe-4aee-86b3-afbe4ab2f78d.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Fied into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting water_dragon_Yopy_a3a6a81f-2234-4271-adbb-e5d8e151adb8 on to 11_6_00a66648-b72f-4bcd-ac47-a3eeb5982788.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Yopy into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting light_dragon_Wiqoe_0ac6576a-2ce3-476a-9517-d6af8dee9a9c on to 11_1_97e57a7e-fabe-41cf-84f3-8f62b96b56a4.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Wiqoe into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting fire_dragon_Autii_d62f6efd-3c0d-4319-a8c3-bf928e95c0b6 on to 3_0_318a1e32-c557-4328-941b-c2e4621db918.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Autii into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting earth_dragon_Tozi_c0eca075-ec2f-4a11-a8dc-77e73b01ec92 on to 8_13_cf64b701-a360-4444-950f-fd0b4f2b786e.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Tozi into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting air_dragon_Kixyoe_c9688b8a-49bb-4fa7-95c5-b17942b1ca1e on to 10_9_7097b8b9-d690-45bf-a6f0-6561f98e71a8.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Kixyoe into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting fire_dragon_Iauyxo_3bb2a373-6f95-41a1-b632-9d9f0b8372c3 on to 1_5_9fd46928-5e9d-42a4-8459-c8e8bfa8f29a.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Iauyxo into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting water_dragon_Eauced_d0ff5b92-155b-498a-96a8-2dcd870130b6 on to 0_13_e2e3f967-f047-45d6-a7a3-c2b22ce74a18.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Eauced into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting earth_dragon_Iinuqo_1ce0d402-8a18-41a5-9c92-a694df18433a on to 6_6_ac43b07c-166e-44f2-9e51-5c6d958b4aa7.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Iinuqo into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting earth_dragon_Fugpa_2f303af9-5faf-4f77-8a83-f4f36ec28fe1 on to 3_8_a8709c1d-5863-40cd-98c8-c12a338cfcc2.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Fugpa into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting fire_dragon_Xevz_d48758c9-66cc-4e38-bfe0-75585456addd on to 2_10_5a31f188-7f16-4533-b974-1f92c5623afd.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Xevz into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting fire_dragon_Yyiaoa_17234b4e-407f-468c-893b-ff303d996fa6 on to 7_1_a2777199-791d-4b0c-b6f5-87ff6ff0489f.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Yyiaoa into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting air_dragon_Gaeiy_8749f6a0-cecb-4fa7-b847-72083e275247 on to 5_14_74a482d0-7803-41c4-b7c0-e209179b15ff.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Gaeiy into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting light_dragon_Sakea_d38f630a-b3e8-4bdb-8f4d-29e0205df5d6 on to 4_2_a2fc46b5-7ea4-493f-b001-78afedefe5c1.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Sakea into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting earth_dragon_Patpau_11e3f4d3-6ac7-4f24-84f2-ea572480f15e on to 0_12_53630c37-a557-4dd6-843c-37bf725ab422.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Patpau into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting air_dragon_Hiwu_c13d1ab9-4024-49ba-945c-448657c0f01e on to 4_13_60c7c06f-c8b7-45db-9793-f1b9957121d3.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Hiwu into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting earth_dragon_Baznu_f39a640c-a6c0-436d-ba4d-27ee689acb28 on to 5_12_03b18bc0-b6c3-4891-9d2a-733e7988c303.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Baznu into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting earth_dragon_Goxe_e90db518-b5f9-4dc2-a594-71a4b73936bf on to 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Goxe into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting air_dragon_Nili_434acac7-3dd9-4559-8e74-5ae005334ea8 on to 7_11_949c79b1-0505-4e98-845e-0b225bbdc2bf.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit enemy:Nili into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting fire_dragon_Cildi_6c2423a3-1253-4eca-bc82-636409a95122 on to 7_4_a4d7f81b-2685-4b11-bdf6-4bb5743fafdb.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Cildi into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting light_dragon_Giqel_3e4fb6fc-2206-48d0-b9a0-05e00c3f6eb1 on to 13_4_57cd1d7a-3e33-422d-8d68-7b49f781ed42.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Giqel into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting dragon_Gewri_6d10693d-7ff5-4422-8394-1d9e9174d738 on to 1_9_01cb6534-6d69-400c-8603-c2f369951d06.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Gewri into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting light_dragon_Oaacw_3fa4af7e-adae-412b-a777-cb6614c645d8 on to 9_9_719a71b0-26f1-4f6a-b6cc-7d675b9c578e.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Oaacw into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting light_dragon_Nawyya_1722e697-c568-4f2d-8518-ea3b63cb9bb8 on to 11_8_3523fa06-89ca-4479-b210-f324ed79ac6f.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Nawyya into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting earth_dragon_Gahiu_4527a04c-02b2-4ac6-863f-059305a5b42b on to 12_11_f8aa39e6-517b-4c06-8a5d-fb6b61e06e9f.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Gahiu into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting air_dragon_Hinrl_2268172d-4c3b-4349-a86f-51ca21e1106e on to 2_2_f8bdb94f-faed-4ba2-b712-af5d26a84890.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Hinrl into queue
+[2025-04-07 18:07:12] [INFO] [Component] Setting water_dragon_Kazeu_dc11e17e-d74d-449d-a63c-ada68e662a25 on to 14_14_19ae0130-fbd1-4640-8fe1-d60c3a5a191c.
+[2025-04-07 18:07:12] [INFO] [SpeedQueue] Added unit user:Kazeu into queue
+[2025-04-07 18:07:12] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-07 18:07:13] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-07 18:07:13] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-07 18:07:13] [INFO] [FontPool] Started initializing FontPool
+[2025-04-07 18:07:13] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-07 18:07:13] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-07 18:07:13] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-07 18:07:13] [INFO] [AbilitySelectionPanel] Updating ability selection for earth_dragon_Patpau_11e3f4d3-6ac7-4f24-84f2-ea572480f15e
+[2025-04-07 18:07:16] [INFO] [AbilitySelectionPanel] Finished ability selection for earth_dragon_Patpau_11e3f4d3-6ac7-4f24-84f2-ea572480f15e
+[2025-04-07 18:07:16] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-07 18:07:16] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-07 18:07:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-07 18:07:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-07 18:07:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-07 18:07:16] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-07 18:07:16] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-07 18:07:16] [INFO] [VisualsSystem] Finished creating blurred background after 0.49965161085128784 seconds
+[2025-04-07 18:07:20] [INFO] [InputHandler] Gliding 0 camera to new tile 0_12_53630c37-a557-4dd6-843c-37bf725ab422
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement range to 1 for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [4, 12] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement range to 1 for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [4, 12] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [4, 13] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [4, 13] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [4, 14] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [4, 14] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [3, 14] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to [3, 14] for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to null for Patpau
+[2025-04-07 18:07:20] [INFO] [MovementSystem] Updated movement path from [0, 12] to null for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [2, 14] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [2, 14] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [1, 13] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [1, 13] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [0, 12] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [0, 12] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [1, 13] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [1, 13] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [2, 14] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to [2, 14] for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to null for Patpau
+[2025-04-07 18:07:21] [INFO] [MovementSystem] Updated movement path from [0, 12] to null for Patpau
+[2025-04-07 18:07:23] [INFO] [InputHandler] Gliding 0 camera to new tile 0_12_53630c37-a557-4dd6-843c-37bf725ab422
+[2025-04-07 18:07:23] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-07 18:07:23] [INFO] [AbilitySystem] Patpau is planning to use ember on null
+[2025-04-07 18:07:23] [INFO] [AbilitySystem] Updated area of sight for Patpau, viewing 4 tiles
+[2025-04-07 18:07:23] [INFO] [AbilitySystem] Updated line of sight for Patpau, viewing 0 tiles
+[2025-04-07 18:07:23] [INFO] [AbilitySystem] Updated area of effect for Patpau viewing 0 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Patpau is planning to use ember on [2, 14]
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated line of sight for Patpau, viewing 2 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated area of effect for Patpau viewing 1 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Patpau is planning to use ember on [1, 14]
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated line of sight for Patpau, viewing 2 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated area of effect for Patpau viewing 1 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Patpau is planning to use ember on [1, 13]
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated line of sight for Patpau, viewing 2 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated area of effect for Patpau viewing 1 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Patpau is planning to use ember on [0, 13]
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated line of sight for Patpau, viewing 2 tiles
+[2025-04-07 18:07:24] [INFO] [AbilitySystem] Updated area of effect for Patpau viewing 1 tiles
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Started constructing cost mappings for Patpau to use ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Finished constructing cost mappings for Patpau to use ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Checking cost requirements for Patpau to use ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Patpau is able to pay for ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Started constructing cost mappings for Patpau to use ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Finished constructing cost mappings for Patpau to use ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Paying cost requirements for Patpau using ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-07 18:07:25] [INFO] [AbilitySystem] Used from ember on [0, 13]
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Started constructing damage mappings for Patpau to use ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Finished constructing damage mappings for Patpau to use ember
+[2025-04-07 18:07:25] [INFO] [CombatSystem] Started dealing damage with ember to Eauced 
+[2025-04-07 18:07:25] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-07 18:07:25] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-07 18:07:25] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-07 18:07:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-07 18:07:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-07 18:07:29] [INFO] [InputHandler] Gliding 0 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d
+[2025-04-07 18:07:29] [INFO] [InputHandler] Gliding 1 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d
+[2025-04-07 18:07:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-07 18:07:29] [INFO] [SelectedTilePanel] Updated selected tile display to view Goxe
+[2025-04-07 18:07:30] [INFO] [InputHandler] Gliding 0 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d
+[2025-04-07 18:07:30] [INFO] [InputHandler] Gliding 1 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d
+[2025-04-07 18:07:31] [INFO] [InputHandler] Gliding 0 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d
+[2025-04-07 18:07:31] [INFO] [InputHandler] Gliding 1 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d
+[2025-04-07 18:07:31] [INFO] [InputHandler] Gliding 0 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d
+[2025-04-07 18:07:31] [INFO] [InputHandler] Gliding 1 camera to new tile 9_6_5993a28a-0a52-4f45-91f6-49e43917fb3d

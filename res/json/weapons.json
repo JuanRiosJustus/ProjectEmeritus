@@ -1,0 +1,30 @@
+{
+    "Body": {
+        "Passives": [],
+        "Actives": []
+    },
+    "Cudgel": {
+        "Passives": [],
+        "Actives": []
+    },
+    "Staff": {
+        "Passives": [],
+        "Actives": []
+    },
+    "Shortsword": {
+        "Passives": [],
+        "Actives": []
+    },
+    "Longsword": {
+        "Passives": [],
+        "Actives": []
+    },
+    "Shortbow": {
+        "Passives": [],
+        "Actives": []
+    },
+    "Longbow": {
+        "Passives": [],
+        "Actives": []
+    }
+}

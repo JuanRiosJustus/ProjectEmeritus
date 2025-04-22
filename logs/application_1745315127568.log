@@ -1,0 +1,61 @@
+[2025-04-22 02:45:27] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-22 02:45:27] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-22 02:45:27] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-22 02:45:27] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-22 02:45:27] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-22 02:45:27] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-22 02:45:27] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-22 02:45:27] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-22 02:45:27] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-22 02:45:27] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-22 02:45:27] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-22 02:45:27] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-22 02:45:27] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-22 02:45:27] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-22 02:45:27] [INFO] [Component] Setting air_dragon_Oicoiy_a8d0ffb3-2a5d-46bf-b62b-e11e285ace82 on to {"row":5,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Oicoiy_a8d0ffb3-2a5d-46bf-b62b-e11e285ace82","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit enemy:Oicoiy into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting air_dragon_Vyks_a7ecf182-78bc-4185-801f-50f3726d3c52 on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Vyks_a7ecf182-78bc-4185-801f-50f3726d3c52","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit enemy:Vyks into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting dark_dragon_Loxnol_45d9c037-dc72-4a50-8cd0-f7bab5a0bfb7 on to {"row":4,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Loxnol_45d9c037-dc72-4a50-8cd0-f7bab5a0bfb7","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit enemy:Loxnol into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting earth_dragon_Zopoi_b92200f4-53e8-4423-a3e0-88cdc910a70e on to {"row":7,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Zopoi_b92200f4-53e8-4423-a3e0-88cdc910a70e","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit enemy:Zopoi into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting air_dragon_Culqll_09b1fdfd-3cae-4128-9982-148a5245a962 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Culqll_09b1fdfd-3cae-4128-9982-148a5245a962","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit enemy:Culqll into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting water_dragon_Hezt_e16a05dd-084a-4038-99f4-f6320ceeaba0 on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Hezt_e16a05dd-084a-4038-99f4-f6320ceeaba0","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit user:Hezt into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting water_dragon_Segp_7b6cf3ba-d519-43bd-9246-7e67bc621ccc on to {"row":5,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Segp_7b6cf3ba-d519-43bd-9246-7e67bc621ccc","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit user:Segp into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting dragon_Cojia_18960005-8a27-4f8e-bcf9-bb8d504e10fa on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Cojia_18960005-8a27-4f8e-bcf9-bb8d504e10fa","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit user:Cojia into queue
+[2025-04-22 02:45:27] [INFO] [Component] Setting light_dragon_Eeyayo_8eba0511-4ace-4909-a9bb-5b19be54894a on to {"row":4,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Eeyayo_8eba0511-4ace-4909-a9bb-5b19be54894a","structure":""}.
+[2025-04-22 02:45:27] [INFO] [SpeedQueue] Added unit user:Eeyayo into queue
+[2025-04-22 02:45:27] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-22 02:45:28] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-22 02:45:28] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:45:28] [INFO] [FontPool] Started initializing FontPool
+[2025-04-22 02:45:28] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-22 02:45:28] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-22 02:45:28] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-22 02:45:28] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:45:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-22 02:45:28] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-22 02:45:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-22 02:45:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Vyks_a7ecf182-78bc-4185-801f-50f3726d3c52
+[2025-04-22 02:45:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Vyks_a7ecf182-78bc-4185-801f-50f3726d3c52
+[2025-04-22 02:45:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:45:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:45:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-22 02:45:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-22 02:45:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:45:28] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-22 02:45:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-22 02:45:29] [INFO] [VisualsSystem] Finished creating blurred background after 0.4901542067527771 seconds
+[2025-04-22 02:45:30] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_b45509ce-b58f-4b23-b9f5-9c46845a11a5
+[2025-04-22 02:45:30] [INFO] [InputHandler] Gliding 1 camera to new tile 3_7_b45509ce-b58f-4b23-b9f5-9c46845a11a5
+[2025-04-22 02:45:30] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Vyks_a7ecf182-78bc-4185-801f-50f3726d3c52
+[2025-04-22 02:45:30] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Vyks_a7ecf182-78bc-4185-801f-50f3726d3c52
+[2025-04-22 02:45:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:45:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Vyks
+[2025-04-22 02:45:32] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:45:32] [INFO] [StatisticsPanel] Finished updating statistics information panel

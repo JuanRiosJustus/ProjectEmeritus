@@ -1,0 +1,272 @@
+[2025-04-08 00:03:40] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-08 00:03:40] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-08 00:03:40] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-08 00:03:40] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-08 00:03:40] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-08 00:03:40] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-08 00:03:40] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-08 00:03:40] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-08 00:03:40] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-08 00:03:40] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-08 00:03:40] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-08 00:03:40] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-08 00:03:41] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-08 00:03:41] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-08 00:03:41] [INFO] [Component] Setting air_dragon_Qydnz_1c4c5fd3-09f7-4bd4-9829-f55729702b14 on to 9_6_9ff73a31-d523-4bb4-be62-75ebe53fc212.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Qydnz into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Qiqv_1affaab8-95fa-4b57-b44d-18831c1aa4f9 on to 0_7_8b0ef2ec-8db6-419a-955e-5d7222661cc7.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Qiqv into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dark_dragon_Iiim_876eec85-72b1-425a-9d11-fae929c34639 on to 14_4_f52a5a3e-f671-4c00-9cca-dbc2e23807b9.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Iiim into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Suhe_2bf603e9-5854-44c6-b3e1-5fb9d560dddf on to 8_3_33825617-b63e-4626-97ef-56b91e5716ab.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Suhe into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dark_dragon_Wesu_b91ed119-96a3-488a-8fa7-8969fe8c8481 on to 9_3_6db70b54-357f-4068-9095-b2bcecc0140d.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Wesu into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Iiogay_dbda580d-6d4c-49d3-acf7-372116ec65fe on to 12_7_85d4f0cb-ed25-4302-ae9a-943327f63c20.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Iiogay into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Eihoid_59c37681-62c4-45e4-a746-30e29369e68f on to 4_11_147154d7-efc8-47b0-b7df-234a021ebf3d.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Eihoid into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting air_dragon_Aagen_08b15943-3cf7-4a40-9912-9dcc78d73da1 on to 14_7_5df786c2-355a-4620-9d4f-b7a65e5040c7.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Aagen into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dark_dragon_Lytkw_25911f7b-33e5-4486-b691-2922c9d5f2e8 on to 7_1_a91c73ac-6985-40e2-9747-fbceb7524db3.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Lytkw into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting water_dragon_Poeovg_8c8aa60f-7538-494a-943d-60822858f026 on to 13_5_cb35f44b-b927-4eff-a367-084933292be2.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Poeovg into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting air_dragon_Iysa_fe5b8167-9011-4f85-8afb-5449a02214f1 on to 0_3_58ff2bde-869e-49bc-b276-c5a365062584.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Iysa into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dark_dragon_Eytoi_4847a8d4-2954-444f-8b27-b4d11027b941 on to 12_9_7a095138-08bd-4433-a19f-5087ac324285.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Eytoi into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dark_dragon_Couoye_b244dfd9-bbbe-4512-8df2-afaa66d80464 on to 12_4_37adde14-3065-4128-bcf2-28645b15fdbf.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Couoye into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Duseuq_bef213bb-3a9c-4dd3-b23d-c6269649eb0f on to 2_3_bb4b4d3b-cad7-47c6-882c-2bfacb16d6a2.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Duseuq into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212 on to 2_4_9408002a-f578-401b-ae49-ba11aac25b8c.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Lioka into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Reyuyi_ca8f83c0-6762-4d1f-8018-0c40b2ab87e1 on to 12_6_21affaaf-952f-43c2-919d-b61b72a61468.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Reyuyi into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting water_dragon_Hyru_86b764d7-1c6f-47f7-a4f4-6a66e4ccb5fe on to 13_3_c7ad9992-680f-4605-b758-1ef52c81d5c7.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Hyru into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting air_dragon_Eukse_f7c193ec-772b-4d89-8820-df7950255468 on to 13_8_686d2214-ad50-40bf-a7ed-ff7195ce131e.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Eukse into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dragon_Paah_5c2b5d6f-af02-43af-ab59-b968a41e02a6 on to 4_13_97f9c8b6-5800-4c73-ba98-3e40bc651c2d.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Paah into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Xiqejj_e1d856d8-8bbe-4661-bdd5-640246661b62 on to 3_12_1e206ec1-8c73-49e0-a19d-948e97d4ee80.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Xiqejj into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting air_dragon_Tahawe_168c0f8d-0f01-4a4e-81a0-e8990875ea74 on to 9_5_f9e44221-5a8a-45fb-8492-90c16611b8a0.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit enemy:Tahawe into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting water_dragon_Eeeoqp_a1b9d81b-ba0e-46b7-b456-37fb7a7d756d on to 13_0_dcf334aa-74dc-45d9-97f9-874b986e9a1a.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Eeeoqp into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting air_dragon_Xotou_cbf867c5-9442-49d5-98de-694ac0f4dd57 on to 7_12_c42d3d75-4b91-4b25-b316-81d80514826c.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Xotou into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting water_dragon_Uans_714f9d9e-ea35-4b82-8413-f93c0e463ea0 on to 0_10_8228e28e-86e0-4eeb-ade3-079b335ef056.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Uans into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Eudoe_ea5d73b0-c24a-4345-b0bb-9475e99013b9 on to 8_0_6dda920a-abf1-48c3-b515-34ef96870f5d.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Eudoe into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting fire_dragon_Gabful_97724228-6d6f-4381-add5-898dd03d1b92 on to 13_4_1924f114-fbc1-479c-830d-4cab42ba87b7.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Gabful into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dark_dragon_Qofoa_3ac76399-aa7a-404e-8dcf-ea1314d56888 on to 10_8_a080b56f-170d-4c0d-9db0-2dbf90994055.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Qofoa into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting air_dragon_Wevy_846d1bce-70d5-435c-aef4-aafac03eb9e5 on to 2_5_8c488fde-446e-4fb1-8142-244ad82e3f85.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Wevy into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting light_dragon_Uycy_05318d10-b15f-4850-8194-fd2a72f358b6 on to 6_13_9d142380-d5b6-4003-98fa-c3fcb8120986.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Uycy into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting light_dragon_Fixtrr_bbc9d73b-48d1-496b-8d92-298b7bce6110 on to 14_12_70ac0f43-15c9-4dc9-a2bb-73b7c650730d.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Fixtrr into queue
+[2025-04-08 00:03:41] [INFO] [Component] Setting dragon_Getii_4e8b9619-4805-4ccf-ac7b-a43ace597aec on to 6_10_4ef8df59-060a-4e3d-a268-2619e16eee36.
+[2025-04-08 00:03:41] [INFO] [SpeedQueue] Added unit user:Getii into queue
+[2025-04-08 00:03:41] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-08 00:03:41] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-08 00:03:41] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-08 00:03:41] [INFO] [FontPool] Started initializing FontPool
+[2025-04-08 00:03:41] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-08 00:03:42] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-08 00:03:42] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-08 00:03:42] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:42] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:42] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 00:03:42] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 00:03:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-08 00:03:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-08 00:03:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 00:03:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-08 00:03:42] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:42] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:42] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 00:03:42] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-08 00:03:43] [INFO] [VisualsSystem] Finished creating blurred background after 0.49094000458717346 seconds
+[2025-04-08 00:03:44] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_9408002a-f578-401b-ae49-ba11aac25b8c
+[2025-04-08 00:03:44] [INFO] [InputHandler] Gliding 1 camera to new tile 2_4_9408002a-f578-401b-ae49-ba11aac25b8c
+[2025-04-08 00:03:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 00:03:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Lioka
+[2025-04-08 00:03:45] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_9408002a-f578-401b-ae49-ba11aac25b8c
+[2025-04-08 00:03:48] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 9]
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of sight for Lioka, viewing 11 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:48] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:48] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 00:03:48] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 00:03:48] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:48] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:03:48] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 00:03:48] [INFO] [CombatSystem] Started constructing damage mappings for Lioka to use energy_wave
+[2025-04-08 00:03:48] [INFO] [CombatSystem] Finished constructing damage mappings for Lioka to use energy_wave
+[2025-04-08 00:03:48] [INFO] [CombatSystem] Started constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:03:48] [INFO] [CombatSystem] Finished constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:03:48] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 8]
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 7]
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 7 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 7]
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 6]
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 5]
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 4 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 4]
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:48] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 3]
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 3 tiles
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 4]
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 5]
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 3 tiles
+[2025-04-08 00:03:49] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:50] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [2, 5]
+[2025-04-08 00:03:50] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:50] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 5]
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 3 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 4]
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 4]
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 3 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 5]
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 4 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 6]
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 7]
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:51] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:52] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 8]
+[2025-04-08 00:03:52] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:52] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:52] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 8]
+[2025-04-08 00:03:52] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:52] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:03:57] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_9408002a-f578-401b-ae49-ba11aac25b8c
+[2025-04-08 00:03:59] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 9]
+[2025-04-08 00:03:59] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 2 tiles
+[2025-04-08 00:03:59] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:01] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_9408002a-f578-401b-ae49-ba11aac25b8c
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement range to 8 for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [5, 9] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement range to 8 for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [5, 9] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [5, 8] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [5, 8] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [5, 7] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [5, 7] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [4, 7] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [4, 7] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [4, 6] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [4, 6] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [4, 5] for Lioka
+[2025-04-08 00:04:01] [INFO] [MovementSystem] Updated movement path from [2, 4] to [4, 5] for Lioka
+[2025-04-08 00:04:02] [INFO] [MovementSystem] Updated movement path from [2, 4] to [3, 5] for Lioka
+[2025-04-08 00:04:02] [INFO] [MovementSystem] Updated movement path from [2, 4] to [3, 5] for Lioka
+[2025-04-08 00:04:02] [INFO] [MovementSystem] Updated movement path from [2, 4] to [3, 4] for Lioka
+[2025-04-08 00:04:02] [INFO] [MovementSystem] Updated movement path from [2, 4] to [3, 4] for Lioka
+[2025-04-08 00:04:03] [INFO] [Component] Setting dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212 on to 3_4_7163e614-5e1d-43ed-ad1d-12b54d1b9d9d.
+[2025-04-08 00:04:03] [INFO] [MovementSystem] Moved from [2, 4] to [3, 4]
+[2025-04-08 00:04:03] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_7163e614-5e1d-43ed-ad1d-12b54d1b9d9d
+[2025-04-08 00:04:03] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 8]
+[2025-04-08 00:04:03] [INFO] [AbilitySystem] Updated area of sight for Lioka, viewing 13 tiles
+[2025-04-08 00:04:03] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:04:03] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:03] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 8]
+[2025-04-08 00:04:03] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:04:03] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [6, 10]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 9]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [5, 8]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [4, 7]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 5 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 7]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 4 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [3, 6]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 3 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [2, 6]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 3 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Lioka is planning to use energy_wave on [2, 5]
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated line of sight for Lioka, viewing 3 tiles
+[2025-04-08 00:04:04] [INFO] [AbilitySystem] Updated area of effect for Lioka viewing 1 tiles
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Started constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Finished constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Checking cost requirements for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Lioka is able to pay for energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Started constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Finished constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Paying cost requirements for Lioka using energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-08 00:04:05] [INFO] [AbilitySystem] Used from energy_wave on [2, 5]
+[2025-04-08 00:04:05] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:04:05] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:04:05] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 00:04:05] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 00:04:05] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:04:05] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Lioka_ac3236c4-1ca0-43a7-b14e-580adf75b212
+[2025-04-08 00:04:05] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Started constructing damage mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Finished constructing damage mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Started constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [CombatSystem] Finished constructing cost mappings for Lioka to use energy_wave
+[2025-04-08 00:04:05] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-08 00:04:06] [INFO] [CombatSystem] Started constructing damage mappings for Lioka to use energy_wave
+[2025-04-08 00:04:06] [INFO] [CombatSystem] Finished constructing damage mappings for Lioka to use energy_wave
+[2025-04-08 00:04:06] [INFO] [CombatSystem] Started dealing damage with energy_wave to Wevy 
+[2025-04-08 00:04:06] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-08 00:04:06] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-08 00:04:06] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-08 00:04:06] [INFO] [AbilitySelectionPanel] Updating ability selection for air_dragon_Eukse_f7c193ec-772b-4d89-8820-df7950255468
+[2025-04-08 00:04:06] [INFO] [AbilitySelectionPanel] Finished ability selection for air_dragon_Eukse_f7c193ec-772b-4d89-8820-df7950255468
+[2025-04-08 00:04:06] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 00:04:06] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 00:04:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-08 00:04:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-08 00:04:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 00:04:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Eukse
+[2025-04-08 00:04:06] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity air_dragon_Eukse_f7c193ec-772b-4d89-8820-df7950255468
+[2025-04-08 00:04:06] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity air_dragon_Eukse_f7c193ec-772b-4d89-8820-df7950255468
+[2025-04-08 00:04:06] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 00:04:06] [INFO] [InputHandler] Gliding 0 camera to new tile 13_8_686d2214-ad50-40bf-a7ed-ff7195ce131e
+[2025-04-08 00:04:06] [INFO] [InputHandler] Gliding 1 camera to new tile 13_8_686d2214-ad50-40bf-a7ed-ff7195ce131e
+[2025-04-08 00:04:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 00:04:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Eytoi

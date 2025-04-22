@@ -1,0 +1,62 @@
+[2025-04-05 18:37:21] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 18:37:21] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 18:37:21] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 18:37:21] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 18:37:21] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 18:37:21] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 18:37:21] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 18:37:21] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 18:37:21] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 18:37:21] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 18:37:21] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 18:37:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 18:37:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 18:37:22] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 18:37:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 18:37:22] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 18:37:22] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 18:37:25] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 18:37:25] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 18:57:01] [INFO] [Component] Setting air_dragon_Naxf_63bd6a55-f406-4856-b48a-b90e8ac6b54c on to 14_14_ef5f56cc-60d3-4354-b762-9e2cb932a40e.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Naxf into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting dark_dragon_Cutu_94a26520-8a4e-4b46-a741-db14bae1a94c on to 4_11_25ff3897-1469-425d-8994-ecc2cceafda4.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Cutu into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting water_dragon_Faoh_cf47797d-e52b-45e6-aca0-469a14ba4a56 on to 14_12_16ddc535-ad05-4a87-8939-6d1271e8aecb.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Faoh into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting fire_dragon_Puznz_b74f24af-6c0d-4758-8ba3-44cd486d1654 on to 8_5_dc8198f2-641d-4862-8484-46eb34c89c6c.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Puznz into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting earth_dragon_Auenaj_f9cd41bc-a8ec-4c12-8f79-73de001bcd0a on to 2_8_32d11acf-8910-4071-bb82-2967cc85e301.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Auenaj into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting dark_dragon_Eogay_108d6034-c114-415b-a098-dfd2b0f9bf8c on to 5_6_ba0a7fb0-d87e-442a-96cf-3dd995da128a.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Eogay into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting air_dragon_Dalea_53d6025d-0984-4003-a651-4fda8ec72904 on to 9_5_96b44d58-6422-4e70-bcc4-5e365efc652b.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Dalea into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting water_dragon_Cuct_ac25e8b1-19aa-44a8-b001-0d288807a1c0 on to 1_5_3ec48f4b-1616-4c19-954c-885c8f7b8fd7.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Cuct into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting dark_dragon_Jocla_02163ce4-b3a3-4c1d-85e1-3e0dde7a2357 on to 0_2_f746a311-7b58-4982-9b61-7cff17ac58e9.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Jocla into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting dark_dragon_Xuxieh_7e5ab12a-23be-49d8-a2d7-ea95fb180d17 on to 4_6_e3cfce92-8397-43e8-ac3f-b46e738b3849.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Xuxieh into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting dark_dragon_Sonlu_56234fd8-2785-4080-966e-a3545c2dee8c on to 5_5_b708dfe2-8262-4abe-b05f-2b1c92e07a2b.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Sonlu into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting air_dragon_Ryaciy_f46af1a5-1a94-4b03-9acd-79e77f3a2448 on to 14_6_2af18d40-87b1-4fe0-bfb7-2e656f098bde.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Ryaciy into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting light_dragon_Namre_320f2d71-1e89-48ff-b88a-96b472f084f8 on to 5_13_86c14e6e-5312-43ba-8e6c-c2ecd0ee4f54.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Namre into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting water_dragon_Muxy_f34f67e5-676b-47d3-877c-fba279bf5334 on to 6_3_96e77f95-3ed8-4d14-a997-12cadd659b15.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Muxy into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting dark_dragon_Hoey_6fe7ab54-72ba-46b9-98a1-4853cd02e020 on to 11_8_baba0067-34fd-4797-a101-8182fbfb2873.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Hoey into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting dragon_Hehl_0d70da69-bcc0-40b0-98f3-a5170d847fee on to 9_0_41dd71a2-bc92-48b1-9d8b-2715025ad853.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Hehl into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting fire_dragon_Iofc_45e2dccd-e04a-40ab-aaaa-d27c0cdc39e9 on to 2_11_686b4fd6-f7e3-4aca-b86a-c4089c3d81da.
+[2025-04-05 18:57:01] [INFO] [SpeedQueue] Added unit enemy:Iofc into queue
+[2025-04-05 18:57:01] [INFO] [Component] Setting water_dragon_Huboas_ee2ac974-5e82-406a-8267-5f9d00b76c7d on to 2_4_b06cde63-65d1-45d8-ae4f

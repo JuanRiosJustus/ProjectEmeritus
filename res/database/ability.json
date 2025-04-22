@@ -1,0 +1,650 @@
+[
+    {
+        "ability": "pierce_attack",
+        "type": [
+            "normal"
+        ],
+        "impact": "pierce",
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "to_target_and_back",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "stamina",
+                "scaling_type": "total",
+                "scaling_attribute": "stamina",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            }
+        ],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "slash_attack",
+        "type": [
+            "normal"
+        ],
+        "impact": "strike",
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "to_target_and_back",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "stamina",
+                "scaling_type": "total",
+                "scaling_attribute": "stamina",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            }
+        ],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "blunt_attack",
+        "type": [
+            "normal"
+        ],
+        "impact": "blunt",
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "to_target_and_back",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "stamina",
+                "scaling_type": "total",
+                "scaling_attribute": "stamina",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            }
+        ],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "light_attack",
+        "type": [
+            "light"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+        ],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "oblation",
+        "type": [
+            "light"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Deals damage to the target in exchange for mana",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.2
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "current",
+                "scaling_attribute": "health",
+                "scaling_magnitude": 0.25
+            },
+            {
+                "target_attribute": "mana",
+                "scaling_type": "current",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": -0.25
+            }
+        ],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "air_attack",
+        "type": [
+            "air"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "tailwind",
+        "type": [
+            "air"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 0,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Increases the users move speed",
+        "metadata_tags": [],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [],
+        "target_tags": [
+        ],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "water_attack",
+        "type": [
+            "water"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "wet",
+                "chance": 0.1
+            }
+        ],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "dark_attack",
+        "type": [
+            "dark"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "stamina",
+                "scaling_type": "total",
+                "scaling_attribute": "stamina",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            }
+        ],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "fire_attack",
+        "type": [
+            "fire"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "burn",
+                "chance": 0.1
+            }
+        ],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "earth_attack",
+        "type": [
+            "earth"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": []
+    },
+    {
+        "ability": "light_force",
+        "type": [
+            "light"
+        ],
+        "impact": "",
+        "accuracy": 0,
+        "range": 0,
+        "area": 0,
+        "announcement": "",
+        "user_animation": "",
+        "target_animation": "",
+        "makes_physical_contact": false,
+        "description": "Increases the users Health and Magical Attack passively",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            },
+            {
+                "scaling_attribute": "magical_attack",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ]
+    },
+    {
+        "ability": "air_force",
+        "type": [
+            "air"
+        ],
+        "impact": "",
+        "accuracy": 0,
+        "range": 0,
+        "area": 0,
+        "announcement": null,
+        "user_animation": null,
+        "target_animation": null,
+        "makes_physical_contact": false,
+        "description": "Increases the users Speed passively",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "speed",
+                "scaling_type": "total",
+                "scaling_magnitude": 0.5
+            }
+        ]
+    },
+    {
+        "ability": "water_force",
+        "type": [
+            "water"
+        ],
+        "impact": "",
+        "accuracy": 0,
+        "range": 0,
+        "area": 0,
+        "announcement": "",
+        "user_animation": "",
+        "target_animation": "",
+        "makes_physical_contact": false,
+        "description": "Increases the users Magical Attack passively",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "magical_attack",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            }
+        ]
+    },
+    {
+        "ability": "dark_force",
+        "type": [
+            "dark"
+        ],
+        "impact": "",
+        "accuracy": 0,
+        "range": 0,
+        "area": 0,
+        "announcement": "",
+        "user_animation": "",
+        "target_animation": "",
+        "makes_physical_contact": false,
+        "description": "Increases the users Physical Attack and Mana passively",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "physical_attack",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            },
+            {
+                "scaling_attribute": "magical_attack",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ]
+    },
+    {
+        "ability": "fire_force",
+        "type": [
+            "fire"
+        ],
+        "impact": "",
+        "accuracy": 0,
+        "range": 0,
+        "area": 0,
+        "announcement": "",
+        "user_animation": "",
+        "target_animation": "",
+        "makes_physical_contact": false,
+        "description": "Increases the users Physical Attack and Speed passively",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "physical_attack",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            },
+            {
+                "scaling_attribute": "speed",
+                "scaling_type": "base",
+                "scaling_magnitude": 1
+            }
+        ]
+    },
+    {
+        "ability": "earth_force",
+        "type": [
+            "earth"
+        ],
+        "impact": "",
+        "accuracy": 0,
+        "range": 0,
+        "area": 0,
+        "announcement": "",
+        "user_animation": "",
+        "target_animation": "",
+        "makes_physical_contact": false,
+        "description": "Increases the users Health and Defense passively",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "physical_defense",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            },
+            {
+                "scaling_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            },
+            {
+                "scaling_attribute": "magical_defense",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ]
+    },
+    {
+        "ability": "soft_shell_i",
+        "type": [
+            "normal"
+        ],
+        "impact": "",
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "",
+        "target_animation": "",
+        "makes_physical_contact": false,
+        "description": "Increases the users defense",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 7
+            }
+        ]
+    },
+    {
+        "ability": "soft_shell_ii",
+        "type": [
+            "normal"
+        ],
+        "impact": "",
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+        "announcement": "Soft Shell I",
+        "user_animation": "",
+        "target_animation": "",
+        "makes_physical_contact": false,
+        "description": "Increases the users defense",
+        "metadata_tags": [],
+        "costs": [],
+        "damages": [],
+        "target_tags": [],
+        "user_tags": [],
+        "attributes": [
+            {
+                "scaling_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 15
+            }
+        ]
+    }
+]

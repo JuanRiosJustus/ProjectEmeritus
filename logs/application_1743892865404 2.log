@@ -1,0 +1,36 @@
+[2025-04-05 15:41:05] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 15:41:05] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 15:41:05] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 15:41:05] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 15:41:05] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 15:41:05] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 15:41:05] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 15:41:05] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 15:41:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 15:41:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 15:41:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 15:41:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 15:41:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 15:41:05] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 15:41:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 15:41:05] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 15:41:05] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 15:44:01] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 15:44:01] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 15:44:34] [INFO] [Component] Setting earth_dragon_Meraua_4a69d7c8-2a74-4e4d-abe9-2b7db14ec431 on to 5_7_2662c329-5466-44f9-ad9c-a957101b5228.
+[2025-04-05 15:44:34] [INFO] [SpeedQueue] Added unit enemy:Meraua into queue
+[2025-04-05 15:44:34] [INFO] [Component] Setting dragon_Joqcyo_e03619d5-4ced-4278-93a8-4d597e480000 on to 1_3_7fbb8f9e-30ea-4843-a4c3-84cfd2a6c3fb.
+[2025-04-05 15:44:34] [INFO] [SpeedQueue] Added unit enemy:Joqcyo into queue
+[2025-04-05 15:44:34] [INFO] [Component] Setting water_dragon_Tawq_40b93fc0-8bca-44a3-9f45-4b9407c4f378 on to 11_1_e1dc73fe-677e-427c-b41d-aa4791f04bf3.
+[2025-04-05 15:44:34] [INFO] [SpeedQueue] Added unit enemy:Tawq into queue
+[2025-04-05 15:44:34] [INFO] [Component] Setting light_dragon_Lafao_f55959ca-c899-4c71-b063-57b52ca2d599 on to 6_7_1b01f2d4-e69f-42a7-bb4d-b2f6d8e92071.
+[2025-04-05 15:44:34] [INFO] [SpeedQueue] Added unit enemy:Lafao into queue
+[2025-04-05 15:44:35] [INF

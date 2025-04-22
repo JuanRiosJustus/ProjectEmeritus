@@ -1,0 +1,48 @@
+[2025-04-19 11:47:09] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 11:47:09] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 11:47:09] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 11:47:09] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 11:47:09] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 11:47:09] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 11:47:09] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 11:47:09] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 11:47:09] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 11:47:09] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 11:47:09] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 11:47:09] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 11:47:09] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 11:47:09] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 11:47:09] [INFO] [Component] Setting dragon_Kyfrgh_b261cbd6-907b-4caf-b616-ac012e34cf5c on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Kyfrgh_b261cbd6-907b-4caf-b616-ac012e34cf5c","structure":""}.
+[2025-04-19 11:47:09] [INFO] [SpeedQueue] Added unit enemy:Kyfrgh into queue
+[2025-04-19 11:47:09] [INFO] [Component] Setting fire_dragon_Rayea_8ed210f5-00d0-4cc8-b24f-46443145ae84 on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Rayea_8ed210f5-00d0-4cc8-b24f-46443145ae84","structure":""}.
+[2025-04-19 11:47:09] [INFO] [SpeedQueue] Added unit enemy:Rayea into queue
+[2025-04-19 11:47:09] [INFO] [Component] Setting fire_dragon_Pamyn_4d5b0caf-52fc-466d-9303-211bdf50a76e on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Pamyn_4d5b0caf-52fc-466d-9303-211bdf50a76e","structure":""}.
+[2025-04-19 11:47:09] [INFO] [SpeedQueue] Added unit enemy:Pamyn into queue
+[2025-04-19 11:47:09] [INFO] [Component] Setting water_dragon_Xyqvia_2a8fe5bc-0d97-41b7-a306-0949eb621f1e on to {"row":3,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Xyqvia_2a8fe5bc-0d97-41b7-a306-0949eb621f1e","structure":""}.
+[2025-04-19 11:47:09] [INFO] [SpeedQueue] Added unit enemy:Xyqvia into queue
+[2025-04-19 11:47:09] [INFO] [Component] Setting earth_dragon_Ziwi_b8a13c3a-dfe0-43dd-bb8a-08725e78207a on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Ziwi_b8a13c3a-dfe0-43dd-bb8a-08725e78207a","structure":""}.
+[2025-04-19 11:47:09] [INFO] [SpeedQueue] Added unit user:Ziwi into queue
+[2025-04-19 11:47:09] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 11:47:09] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 11:47:09] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 11:47:09] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 11:47:09] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 11:47:10] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 11:47:10] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 11:47:10] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 11:47:10] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_95c7dd59-3779-46e1-a0c4-a5ab189ce3bd
+[2025-04-19 11:47:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 11:47:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 11:47:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 11:47:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 11:47:10] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 11:47:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.5031547546386719 seconds
+[2025-04-19 11:47:31] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 11:47:31] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 11:47:31] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_1e7a1d9d-1032-4f4f-a4f6-05b037cb3dc6
+[2025-04-19 11:47:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 11:47:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 11:47:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 11:47:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 11:47:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 11:47:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.49032431840896606 seconds

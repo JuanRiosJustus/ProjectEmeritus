@@ -1,0 +1,139 @@
+[2025-04-12 23:34:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-12 23:34:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-12 23:34:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-12 23:34:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-12 23:34:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-12 23:34:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-12 23:34:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-12 23:34:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-12 23:34:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-12 23:34:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-12 23:34:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-12 23:34:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-12 23:34:50] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-12 23:34:50] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-12 23:34:50] [INFO] [Component] Setting fire_dragon_Xicyol_e0497c4f-a425-4e7b-8e9b-5b269585bc70 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xicyol_e0497c4f-a425-4e7b-8e9b-5b269585bc70","column":4,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Xicyol into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting dark_dragon_Zyti_b7d3979d-167c-466e-a019-a71bb23fb06d on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zyti_b7d3979d-167c-466e-a019-a71bb23fb06d","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Zyti into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting earth_dragon_Oukm_9acd3596-1cd6-4b9e-ad05-e41620198b14 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Oukm_9acd3596-1cd6-4b9e-ad05-e41620198b14","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Oukm into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting air_dragon_Ayraed_3c919d38-6778-41cb-a060-b84fe5d4e886 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Ayraed_3c919d38-6778-41cb-a060-b84fe5d4e886","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Ayraed into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7","column":3,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Uehuc into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting light_dragon_Feaoou_1b939850-2b1c-4aa9-a25e-8e485f256602 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Feaoou_1b939850-2b1c-4aa9-a25e-8e485f256602","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Feaoou into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting light_dragon_Diuw_e8db769e-8897-4bb2-97d2-960d2f8f4956 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Diuw_e8db769e-8897-4bb2-97d2-960d2f8f4956","column":7,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Diuw into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting water_dragon_Nobzae_ad86efe9-b31f-4508-a845-5e795b7aeabf on to {"spawn_region":[],"collider":"","unit":"water_dragon_Nobzae_ad86efe9-b31f-4508-a845-5e795b7aeabf","column":7,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Nobzae into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting light_dragon_Yacyu_8a7e8eab-baf6-4306-a00a-961b3d620b39 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Yacyu_8a7e8eab-baf6-4306-a00a-961b3d620b39","column":0,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Yacyu into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting light_dragon_Iuxyar_8b0b515d-6374-4b1a-a521-0318caff6a87 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iuxyar_8b0b515d-6374-4b1a-a521-0318caff6a87","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit enemy:Iuxyar into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting water_dragon_Lisy_b8e5901b-a7f6-40b5-92f6-477e220bc766 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Lisy_b8e5901b-a7f6-40b5-92f6-477e220bc766","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit user:Lisy into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting dark_dragon_Tyhka_c1c08068-1fdd-4030-9366-f97696d76445 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Tyhka_c1c08068-1fdd-4030-9366-f97696d76445","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit user:Tyhka into queue
+[2025-04-12 23:34:50] [INFO] [Component] Setting air_dragon_Auxjy_60b7e4ef-def7-43f9-88dd-64c863fc7a55 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Auxjy_60b7e4ef-def7-43f9-88dd-64c863fc7a55","column":6,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Added unit user:Auxjy into queue
+[2025-04-12 23:34:50] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-12 23:34:50] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-12 23:34:50] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-12 23:34:50] [INFO] [FontPool] Started initializing FontPool
+[2025-04-12 23:34:50] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-12 23:34:50] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-12 23:34:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-12 23:34:50] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7
+[2025-04-12 23:34:50] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7
+[2025-04-12 23:34:50] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 23:34:50] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 23:34:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 23:34:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 23:34:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 23:34:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 23:34:50] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7
+[2025-04-12 23:34:50] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7
+[2025-04-12 23:34:50] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 23:34:50] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 23:34:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 23:34:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 23:34:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-12 23:34:51] [INFO] [VisualsSystem] Finished creating blurred background after 0.4901376962661743 seconds
+[2025-04-12 23:34:52] [INFO] [InputHandler] Gliding 0 camera to new tile 2_3_02a62eec-eaec-4306-a963-f6feea8b715a
+[2025-04-12 23:34:52] [INFO] [InputHandler] Gliding 1 camera to new tile 2_3_02a62eec-eaec-4306-a963-f6feea8b715a
+[2025-04-12 23:34:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 23:34:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Uehuc
+[2025-04-12 23:34:55] [INFO] [InputHandler] Gliding 0 camera to new tile 2_3_02a62eec-eaec-4306-a963-f6feea8b715a
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement range to 12 for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [5, 7] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement range to 12 for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [5, 7] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to null for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to null for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [6, 7] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [6, 7] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [5, 7] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [5, 7] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [5, 6] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [5, 6] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [4, 6] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [4, 6] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [4, 5] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [4, 5] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [3, 5] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [3, 5] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [3, 4] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [3, 4] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [3, 3] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [3, 3] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [2, 3] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [2, 3] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [2, 2] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [2, 2] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [1, 2] for Uehuc
+[2025-04-12 23:34:55] [INFO] [MovementSystem] Updated movement path from [2, 3] to [1, 2] for Uehuc
+[2025-04-12 23:34:56] [INFO] [MovementSystem] Updated movement path from [2, 3] to [2, 2] for Uehuc
+[2025-04-12 23:34:56] [INFO] [MovementSystem] Updated movement path from [2, 3] to [2, 2] for Uehuc
+[2025-04-12 23:34:56] [INFO] [Component] Setting earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uehuc_3718156d-f600-46f4-9b83-b77019a4a7c7","column":2,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 23:34:56] [INFO] [MovementSystem] Moved from [2, 3] to [2, 2]
+[2025-04-12 23:34:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 23:34:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Uehuc
+[2025-04-12 23:34:56] [INFO] [InputHandler] Gliding 0 camera to new tile 2_2_b16b885c-10fa-481d-bc7e-cb23d4522129
+[2025-04-12 23:34:56] [INFO] [InputHandler] Gliding 1 camera to new tile 2_2_b16b885c-10fa-481d-bc7e-cb23d4522129
+[2025-04-12 23:34:57] [INFO] [InputHandler] Gliding 0 camera to new tile 2_2_b16b885c-10fa-481d-bc7e-cb23d4522129
+[2025-04-12 23:34:58] [INFO] [AbilityPanel] Selecting leafage
+[2025-04-12 23:34:58] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [5, 7]
+[2025-04-12 23:34:58] [INFO] [AbilitySystem] Updated area of sight for Uehuc, viewing 13 tiles
+[2025-04-12 23:34:58] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 4 tiles
+[2025-04-12 23:34:58] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:58] [INFO] [CombatSystem] Started constructing damage mappings for Uehuc to use leafage
+[2025-04-12 23:34:58] [INFO] [CombatSystem] Finished constructing damage mappings for Uehuc to use leafage
+[2025-04-12 23:34:58] [INFO] [CombatSystem] Started constructing cost mappings for Uehuc to use leafage
+[2025-04-12 23:34:58] [INFO] [CombatSystem] Finished constructing cost mappings for Uehuc to use leafage
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [5, 6]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 4 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [5, 5]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 5 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [4, 4]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 5 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [4, 3]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 4 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [3, 2]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 2 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [2, 1]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 2 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [1, 1]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 3 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Uehuc is planning to use leafage on [0, 0]
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated line of sight for Uehuc, viewing 3 tiles
+[2025-04-12 23:34:59] [INFO] [AbilitySystem] Updated area of effect for Uehuc viewing 1 tiles
+[2025-04-12 23:34:5

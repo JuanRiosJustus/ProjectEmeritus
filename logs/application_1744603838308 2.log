@@ -1,0 +1,238 @@
+[2025-04-13 21:10:38] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 21:10:38] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 21:10:38] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 21:10:38] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 21:10:38] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 21:10:38] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 21:10:38] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 21:10:38] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 21:10:38] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 21:10:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 21:10:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 21:10:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 21:10:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 21:10:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 21:10:38] [INFO] [Component] Setting fire_dragon_Fibu_07ff80d2-2e81-418e-98cc-57da31120dda on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Fibu_07ff80d2-2e81-418e-98cc-57da31120dda","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Fibu into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting air_dragon_Kuia_7129197e-9822-4ed4-bd2b-712de03b214f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Kuia_7129197e-9822-4ed4-bd2b-712de03b214f","column":2,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Kuia into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting water_dragon_Dulay_5ac939ef-1463-4b1c-b748-114e14b76340 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Dulay_5ac939ef-1463-4b1c-b748-114e14b76340","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Dulay into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting dragon_Hunt_0bf55a41-2629-49cd-b182-c44e74866053 on to {"spawn_region":[],"collider":"","unit":"dragon_Hunt_0bf55a41-2629-49cd-b182-c44e74866053","column":3,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Hunt into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting dragon_Vybv_9fcc128e-0652-48c7-8b0a-2a112a556319 on to {"spawn_region":[],"collider":"","unit":"dragon_Vybv_9fcc128e-0652-48c7-8b0a-2a112a556319","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Vybv into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting water_dragon_Dartu_78c5d756-a884-4c30-ad55-db1843caac4a on to {"spawn_region":[],"collider":"","unit":"water_dragon_Dartu_78c5d756-a884-4c30-ad55-db1843caac4a","column":5,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Dartu into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting dragon_Jywig_d545341e-a372-4875-bcbe-79a3bd1d64c9 on to {"spawn_region":[],"collider":"","unit":"dragon_Jywig_d545341e-a372-4875-bcbe-79a3bd1d64c9","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Jywig into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e","column":4,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Aoyadi into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting light_dragon_Riea_cd7221d4-e992-4afc-8190-83e73ecd0129 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Riea_cd7221d4-e992-4afc-8190-83e73ecd0129","column":1,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit enemy:Riea into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting dragon_Qarfu_a29e3bae-2a30-4a33-82e4-7480f2093370 on to {"spawn_region":[],"collider":"","unit":"dragon_Qarfu_a29e3bae-2a30-4a33-82e4-7480f2093370","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit user:Qarfu into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting fire_dragon_Kolync_5ad775c8-4a10-4d8f-a50b-22306b608ac3 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Kolync_5ad775c8-4a10-4d8f-a50b-22306b608ac3","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit user:Kolync into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting light_dragon_Syev_0ad12f83-21da-4b09-8c23-10eff8d35f28 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Syev_0ad12f83-21da-4b09-8c23-10eff8d35f28","column":3,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit user:Syev into queue
+[2025-04-13 21:10:38] [INFO] [Component] Setting dragon_Sahuie_09d0cfc7-0169-48ac-8deb-281bded1782d on to {"spawn_region":[],"collider":"","unit":"dragon_Sahuie_09d0cfc7-0169-48ac-8deb-281bded1782d","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 21:10:38] [INFO] [SpeedQueue] Added unit user:Sahuie into queue
+[2025-04-13 21:10:38] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 21:10:38] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 21:10:38] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 21:10:38] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 21:10:38] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 21:10:39] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 21:10:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 21:10:39] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e
+[2025-04-13 21:10:39] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e
+[2025-04-13 21:10:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:10:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:10:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:10:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:10:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e
+[2025-04-13 21:10:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e
+[2025-04-13 21:10:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:10:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 21:10:39] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:10:39] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:10:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:10:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:10:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 21:10:39] [INFO] [VisualsSystem] Finished creating blurred background after 0.48940491676330566 seconds
+[2025-04-13 21:10:41] [INFO] [InputHandler] Gliding 0 camera to new tile 0_4_e9b2beaa-182a-440e-ae25-201c8d70954b
+[2025-04-13 21:10:41] [INFO] [InputHandler] Gliding 1 camera to new tile 0_4_e9b2beaa-182a-440e-ae25-201c8d70954b
+[2025-04-13 21:10:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:10:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Aoyadi
+[2025-04-13 21:10:42] [INFO] [InputHandler] Gliding 0 camera to new tile 0_4_e9b2beaa-182a-440e-ae25-201c8d70954b
+[2025-04-13 21:10:42] [INFO] [MovementSystem] Updated movement range to 5 for Aoyadi
+[2025-04-13 21:10:42] [INFO] [MovementSystem] Updated movement path from [0, 4] to null for Aoyadi
+[2025-04-13 21:10:42] [INFO] [MovementSystem] Updated movement range to 5 for Aoyadi
+[2025-04-13 21:10:42] [INFO] [MovementSystem] Updated movement path from [0, 4] to null for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 7] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [3, 7] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 6] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 6] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 5] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [2, 5] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 5] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 5] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 4] for Aoyadi
+[2025-04-13 21:10:43] [INFO] [MovementSystem] Updated movement path from [0, 4] to [1, 4] for Aoyadi
+[2025-04-13 21:10:44] [INFO] [Component] Setting air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Aoyadi_914e0448-ddea-4291-b6b2-7cecfac5535e","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:10:44] [INFO] [MovementSystem] Moved from [0, 4] to [1, 4]
+[2025-04-13 21:10:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:10:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Aoyadi
+[2025-04-13 21:10:44] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_f64505bb-e4fd-4186-b2ee-0005774980d5
+[2025-04-13 21:10:44] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_f64505bb-e4fd-4186-b2ee-0005774980d5
+[2025-04-13 21:10:45] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_f64505bb-e4fd-4186-b2ee-0005774980d5
+[2025-04-13 21:10:46] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Aoyadi is planning to use gust on null
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated area of sight for Aoyadi, viewing 9 tiles
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 0 tiles
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 0 tiles
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [2, 7]
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 3 tiles
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [1, 7]
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 3 tiles
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [1, 6]
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 3 tiles
+[2025-04-13 21:10:46] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aoyadi
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Aoyadi lands a Same-Type-Attack-Bonus with gust, for 12.0
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aoyadi
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qarfu
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qarfu
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] 20.0 damage after defenses for gust
+[2025-04-13 21:10:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:10:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:12:15] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [1, 5]
+[2025-04-13 21:12:15] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 2 tiles
+[2025-04-13 21:12:15] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:12:15] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:15] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:12:15] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:15] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:15] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:15] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:12:16] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [1, 6]
+[2025-04-13 21:12:16] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 3 tiles
+[2025-04-13 21:12:16] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aoyadi
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Aoyadi lands a Same-Type-Attack-Bonus with gust, for 12.0
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aoyadi
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qarfu
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qarfu
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] 20.0 damage after defenses for gust
+[2025-04-13 21:12:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:12:16] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [1, 5]
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 2 tiles
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [0, 4]
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 2 tiles
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [0, 3]
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 3 tiles
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Aoyadi is planning to use gust on [0, 1]
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 4 tiles
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 1 tiles
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Aoyadi is planning to use gust on null
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated line of sight for Aoyadi, viewing 0 tiles
+[2025-04-13 21:12:19] [INFO] [AbilitySystem] Updated area of effect for Aoyadi viewing 0 tiles
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing damage mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Started constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [CombatSystem] Finished constructing cost mappings for Aoyadi to use gust
+[2025-04-13 21:12:19] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

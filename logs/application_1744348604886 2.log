@@ -1,0 +1,149 @@
+[2025-04-10 22:16:44] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-10 22:16:44] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-10 22:16:44] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-10 22:16:44] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-10 22:16:44] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-10 22:16:44] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-10 22:16:44] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-10 22:16:44] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-10 22:16:44] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-10 22:16:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-10 22:16:45] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-10 22:16:45] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-10 22:16:45] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-10 22:16:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-10 22:16:45] [INFO] [Component] Setting earth_dragon_Cewms_6697368f-ab4f-45bb-a406-9edecea67817 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Cewms_6697368f-ab4f-45bb-a406-9edecea67817","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Cewms into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting water_dragon_Goky_65029867-d9ad-4908-9227-5f869b1501f4 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Goky_65029867-d9ad-4908-9227-5f869b1501f4","column":14,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Goky into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting earth_dragon_Queo_fb6fb411-506e-4df2-8ce2-e01ff80c5d59 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Queo_fb6fb411-506e-4df2-8ce2-e01ff80c5d59","column":4,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Queo into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting fire_dragon_Uaijao_c114eea4-dd5d-4f49-aaa1-d1f281383211 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Uaijao_c114eea4-dd5d-4f49-aaa1-d1f281383211","column":7,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Uaijao into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dark_dragon_Iyta_c77adc4c-ade0-4bb2-921d-077dd2e068e2 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iyta_c77adc4c-ade0-4bb2-921d-077dd2e068e2","column":14,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Iyta into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting air_dragon_Vakyn_717a1045-214c-4819-acfb-3685a3c2ec86 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Vakyn_717a1045-214c-4819-acfb-3685a3c2ec86","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Vakyn into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting fire_dragon_Cyfusa_1aea9746-d538-488a-84f0-2456db57141c on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Cyfusa_1aea9746-d538-488a-84f0-2456db57141c","column":0,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Cyfusa into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting earth_dragon_Taup_7c5de1b9-7334-4a98-a161-540cdf391cde on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Taup_7c5de1b9-7334-4a98-a161-540cdf391cde","column":6,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Taup into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting fire_dragon_Kofeoy_ba707a6a-fd63-4613-a9d3-c81ff2d8428d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Kofeoy_ba707a6a-fd63-4613-a9d3-c81ff2d8428d","column":5,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Kofeoy into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dark_dragon_Gupa_0654678c-4a50-4d70-bca9-1835b1dbc654 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Gupa_0654678c-4a50-4d70-bca9-1835b1dbc654","column":4,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Gupa into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting light_dragon_Sajce_64155f02-7d91-4962-bb5c-f07e40ac8637 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Sajce_64155f02-7d91-4962-bb5c-f07e40ac8637","column":10,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Sajce into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dragon_Aeka_a049823e-5493-4b80-950c-acc5c8ffa925 on to {"spawn_region":[],"collider":"","unit":"dragon_Aeka_a049823e-5493-4b80-950c-acc5c8ffa925","column":1,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Aeka into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting light_dragon_Jayktu_9e9d5ece-1687-4f0b-9bb0-50474db8afc5 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jayktu_9e9d5ece-1687-4f0b-9bb0-50474db8afc5","column":12,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Jayktu into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting light_dragon_Goeorn_9f246316-3afe-4679-910c-83d673553820 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Goeorn_9f246316-3afe-4679-910c-83d673553820","column":6,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Goeorn into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting water_dragon_Sigoaq_fae6a544-806e-4d2b-be3a-86656309c63c on to {"spawn_region":[],"collider":"","unit":"water_dragon_Sigoaq_fae6a544-806e-4d2b-be3a-86656309c63c","column":7,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Sigoaq into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dragon_Kuzf_7096044a-5d23-4483-a05e-e2f9cc3d358c on to {"spawn_region":[],"collider":"","unit":"dragon_Kuzf_7096044a-5d23-4483-a05e-e2f9cc3d358c","column":14,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Kuzf into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dark_dragon_Iityws_57d18b60-bbd4-470d-9819-e659615dbb7f on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iityws_57d18b60-bbd4-470d-9819-e659615dbb7f","column":0,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Iityws into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting earth_dragon_Wausz_a9f2c1a3-97c3-4bcc-b916-bfe8890fbf2b on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Wausz_a9f2c1a3-97c3-4bcc-b916-bfe8890fbf2b","column":5,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Wausz into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting air_dragon_Socwy_b00a1503-3ca8-41cf-93a7-e6d33edee810 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Socwy_b00a1503-3ca8-41cf-93a7-e6d33edee810","column":13,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Socwy into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting water_dragon_Bymi_7005dd4a-3898-4892-92f2-f15ff9deb89b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Bymi_7005dd4a-3898-4892-92f2-f15ff9deb89b","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Bymi into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting light_dragon_Tuboa_ff26a6a4-7bf1-44d6-b4c9-9a455a749e8a on to {"spawn_region":[],"collider":"","unit":"light_dragon_Tuboa_ff26a6a4-7bf1-44d6-b4c9-9a455a749e8a","column":3,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Tuboa into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting water_dragon_Niuoya_9a53b292-0bdb-4980-b745-21c82bb14de4 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Niuoya_9a53b292-0bdb-4980-b745-21c82bb14de4","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Niuoya into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting fire_dragon_Sofij_2da6fbb9-5156-46fe-982a-566559858d66 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Sofij_2da6fbb9-5156-46fe-982a-566559858d66","column":13,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit enemy:Sofij into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting air_dragon_Gygwyt_70683897-be7e-419b-8cfc-21837c96f0f6 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Gygwyt_70683897-be7e-419b-8cfc-21837c96f0f6","column":9,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Gygwyt into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting water_dragon_Ziwxm_a63ab27b-bac5-4865-820d-150baec5e08b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ziwxm_a63ab27b-bac5-4865-820d-150baec5e08b","column":6,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Ziwxm into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dark_dragon_Keryq_f8ab3816-9b06-449f-b39d-6e4dce8571d0 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Keryq_f8ab3816-9b06-449f-b39d-6e4dce8571d0","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Keryq into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting water_dragon_Judh_e69e2af1-3e79-478e-8938-25ce6cedf81b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Judh_e69e2af1-3e79-478e-8938-25ce6cedf81b","column":12,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Judh into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting air_dragon_Eipya_493ad4f2-98bb-4995-b791-ceb5893463dd on to {"spawn_region":[],"collider":"","unit":"air_dragon_Eipya_493ad4f2-98bb-4995-b791-ceb5893463dd","column":2,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Eipya into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting air_dragon_Eawo_29351d96-5c82-4162-91fc-c1682a2edfac on to {"spawn_region":[],"collider":"","unit":"air_dragon_Eawo_29351d96-5c82-4162-91fc-c1682a2edfac","column":8,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Eawo into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dragon_Ceui_81c5ae9f-97d1-40ec-acce-b08ee45e8bdf on to {"spawn_region":[],"collider":"","unit":"dragon_Ceui_81c5ae9f-97d1-40ec-acce-b08ee45e8bdf","column":1,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Ceui into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting air_dragon_Aodio_1b0c2f74-a62b-44cf-9cd3-d6e81a8d6049 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Aodio_1b0c2f74-a62b-44cf-9cd3-d6e81a8d6049","column":14,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Aodio into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dragon_Keju_b2be2fdc-2167-4ed6-8f87-45fd96c23905 on to {"spawn_region":[],"collider":"","unit":"dragon_Keju_b2be2fdc-2167-4ed6-8f87-45fd96c23905","column":7,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Keju into queue
+[2025-04-10 22:16:45] [INFO] [Component] Setting dark_dragon_Kooae_603c3b55-60a9-4805-9a12-946d56a53331 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Kooae_603c3b55-60a9-4805-9a12-946d56a53331","column":14,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-10 22:16:45] [INFO] [SpeedQueue] Added unit user:Kooae into queue
+[2025-04-10 22:16:45] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-10 22:16:45] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-10 22:16:45] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-10 22:16:45] [INFO] [FontPool] Started initializing FontPool
+[2025-04-10 22:16:45] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-10 22:16:46] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-10 22:16:46] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-10 22:16:46] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Sigoaq_fae6a544-806e-4d2b-be3a-86656309c63c
+[2025-04-10 22:16:46] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Sigoaq_fae6a544-806e-4d2b-be3a-86656309c63c
+[2025-04-10 22:16:46] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-10 22:16:46] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-10 22:16:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-10 22:16:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-10 22:16:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-10 22:16:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-10 22:16:46] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-10 22:16:46] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-10 22:16:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-10 22:16:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.4862649738788605 seconds
+[2025-04-10 22:16:48] [INFO] [InputHandler] Gliding 0 camera to new tile 13_7_2df72d58-a1fa-4891-a4db-a602ad155828
+[2025-04-10 22:16:48] [INFO] [InputHandler] Gliding 1 camera to new tile 13_7_2df72d58-a1fa-4891-a4db-a602ad155828
+[2025-04-10 22:16:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-10 22:16:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Sigoaq
+[2025-04-10 22:16:51] [INFO] [InputHandler] Gliding 0 camera to new tile 13_7_2df72d58-a1fa-4891-a4db-a602ad155828
+[2025-04-10 22:16:52] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-10 22:16:52] [INFO] [AbilitySystem] Sigoaq is planning to use ember on null
+[2025-04-10 22:16:52] [INFO] [AbilitySystem] Updated area of sight for Sigoaq, viewing 10 tiles
+[2025-04-10 22:16:52] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 0 tiles
+[2025-04-10 22:16:52] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 0 tiles
+[2025-04-10 22:16:52] [INFO] [CombatSystem] Started constructing damage mappings for Sigoaq to use ember
+[2025-04-10 22:16:52] [INFO] [CombatSystem] Finished constructing damage mappings for Sigoaq to use ember
+[2025-04-10 22:16:52] [INFO] [CombatSystem] Started constructing cost mappings for Sigoaq to use ember
+[2025-04-10 22:16:52] [INFO] [CombatSystem] Finished constructing cost mappings for Sigoaq to use ember
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [14, 8]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 3 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [14, 7]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [14, 6]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 3 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [13, 5]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [12, 4]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [11, 3]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [11, 2]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [10, 2]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [10, 1]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [9, 1]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [9, 0]
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:54] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles
+[2025-04-10 22:16:55] [INFO] [AbilitySystem] Sigoaq is planning to use ember on [8, 0]
+[2025-04-10 22:16:55] [INFO] [AbilitySystem] Updated line of sight for Sigoaq, viewing 2 tiles
+[2025-04-10 22:16:55] [INFO] [AbilitySystem] Updated area of effect for Sigoaq viewing 1 tiles

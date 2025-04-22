@@ -1,0 +1,207 @@
+[2025-04-13 13:05:56] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 13:05:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 13:05:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 13:05:56] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 13:05:56] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 13:05:56] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 13:05:56] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 13:05:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 13:05:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 13:05:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 13:05:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 13:05:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 13:05:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 13:05:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 13:05:56] [INFO] [Component] Setting dark_dragon_Eebqn_6cd04485-11e7-42cb-96ea-ca9b1dd6af33 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Eebqn_6cd04485-11e7-42cb-96ea-ca9b1dd6af33","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Eebqn into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting earth_dragon_Iyybei_924a228d-4d4d-4024-917f-d7e1f5401976 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iyybei_924a228d-4d4d-4024-917f-d7e1f5401976","column":4,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Iyybei into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting dark_dragon_Tybgo_169e7800-be67-4bdb-9fd0-33461b99d559 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Tybgo_169e7800-be67-4bdb-9fd0-33461b99d559","column":0,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Tybgo into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting fire_dragon_Foqbb_4f71a932-4ad7-48b1-a482-f6425c1eb3d4 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Foqbb_4f71a932-4ad7-48b1-a482-f6425c1eb3d4","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Foqbb into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting fire_dragon_Raqlep_0a11d2a9-1e55-45ad-996c-5be97513a862 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Raqlep_0a11d2a9-1e55-45ad-996c-5be97513a862","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Raqlep into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting earth_dragon_Zoeba_ca016c5b-1932-4e42-8631-da68cb1cd0e6 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Zoeba_ca016c5b-1932-4e42-8631-da68cb1cd0e6","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Zoeba into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d on to {"spawn_region":[],"collider":"","unit":"air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d","column":5,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Raepvo into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting fire_dragon_Tufjy_9a96631c-4c4c-4cf1-92fe-4bf6d9643713 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Tufjy_9a96631c-4c4c-4cf1-92fe-4bf6d9643713","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit enemy:Tufjy into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting fire_dragon_Oavhit_77a446c5-0bcd-4552-b993-ebd06a2800d6 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oavhit_77a446c5-0bcd-4552-b993-ebd06a2800d6","column":1,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit user:Oavhit into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e on to {"spawn_region":[],"collider":"","unit":"dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit user:Iowyiv into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting air_dragon_Daysi_e97010a0-4b91-4cbe-a3f6-111cfc630382 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Daysi_e97010a0-4b91-4cbe-a3f6-111cfc630382","column":1,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit user:Daysi into queue
+[2025-04-13 13:05:56] [INFO] [Component] Setting fire_dragon_Vauif_fceddfdc-4785-4cfc-8381-2f7337df3150 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vauif_fceddfdc-4785-4cfc-8381-2f7337df3150","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Added unit user:Vauif into queue
+[2025-04-13 13:05:56] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 13:05:56] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 13:05:56] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 13:05:56] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 13:05:56] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 13:05:56] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 13:05:56] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 13:05:56] [INFO] [AbilityPanel] Updating ability selection for dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:56] [INFO] [AbilityPanel] Finished ability selection for dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 13:05:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 13:05:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 13:05:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 13:05:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 13:05:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 13:05:57] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:57] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:57] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 13:05:57] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 13:05:57] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 13:05:57] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 13:05:57] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 13:05:57] [INFO] [VisualsSystem] Finished creating blurred background after 0.4832601249217987 seconds
+[2025-04-13 13:05:58] [INFO] [MovementSystem] Updated movement range to 10 for Iowyiv
+[2025-04-13 13:05:58] [INFO] [MovementSystem] Updated movement path from [3, 2] to [3, 4] for Iowyiv
+[2025-04-13 13:05:58] [INFO] [Component] Setting dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e on to {"spawn_region":[],"collider":"","unit":"dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e","column":4,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 13:05:58] [INFO] [MovementSystem] Moved from [3, 2] to [3, 4]
+[2025-04-13 13:05:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 13:05:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Iowyiv
+[2025-04-13 13:05:58] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_8c5a8e4b-54dd-4249-80ae-dc93ae1d14ce
+[2025-04-13 13:05:58] [INFO] [InputHandler] Gliding 1 camera to new tile 3_4_8c5a8e4b-54dd-4249-80ae-dc93ae1d14ce
+[2025-04-13 13:05:58] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_8c5a8e4b-54dd-4249-80ae-dc93ae1d14ce
+[2025-04-13 13:05:58] [INFO] [InputHandler] Gliding 1 camera to new tile 3_4_8c5a8e4b-54dd-4249-80ae-dc93ae1d14ce
+[2025-04-13 13:05:59] [INFO] [AbilitySystem] Iowyiv is planning to use shine on [3, 6]
+[2025-04-13 13:05:59] [INFO] [AbilitySystem] Updated area of sight for Iowyiv, viewing 13 tiles
+[2025-04-13 13:05:59] [INFO] [AbilitySystem] Updated line of sight for Iowyiv, viewing 3 tiles
+[2025-04-13 13:05:59] [INFO] [AbilitySystem] Updated area of effect for Iowyiv viewing 1 tiles
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Started constructing cost mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Finished constructing cost mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Checking cost requirements for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Iowyiv is able to pay for shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Started constructing cost mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Finished constructing cost mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Paying cost requirements for Iowyiv using shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use shine
+[2025-04-13 13:05:59] [INFO] [AbilitySystem] Used from shine on [3, 6]
+[2025-04-13 13:05:59] [INFO] [AbilityPanel] Updating ability selection for dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:59] [INFO] [AbilityPanel] Finished ability selection for dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 13:05:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Iowyiv_17b43e3e-9c9e-4f23-979e-c175fe099d2e
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 13:05:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Started constructing damage mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Finished constructing damage mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Started constructing cost mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Finished constructing cost mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Started constructing damage mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Finished constructing damage mappings for Iowyiv to use shine
+[2025-04-13 13:05:59] [INFO] [CombatSystem] Started dealing damage with shine to Raqlep 
+[2025-04-13 13:05:59] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-13 13:05:59] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-13 13:05:59] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-13 13:05:59] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d
+[2025-04-13 13:05:59] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d
+[2025-04-13 13:05:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 13:05:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 13:05:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 13:05:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 13:05:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 13:05:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Raepvo
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 13:05:59] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 13:05:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 13:05:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 13:05:59] [INFO] [InputHandler] Gliding 0 camera to new tile 1_5_bc1c28c5-fe29-45a0-bb34-67a4c58ef860
+[2025-04-13 13:05:59] [INFO] [InputHandler] Gliding 1 camera to new tile 1_5_bc1c28c5-fe29-45a0-bb34-67a4c58ef860
+[2025-04-13 13:06:00] [INFO] [InputHandler] Gliding 0 camera to new tile 1_5_bc1c28c5-fe29-45a0-bb34-67a4c58ef860
+[2025-04-13 13:06:00] [INFO] [InputHandler] Gliding 1 camera to new tile 1_5_bc1c28c5-fe29-45a0-bb34-67a4c58ef860
+[2025-04-13 13:06:02] [INFO] [InputHandler] Gliding 0 camera to new tile 1_5_bc1c28c5-fe29-45a0-bb34-67a4c58ef860
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement range to 10 for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to null for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement range to 10 for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to null for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [4, 7] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [4, 7] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [3, 7] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [3, 7] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [3, 6] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [3, 6] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [2, 5] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [2, 5] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [2, 4] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [2, 4] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [1, 4] for Raepvo
+[2025-04-13 13:06:02] [INFO] [MovementSystem] Updated movement path from [1, 5] to [1, 4] for Raepvo
+[2025-04-13 13:06:03] [INFO] [Component] Setting air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d on to {"spawn_region":[],"collider":"","unit":"air_dragon_Raepvo_d6453ab1-76ca-4183-a0a8-f136f7567e2d","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 13:06:03] [INFO] [MovementSystem] Moved from [1, 5] to [1, 4]
+[2025-04-13 13:06:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 13:06:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Raepvo
+[2025-04-13 13:06:03] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_6b397d7e-c0fb-4fdc-b060-5b8f41c4f94e
+[2025-04-13 13:06:03] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_6b397d7e-c0fb-4fdc-b060-5b8f41c4f94e
+[2025-04-13 13:06:04] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_6b397d7e-c0fb-4fdc-b060-5b8f41c4f94e
+[2025-04-13 13:06:05] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 13:06:05] [INFO] [AbilitySystem] Raepvo is planning to use gust on null
+[2025-04-13 13:06:05] [INFO] [AbilitySystem] Updated area of sight for Raepvo, viewing 12 tiles
+[2025-04-13 13:06:05] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 0 tiles
+[2025-04-13 13:06:05] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 0 tiles
+[2025-04-13 13:06:05] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:05] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:05] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:05] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:05] [INFO] [CombatSystem] Started constructing cost mappings for Raepvo to use gust
+[2025-04-13 13:06:05] [INFO] [CombatSystem] Finished constructing cost mappings for Raepvo to use gust
+[2025-04-13 13:06:06] [INFO] [AbilitySystem] Raepvo is planning to use gust on [3, 7]
+[2025-04-13 13:06:06] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 5 tiles
+[2025-04-13 13:06:06] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:06] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:06] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Raepvo is planning to use gust on [2, 6]
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 4 tiles
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:07] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:07] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Raepvo is planning to use gust on [2, 5]
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 3 tiles
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:07] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:07] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Raepvo is planning to use gust on [1, 5]
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 2 tiles
+[2025-04-13 13:06:07] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:07] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:07] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:08] [INFO] [AbilitySystem] Raepvo is planning to use gust on [1, 6]
+[2025-04-13 13:06:08] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 3 tiles
+[2025-04-13 13:06:08] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:08] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:08] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:10] [INFO] [AbilitySystem] Raepvo is planning to use gust on [1, 5]
+[2025-04-13 13:06:10] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 2 tiles
+[2025-04-13 13:06:10] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:10] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:10] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:11] [INFO] [AbilitySystem] Raepvo is planning to use gust on [1, 6]
+[2025-04-13 13:06:11] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 3 tiles
+[2025-04-13 13:06:11] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:11] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Raepvo is planning to use gust on [0, 6]
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 4 tiles
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:15] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:15] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Raepvo is planning to use gust on [0, 7]
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 3 tiles
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 1 tiles
+[2025-04-13 13:06:15] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:15] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Raepvo is planning to use gust on null
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Updated line of sight for Raepvo, viewing 0 tiles
+[2025-04-13 13:06:15] [INFO] [AbilitySystem] Updated area of effect for Raepvo viewing 0 tiles
+[2025-04-13 13:06:15] [INFO] [CombatSystem] Started constructing damage mappings for Raepvo to use gust
+[2025-04-13 13:06:15] [INFO] [CombatSystem] Finished constructing damage mappings for Raepvo to use gust

@@ -1,0 +1,642 @@
+[2025-04-06 11:16:47] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 11:16:47] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 11:16:47] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 11:16:47] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 11:16:47] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 11:16:47] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 11:16:47] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 11:16:47] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 11:16:47] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 11:16:47] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 11:16:47] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 11:16:47] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 11:16:47] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 11:16:47] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 11:16:47] [INFO] [Component] Setting light_dragon_Walun_7f8fa76b-d1c7-400a-baa3-83d0d3cf58ba on to 14_3_cf451269-d581-4234-8567-b57e22353383.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Walun into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dark_dragon_Xumuk_06fd2576-dd9c-462f-be91-860ca6d892ba on to 7_10_bd337c39-1814-45d2-a250-6ba58aed7dc0.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Xumuk into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting water_dragon_Eaqrio_61250ab9-6532-4be0-9a50-b0eea435f2ea on to 11_10_b17c6b75-4753-4359-82b0-578cc4799cef.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Eaqrio into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dragon_Zuqqoo_d8d1bb04-53c8-45af-9239-50bf8a83ce73 on to 10_0_7e8bb448-283c-40e5-9f02-b31c1776fcd5.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Zuqqoo into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting water_dragon_Syrol_6185ed16-0c88-42f5-acb3-0d92c2385d65 on to 9_12_878ceecf-258b-4d9e-9e34-29dc77f2a829.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Syrol into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dark_dragon_Bedud_ea7986de-36ec-4866-9e56-41f5a293a2cd on to 11_1_2dae9fda-aed0-4418-9354-5d42eb4968a8.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Bedud into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dark_dragon_Iajo_86ff6c40-bec4-4925-b7bc-01ef8c464e9a on to 14_6_384738db-b7f3-43d7-9261-cae10aefd61a.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Iajo into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting light_dragon_Zuijaa_07d6c001-49b2-4731-9e8d-caddc5cc4d06 on to 9_13_8064820f-7ff7-4576-8307-0ee9eb608e96.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Zuijaa into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting fire_dragon_Dabjy_1882144d-eab0-4e70-b2b8-3d6b8f97cd7e on to 13_14_5de35d6a-bd75-467a-877e-766e4225426d.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Dabjy into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dragon_Wecgeb_c7fabb82-39f9-469d-bafb-1f1e6aec88b6 on to 11_6_ecae0eb7-cb87-4de5-9b96-ab4f8dbd2d89.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Wecgeb into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting earth_dragon_Aojotu_5d1b1439-0a61-43bf-b5aa-84369aca2627 on to 4_8_6ed9908a-8c2b-48b9-8c92-e2dbc730a378.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Aojotu into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting fire_dragon_Xibun_3f7a7df4-dabb-4a3a-bede-9b15eab693e3 on to 7_7_ec2aa3ca-f6a6-4168-b0ce-9d9d11f6cab1.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Xibun into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting light_dragon_Laybs_bff22a8f-90a2-46c3-85dc-fb8faf64a765 on to 12_9_d90762b3-afa8-47b3-beb8-e6e2546d344d.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Laybs into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dark_dragon_Cuzeyi_dbb80082-dc13-49cd-b53f-3f1304bc93d7 on to 13_11_a2e3d450-b284-4da4-8b3f-d24aec023d59.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Cuzeyi into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dragon_Mefd_b6a08b3e-19c5-446e-b142-4278d9c9c591 on to 2_3_667ea2cf-94ff-42e0-b371-a3148094ec7b.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Mefd into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting air_dragon_Saleay_39359cc5-98be-4baf-9ff9-e5abdbe05e77 on to 14_8_9634a257-6516-4b3e-99fe-48b59e208b1a.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Saleay into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting water_dragon_Ioivg_58e6265d-d1f8-4a82-8d04-69a820eedeab on to 9_6_46417117-ad50-468e-b608-6ab4bf736ab7.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Ioivg into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dark_dragon_Koeyro_bde60342-e0bd-4646-a115-6f30a1285208 on to 10_8_62b31f55-d8a3-445c-aa33-3ac1f4c7479a.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Koeyro into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting earth_dragon_Hepc_68ba7446-5d26-4bb2-a657-cf82ad2e9062 on to 12_1_ffd32558-6aad-4306-b84a-c74992152473.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Hepc into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting earth_dragon_Fybyvu_8e25ec7f-72a2-42ae-b1a7-70d1f932d7af on to 2_4_0c92e820-ab58-4449-bb9f-2571efebdf43.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Fybyvu into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting dark_dragon_Tuba_759e59ea-99c0-41cc-9479-e921e75a694d on to 14_7_47e81690-987a-4983-b0dd-4c2c0728068c.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Tuba into queue
+[2025-04-06 11:16:47] [INFO] [Component] Setting water_dragon_Hyfie_7b4d8659-8285-4b23-ac8d-f2c2563fc8c5 on to 2_14_dc81d379-9a97-4bf5-a353-209c38ebc20e.
+[2025-04-06 11:16:47] [INFO] [SpeedQueue] Added unit enemy:Hyfie into queue
+[2025-04-06 11:16:47] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 11:16:47] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 11:16:47] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 11:16:47] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 11:16:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 11:16:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 11:16:48] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:16:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 11:16:48] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Aojotu_5d1b1439-0a61-43bf-b5aa-84369aca2627
+[2025-04-06 11:16:48] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 11:16:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.48691031336784363 seconds
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Aojotu Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Tuba Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Zuijaa Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Saleay Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Walun Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Ioivg Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Syrol Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Bedud Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Laybs Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Eaqrio Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Zuqqoo Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Koeyro Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Wecgeb Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Xibun Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Cuzeyi Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Fybyvu Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Mefd Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Hepc Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Hyfie Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Xumuk Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Dabjy Triggered ability system
+[2025-04-06 11:16:48] [INFO] [AbilitySystem] Iajo Triggered ability system
+[2025-04-06 11:16:48] [INFO] [MovementSystem] Updated movement range for Aojotu
+[2025-04-06 11:16:48] [INFO] [MovementSystem] Updated movement path for Aojotu
+[2025-04-06 11:16:48] [INFO] [Component] Setting earth_dragon_Aojotu_5d1b1439-0a61-43bf-b5aa-84369aca2627 on to 4_9_e8df0d54-f5b6-4f0d-92d5-b6d1b4df4577.
+[2025-04-06 11:16:48] [INFO] [MovementSystem] Moved from [4, 8] to [4, 9]
+[2025-04-06 11:16:49] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 11:16:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Iajo
+[2025-04-06 11:16:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:49] [INFO] [InputHandler] Gliding 0 camera to new tile 14_6_384738db-b7f3-43d7-9261-cae10aefd61a
+[2025-04-06 11:16:49] [INFO] [InputHandler] Gliding 1 camera to new tile 14_6_384738db-b7f3-43d7-9261-cae10aefd61a
+[2025-04-06 11:16:49] [INFO] [MovementSystem] Updated movement range for Iajo
+[2025-04-06 11:16:49] [INFO] [MovementSystem] Updated movement path for Iajo
+[2025-04-06 11:16:49] [INFO] [Component] Setting dark_dragon_Iajo_86ff6c40-bec4-4925-b7bc-01ef8c464e9a on to 12_6_fd4372bd-1d99-4a71-9835-2c4f12c4d60e.
+[2025-04-06 11:16:49] [INFO] [MovementSystem] Moved from [14, 6] to [12, 6]
+[2025-04-06 11:16:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Iajo
+[2025-04-06 11:16:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:49] [INFO] [InputHandler] Gliding 0 camera to new tile 12_6_fd4372bd-1d99-4a71-9835-2c4f12c4d60e
+[2025-04-06 11:16:49] [INFO] [InputHandler] Gliding 1 camera to new tile 12_6_fd4372bd-1d99-4a71-9835-2c4f12c4d60e
+[2025-04-06 11:16:50] [INFO] [AbilitySystem] Aojotu Triggered ability system
+[2025-04-06 11:16:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Dabjy
+[2025-04-06 11:16:50] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:50] [INFO] [InputHandler] Gliding 0 camera to new tile 13_14_5de35d6a-bd75-467a-877e-766e4225426d
+[2025-04-06 11:16:50] [INFO] [InputHandler] Gliding 1 camera to new tile 13_14_5de35d6a-bd75-467a-877e-766e4225426d
+[2025-04-06 11:16:50] [INFO] [MovementSystem] Updated movement range for Dabjy
+[2025-04-06 11:16:50] [INFO] [MovementSystem] Updated movement path for Dabjy
+[2025-04-06 11:16:50] [INFO] [Component] Setting fire_dragon_Dabjy_1882144d-eab0-4e70-b2b8-3d6b8f97cd7e on to 12_14_e84f63bc-1605-4f89-96cd-59c411ab2f6a.
+[2025-04-06 11:16:50] [INFO] [MovementSystem] Moved from [13, 14] to [12, 14]
+[2025-04-06 11:16:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Dabjy
+[2025-04-06 11:16:50] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:50] [INFO] [InputHandler] Gliding 0 camera to new tile 12_14_e84f63bc-1605-4f89-96cd-59c411ab2f6a
+[2025-04-06 11:16:50] [INFO] [InputHandler] Gliding 1 camera to new tile 12_14_e84f63bc-1605-4f89-96cd-59c411ab2f6a
+[2025-04-06 11:16:51] [INFO] [AbilitySystem] Iajo Triggered ability system
+[2025-04-06 11:16:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Xumuk
+[2025-04-06 11:16:51] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:51] [INFO] [InputHandler] Gliding 0 camera to new tile 7_10_bd337c39-1814-45d2-a250-6ba58aed7dc0
+[2025-04-06 11:16:51] [INFO] [InputHandler] Gliding 1 camera to new tile 7_10_bd337c39-1814-45d2-a250-6ba58aed7dc0
+[2025-04-06 11:16:51] [INFO] [MovementSystem] Updated movement range for Xumuk
+[2025-04-06 11:16:51] [INFO] [MovementSystem] Updated movement path for Xumuk
+[2025-04-06 11:16:51] [INFO] [Component] Setting dark_dragon_Xumuk_06fd2576-dd9c-462f-be91-860ca6d892ba on to 8_11_42b6be06-d4b5-4678-9459-da9bf622471e.
+[2025-04-06 11:16:51] [INFO] [MovementSystem] Moved from [7, 10] to [8, 11]
+[2025-04-06 11:16:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Xumuk
+[2025-04-06 11:16:51] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:51] [INFO] [InputHandler] Gliding 0 camera to new tile 8_11_42b6be06-d4b5-4678-9459-da9bf622471e
+[2025-04-06 11:16:51] [INFO] [InputHandler] Gliding 1 camera to new tile 8_11_42b6be06-d4b5-4678-9459-da9bf622471e
+[2025-04-06 11:16:52] [INFO] [AbilitySystem] Dabjy Triggered ability system
+[2025-04-06 11:16:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Hyfie
+[2025-04-06 11:16:52] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:52] [INFO] [InputHandler] Gliding 0 camera to new tile 2_14_dc81d379-9a97-4bf5-a353-209c38ebc20e
+[2025-04-06 11:16:52] [INFO] [InputHandler] Gliding 1 camera to new tile 2_14_dc81d379-9a97-4bf5-a353-209c38ebc20e
+[2025-04-06 11:16:52] [INFO] [MovementSystem] Updated movement range for Hyfie
+[2025-04-06 11:16:52] [INFO] [MovementSystem] Updated movement path for Hyfie
+[2025-04-06 11:16:52] [INFO] [Component] Setting water_dragon_Hyfie_7b4d8659-8285-4b23-ac8d-f2c2563fc8c5 on to 1_13_9dd2d542-d746-4fe4-adb4-e74c6318c585.
+[2025-04-06 11:16:52] [INFO] [MovementSystem] Moved from [2, 14] to [1, 13]
+[2025-04-06 11:16:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Hyfie
+[2025-04-06 11:16:52] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:52] [INFO] [InputHandler] Gliding 0 camera to new tile 1_13_9dd2d542-d746-4fe4-adb4-e74c6318c585
+[2025-04-06 11:16:52] [INFO] [InputHandler] Gliding 1 camera to new tile 1_13_9dd2d542-d746-4fe4-adb4-e74c6318c585
+[2025-04-06 11:16:53] [INFO] [AbilitySystem] Xumuk Triggered ability system
+[2025-04-06 11:16:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Hepc
+[2025-04-06 11:16:53] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:54] [INFO] [InputHandler] Gliding 0 camera to new tile 12_1_ffd32558-6aad-4306-b84a-c74992152473
+[2025-04-06 11:16:54] [INFO] [InputHandler] Gliding 1 camera to new tile 12_1_ffd32558-6aad-4306-b84a-c74992152473
+[2025-04-06 11:16:54] [INFO] [MovementSystem] Updated movement range for Hepc
+[2025-04-06 11:16:54] [INFO] [MovementSystem] Updated movement path for Hepc
+[2025-04-06 11:16:54] [INFO] [Component] Setting earth_dragon_Hepc_68ba7446-5d26-4bb2-a657-cf82ad2e9062 on to 12_0_0c9538c9-7f12-4888-9980-444defad1aaf.
+[2025-04-06 11:16:54] [INFO] [MovementSystem] Moved from [12, 1] to [12, 0]
+[2025-04-06 11:16:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Hepc
+[2025-04-06 11:16:54] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:54] [INFO] [InputHandler] Gliding 0 camera to new tile 12_0_0c9538c9-7f12-4888-9980-444defad1aaf
+[2025-04-06 11:16:54] [INFO] [InputHandler] Gliding 1 camera to new tile 12_0_0c9538c9-7f12-4888-9980-444defad1aaf
+[2025-04-06 11:16:54] [INFO] [AbilitySystem] Hyfie Triggered ability system
+[2025-04-06 11:16:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Mefd
+[2025-04-06 11:16:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:55] [INFO] [InputHandler] Gliding 0 camera to new tile 2_3_667ea2cf-94ff-42e0-b371-a3148094ec7b
+[2025-04-06 11:16:55] [INFO] [InputHandler] Gliding 1 camera to new tile 2_3_667ea2cf-94ff-42e0-b371-a3148094ec7b
+[2025-04-06 11:16:55] [INFO] [MovementSystem] Updated movement range for Mefd
+[2025-04-06 11:16:55] [INFO] [MovementSystem] Updated movement path for Mefd
+[2025-04-06 11:16:55] [INFO] [Component] Setting dragon_Mefd_b6a08b3e-19c5-446e-b142-4278d9c9c591 on to 1_3_aa0331bb-1374-475a-a1de-0d6f71f74832.
+[2025-04-06 11:16:55] [INFO] [MovementSystem] Moved from [2, 3] to [1, 3]
+[2025-04-06 11:16:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Mefd
+[2025-04-06 11:16:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:55] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_aa0331bb-1374-475a-a1de-0d6f71f74832
+[2025-04-06 11:16:55] [INFO] [InputHandler] Gliding 1 camera to new tile 1_3_aa0331bb-1374-475a-a1de-0d6f71f74832
+[2025-04-06 11:16:56] [INFO] [AbilitySystem] Hepc Triggered ability system
+[2025-04-06 11:16:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Fybyvu
+[2025-04-06 11:16:56] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:56] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_0c92e820-ab58-4449-bb9f-2571efebdf43
+[2025-04-06 11:16:56] [INFO] [InputHandler] Gliding 1 camera to new tile 2_4_0c92e820-ab58-4449-bb9f-2571efebdf43
+[2025-04-06 11:16:56] [INFO] [MovementSystem] Updated movement range for Fybyvu
+[2025-04-06 11:16:56] [INFO] [MovementSystem] Updated movement path for Fybyvu
+[2025-04-06 11:16:56] [INFO] [Component] Setting earth_dragon_Fybyvu_8e25ec7f-72a2-42ae-b1a7-70d1f932d7af on to 3_4_6c001162-7baf-47fe-9b74-5ecb9b45af0c.
+[2025-04-06 11:16:56] [INFO] [MovementSystem] Moved from [2, 4] to [3, 4]
+[2025-04-06 11:16:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Fybyvu
+[2025-04-06 11:16:56] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:56] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_6c001162-7baf-47fe-9b74-5ecb9b45af0c
+[2025-04-06 11:16:56] [INFO] [InputHandler] Gliding 1 camera to new tile 3_4_6c001162-7baf-47fe-9b74-5ecb9b45af0c
+[2025-04-06 11:16:57] [INFO] [AbilitySystem] Mefd Triggered ability system
+[2025-04-06 11:16:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Cuzeyi
+[2025-04-06 11:16:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:57] [INFO] [InputHandler] Gliding 0 camera to new tile 13_11_a2e3d450-b284-4da4-8b3f-d24aec023d59
+[2025-04-06 11:16:57] [INFO] [InputHandler] Gliding 1 camera to new tile 13_11_a2e3d450-b284-4da4-8b3f-d24aec023d59
+[2025-04-06 11:16:57] [INFO] [MovementSystem] Updated movement range for Cuzeyi
+[2025-04-06 11:16:57] [INFO] [MovementSystem] Updated movement path for Cuzeyi
+[2025-04-06 11:16:57] [INFO] [Component] Setting dark_dragon_Cuzeyi_dbb80082-dc13-49cd-b53f-3f1304bc93d7 on to 14_12_303fe3b0-6813-4914-b8b1-4db2cfb7b20b.
+[2025-04-06 11:16:57] [INFO] [MovementSystem] Moved from [13, 11] to [14, 12]
+[2025-04-06 11:16:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Cuzeyi
+[2025-04-06 11:16:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:57] [INFO] [InputHandler] Gliding 0 camera to new tile 14_12_303fe3b0-6813-4914-b8b1-4db2cfb7b20b
+[2025-04-06 11:16:57] [INFO] [InputHandler] Gliding 1 camera to new tile 14_12_303fe3b0-6813-4914-b8b1-4db2cfb7b20b
+[2025-04-06 11:16:58] [INFO] [AbilitySystem] Fybyvu Triggered ability system
+[2025-04-06 11:16:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Xibun
+[2025-04-06 11:16:58] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:58] [INFO] [InputHandler] Gliding 0 camera to new tile 7_7_ec2aa3ca-f6a6-4168-b0ce-9d9d11f6cab1
+[2025-04-06 11:16:58] [INFO] [InputHandler] Gliding 1 camera to new tile 7_7_ec2aa3ca-f6a6-4168-b0ce-9d9d11f6cab1
+[2025-04-06 11:16:58] [INFO] [MovementSystem] Updated movement range for Xibun
+[2025-04-06 11:16:58] [INFO] [MovementSystem] Updated movement path for Xibun
+[2025-04-06 11:16:58] [INFO] [Component] Setting fire_dragon_Xibun_3f7a7df4-dabb-4a3a-bede-9b15eab693e3 on to 7_5_cc46eba6-3517-4b71-9fcb-3162ff49607e.
+[2025-04-06 11:16:58] [INFO] [MovementSystem] Moved from [7, 7] to [7, 5]
+[2025-04-06 11:16:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Xibun
+[2025-04-06 11:16:58] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:58] [INFO] [InputHandler] Gliding 0 camera to new tile 7_5_cc46eba6-3517-4b71-9fcb-3162ff49607e
+[2025-04-06 11:16:58] [INFO] [InputHandler] Gliding 1 camera to new tile 7_5_cc46eba6-3517-4b71-9fcb-3162ff49607e
+[2025-04-06 11:16:59] [INFO] [AbilitySystem] Cuzeyi Triggered ability system
+[2025-04-06 11:16:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:16:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Wecgeb
+[2025-04-06 11:16:59] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:59] [INFO] [InputHandler] Gliding 0 camera to new tile 11_6_ecae0eb7-cb87-4de5-9b96-ab4f8dbd2d89
+[2025-04-06 11:16:59] [INFO] [InputHandler] Gliding 1 camera to new tile 11_6_ecae0eb7-cb87-4de5-9b96-ab4f8dbd2d89
+[2025-04-06 11:16:59] [INFO] [MovementSystem] Updated movement range for Wecgeb
+[2025-04-06 11:16:59] [INFO] [MovementSystem] Updated movement path for Wecgeb
+[2025-04-06 11:16:59] [INFO] [Component] Setting dragon_Wecgeb_c7fabb82-39f9-469d-bafb-1f1e6aec88b6 on to 10_5_7f423979-e7f3-4810-a6c6-d42de4c89b4f.
+[2025-04-06 11:16:59] [INFO] [MovementSystem] Moved from [11, 6] to [10, 5]
+[2025-04-06 11:16:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:16:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Wecgeb
+[2025-04-06 11:16:59] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:16:59] [INFO] [InputHandler] Gliding 0 camera to new tile 10_5_7f423979-e7f3-4810-a6c6-d42de4c89b4f
+[2025-04-06 11:16:59] [INFO] [InputHandler] Gliding 1 camera to new tile 10_5_7f423979-e7f3-4810-a6c6-d42de4c89b4f
+[2025-04-06 11:17:00] [INFO] [AbilitySystem] Xibun Triggered ability system
+[2025-04-06 11:17:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Koeyro
+[2025-04-06 11:17:00] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:00] [INFO] [InputHandler] Gliding 0 camera to new tile 10_8_62b31f55-d8a3-445c-aa33-3ac1f4c7479a
+[2025-04-06 11:17:00] [INFO] [InputHandler] Gliding 1 camera to new tile 10_8_62b31f55-d8a3-445c-aa33-3ac1f4c7479a
+[2025-04-06 11:17:00] [INFO] [MovementSystem] Updated movement range for Koeyro
+[2025-04-06 11:17:00] [INFO] [MovementSystem] Updated movement path for Koeyro
+[2025-04-06 11:17:00] [INFO] [Component] Setting dark_dragon_Koeyro_bde60342-e0bd-4646-a115-6f30a1285208 on to 11_7_7ac2e494-2f85-4dfb-be8c-da4653f72930.
+[2025-04-06 11:17:00] [INFO] [MovementSystem] Moved from [10, 8] to [11, 7]
+[2025-04-06 11:17:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Koeyro
+[2025-04-06 11:17:00] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:00] [INFO] [InputHandler] Gliding 0 camera to new tile 11_7_7ac2e494-2f85-4dfb-be8c-da4653f72930
+[2025-04-06 11:17:00] [INFO] [InputHandler] Gliding 1 camera to new tile 11_7_7ac2e494-2f85-4dfb-be8c-da4653f72930
+[2025-04-06 11:17:01] [INFO] [AbilitySystem] Wecgeb Triggered ability system
+[2025-04-06 11:17:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Zuqqoo
+[2025-04-06 11:17:01] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:01] [INFO] [InputHandler] Gliding 0 camera to new tile 10_0_7e8bb448-283c-40e5-9f02-b31c1776fcd5
+[2025-04-06 11:17:01] [INFO] [InputHandler] Gliding 1 camera to new tile 10_0_7e8bb448-283c-40e5-9f02-b31c1776fcd5
+[2025-04-06 11:17:01] [INFO] [MovementSystem] Updated movement range for Zuqqoo
+[2025-04-06 11:17:01] [INFO] [MovementSystem] Updated movement path for Zuqqoo
+[2025-04-06 11:17:01] [INFO] [Component] Setting dragon_Zuqqoo_d8d1bb04-53c8-45af-9239-50bf8a83ce73 on to 10_2_ff0f0fa5-f6aa-4eb9-9922-998c28f39c3c.
+[2025-04-06 11:17:01] [INFO] [MovementSystem] Moved from [10, 0] to [10, 2]
+[2025-04-06 11:17:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Zuqqoo
+[2025-04-06 11:17:01] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:01] [INFO] [InputHandler] Gliding 0 camera to new tile 10_2_ff0f0fa5-f6aa-4eb9-9922-998c28f39c3c
+[2025-04-06 11:17:01] [INFO] [InputHandler] Gliding 1 camera to new tile 10_2_ff0f0fa5-f6aa-4eb9-9922-998c28f39c3c
+[2025-04-06 11:17:02] [INFO] [AbilitySystem] Koeyro Triggered ability system
+[2025-04-06 11:17:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Eaqrio
+[2025-04-06 11:17:02] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:02] [INFO] [InputHandler] Gliding 0 camera to new tile 11_10_b17c6b75-4753-4359-82b0-578cc4799cef
+[2025-04-06 11:17:02] [INFO] [InputHandler] Gliding 1 camera to new tile 11_10_b17c6b75-4753-4359-82b0-578cc4799cef
+[2025-04-06 11:17:02] [INFO] [MovementSystem] Updated movement range for Eaqrio
+[2025-04-06 11:17:02] [INFO] [MovementSystem] Updated movement path for Eaqrio
+[2025-04-06 11:17:02] [INFO] [Component] Setting water_dragon_Eaqrio_61250ab9-6532-4be0-9a50-b0eea435f2ea on to 10_10_139133ef-a7fa-488d-90e5-43f27c53b2df.
+[2025-04-06 11:17:02] [INFO] [MovementSystem] Moved from [11, 10] to [10, 10]
+[2025-04-06 11:17:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Eaqrio
+[2025-04-06 11:17:02] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:02] [INFO] [InputHandler] Gliding 0 camera to new tile 10_10_139133ef-a7fa-488d-90e5-43f27c53b2df
+[2025-04-06 11:17:02] [INFO] [InputHandler] Gliding 1 camera to new tile 10_10_139133ef-a7fa-488d-90e5-43f27c53b2df
+[2025-04-06 11:17:03] [INFO] [AbilitySystem] Zuqqoo Triggered ability system
+[2025-04-06 11:17:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Laybs
+[2025-04-06 11:17:03] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:03] [INFO] [InputHandler] Gliding 0 camera to new tile 12_9_d90762b3-afa8-47b3-beb8-e6e2546d344d
+[2025-04-06 11:17:03] [INFO] [InputHandler] Gliding 1 camera to new tile 12_9_d90762b3-afa8-47b3-beb8-e6e2546d344d
+[2025-04-06 11:17:03] [INFO] [MovementSystem] Updated movement range for Laybs
+[2025-04-06 11:17:03] [INFO] [MovementSystem] Updated movement path for Laybs
+[2025-04-06 11:17:03] [INFO] [Component] Setting light_dragon_Laybs_bff22a8f-90a2-46c3-85dc-fb8faf64a765 on to 12_8_06bc8d6a-6e99-47f9-b62e-068003b271de.
+[2025-04-06 11:17:03] [INFO] [MovementSystem] Moved from [12, 9] to [12, 8]
+[2025-04-06 11:17:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Laybs
+[2025-04-06 11:17:03] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:03] [INFO] [InputHandler] Gliding 0 camera to new tile 12_8_06bc8d6a-6e99-47f9-b62e-068003b271de
+[2025-04-06 11:17:03] [INFO] [InputHandler] Gliding 1 camera to new tile 12_8_06bc8d6a-6e99-47f9-b62e-068003b271de
+[2025-04-06 11:17:04] [INFO] [AbilitySystem] Eaqrio Triggered ability system
+[2025-04-06 11:17:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Bedud
+[2025-04-06 11:17:04] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:04] [INFO] [InputHandler] Gliding 0 camera to new tile 11_1_2dae9fda-aed0-4418-9354-5d42eb4968a8
+[2025-04-06 11:17:04] [INFO] [InputHandler] Gliding 1 camera to new tile 11_1_2dae9fda-aed0-4418-9354-5d42eb4968a8
+[2025-04-06 11:17:04] [INFO] [MovementSystem] Updated movement range for Bedud
+[2025-04-06 11:17:04] [INFO] [MovementSystem] Updated movement path for Bedud
+[2025-04-06 11:17:04] [INFO] [Component] Setting dark_dragon_Bedud_ea7986de-36ec-4866-9e56-41f5a293a2cd on to 11_0_9091b3fd-0bf2-4274-91f0-e7bb9a8ad63c.
+[2025-04-06 11:17:04] [INFO] [MovementSystem] Moved from [11, 1] to [11, 0]
+[2025-04-06 11:17:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Bedud
+[2025-04-06 11:17:04] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:04] [INFO] [InputHandler] Gliding 0 camera to new tile 11_0_9091b3fd-0bf2-4274-91f0-e7bb9a8ad63c
+[2025-04-06 11:17:04] [INFO] [InputHandler] Gliding 1 camera to new tile 11_0_9091b3fd-0bf2-4274-91f0-e7bb9a8ad63c
+[2025-04-06 11:17:05] [INFO] [AbilitySystem] Laybs Triggered ability system
+[2025-04-06 11:17:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Syrol
+[2025-04-06 11:17:05] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:05] [INFO] [InputHandler] Gliding 0 camera to new tile 9_12_878ceecf-258b-4d9e-9e34-29dc77f2a829
+[2025-04-06 11:17:05] [INFO] [InputHandler] Gliding 1 camera to new tile 9_12_878ceecf-258b-4d9e-9e34-29dc77f2a829
+[2025-04-06 11:17:05] [INFO] [MovementSystem] Updated movement range for Syrol
+[2025-04-06 11:17:05] [INFO] [MovementSystem] Updated movement path for Syrol
+[2025-04-06 11:17:05] [INFO] [Component] Setting water_dragon_Syrol_6185ed16-0c88-42f5-acb3-0d92c2385d65 on to 8_12_ebd312eb-6e38-4a13-a340-67eeb4758285.
+[2025-04-06 11:17:05] [INFO] [MovementSystem] Moved from [9, 12] to [8, 12]
+[2025-04-06 11:17:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Syrol
+[2025-04-06 11:17:05] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:05] [INFO] [InputHandler] Gliding 0 camera to new tile 8_12_ebd312eb-6e38-4a13-a340-67eeb4758285
+[2025-04-06 11:17:05] [INFO] [InputHandler] Gliding 1 camera to new tile 8_12_ebd312eb-6e38-4a13-a340-67eeb4758285
+[2025-04-06 11:17:06] [INFO] [AbilitySystem] Bedud Triggered ability system
+[2025-04-06 11:17:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Ioivg
+[2025-04-06 11:17:06] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:06] [INFO] [InputHandler] Gliding 0 camera to new tile 9_6_46417117-ad50-468e-b608-6ab4bf736ab7
+[2025-04-06 11:17:06] [INFO] [InputHandler] Gliding 1 camera to new tile 9_6_46417117-ad50-468e-b608-6ab4bf736ab7
+[2025-04-06 11:17:06] [INFO] [MovementSystem] Updated movement range for Ioivg
+[2025-04-06 11:17:06] [INFO] [MovementSystem] Updated movement path for Ioivg
+[2025-04-06 11:17:06] [INFO] [Component] Setting water_dragon_Ioivg_58e6265d-d1f8-4a82-8d04-69a820eedeab on to 7_6_4f1182a2-e377-467e-9229-7dc5f0193fed.
+[2025-04-06 11:17:06] [INFO] [MovementSystem] Moved from [9, 6] to [7, 6]
+[2025-04-06 11:17:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Ioivg
+[2025-04-06 11:17:06] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:06] [INFO] [InputHandler] Gliding 0 camera to new tile 7_6_4f1182a2-e377-467e-9229-7dc5f0193fed
+[2025-04-06 11:17:06] [INFO] [InputHandler] Gliding 1 camera to new tile 7_6_4f1182a2-e377-467e-9229-7dc5f0193fed
+[2025-04-06 11:17:07] [INFO] [AbilitySystem] Syrol Triggered ability system
+[2025-04-06 11:17:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Walun
+[2025-04-06 11:17:07] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:07] [INFO] [InputHandler] Gliding 0 camera to new tile 14_3_cf451269-d581-4234-8567-b57e22353383
+[2025-04-06 11:17:07] [INFO] [InputHandler] Gliding 1 camera to new tile 14_3_cf451269-d581-4234-8567-b57e22353383
+[2025-04-06 11:17:07] [INFO] [MovementSystem] Updated movement range for Walun
+[2025-04-06 11:17:07] [INFO] [MovementSystem] Updated movement path for Walun
+[2025-04-06 11:17:07] [INFO] [Component] Setting light_dragon_Walun_7f8fa76b-d1c7-400a-baa3-83d0d3cf58ba on to 14_4_b07e054a-088b-4db3-8511-2b48d4c2aef7.
+[2025-04-06 11:17:07] [INFO] [MovementSystem] Moved from [14, 3] to [14, 4]
+[2025-04-06 11:17:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Walun
+[2025-04-06 11:17:07] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:07] [INFO] [InputHandler] Gliding 0 camera to new tile 14_4_b07e054a-088b-4db3-8511-2b48d4c2aef7
+[2025-04-06 11:17:07] [INFO] [InputHandler] Gliding 1 camera to new tile 14_4_b07e054a-088b-4db3-8511-2b48d4c2aef7
+[2025-04-06 11:17:08] [INFO] [AbilitySystem] Ioivg Triggered ability system
+[2025-04-06 11:17:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Saleay
+[2025-04-06 11:17:08] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:08] [INFO] [InputHandler] Gliding 0 camera to new tile 14_8_9634a257-6516-4b3e-99fe-48b59e208b1a
+[2025-04-06 11:17:08] [INFO] [InputHandler] Gliding 1 camera to new tile 14_8_9634a257-6516-4b3e-99fe-48b59e208b1a
+[2025-04-06 11:17:08] [INFO] [MovementSystem] Updated movement range for Saleay
+[2025-04-06 11:17:08] [INFO] [MovementSystem] Updated movement path for Saleay
+[2025-04-06 11:17:08] [INFO] [Component] Setting air_dragon_Saleay_39359cc5-98be-4baf-9ff9-e5abdbe05e77 on to 13_7_fac6a6e2-0594-42ac-9636-eccb439095aa.
+[2025-04-06 11:17:08] [INFO] [MovementSystem] Moved from [14, 8] to [13, 7]
+[2025-04-06 11:17:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Saleay
+[2025-04-06 11:17:08] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:08] [INFO] [InputHandler] Gliding 0 camera to new tile 13_7_fac6a6e2-0594-42ac-9636-eccb439095aa
+[2025-04-06 11:17:08] [INFO] [InputHandler] Gliding 1 camera to new tile 13_7_fac6a6e2-0594-42ac-9636-eccb439095aa
+[2025-04-06 11:17:09] [INFO] [AbilitySystem] Walun Triggered ability system
+[2025-04-06 11:17:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Zuijaa
+[2025-04-06 11:17:09] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:09] [INFO] [InputHandler] Gliding 0 camera to new tile 9_13_8064820f-7ff7-4576-8307-0ee9eb608e96
+[2025-04-06 11:17:09] [INFO] [InputHandler] Gliding 1 camera to new tile 9_13_8064820f-7ff7-4576-8307-0ee9eb608e96
+[2025-04-06 11:17:09] [INFO] [MovementSystem] Updated movement range for Zuijaa
+[2025-04-06 11:17:09] [INFO] [MovementSystem] Updated movement path for Zuijaa
+[2025-04-06 11:17:09] [INFO] [Component] Setting light_dragon_Zuijaa_07d6c001-49b2-4731-9e8d-caddc5cc4d06 on to 9_11_295571d9-0292-46b7-bfa2-2d9d5f520f55.
+[2025-04-06 11:17:09] [INFO] [MovementSystem] Moved from [9, 13] to [9, 11]
+[2025-04-06 11:17:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Zuijaa
+[2025-04-06 11:17:09] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:09] [INFO] [InputHandler] Gliding 0 camera to new tile 9_11_295571d9-0292-46b7-bfa2-2d9d5f520f55
+[2025-04-06 11:17:09] [INFO] [InputHandler] Gliding 1 camera to new tile 9_11_295571d9-0292-46b7-bfa2-2d9d5f520f55
+[2025-04-06 11:17:10] [INFO] [AbilitySystem] Saleay Triggered ability system
+[2025-04-06 11:17:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Tuba
+[2025-04-06 11:17:10] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:10] [INFO] [InputHandler] Gliding 0 camera to new tile 14_7_47e81690-987a-4983-b0dd-4c2c0728068c
+[2025-04-06 11:17:10] [INFO] [InputHandler] Gliding 1 camera to new tile 14_7_47e81690-987a-4983-b0dd-4c2c0728068c
+[2025-04-06 11:17:10] [INFO] [MovementSystem] Updated movement range for Tuba
+[2025-04-06 11:17:10] [INFO] [MovementSystem] Updated movement path for Tuba
+[2025-04-06 11:17:10] [INFO] [Component] Setting dark_dragon_Tuba_759e59ea-99c0-41cc-9479-e921e75a694d on to 13_8_d7e373bf-f3d7-46b0-be09-a2fc775159d5.
+[2025-04-06 11:17:10] [INFO] [MovementSystem] Moved from [14, 7] to [13, 8]
+[2025-04-06 11:17:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Tuba
+[2025-04-06 11:17:10] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:10] [INFO] [InputHandler] Gliding 0 camera to new tile 13_8_d7e373bf-f3d7-46b0-be09-a2fc775159d5
+[2025-04-06 11:17:10] [INFO] [InputHandler] Gliding 1 camera to new tile 13_8_d7e373bf-f3d7-46b0-be09-a2fc775159d5
+[2025-04-06 11:17:11] [INFO] [AbilitySystem] Zuijaa Triggered ability system
+[2025-04-06 11:17:11] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:17:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 11:17:11] [INFO] [InputHandler] Gliding 0 camera to new tile 13_8_d7e373bf-f3d7-46b0-be09-a2fc775159d5
+[2025-04-06 11:17:11] [INFO] [InputHandler] Gliding 1 camera to new tile 13_8_d7e373bf-f3d7-46b0-be09-a2fc775159d5
+[2025-04-06 11:17:11] [INFO] [MovementSystem] Updated movement range for Aojotu
+[2025-04-06 11:17:11] [INFO] [MovementSystem] Updated movement path for Aojotu
+[2025-04-06 11:17:11] [INFO] [Component] Setting earth_dragon_Aojotu_5d1b1439-0a61-43bf-b5aa-84369aca2627 on to 5_8_194e9d01-f08b-4b60-a909-128c513a59f1.
+[2025-04-06 11:17:11] [INFO] [MovementSystem] Moved from [4, 9] to [5, 8]
+[2025-04-06 11:17:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Aojotu
+[2025-04-06 11:17:11] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:11] [INFO] [InputHandler] Gliding 0 camera to new tile 5_8_194e9d01-f08b-4b60-a909-128c513a59f1
+[2025-04-06 11:17:11] [INFO] [InputHandler] Gliding 1 camera to new tile 5_8_194e9d01-f08b-4b60-a909-128c513a59f1
+[2025-04-06 11:17:12] [INFO] [AbilitySystem] Tuba Triggered ability system
+[2025-04-06 11:17:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Iajo
+[2025-04-06 11:17:12] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:12] [INFO] [InputHandler] Gliding 0 camera to new tile 12_6_fd4372bd-1d99-4a71-9835-2c4f12c4d60e
+[2025-04-06 11:17:12] [INFO] [InputHandler] Gliding 1 camera to new tile 12_6_fd4372bd-1d99-4a71-9835-2c4f12c4d60e
+[2025-04-06 11:17:12] [INFO] [MovementSystem] Updated movement range for Iajo
+[2025-04-06 11:17:12] [INFO] [MovementSystem] Updated movement path for Iajo
+[2025-04-06 11:17:12] [INFO] [Component] Setting dark_dragon_Iajo_86ff6c40-bec4-4925-b7bc-01ef8c464e9a on to 11_5_5bfb9983-6912-4d23-9a8c-9b46213e0a21.
+[2025-04-06 11:17:12] [INFO] [MovementSystem] Moved from [12, 6] to [11, 5]
+[2025-04-06 11:17:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Iajo
+[2025-04-06 11:17:12] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:12] [INFO] [InputHandler] Gliding 0 camera to new tile 11_5_5bfb9983-6912-4d23-9a8c-9b46213e0a21
+[2025-04-06 11:17:12] [INFO] [InputHandler] Gliding 1 camera to new tile 11_5_5bfb9983-6912-4d23-9a8c-9b46213e0a21
+[2025-04-06 11:17:13] [INFO] [AbilitySystem] Aojotu Triggered ability system
+[2025-04-06 11:17:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Dabjy
+[2025-04-06 11:17:13] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:13] [INFO] [InputHandler] Gliding 0 camera to new tile 12_14_e84f63bc-1605-4f89-96cd-59c411ab2f6a
+[2025-04-06 11:17:13] [INFO] [InputHandler] Gliding 1 camera to new tile 12_14_e84f63bc-1605-4f89-96cd-59c411ab2f6a
+[2025-04-06 11:17:13] [INFO] [MovementSystem] Updated movement range for Dabjy
+[2025-04-06 11:17:13] [INFO] [MovementSystem] Updated movement path for Dabjy
+[2025-04-06 11:17:13] [INFO] [Component] Setting fire_dragon_Dabjy_1882144d-eab0-4e70-b2b8-3d6b8f97cd7e on to 13_14_5de35d6a-bd75-467a-877e-766e4225426d.
+[2025-04-06 11:17:13] [INFO] [MovementSystem] Moved from [12, 14] to [13, 14]
+[2025-04-06 11:17:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Dabjy
+[2025-04-06 11:17:13] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:13] [INFO] [InputHandler] Gliding 0 camera to new tile 13_14_5de35d6a-bd75-467a-877e-766e4225426d
+[2025-04-06 11:17:13] [INFO] [InputHandler] Gliding 1 camera to new tile 13_14_5de35d6a-bd75-467a-877e-766e4225426d
+[2025-04-06 11:17:14] [INFO] [AbilitySystem] Iajo Triggered ability system
+[2025-04-06 11:17:14] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:14] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Xumuk
+[2025-04-06 11:17:14] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:14] [INFO] [InputHandler] Gliding 0 camera to new tile 8_11_42b6be06-d4b5-4678-9459-da9bf622471e
+[2025-04-06 11:17:14] [INFO] [InputHandler] Gliding 1 camera to new tile 8_11_42b6be06-d4b5-4678-9459-da9bf622471e
+[2025-04-06 11:17:14] [INFO] [MovementSystem] Updated movement range for Xumuk
+[2025-04-06 11:17:14] [INFO] [MovementSystem] Updated movement path for Xumuk
+[2025-04-06 11:17:14] [INFO] [Component] Setting dark_dragon_Xumuk_06fd2576-dd9c-462f-be91-860ca6d892ba on to 7_12_16c77973-a68b-4c65-9388-e9a6f3dbd908.
+[2025-04-06 11:17:14] [INFO] [MovementSystem] Moved from [8, 11] to [7, 12]
+[2025-04-06 11:17:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Xumuk
+[2025-04-06 11:17:14] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:14] [INFO] [InputHandler] Gliding 0 camera to new tile 7_12_16c77973-a68b-4c65-9388-e9a6f3dbd908
+[2025-04-06 11:17:14] [INFO] [InputHandler] Gliding 1 camera to new tile 7_12_16c77973-a68b-4c65-9388-e9a6f3dbd908
+[2025-04-06 11:17:15] [INFO] [AbilitySystem] Dabjy Triggered ability system
+[2025-04-06 11:17:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Hyfie
+[2025-04-06 11:17:15] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:15] [INFO] [InputHandler] Gliding 0 camera to new tile 1_13_9dd2d542-d746-4fe4-adb4-e74c6318c585
+[2025-04-06 11:17:15] [INFO] [InputHandler] Gliding 1 camera to new tile 1_13_9dd2d542-d746-4fe4-adb4-e74c6318c585
+[2025-04-06 11:17:15] [INFO] [MovementSystem] Updated movement range for Hyfie
+[2025-04-06 11:17:15] [INFO] [MovementSystem] Updated movement path for Hyfie
+[2025-04-06 11:17:15] [INFO] [Component] Setting water_dragon_Hyfie_7b4d8659-8285-4b23-ac8d-f2c2563fc8c5 on to 2_12_76b0af42-bd59-4974-945e-ad7f347f3402.
+[2025-04-06 11:17:15] [INFO] [MovementSystem] Moved from [1, 13] to [2, 12]
+[2025-04-06 11:17:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Hyfie
+[2025-04-06 11:17:15] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:15] [INFO] [InputHandler] Gliding 0 camera to new tile 2_12_76b0af42-bd59-4974-945e-ad7f347f3402
+[2025-04-06 11:17:15] [INFO] [InputHandler] Gliding 1 camera to new tile 2_12_76b0af42-bd59-4974-945e-ad7f347f3402
+[2025-04-06 11:17:16] [INFO] [AbilitySystem] Xumuk Triggered ability system
+[2025-04-06 11:17:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Hepc
+[2025-04-06 11:17:16] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:16] [INFO] [InputHandler] Gliding 0 camera to new tile 12_0_0c9538c9-7f12-4888-9980-444defad1aaf
+[2025-04-06 11:17:16] [INFO] [InputHandler] Gliding 1 camera to new tile 12_0_0c9538c9-7f12-4888-9980-444defad1aaf
+[2025-04-06 11:17:16] [INFO] [MovementSystem] Updated movement range for Hepc
+[2025-04-06 11:17:16] [INFO] [MovementSystem] Updated movement path for Hepc
+[2025-04-06 11:17:16] [INFO] [Component] Setting earth_dragon_Hepc_68ba7446-5d26-4bb2-a657-cf82ad2e9062 on to 14_0_516a872f-fa95-471a-ba75-a3e8579fcf22.
+[2025-04-06 11:17:16] [INFO] [MovementSystem] Moved from [12, 0] to [14, 0]
+[2025-04-06 11:17:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Hepc
+[2025-04-06 11:17:16] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:16] [INFO] [InputHandler] Gliding 0 camera to new tile 14_0_516a872f-fa95-471a-ba75-a3e8579fcf22
+[2025-04-06 11:17:16] [INFO] [InputHandler] Gliding 1 camera to new tile 14_0_516a872f-fa95-471a-ba75-a3e8579fcf22
+[2025-04-06 11:17:17] [INFO] [AbilitySystem] Hyfie Triggered ability system
+[2025-04-06 11:17:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Mefd
+[2025-04-06 11:17:17] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:17] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_aa0331bb-1374-475a-a1de-0d6f71f74832
+[2025-04-06 11:17:17] [INFO] [InputHandler] Gliding 1 camera to new tile 1_3_aa0331bb-1374-475a-a1de-0d6f71f74832
+[2025-04-06 11:17:17] [INFO] [MovementSystem] Updated movement range for Mefd
+[2025-04-06 11:17:17] [INFO] [MovementSystem] Updated movement path for Mefd
+[2025-04-06 11:17:17] [INFO] [Component] Setting dragon_Mefd_b6a08b3e-19c5-446e-b142-4278d9c9c591 on to 2_2_b0af3c5f-e07c-4b7c-92bd-2e541bae45ae.
+[2025-04-06 11:17:17] [INFO] [MovementSystem] Moved from [1, 3] to [2, 2]
+[2025-04-06 11:17:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Mefd
+[2025-04-06 11:17:17] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:17] [INFO] [InputHandler] Gliding 0 camera to new tile 2_2_b0af3c5f-e07c-4b7c-92bd-2e541bae45ae
+[2025-04-06 11:17:17] [INFO] [InputHandler] Gliding 1 camera to new tile 2_2_b0af3c5f-e07c-4b7c-92bd-2e541bae45ae
+[2025-04-06 11:17:18] [INFO] [AbilitySystem] Hepc Triggered ability system
+[2025-04-06 11:17:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Fybyvu
+[2025-04-06 11:17:18] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:18] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_6c001162-7baf-47fe-9b74-5ecb9b45af0c
+[2025-04-06 11:17:18] [INFO] [InputHandler] Gliding 1 camera to new tile 3_4_6c001162-7baf-47fe-9b74-5ecb9b45af0c
+[2025-04-06 11:17:18] [INFO] [MovementSystem] Updated movement range for Fybyvu
+[2025-04-06 11:17:18] [INFO] [MovementSystem] Updated movement path for Fybyvu
+[2025-04-06 11:17:18] [INFO] [Component] Setting earth_dragon_Fybyvu_8e25ec7f-72a2-42ae-b1a7-70d1f932d7af on to 5_4_28e3bfc5-1313-4e95-ab16-8cc91890f07c.
+[2025-04-06 11:17:18] [INFO] [MovementSystem] Moved from [3, 4] to [5, 4]
+[2025-04-06 11:17:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Fybyvu
+[2025-04-06 11:17:18] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:18] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_28e3bfc5-1313-4e95-ab16-8cc91890f07c
+[2025-04-06 11:17:18] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_28e3bfc5-1313-4e95-ab16-8cc91890f07c
+[2025-04-06 11:17:19] [INFO] [AbilitySystem] Mefd Triggered ability system
+[2025-04-06 11:17:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Cuzeyi
+[2025-04-06 11:17:19] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:19] [INFO] [InputHandler] Gliding 0 camera to new tile 14_12_303fe3b0-6813-4914-b8b1-4db2cfb7b20b
+[2025-04-06 11:17:19] [INFO] [InputHandler] Gliding 1 camera to new tile 14_12_303fe3b0-6813-4914-b8b1-4db2cfb7b20b
+[2025-04-06 11:17:19] [INFO] [MovementSystem] Updated movement range for Cuzeyi
+[2025-04-06 11:17:19] [INFO] [MovementSystem] Updated movement path for Cuzeyi
+[2025-04-06 11:17:19] [INFO] [Component] Setting dark_dragon_Cuzeyi_dbb80082-dc13-49cd-b53f-3f1304bc93d7 on to 13_12_cfcc4f4b-6d4d-4997-afc0-766169d49240.
+[2025-04-06 11:17:19] [INFO] [MovementSystem] Moved from [14, 12] to [13, 12]
+[2025-04-06 11:17:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Cuzeyi
+[2025-04-06 11:17:19] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:19] [INFO] [InputHandler] Gliding 0 camera to new tile 13_12_cfcc4f4b-6d4d-4997-afc0-766169d49240
+[2025-04-06 11:17:19] [INFO] [InputHandler] Gliding 1 camera to new tile 13_12_cfcc4f4b-6d4d-4997-afc0-766169d49240
+[2025-04-06 11:17:20] [INFO] [AbilitySystem] Fybyvu Triggered ability system
+[2025-04-06 11:17:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Xibun
+[2025-04-06 11:17:20] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:20] [INFO] [InputHandler] Gliding 0 camera to new tile 7_5_cc46eba6-3517-4b71-9fcb-3162ff49607e
+[2025-04-06 11:17:20] [INFO] [InputHandler] Gliding 1 camera to new tile 7_5_cc46eba6-3517-4b71-9fcb-3162ff49607e
+[2025-04-06 11:17:20] [INFO] [MovementSystem] Updated movement range for Xibun
+[2025-04-06 11:17:20] [INFO] [MovementSystem] Updated movement path for Xibun
+[2025-04-06 11:17:20] [INFO] [Component] Setting fire_dragon_Xibun_3f7a7df4-dabb-4a3a-bede-9b15eab693e3 on to 8_5_3b6f8fcb-a26b-4c87-9f9f-bb5cbabde65e.
+[2025-04-06 11:17:20] [INFO] [MovementSystem] Moved from [7, 5] to [8, 5]
+[2025-04-06 11:17:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Xibun
+[2025-04-06 11:17:20] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:20] [INFO] [InputHandler] Gliding 0 camera to new tile 8_5_3b6f8fcb-a26b-4c87-9f9f-bb5cbabde65e
+[2025-04-06 11:17:20] [INFO] [InputHandler] Gliding 1 camera to new tile 8_5_3b6f8fcb-a26b-4c87-9f9f-bb5cbabde65e
+[2025-04-06 11:17:21] [INFO] [AbilitySystem] Cuzeyi Triggered ability system
+[2025-04-06 11:17:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:17:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Wecgeb
+[2025-04-06 11:17:21] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:21] [INFO] [InputHandler] Gliding 0 camera to new tile 10_5_7f423979-e7f3-4810-a6c6-d42de4c89b4f
+[2025-04-06 11:17:21] [INFO] [InputHandler] Gliding 1 camera to new tile 10_5_7f423979-e7f3-4810-a6c6-d42de4c89b4f
+[2025-04-06 11:17:21] [INFO] [MovementSystem] Updated movement range for Wecgeb
+[2025-04-06 11:17:21] [INFO] [MovementSystem] Updated movement path for Wecgeb
+[2025-04-06 11:17:21] [INFO] [Component] Setting dragon_Wecgeb_c7fabb82-39f9-469d-bafb-1f1e6aec88b6 on to 9_4_b204469c-1f9a-47f1-baf1-e21c847d1103.
+[2025-04-06 11:17:21] [INFO] [MovementSystem] Moved from [10, 5] to [9, 4]
+[2025-04-06 11:17:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:17:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Wecgeb
+[2025-04-06 11:17:21] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:17:21] [INFO] [InputHandler] Gliding 0 camera to new tile 9_4_b204469c-1f9a-47f1-baf1-e21c847d1103
+[2025-04-06 11:17:21] [INFO] [InputHandler] Gliding 1 camera to new tile 9_4_b204469c-1f9a-47f1-baf1-e21c847d1103

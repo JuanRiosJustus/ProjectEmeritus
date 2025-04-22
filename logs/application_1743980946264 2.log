@@ -1,0 +1,223 @@
+[2025-04-06 16:09:06] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 16:09:06] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 16:09:06] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 16:09:06] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 16:09:06] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 16:09:06] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 16:09:06] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 16:09:06] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 16:09:06] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 16:09:06] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 16:09:06] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 16:09:06] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 16:09:06] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 16:09:06] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 16:09:06] [INFO] [Component] Setting water_dragon_Fugd_dabf7d75-92e8-4dc2-b523-3855d67271ed on to 1_5_88fa27cf-0cc2-4ea4-ac00-627d56743272.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Fugd into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting air_dragon_Uety_1d29ea1e-b39c-42e2-8a18-4bb23cfe2003 on to 0_12_21fd00e5-8f5c-423c-82c2-7e10df7af4cd.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Uety into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dark_dragon_Uazi_40bc5e60-ec14-451d-80a7-ad7f9e3ce955 on to 9_8_1da2138b-532a-449e-a646-15359e704450.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Uazi into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dark_dragon_Fahae_d329b124-0e71-4f69-ae15-1ba8ac7e34e3 on to 5_2_26eb9540-51cc-47e5-a401-b5c4f7264c26.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Fahae into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting air_dragon_Bomi_fb360f53-d984-46d1-8e6a-27a78627c2bd on to 11_4_8cc729ba-15e4-45b5-93ac-12ba05ecbbe4.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Bomi into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting fire_dragon_Byweu_f7350aac-61af-49d6-a0ad-af070c08a242 on to 14_3_f27ea309-0e39-47f3-a4ed-09fe394f46dd.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Byweu into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting air_dragon_Oexnb_80bfb66c-127c-447a-908e-dff938cc61bd on to 4_11_91e5e4a8-a437-45ae-97f5-5790af54588f.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Oexnb into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dragon_Boqoal_256eed84-d913-4a38-84d2-f7409271313f on to 0_3_fe389610-ce33-49cb-a18b-167e30f70338.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Boqoal into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting air_dragon_Cicu_9ef80314-8488-465c-8812-426a1d939658 on to 2_7_599b60fd-53e0-4c67-aeab-5cd0d63c525b.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Cicu into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting earth_dragon_Pelogo_0b78572e-16bb-4f82-8dd8-113b115c1a9f on to 4_2_5110f5e1-e888-4443-8cb0-34d3392b37ab.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Pelogo into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting light_dragon_Rolyu_e2567e6f-e867-416c-81c2-9c3607561b73 on to 8_13_12a3dfcd-a090-458e-a6a0-65cbbca2bb6f.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Rolyu into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting fire_dragon_Golb_e8a9695e-9763-4d67-b690-1e6a5b8766d2 on to 10_14_2d2ae303-c4e4-4a60-8b7f-4167f020bca1.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Golb into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dark_dragon_Muob_b5403037-ea9a-4f57-a854-9cae02b31ccf on to 10_1_460b1324-8d8e-4714-a968-fd5304b24494.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Muob into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting earth_dragon_Vepunk_dfd09f7b-acb7-4767-8423-8fc03f555da0 on to 8_11_fb4cae0c-dfbb-4b28-92b8-f7b202ea8e5d.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Vepunk into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting water_dragon_Ieaie_5a572cc6-b1dd-4469-9610-ec3c797b458a on to 7_8_2b94f78e-303a-4710-8e15-b718bb1a401b.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Ieaie into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting air_dragon_Meyoe_ab6e567b-76d9-40e8-a244-3c137d831d07 on to 5_7_3b1f0b0f-3706-4588-9713-717b9c3ed0ee.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Meyoe into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dark_dragon_Fujec_a657bbef-5059-4e75-a9f1-7561bdada5eb on to 11_7_86eeda83-e582-45b8-8c56-dc16bc286130.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Fujec into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dragon_Eaquxy_d49c93c4-8190-4156-99ba-43510296c776 on to 11_1_ac65a66f-c908-48ed-9383-97f99433953f.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Eaquxy into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dragon_Xoqqup_52f1ee36-70bf-496c-bee9-1762e4917668 on to 8_12_7da9061f-30db-4a84-b6d0-f67ab50b28c6.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Xoqqup into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting light_dragon_Biii_32c9d570-221f-46c2-bcfa-68b2694c193a on to 10_6_6fd35ea6-835a-47ab-8477-de69863469e5.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit enemy:Biii into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting air_dragon_Syfo_27b5b002-25ea-4817-bbb4-7b76ee23fbfe on to 13_4_310ee357-1842-4bb0-939b-9c682f8c6b12.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Syfo into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dragon_Hakyi_770625b6-593e-432f-b277-b260949a3d27 on to 3_2_9823296c-e34f-4b04-bf69-58627a6f7f4f.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Hakyi into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting earth_dragon_Degb_43e96838-d863-4e4b-b93f-327926f45887 on to 9_2_a80c67b3-0d05-4ad5-92cc-e8d71d31d452.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Degb into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting light_dragon_Dujih_b16eb297-9456-4d44-879e-8d438868ab3e on to 10_11_7f4011f5-551d-40f4-9e8e-663d06e0e6dd.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Dujih into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting fire_dragon_Yymy_433e07bf-2e26-4abe-a177-cc495c203edc on to 1_12_8fd820f8-083f-4c9f-8194-bc51207c37dc.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Yymy into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dark_dragon_Canyt_8d12b0ff-d09e-4ed0-b442-f863d7327eae on to 13_8_d07ae92f-7457-4f12-8e54-31fc991092ce.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Canyt into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting dragon_Oynena_99267c87-cc91-4310-8e9f-925a735f063a on to 12_10_1a7ce524-b01d-48ad-ad2c-a25be1dd790d.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Oynena into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting earth_dragon_Vesaao_5f699bde-f083-41e6-8b9b-f55e2cb2e891 on to 4_0_5615c24f-04f5-4f16-83df-0f18b3f60557.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Vesaao into queue
+[2025-04-06 16:09:06] [INFO] [Component] Setting water_dragon_Yinigt_d1b446de-1b2d-4cc9-8133-f557544d0672 on to 6_0_7d21d65f-701e-41b5-9ef6-746f47b2f866.
+[2025-04-06 16:09:06] [INFO] [SpeedQueue] Added unit user:Yinigt into queue
+[2025-04-06 16:09:06] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 16:09:06] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 16:09:06] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 16:09:06] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 16:09:06] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 16:09:06] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 16:09:07] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 16:09:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:09:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:09:07] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Pelogo_0b78572e-16bb-4f82-8dd8-113b115c1a9f
+[2025-04-06 16:09:07] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 16:09:07] [INFO] [VisualsSystem] Finished creating blurred background after 0.48558899760246277 seconds
+[2025-04-06 16:09:08] [INFO] [InputHandler] Gliding 0 camera to new tile 4_2_5110f5e1-e888-4443-8cb0-34d3392b37ab
+[2025-04-06 16:09:08] [INFO] [InputHandler] Gliding 1 camera to new tile 4_2_5110f5e1-e888-4443-8cb0-34d3392b37ab
+[2025-04-06 16:09:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:09:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Pelogo
+[2025-04-06 16:09:08] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:09:09] [INFO] [AbilitySystem] Pelogo is planning to use slash on [3, 2]
+[2025-04-06 16:09:09] [INFO] [AbilitySystem] Updated area of sight for Pelogo, viewing 7 tiles
+[2025-04-06 16:09:09] [INFO] [AbilitySystem] Updated line of sight for Pelogo, viewing 2 tiles
+[2025-04-06 16:09:09] [INFO] [AbilitySystem] Updated area of effect for Pelogo viewing 1 tiles
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Started constructing cost mappings for Pelogo to use slash
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Finished constructing cost mappings for Pelogo to use slash
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Checking cost requirements for Pelogo to use slash
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Pelogo is able to pay for slash
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Started constructing cost mappings for Pelogo to use slash
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Finished constructing cost mappings for Pelogo to use slash
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Paying cost requirements for Pelogo using slash
+[2025-04-06 16:09:09] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:09:09] [INFO] [AbilitySystem] Used from slash on [3, 2]
+[2025-04-06 16:09:10] [INFO] [CombatSystem] Started constructing damage mappings for Pelogo to use slash
+[2025-04-06 16:09:10] [INFO] [CombatSystem] Finished constructing damage mappings for Pelogo to use slash
+[2025-04-06 16:09:10] [INFO] [CombatSystem] Started dealing damage with slash to Hakyi 
+[2025-04-06 16:09:10] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:09:10] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:09:10] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:09:11] [INFO] [MovementSystem] Updated movement range for Pelogo
+[2025-04-06 16:09:11] [INFO] [MovementSystem] Updated movement path for Pelogo
+[2025-04-06 16:09:11] [INFO] [Component] Setting earth_dragon_Pelogo_0b78572e-16bb-4f82-8dd8-113b115c1a9f on to 3_1_be9d1ac7-24e7-4d57-af8e-417d183c7c8a.
+[2025-04-06 16:09:11] [INFO] [MovementSystem] Moved from [4, 2] to [3, 1]
+[2025-04-06 16:09:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:13] [INFO] [InputHandler] Gliding 0 camera to new tile 14_3_f27ea309-0e39-47f3-a4ed-09fe394f46dd
+[2025-04-06 16:09:13] [INFO] [InputHandler] Gliding 1 camera to new tile 14_3_f27ea309-0e39-47f3-a4ed-09fe394f46dd
+[2025-04-06 16:09:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:09:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Byweu
+[2025-04-06 16:09:13] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:09:14] [INFO] [AbilitySystem] Byweu is planning to use energy_beam on [13, 4]
+[2025-04-06 16:09:14] [INFO] [AbilitySystem] Updated area of sight for Byweu, viewing 9 tiles
+[2025-04-06 16:09:14] [INFO] [AbilitySystem] Updated line of sight for Byweu, viewing 3 tiles
+[2025-04-06 16:09:14] [INFO] [AbilitySystem] Updated area of effect for Byweu viewing 1 tiles
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Started constructing cost mappings for Byweu to use energy_beam
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Finished constructing cost mappings for Byweu to use energy_beam
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Checking cost requirements for Byweu to use energy_beam
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Byweu is able to pay for energy_beam
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Started constructing cost mappings for Byweu to use energy_beam
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Finished constructing cost mappings for Byweu to use energy_beam
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Paying cost requirements for Byweu using energy_beam
+[2025-04-06 16:09:14] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:09:14] [INFO] [AbilitySystem] Used from energy_beam on [13, 4]
+[2025-04-06 16:09:15] [INFO] [CombatSystem] Started constructing damage mappings for Byweu to use energy_beam
+[2025-04-06 16:09:15] [INFO] [CombatSystem] Finished constructing damage mappings for Byweu to use energy_beam
+[2025-04-06 16:09:15] [INFO] [CombatSystem] Started dealing damage with energy_beam to Syfo 
+[2025-04-06 16:09:15] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:09:15] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:09:15] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:09:15] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 16:09:16] [INFO] [MovementSystem] Updated movement range for Byweu
+[2025-04-06 16:09:16] [INFO] [MovementSystem] Updated movement path for Byweu
+[2025-04-06 16:09:16] [INFO] [Component] Setting fire_dragon_Byweu_f7350aac-61af-49d6-a0ad-af070c08a242 on to 13_2_4e4e0c66-183f-44c5-93dc-371e6808bb53.
+[2025-04-06 16:09:16] [INFO] [MovementSystem] Moved from [14, 3] to [13, 2]
+[2025-04-06 16:09:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:21] [INFO] [MovementSystem] Updated movement range for Boqoal
+[2025-04-06 16:09:21] [INFO] [MovementSystem] Updated movement path for Boqoal
+[2025-04-06 16:09:21] [INFO] [Component] Setting dragon_Boqoal_256eed84-d913-4a38-84d2-f7409271313f on to 1_2_bdbce247-242d-4184-a627-58606dfb72d1.
+[2025-04-06 16:09:21] [INFO] [MovementSystem] Moved from [0, 3] to [1, 2]
+[2025-04-06 16:09:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:28] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_5615c24f-04f5-4f16-83df-0f18b3f60557
+[2025-04-06 16:09:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:09:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Vesaao
+[2025-04-06 16:09:28] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:09:28] [INFO] [MovementSystem] Updated movement range for Vesaao
+[2025-04-06 16:09:28] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:28] [INFO] [MovementSystem] Updated movement range for Vesaao
+[2025-04-06 16:09:28] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:29] [INFO] [MovementSystem] Updated movement path for Vesaao
+[2025-04-06 16:09:30] [INFO] [Component] Setting earth_dragon_Vesaao_5f699bde-f083-41e6-8b9b-f55e2cb2e891 on to 5_0_2af60a63-61af-4c50-b25c-e6294783080a.
+[2025-04-06 16:09:30] [INFO] [MovementSystem] Moved from [4, 0] to [5, 0]
+[2025-04-06 16:09:31] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_2af60a63-61af-4c50-b25c-e6294783080a
+[2025-04-06 16:09:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:09:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Vesaao
+[2025-04-06 16:09:31] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:09:32] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Vesaao is planning to use slash on [7, 6]
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of sight for Vesaao, viewing 7 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated line of sight for Vesaao, viewing 3 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of effect for Vesaao viewing 1 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Vesaao is planning to use slash on [7, 5]
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated line of sight for Vesaao, viewing 3 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of effect for Vesaao viewing 1 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Vesaao is planning to use slash on [7, 4]
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated line of sight for Vesaao, viewing 3 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of effect for Vesaao viewing 1 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Vesaao is planning to use slash on [6, 4]
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated line of sight for Vesaao, viewing 3 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of effect for Vesaao viewing 1 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Vesaao is planning to use slash on [6, 3]
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated line of sight for Vesaao, viewing 3 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of effect for Vesaao viewing 1 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Vesaao is planning to use slash on [5, 3]
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated line of sight for Vesaao, viewing 3 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of effect for Vesaao viewing 1 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Vesaao is planning to use slash on [5, 2]
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated line of sight for Vesaao, viewing 3 tiles
+[2025-04-06 16:09:32] [INFO] [AbilitySystem] Updated area of effect for Vesaao viewing 1 tiles
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Started constructing cost mappings for Vesaao to use slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Finished constructing cost mappings for Vesaao to use slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Checking cost requirements for Vesaao to use slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Vesaao is able to pay for slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Started constructing cost mappings for Vesaao to use slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Finished constructing cost mappings for Vesaao to use slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Paying cost requirements for Vesaao using slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:09:33] [INFO] [AbilitySystem] Used from slash on [5, 2]
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Started constructing damage mappings for Vesaao to use slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Finished constructing damage mappings for Vesaao to use slash
+[2025-04-06 16:09:33] [INFO] [CombatSystem] Started dealing damage with slash to Fahae 
+[2025-04-06 16:09:33] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:09:33] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:09:33] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:09:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:09:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

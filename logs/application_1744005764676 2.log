@@ -1,0 +1,145 @@
+[2025-04-06 23:02:44] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 23:02:44] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 23:02:44] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 23:02:44] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 23:02:44] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 23:02:44] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 23:02:44] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 23:02:44] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 23:02:44] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 23:02:44] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 23:02:44] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 23:02:44] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 23:02:45] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 23:02:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Iaty_eb47763f-a8e0-47c6-957a-20046b3c6947 on to 6_7_5421f7b5-f3ea-4c6c-88f6-f2d6d631824b.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Iaty into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting earth_dragon_Qizytb_be4a821a-39bb-471a-ae30-b3173a22b97b on to 14_2_cb4b7018-df1d-4ee5-bc2d-0a9fe0c59562.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Qizytb into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Uarqeh_b11c4358-55b7-4607-bc7e-24c99ba7f10a on to 9_9_04545cc1-b2ba-4d24-b7c0-62f51709f162.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Uarqeh into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting fire_dragon_Niwak_22477903-3c5e-4e14-9b5a-eb73972bb335 on to 0_7_723ac235-b6e2-4b16-b4cf-75e8c31548e7.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Niwak into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting fire_dragon_Yowy_0cdbd377-717a-4be3-9e47-475448c21dba on to 1_1_44339b11-fd00-4189-b024-dfae1bb56718.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Yowy into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Heotn_bc9df8a3-2de5-4a58-b509-aca602591b8e on to 5_2_27c6e767-db48-459d-9c65-2cc7902ec76c.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Heotn into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting light_dragon_Buvuiu_770c93ac-25ca-4d27-bbdb-68af5f5a2094 on to 8_2_f145f992-a0a3-454f-abaf-21b4c12b2ee2.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Buvuiu into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dark_dragon_Qyhela_43a175da-8495-4824-b92a-3754b63d1d89 on to 7_0_16123b9b-1fdf-4711-bc68-96b1acbdb39f.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Qyhela into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Wayvye_dbda3c83-1da9-4524-86b7-0d7e5514a920 on to 13_1_27fc502e-fedc-4267-ad80-b097ede582b1.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Wayvye into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Yawwy_a2eac57a-43ce-402d-b3e6-cc7b0c6c996e on to 7_11_618aeb53-ff3d-4dae-9528-186484c01b67.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Yawwy into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting light_dragon_Juludh_fa11adc6-ee60-422a-93b4-26878063d62d on to 12_12_ff02d128-b3b7-4f28-94ad-b4649f558ea6.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Juludh into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting air_dragon_Zuplaa_06eed018-7b80-4334-bd58-f510a71f12e1 on to 0_3_df9ff792-9adf-406c-9ed8-fae595c5117d.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Zuplaa into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting air_dragon_Qipa_62057f65-2acc-4ab1-bf8a-e02b0326e584 on to 4_7_afa1f6a3-3b8e-4211-a9ff-56fb3666a3d7.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Qipa into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting air_dragon_Iiaieq_1fcd9651-9f59-44eb-a99b-12a60da91f85 on to 13_14_eafaa854-6bce-4659-9de3-7fc4b5cb0bd6.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Iiaieq into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting light_dragon_Bonip_0fae2f52-5481-46db-bd14-2ae54fd06532 on to 11_8_20d160db-3915-4249-8222-e6daf391befd.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Bonip into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Jousuy_a2005f4e-1675-426f-bac0-8af9e4beea0f on to 10_1_b10334fe-4a7a-476f-8de8-745ec87a262c.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Jousuy into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting fire_dragon_Foior_6b334133-a8c3-4665-80d4-795d21b7e41d on to 9_10_71811ec6-69cb-40f0-801a-7c695ce523ec.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Foior into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Pekvs_a1747a78-df5d-4dcb-b86a-50ab1a72e7cd on to 11_10_6ee88971-7994-4019-9ac5-2bd97dfc8b4b.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Pekvs into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting water_dragon_Gagua_a147957b-c7b7-4748-811d-4f7cb5171b67 on to 12_4_693725c9-28ee-4133-8c12-2472c8f8b91f.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Gagua into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting air_dragon_Yaha_b0a83ca9-5814-4096-9143-863ef6e49adf on to 8_12_882eb932-4953-4c5a-9a7a-9108c8e19024.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Yaha into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Cuve_7a098362-b87a-469f-bfd8-65a4dcd38062 on to 3_14_b3d31d32-d5d6-44df-9f69-7e4a285336b6.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Cuve into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting fire_dragon_Eiwoe_8d66d2b9-666f-4994-9afd-4a18cf9154c3 on to 1_12_448f137f-8606-4885-9f57-661a9da477cf.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit enemy:Eiwoe into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting air_dragon_Rylqui_2ac54503-5284-4bdf-967f-7489ff1979d1 on to 5_1_04207707-e215-482c-a492-d9df4052fc61.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Rylqui into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dark_dragon_Wyliwx_4c0604ad-c668-4402-8120-baf16f64eed0 on to 6_8_4423e0ac-6c3e-4cf2-9028-8038eba846a6.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Wyliwx into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Saveoa_d3c188df-9abb-4cbe-84a5-22bea9598884 on to 8_13_6c1da586-31f6-4282-a89e-af0103742489.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Saveoa into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting earth_dragon_Oimy_7fbaf7ef-c954-4345-bca2-358a29a426ae on to 9_0_34cc8c1f-df61-4dfe-a3e2-186c3c7bd55f.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Oimy into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Feeaha_2121e0f2-314a-4b57-a7d1-b2bec63045e8 on to 14_6_48d43a2e-5cfa-482e-8516-de3199490867.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Feeaha into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dragon_Jasiae_5684b2f2-868e-4244-8fd2-b0040b848c0e on to 1_0_33902884-383d-46fe-8220-13bb68df588c.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Jasiae into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting light_dragon_Zicfu_e146d2f6-db2c-402c-a691-e323897a709e on to 9_12_3cdce186-fbe4-41a0-b7b0-3f60bc05d8c5.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Zicfu into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting water_dragon_Diqpyz_f7f69b92-de2f-4847-b52e-75c2e10c853c on to 5_12_3f7a4e8b-6f49-4957-8820-40a9b78c2027.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Diqpyz into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dark_dragon_Oiqu_a9fc7dd2-ce5d-4d51-9a48-04fa609bb7eb on to 14_10_709940f3-188f-4464-a2ca-c762cb421828.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Oiqu into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting dark_dragon_Hidb_b0f831bf-b10d-4d74-8f56-ab8aabf6a2b0 on to 11_11_29f134f3-b37a-422a-b768-bfcfe014aa50.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Hidb into queue
+[2025-04-06 23:02:45] [INFO] [Component] Setting air_dragon_Fihqap_964c3161-d99a-408d-a86d-e1ab03a2d8e2 on to 2_11_d5a2aed9-fbf7-48ec-9282-544f334710cf.
+[2025-04-06 23:02:45] [INFO] [SpeedQueue] Added unit user:Fihqap into queue
+[2025-04-06 23:02:45] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 23:02:45] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 23:02:45] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 23:02:45] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 23:02:45] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 23:02:45] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 23:02:46] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 23:02:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:02:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 23:02:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:02:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 23:02:46] [INFO] [StatisticsInformationPanel] Checksum has been updated, querying statistics for unit light_dragon_Bonip_0fae2f52-5481-46db-bd14-2ae54fd06532
+[2025-04-06 23:02:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 23:02:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.48466232419013977 seconds
+[2025-04-06 23:02:48] [INFO] [InputHandler] Gliding 0 camera to new tile 11_8_20d160db-3915-4249-8222-e6daf391befd
+[2025-04-06 23:02:48] [INFO] [InputHandler] Gliding 1 camera to new tile 11_8_20d160db-3915-4249-8222-e6daf391befd
+[2025-04-06 23:02:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:02:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Bonip
+[2025-04-06 23:02:48] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:02:50] [INFO] [InputHandler] Gliding 0 camera to new tile 11_8_20d160db-3915-4249-8222-e6daf391befd
+[2025-04-06 23:02:52] [INFO] [InputHandler] Gliding 0 camera to new tile 11_8_20d160db-3915-4249-8222-e6daf391befd
+[2025-04-06 23:02:52] [INFO] [MovementSystem] Updated movement range for Bonip
+[2025-04-06 23:02:52] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:52] [INFO] [MovementSystem] Updated movement range for Bonip
+[2025-04-06 23:02:52] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:52] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:52] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:53] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:57] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:58] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:58] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:02:58] [INFO] [InputHandler] Gliding 0 camera to new tile 11_8_20d160db-3915-4249-8222-e6daf391befd
+[2025-04-06 23:02:58] [INFO] [InputHandler] Gliding 1 camera to new tile 11_8_20d160db-3915-4249-8222-e6daf391befd
+[2025-04-06 23:03:00] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:03:00] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:03:00] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:03:00] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:03:00] [INFO] [MovementSystem] Updated movement path for Bonip
+[2025-04-06 23:03:00] [INFO] [MovementSystem] Updated movement path for Bonip

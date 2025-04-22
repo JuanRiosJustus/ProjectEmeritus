@@ -1,0 +1,87 @@
+[2025-04-21 01:51:00] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 01:51:00] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 01:51:00] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 01:51:00] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 01:51:00] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 01:51:00] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 01:51:00] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 01:51:00] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 01:51:00] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 01:51:00] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 01:51:00] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 01:51:00] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 01:51:00] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 01:51:00] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 01:51:00] [INFO] [Component] Setting dragon_Vijd_cd0fd08b-ee5c-425d-8f38-4243129a01b3 on to {"row":7,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Vijd_cd0fd08b-ee5c-425d-8f38-4243129a01b3","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit enemy:Vijd into queue
+[2025-04-21 01:51:00] [INFO] [Component] Setting dark_dragon_Bafi_0c85919e-f949-499c-a3fa-18b57a4b4a3a on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Bafi_0c85919e-f949-499c-a3fa-18b57a4b4a3a","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit enemy:Bafi into queue
+[2025-04-21 01:51:00] [INFO] [Component] Setting fire_dragon_Nivz_7876f63d-1917-4475-918f-19dce80245f9 on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nivz_7876f63d-1917-4475-918f-19dce80245f9","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit enemy:Nivz into queue
+[2025-04-21 01:51:00] [INFO] [Component] Setting dragon_Kyaom_7a92aa70-0604-4400-b178-37e4133ae9dd on to {"row":5,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Kyaom_7a92aa70-0604-4400-b178-37e4133ae9dd","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit enemy:Kyaom into queue
+[2025-04-21 01:51:00] [INFO] [Component] Setting fire_dragon_Mipngu_356e77da-8711-44f4-ad05-f61a4a8a356f on to {"row":5,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Mipngu_356e77da-8711-44f4-ad05-f61a4a8a356f","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit enemy:Mipngu into queue
+[2025-04-21 01:51:00] [INFO] [Component] Setting dark_dragon_Kuixe_602bbf03-54a0-4cfe-9c03-3ab8e3a581fb on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Kuixe_602bbf03-54a0-4cfe-9c03-3ab8e3a581fb","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit user:Kuixe into queue
+[2025-04-21 01:51:00] [INFO] [Component] Setting earth_dragon_Bewu_570c6b94-599e-4468-8d3d-08672624d5a5 on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Bewu_570c6b94-599e-4468-8d3d-08672624d5a5","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit user:Bewu into queue
+[2025-04-21 01:51:00] [INFO] [Component] Setting fire_dragon_Yoyen_70614831-1cf7-48ff-8680-0c9d354e8e24 on to {"row":6,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Yoyen_70614831-1cf7-48ff-8680-0c9d354e8e24","structure":""}.
+[2025-04-21 01:51:00] [INFO] [SpeedQueue] Added unit user:Yoyen into queue
+[2025-04-21 01:51:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-21 01:51:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-21 01:51:00] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-21 01:51:00] [INFO] [FontPool] Started initializing FontPool
+[2025-04-21 01:51:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-21 01:51:00] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-21 01:51:00] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-21 01:51:01] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-21 01:51:01] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-21 01:51:01] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-21 01:51:01] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-21 01:51:01] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Bafi_0c85919e-f949-499c-a3fa-18b57a4b4a3a
+[2025-04-21 01:51:01] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Bafi_0c85919e-f949-499c-a3fa-18b57a4b4a3a
+[2025-04-21 01:51:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 01:51:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 01:51:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 01:51:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 01:51:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:51:01] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-21 01:51:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-21 01:51:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.49057310819625854 seconds
+[2025-04-21 01:51:05] [INFO] [InputHandler] Gliding 0 camera to new tile 4_3_cdb6fefb-f27e-42dd-bbe8-f5e0ff56304a
+[2025-04-21 01:51:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 01:51:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 01:51:08] [INFO] [InputHandler] Gliding 0 camera to new tile 4_3_cdb6fefb-f27e-42dd-bbe8-f5e0ff56304a
+[2025-04-21 01:51:08] [INFO] [InputHandler] Gliding 1 camera to new tile 4_3_cdb6fefb-f27e-42dd-bbe8-f5e0ff56304a
+[2025-04-21 01:51:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Bafi_0c85919e-f949-499c-a3fa-18b57a4b4a3a
+[2025-04-21 01:51:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Bafi_0c85919e-f949-499c-a3fa-18b57a4b4a3a
+[2025-04-21 01:51:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:51:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Bafi
+[2025-04-21 01:51:15] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-21 01:51:15] [INFO] [AbilitySystem] Bafi is planning to use oblation on [7, 7]
+[2025-04-21 01:51:15] [INFO] [AbilitySystem] Updated area of sight for Bafi, viewing 13 tiles
+[2025-04-21 01:51:15] [INFO] [AbilitySystem] Updated line of sight for Bafi, viewing 4 tiles
+[2025-04-21 01:51:15] [INFO] [AbilitySystem] Updated area of effect for Bafi viewing 1 tiles
+[2025-04-21 01:51:15] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bafi to use oblation
+[2025-04-21 01:51:15] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bafi to use oblation
+[2025-04-21 01:51:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 01:51:15] [INFO] [CombatSystem] Started constructing damage mappings for Bafi to use oblation
+[2025-04-21 01:51:15] [INFO] [CombatSystem] Finished constructing damage mappings for Bafi to use oblation
+[2025-04-21 01:51:15] [INFO] [CombatSystem] Started constructing cost mappings for Bafi to use oblation
+[2025-04-21 01:51:15] [INFO] [CombatSystem] Finished constructing cost mappings for Bafi to use oblation
+[2025-04-21 01:51:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 01:51:17] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:51:17] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:51:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Vijd_cd0fd08b-ee5c-425d-8f38-4243129a01b3
+[2025-04-21 01:51:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Vijd_cd0fd08b-ee5c-425d-8f38-4243129a01b3
+[2025-04-21 01:51:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:51:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Vijd
+[2025-04-21 01:51:19] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:51:19] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:51:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Bewu_570c6b94-599e-4468-8d3d-08672624d5a5
+[2025-04-21 01:51:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Bewu_570c6b94-599e-4468-8d3d-08672624d5a5
+[2025-04-21 01:51:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:51:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Bewu
+[2025-04-21 01:51:21] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:51:21] [INFO] [StatisticsPanel] Finished updating statistics information panel

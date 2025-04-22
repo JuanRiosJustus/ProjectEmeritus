@@ -1,0 +1,240 @@
+[2025-04-07 21:40:29] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-07 21:40:29] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-07 21:40:29] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-07 21:40:29] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-07 21:40:29] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-07 21:40:29] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-07 21:40:29] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-07 21:40:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-07 21:40:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-07 21:40:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-07 21:40:29] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-07 21:40:29] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-07 21:40:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-07 21:40:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Aiqpc_17e7485c-960b-478a-9b83-cb70864c9135 on to 4_6_01985d31-0c2d-4eb0-a4d1-031e6f18ccc3.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Aiqpc into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Migc_5fe16d88-d71a-4387-9db9-d4a1e8df6157 on to 13_5_94561316-ff85-4068-bb0d-1acddf21b5c3.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Migc into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Eagex_b09412b5-5179-408e-931a-ab7773cf658b on to 1_7_b94d476c-7ea8-4bd5-b803-e7566af02aa1.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Eagex into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Uaof_a8c40455-7503-40c1-ae4c-768682c0c91f on to 12_8_f8ce9103-1320-496e-93b3-bbd9ab82bd89.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Uaof into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting air_dragon_Oysoe_c60d384d-81e3-4ec1-8f5c-dd3cae7bfd10 on to 8_5_26286fab-af18-4518-b684-77eff8e28a87.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Oysoe into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Zixruq_16a95333-02f7-4db7-a94a-cb65975c4cef on to 8_10_f0862297-e966-404b-bc47-47e378adb41b.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Zixruq into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Uitx_1c14380e-71d9-4d22-adb9-eed94b854184 on to 2_6_ac24817e-71e7-492b-b6a9-7c06506e13de.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Uitx into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting fire_dragon_Cihgo_8d52c565-f311-4ae3-a864-5154e9d7f207 on to 8_3_dd329947-5a54-42d7-abda-44280ab1de40.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Cihgo into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Kymeak_eafece05-0094-41c5-acf9-290b50d2293d on to 13_7_e5178a14-fa24-4736-90f2-79d006a34569.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Kymeak into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting fire_dragon_Pejk_d18039dc-233f-471e-8c27-529657882959 on to 11_10_54e69f8a-1def-4a3d-9328-d8495eafc836.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Pejk into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting earth_dragon_Ooroii_cf124938-8398-4b54-b79e-aac4de7638e5 on to 6_11_10bbe2d6-fdfb-4e18-9157-aae60ed8373c.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Ooroii into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dragon_Vyveue_61747cfd-76a4-4fab-bed6-094bfea221b2 on to 6_10_68ed3021-8d26-47ac-b7f2-54bf4dda4eef.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Vyveue into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dragon_Aoheas_9584d9ad-060e-4d77-9c50-0744e19de82d on to 10_4_d5fd5a87-4bc1-42fa-960a-35a32bd9f268.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Aoheas into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Paaiwy_16a67e62-5dc0-4b40-93e9-c59c92c2c042 on to 3_3_4a9a4705-1ead-4acf-b6f9-32a2b921d2e8.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Paaiwy into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893 on to 2_5_d5605c2c-6c5d-4ebd-a331-a6fd68eaa011.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Eaaee into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting air_dragon_Sual_2cbb1338-e199-4571-b25e-a0ced0ccb657 on to 0_6_0da875bd-67de-481a-8593-1a56319d0059.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Sual into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Quaj_ac447975-930e-4a72-8ebf-aeabb30dcf2e on to 3_9_ee1e3738-5729-4277-91f4-fa1e756d36b5.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Quaj into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Moto_5c8c570f-3c55-4397-b3a4-0f964a1b42f0 on to 13_6_8c3556a9-e00a-4f8a-9e80-4deb4b6e76a8.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Moto into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting air_dragon_Hurry_f3f7b00b-90cf-45f1-933b-1c8c101496cb on to 2_13_157209ca-dcbb-4a3d-ad16-3db3388f730d.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Hurry into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Iusus_d121fb7d-738e-4567-9ac1-4a88fb677528 on to 5_10_d6bfb4e5-2832-46ee-bced-2dc316081eee.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Iusus into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting earth_dragon_Zeli_678a40b7-2f0a-4768-a252-32351a1e7bb5 on to 2_8_4d0f7062-e3d0-45ad-873e-f0533aabff6d.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit enemy:Zeli into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting water_dragon_Mago_9dbca744-ee57-40b0-8bd9-439082b0c465 on to 3_8_d2b25084-00a2-477f-8c49-7612622301e9.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Mago into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Jelzey_af6dbd7a-e376-484f-a7f5-a525d4a0e2fb on to 13_12_8220e281-72ad-4529-9730-447023e01e2c.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Jelzey into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Ooux_988affca-5e1c-43f7-92dc-4f7d0430eb01 on to 5_12_3b96854c-4a19-45bb-bfe1-57041cf7db3e.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Ooux into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting earth_dragon_Gekikh_c947922e-c945-4810-915e-8113e80f6b0a on to 0_11_8039dffd-b96d-48ee-b4eb-a2cab57be6e4.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Gekikh into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dragon_Doska_fb286297-d2e9-4030-a762-d8d473aaf322 on to 8_4_e1253342-8266-4a64-974b-a0b95c239012.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Doska into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting fire_dragon_Vudik_670865f8-3a96-4e15-a134-a514f1a756df on to 12_6_aa89903a-3308-41c7-9acb-0b9ee7b6f96f.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Vudik into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Gaayla_c8fce77d-90e0-4d1b-9735-f09723d66c09 on to 3_2_0ce43739-9c88-4872-a795-58e71c7c90e7.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Gaayla into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting dark_dragon_Iilr_d6b6ae02-8acb-4a73-a819-c5cf6b2a2a94 on to 13_3_8ee31001-f729-455c-9f44-53f05a3681d3.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Iilr into queue
+[2025-04-07 21:40:30] [INFO] [Component] Setting light_dragon_Hypp_1853f019-2c82-4085-88f7-e7affa2d11f5 on to 13_2_6a3072ef-4a9b-48e9-b688-aefb9259ac49.
+[2025-04-07 21:40:30] [INFO] [SpeedQueue] Added unit user:Hypp into queue
+[2025-04-07 21:40:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-07 21:40:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-07 21:40:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-07 21:40:30] [INFO] [FontPool] Started initializing FontPool
+[2025-04-07 21:40:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-07 21:40:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-07 21:40:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-07 21:40:31] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:31] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:31] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-07 21:40:31] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-07 21:40:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-07 21:40:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-07 21:40:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-07 21:40:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-07 21:40:31] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:31] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:31] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-07 21:40:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-07 21:40:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.4863233268260956 seconds
+[2025-04-07 21:40:32] [INFO] [InputHandler] Gliding 0 camera to new tile 2_5_d5605c2c-6c5d-4ebd-a331-a6fd68eaa011
+[2025-04-07 21:40:32] [INFO] [InputHandler] Gliding 1 camera to new tile 2_5_d5605c2c-6c5d-4ebd-a331-a6fd68eaa011
+[2025-04-07 21:40:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-07 21:40:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Eaaee
+[2025-04-07 21:40:33] [INFO] [InputHandler] Gliding 0 camera to new tile 2_5_d5605c2c-6c5d-4ebd-a331-a6fd68eaa011
+[2025-04-07 21:40:34] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-07 21:40:34] [INFO] [AbilitySystem] Eaaee is planning to use ember on [6, 9]
+[2025-04-07 21:40:34] [INFO] [AbilitySystem] Updated area of sight for Eaaee, viewing 20 tiles
+[2025-04-07 21:40:34] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:34] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:34] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:34] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:34] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-07 21:40:34] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-07 21:40:34] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:34] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity light_dragon_Eaaee_d9f54b15-83ad-424a-97cd-47d547425893
+[2025-04-07 21:40:34] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-07 21:40:34] [INFO] [CombatSystem] Started constructing damage mappings for Eaaee to use ember
+[2025-04-07 21:40:34] [INFO] [CombatSystem] Finished constructing damage mappings for Eaaee to use ember
+[2025-04-07 21:40:34] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-07 21:40:34] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 11]
+[2025-04-07 21:40:34] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:34] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [4, 10]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [4, 9]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [4, 8]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 7]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 6]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 3 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 5]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 5]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 4]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 4]
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 3 tiles
+[2025-04-07 21:40:35] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:36] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 4]
+[2025-04-07 21:40:36] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:36] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:36] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 3]
+[2025-04-07 21:40:36] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 3 tiles
+[2025-04-07 21:40:36] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 2]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 1]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 5 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [1, 1]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 6 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [1, 0]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 7 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [1, 1]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 6 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 1]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 5 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 2]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 2]
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:41] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 3]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 4]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 3 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [4, 5]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 3 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 5]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 6]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 5 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 5]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 6]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 5 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 7]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 8]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Eaaee is planning to use ember on [6, 8]
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:42] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 8]
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Eaaee is planning to use ember on [5, 7]
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Eaaee is planning to use ember on [4, 7]
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Eaaee is planning to use ember on [4, 6]
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 5]
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Eaaee is planning to use ember on [3, 4]
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 3 tiles
+[2025-04-07 21:40:43] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 4]
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 2 tiles
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 3]
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 3 tiles
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Eaaee is planning to use ember on [2, 2]
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 4 tiles
+[2025-04-07 21:40:45] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Eaaee is planning to use ember on [1, 1]
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 6 tiles
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Eaaee is planning to use ember on [0, 0]
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 8 tiles
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 1 tiles
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Eaaee is planning to use ember on null
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Updated line of sight for Eaaee, viewing 0 tiles
+[2025-04-07 21:40:46] [INFO] [AbilitySystem] Updated area of effect for Eaaee viewing 0 tiles

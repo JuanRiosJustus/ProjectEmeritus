@@ -1,0 +1,55 @@
+[2025-04-19 21:33:59] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 21:33:59] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 21:33:59] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 21:33:59] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 21:33:59] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 21:33:59] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 21:33:59] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 21:33:59] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 21:33:59] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 21:33:59] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 21:33:59] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 21:33:59] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 21:34:00] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 21:34:00] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 21:34:00] [INFO] [Component] Setting earth_dragon_Waru_b6a1ccdd-62ec-43fe-90d3-75cdbc065aa3 on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Waru_b6a1ccdd-62ec-43fe-90d3-75cdbc065aa3","structure":""}.
+[2025-04-19 21:34:00] [INFO] [SpeedQueue] Added unit enemy:Waru into queue
+[2025-04-19 21:34:00] [INFO] [Component] Setting dark_dragon_Meob_b25b4176-ed21-4f39-8feb-b09ca3dfe394 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Meob_b25b4176-ed21-4f39-8feb-b09ca3dfe394","structure":""}.
+[2025-04-19 21:34:00] [INFO] [SpeedQueue] Added unit enemy:Meob into queue
+[2025-04-19 21:34:00] [INFO] [Component] Setting light_dragon_Iifo_5b12acc3-e042-4553-9d15-7c16d163f522 on to {"row":4,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Iifo_5b12acc3-e042-4553-9d15-7c16d163f522","structure":""}.
+[2025-04-19 21:34:00] [INFO] [SpeedQueue] Added unit enemy:Iifo into queue
+[2025-04-19 21:34:00] [INFO] [Component] Setting fire_dragon_Dujal_d44fe52e-21e3-477c-a915-a1709bd47692 on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Dujal_d44fe52e-21e3-477c-a915-a1709bd47692","structure":""}.
+[2025-04-19 21:34:00] [INFO] [SpeedQueue] Added unit enemy:Dujal into queue
+[2025-04-19 21:34:00] [INFO] [Component] Setting water_dragon_Coqu_ece5727c-4453-444c-b333-733d9de988ee on to {"row":5,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Coqu_ece5727c-4453-444c-b333-733d9de988ee","structure":""}.
+[2025-04-19 21:34:00] [INFO] [SpeedQueue] Added unit user:Coqu into queue
+[2025-04-19 21:34:00] [INFO] [Component] Setting light_dragon_Nuyv_4299536d-306d-4a25-a213-5a5d6f6ee3cc on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Nuyv_4299536d-306d-4a25-a213-5a5d6f6ee3cc","structure":""}.
+[2025-04-19 21:34:00] [INFO] [SpeedQueue] Added unit user:Nuyv into queue
+[2025-04-19 21:34:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 21:34:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 21:34:00] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-19 21:34:00] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 21:34:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 21:34:00] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-19 21:34:00] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-19 21:34:00] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Dujal_d44fe52e-21e3-477c-a915-a1709bd47692
+[2025-04-19 21:34:00] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Dujal_d44fe52e-21e3-477c-a915-a1709bd47692
+[2025-04-19 21:34:00] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-19 21:34:00] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-19 21:34:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 21:34:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 21:34:00] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Dujal_d44fe52e-21e3-477c-a915-a1709bd47692
+[2025-04-19 21:34:00] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Dujal_d44fe52e-21e3-477c-a915-a1709bd47692
+[2025-04-19 21:34:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 21:34:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 21:34:00] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-19 21:34:00] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-19 21:34:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-19 21:34:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-19 21:34:00] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 21:34:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.49188166856765747 seconds
+[2025-04-19 21:34:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 21:34:02] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 21:34:04] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_d5aabafc-bbbd-42f8-b720-0e820be429f2
+[2025-04-19 21:34:04] [INFO] [InputHandler] Gliding 1 camera to new tile 2_6_d5aabafc-bbbd-42f8-b720-0e820be429f2
+[2025-04-19 21:34:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 21:34:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Dujal

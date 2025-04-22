@@ -1,0 +1,96 @@
+[2025-04-05 09:30:11] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 09:30:11] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 09:30:11] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 09:30:11] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 09:30:11] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 09:30:11] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 09:30:11] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 09:30:11] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 09:30:11] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 09:30:11] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 09:30:11] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 09:30:11] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 09:30:11] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 09:30:11] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 09:30:11] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:30:11] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 09:30:11] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 09:30:11] [INFO] [Component] Setting 361f876e-3816-4886-bf63-b3f50f2ed5b2 on to b319990a-2077-4881-adb2-764aca4ee046.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Oymju into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 21d78250-a014-4aae-9be6-c712995acd70 on to 93fa3032-d51b-4dc6-9f1a-b23408cbf9a5.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Yefei into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting a2dc5ac7-25ee-4723-8e78-04c2173c526b on to adc4b51e-018f-498d-ba53-c16aba3ec33d.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Uacmop into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 1765d57c-f417-472e-b064-da4e8c51c38a on to 4e864d9e-def8-458b-9d32-403a42383e48.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Iydeyr into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 197d0e06-1aae-48a6-8cad-0311ffbea489 on to e45a7f45-a992-487a-9169-5e046ce83951.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Qoti into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 8b51fa57-abbf-4afc-8e4a-574703cc6b1a on to 84d6e387-02ca-47b1-9be7-a38637dc08b5.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Zued into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting c41f8281-762d-42ca-81b7-f0cdfabb6153 on to f5cbcfb6-0864-4746-8691-01be1b116093.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Byxoye into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 58891634-c674-4176-807f-6a9ddb17d9da on to 2fd3535e-5dda-4588-8586-4c0d27f10bba.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Cubzq into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting db1f8604-f037-4be6-b684-e93654645b50 on to d0253341-7a0a-45f0-9a79-0a9cdb01c525.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Qikyce into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 4cd3a404-01e7-4d75-b026-2146437335d9 on to fe1c898a-86ea-4649-a9a7-c0b02dac96a2.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Ladjo into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 8c90c7d0-394f-4b8d-af50-295124644b6d on to 62985b89-0948-4954-9c2c-45b898a7dceb.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Eyxie into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting f8612cdc-57b4-4450-b9ca-bff3497662a2 on to 2dbf0743-4926-4d13-8383-312ac872ade9.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Nenyoa into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 7d82d3e9-c510-42d3-89ef-e7803e747a43 on to 8bedd879-54cf-4423-9da6-fab5deb143f4.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Nonji into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 807834c8-bd2c-4515-b9ec-b3919a4b487a on to 784362f9-db26-4ad9-9645-f47c0f84117e.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Jedue into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 2e7ed513-173c-4f5e-ab0b-047873a30245 on to 1b60c21f-7b4b-4bc6-9aea-83c2a7dfe25a.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Ciwu into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 26ba6c3a-1c24-4cfb-9fc7-c8c7ae01584f on to fe5f67a8-172f-4a3d-ad0c-1c044e019112.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Xypo into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 1f93f022-a802-49e4-98e3-e71407cb8672 on to da75c94c-f8bf-40a6-95a7-1ac6b87ddab1.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Ruvf into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting e88c0332-c600-45a9-a60f-313cc6219255 on to c010cfa7-a134-4b7b-9fcf-77daca0bcccb.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Pypq into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting 26ac1f83-dd34-4480-be94-b5ceaf506eec on to 3ba25db9-eb83-4371-97e2-f5d7f2f8a159.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Eaeieu into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting eca11919-1324-4f52-a6b4-d6a549224c21 on to b7bd1a00-f835-46ef-9c4e-2d271f762074.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Jirk into queue
+[2025-04-05 09:30:11] [INFO] [Component] Setting d7863d99-a1be-45a3-b726-1734003ab3fd on to 7b7181db-40db-4c33-97bc-cda5caee2c17.
+[2025-04-05 09:30:11] [INFO] [SpeedQueue] Added unit enemy:Oyenud into queue
+[2025-04-05 09:30:11] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 09:30:12] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 09:30:12] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 09:30:12] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 09:30:12] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 09:30:12] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 09:30:12] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 09:30:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:30:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:30:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 09:30:12] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 09:30:12] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit db1f8604-f037-4be6-b684-e93654645b50
+[2025-04-05 09:30:12] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 09:30:13] [INFO] [VisualsSystem] Finished creating blurred background after 0.49222332239151 seconds
+[2025-04-05 09:30:13] [INFO] [MovementSystem] Qikyce is planning to move from [2, 12] to [1, 13]
+[2025-04-05 09:30:13] [INFO] [MovementSystem] Updated movement area for Qikyce
+[2025-04-05 09:30:13] [INFO] [MovementSystem] Updated movement path for Qikyce
+[2025-04-05 09:30:13] [INFO] [Component] Setting db1f8604-f037-4be6-b684-e93654645b50 on to d94c1c68-c60d-454d-b9a4-793d65d01fa1.
+[2025-04-05 09:30:13] [INFO] [MovementSystem] Moved from [2, 12] to [1, 13]
+[2025-04-05 09:30:13] [INFO] [MovementSystem] {} has moved
+[2025-04-05 09:30:14] [INFO] [AbilitySystem] Qikyce Triggered ability system
+[2025-04-05 09:30:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:30:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:30:15] [INFO] [MovementSystem] Ciwu is planning to move from [6, 13] to [5, 12]
+[2025-04-05 09:30:15] [INFO] [MovementSystem] Updated movement area for Ciwu
+[2025-04-05 09:30:15] [INFO] [MovementSystem] Updated movement path for Ciwu
+[2025-04-05 09:30:15] [INFO] [Component] Setting 2e7ed513-173c-4f5e-ab0b-047873a30245 on to b65c889a-15dd-44b5-a585-8069d4aefea1.
+[2025-04-05 09:30:15] [INFO] [MovementSystem] Moved from [6, 13] to [5, 12]
+[2025-04-05 09:30:15] [INFO] [MovementSystem] {} has moved

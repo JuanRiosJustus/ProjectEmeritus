@@ -1,0 +1,26 @@
+[2025-04-15 21:09:25] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 21:09:25] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 21:09:25] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 21:09:25] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 21:09:25] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 21:09:25] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 21:09:25] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 21:09:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 21:09:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 21:09:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 21:09:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 21:09:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 21:09:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 21:09:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 21:09:25] [INFO] [Component] Setting light_dragon_Boxrt_4ead4c67-607a-4467-ac14-3282c3c7dd42 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Boxrt_4ead4c67-607a-4467-ac14-3282c3c7dd42","column":1,"row":0,"structure":"","height":0}.
+[2025-04-15 21:09:25] [INFO] [SpeedQueue] Added unit enemy:Boxrt into queue
+[2025-04-15 21:09:25] [INFO] [Component] Setting dark_dragon_Togek_b9d8c0d1-8acd-49a3-b840-a2f23c75407c on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Togek_b9d8c0d1-8acd-49a3-b840-a2f23c75407c","column":6,"row":7,"structure":"","height":0}.
+[2025-04-15 21:09:25] [INFO] [SpeedQueue] Added unit enemy:Togek into queue
+[2025-04-15 21:09:25] [INFO] [Component] Setting water_dragon_Ayjyr_0b287e18-8d59-410b-a6ec-e483e412fae0 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ayjyr_0b287e18-8d59-410b-a6ec-e483e412fae0","column":2,"row":0,"structure":"","height":0}.
+[2025-04-15 21:09:25] [INFO] [SpeedQueue] Added unit enemy:Ayjyr into queue
+[2025-04-15 21:09:25] [INFO] [Component] Setting fire_dragon_Oypiq_1d846e4f-1d31-4d8b-925c-26b50c91c5e3 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oypiq_1d846e4f-1d31-4d8b-925c-26b50c91c5e3","column":7,"row":1,"structure":"","height":0}.
+[2025-04-15 21:09:25] [INFO] [SpeedQueue] Added unit enemy:Oypiq into queue
+[2025-04-15 21:09:25] [INFO] [Component] Setting water_dragon_Ueoi_581bff0e-833e-4b11-bef6-4a2e22452595 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ueoi_581bff0e-833e-4b11-bef6-4a2e22452595","column":3,"row":5,"structure":"","height":0}.
+[2025-04-15 21:09:25] [INFO] [SpeedQueue] Added unit enemy:Ueoi into queue
+[2025-04-15 21:09:25] [INFO] [Component] Setting light_dragon_Weiauk_c28572ad-3cb2-4e65-b0af-548cb0a15ef3 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Weiauk_c28572ad-3cb2-4e65-b0af-548cb0a15ef3","column":7,"row":5,"structure":"","height":0}.
+[2025-04-15 21:09:25] [INFO] [SpeedQueue] Added 

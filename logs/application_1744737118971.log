@@ -1,0 +1,49 @@
+[2025-04-15 10:11:58] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 10:11:58] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 10:11:58] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 10:11:58] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 10:11:58] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 10:11:58] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 10:11:58] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 10:11:58] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 10:11:58] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 10:11:59] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 10:11:59] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 10:11:59] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 10:11:59] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 10:11:59] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 10:11:59] [INFO] [Component] Setting water_dragon_Mueu_4675d3d2-e3ae-4d74-bec4-5e32d1084b86 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Mueu_4675d3d2-e3ae-4d74-bec4-5e32d1084b86","column":6,"row":4,"structure":"","height":0}.
+[2025-04-15 10:11:59] [INFO] [SpeedQueue] Added unit enemy:Mueu into queue
+[2025-04-15 10:11:59] [INFO] [Component] Setting light_dragon_Corzq_ef12b31e-94c8-4f42-a8b5-954d531bc368 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Corzq_ef12b31e-94c8-4f42-a8b5-954d531bc368","column":0,"row":1,"structure":"","height":0}.
+[2025-04-15 10:11:59] [INFO] [SpeedQueue] Added unit enemy:Corzq into queue
+[2025-04-15 10:11:59] [INFO] [Component] Setting dragon_Saditl_bab0433b-a71d-4296-b773-3dc746c649b6 on to {"spawn_region":[],"collider":"","unit":"dragon_Saditl_bab0433b-a71d-4296-b773-3dc746c649b6","column":1,"row":2,"structure":"","height":0}.
+[2025-04-15 10:11:59] [INFO] [SpeedQueue] Added unit enemy:Saditl into queue
+[2025-04-15 10:11:59] [INFO] [Component] Setting dragon_Eofes_bd7e0c05-4a86-4deb-b45b-debc4ca0f65f on to {"spawn_region":[],"collider":"","unit":"dragon_Eofes_bd7e0c05-4a86-4deb-b45b-debc4ca0f65f","column":1,"row":7,"structure":"","height":0}.
+[2025-04-15 10:11:59] [INFO] [SpeedQueue] Added unit enemy:Eofes into queue
+[2025-04-15 10:11:59] [INFO] [Component] Setting water_dragon_Qenmui_5c6c02f9-f906-41ef-a065-7dbb0af1223f on to {"spawn_region":[],"collider":"","unit":"water_dragon_Qenmui_5c6c02f9-f906-41ef-a065-7dbb0af1223f","column":7,"row":3,"structure":"","height":0}.
+[2025-04-15 10:11:59] [INFO] [SpeedQueue] Added unit user:Qenmui into queue
+[2025-04-15 10:11:59] [INFO] [Component] Setting water_dragon_Pimne_1412d65b-0b11-42f9-8f17-abafaef31378 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Pimne_1412d65b-0b11-42f9-8f17-abafaef31378","column":3,"row":3,"structure":"","height":0}.
+[2025-04-15 10:11:59] [INFO] [SpeedQueue] Added unit user:Pimne into queue
+[2025-04-15 10:11:59] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 10:11:59] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 10:11:59] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-15 10:11:59] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 10:11:59] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 10:11:59] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-15 10:11:59] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-15 10:11:59] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-15 10:11:59] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_89f1e038-741f-4530-9504-510c19e03fc4
+[2025-04-15 10:12:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 10:12:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 10:12:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 10:12:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 10:12:00] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 10:12:00] [INFO] [VisualsSystem] Finished creating blurred background after 0.49720582365989685 seconds
+[2025-04-15 10:12:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 10:12:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 10:12:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 10:12:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 10:12:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 10:12:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 10:12:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 10:12:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

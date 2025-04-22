@@ -1,0 +1,154 @@
+[2025-04-06 23:09:13] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 23:09:13] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 23:09:13] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 23:09:13] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 23:09:13] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 23:09:13] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 23:09:13] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 23:09:13] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 23:09:13] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 23:09:14] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 23:09:14] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 23:09:14] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 23:09:14] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 23:09:14] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 23:09:14] [INFO] [Component] Setting dark_dragon_Sicrnq_8f64eb36-7b09-436f-873b-8511d1d7f081 on to 7_1_85200a74-ca65-403b-bcf9-0734532bc74f.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Sicrnq into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting water_dragon_Jakaeo_1d53d6cf-f7a1-4f76-a0aa-4be0a5537e1f on to 3_2_29d9a584-99a5-4c38-b8f0-607ae5df9d0e.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Jakaeo into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Lencii_0226b3e7-e2d6-483a-8170-65d1cee7bba4 on to 12_6_4d388856-7b54-4ae2-b778-2a40d9a277b9.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Lencii into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting dark_dragon_Caca_ee7953fa-2580-4f75-a17a-06509259fb7b on to 2_10_661cf028-c616-4316-bfd2-b596af2f38c0.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Caca into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting fire_dragon_Pyww_1e65a64e-2949-416c-b581-bc1f7852541f on to 13_13_8e488253-5dd2-4658-96c3-a8828f4ed110.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Pyww into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Sofoei_88efc4be-46fe-48f3-9e5e-a638bc9c97a7 on to 4_3_e2146303-5cea-4f24-9508-53bcfd0cfdf1.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Sofoei into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Waik_5b13df26-dc42-483d-8c5f-ff9f45505fd3 on to 8_6_6e081284-3153-443b-aaf1-11cc25e87ffd.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Waik into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting air_dragon_Oeboai_e222190b-1873-4b1b-b277-66c97aa3063d on to 6_3_e12df0ad-1123-4c4a-acd1-803c2468ec99.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Oeboai into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting dragon_Vaxiu_d1ac6578-f11c-4243-8ddc-8063755ce679 on to 4_5_a4749edc-22ef-4469-b225-32592f334174.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Vaxiu into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting water_dragon_Nomii_52ccd6df-b1e0-4e40-809a-d947e42b2f10 on to 1_6_6fa3bbeb-3da9-41ca-b422-7ecf2cfa6641.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Nomii into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting water_dragon_Jiaqhp_37a23b78-7c19-48d0-9752-fee5b26a3a79 on to 2_12_73c2dacd-45b6-4171-ac65-c7a3b93ec2f3.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Jiaqhp into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting light_dragon_Vevlvy_8508f00c-119d-4595-a7ec-f4abfd593109 on to 5_3_4919e2c6-9117-40b8-8b05-2f1d0fdfa5aa.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Vevlvy into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Vuzeeo_e8123803-3f18-4a6c-878c-e6e84a0e7e78 on to 6_0_8cad94d0-5c53-48eb-a86d-524b561ca34d.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Vuzeeo into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Dobfep_ccfcad98-6dc2-4513-8fd7-309d35eec936 on to 11_8_09fcdd7a-9589-49dc-ae55-7970595a6cf4.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Dobfep into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Zyhb_3c379934-a96e-4234-9f3f-e44836cadebd on to 13_4_76d7b1e9-88fc-42f5-8654-61c0fba701a2.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Zyhb into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Oomd_748a23eb-1f7c-4561-a97d-4c37d2c4bd07 on to 13_1_f784a0d6-976e-4b22-a665-f83a763bc0cf.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Oomd into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting water_dragon_Macm_32795a76-f324-43d2-b664-a9fb473be054 on to 10_12_702e3535-3641-4ab5-8efe-498c9df5a03d.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Macm into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting light_dragon_Kovooh_6146ad8b-7717-4ec2-851c-891496b9bd83 on to 6_6_9db8df84-c336-4418-b2c3-6cd3c5c1e2ee.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Kovooh into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting light_dragon_Neah_99021285-ab82-43e4-90e4-76def5a7caa8 on to 9_11_83773e16-8c19-406f-a7e5-88ae3c009726.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Neah into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting dragon_Iuiua_79ad25a3-9792-47ed-805f-17e832782434 on to 2_2_d49d6140-ca2f-4ca2-bcc9-dd6463a375f3.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Iuiua into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting dragon_Ioja_57f0a426-66c7-4367-aa94-5ecda4bdcece on to 1_10_fad92e1e-a9b5-4181-8493-d7c4c7b7d888.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Ioja into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting fire_dragon_Tyels_0a01edae-f875-4a90-9ce8-d6175d5c933b on to 1_8_e893ab78-d5df-49db-978f-e7641ecbe2de.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Tyels into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting fire_dragon_Yatoa_783919d8-7a20-4ca3-a254-67ba7814c78e on to 11_7_bab092bd-6814-409d-adf7-a5fea8b93922.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit enemy:Yatoa into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting air_dragon_Rosaus_ecf74016-bf5e-4817-8b1c-3ba81a65b31f on to 14_5_98548095-22bc-4026-ada7-2948c1460127.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Rosaus into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting water_dragon_Heja_76876b91-e546-4c0c-a041-0c4651d760d8 on to 12_0_09740abf-8c5c-4bc4-b4c5-77dcb1a45afc.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Heja into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting fire_dragon_Daxor_ba8a3f13-8b13-4c80-b308-3c492352e78a on to 5_7_c3a916a2-ee9b-4e36-8245-450f6076952a.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Daxor into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting earth_dragon_Witqo_1630af36-fbf0-466b-af48-f8d7d16c9e6a on to 3_4_6cba0e9e-a7cc-45a1-a334-3cf152f3f087.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Witqo into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting water_dragon_Uugs_f1f89626-fd0d-43e3-aaff-76bb717a2f61 on to 6_9_1754c7f6-da51-4dda-92e3-67b4ad0f6c74.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Uugs into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting water_dragon_Lajxya_a9fcd09b-d9ea-4703-8062-9b08fc816b9e on to 9_9_2deecb48-bdee-4fab-b2e0-8af8f8c3b13e.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Lajxya into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting air_dragon_Goku_5ddc3b3a-b5b0-476b-83de-34f7000a4580 on to 9_8_40fc6fcc-304a-418b-a0cd-063e80be9fc5.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Goku into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting dark_dragon_Gotxa_0e6573c0-6755-42e9-8ee7-b3b1d609716e on to 5_4_272a0ed5-cff3-492a-b2b9-7ebaf5c47fef.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Gotxa into queue
+[2025-04-06 23:09:14] [INFO] [Component] Setting dragon_Zukiy_a524c04c-af93-47f4-8de8-e05a47e17cf7 on to 5_12_97a482c9-bb4e-407c-91ca-e4b49fe711df.
+[2025-04-06 23:09:14] [INFO] [SpeedQueue] Added unit user:Zukiy into queue
+[2025-04-06 23:09:14] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 23:09:14] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 23:09:14] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 23:09:14] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 23:09:14] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 23:09:15] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 23:09:15] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 23:09:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:09:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 23:09:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:09:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 23:09:15] [INFO] [StatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Zyhb_3c379934-a96e-4234-9f3f-e44836cadebd
+[2025-04-06 23:09:15] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 23:09:16] [INFO] [VisualsSystem] Finished creating blurred background after 0.4877535402774811 seconds
+[2025-04-06 23:09:17] [INFO] [InputHandler] Gliding 0 camera to new tile 13_4_76d7b1e9-88fc-42f5-8654-61c0fba701a2
+[2025-04-06 23:09:17] [INFO] [InputHandler] Gliding 1 camera to new tile 13_4_76d7b1e9-88fc-42f5-8654-61c0fba701a2
+[2025-04-06 23:09:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:09:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Zyhb
+[2025-04-06 23:09:17] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:09:19] [INFO] [InputHandler] Gliding 0 camera to new tile 13_4_76d7b1e9-88fc-42f5-8654-61c0fba701a2
+[2025-04-06 23:09:20] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-06 23:09:20] [INFO] [AbilitySystem] Zyhb is planning to use ember on null
+[2025-04-06 23:09:20] [INFO] [AbilitySystem] Updated area of sight for Zyhb, viewing 16 tiles
+[2025-04-06 23:09:20] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 0 tiles
+[2025-04-06 23:09:20] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 0 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [14, 6]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 3 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [14, 5]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 3 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [14, 4]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 2 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [13, 4]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [13, 3]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 2 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [13, 2]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 3 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [13, 1]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 4 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 1]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 5 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 2]
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 4 tiles
+[2025-04-06 23:09:21] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 3]
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 3 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 2]
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 4 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 3]
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 3 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 2]
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 4 tiles
+[2025-04-06 23:09:22] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 3]
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 3 tiles
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 4]
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 2 tiles
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 5]
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 3 tiles
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Updated area of effect for Zyhb viewing 1 tiles
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Zyhb is planning to use ember on [12, 6]
+[2025-04-06 23:09:23] [INFO] [AbilitySystem] Updated line of sight for Zyhb, viewing 4 tiles
+[2025-04-06 23:09:23

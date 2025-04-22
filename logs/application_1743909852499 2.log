@@ -1,0 +1,1218 @@
+[2025-04-05 20:24:12] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 20:24:12] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 20:24:12] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 20:24:12] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 20:24:12] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 20:24:12] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 20:24:12] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 20:24:12] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 20:24:12] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 20:24:12] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 20:24:12] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 20:24:12] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 20:24:12] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 20:24:12] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 20:24:12] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 20:24:12] [INFO] [Component] Setting air_dragon_Pojwye_849a49e1-3d25-49ed-a19b-47396c593dbe on to 13_8_66bf040e-bddf-487a-8d71-58c3dd54648e.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Pojwye into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting dragon_Kang_e11f69bd-b27f-4293-a28f-bce952a83814 on to 0_2_fc706307-1440-4de6-a3b1-47716d3f2389.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Kang into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting light_dragon_Nohau_78a7808f-f43a-4ae6-9d11-e4c3c3475ddd on to 3_3_a866c83a-241a-4c45-8a3e-01eac057eb98.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Nohau into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting fire_dragon_Jelfiw_8f528845-d8e3-462e-8925-1f12f2dcc277 on to 9_4_b4483764-70ed-43a7-8dd7-6d5c5a83ccad.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Jelfiw into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting earth_dragon_Yebcu_0e31281e-caa7-4d91-83c2-c2f0e6ca136a on to 5_7_b2f81a2b-d640-4d68-a932-1b01e3cab83d.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Yebcu into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting fire_dragon_Nynij_5517b2f3-cfc9-46de-905f-16dcace4361c on to 14_6_ef538dc3-9edc-468b-ba59-e5f9d2d45543.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Nynij into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting dark_dragon_Yuelfo_93dd36ed-daab-431a-8825-0d33190584c4 on to 9_14_67f35f85-3d6c-4ffc-9790-7729816f620b.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Yuelfo into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting dark_dragon_Kavi_dedb74b4-7e41-4cbf-9a23-8a725fea21c5 on to 6_2_9a4806f6-bb8b-4798-b040-8084fdd3cb24.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Kavi into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting fire_dragon_Huvi_85711cb8-c39c-4377-a159-68c6a59b8d82 on to 12_1_9b95e844-2140-4c26-8e47-a1669b721cd8.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Huvi into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting fire_dragon_Yujiu_24a70a4f-4f06-4a90-80aa-931e59aeedd3 on to 4_10_b36f1e2c-7144-4b57-9d39-b10cebcacf93.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Yujiu into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting dragon_Domy_a2161ed6-bddd-4371-ad44-ecf7e1352638 on to 1_6_1112c749-08c9-46be-9fa6-539b6a1cb9aa.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Domy into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting light_dragon_Kylyoy_94cc5996-2c6e-4849-abc9-8556fe2b82c8 on to 7_2_a1db4947-5027-48c5-adbf-c3fd0d17eb42.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Kylyoy into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting water_dragon_Togfao_d765acda-c0c5-4846-8dba-bf08b071ee80 on to 11_8_6170d48a-22a8-479d-a958-545e477e6b21.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Togfao into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting dark_dragon_Iuia_774e2d7d-1e6c-401a-917e-a08d96d121ae on to 10_2_cf7b8a00-4083-4eae-b8fe-65323c144e8d.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Iuia into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting dark_dragon_Zoyeuy_c7fc16ac-3784-43af-8edb-4b0359f0e33d on to 2_12_9cdc2546-4d01-4178-9188-2a3a481aed4f.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Zoyeuy into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting air_dragon_Dojyue_f6e5d4a5-e96b-435e-b17f-a1b64e3612a9 on to 13_5_3a948871-6181-475b-b5bf-aba03a251111.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Dojyue into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting earth_dragon_Fapoxy_d19199e9-06bf-48f5-b71c-59a5e07e1e1d on to 7_4_4e94bbaa-c84d-4551-9cef-05ce8d9aa958.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Fapoxy into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting light_dragon_Iymje_7ae3757f-8af6-41c8-b859-2aa6a840a8d7 on to 14_4_72e713e7-b9e7-4c7b-aa52-80e0d6022930.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Iymje into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337 on to 3_1_43c2430c-afb6-4352-a0c7-af24db8805e3.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Oyyyya into queue
+[2025-04-05 20:24:12] [INFO] [Component] Setting fire_dragon_Eapb_5266e3b4-fb25-4cf0-b476-fb46128e1499 on to 3_7_f05b36ee-14d5-4ea6-8575-2a60c024abbd.
+[2025-04-05 20:24:12] [INFO] [SpeedQueue] Added unit enemy:Eapb into queue
+[2025-04-05 20:24:12] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 20:24:13] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 20:24:13] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 20:24:13] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 20:24:13] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 20:24:13] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 20:24:14] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 20:24:14] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:14] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 20:24:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 20:24:14] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337
+[2025-04-05 20:24:14] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 20:24:14] [INFO] [VisualsSystem] Finished creating blurred background after 0.48780152201652527 seconds
+[2025-04-05 20:24:14] [INFO] [MovementSystem] Oyyyya is planning to move from [3, 1] to [2, 1]
+[2025-04-05 20:24:14] [INFO] [MovementSystem] Updated movement area for Oyyyya
+[2025-04-05 20:24:14] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:24:14] [INFO] [Component] Setting earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337 on to 2_1_a52183b4-b428-40ca-9966-355ad5973677.
+[2025-04-05 20:24:14] [INFO] [MovementSystem] Moved from [3, 1] to [2, 1]
+[2025-04-05 20:24:14] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Nynij Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Domy Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Togfao Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Kylyoy Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Jelfiw Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Fapoxy Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Pojwye Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Yujiu Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Kavi Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Kang Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Iuia Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Nohau Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Dojyue Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Yebcu Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Zoyeuy Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Eapb Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Yuelfo Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Huvi Triggered ability system
+[2025-04-05 20:24:14] [INFO] [AbilitySystem] Iymje Triggered ability system
+[2025-04-05 20:24:15] [INFO] [AbilitySystem] Oyyyya Triggered ability system
+[2025-04-05 20:24:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:16] [INFO] [MovementSystem] Iymje is planning to move from [14, 4] to [13, 3]
+[2025-04-05 20:24:16] [INFO] [MovementSystem] Updated movement area for Iymje
+[2025-04-05 20:24:16] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:24:16] [INFO] [Component] Setting light_dragon_Iymje_7ae3757f-8af6-41c8-b859-2aa6a840a8d7 on to 13_3_fc885e3c-a373-4b16-a12f-0c672b88afce.
+[2025-04-05 20:24:16] [INFO] [MovementSystem] Moved from [14, 4] to [13, 3]
+[2025-04-05 20:24:16] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:17] [INFO] [InputHandler] Gliding 0 camera to new tile 13_3_fc885e3c-a373-4b16-a12f-0c672b88afce
+[2025-04-05 20:24:17] [INFO] [InputHandler] Gliding 1 camera to new tile 13_3_fc885e3c-a373-4b16-a12f-0c672b88afce
+[2025-04-05 20:24:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 20:24:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Iymje
+[2025-04-05 20:24:17] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 20:24:17] [INFO] [AbilitySystem] Oyyyya Triggered ability system
+[2025-04-05 20:24:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:17] [INFO] [MovementSystem] Huvi is planning to move from [12, 1] to [12, 3]
+[2025-04-05 20:24:17] [INFO] [MovementSystem] Updated movement area for Huvi
+[2025-04-05 20:24:17] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:24:17] [INFO] [Component] Setting fire_dragon_Huvi_85711cb8-c39c-4377-a159-68c6a59b8d82 on to 12_3_aeeacb9d-5c08-47d5-adeb-e802687d1f9f.
+[2025-04-05 20:24:17] [INFO] [MovementSystem] Moved from [12, 1] to [12, 3]
+[2025-04-05 20:24:17] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:18] [INFO] [AbilitySystem] Iymje Triggered ability system
+[2025-04-05 20:24:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:18] [INFO] [MovementSystem] Yuelfo is planning to move from [9, 14] to [9, 12]
+[2025-04-05 20:24:18] [INFO] [MovementSystem] Updated movement area for Yuelfo
+[2025-04-05 20:24:18] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:24:18] [INFO] [Component] Setting dark_dragon_Yuelfo_93dd36ed-daab-431a-8825-0d33190584c4 on to 9_12_5d44a806-7654-4e8d-92e8-f58ae72df9c9.
+[2025-04-05 20:24:18] [INFO] [MovementSystem] Moved from [9, 14] to [9, 12]
+[2025-04-05 20:24:18] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:19] [INFO] [AbilitySystem] Huvi Triggered ability system
+[2025-04-05 20:24:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:19] [INFO] [MovementSystem] Eapb is planning to move from [3, 7] to [4, 8]
+[2025-04-05 20:24:19] [INFO] [MovementSystem] Updated movement area for Eapb
+[2025-04-05 20:24:19] [INFO] [MovementSystem] Updated movement path for Eapb
+[2025-04-05 20:24:19] [INFO] [Component] Setting fire_dragon_Eapb_5266e3b4-fb25-4cf0-b476-fb46128e1499 on to 4_8_fb106e42-748d-42f3-911f-a66ba912d203.
+[2025-04-05 20:24:19] [INFO] [MovementSystem] Moved from [3, 7] to [4, 8]
+[2025-04-05 20:24:19] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:20] [INFO] [AbilitySystem] Yuelfo Triggered ability system
+[2025-04-05 20:24:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:20] [INFO] [MovementSystem] Zoyeuy is planning to move from [2, 12] to [3, 11]
+[2025-04-05 20:24:20] [INFO] [MovementSystem] Updated movement area for Zoyeuy
+[2025-04-05 20:24:20] [INFO] [MovementSystem] Updated movement path for Zoyeuy
+[2025-04-05 20:24:20] [INFO] [Component] Setting dark_dragon_Zoyeuy_c7fc16ac-3784-43af-8edb-4b0359f0e33d on to 3_11_45cd7a14-07f0-4cad-a915-c9095efdf539.
+[2025-04-05 20:24:20] [INFO] [MovementSystem] Moved from [2, 12] to [3, 11]
+[2025-04-05 20:24:20] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:21] [INFO] [AbilitySystem] Eapb Triggered ability system
+[2025-04-05 20:24:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:21] [INFO] [MovementSystem] Yebcu is planning to move from [5, 7] to [7, 7]
+[2025-04-05 20:24:21] [INFO] [MovementSystem] Updated movement area for Yebcu
+[2025-04-05 20:24:21] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:24:21] [INFO] [Component] Setting earth_dragon_Yebcu_0e31281e-caa7-4d91-83c2-c2f0e6ca136a on to 7_7_812b57dd-e918-4321-aa1b-d735e75d2e81.
+[2025-04-05 20:24:21] [INFO] [MovementSystem] Moved from [5, 7] to [7, 7]
+[2025-04-05 20:24:21] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:22] [INFO] [AbilitySystem] Zoyeuy Triggered ability system
+[2025-04-05 20:24:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:22] [INFO] [MovementSystem] Dojyue is planning to move from [13, 5] to [14, 4]
+[2025-04-05 20:24:22] [INFO] [MovementSystem] Updated movement area for Dojyue
+[2025-04-05 20:24:22] [INFO] [MovementSystem] Updated movement path for Dojyue
+[2025-04-05 20:24:22] [INFO] [Component] Setting air_dragon_Dojyue_f6e5d4a5-e96b-435e-b17f-a1b64e3612a9 on to 14_4_72e713e7-b9e7-4c7b-aa52-80e0d6022930.
+[2025-04-05 20:24:22] [INFO] [MovementSystem] Moved from [13, 5] to [14, 4]
+[2025-04-05 20:24:22] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:23] [INFO] [AbilitySystem] Yebcu Triggered ability system
+[2025-04-05 20:24:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:23] [INFO] [MovementSystem] Nohau is planning to move from [3, 3] to [2, 2]
+[2025-04-05 20:24:23] [INFO] [MovementSystem] Updated movement area for Nohau
+[2025-04-05 20:24:23] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:24:23] [INFO] [Component] Setting light_dragon_Nohau_78a7808f-f43a-4ae6-9d11-e4c3c3475ddd on to 2_2_809bdc77-327a-4fc7-acd9-d74df07de0ed.
+[2025-04-05 20:24:23] [INFO] [MovementSystem] Moved from [3, 3] to [2, 2]
+[2025-04-05 20:24:23] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:24] [INFO] [AbilitySystem] Dojyue Triggered ability system
+[2025-04-05 20:24:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:24] [INFO] [MovementSystem] Iuia is planning to move from [10, 2] to [10, 0]
+[2025-04-05 20:24:24] [INFO] [MovementSystem] Updated movement area for Iuia
+[2025-04-05 20:24:24] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:24:24] [INFO] [Component] Setting dark_dragon_Iuia_774e2d7d-1e6c-401a-917e-a08d96d121ae on to 10_0_2bbbc9dc-4b4c-4f8b-8d6f-063acba4942a.
+[2025-04-05 20:24:24] [INFO] [MovementSystem] Moved from [10, 2] to [10, 0]
+[2025-04-05 20:24:24] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:25] [INFO] [AbilitySystem] Nohau Triggered ability system
+[2025-04-05 20:24:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:25] [INFO] [MovementSystem] Kang is planning to move from [0, 2] to [0, 0]
+[2025-04-05 20:24:25] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:24:25] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:24:25] [INFO] [Component] Setting dragon_Kang_e11f69bd-b27f-4293-a28f-bce952a83814 on to 0_0_1c7daa50-6916-41da-8635-88c35fe0f57b.
+[2025-04-05 20:24:25] [INFO] [MovementSystem] Moved from [0, 2] to [0, 0]
+[2025-04-05 20:24:25] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:26] [INFO] [AbilitySystem] Iuia Triggered ability system
+[2025-04-05 20:24:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:26] [INFO] [MovementSystem] Kavi is planning to move from [6, 2] to [7, 3]
+[2025-04-05 20:24:26] [INFO] [MovementSystem] Updated movement area for Kavi
+[2025-04-05 20:24:26] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:24:26] [INFO] [Component] Setting dark_dragon_Kavi_dedb74b4-7e41-4cbf-9a23-8a725fea21c5 on to 7_3_9d8c635e-f9e0-4215-a1ea-a61e5922a59f.
+[2025-04-05 20:24:26] [INFO] [MovementSystem] Moved from [6, 2] to [7, 3]
+[2025-04-05 20:24:26] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:27] [INFO] [AbilitySystem] Kang Triggered ability system
+[2025-04-05 20:24:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:27] [INFO] [MovementSystem] Yujiu is planning to move from [4, 10] to [4, 11]
+[2025-04-05 20:24:27] [INFO] [MovementSystem] Updated movement area for Yujiu
+[2025-04-05 20:24:27] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:24:27] [INFO] [Component] Setting fire_dragon_Yujiu_24a70a4f-4f06-4a90-80aa-931e59aeedd3 on to 4_11_48f1520a-4c71-453a-8f18-3c61e40bc781.
+[2025-04-05 20:24:27] [INFO] [MovementSystem] Moved from [4, 10] to [4, 11]
+[2025-04-05 20:24:27] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:28] [INFO] [AbilitySystem] Kavi Triggered ability system
+[2025-04-05 20:24:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:28] [INFO] [MovementSystem] Pojwye is planning to move from [13, 8] to [14, 7]
+[2025-04-05 20:24:28] [INFO] [MovementSystem] Updated movement area for Pojwye
+[2025-04-05 20:24:28] [INFO] [MovementSystem] Updated movement path for Pojwye
+[2025-04-05 20:24:28] [INFO] [Component] Setting air_dragon_Pojwye_849a49e1-3d25-49ed-a19b-47396c593dbe on to 14_7_28d2fc1b-9079-49e1-9813-300ae47dba31.
+[2025-04-05 20:24:28] [INFO] [MovementSystem] Moved from [13, 8] to [14, 7]
+[2025-04-05 20:24:28] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:29] [INFO] [AbilitySystem] Yujiu Triggered ability system
+[2025-04-05 20:24:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:29] [INFO] [MovementSystem] Fapoxy is planning to move from [7, 4] to [8, 4]
+[2025-04-05 20:24:29] [INFO] [MovementSystem] Updated movement area for Fapoxy
+[2025-04-05 20:24:29] [INFO] [MovementSystem] Updated movement path for Fapoxy
+[2025-04-05 20:24:29] [INFO] [Component] Setting earth_dragon_Fapoxy_d19199e9-06bf-48f5-b71c-59a5e07e1e1d on to 8_4_2b62d031-1d9f-4bcf-bdb1-4744a9e930cc.
+[2025-04-05 20:24:29] [INFO] [MovementSystem] Moved from [7, 4] to [8, 4]
+[2025-04-05 20:24:29] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:30] [INFO] [AbilitySystem] Pojwye Triggered ability system
+[2025-04-05 20:24:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:30] [INFO] [MovementSystem] Jelfiw is planning to move from [9, 4] to [8, 3]
+[2025-04-05 20:24:30] [INFO] [MovementSystem] Updated movement area for Jelfiw
+[2025-04-05 20:24:30] [INFO] [MovementSystem] Updated movement path for Jelfiw
+[2025-04-05 20:24:30] [INFO] [Component] Setting fire_dragon_Jelfiw_8f528845-d8e3-462e-8925-1f12f2dcc277 on to 8_3_4c7c23cb-17af-44e6-82d3-a9a3a965b022.
+[2025-04-05 20:24:30] [INFO] [MovementSystem] Moved from [9, 4] to [8, 3]
+[2025-04-05 20:24:30] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:31] [INFO] [AbilitySystem] Fapoxy Triggered ability system
+[2025-04-05 20:24:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:31] [INFO] [MovementSystem] Kylyoy is planning to move from [7, 2] to [7, 2]
+[2025-04-05 20:24:31] [INFO] [MovementSystem] Updated movement area for Kylyoy
+[2025-04-05 20:24:31] [INFO] [MovementSystem] Updated movement path for Kylyoy
+[2025-04-05 20:24:31] [INFO] [MovementSystem] Kylyoy is planning to move from [7, 2] to [7, 2]
+[2025-04-05 20:24:31] [INFO] [MovementSystem] Updated movement area for Kylyoy
+[2025-04-05 20:24:31] [INFO] [MovementSystem] Updated movement path for Kylyoy
+[2025-04-05 20:24:32] [INFO] [AbilitySystem] Jelfiw Triggered ability system
+[2025-04-05 20:24:33] [INFO] [MovementSystem] Kylyoy is planning to move from [7, 2] to [6, 1]
+[2025-04-05 20:24:33] [INFO] [MovementSystem] Updated movement path for Kylyoy
+[2025-04-05 20:24:33] [INFO] [Component] Setting light_dragon_Kylyoy_94cc5996-2c6e-4849-abc9-8556fe2b82c8 on to 6_1_81dd51fe-65e5-4d0a-aa18-c1cca7191cbd.
+[2025-04-05 20:24:33] [INFO] [MovementSystem] Moved from [7, 2] to [6, 1]
+[2025-04-05 20:24:33] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:34] [INFO] [MovementSystem] Togfao is planning to move from [11, 8] to [12, 8]
+[2025-04-05 20:24:34] [INFO] [MovementSystem] Updated movement area for Togfao
+[2025-04-05 20:24:34] [INFO] [MovementSystem] Updated movement path for Togfao
+[2025-04-05 20:24:34] [INFO] [Component] Setting water_dragon_Togfao_d765acda-c0c5-4846-8dba-bf08b071ee80 on to 12_8_8527c037-9598-49a6-98d4-ad2c40668949.
+[2025-04-05 20:24:34] [INFO] [MovementSystem] Moved from [11, 8] to [12, 8]
+[2025-04-05 20:24:34] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:35] [INFO] [AbilitySystem] Kylyoy Triggered ability system
+[2025-04-05 20:24:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:35] [INFO] [MovementSystem] Domy is planning to move from [1, 6] to [0, 7]
+[2025-04-05 20:24:35] [INFO] [MovementSystem] Updated movement area for Domy
+[2025-04-05 20:24:35] [INFO] [MovementSystem] Updated movement path for Domy
+[2025-04-05 20:24:35] [INFO] [Component] Setting dragon_Domy_a2161ed6-bddd-4371-ad44-ecf7e1352638 on to 0_7_d7658ae3-bc3f-44d9-bbf3-241dd02402d7.
+[2025-04-05 20:24:35] [INFO] [MovementSystem] Moved from [1, 6] to [0, 7]
+[2025-04-05 20:24:35] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:36] [INFO] [AbilitySystem] Togfao Triggered ability system
+[2025-04-05 20:24:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:36] [INFO] [MovementSystem] Nynij is planning to move from [14, 6] to [14, 6]
+[2025-04-05 20:24:36] [INFO] [MovementSystem] Updated movement area for Nynij
+[2025-04-05 20:24:36] [INFO] [MovementSystem] Updated movement path for Nynij
+[2025-04-05 20:24:36] [INFO] [MovementSystem] Nynij is planning to move from [14, 6] to [14, 6]
+[2025-04-05 20:24:36] [INFO] [MovementSystem] Updated movement area for Nynij
+[2025-04-05 20:24:36] [INFO] [MovementSystem] Updated movement path for Nynij
+[2025-04-05 20:24:37] [INFO] [MovementSystem] Nynij is planning to move from [14, 6] to [12, 6]
+[2025-04-05 20:24:37] [INFO] [MovementSystem] Updated movement path for Nynij
+[2025-04-05 20:24:37] [INFO] [Component] Setting fire_dragon_Nynij_5517b2f3-cfc9-46de-905f-16dcace4361c on to 12_6_eb1380e2-e883-4992-a544-c9caf093096c.
+[2025-04-05 20:24:37] [INFO] [MovementSystem] Moved from [14, 6] to [12, 6]
+[2025-04-05 20:24:37] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:37] [INFO] [AbilitySystem] Domy Triggered ability system
+[2025-04-05 20:24:38] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 20:24:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:38] [INFO] [MovementSystem] Oyyyya is planning to move from [2, 1] to [2, 1]
+[2025-04-05 20:24:38] [INFO] [MovementSystem] Updated movement area for Oyyyya
+[2025-04-05 20:24:38] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:24:38] [INFO] [MovementSystem] Oyyyya is planning to move from [2, 1] to [2, 1]
+[2025-04-05 20:24:38] [INFO] [MovementSystem] Updated movement area for Oyyyya
+[2025-04-05 20:24:38] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:24:39] [INFO] [MovementSystem] Oyyyya is planning to move from [2, 1] to [3, 2]
+[2025-04-05 20:24:39] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:24:39] [INFO] [Component] Setting earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337 on to 3_2_737e4304-466e-4554-b31b-17e8528de759.
+[2025-04-05 20:24:39] [INFO] [MovementSystem] Moved from [2, 1] to [3, 2]
+[2025-04-05 20:24:39] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:39] [INFO] [AbilitySystem] Nynij Triggered ability system
+[2025-04-05 20:24:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:41] [INFO] [MovementSystem] Iymje is planning to move from [13, 3] to [12, 4]
+[2025-04-05 20:24:41] [INFO] [MovementSystem] Updated movement area for Iymje
+[2025-04-05 20:24:41] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:24:41] [INFO] [Component] Setting light_dragon_Iymje_7ae3757f-8af6-41c8-b859-2aa6a840a8d7 on to 12_4_785e8239-ab37-46f1-8d05-6aec61904b46.
+[2025-04-05 20:24:41] [INFO] [MovementSystem] Moved from [13, 3] to [12, 4]
+[2025-04-05 20:24:41] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:42] [INFO] [AbilitySystem] Oyyyya Triggered ability system
+[2025-04-05 20:24:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:42] [INFO] [MovementSystem] Huvi is planning to move from [12, 3] to [11, 4]
+[2025-04-05 20:24:42] [INFO] [MovementSystem] Updated movement area for Huvi
+[2025-04-05 20:24:42] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:24:42] [INFO] [Component] Setting fire_dragon_Huvi_85711cb8-c39c-4377-a159-68c6a59b8d82 on to 11_4_c549c819-0cd6-4d9b-b297-c231940cb2a6.
+[2025-04-05 20:24:42] [INFO] [MovementSystem] Moved from [12, 3] to [11, 4]
+[2025-04-05 20:24:42] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:43] [INFO] [AbilitySystem] Iymje Triggered ability system
+[2025-04-05 20:24:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:43] [INFO] [MovementSystem] Yuelfo is planning to move from [9, 12] to [8, 11]
+[2025-04-05 20:24:43] [INFO] [MovementSystem] Updated movement area for Yuelfo
+[2025-04-05 20:24:43] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:24:43] [INFO] [Component] Setting dark_dragon_Yuelfo_93dd36ed-daab-431a-8825-0d33190584c4 on to 8_11_3ba93b55-5dac-48c9-acbc-11a551e48d89.
+[2025-04-05 20:24:43] [INFO] [MovementSystem] Moved from [9, 12] to [8, 11]
+[2025-04-05 20:24:43] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:44] [INFO] [AbilitySystem] Huvi Triggered ability system
+[2025-04-05 20:24:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:44] [INFO] [MovementSystem] Eapb is planning to move from [4, 8] to [4, 10]
+[2025-04-05 20:24:44] [INFO] [MovementSystem] Updated movement area for Eapb
+[2025-04-05 20:24:44] [INFO] [MovementSystem] Updated movement path for Eapb
+[2025-04-05 20:24:44] [INFO] [Component] Setting fire_dragon_Eapb_5266e3b4-fb25-4cf0-b476-fb46128e1499 on to 4_10_b36f1e2c-7144-4b57-9d39-b10cebcacf93.
+[2025-04-05 20:24:44] [INFO] [MovementSystem] Moved from [4, 8] to [4, 10]
+[2025-04-05 20:24:44] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:45] [INFO] [AbilitySystem] Yuelfo Triggered ability system
+[2025-04-05 20:24:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:45] [INFO] [MovementSystem] Zoyeuy is planning to move from [3, 11] to [2, 12]
+[2025-04-05 20:24:45] [INFO] [MovementSystem] Updated movement area for Zoyeuy
+[2025-04-05 20:24:45] [INFO] [MovementSystem] Updated movement path for Zoyeuy
+[2025-04-05 20:24:45] [INFO] [Component] Setting dark_dragon_Zoyeuy_c7fc16ac-3784-43af-8edb-4b0359f0e33d on to 2_12_9cdc2546-4d01-4178-9188-2a3a481aed4f.
+[2025-04-05 20:24:45] [INFO] [MovementSystem] Moved from [3, 11] to [2, 12]
+[2025-04-05 20:24:45] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:46] [INFO] [AbilitySystem] Eapb Triggered ability system
+[2025-04-05 20:24:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:46] [INFO] [MovementSystem] Yebcu is planning to move from [7, 7] to [8, 7]
+[2025-04-05 20:24:46] [INFO] [MovementSystem] Updated movement area for Yebcu
+[2025-04-05 20:24:46] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:24:46] [INFO] [Component] Setting earth_dragon_Yebcu_0e31281e-caa7-4d91-83c2-c2f0e6ca136a on to 8_7_e39bc4b2-b5e3-4d3d-a226-aa5b6394a74b.
+[2025-04-05 20:24:46] [INFO] [MovementSystem] Moved from [7, 7] to [8, 7]
+[2025-04-05 20:24:46] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:47] [INFO] [AbilitySystem] Zoyeuy Triggered ability system
+[2025-04-05 20:24:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:47] [INFO] [MovementSystem] Dojyue is planning to move from [14, 4] to [13, 4]
+[2025-04-05 20:24:47] [INFO] [MovementSystem] Updated movement area for Dojyue
+[2025-04-05 20:24:47] [INFO] [MovementSystem] Updated movement path for Dojyue
+[2025-04-05 20:24:47] [INFO] [Component] Setting air_dragon_Dojyue_f6e5d4a5-e96b-435e-b17f-a1b64e3612a9 on to 13_4_97b8d50b-f769-41cb-b153-c4584c7809bf.
+[2025-04-05 20:24:47] [INFO] [MovementSystem] Moved from [14, 4] to [13, 4]
+[2025-04-05 20:24:47] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:48] [INFO] [AbilitySystem] Yebcu Triggered ability system
+[2025-04-05 20:24:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:48] [INFO] [MovementSystem] Nohau is planning to move from [2, 2] to [2, 3]
+[2025-04-05 20:24:48] [INFO] [MovementSystem] Updated movement area for Nohau
+[2025-04-05 20:24:48] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:24:48] [INFO] [Component] Setting light_dragon_Nohau_78a7808f-f43a-4ae6-9d11-e4c3c3475ddd on to 2_3_1deb95d2-ea35-4e6f-b309-5748eee149b9.
+[2025-04-05 20:24:48] [INFO] [MovementSystem] Moved from [2, 2] to [2, 3]
+[2025-04-05 20:24:48] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:49] [INFO] [AbilitySystem] Dojyue Triggered ability system
+[2025-04-05 20:24:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:49] [INFO] [MovementSystem] Iuia is planning to move from [10, 0] to [10, 0]
+[2025-04-05 20:24:49] [INFO] [MovementSystem] Updated movement area for Iuia
+[2025-04-05 20:24:49] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:24:49] [INFO] [MovementSystem] Iuia is planning to move from [10, 0] to [10, 0]
+[2025-04-05 20:24:49] [INFO] [MovementSystem] Updated movement area for Iuia
+[2025-04-05 20:24:49] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:24:50] [INFO] [AbilitySystem] Nohau Triggered ability system
+[2025-04-05 20:24:50] [INFO] [MovementSystem] Iuia is planning to move from [10, 0] to [10, 2]
+[2025-04-05 20:24:50] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:24:50] [INFO] [Component] Setting dark_dragon_Iuia_774e2d7d-1e6c-401a-917e-a08d96d121ae on to 10_2_cf7b8a00-4083-4eae-b8fe-65323c144e8d.
+[2025-04-05 20:24:50] [INFO] [MovementSystem] Moved from [10, 0] to [10, 2]
+[2025-04-05 20:24:50] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:51] [INFO] [MovementSystem] Kang is planning to move from [0, 0] to [1, 0]
+[2025-04-05 20:24:51] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:24:51] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:24:51] [INFO] [Component] Setting dragon_Kang_e11f69bd-b27f-4293-a28f-bce952a83814 on to 1_0_67378377-6d35-434f-8c99-05b8a70b288c.
+[2025-04-05 20:24:51] [INFO] [MovementSystem] Moved from [0, 0] to [1, 0]
+[2025-04-05 20:24:51] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:52] [INFO] [AbilitySystem] Iuia Triggered ability system
+[2025-04-05 20:24:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:52] [INFO] [MovementSystem] Kavi is planning to move from [7, 3] to [7, 5]
+[2025-04-05 20:24:52] [INFO] [MovementSystem] Updated movement area for Kavi
+[2025-04-05 20:24:52] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:24:52] [INFO] [Component] Setting dark_dragon_Kavi_dedb74b4-7e41-4cbf-9a23-8a725fea21c5 on to 7_5_11ff05f2-58cd-419c-8326-2c9a11aee79a.
+[2025-04-05 20:24:52] [INFO] [MovementSystem] Moved from [7, 3] to [7, 5]
+[2025-04-05 20:24:52] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:53] [INFO] [AbilitySystem] Kang Triggered ability system
+[2025-04-05 20:24:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:53] [INFO] [MovementSystem] Yujiu is planning to move from [4, 11] to [4, 11]
+[2025-04-05 20:24:53] [INFO] [MovementSystem] Updated movement area for Yujiu
+[2025-04-05 20:24:53] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:24:53] [INFO] [MovementSystem] Yujiu is planning to move from [4, 11] to [4, 11]
+[2025-04-05 20:24:53] [INFO] [MovementSystem] Updated movement area for Yujiu
+[2025-04-05 20:24:53] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:24:54] [INFO] [AbilitySystem] Kavi Triggered ability system
+[2025-04-05 20:24:54] [INFO] [MovementSystem] Yujiu is planning to move from [4, 11] to [6, 11]
+[2025-04-05 20:24:54] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:24:54] [INFO] [Component] Setting fire_dragon_Yujiu_24a70a4f-4f06-4a90-80aa-931e59aeedd3 on to 6_11_073ee886-65ff-421c-95b2-dbd70b435aed.
+[2025-04-05 20:24:54] [INFO] [MovementSystem] Moved from [4, 11] to [6, 11]
+[2025-04-05 20:24:54] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:55] [INFO] [MovementSystem] Pojwye is planning to move from [14, 7] to [14, 9]
+[2025-04-05 20:24:55] [INFO] [MovementSystem] Updated movement area for Pojwye
+[2025-04-05 20:24:55] [INFO] [MovementSystem] Updated movement path for Pojwye
+[2025-04-05 20:24:55] [INFO] [Component] Setting air_dragon_Pojwye_849a49e1-3d25-49ed-a19b-47396c593dbe on to 14_9_3037924d-fa73-49ed-a66f-5bc355b2b345.
+[2025-04-05 20:24:55] [INFO] [MovementSystem] Moved from [14, 7] to [14, 9]
+[2025-04-05 20:24:55] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:56] [INFO] [AbilitySystem] Yujiu Triggered ability system
+[2025-04-05 20:24:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:56] [INFO] [MovementSystem] Fapoxy is planning to move from [8, 4] to [8, 6]
+[2025-04-05 20:24:56] [INFO] [MovementSystem] Updated movement area for Fapoxy
+[2025-04-05 20:24:56] [INFO] [MovementSystem] Updated movement path for Fapoxy
+[2025-04-05 20:24:56] [INFO] [Component] Setting earth_dragon_Fapoxy_d19199e9-06bf-48f5-b71c-59a5e07e1e1d on to 8_6_850328e7-5258-4ba8-b10d-c224d85b5ac1.
+[2025-04-05 20:24:56] [INFO] [MovementSystem] Moved from [8, 4] to [8, 6]
+[2025-04-05 20:24:56] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:57] [INFO] [AbilitySystem] Pojwye Triggered ability system
+[2025-04-05 20:24:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:57] [INFO] [MovementSystem] Jelfiw is planning to move from [8, 3] to [8, 1]
+[2025-04-05 20:24:57] [INFO] [MovementSystem] Updated movement area for Jelfiw
+[2025-04-05 20:24:57] [INFO] [MovementSystem] Updated movement path for Jelfiw
+[2025-04-05 20:24:57] [INFO] [Component] Setting fire_dragon_Jelfiw_8f528845-d8e3-462e-8925-1f12f2dcc277 on to 8_1_6f9b9279-2e32-4c45-b8a8-7da33e4cfc60.
+[2025-04-05 20:24:57] [INFO] [MovementSystem] Moved from [8, 3] to [8, 1]
+[2025-04-05 20:24:57] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:58] [INFO] [AbilitySystem] Fapoxy Triggered ability system
+[2025-04-05 20:24:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:58] [INFO] [MovementSystem] Kylyoy is planning to move from [6, 1] to [5, 2]
+[2025-04-05 20:24:58] [INFO] [MovementSystem] Updated movement area for Kylyoy
+[2025-04-05 20:24:58] [INFO] [MovementSystem] Updated movement path for Kylyoy
+[2025-04-05 20:24:58] [INFO] [Component] Setting light_dragon_Kylyoy_94cc5996-2c6e-4849-abc9-8556fe2b82c8 on to 5_2_d0d218dd-748c-4759-a02e-65b671feb127.
+[2025-04-05 20:24:58] [INFO] [MovementSystem] Moved from [6, 1] to [5, 2]
+[2025-04-05 20:24:58] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:24:59] [INFO] [AbilitySystem] Jelfiw Triggered ability system
+[2025-04-05 20:24:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:24:59] [INFO] [MovementSystem] Togfao is planning to move from [12, 8] to [13, 8]
+[2025-04-05 20:24:59] [INFO] [MovementSystem] Updated movement area for Togfao
+[2025-04-05 20:24:59] [INFO] [MovementSystem] Updated movement path for Togfao
+[2025-04-05 20:24:59] [INFO] [Component] Setting water_dragon_Togfao_d765acda-c0c5-4846-8dba-bf08b071ee80 on to 13_8_66bf040e-bddf-487a-8d71-58c3dd54648e.
+[2025-04-05 20:24:59] [INFO] [MovementSystem] Moved from [12, 8] to [13, 8]
+[2025-04-05 20:24:59] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:00] [INFO] [AbilitySystem] Kylyoy Triggered ability system
+[2025-04-05 20:25:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:00] [INFO] [MovementSystem] Domy is planning to move from [0, 7] to [0, 7]
+[2025-04-05 20:25:00] [INFO] [MovementSystem] Updated movement area for Domy
+[2025-04-05 20:25:00] [INFO] [MovementSystem] Updated movement path for Domy
+[2025-04-05 20:25:00] [INFO] [MovementSystem] Domy is planning to move from [0, 7] to [0, 7]
+[2025-04-05 20:25:00] [INFO] [MovementSystem] Updated movement area for Domy
+[2025-04-05 20:25:00] [INFO] [MovementSystem] Updated movement path for Domy
+[2025-04-05 20:25:01] [INFO] [AbilitySystem] Togfao Triggered ability system
+[2025-04-05 20:25:02] [INFO] [MovementSystem] Domy is planning to move from [0, 7] to [0, 8]
+[2025-04-05 20:25:02] [INFO] [MovementSystem] Updated movement path for Domy
+[2025-04-05 20:25:02] [INFO] [Component] Setting dragon_Domy_a2161ed6-bddd-4371-ad44-ecf7e1352638 on to 0_8_edd59e59-b6a1-4673-a5f4-1cb335b66c63.
+[2025-04-05 20:25:02] [INFO] [MovementSystem] Moved from [0, 7] to [0, 8]
+[2025-04-05 20:25:02] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:03] [INFO] [MovementSystem] Nynij is planning to move from [12, 6] to [11, 6]
+[2025-04-05 20:25:03] [INFO] [MovementSystem] Updated movement area for Nynij
+[2025-04-05 20:25:03] [INFO] [MovementSystem] Updated movement path for Nynij
+[2025-04-05 20:25:03] [INFO] [Component] Setting fire_dragon_Nynij_5517b2f3-cfc9-46de-905f-16dcace4361c on to 11_6_99bb6b26-ab07-401d-aa1a-d7c81e44ca4e.
+[2025-04-05 20:25:03] [INFO] [MovementSystem] Moved from [12, 6] to [11, 6]
+[2025-04-05 20:25:03] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:04] [INFO] [AbilitySystem] Domy Triggered ability system
+[2025-04-05 20:25:04] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 20:25:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:04] [INFO] [MovementSystem] Oyyyya is planning to move from [3, 2] to [4, 2]
+[2025-04-05 20:25:04] [INFO] [MovementSystem] Updated movement area for Oyyyya
+[2025-04-05 20:25:04] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:25:04] [INFO] [Component] Setting earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337 on to 4_2_df55c707-e8e7-48f9-8b9a-c86bf1f0ec3f.
+[2025-04-05 20:25:04] [INFO] [MovementSystem] Moved from [3, 2] to [4, 2]
+[2025-04-05 20:25:04] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:05] [INFO] [AbilitySystem] Nynij Triggered ability system
+[2025-04-05 20:25:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:05] [INFO] [MovementSystem] Iymje is planning to move from [12, 4] to [12, 2]
+[2025-04-05 20:25:05] [INFO] [MovementSystem] Updated movement area for Iymje
+[2025-04-05 20:25:05] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:25:05] [INFO] [Component] Setting light_dragon_Iymje_7ae3757f-8af6-41c8-b859-2aa6a840a8d7 on to 12_2_d2f89d9f-0bcc-49dd-ba71-fc04482ecf3a.
+[2025-04-05 20:25:05] [INFO] [MovementSystem] Moved from [12, 4] to [12, 2]
+[2025-04-05 20:25:05] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:06] [INFO] [AbilitySystem] Oyyyya Triggered ability system
+[2025-04-05 20:25:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:06] [INFO] [MovementSystem] Huvi is planning to move from [11, 4] to [12, 4]
+[2025-04-05 20:25:06] [INFO] [MovementSystem] Updated movement area for Huvi
+[2025-04-05 20:25:06] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:25:06] [INFO] [Component] Setting fire_dragon_Huvi_85711cb8-c39c-4377-a159-68c6a59b8d82 on to 12_4_785e8239-ab37-46f1-8d05-6aec61904b46.
+[2025-04-05 20:25:06] [INFO] [MovementSystem] Moved from [11, 4] to [12, 4]
+[2025-04-05 20:25:06] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:07] [INFO] [AbilitySystem] Iymje Triggered ability system
+[2025-04-05 20:25:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:07] [INFO] [MovementSystem] Yuelfo is planning to move from [8, 11] to [9, 10]
+[2025-04-05 20:25:07] [INFO] [MovementSystem] Updated movement area for Yuelfo
+[2025-04-05 20:25:07] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:25:07] [INFO] [Component] Setting dark_dragon_Yuelfo_93dd36ed-daab-431a-8825-0d33190584c4 on to 9_10_2faf80ef-d3e1-4c18-aae1-e8394ddc548a.
+[2025-04-05 20:25:07] [INFO] [MovementSystem] Moved from [8, 11] to [9, 10]
+[2025-04-05 20:25:07] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:08] [INFO] [AbilitySystem] Huvi Triggered ability system
+[2025-04-05 20:25:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:08] [INFO] [MovementSystem] Eapb is planning to move from [4, 10] to [4, 8]
+[2025-04-05 20:25:08] [INFO] [MovementSystem] Updated movement area for Eapb
+[2025-04-05 20:25:08] [INFO] [MovementSystem] Updated movement path for Eapb
+[2025-04-05 20:25:08] [INFO] [Component] Setting fire_dragon_Eapb_5266e3b4-fb25-4cf0-b476-fb46128e1499 on to 4_8_fb106e42-748d-42f3-911f-a66ba912d203.
+[2025-04-05 20:25:08] [INFO] [MovementSystem] Moved from [4, 10] to [4, 8]
+[2025-04-05 20:25:08] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:09] [INFO] [AbilitySystem] Yuelfo Triggered ability system
+[2025-04-05 20:25:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:09] [INFO] [MovementSystem] Zoyeuy is planning to move from [2, 12] to [1, 12]
+[2025-04-05 20:25:09] [INFO] [MovementSystem] Updated movement area for Zoyeuy
+[2025-04-05 20:25:09] [INFO] [MovementSystem] Updated movement path for Zoyeuy
+[2025-04-05 20:25:09] [INFO] [Component] Setting dark_dragon_Zoyeuy_c7fc16ac-3784-43af-8edb-4b0359f0e33d on to 1_12_34864080-fae4-490e-baf3-a61595608de8.
+[2025-04-05 20:25:09] [INFO] [MovementSystem] Moved from [2, 12] to [1, 12]
+[2025-04-05 20:25:09] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:10] [INFO] [AbilitySystem] Eapb Triggered ability system
+[2025-04-05 20:25:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:10] [INFO] [MovementSystem] Yebcu is planning to move from [8, 7] to [9, 8]
+[2025-04-05 20:25:10] [INFO] [MovementSystem] Updated movement area for Yebcu
+[2025-04-05 20:25:10] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:25:10] [INFO] [Component] Setting earth_dragon_Yebcu_0e31281e-caa7-4d91-83c2-c2f0e6ca136a on to 9_8_fcfeee9f-df62-4e56-914a-e9384e8a4cc1.
+[2025-04-05 20:25:10] [INFO] [MovementSystem] Moved from [8, 7] to [9, 8]
+[2025-04-05 20:25:10] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:11] [INFO] [AbilitySystem] Zoyeuy Triggered ability system
+[2025-04-05 20:25:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:11] [INFO] [MovementSystem] Dojyue is planning to move from [13, 4] to [13, 3]
+[2025-04-05 20:25:11] [INFO] [MovementSystem] Updated movement area for Dojyue
+[2025-04-05 20:25:11] [INFO] [MovementSystem] Updated movement path for Dojyue
+[2025-04-05 20:25:11] [INFO] [Component] Setting air_dragon_Dojyue_f6e5d4a5-e96b-435e-b17f-a1b64e3612a9 on to 13_3_fc885e3c-a373-4b16-a12f-0c672b88afce.
+[2025-04-05 20:25:11] [INFO] [MovementSystem] Moved from [13, 4] to [13, 3]
+[2025-04-05 20:25:11] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:11] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 20:25:12] [INFO] [AbilitySystem] Yebcu Triggered ability system
+[2025-04-05 20:25:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:12] [INFO] [MovementSystem] Nohau is planning to move from [2, 3] to [2, 3]
+[2025-04-05 20:25:12] [INFO] [MovementSystem] Updated movement area for Nohau
+[2025-04-05 20:25:12] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:25:12] [INFO] [MovementSystem] Nohau is planning to move from [2, 3] to [2, 3]
+[2025-04-05 20:25:12] [INFO] [MovementSystem] Updated movement area for Nohau
+[2025-04-05 20:25:12] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:25:13] [INFO] [AbilitySystem] Dojyue Triggered ability system
+[2025-04-05 20:25:13] [INFO] [MovementSystem] Nohau is planning to move from [2, 3] to [3, 2]
+[2025-04-05 20:25:13] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:25:13] [INFO] [Component] Setting light_dragon_Nohau_78a7808f-f43a-4ae6-9d11-e4c3c3475ddd on to 3_2_737e4304-466e-4554-b31b-17e8528de759.
+[2025-04-05 20:25:13] [INFO] [MovementSystem] Moved from [2, 3] to [3, 2]
+[2025-04-05 20:25:13] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:14] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:14] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:14] [INFO] [MovementSystem] Iuia is planning to move from [10, 2] to [9, 3]
+[2025-04-05 20:25:14] [INFO] [MovementSystem] Updated movement area for Iuia
+[2025-04-05 20:25:14] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:25:14] [INFO] [Component] Setting dark_dragon_Iuia_774e2d7d-1e6c-401a-917e-a08d96d121ae on to 9_3_41d9cbc6-f800-4bf3-88a9-4308d28f6bda.
+[2025-04-05 20:25:14] [INFO] [MovementSystem] Moved from [10, 2] to [9, 3]
+[2025-04-05 20:25:14] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:15] [INFO] [AbilitySystem] Nohau Triggered ability system
+[2025-04-05 20:25:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:15] [INFO] [MovementSystem] Kang is planning to move from [1, 0] to [1, 0]
+[2025-04-05 20:25:15] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:25:15] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:25:15] [INFO] [MovementSystem] Kang is planning to move from [1, 0] to [1, 0]
+[2025-04-05 20:25:15] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:25:15] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:25:16] [INFO] [AbilitySystem] Iuia Triggered ability system
+[2025-04-05 20:25:16] [INFO] [MovementSystem] Kang is planning to move from [1, 0] to [0, 1]
+[2025-04-05 20:25:16] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:25:16] [INFO] [Component] Setting dragon_Kang_e11f69bd-b27f-4293-a28f-bce952a83814 on to 0_1_3fca8297-e00f-47fc-b7c1-a7752a8f466c.
+[2025-04-05 20:25:16] [INFO] [MovementSystem] Moved from [1, 0] to [0, 1]
+[2025-04-05 20:25:16] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:17] [INFO] [MovementSystem] Kavi is planning to move from [7, 5] to [5, 5]
+[2025-04-05 20:25:17] [INFO] [MovementSystem] Updated movement area for Kavi
+[2025-04-05 20:25:17] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:25:17] [INFO] [Component] Setting dark_dragon_Kavi_dedb74b4-7e41-4cbf-9a23-8a725fea21c5 on to 5_5_c76a63af-9007-492e-8bbf-c2fd79337d62.
+[2025-04-05 20:25:17] [INFO] [MovementSystem] Moved from [7, 5] to [5, 5]
+[2025-04-05 20:25:17] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:18] [INFO] [AbilitySystem] Kang Triggered ability system
+[2025-04-05 20:25:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:18] [INFO] [MovementSystem] Yujiu is planning to move from [6, 11] to [7, 12]
+[2025-04-05 20:25:18] [INFO] [MovementSystem] Updated movement area for Yujiu
+[2025-04-05 20:25:18] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:25:18] [INFO] [Component] Setting fire_dragon_Yujiu_24a70a4f-4f06-4a90-80aa-931e59aeedd3 on to 7_12_ab889389-5bd1-4f7e-a804-c72a91bf0b75.
+[2025-04-05 20:25:18] [INFO] [MovementSystem] Moved from [6, 11] to [7, 12]
+[2025-04-05 20:25:18] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:19] [INFO] [AbilitySystem] Kavi Triggered ability system
+[2025-04-05 20:25:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:19] [INFO] [MovementSystem] Pojwye is planning to move from [14, 9] to [14, 10]
+[2025-04-05 20:25:19] [INFO] [MovementSystem] Updated movement area for Pojwye
+[2025-04-05 20:25:19] [INFO] [MovementSystem] Updated movement path for Pojwye
+[2025-04-05 20:25:19] [INFO] [Component] Setting air_dragon_Pojwye_849a49e1-3d25-49ed-a19b-47396c593dbe on to 14_10_b9a866a6-6f6a-4365-8f72-7506e9911a80.
+[2025-04-05 20:25:19] [INFO] [MovementSystem] Moved from [14, 9] to [14, 10]
+[2025-04-05 20:25:19] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:20] [INFO] [AbilitySystem] Yujiu Triggered ability system
+[2025-04-05 20:25:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:20] [INFO] [MovementSystem] Fapoxy is planning to move from [8, 6] to [6, 6]
+[2025-04-05 20:25:20] [INFO] [MovementSystem] Updated movement area for Fapoxy
+[2025-04-05 20:25:20] [INFO] [MovementSystem] Updated movement path for Fapoxy
+[2025-04-05 20:25:20] [INFO] [Component] Setting earth_dragon_Fapoxy_d19199e9-06bf-48f5-b71c-59a5e07e1e1d on to 6_6_78e19fa2-6cb4-4a32-8818-9027465eebe0.
+[2025-04-05 20:25:20] [INFO] [MovementSystem] Moved from [8, 6] to [6, 6]
+[2025-04-05 20:25:20] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:20] [INFO] [InputHandler] Gliding 0 camera to new tile 6_6_78e19fa2-6cb4-4a32-8818-9027465eebe0
+[2025-04-05 20:25:20] [INFO] [InputHandler] Gliding 1 camera to new tile 6_6_78e19fa2-6cb4-4a32-8818-9027465eebe0
+[2025-04-05 20:25:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 20:25:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Fapoxy
+[2025-04-05 20:25:20] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 20:25:21] [INFO] [AbilitySystem] Pojwye Triggered ability system
+[2025-04-05 20:25:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:21] [INFO] [MovementSystem] Jelfiw is planning to move from [8, 1] to [8, 1]
+[2025-04-05 20:25:21] [INFO] [MovementSystem] Updated movement area for Jelfiw
+[2025-04-05 20:25:21] [INFO] [MovementSystem] Updated movement path for Jelfiw
+[2025-04-05 20:25:21] [INFO] [MovementSystem] Jelfiw is planning to move from [8, 1] to [8, 1]
+[2025-04-05 20:25:21] [INFO] [MovementSystem] Updated movement area for Jelfiw
+[2025-04-05 20:25:21] [INFO] [MovementSystem] Updated movement path for Jelfiw
+[2025-04-05 20:25:22] [INFO] [MovementSystem] Jelfiw is planning to move from [8, 1] to [8, 3]
+[2025-04-05 20:25:22] [INFO] [MovementSystem] Updated movement path for Jelfiw
+[2025-04-05 20:25:22] [INFO] [Component] Setting fire_dragon_Jelfiw_8f528845-d8e3-462e-8925-1f12f2dcc277 on to 8_3_4c7c23cb-17af-44e6-82d3-a9a3a965b022.
+[2025-04-05 20:25:22] [INFO] [MovementSystem] Moved from [8, 1] to [8, 3]
+[2025-04-05 20:25:22] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:22] [INFO] [AbilitySystem] Fapoxy Triggered ability system
+[2025-04-05 20:25:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:23] [INFO] [MovementSystem] Kylyoy is planning to move from [5, 2] to [4, 3]
+[2025-04-05 20:25:23] [INFO] [MovementSystem] Updated movement area for Kylyoy
+[2025-04-05 20:25:23] [INFO] [MovementSystem] Updated movement path for Kylyoy
+[2025-04-05 20:25:23] [INFO] [Component] Setting light_dragon_Kylyoy_94cc5996-2c6e-4849-abc9-8556fe2b82c8 on to 4_3_ea0be70e-c1f5-4008-b930-12153328fa8e.
+[2025-04-05 20:25:23] [INFO] [MovementSystem] Moved from [5, 2] to [4, 3]
+[2025-04-05 20:25:23] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:24] [INFO] [AbilitySystem] Jelfiw Triggered ability system
+[2025-04-05 20:25:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:25] [INFO] [MovementSystem] Togfao is planning to move from [13, 8] to [12, 7]
+[2025-04-05 20:25:25] [INFO] [MovementSystem] Updated movement area for Togfao
+[2025-04-05 20:25:25] [INFO] [MovementSystem] Updated movement path for Togfao
+[2025-04-05 20:25:25] [INFO] [Component] Setting water_dragon_Togfao_d765acda-c0c5-4846-8dba-bf08b071ee80 on to 12_7_e9583906-a912-4799-acd2-6afac6eb76d6.
+[2025-04-05 20:25:25] [INFO] [MovementSystem] Moved from [13, 8] to [12, 7]
+[2025-04-05 20:25:25] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:26] [INFO] [AbilitySystem] Kylyoy Triggered ability system
+[2025-04-05 20:25:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:26] [INFO] [MovementSystem] Domy is planning to move from [0, 8] to [1, 8]
+[2025-04-05 20:25:26] [INFO] [MovementSystem] Updated movement area for Domy
+[2025-04-05 20:25:26] [INFO] [MovementSystem] Updated movement path for Domy
+[2025-04-05 20:25:26] [INFO] [Component] Setting dragon_Domy_a2161ed6-bddd-4371-ad44-ecf7e1352638 on to 1_8_af8f1aaa-1b61-4c65-97cb-efe3e867bdeb.
+[2025-04-05 20:25:26] [INFO] [MovementSystem] Moved from [0, 8] to [1, 8]
+[2025-04-05 20:25:26] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:27] [INFO] [AbilitySystem] Togfao Triggered ability system
+[2025-04-05 20:25:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:27] [INFO] [MovementSystem] Nynij is planning to move from [11, 6] to [11, 4]
+[2025-04-05 20:25:27] [INFO] [MovementSystem] Updated movement area for Nynij
+[2025-04-05 20:25:27] [INFO] [MovementSystem] Updated movement path for Nynij
+[2025-04-05 20:25:27] [INFO] [Component] Setting fire_dragon_Nynij_5517b2f3-cfc9-46de-905f-16dcace4361c on to 11_4_c549c819-0cd6-4d9b-b297-c231940cb2a6.
+[2025-04-05 20:25:27] [INFO] [MovementSystem] Moved from [11, 6] to [11, 4]
+[2025-04-05 20:25:27] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 20:25:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Kylyoy
+[2025-04-05 20:25:27] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 20:25:28] [INFO] [AbilitySystem] Domy Triggered ability system
+[2025-04-05 20:25:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 20:25:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:28] [INFO] [MovementSystem] Oyyyya is planning to move from [4, 2] to [4, 1]
+[2025-04-05 20:25:28] [INFO] [MovementSystem] Updated movement area for Oyyyya
+[2025-04-05 20:25:28] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:25:28] [INFO] [Component] Setting earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337 on to 4_1_94044505-cadc-45c6-8be9-62a2805beaa5.
+[2025-04-05 20:25:28] [INFO] [MovementSystem] Moved from [4, 2] to [4, 1]
+[2025-04-05 20:25:28] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 20:25:29] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 20:25:29] [INFO] [AbilitySystem] Nynij Triggered ability system
+[2025-04-05 20:25:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:29] [INFO] [MovementSystem] Iymje is planning to move from [12, 2] to [13, 2]
+[2025-04-05 20:25:29] [INFO] [MovementSystem] Updated movement area for Iymje
+[2025-04-05 20:25:29] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:25:29] [INFO] [Component] Setting light_dragon_Iymje_7ae3757f-8af6-41c8-b859-2aa6a840a8d7 on to 13_2_6f46bfd3-f085-407c-9a22-8e4a0f355121.
+[2025-04-05 20:25:29] [INFO] [MovementSystem] Moved from [12, 2] to [13, 2]
+[2025-04-05 20:25:29] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 20:25:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 20:25:30] [INFO] [AbilitySystem] Oyyyya Triggered ability system
+[2025-04-05 20:25:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:30] [INFO] [MovementSystem] Huvi is planning to move from [12, 4] to [12, 5]
+[2025-04-05 20:25:30] [INFO] [MovementSystem] Updated movement area for Huvi
+[2025-04-05 20:25:30] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:25:30] [INFO] [Component] Setting fire_dragon_Huvi_85711cb8-c39c-4377-a159-68c6a59b8d82 on to 12_5_d84ecb23-871b-4809-8b89-8754c97f751c.
+[2025-04-05 20:25:30] [INFO] [MovementSystem] Moved from [12, 4] to [12, 5]
+[2025-04-05 20:25:30] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:31] [INFO] [AbilitySystem] Iymje Triggered ability system
+[2025-04-05 20:25:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:31] [INFO] [MovementSystem] Yuelfo is planning to move from [9, 10] to [8, 9]
+[2025-04-05 20:25:31] [INFO] [MovementSystem] Updated movement area for Yuelfo
+[2025-04-05 20:25:31] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:25:31] [INFO] [Component] Setting dark_dragon_Yuelfo_93dd36ed-daab-431a-8825-0d33190584c4 on to 8_9_25ef9c25-17df-4067-a0cd-fb4b0cf4c331.
+[2025-04-05 20:25:31] [INFO] [MovementSystem] Moved from [9, 10] to [8, 9]
+[2025-04-05 20:25:31] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:32] [INFO] [AbilitySystem] Huvi Triggered ability system
+[2025-04-05 20:25:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:32] [INFO] [MovementSystem] Eapb is planning to move from [4, 8] to [2, 8]
+[2025-04-05 20:25:32] [INFO] [MovementSystem] Updated movement area for Eapb
+[2025-04-05 20:25:32] [INFO] [MovementSystem] Updated movement path for Eapb
+[2025-04-05 20:25:32] [INFO] [Component] Setting fire_dragon_Eapb_5266e3b4-fb25-4cf0-b476-fb46128e1499 on to 2_8_3419c065-1d55-49f3-b625-48ba341cbe22.
+[2025-04-05 20:25:32] [INFO] [MovementSystem] Moved from [4, 8] to [2, 8]
+[2025-04-05 20:25:32] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:33] [INFO] [AbilitySystem] Yuelfo Triggered ability system
+[2025-04-05 20:25:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:33] [INFO] [MovementSystem] Zoyeuy is planning to move from [1, 12] to [0, 13]
+[2025-04-05 20:25:33] [INFO] [MovementSystem] Updated movement area for Zoyeuy
+[2025-04-05 20:25:33] [INFO] [MovementSystem] Updated movement path for Zoyeuy
+[2025-04-05 20:25:33] [INFO] [Component] Setting dark_dragon_Zoyeuy_c7fc16ac-3784-43af-8edb-4b0359f0e33d on to 0_13_de30240b-c4ad-46d2-a9bc-c5f04e822663.
+[2025-04-05 20:25:33] [INFO] [MovementSystem] Moved from [1, 12] to [0, 13]
+[2025-04-05 20:25:33] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:34] [INFO] [AbilitySystem] Eapb Triggered ability system
+[2025-04-05 20:25:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:34] [INFO] [MovementSystem] Yebcu is planning to move from [9, 8] to [9, 9]
+[2025-04-05 20:25:34] [INFO] [MovementSystem] Updated movement area for Yebcu
+[2025-04-05 20:25:34] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:25:34] [INFO] [Component] Setting earth_dragon_Yebcu_0e31281e-caa7-4d91-83c2-c2f0e6ca136a on to 9_9_d24d1579-a7c1-4ea7-9d3e-09f4150a446c.
+[2025-04-05 20:25:34] [INFO] [MovementSystem] Moved from [9, 8] to [9, 9]
+[2025-04-05 20:25:34] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:35] [INFO] [AbilitySystem] Zoyeuy Triggered ability system
+[2025-04-05 20:25:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:35] [INFO] [MovementSystem] Dojyue is planning to move from [13, 3] to [13, 5]
+[2025-04-05 20:25:35] [INFO] [MovementSystem] Updated movement area for Dojyue
+[2025-04-05 20:25:35] [INFO] [MovementSystem] Updated movement path for Dojyue
+[2025-04-05 20:25:35] [INFO] [Component] Setting air_dragon_Dojyue_f6e5d4a5-e96b-435e-b17f-a1b64e3612a9 on to 13_5_3a948871-6181-475b-b5bf-aba03a251111.
+[2025-04-05 20:25:35] [INFO] [MovementSystem] Moved from [13, 3] to [13, 5]
+[2025-04-05 20:25:35] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:36] [INFO] [AbilitySystem] Yebcu Triggered ability system
+[2025-04-05 20:25:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:36] [INFO] [MovementSystem] Nohau is planning to move from [3, 2] to [3, 1]
+[2025-04-05 20:25:36] [INFO] [MovementSystem] Updated movement area for Nohau
+[2025-04-05 20:25:36] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:25:36] [INFO] [Component] Setting light_dragon_Nohau_78a7808f-f43a-4ae6-9d11-e4c3c3475ddd on to 3_1_43c2430c-afb6-4352-a0c7-af24db8805e3.
+[2025-04-05 20:25:36] [INFO] [MovementSystem] Moved from [3, 2] to [3, 1]
+[2025-04-05 20:25:36] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:37] [INFO] [AbilitySystem] Dojyue Triggered ability system
+[2025-04-05 20:25:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:37] [INFO] [MovementSystem] Iuia is planning to move from [9, 3] to [10, 3]
+[2025-04-05 20:25:37] [INFO] [MovementSystem] Updated movement area for Iuia
+[2025-04-05 20:25:37] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:25:37] [INFO] [Component] Setting dark_dragon_Iuia_774e2d7d-1e6c-401a-917e-a08d96d121ae on to 10_3_1f5c08f9-aa00-4176-91bd-74b0525e2fa2.
+[2025-04-05 20:25:37] [INFO] [MovementSystem] Moved from [9, 3] to [10, 3]
+[2025-04-05 20:25:37] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:38] [INFO] [AbilitySystem] Nohau Triggered ability system
+[2025-04-05 20:25:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:38] [INFO] [MovementSystem] Kang is planning to move from [0, 1] to [2, 1]
+[2025-04-05 20:25:38] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:25:38] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:25:38] [INFO] [Component] Setting dragon_Kang_e11f69bd-b27f-4293-a28f-bce952a83814 on to 2_1_a52183b4-b428-40ca-9966-355ad5973677.
+[2025-04-05 20:25:38] [INFO] [MovementSystem] Moved from [0, 1] to [2, 1]
+[2025-04-05 20:25:38] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:39] [INFO] [AbilitySystem] Iuia Triggered ability system
+[2025-04-05 20:25:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:39] [INFO] [MovementSystem] Kavi is planning to move from [5, 5] to [4, 4]
+[2025-04-05 20:25:39] [INFO] [MovementSystem] Updated movement area for Kavi
+[2025-04-05 20:25:39] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:25:39] [INFO] [Component] Setting dark_dragon_Kavi_dedb74b4-7e41-4cbf-9a23-8a725fea21c5 on to 4_4_ffdde957-e46c-444a-b652-3a3dccb153bf.
+[2025-04-05 20:25:39] [INFO] [MovementSystem] Moved from [5, 5] to [4, 4]
+[2025-04-05 20:25:39] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:40] [INFO] [AbilitySystem] Kang Triggered ability system
+[2025-04-05 20:25:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:40] [INFO] [MovementSystem] Yujiu is planning to move from [7, 12] to [8, 11]
+[2025-04-05 20:25:40] [INFO] [MovementSystem] Updated movement area for Yujiu
+[2025-04-05 20:25:40] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:25:40] [INFO] [Component] Setting fire_dragon_Yujiu_24a70a4f-4f06-4a90-80aa-931e59aeedd3 on to 8_11_3ba93b55-5dac-48c9-acbc-11a551e48d89.
+[2025-04-05 20:25:40] [INFO] [MovementSystem] Moved from [7, 12] to [8, 11]
+[2025-04-05 20:25:40] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:41] [INFO] [AbilitySystem] Kavi Triggered ability system
+[2025-04-05 20:25:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:41] [INFO] [MovementSystem] Pojwye is planning to move from [14, 10] to [14, 8]
+[2025-04-05 20:25:41] [INFO] [MovementSystem] Updated movement area for Pojwye
+[2025-04-05 20:25:41] [INFO] [MovementSystem] Updated movement path for Pojwye
+[2025-04-05 20:25:41] [INFO] [Component] Setting air_dragon_Pojwye_849a49e1-3d25-49ed-a19b-47396c593dbe on to 14_8_318fda6e-c548-40b8-98f5-fb1ca4e9417c.
+[2025-04-05 20:25:41] [INFO] [MovementSystem] Moved from [14, 10] to [14, 8]
+[2025-04-05 20:25:41] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:42] [INFO] [AbilitySystem] Yujiu Triggered ability system
+[2025-04-05 20:25:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:42] [INFO] [MovementSystem] Fapoxy is planning to move from [6, 6] to [6, 4]
+[2025-04-05 20:25:42] [INFO] [MovementSystem] Updated movement area for Fapoxy
+[2025-04-05 20:25:42] [INFO] [MovementSystem] Updated movement path for Fapoxy
+[2025-04-05 20:25:42] [INFO] [Component] Setting earth_dragon_Fapoxy_d19199e9-06bf-48f5-b71c-59a5e07e1e1d on to 6_4_ca2da3f5-5acc-400c-b33f-ed7beb40428d.
+[2025-04-05 20:25:42] [INFO] [MovementSystem] Moved from [6, 6] to [6, 4]
+[2025-04-05 20:25:42] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:43] [INFO] [AbilitySystem] Pojwye Triggered ability system
+[2025-04-05 20:25:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:43] [INFO] [MovementSystem] Jelfiw is planning to move from [8, 3] to [7, 3]
+[2025-04-05 20:25:43] [INFO] [MovementSystem] Updated movement area for Jelfiw
+[2025-04-05 20:25:43] [INFO] [MovementSystem] Updated movement path for Jelfiw
+[2025-04-05 20:25:43] [INFO] [Component] Setting fire_dragon_Jelfiw_8f528845-d8e3-462e-8925-1f12f2dcc277 on to 7_3_9d8c635e-f9e0-4215-a1ea-a61e5922a59f.
+[2025-04-05 20:25:43] [INFO] [MovementSystem] Moved from [8, 3] to [7, 3]
+[2025-04-05 20:25:43] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:44] [INFO] [AbilitySystem] Fapoxy Triggered ability system
+[2025-04-05 20:25:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:44] [INFO] [MovementSystem] Kylyoy is planning to move from [4, 3] to [5, 2]
+[2025-04-05 20:25:44] [INFO] [MovementSystem] Updated movement area for Kylyoy
+[2025-04-05 20:25:44] [INFO] [MovementSystem] Updated movement path for Kylyoy
+[2025-04-05 20:25:44] [INFO] [Component] Setting light_dragon_Kylyoy_94cc5996-2c6e-4849-abc9-8556fe2b82c8 on to 5_2_d0d218dd-748c-4759-a02e-65b671feb127.
+[2025-04-05 20:25:44] [INFO] [MovementSystem] Moved from [4, 3] to [5, 2]
+[2025-04-05 20:25:44] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:45] [INFO] [AbilitySystem] Jelfiw Triggered ability system
+[2025-04-05 20:25:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:45] [INFO] [MovementSystem] Togfao is planning to move from [12, 7] to [11, 8]
+[2025-04-05 20:25:45] [INFO] [MovementSystem] Updated movement area for Togfao
+[2025-04-05 20:25:45] [INFO] [MovementSystem] Updated movement path for Togfao
+[2025-04-05 20:25:45] [INFO] [Component] Setting water_dragon_Togfao_d765acda-c0c5-4846-8dba-bf08b071ee80 on to 11_8_6170d48a-22a8-479d-a958-545e477e6b21.
+[2025-04-05 20:25:45] [INFO] [MovementSystem] Moved from [12, 7] to [11, 8]
+[2025-04-05 20:25:45] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:46] [INFO] [AbilitySystem] Kylyoy Triggered ability system
+[2025-04-05 20:25:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:46] [INFO] [MovementSystem] Domy is planning to move from [1, 8] to [1, 9]
+[2025-04-05 20:25:46] [INFO] [MovementSystem] Updated movement area for Domy
+[2025-04-05 20:25:46] [INFO] [MovementSystem] Updated movement path for Domy
+[2025-04-05 20:25:46] [INFO] [Component] Setting dragon_Domy_a2161ed6-bddd-4371-ad44-ecf7e1352638 on to 1_9_ea4eaa1f-75bc-4463-8ac9-5c75dd2fe07c.
+[2025-04-05 20:25:46] [INFO] [MovementSystem] Moved from [1, 8] to [1, 9]
+[2025-04-05 20:25:46] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:47] [INFO] [AbilitySystem] Togfao Triggered ability system
+[2025-04-05 20:25:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:47] [INFO] [MovementSystem] Nynij is planning to move from [11, 4] to [11, 6]
+[2025-04-05 20:25:47] [INFO] [MovementSystem] Updated movement area for Nynij
+[2025-04-05 20:25:47] [INFO] [MovementSystem] Updated movement path for Nynij
+[2025-04-05 20:25:47] [INFO] [Component] Setting fire_dragon_Nynij_5517b2f3-cfc9-46de-905f-16dcace4361c on to 11_6_99bb6b26-ab07-401d-aa1a-d7c81e44ca4e.
+[2025-04-05 20:25:47] [INFO] [MovementSystem] Moved from [11, 4] to [11, 6]
+[2025-04-05 20:25:47] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:48] [INFO] [AbilitySystem] Domy Triggered ability system
+[2025-04-05 20:25:48] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 20:25:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:48] [INFO] [MovementSystem] Oyyyya is planning to move from [4, 1] to [5, 0]
+[2025-04-05 20:25:48] [INFO] [MovementSystem] Updated movement area for Oyyyya
+[2025-04-05 20:25:48] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:25:48] [INFO] [Component] Setting earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337 on to 5_0_24ecc5c1-2f95-4ff1-8111-2ff5630c8806.
+[2025-04-05 20:25:48] [INFO] [MovementSystem] Moved from [4, 1] to [5, 0]
+[2025-04-05 20:25:48] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:49] [INFO] [AbilitySystem] Nynij Triggered ability system
+[2025-04-05 20:25:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:49] [INFO] [MovementSystem] Iymje is planning to move from [13, 2] to [12, 3]
+[2025-04-05 20:25:49] [INFO] [MovementSystem] Updated movement area for Iymje
+[2025-04-05 20:25:49] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:25:49] [INFO] [Component] Setting light_dragon_Iymje_7ae3757f-8af6-41c8-b859-2aa6a840a8d7 on to 12_3_aeeacb9d-5c08-47d5-adeb-e802687d1f9f.
+[2025-04-05 20:25:49] [INFO] [MovementSystem] Moved from [13, 2] to [12, 3]
+[2025-04-05 20:25:49] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:50] [INFO] [AbilitySystem] Oyyyya Triggered ability system
+[2025-04-05 20:25:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:50] [INFO] [MovementSystem] Huvi is planning to move from [12, 5] to [12, 4]
+[2025-04-05 20:25:50] [INFO] [MovementSystem] Updated movement area for Huvi
+[2025-04-05 20:25:50] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:25:50] [INFO] [Component] Setting fire_dragon_Huvi_85711cb8-c39c-4377-a159-68c6a59b8d82 on to 12_4_785e8239-ab37-46f1-8d05-6aec61904b46.
+[2025-04-05 20:25:50] [INFO] [MovementSystem] Moved from [12, 5] to [12, 4]
+[2025-04-05 20:25:50] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:51] [INFO] [AbilitySystem] Iymje Triggered ability system
+[2025-04-05 20:25:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:51] [INFO] [MovementSystem] Yuelfo is planning to move from [8, 9] to [8, 10]
+[2025-04-05 20:25:51] [INFO] [MovementSystem] Updated movement area for Yuelfo
+[2025-04-05 20:25:51] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:25:51] [INFO] [Component] Setting dark_dragon_Yuelfo_93dd36ed-daab-431a-8825-0d33190584c4 on to 8_10_1c84cbfe-c80d-44df-a746-92f2a5d9156c.
+[2025-04-05 20:25:51] [INFO] [MovementSystem] Moved from [8, 9] to [8, 10]
+[2025-04-05 20:25:51] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:52] [INFO] [AbilitySystem] Huvi Triggered ability system
+[2025-04-05 20:25:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:52] [INFO] [MovementSystem] Eapb is planning to move from [2, 8] to [3, 7]
+[2025-04-05 20:25:52] [INFO] [MovementSystem] Updated movement area for Eapb
+[2025-04-05 20:25:52] [INFO] [MovementSystem] Updated movement path for Eapb
+[2025-04-05 20:25:52] [INFO] [Component] Setting fire_dragon_Eapb_5266e3b4-fb25-4cf0-b476-fb46128e1499 on to 3_7_f05b36ee-14d5-4ea6-8575-2a60c024abbd.
+[2025-04-05 20:25:52] [INFO] [MovementSystem] Moved from [2, 8] to [3, 7]
+[2025-04-05 20:25:52] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:53] [INFO] [AbilitySystem] Yuelfo Triggered ability system
+[2025-04-05 20:25:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:53] [INFO] [MovementSystem] Zoyeuy is planning to move from [0, 13] to [1, 14]
+[2025-04-05 20:25:53] [INFO] [MovementSystem] Updated movement area for Zoyeuy
+[2025-04-05 20:25:53] [INFO] [MovementSystem] Updated movement path for Zoyeuy
+[2025-04-05 20:25:53] [INFO] [Component] Setting dark_dragon_Zoyeuy_c7fc16ac-3784-43af-8edb-4b0359f0e33d on to 1_14_7c1950a0-77fe-4ee1-8a11-9ef189f35d70.
+[2025-04-05 20:25:53] [INFO] [MovementSystem] Moved from [0, 13] to [1, 14]
+[2025-04-05 20:25:53] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:54] [INFO] [AbilitySystem] Eapb Triggered ability system
+[2025-04-05 20:25:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:54] [INFO] [MovementSystem] Yebcu is planning to move from [9, 9] to [9, 10]
+[2025-04-05 20:25:54] [INFO] [MovementSystem] Updated movement area for Yebcu
+[2025-04-05 20:25:54] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:25:54] [INFO] [Component] Setting earth_dragon_Yebcu_0e31281e-caa7-4d91-83c2-c2f0e6ca136a on to 9_10_2faf80ef-d3e1-4c18-aae1-e8394ddc548a.
+[2025-04-05 20:25:54] [INFO] [MovementSystem] Moved from [9, 9] to [9, 10]
+[2025-04-05 20:25:54] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:55] [INFO] [AbilitySystem] Zoyeuy Triggered ability system
+[2025-04-05 20:25:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:55] [INFO] [MovementSystem] Dojyue is planning to move from [13, 5] to [13, 3]
+[2025-04-05 20:25:55] [INFO] [MovementSystem] Updated movement area for Dojyue
+[2025-04-05 20:25:55] [INFO] [MovementSystem] Updated movement path for Dojyue
+[2025-04-05 20:25:55] [INFO] [Component] Setting air_dragon_Dojyue_f6e5d4a5-e96b-435e-b17f-a1b64e3612a9 on to 13_3_fc885e3c-a373-4b16-a12f-0c672b88afce.
+[2025-04-05 20:25:55] [INFO] [MovementSystem] Moved from [13, 5] to [13, 3]
+[2025-04-05 20:25:55] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:56] [INFO] [AbilitySystem] Yebcu Triggered ability system
+[2025-04-05 20:25:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:56] [INFO] [MovementSystem] Nohau is planning to move from [3, 1] to [5, 1]
+[2025-04-05 20:25:56] [INFO] [MovementSystem] Updated movement area for Nohau
+[2025-04-05 20:25:56] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:25:56] [INFO] [Component] Setting light_dragon_Nohau_78a7808f-f43a-4ae6-9d11-e4c3c3475ddd on to 5_1_6b3b9e78-1bf8-499b-b0c7-3339ccd2ebca.
+[2025-04-05 20:25:56] [INFO] [MovementSystem] Moved from [3, 1] to [5, 1]
+[2025-04-05 20:25:56] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:57] [INFO] [AbilitySystem] Dojyue Triggered ability system
+[2025-04-05 20:25:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:57] [INFO] [MovementSystem] Iuia is planning to move from [10, 3] to [11, 3]
+[2025-04-05 20:25:57] [INFO] [MovementSystem] Updated movement area for Iuia
+[2025-04-05 20:25:57] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:25:57] [INFO] [Component] Setting dark_dragon_Iuia_774e2d7d-1e6c-401a-917e-a08d96d121ae on to 11_3_232ffd10-e171-47f2-8eca-7dd8ce8e0ec5.
+[2025-04-05 20:25:57] [INFO] [MovementSystem] Moved from [10, 3] to [11, 3]
+[2025-04-05 20:25:57] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:58] [INFO] [AbilitySystem] Nohau Triggered ability system
+[2025-04-05 20:25:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:58] [INFO] [MovementSystem] Kang is planning to move from [2, 1] to [3, 0]
+[2025-04-05 20:25:58] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:25:58] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:25:58] [INFO] [Component] Setting dragon_Kang_e11f69bd-b27f-4293-a28f-bce952a83814 on to 3_0_1850feab-ca66-40a6-8d23-928ca04c8b0a.
+[2025-04-05 20:25:58] [INFO] [MovementSystem] Moved from [2, 1] to [3, 0]
+[2025-04-05 20:25:58] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:25:59] [INFO] [AbilitySystem] Iuia Triggered ability system
+[2025-04-05 20:25:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:25:59] [INFO] [MovementSystem] Kavi is planning to move from [4, 4] to [5, 4]
+[2025-04-05 20:25:59] [INFO] [MovementSystem] Updated movement area for Kavi
+[2025-04-05 20:25:59] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:25:59] [INFO] [Component] Setting dark_dragon_Kavi_dedb74b4-7e41-4cbf-9a23-8a725fea21c5 on to 5_4_1713f780-5c64-4ab5-a56a-b927cf22b371.
+[2025-04-05 20:25:59] [INFO] [MovementSystem] Moved from [4, 4] to [5, 4]
+[2025-04-05 20:25:59] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:00] [INFO] [AbilitySystem] Kang Triggered ability system
+[2025-04-05 20:26:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:00] [INFO] [MovementSystem] Yujiu is planning to move from [8, 11] to [7, 10]
+[2025-04-05 20:26:00] [INFO] [MovementSystem] Updated movement area for Yujiu
+[2025-04-05 20:26:00] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:26:00] [INFO] [Component] Setting fire_dragon_Yujiu_24a70a4f-4f06-4a90-80aa-931e59aeedd3 on to 7_10_b2e80b2f-3d20-42b8-b50d-4c1ae45d918e.
+[2025-04-05 20:26:00] [INFO] [MovementSystem] Moved from [8, 11] to [7, 10]
+[2025-04-05 20:26:00] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:01] [INFO] [AbilitySystem] Kavi Triggered ability system
+[2025-04-05 20:26:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:01] [INFO] [MovementSystem] Pojwye is planning to move from [14, 8] to [14, 9]
+[2025-04-05 20:26:01] [INFO] [MovementSystem] Updated movement area for Pojwye
+[2025-04-05 20:26:01] [INFO] [MovementSystem] Updated movement path for Pojwye
+[2025-04-05 20:26:01] [INFO] [Component] Setting air_dragon_Pojwye_849a49e1-3d25-49ed-a19b-47396c593dbe on to 14_9_3037924d-fa73-49ed-a66f-5bc355b2b345.
+[2025-04-05 20:26:01] [INFO] [MovementSystem] Moved from [14, 8] to [14, 9]
+[2025-04-05 20:26:01] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:02] [INFO] [AbilitySystem] Yujiu Triggered ability system
+[2025-04-05 20:26:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:02] [INFO] [MovementSystem] Fapoxy is planning to move from [6, 4] to [6, 4]
+[2025-04-05 20:26:02] [INFO] [MovementSystem] Updated movement area for Fapoxy
+[2025-04-05 20:26:02] [INFO] [MovementSystem] Updated movement path for Fapoxy
+[2025-04-05 20:26:02] [INFO] [MovementSystem] Fapoxy is planning to move from [6, 4] to [6, 4]
+[2025-04-05 20:26:02] [INFO] [MovementSystem] Updated movement area for Fapoxy
+[2025-04-05 20:26:02] [INFO] [MovementSystem] Updated movement path for Fapoxy
+[2025-04-05 20:26:03] [INFO] [AbilitySystem] Pojwye Triggered ability system
+[2025-04-05 20:26:03] [INFO] [MovementSystem] Fapoxy is planning to move from [6, 4] to [6, 2]
+[2025-04-05 20:26:03] [INFO] [MovementSystem] Updated movement path for Fapoxy
+[2025-04-05 20:26:03] [INFO] [Component] Setting earth_dragon_Fapoxy_d19199e9-06bf-48f5-b71c-59a5e07e1e1d on to 6_2_9a4806f6-bb8b-4798-b040-8084fdd3cb24.
+[2025-04-05 20:26:03] [INFO] [MovementSystem] Moved from [6, 4] to [6, 2]
+[2025-04-05 20:26:03] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:04] [INFO] [MovementSystem] Jelfiw is planning to move from [7, 3] to [8, 3]
+[2025-04-05 20:26:04] [INFO] [MovementSystem] Updated movement area for Jelfiw
+[2025-04-05 20:26:04] [INFO] [MovementSystem] Updated movement path for Jelfiw
+[2025-04-05 20:26:04] [INFO] [Component] Setting fire_dragon_Jelfiw_8f528845-d8e3-462e-8925-1f12f2dcc277 on to 8_3_4c7c23cb-17af-44e6-82d3-a9a3a965b022.
+[2025-04-05 20:26:04] [INFO] [MovementSystem] Moved from [7, 3] to [8, 3]
+[2025-04-05 20:26:04] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:05] [INFO] [AbilitySystem] Fapoxy Triggered ability system
+[2025-04-05 20:26:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:05] [INFO] [MovementSystem] Kylyoy is planning to move from [5, 2] to [4, 3]
+[2025-04-05 20:26:05] [INFO] [MovementSystem] Updated movement area for Kylyoy
+[2025-04-05 20:26:05] [INFO] [MovementSystem] Updated movement path for Kylyoy
+[2025-04-05 20:26:05] [INFO] [Component] Setting light_dragon_Kylyoy_94cc5996-2c6e-4849-abc9-8556fe2b82c8 on to 4_3_ea0be70e-c1f5-4008-b930-12153328fa8e.
+[2025-04-05 20:26:05] [INFO] [MovementSystem] Moved from [5, 2] to [4, 3]
+[2025-04-05 20:26:05] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:06] [INFO] [AbilitySystem] Jelfiw Triggered ability system
+[2025-04-05 20:26:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:06] [INFO] [MovementSystem] Togfao is planning to move from [11, 8] to [12, 9]
+[2025-04-05 20:26:06] [INFO] [MovementSystem] Updated movement area for Togfao
+[2025-04-05 20:26:06] [INFO] [MovementSystem] Updated movement path for Togfao
+[2025-04-05 20:26:06] [INFO] [Component] Setting water_dragon_Togfao_d765acda-c0c5-4846-8dba-bf08b071ee80 on to 12_9_43d44a18-e7e4-4668-9669-77bdc6bf5f28.
+[2025-04-05 20:26:06] [INFO] [MovementSystem] Moved from [11, 8] to [12, 9]
+[2025-04-05 20:26:06] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:07] [INFO] [AbilitySystem] Kylyoy Triggered ability system
+[2025-04-05 20:26:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:07] [INFO] [MovementSystem] Domy is planning to move from [1, 9] to [0, 9]
+[2025-04-05 20:26:07] [INFO] [MovementSystem] Updated movement area for Domy
+[2025-04-05 20:26:07] [INFO] [MovementSystem] Updated movement path for Domy
+[2025-04-05 20:26:07] [INFO] [Component] Setting dragon_Domy_a2161ed6-bddd-4371-ad44-ecf7e1352638 on to 0_9_ca4f4542-489f-4d1c-bb75-63d61ec2b39a.
+[2025-04-05 20:26:07] [INFO] [MovementSystem] Moved from [1, 9] to [0, 9]
+[2025-04-05 20:26:07] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:08] [INFO] [AbilitySystem] Togfao Triggered ability system
+[2025-04-05 20:26:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:08] [INFO] [MovementSystem] Nynij is planning to move from [11, 6] to [11, 7]
+[2025-04-05 20:26:08] [INFO] [MovementSystem] Updated movement area for Nynij
+[2025-04-05 20:26:08] [INFO] [MovementSystem] Updated movement path for Nynij
+[2025-04-05 20:26:08] [INFO] [Component] Setting fire_dragon_Nynij_5517b2f3-cfc9-46de-905f-16dcace4361c on to 11_7_985b5bed-f350-4f3a-955f-0e16444d06df.
+[2025-04-05 20:26:08] [INFO] [MovementSystem] Moved from [11, 6] to [11, 7]
+[2025-04-05 20:26:08] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:09] [INFO] [AbilitySystem] Domy Triggered ability system
+[2025-04-05 20:26:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 20:26:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:09] [INFO] [MovementSystem] Oyyyya is planning to move from [5, 0] to [4, 1]
+[2025-04-05 20:26:09] [INFO] [MovementSystem] Updated movement area for Oyyyya
+[2025-04-05 20:26:09] [INFO] [MovementSystem] Updated movement path for Oyyyya
+[2025-04-05 20:26:09] [INFO] [Component] Setting earth_dragon_Oyyyya_e454ed70-1ff3-4714-9479-25b1cecfb337 on to 4_1_94044505-cadc-45c6-8be9-62a2805beaa5.
+[2025-04-05 20:26:09] [INFO] [MovementSystem] Moved from [5, 0] to [4, 1]
+[2025-04-05 20:26:09] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:10] [INFO] [AbilitySystem] Nynij Triggered ability system
+[2025-04-05 20:26:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:10] [INFO] [MovementSystem] Iymje is planning to move from [12, 3] to [12, 3]
+[2025-04-05 20:26:10] [INFO] [MovementSystem] Updated movement area for Iymje
+[2025-04-05 20:26:10] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:26:10] [INFO] [MovementSystem] Iymje is planning to move from [12, 3] to [12, 3]
+[2025-04-05 20:26:10] [INFO] [MovementSystem] Updated movement area for Iymje
+[2025-04-05 20:26:10] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:26:11] [INFO] [AbilitySystem] Oyyyya Triggered ability system
+[2025-04-05 20:26:11] [INFO] [MovementSystem] Iymje is planning to move from [12, 3] to [13, 2]
+[2025-04-05 20:26:11] [INFO] [MovementSystem] Updated movement path for Iymje
+[2025-04-05 20:26:11] [INFO] [Component] Setting light_dragon_Iymje_7ae3757f-8af6-41c8-b859-2aa6a840a8d7 on to 13_2_6f46bfd3-f085-407c-9a22-8e4a0f355121.
+[2025-04-05 20:26:11] [INFO] [MovementSystem] Moved from [12, 3] to [13, 2]
+[2025-04-05 20:26:11] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:12] [INFO] [MovementSystem] Huvi is planning to move from [12, 4] to [12, 4]
+[2025-04-05 20:26:12] [INFO] [MovementSystem] Updated movement area for Huvi
+[2025-04-05 20:26:12] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:26:12] [INFO] [MovementSystem] Huvi is planning to move from [12, 4] to [12, 4]
+[2025-04-05 20:26:12] [INFO] [MovementSystem] Updated movement area for Huvi
+[2025-04-05 20:26:12] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:26:13] [INFO] [AbilitySystem] Iymje Triggered ability system
+[2025-04-05 20:26:13] [INFO] [MovementSystem] Huvi is planning to move from [12, 4] to [11, 5]
+[2025-04-05 20:26:13] [INFO] [MovementSystem] Updated movement path for Huvi
+[2025-04-05 20:26:13] [INFO] [Component] Setting fire_dragon_Huvi_85711cb8-c39c-4377-a159-68c6a59b8d82 on to 11_5_6b2f48b3-d0e0-4a10-a33e-180595cfd2fb.
+[2025-04-05 20:26:13] [INFO] [MovementSystem] Moved from [12, 4] to [11, 5]
+[2025-04-05 20:26:13] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:14] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:14] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:14] [INFO] [MovementSystem] Yuelfo is planning to move from [8, 10] to [8, 10]
+[2025-04-05 20:26:14] [INFO] [MovementSystem] Updated movement area for Yuelfo
+[2025-04-05 20:26:14] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:26:14] [INFO] [MovementSystem] Yuelfo is planning to move from [8, 10] to [8, 10]
+[2025-04-05 20:26:14] [INFO] [MovementSystem] Updated movement area for Yuelfo
+[2025-04-05 20:26:14] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:26:15] [INFO] [MovementSystem] Yuelfo is planning to move from [8, 10] to [8, 12]
+[2025-04-05 20:26:15] [INFO] [MovementSystem] Updated movement path for Yuelfo
+[2025-04-05 20:26:15] [INFO] [Component] Setting dark_dragon_Yuelfo_93dd36ed-daab-431a-8825-0d33190584c4 on to 8_12_b7aee9e2-5a34-49d3-bb7d-42d2f0ad3e05.
+[2025-04-05 20:26:15] [INFO] [MovementSystem] Moved from [8, 10] to [8, 12]
+[2025-04-05 20:26:15] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:15] [INFO] [AbilitySystem] Huvi Triggered ability system
+[2025-04-05 20:26:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:16] [INFO] [MovementSystem] Eapb is planning to move from [3, 7] to [3, 5]
+[2025-04-05 20:26:16] [INFO] [MovementSystem] Updated movement area for Eapb
+[2025-04-05 20:26:16] [INFO] [MovementSystem] Updated movement path for Eapb
+[2025-04-05 20:26:16] [INFO] [Component] Setting fire_dragon_Eapb_5266e3b4-fb25-4cf0-b476-fb46128e1499 on to 3_5_02a72eba-3433-4965-a581-a930356f18be.
+[2025-04-05 20:26:16] [INFO] [MovementSystem] Moved from [3, 7] to [3, 5]
+[2025-04-05 20:26:16] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:17] [INFO] [AbilitySystem] Yuelfo Triggered ability system
+[2025-04-05 20:26:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:17] [INFO] [MovementSystem] Zoyeuy is planning to move from [1, 14] to [2, 14]
+[2025-04-05 20:26:17] [INFO] [MovementSystem] Updated movement area for Zoyeuy
+[2025-04-05 20:26:17] [INFO] [MovementSystem] Updated movement path for Zoyeuy
+[2025-04-05 20:26:17] [INFO] [Component] Setting dark_dragon_Zoyeuy_c7fc16ac-3784-43af-8edb-4b0359f0e33d on to 2_14_799010ef-4ab8-4ee5-803c-c89d96ed9d23.
+[2025-04-05 20:26:17] [INFO] [MovementSystem] Moved from [1, 14] to [2, 14]
+[2025-04-05 20:26:17] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:18] [INFO] [AbilitySystem] Eapb Triggered ability system
+[2025-04-05 20:26:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:18] [INFO] [MovementSystem] Yebcu is planning to move from [9, 10] to [9, 10]
+[2025-04-05 20:26:18] [INFO] [MovementSystem] Updated movement area for Yebcu
+[2025-04-05 20:26:18] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:26:18] [INFO] [MovementSystem] Yebcu is planning to move from [9, 10] to [9, 10]
+[2025-04-05 20:26:18] [INFO] [MovementSystem] Updated movement area for Yebcu
+[2025-04-05 20:26:18] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:26:19] [INFO] [AbilitySystem] Zoyeuy Triggered ability system
+[2025-04-05 20:26:19] [INFO] [MovementSystem] Yebcu is planning to move from [9, 10] to [8, 9]
+[2025-04-05 20:26:19] [INFO] [MovementSystem] Updated movement path for Yebcu
+[2025-04-05 20:26:19] [INFO] [Component] Setting earth_dragon_Yebcu_0e31281e-caa7-4d91-83c2-c2f0e6ca136a on to 8_9_25ef9c25-17df-4067-a0cd-fb4b0cf4c331.
+[2025-04-05 20:26:19] [INFO] [MovementSystem] Moved from [9, 10] to [8, 9]
+[2025-04-05 20:26:19] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:20] [INFO] [MovementSystem] Dojyue is planning to move from [13, 3] to [13, 4]
+[2025-04-05 20:26:20] [INFO] [MovementSystem] Updated movement area for Dojyue
+[2025-04-05 20:26:20] [INFO] [MovementSystem] Updated movement path for Dojyue
+[2025-04-05 20:26:20] [INFO] [Component] Setting air_dragon_Dojyue_f6e5d4a5-e96b-435e-b17f-a1b64e3612a9 on to 13_4_97b8d50b-f769-41cb-b153-c4584c7809bf.
+[2025-04-05 20:26:20] [INFO] [MovementSystem] Moved from [13, 3] to [13, 4]
+[2025-04-05 20:26:20] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:21] [INFO] [AbilitySystem] Yebcu Triggered ability system
+[2025-04-05 20:26:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:21] [INFO] [MovementSystem] Nohau is planning to move from [5, 1] to [5, 2]
+[2025-04-05 20:26:21] [INFO] [MovementSystem] Updated movement area for Nohau
+[2025-04-05 20:26:21] [INFO] [MovementSystem] Updated movement path for Nohau
+[2025-04-05 20:26:21] [INFO] [Component] Setting light_dragon_Nohau_78a7808f-f43a-4ae6-9d11-e4c3c3475ddd on to 5_2_d0d218dd-748c-4759-a02e-65b671feb127.
+[2025-04-05 20:26:21] [INFO] [MovementSystem] Moved from [5, 1] to [5, 2]
+[2025-04-05 20:26:21] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:22] [INFO] [AbilitySystem] Dojyue Triggered ability system
+[2025-04-05 20:26:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:23] [INFO] [MovementSystem] Iuia is planning to move from [11, 3] to [13, 3]
+[2025-04-05 20:26:23] [INFO] [MovementSystem] Updated movement area for Iuia
+[2025-04-05 20:26:23] [INFO] [MovementSystem] Updated movement path for Iuia
+[2025-04-05 20:26:23] [INFO] [Component] Setting dark_dragon_Iuia_774e2d7d-1e6c-401a-917e-a08d96d121ae on to 13_3_fc885e3c-a373-4b16-a12f-0c672b88afce.
+[2025-04-05 20:26:23] [INFO] [MovementSystem] Moved from [11, 3] to [13, 3]
+[2025-04-05 20:26:23] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:24] [INFO] [AbilitySystem] Nohau Triggered ability system
+[2025-04-05 20:26:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:24] [INFO] [MovementSystem] Kang is planning to move from [3, 0] to [3, 0]
+[2025-04-05 20:26:24] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:26:24] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:26:24] [INFO] [MovementSystem] Kang is planning to move from [3, 0] to [3, 0]
+[2025-04-05 20:26:24] [INFO] [MovementSystem] Updated movement area for Kang
+[2025-04-05 20:26:24] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:26:25] [INFO] [MovementSystem] Kang is planning to move from [3, 0] to [1, 0]
+[2025-04-05 20:26:25] [INFO] [MovementSystem] Updated movement path for Kang
+[2025-04-05 20:26:25] [INFO] [Component] Setting dragon_Kang_e11f69bd-b27f-4293-a28f-bce952a83814 on to 1_0_67378377-6d35-434f-8c99-05b8a70b288c.
+[2025-04-05 20:26:25] [INFO] [MovementSystem] Moved from [3, 0] to [1, 0]
+[2025-04-05 20:26:25] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:25] [INFO] [AbilitySystem] Iuia Triggered ability system
+[2025-04-05 20:26:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:26] [INFO] [MovementSystem] Kavi is planning to move from [5, 4] to [5, 4]
+[2025-04-05 20:26:26] [INFO] [MovementSystem] Updated movement area for Kavi
+[2025-04-05 20:26:26] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:26:26] [INFO] [MovementSystem] Kavi is planning to move from [5, 4] to [5, 4]
+[2025-04-05 20:26:26] [INFO] [MovementSystem] Updated movement area for Kavi
+[2025-04-05 20:26:26] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:26:26] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_1713f780-5c64-4ab5-a56a-b927cf22b371
+[2025-04-05 20:26:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 20:26:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Kavi
+[2025-04-05 20:26:26] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 20:26:27] [INFO] [MovementSystem] Kavi is planning to move from [5, 4] to [4, 5]
+[2025-04-05 20:26:27] [INFO] [MovementSystem] Updated movement path for Kavi
+[2025-04-05 20:26:27] [INFO] [Component] Setting dark_dragon_Kavi_dedb74b4-7e41-4cbf-9a23-8a725fea21c5 on to 4_5_2a992027-e5fe-4a28-9bd5-00186f5965cf.
+[2025-04-05 20:26:27] [INFO] [MovementSystem] Moved from [5, 4] to [4, 5]
+[2025-04-05 20:26:27] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:27] [INFO] [AbilitySystem] Kang Triggered ability system
+[2025-04-05 20:26:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:28] [INFO] [MovementSystem] Yujiu is planning to move from [7, 10] to [5, 10]
+[2025-04-05 20:26:28] [INFO] [MovementSystem] Updated movement area for Yujiu
+[2025-04-05 20:26:28] [INFO] [MovementSystem] Updated movement path for Yujiu
+[2025-04-05 20:26:28] [INFO] [Component] Setting fire_dragon_Yujiu_24a70a4f-4f06-4a90-80aa-931e59aeedd3 on to 5_10_357e70b0-b9b8-411b-bfe1-65cd77ec5c92.
+[2025-04-05 20:26:28] [INFO] [MovementSystem] Moved from [7, 10] to [5, 10]
+[2025-04-05 20:26:28] [INFO] [MovementSystem] {} has moved
+[2025-04-05 20:26:29] [INFO] [AbilitySystem] Kavi Triggered ability system
+[2025-04-05 20:26:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 20:26:29] [INFO] [MovementSystem] Pojwye is planning to move from [14, 9] to [14, 8]
+[2025-04-05 20:26:29] [INFO] [MovementSystem] Updated movement area for Pojwye
+[2025-04-05 20:26:29] [INFO] [MovementSystem] Updated movement path for Pojwye
+[2025-04-05 20:26:29] [INFO] [Component] Setting air_dragon_Pojwye_849a49e1-3d25-49ed-a19b-47396c593dbe on to 14_8_318fda6e-c548-40b8-98f5-fb1ca4e9417c.
+[2025-04-05 20:26:29] [INFO] [MovementSystem] Moved from [14, 9] to [14, 8]
+[2025-04-05 20:26:29] [INFO] [MovementSystem] {} has moved

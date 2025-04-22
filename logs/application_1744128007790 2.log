@@ -1,0 +1,439 @@
+[2025-04-08 09:00:07] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-08 09:00:07] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-08 09:00:07] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-08 09:00:07] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-08 09:00:07] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-08 09:00:07] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-08 09:00:07] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-08 09:00:07] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-08 09:00:07] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-08 09:00:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-08 09:00:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-08 09:00:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-08 09:00:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-08 09:00:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-08 09:00:08] [INFO] [Component] Setting dragon_Eehdg_4032b4a4-21a6-4878-96e8-1b9e63b13277 on to {"spawn_region":[],"collider":"","unit":"dragon_Eehdg_4032b4a4-21a6-4878-96e8-1b9e63b13277","column":11,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Eehdg into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting fire_dragon_Vymxy_e2d5e8ce-1815-4222-9efc-5072f646aed8 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vymxy_e2d5e8ce-1815-4222-9efc-5072f646aed8","column":11,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Vymxy into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5","column":2,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Teqi into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Mijrf_53ed5871-6813-4620-a6f9-56f96108ad56 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Mijrf_53ed5871-6813-4620-a6f9-56f96108ad56","column":6,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Mijrf into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Viao_c5471980-0bf7-4dc8-897b-ad56cf937189 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Viao_c5471980-0bf7-4dc8-897b-ad56cf937189","column":5,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Viao into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dragon_Nazuqo_5fba804a-22f5-4702-b91d-739a3ec6c5e5 on to {"spawn_region":[],"collider":"","unit":"dragon_Nazuqo_5fba804a-22f5-4702-b91d-739a3ec6c5e5","column":0,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Nazuqo into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting earth_dragon_Voiye_f1e25a24-a662-4147-a752-197790f7ee01 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Voiye_f1e25a24-a662-4147-a752-197790f7ee01","column":9,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Voiye into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dark_dragon_Zahooo_e9bb31ef-cc9e-4fcf-9a48-4001d0eefcab on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zahooo_e9bb31ef-cc9e-4fcf-9a48-4001d0eefcab","column":0,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Zahooo into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting fire_dragon_Paviu_613d8fdd-1900-4beb-a452-4fa7a1474d9e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Paviu_613d8fdd-1900-4beb-a452-4fa7a1474d9e","column":12,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Paviu into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting earth_dragon_Qaeof_13ba5899-b86d-4246-bb23-311b2843c763 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Qaeof_13ba5899-b86d-4246-bb23-311b2843c763","column":7,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Qaeof into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting earth_dragon_Qawsl_20c0033b-5c24-4e30-9b1b-54ce4e089ccd on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Qawsl_20c0033b-5c24-4e30-9b1b-54ce4e089ccd","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Qawsl into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting earth_dragon_Cineu_5302f881-4e75-486a-b48c-0694d98415ff on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Cineu_5302f881-4e75-486a-b48c-0694d98415ff","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Cineu into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dragon_Mexy_65a84967-d440-4ecc-a2c7-62b8a74851e1 on to {"spawn_region":[],"collider":"","unit":"dragon_Mexy_65a84967-d440-4ecc-a2c7-62b8a74851e1","column":8,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Mexy into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dark_dragon_Eugia_663cef70-7d50-4ea9-8d3d-c646f213d3f1 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Eugia_663cef70-7d50-4ea9-8d3d-c646f213d3f1","column":12,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Eugia into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08","column":6,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Zakon into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting air_dragon_Iyzo_db073dfa-1965-4eb4-b3fb-85aab21ab9f9 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Iyzo_db073dfa-1965-4eb4-b3fb-85aab21ab9f9","column":6,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Iyzo into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Byuqsu_b9773c7f-7e5b-4209-a548-64103819d5ae on to {"spawn_region":[],"collider":"","unit":"water_dragon_Byuqsu_b9773c7f-7e5b-4209-a548-64103819d5ae","column":1,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Byuqsu into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db on to {"spawn_region":[],"collider":"","unit":"water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db","column":13,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Rowr into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting air_dragon_Gofayr_5ba5e00c-5e52-4105-86d3-c8140b2e6017 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Gofayr_5ba5e00c-5e52-4105-86d3-c8140b2e6017","column":8,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Gofayr into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Laqo_793551bb-f03e-4eb1-9b5d-ebdf6ab5ae2b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Laqo_793551bb-f03e-4eb1-9b5d-ebdf6ab5ae2b","column":5,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Laqo into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting light_dragon_Mebe_dbc42904-963d-4ece-98fb-a867fd1a0c2a on to {"spawn_region":[],"collider":"","unit":"light_dragon_Mebe_dbc42904-963d-4ece-98fb-a867fd1a0c2a","column":9,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Mebe into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039","column":3,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Oabyv into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dragon_Uyfaa_c2f53c09-a433-41a1-b631-995332556716 on to {"spawn_region":[],"collider":"","unit":"dragon_Uyfaa_c2f53c09-a433-41a1-b631-995332556716","column":8,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit enemy:Uyfaa into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dark_dragon_Gupjee_4c36c60d-92dc-4ead-b76b-cf228b62c70f on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Gupjee_4c36c60d-92dc-4ead-b76b-cf228b62c70f","column":14,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Gupjee into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Qofhe_2ccfc46f-0195-4369-bc68-f6c582e2dfd6 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Qofhe_2ccfc46f-0195-4369-bc68-f6c582e2dfd6","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Qofhe into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dark_dragon_Yudy_289fc9c1-2420-43a0-8310-5fffdbc4132f on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Yudy_289fc9c1-2420-43a0-8310-5fffdbc4132f","column":8,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Yudy into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting earth_dragon_Qyloeb_788d43db-5fbc-4d0e-ba4d-8451f44c98be on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Qyloeb_788d43db-5fbc-4d0e-ba4d-8451f44c98be","column":6,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Qyloeb into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dragon_Oopaze_2c58573b-b38a-4914-82d2-14627b77ac36 on to {"spawn_region":[],"collider":"","unit":"dragon_Oopaze_2c58573b-b38a-4914-82d2-14627b77ac36","column":5,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Oopaze into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting dragon_Xyeyy_33074ffa-9eb9-48d8-bc4f-3e6a575491bb on to {"spawn_region":[],"collider":"","unit":"dragon_Xyeyy_33074ffa-9eb9-48d8-bc4f-3e6a575491bb","column":4,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Xyeyy into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Yughdt_e7c782c9-1e01-4278-8595-7a5ff3f60700 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Yughdt_e7c782c9-1e01-4278-8595-7a5ff3f60700","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Yughdt into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Poes_33ddbbd5-c253-4e28-a073-896f6f4e0c03 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Poes_33ddbbd5-c253-4e28-a073-896f6f4e0c03","column":5,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Poes into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Iila_29756cc0-51e6-41fe-8f2b-b1e06fe2235e on to {"spawn_region":[],"collider":"","unit":"water_dragon_Iila_29756cc0-51e6-41fe-8f2b-b1e06fe2235e","column":7,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Iila into queue
+[2025-04-08 09:00:08] [INFO] [Component] Setting water_dragon_Cobafz_eacf3d98-f867-49e9-ab94-b79d205b38cd on to {"spawn_region":[],"collider":"","unit":"water_dragon_Cobafz_eacf3d98-f867-49e9-ab94-b79d205b38cd","column":8,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-08 09:00:08] [INFO] [SpeedQueue] Added unit user:Cobafz into queue
+[2025-04-08 09:00:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-08 09:00:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-08 09:00:08] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-08 09:00:08] [INFO] [FontPool] Started initializing FontPool
+[2025-04-08 09:00:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-08 09:00:09] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-08 09:00:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-08 09:00:09] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:09] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:09] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 09:00:09] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 09:00:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 09:00:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-08 09:00:09] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:09] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:09] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-08 09:00:10] [INFO] [VisualsSystem] Finished creating blurred background after 0.5023240447044373 seconds
+[2025-04-08 09:00:11] [INFO] [InputHandler] Gliding 0 camera to new tile 11_6_b1d9b52e-f984-4790-9462-05c849cdff47
+[2025-04-08 09:00:11] [INFO] [InputHandler] Gliding 1 camera to new tile 11_6_b1d9b52e-f984-4790-9462-05c849cdff47
+[2025-04-08 09:00:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 09:00:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Zakon
+[2025-04-08 09:00:12] [INFO] [InputHandler] Gliding 0 camera to new tile 11_6_b1d9b52e-f984-4790-9462-05c849cdff47
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement range to 7 for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [14, 10] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement range to 7 for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [14, 10] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [14, 12] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [14, 12] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [14, 11] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [14, 11] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [13, 10] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [13, 10] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [12, 10] for Zakon
+[2025-04-08 09:00:12] [INFO] [MovementSystem] Updated movement path from [11, 6] to [12, 10] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [11, 8] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [11, 8] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 7] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 7] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 6] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 6] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [9, 6] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [9, 6] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [9, 5] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [9, 5] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 5] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 5] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 6] for Zakon
+[2025-04-08 09:00:13] [INFO] [MovementSystem] Updated movement path from [11, 6] to [10, 6] for Zakon
+[2025-04-08 09:00:16] [INFO] [Component] Setting dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08","column":6,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-08 09:00:16] [INFO] [MovementSystem] Moved from [11, 6] to [10, 6]
+[2025-04-08 09:00:17] [INFO] [InputHandler] Gliding 0 camera to new tile 10_6_cebe6aee-ecc8-4f3c-8d21-dd4ea5ebf330
+[2025-04-08 09:00:17] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-08 09:00:17] [INFO] [AbilitySystem] Zakon is planning to use energy_wave on [12, 10]
+[2025-04-08 09:00:17] [INFO] [AbilitySystem] Updated area of sight for Zakon, viewing 12 tiles
+[2025-04-08 09:00:17] [INFO] [AbilitySystem] Updated line of sight for Zakon, viewing 2 tiles
+[2025-04-08 09:00:17] [INFO] [AbilitySystem] Updated area of effect for Zakon viewing 1 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Zakon is planning to use energy_wave on [12, 9]
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated line of sight for Zakon, viewing 2 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated area of effect for Zakon viewing 1 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Zakon is planning to use energy_wave on [12, 8]
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated line of sight for Zakon, viewing 5 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated area of effect for Zakon viewing 1 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Zakon is planning to use energy_wave on [11, 8]
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated line of sight for Zakon, viewing 2 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated area of effect for Zakon viewing 1 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Zakon is planning to use energy_wave on [11, 7]
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated line of sight for Zakon, viewing 3 tiles
+[2025-04-08 09:00:18] [INFO] [AbilitySystem] Updated area of effect for Zakon viewing 1 tiles
+[2025-04-08 09:00:19] [INFO] [AbilitySystem] Zakon is planning to use energy_wave on [11, 6]
+[2025-04-08 09:00:19] [INFO] [AbilitySystem] Updated line of sight for Zakon, viewing 2 tiles
+[2025-04-08 09:00:19] [INFO] [AbilitySystem] Updated area of effect for Zakon viewing 1 tiles
+[2025-04-08 09:00:19] [INFO] [AbilitySystem] Zakon is planning to use energy_wave on [11, 5]
+[2025-04-08 09:00:19] [INFO] [AbilitySystem] Updated line of sight for Zakon, viewing 3 tiles
+[2025-04-08 09:00:19] [INFO] [AbilitySystem] Updated area of effect for Zakon viewing 1 tiles
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Started constructing cost mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Finished constructing cost mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Checking cost requirements for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Zakon is able to pay for energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Started constructing cost mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Finished constructing cost mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Paying cost requirements for Zakon using energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-08 09:00:22] [INFO] [AbilitySystem] Used from energy_wave on [11, 5]
+[2025-04-08 09:00:22] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:22] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:22] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 09:00:22] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 09:00:22] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:22] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Zakon_ab00894d-81ff-4e7c-af36-b17b4b5e2a08
+[2025-04-08 09:00:22] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Started constructing damage mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Finished constructing damage mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Started constructing cost mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Finished constructing cost mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Started constructing damage mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Finished constructing damage mappings for Zakon to use energy_wave
+[2025-04-08 09:00:22] [INFO] [CombatSystem] Started dealing damage with energy_wave to Viao 
+[2025-04-08 09:00:22] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-08 09:00:22] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-08 09:00:22] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-08 09:00:25] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db
+[2025-04-08 09:00:25] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db
+[2025-04-08 09:00:25] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 09:00:25] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 09:00:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 09:00:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Rowr
+[2025-04-08 09:00:25] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db
+[2025-04-08 09:00:25] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db
+[2025-04-08 09:00:25] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:25] [INFO] [InputHandler] Gliding 0 camera to new tile 11_13_9e3e6ef7-39ed-4977-a109-c872c1e18b2a
+[2025-04-08 09:00:25] [INFO] [InputHandler] Gliding 1 camera to new tile 11_13_9e3e6ef7-39ed-4977-a109-c872c1e18b2a
+[2025-04-08 09:00:28] [INFO] [InputHandler] Gliding 0 camera to new tile 11_13_9e3e6ef7-39ed-4977-a109-c872c1e18b2a
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement range to 11 for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to null for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement range to 11 for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to null for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 14] for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 14] for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 13] for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [12, 13] for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 13] for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 13] for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 12] for Rowr
+[2025-04-08 09:00:28] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 12] for Rowr
+[2025-04-08 09:00:29] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 11] for Rowr
+[2025-04-08 09:00:29] [INFO] [MovementSystem] Updated movement path from [11, 13] to [11, 11] for Rowr
+[2025-04-08 09:00:29] [INFO] [Component] Setting water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db on to {"spawn_region":[],"collider":"","unit":"water_dragon_Rowr_694a636f-678c-4d43-b9c1-a32c7356e7db","column":11,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-08 09:00:29] [INFO] [MovementSystem] Moved from [11, 13] to [11, 11]
+[2025-04-08 09:00:30] [INFO] [AbilitySelectionPanel] Updating ability selection for air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5
+[2025-04-08 09:00:30] [INFO] [AbilitySelectionPanel] Finished ability selection for air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5
+[2025-04-08 09:00:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 09:00:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Teqi
+[2025-04-08 09:00:30] [INFO] [InputHandler] Gliding 0 camera to new tile 1_2_9d9c1c37-0593-49c0-b357-262ff671cc86
+[2025-04-08 09:00:30] [INFO] [InputHandler] Gliding 1 camera to new tile 1_2_9d9c1c37-0593-49c0-b357-262ff671cc86
+[2025-04-08 09:00:32] [INFO] [InputHandler] Gliding 0 camera to new tile 1_2_9d9c1c37-0593-49c0-b357-262ff671cc86
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement range to 9 for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 6] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement range to 9 for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 6] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [5, 7] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [5, 7] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 7] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 7] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 6] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 6] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 5] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [4, 5] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [3, 4] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [3, 4] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [3, 3] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [3, 3] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 3] for Teqi
+[2025-04-08 09:00:32] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 3] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 2] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 2] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [3, 2] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [3, 2] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 2] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 2] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 3] for Teqi
+[2025-04-08 09:00:33] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 3] for Teqi
+[2025-04-08 09:00:35] [INFO] [Component] Setting air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5","column":3,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-08 09:00:35] [INFO] [MovementSystem] Moved from [1, 2] to [2, 3]
+[2025-04-08 09:00:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 09:00:36] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-08 09:00:37] [INFO] [InputHandler] Gliding 0 camera to new tile 2_3_7e092add-423d-427d-bce5-160d1dbc7cf9
+[2025-04-08 09:00:38] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-08 09:00:38] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [4, 7]
+[2025-04-08 09:00:38] [INFO] [AbilitySystem] Updated area of sight for Teqi, viewing 10 tiles
+[2025-04-08 09:00:38] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 7 tiles
+[2025-04-08 09:00:38] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [5, 7]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 8 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [5, 6]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 7 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [4, 5]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 5 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [4, 4]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 4 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [4, 3]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 3 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [3, 3]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 2 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [3, 2]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 3 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [3, 1]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 4 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [3, 0]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 3 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [2, 0]
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 3 tiles
+[2025-04-08 09:00:39] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:40] [INFO] [AbilitySystem] Teqi is planning to use energy_wave on [2, 1]
+[2025-04-08 09:00:40] [INFO] [AbilitySystem] Updated line of sight for Teqi, viewing 3 tiles
+[2025-04-08 09:00:40] [INFO] [AbilitySystem] Updated area of effect for Teqi viewing 1 tiles
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Started constructing cost mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Finished constructing cost mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Checking cost requirements for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Teqi is able to pay for energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Started constructing cost mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Finished constructing cost mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Paying cost requirements for Teqi using energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-08 09:00:41] [INFO] [AbilitySystem] Used from energy_wave on [2, 1]
+[2025-04-08 09:00:41] [INFO] [AbilitySelectionPanel] Updating ability selection for air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5
+[2025-04-08 09:00:41] [INFO] [AbilitySelectionPanel] Finished ability selection for air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5
+[2025-04-08 09:00:41] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 09:00:41] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 09:00:41] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5
+[2025-04-08 09:00:41] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity air_dragon_Teqi_264ceb3a-fd70-4d92-944e-346bb58497e5
+[2025-04-08 09:00:41] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Started constructing damage mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Finished constructing damage mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Started constructing cost mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Finished constructing cost mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Started constructing damage mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Finished constructing damage mappings for Teqi to use energy_wave
+[2025-04-08 09:00:41] [INFO] [CombatSystem] Started dealing damage with energy_wave to Byuqsu 
+[2025-04-08 09:00:41] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-08 09:00:41] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-08 09:00:41] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-08 09:00:44] [INFO] [AbilitySelectionPanel] Updating ability selection for air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:44] [INFO] [AbilitySelectionPanel] Finished ability selection for air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:44] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 09:00:44] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 09:00:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-08 09:00:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-08 09:00:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Oabyv
+[2025-04-08 09:00:44] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:44] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:44] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:44] [INFO] [InputHandler] Gliding 0 camera to new tile 9_3_c5916b18-8df8-43b4-81a7-f84020aa6210
+[2025-04-08 09:00:44] [INFO] [InputHandler] Gliding 1 camera to new tile 9_3_c5916b18-8df8-43b4-81a7-f84020aa6210
+[2025-04-08 09:00:46] [INFO] [InputHandler] Gliding 0 camera to new tile 9_3_c5916b18-8df8-43b4-81a7-f84020aa6210
+[2025-04-08 09:00:46] [INFO] [MovementSystem] Updated movement range to 7 for Oabyv
+[2025-04-08 09:00:46] [INFO] [MovementSystem] Updated movement path from [9, 3] to [12, 8] for Oabyv
+[2025-04-08 09:00:46] [INFO] [MovementSystem] Updated movement range to 7 for Oabyv
+[2025-04-08 09:00:46] [INFO] [MovementSystem] Updated movement path from [9, 3] to [12, 8] for Oabyv
+[2025-04-08 09:00:46] [INFO] [MovementSystem] Updated movement path from [9, 3] to [12, 9] for Oabyv
+[2025-04-08 09:00:46] [INFO] [MovementSystem] Updated movement path from [9, 3] to [12, 9] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [12, 8] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [12, 8] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [11, 7] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [11, 7] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [10, 7] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [10, 7] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [10, 6] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [10, 6] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [9, 6] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [9, 6] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [9, 5] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [9, 5] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 5] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 5] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 4] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 4] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 3] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 3] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [7, 3] for Oabyv
+[2025-04-08 09:00:47] [INFO] [MovementSystem] Updated movement path from [9, 3] to [7, 3] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 3] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 3] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 4] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 4] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [9, 4] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [9, 4] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 4] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 4] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 3] for Oabyv
+[2025-04-08 09:00:49] [INFO] [MovementSystem] Updated movement path from [9, 3] to [8, 3] for Oabyv
+[2025-04-08 09:00:50] [INFO] [MovementSystem] Updated movement path from [9, 3] to [7, 3] for Oabyv
+[2025-04-08 09:00:50] [INFO] [MovementSystem] Updated movement path from [9, 3] to [7, 3] for Oabyv
+[2025-04-08 09:00:50] [INFO] [Component] Setting air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-08 09:00:50] [INFO] [MovementSystem] Moved from [9, 3] to [7, 3]
+[2025-04-08 09:00:51] [INFO] [InputHandler] Gliding 0 camera to new tile 7_3_c079f1b1-98d2-48ba-b0eb-9188753f02c7
+[2025-04-08 09:00:51] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-08 09:00:51] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [9, 8]
+[2025-04-08 09:00:51] [INFO] [AbilitySystem] Updated area of sight for Oabyv, viewing 13 tiles
+[2025-04-08 09:00:51] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 7 tiles
+[2025-04-08 09:00:51] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [9, 7]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 7 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [9, 6]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 6 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [8, 6]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 5 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [7, 5]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 3 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [7, 4]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 2 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [6, 4]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 3 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [6, 3]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 2 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [5, 3]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 3 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [6, 3]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 2 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Oabyv is planning to use energy_wave on [6, 4]
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated line of sight for Oabyv, viewing 3 tiles
+[2025-04-08 09:00:52] [INFO] [AbilitySystem] Updated area of effect for Oabyv viewing 1 tiles
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Started constructing cost mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Finished constructing cost mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Checking cost requirements for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Oabyv is able to pay for energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Started constructing cost mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Finished constructing cost mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Paying cost requirements for Oabyv using energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-08 09:00:54] [INFO] [AbilitySystem] Used from energy_wave on [6, 4]
+[2025-04-08 09:00:54] [INFO] [AbilitySelectionPanel] Updating ability selection for air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:54] [INFO] [AbilitySelectionPanel] Finished ability selection for air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:54] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-08 09:00:54] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-08 09:00:54] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:54] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity air_dragon_Oabyv_ccee01a9-f995-4157-918f-842d9add9039
+[2025-04-08 09:00:54] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Started constructing damage mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Finished constructing damage mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Started constructing cost mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Finished constructing cost mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Started constructing damage mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Finished constructing damage mappings for Oabyv to use energy_wave
+[2025-04-08 09:00:54] [INFO] [CombatSystem] Started dealing damage with energy_wave to Qawsl 
+[2025-04-08 09:00:54] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-08 09:00:54] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-08 09:00:54] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-08 09:01:05] [INFO] [InputHandler] Gliding 0 camera to new tile 7_3_c079f1b1-98d2-48ba-b0eb-9188753f02c7
+[2025-04-08 09:01:08] [INFO] [InputHandler] Gliding 0 camera to new tile 7_3_c079f1b1-98d2-48ba-b0eb-9188753f02c7
+[2025-04-08 09:01:09] [INFO] [InputHandler] Gliding 0 camera to new tile 7_3_c079f1b1-98d2-48ba-b0eb-9188753f02c7

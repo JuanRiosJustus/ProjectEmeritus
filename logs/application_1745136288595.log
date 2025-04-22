@@ -1,0 +1,350 @@
+[2025-04-20 01:04:48] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-20 01:04:48] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-20 01:04:48] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-20 01:04:48] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-20 01:04:48] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-20 01:04:48] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-20 01:04:48] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-20 01:04:48] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-20 01:04:48] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-20 01:04:48] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-20 01:04:48] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-20 01:04:48] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-20 01:04:48] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-20 01:04:48] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-20 01:04:48] [INFO] [Component] Setting light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0 on to {"row":3,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit enemy:Noyue into queue
+[2025-04-20 01:04:48] [INFO] [Component] Setting earth_dragon_Eelli_6bc07854-e77b-4be3-938c-65a0b9dcb52a on to {"row":0,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Eelli_6bc07854-e77b-4be3-938c-65a0b9dcb52a","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit enemy:Eelli into queue
+[2025-04-20 01:04:48] [INFO] [Component] Setting water_dragon_Xityay_457ae032-68ed-47e8-a20e-5e754ec4d0f4 on to {"row":0,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Xityay_457ae032-68ed-47e8-a20e-5e754ec4d0f4","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit enemy:Xityay into queue
+[2025-04-20 01:04:48] [INFO] [Component] Setting dark_dragon_Manhan_af03278e-95b0-45ac-8d55-4e81415ea96f on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Manhan_af03278e-95b0-45ac-8d55-4e81415ea96f","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit enemy:Manhan into queue
+[2025-04-20 01:04:48] [INFO] [Component] Setting air_dragon_Sagova_ee2233a6-9baa-4020-ae2b-da7dc221757d on to {"row":2,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Sagova_ee2233a6-9baa-4020-ae2b-da7dc221757d","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit enemy:Sagova into queue
+[2025-04-20 01:04:48] [INFO] [Component] Setting dark_dragon_Iuxy_df60cf8d-f0cc-4bea-b764-28ad4483243a on to {"row":0,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Iuxy_df60cf8d-f0cc-4bea-b764-28ad4483243a","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit user:Iuxy into queue
+[2025-04-20 01:04:48] [INFO] [Component] Setting earth_dragon_Faau_37e7a7ef-0911-4f8d-bc51-2f992537d4de on to {"row":1,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Faau_37e7a7ef-0911-4f8d-bc51-2f992537d4de","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit user:Faau into queue
+[2025-04-20 01:04:48] [INFO] [Component] Setting dragon_Rufl_d0465106-6b4e-4c41-b91e-edd7c03644a1 on to {"row":7,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Rufl_d0465106-6b4e-4c41-b91e-edd7c03644a1","structure":""}.
+[2025-04-20 01:04:48] [INFO] [SpeedQueue] Added unit user:Rufl into queue
+[2025-04-20 01:04:48] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-20 01:04:49] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-20 01:04:49] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-20 01:04:49] [INFO] [FontPool] Started initializing FontPool
+[2025-04-20 01:04:49] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-20 01:04:49] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-20 01:04:49] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-20 01:04:49] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:04:49] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:04:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:04:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:04:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-20 01:04:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-20 01:04:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:04:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 01:04:49] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:04:49] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:04:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:04:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:04:49] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-20 01:04:50] [INFO] [VisualsSystem] Finished creating blurred background after 0.4825655221939087 seconds
+[2025-04-20 01:04:51] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_5f3d17ea-84fe-4c50-9115-ea310620d130
+[2025-04-20 01:04:51] [INFO] [InputHandler] Gliding 1 camera to new tile 3_0_5f3d17ea-84fe-4c50-9115-ea310620d130
+[2025-04-20 01:04:51] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:04:51] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:04:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:04:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Noyue
+[2025-04-20 01:04:52] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_5f3d17ea-84fe-4c50-9115-ea310620d130
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement range to 4 for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [5, 6] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement range to 4 for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [5, 6] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [6, 6] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [6, 6] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [6, 5] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [6, 5] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 4] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 4] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 3] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 3] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 3] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 3] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 2] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 2] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 1] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 1] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [0, 0] for Noyue
+[2025-04-20 01:04:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [0, 0] for Noyue
+[2025-04-20 01:04:53] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Noyue
+[2025-04-20 01:04:53] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Noyue
+[2025-04-20 01:04:53] [INFO] [Component] Setting light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0 on to {"row":1,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0","structure":""}.
+[2025-04-20 01:04:53] [INFO] [MovementSystem] Moved from [3, 0] to [1, 0]
+[2025-04-20 01:04:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 01:04:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Noyue
+[2025-04-20 01:04:53] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_38d7c3b0-c30e-45da-9f4d-5a06c5f8e9f7
+[2025-04-20 01:04:53] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_38d7c3b0-c30e-45da-9f4d-5a06c5f8e9f7
+[2025-04-20 01:04:54] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_38d7c3b0-c30e-45da-9f4d-5a06c5f8e9f7
+[2025-04-20 01:04:55] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-20 01:04:55] [INFO] [AbilitySystem] Noyue is planning to use oblation on [4, 7]
+[2025-04-20 01:04:55] [INFO] [AbilitySystem] Updated area of sight for Noyue, viewing 8 tiles
+[2025-04-20 01:04:55] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 6 tiles
+[2025-04-20 01:04:55] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:04:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:13] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:13] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:13] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:13] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:14] [INFO] [AbilitySystem] Noyue is planning to use oblation on null
+[2025-04-20 01:05:14] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 0 tiles
+[2025-04-20 01:05:14] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 0 tiles
+[2025-04-20 01:05:14] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:14] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:14] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:14] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:14] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:14] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Noyue is planning to use oblation on [1, 6]
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 7 tiles
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Noyue is planning to use oblation on [1, 5]
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 6 tiles
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Noyue is planning to use oblation on [0, 5]
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 7 tiles
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Noyue is planning to use oblation on [0, 4]
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 6 tiles
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Noyue is planning to use oblation on [0, 3]
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 4 tiles
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Noyue is planning to use oblation on [0, 2]
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 3 tiles
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xityay
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xityay
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for -6.0
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -11.0 damage after modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xityay
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -11.0 Raw damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xityay
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -10.0 damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Noyue is planning to use oblation on [0, 1]
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 3 tiles
+[2025-04-20 01:05:17] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iuxy
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iuxy
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for -6.0
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -11.0 damage after modifiers for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iuxy
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -11.0 Raw damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iuxy
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] -10.0 damage after defenses for oblation
+[2025-04-20 01:05:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Noyue is planning to use oblation on [1, 1]
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 2 tiles
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Noyue is planning to use oblation on [2, 1]
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 3 tiles
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Noyue is planning to use oblation on [1, 1]
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 2 tiles
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Noyue is planning to use oblation on [0, 1]
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated line of sight for Noyue, viewing 3 tiles
+[2025-04-20 01:05:26] [INFO] [AbilitySystem] Updated area of effect for Noyue viewing 1 tiles
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iuxy
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iuxy
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for -6.0
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Noyue lands a CRIT bonus with oblation for -16.5
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] -27.5 damage after modifiers for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iuxy
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] -27.5 Raw damage after defenses for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iuxy
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] -25.0 damage after defenses for oblation
+[2025-04-20 01:05:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Checking cost requirements for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Noyue is able to pay for oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Paying cost requirements for Noyue using oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use oblation
+[2025-04-20 01:05:28] [INFO] [AbilitySystem] Used from oblation on [0, 1]
+[2025-04-20 01:05:28] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:05:28] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:05:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 01:05:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 01:05:28] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:05:28] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Noyue_2a1abf00-0ad0-41b5-a82d-5cd912600aa0
+[2025-04-20 01:05:28] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 01:05:28] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 01:05:28] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Started constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [CombatSystem] Finished constructing cost mappings for Noyue to use oblation
+[2025-04-20 01:05:28] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noyue to use oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noyue to use oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iuxy
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iuxy
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noyue
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] -4.5 Raw damage before modifiers for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Noyue lands a Same-Type-Attack-Bonus with oblation, for -5.4
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] -9.9 damage after modifiers for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noyue
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iuxy
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] -9.9 Raw damage after defenses for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iuxy
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] -9.0 damage after defenses for oblation
+[2025-04-20 01:05:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noyue to use oblation
+[2025-04-20 01:05:36] [INFO] [CombatSystem] Started dealing damage with oblation to Iuxy 
+[2025-04-20 01:06:19] [INFO] [AbilityDamageReport] Started constructing damage mapp

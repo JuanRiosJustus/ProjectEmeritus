@@ -1,0 +1,89 @@
+[2025-04-18 16:38:02] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-18 16:38:02] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-18 16:38:02] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-18 16:38:02] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-18 16:38:02] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-18 16:38:02] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-18 16:38:02] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-18 16:38:02] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-18 16:38:02] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-18 16:38:02] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-18 16:38:02] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-18 16:38:02] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-18 16:38:03] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-18 16:38:03] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-18 16:38:03] [INFO] [Component] Setting fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2 on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2","structure":""}.
+[2025-04-18 16:38:03] [INFO] [SpeedQueue] Added unit user:Nerf into queue
+[2025-04-18 16:38:03] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-18 16:38:03] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-18 16:38:03] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-18 16:38:03] [INFO] [FontPool] Started initializing FontPool
+[2025-04-18 16:38:03] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-18 16:38:03] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-18 16:38:03] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:38:03] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2
+[2025-04-18 16:38:03] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2
+[2025-04-18 16:38:03] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-18 16:38:03] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-18 16:38:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:38:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:38:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2
+[2025-04-18 16:38:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2
+[2025-04-18 16:38:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:38:03] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-18 16:38:03] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-18 16:38:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-18 16:38:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-18 16:38:03] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-18 16:38:04] [INFO] [VisualsSystem] Finished creating blurred background after 0.4909718632698059 seconds
+[2025-04-18 16:38:06] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_2648205e-cbe0-4340-b97f-7a0fc14a8df2
+[2025-04-18 16:38:06] [INFO] [InputHandler] Gliding 1 camera to new tile 7_1_2648205e-cbe0-4340-b97f-7a0fc14a8df2
+[2025-04-18 16:38:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Nerf
+[2025-04-18 16:38:06] [INFO] [MovementSystem] Updated movement range to 8 for Nerf
+[2025-04-18 16:38:06] [INFO] [MovementSystem] Updated movement path from [7, 1] to [6, 2] for Nerf
+[2025-04-18 16:38:06] [INFO] [Component] Setting fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2 on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2","structure":""}.
+[2025-04-18 16:38:06] [INFO] [MovementSystem] Moved from [7, 1] to [6, 2]
+[2025-04-18 16:38:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Nerf
+[2025-04-18 16:38:06] [INFO] [InputHandler] Gliding 0 camera to new tile 6_2_8b04c27a-6b1f-471b-9b3c-5032b9e9156a
+[2025-04-18 16:38:06] [INFO] [InputHandler] Gliding 1 camera to new tile 6_2_8b04c27a-6b1f-471b-9b3c-5032b9e9156a
+[2025-04-18 16:38:07] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:38:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-18 16:38:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-18 16:38:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:38:09] [INFO] [MovementSystem] Updated movement range to 12 for Nerf
+[2025-04-18 16:38:09] [INFO] [MovementSystem] Updated movement path from [6, 2] to [5, 2] for Nerf
+[2025-04-18 16:38:09] [INFO] [Component] Setting fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2 on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2","structure":""}.
+[2025-04-18 16:38:09] [INFO] [MovementSystem] Moved from [6, 2] to [5, 2]
+[2025-04-18 16:38:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Nerf
+[2025-04-18 16:38:09] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_f8d501b9-5756-478d-89b0-c75f685deff6
+[2025-04-18 16:38:09] [INFO] [InputHandler] Gliding 1 camera to new tile 5_2_f8d501b9-5756-478d-89b0-c75f685deff6
+[2025-04-18 16:38:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:38:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:38:11] [INFO] [MovementSystem] Updated movement range to 13 for Nerf
+[2025-04-18 16:38:11] [INFO] [MovementSystem] Updated movement path from [5, 2] to [4, 3] for Nerf
+[2025-04-18 16:38:11] [INFO] [Component] Setting fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2 on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2","structure":""}.
+[2025-04-18 16:38:11] [INFO] [MovementSystem] Moved from [5, 2] to [4, 3]
+[2025-04-18 16:38:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Nerf
+[2025-04-18 16:38:11] [INFO] [InputHandler] Gliding 0 camera to new tile 4_3_a11fcc88-12ca-455c-a144-543e0a2e30be
+[2025-04-18 16:38:11] [INFO] [InputHandler] Gliding 1 camera to new tile 4_3_a11fcc88-12ca-455c-a144-543e0a2e30be
+[2025-04-18 16:38:12] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:38:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:12] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-18 16:38:14] [INFO] [MovementSystem] Updated movement range to 13 for Nerf
+[2025-04-18 16:38:14] [INFO] [MovementSystem] Updated movement path from [4, 3] to [6, 3] for Nerf
+[2025-04-18 16:38:14] [INFO] [Component] Setting fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2 on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nerf_f3155e10-9882-4bc9-a6c1-30fdf081e9e2","structure":""}.
+[2025-04-18 16:38:14] [INFO] [MovementSystem] Moved from [4, 3] to [6, 3]
+[2025-04-18 16:38:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Nerf
+[2025-04-18 16:38:14] [INFO] [InputHandler] Gliding 0 camera to new tile 6_3_d6b2c0bc-b46a-4ee7-b372-cfe537ab9725
+[2025-04-18 16:38:14] [INFO] [InputHandler] Gliding 1 camera to new tile 6_3_d6b2c0bc-b46a-4ee7-b372-cfe537ab9725
+[2025-04-18 16:38:14] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-18 16:38:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-18 16:38:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

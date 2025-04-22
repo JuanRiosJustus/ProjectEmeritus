@@ -1,0 +1,178 @@
+[2025-04-22 02:43:18] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-22 02:43:18] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-22 02:43:18] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-22 02:43:18] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-22 02:43:18] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-22 02:43:18] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-22 02:43:18] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-22 02:43:18] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-22 02:43:18] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-22 02:43:18] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-22 02:43:18] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-22 02:43:18] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-22 02:43:18] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-22 02:43:18] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-22 02:43:18] [INFO] [Component] Setting air_dragon_Wyuuf_86eaf688-1f0d-48ae-97ba-70c4cdc0028a on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Wyuuf_86eaf688-1f0d-48ae-97ba-70c4cdc0028a","structure":""}.
+[2025-04-22 02:43:18] [INFO] [SpeedQueue] Added unit enemy:Wyuuf into queue
+[2025-04-22 02:43:18] [INFO] [Component] Setting dark_dragon_Jebq_bed4deec-e6c4-485e-9eb9-de73e7e6eca1 on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Jebq_bed4deec-e6c4-485e-9eb9-de73e7e6eca1","structure":""}.
+[2025-04-22 02:43:18] [INFO] [SpeedQueue] Added unit enemy:Jebq into queue
+[2025-04-22 02:43:18] [INFO] [Component] Setting fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15 on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15","structure":""}.
+[2025-04-22 02:43:18] [INFO] [SpeedQueue] Added unit enemy:Moqwp into queue
+[2025-04-22 02:43:18] [INFO] [Component] Setting light_dragon_Cuove_cf49faf8-abae-488a-8dfe-b9f56f8ab06d on to {"row":7,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Cuove_cf49faf8-abae-488a-8dfe-b9f56f8ab06d","structure":""}.
+[2025-04-22 02:43:18] [INFO] [SpeedQueue] Added unit user:Cuove into queue
+[2025-04-22 02:43:18] [INFO] [Component] Setting water_dragon_Aalb_6884520c-025f-4766-9540-c022c617c85e on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Aalb_6884520c-025f-4766-9540-c022c617c85e","structure":""}.
+[2025-04-22 02:43:18] [INFO] [SpeedQueue] Added unit user:Aalb into queue
+[2025-04-22 02:43:18] [INFO] [Component] Setting water_dragon_Euby_63d94fff-7598-4f26-9abe-8fb4259ec089 on to {"row":6,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Euby_63d94fff-7598-4f26-9abe-8fb4259ec089","structure":""}.
+[2025-04-22 02:43:18] [INFO] [SpeedQueue] Added unit user:Euby into queue
+[2025-04-22 02:43:18] [INFO] [Component] Setting air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec","structure":""}.
+[2025-04-22 02:43:18] [INFO] [SpeedQueue] Added unit user:Eisqz into queue
+[2025-04-22 02:43:18] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-22 02:43:19] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-22 02:43:19] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:43:19] [INFO] [FontPool] Started initializing FontPool
+[2025-04-22 02:43:19] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-22 02:43:19] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-22 02:43:19] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-22 02:43:19] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:43:19] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-22 02:43:19] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-22 02:43:19] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-22 02:43:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:43:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:43:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-22 02:43:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-22 02:43:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:19] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-22 02:43:19] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-22 02:43:20] [INFO] [VisualsSystem] Finished creating blurred background after 0.49343711137771606 seconds
+[2025-04-22 02:43:21] [INFO] [MovementSystem] Updated movement range to 9 for Eisqz
+[2025-04-22 02:43:21] [INFO] [MovementSystem] Updated movement path from [6, 2] to [5, 1] for Eisqz
+[2025-04-22 02:43:21] [INFO] [Component] Setting air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec","structure":""}.
+[2025-04-22 02:43:21] [INFO] [MovementSystem] Moved from [6, 2] to [5, 1]
+[2025-04-22 02:43:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Eisqz
+[2025-04-22 02:43:21] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_b4029f52-2f5a-4845-aee4-52c9208bf8f6
+[2025-04-22 02:43:21] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_b4029f52-2f5a-4845-aee4-52c9208bf8f6
+[2025-04-22 02:43:22] [INFO] [AbilitySystem] Eisqz is planning to use air_attack on [6, 1]
+[2025-04-22 02:43:22] [INFO] [AbilitySystem] Updated area of sight for Eisqz, viewing 9 tiles
+[2025-04-22 02:43:22] [INFO] [AbilitySystem] Updated line of sight for Eisqz, viewing 2 tiles
+[2025-04-22 02:43:22] [INFO] [AbilitySystem] Updated area of effect for Eisqz viewing 1 tiles
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Started constructing cost mappings for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Finished constructing cost mappings for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Checking cost requirements for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Eisqz is able to pay for air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Started constructing cost mappings for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Finished constructing cost mappings for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Paying cost requirements for Eisqz using air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-04-22 02:43:22] [INFO] [AbilitySystem] Used from air_attack on [6, 1]
+[2025-04-22 02:43:22] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:22] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:22] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:43:22] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:43:22] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:22] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Eisqz
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Eisqz lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Eisqz lands a CRIT bonus with air_attack for 33.0
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] 55.0 damage after modifiers for air_attack
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Eisqz
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Moqwp
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] 55.0 Raw damage after defenses for air_attack
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Moqwp
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] 50.0 damage after defenses for air_attack
+[2025-04-22 02:43:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Eisqz to use air_attack
+[2025-04-22 02:43:22] [INFO] [CombatSystem] Started dealing damage with air_attack to Moqwp 
+[2025-04-22 02:43:22] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:43:22] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:43:22] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:43:22] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:43:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-22 02:43:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-22 02:43:22] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:43:22] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:43:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:22] [INFO] [SelectedTilePanel] Updated selected tile display to view Moqwp
+[2025-04-22 02:43:22] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_c5b0b127-850c-4da1-867c-c86099ccf6c1
+[2025-04-22 02:43:22] [INFO] [InputHandler] Gliding 1 camera to new tile 6_1_c5b0b127-850c-4da1-867c-c86099ccf6c1
+[2025-04-22 02:43:27] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_c5b0b127-850c-4da1-867c-c86099ccf6c1
+[2025-04-22 02:43:27] [INFO] [InputHandler] Gliding 1 camera to new tile 6_1_c5b0b127-850c-4da1-867c-c86099ccf6c1
+[2025-04-22 02:43:28] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_c5b0b127-850c-4da1-867c-c86099ccf6c1
+[2025-04-22 02:43:28] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:43:28] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement range to 7 for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 5] for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement range to 7 for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 5] for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 4] for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 4] for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 3] for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 3] for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 2] for Moqwp
+[2025-04-22 02:43:29] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 2] for Moqwp
+[2025-04-22 02:43:30] [INFO] [Component] Setting fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15 on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15","structure":""}.
+[2025-04-22 02:43:30] [INFO] [MovementSystem] Moved from [6, 1] to [6, 2]
+[2025-04-22 02:43:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Moqwp
+[2025-04-22 02:43:30] [INFO] [InputHandler] Gliding 0 camera to new tile 6_2_a3d6146b-fdc5-436f-a1be-34d1cb12c9b7
+[2025-04-22 02:43:30] [INFO] [InputHandler] Gliding 1 camera to new tile 6_2_a3d6146b-fdc5-436f-a1be-34d1cb12c9b7
+[2025-04-22 02:43:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Eisqz
+[2025-04-22 02:43:36] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:43:36] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:43:52] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:43:52] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:43:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Moqwp
+[2025-04-22 02:43:52] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:43:52] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:43:57] [INFO] [InputHandler] Gliding 0 camera to new tile 3_3_ac33adc8-62ae-494e-b833-bdd170e3e30a
+[2025-04-22 02:43:57] [INFO] [InputHandler] Gliding 1 camera to new tile 3_3_ac33adc8-62ae-494e-b833-bdd170e3e30a
+[2025-04-22 02:43:57] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Wyuuf_86eaf688-1f0d-48ae-97ba-70c4cdc0028a
+[2025-04-22 02:43:57] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Wyuuf_86eaf688-1f0d-48ae-97ba-70c4cdc0028a
+[2025-04-22 02:43:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Wyuuf
+[2025-04-22 02:43:57] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:43:57] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:43:58] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_b4029f52-2f5a-4845-aee4-52c9208bf8f6
+[2025-04-22 02:43:58] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_b4029f52-2f5a-4845-aee4-52c9208bf8f6
+[2025-04-22 02:43:58] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:58] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:43:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:43:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Eisqz
+[2025-04-22 02:43:58] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:43:58] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:44:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:44:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:44:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:44:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Moqwp
+[2025-04-22 02:44:02] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:44:02] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:44:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Euby_63d94fff-7598-4f26-9abe-8fb4259ec089
+[2025-04-22 02:44:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Euby_63d94fff-7598-4f26-9abe-8fb4259ec089
+[2025-04-22 02:44:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:44:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Euby
+[2025-04-22 02:44:03] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:44:03] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:44:04] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:44:04] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Moqwp_c2d4c6e9-cad6-40e3-a67d-13f79151ab15
+[2025-04-22 02:44:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:44:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Moqwp
+[2025-04-22 02:44:04] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:44:04] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-22 02:44:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:44:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Eisqz_14d4f5d6-34bd-4bac-9488-48b03b0603ec
+[2025-04-22 02:44:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:44:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Eisqz
+[2025-04-22 02:44:06] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-22 02:44:06] [INFO] [StatisticsPanel] Finished updating statistics information panel

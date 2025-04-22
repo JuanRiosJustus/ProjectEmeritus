@@ -1,0 +1,96 @@
+[2025-04-06 00:57:59] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 00:57:59] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 00:57:59] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 00:57:59] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 00:57:59] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 00:57:59] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 00:57:59] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 00:57:59] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 00:57:59] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 00:57:59] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 00:57:59] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 00:57:59] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 00:57:59] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 00:57:59] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 00:57:59] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 00:57:59] [INFO] [Component] Setting light_dragon_Buow_d50f86ca-f101-4bc6-96c0-7f676c0c0c3c on to 8_5_9e7113d1-6a2e-494c-aec7-458dafbf9f47.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Buow into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting water_dragon_Vuey_4a58b8f6-0ebe-42e9-9c49-610ac64634a2 on to 14_12_c8977183-8c0f-4669-9df9-c56183ae637a.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Vuey into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting fire_dragon_Ooaj_d84f5db5-6fdb-4a74-96b0-3063545311b0 on to 12_3_f4f48d2b-75d2-4ac1-843e-4b9d150d87f5.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Ooaj into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting air_dragon_Xahsaa_ad460965-7116-434f-9c28-f419cafd5963 on to 0_0_140a8fde-2ab7-4292-954a-caf9cddfecb8.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Xahsaa into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dragon_Aoseeu_c63da8e2-a833-477c-b536-cd520903e74a on to 13_3_47a6f79f-e9ec-4199-b869-6e94b913ec19.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Aoseeu into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting fire_dragon_Kowlxj_6d346cae-48c0-40db-a082-278813f25bf5 on to 13_9_fcd8dbab-d62c-46a3-a3ea-981a4d34e145.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Kowlxj into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting light_dragon_Pybeie_cb3ad947-f4d7-49f9-9c41-e51b8286c2e8 on to 1_2_b66aed5a-2261-4add-9161-9ee9ce553e79.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Pybeie into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting air_dragon_Dily_38bf34b4-30b4-4a8f-a839-ff69f4376164 on to 2_9_dbcb5472-ff34-4f3c-9215-d3a811b4c61d.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Dily into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dragon_Ricye_240ea968-638e-4f33-84a5-27fc6b2267e5 on to 0_11_3a749d6f-c29c-48f8-a2c4-89ac547a3909.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Ricye into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting air_dragon_Mori_ad5e456a-3a62-413a-94b2-f1980dc310c0 on to 0_2_066c775c-b299-4190-852a-558d7d687f55.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Mori into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dragon_Piqyb_dd51537b-36ea-4084-935f-2040782e1f67 on to 7_6_2a78fbc8-a7e2-4577-b508-9710205b8574.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Piqyb into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dragon_Fyuio_bce5436e-e910-40b5-bfb9-a3453e71c817 on to 1_9_3f1a2cf4-ed5e-4066-bc08-dd8dbcf30545.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Fyuio into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting air_dragon_Oidyjz_7ffd2bfb-69b3-4319-8309-1073f231dee2 on to 13_8_8c6ecd4f-d94e-46d9-88f5-5bbdd05a05e7.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Oidyjz into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting water_dragon_Eiro_45034723-99a2-480e-a336-08f64dacf13c on to 0_3_fabc9e28-15ef-450c-9cee-6df133e925e7.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Eiro into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dragon_Hafei_2ca66dbd-7751-4433-a258-3feedb5254c1 on to 2_0_4e4a5150-a869-4a63-988e-6f2f6f4a84a0.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Hafei into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting water_dragon_Wotem_4c62915e-321b-4f44-9d6f-111d23996e88 on to 6_12_b36021f4-50a6-4433-8e66-168a7b9d4ec8.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Wotem into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting air_dragon_Cubug_49e8f6b9-17fa-4e5d-86b8-e5840153555d on to 4_7_83395cf2-116f-41e0-8549-3875e80c0da9.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Cubug into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dark_dragon_Sitjy_d6ec5986-4215-4072-b5ad-47847ec2dd01 on to 8_13_8c2e6dd4-b2f2-4055-a73d-b29813eee183.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Sitjy into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dragon_Aoxn_b9d82751-e1c0-4788-bb39-9dd49bcd0fd8 on to 11_0_03a6e292-2d3a-4060-9caa-1ebe04ec606a.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Aoxn into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting dragon_Uiuo_af81f894-e2e6-4e52-acd0-eb90bde5d69f on to 6_0_be78df43-b17c-4e0c-9dbb-b33c288159f4.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Uiuo into queue
+[2025-04-06 00:57:59] [INFO] [Component] Setting air_dragon_Veceu_cd28cd8c-ba88-49c2-af0d-d9dfd62b8113 on to 14_7_d534c2ca-0a9e-4232-8597-5133911ebea7.
+[2025-04-06 00:57:59] [INFO] [SpeedQueue] Added unit enemy:Veceu into queue
+[2025-04-06 00:57:59] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 00:58:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 00:58:00] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 00:58:00] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 00:58:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 00:58:00] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 00:58:00] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 00:58:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 00:58:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 00:58:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 00:58:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 00:58:00] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dragon_Aoxn_b9d82751-e1c0-4788-bb39-9dd49bcd0fd8
+[2025-04-06 00:58:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 00:58:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.48725947737693787 seconds
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Aoxn Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Kowlxj Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Piqyb Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Oidyjz Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Fyuio Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Xahsaa Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Cubug Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Buow Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Mori Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Veceu Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Dily Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Vuey Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Eiro Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Ooaj Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Wotem Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Aoseeu Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Hafei Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Uiuo Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Pybeie Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Ricye Triggered ability system
+[2025-04-06 00:58:01] [INFO] [AbilitySystem] Sitjy Triggered ability system
+[2025-04-06 00:58:06] [INFO] [MovementSystem] Aoxn is planning to move from [11, 0] to [12, 0]
+[2025-04-06 00:58:06] [INFO] [MovementSystem] Updated movement area for Aoxn
+[2025-04-06 00:58:06] [INFO] [MovementSystem] Updated movement path for Aoxn
+[2025-04-06 00:58:06] [INFO] [Component] Sett

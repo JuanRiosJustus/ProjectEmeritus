@@ -1,0 +1,113 @@
+[2025-04-21 01:00:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 01:00:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 01:00:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 01:00:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 01:00:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 01:00:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 01:00:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 01:00:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 01:00:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 01:00:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 01:00:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 01:00:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 01:00:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 01:00:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 01:00:57] [INFO] [Component] Setting dragon_Kymii_ff897b6a-d67e-4a5b-96ec-6d96a591238e on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Kymii_ff897b6a-d67e-4a5b-96ec-6d96a591238e","structure":""}.
+[2025-04-21 01:00:57] [INFO] [SpeedQueue] Added unit enemy:Kymii into queue
+[2025-04-21 01:00:57] [INFO] [Component] Setting water_dragon_Yiwqxo_861d724f-7a0e-4891-ba2f-f14309eff8f9 on to {"row":5,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Yiwqxo_861d724f-7a0e-4891-ba2f-f14309eff8f9","structure":""}.
+[2025-04-21 01:00:57] [INFO] [SpeedQueue] Added unit enemy:Yiwqxo into queue
+[2025-04-21 01:00:57] [INFO] [Component] Setting dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca on to {"row":1,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca","structure":""}.
+[2025-04-21 01:00:57] [INFO] [SpeedQueue] Added unit enemy:Raeo into queue
+[2025-04-21 01:00:57] [INFO] [Component] Setting dragon_Qyqo_fbcd9246-32e8-4e84-8488-4d1ee2dfe5ab on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Qyqo_fbcd9246-32e8-4e84-8488-4d1ee2dfe5ab","structure":""}.
+[2025-04-21 01:00:57] [INFO] [SpeedQueue] Added unit enemy:Qyqo into queue
+[2025-04-21 01:00:57] [INFO] [Component] Setting dragon_Wauia_4c2a11f3-2b46-4709-bcc9-22f7aa5f0170 on to {"row":0,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Wauia_4c2a11f3-2b46-4709-bcc9-22f7aa5f0170","structure":""}.
+[2025-04-21 01:00:57] [INFO] [SpeedQueue] Added unit enemy:Wauia into queue
+[2025-04-21 01:01:00] [INFO] [Component] Setting earth_dragon_Jowu_0e58c65d-02ee-4ac3-92df-9c4293d30c42 on to {"row":4,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Jowu_0e58c65d-02ee-4ac3-92df-9c4293d30c42","structure":""}.
+[2025-04-21 01:01:00] [INFO] [SpeedQueue] Added unit user:Jowu into queue
+[2025-04-21 01:01:00] [INFO] [Component] Setting earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee on to {"row":7,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee","structure":""}.
+[2025-04-21 01:01:00] [INFO] [SpeedQueue] Added unit user:Ueua into queue
+[2025-04-21 01:01:00] [INFO] [Component] Setting earth_dragon_Beuify_d30ae6b9-e9cd-4e48-9af8-2077f0f74573 on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Beuify_d30ae6b9-e9cd-4e48-9af8-2077f0f74573","structure":""}.
+[2025-04-21 01:01:00] [INFO] [SpeedQueue] Added unit user:Beuify into queue
+[2025-04-21 01:01:00] [INFO] [Component] Setting water_dragon_Cice_5966d20c-9fa6-4ca5-a748-d3339ad50d6d on to {"row":0,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Cice_5966d20c-9fa6-4ca5-a748-d3339ad50d6d","structure":""}.
+[2025-04-21 01:01:00] [INFO] [SpeedQueue] Added unit user:Cice into queue
+[2025-04-21 01:01:00] [INFO] [Component] Setting earth_dragon_Junx_966ef065-ec65-49dd-a59f-675d2428948d on to {"row":2,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Junx_966ef065-ec65-49dd-a59f-675d2428948d","structure":""}.
+[2025-04-21 01:01:00] [INFO] [SpeedQueue] Added unit user:Junx into queue
+[2025-04-21 01:01:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-21 01:01:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-21 01:01:00] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-21 01:01:00] [INFO] [FontPool] Started initializing FontPool
+[2025-04-21 01:01:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-21 01:01:00] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-21 01:01:00] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-21 01:01:00] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-21 01:01:00] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-21 01:01:00] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-21 01:01:00] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-21 01:01:00] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee
+[2025-04-21 01:01:00] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee
+[2025-04-21 01:01:00] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 01:01:00] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 01:01:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 01:01:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 01:01:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-21 01:01:00] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:01:00] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:01:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 01:01:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 01:01:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-21 01:01:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.484594464302063 seconds
+[2025-04-21 01:01:02] [INFO] [InputHandler] Gliding 0 camera to new tile 7_5_75bc94a5-bf91-49b3-8712-cc6043a09125
+[2025-04-21 01:01:02] [INFO] [InputHandler] Gliding 1 camera to new tile 7_5_75bc94a5-bf91-49b3-8712-cc6043a09125
+[2025-04-21 01:01:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee
+[2025-04-21 01:01:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee
+[2025-04-21 01:01:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Ueua
+[2025-04-21 01:01:03] [INFO] [MovementSystem] Updated movement range to 7 for Ueua
+[2025-04-21 01:01:03] [INFO] [MovementSystem] Updated movement path from [7, 5] to [7, 6] for Ueua
+[2025-04-21 01:01:03] [INFO] [Component] Setting earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee on to {"row":7,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Ueua_61aee2bf-7973-4434-a8da-0fe05bfec6ee","structure":""}.
+[2025-04-21 01:01:03] [INFO] [MovementSystem] Moved from [7, 5] to [7, 6]
+[2025-04-21 01:01:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Ueua
+[2025-04-21 01:01:03] [INFO] [InputHandler] Gliding 0 camera to new tile 7_6_ede71411-ed99-481b-9f88-cd5c1fbae34d
+[2025-04-21 01:01:03] [INFO] [InputHandler] Gliding 1 camera to new tile 7_6_ede71411-ed99-481b-9f88-cd5c1fbae34d
+[2025-04-21 01:01:03] [INFO] [AbilityPanel] Updating ability selection for dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca
+[2025-04-21 01:01:03] [INFO] [AbilityPanel] Finished ability selection for dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca
+[2025-04-21 01:01:03] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 01:01:03] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 01:01:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 01:01:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 01:01:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca
+[2025-04-21 01:01:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca
+[2025-04-21 01:01:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Raeo
+[2025-04-21 01:01:03] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 01:01:03] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 01:01:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 01:01:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 01:01:03] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_9fc8bc6b-97f1-4311-8ec3-fdc3be111bf2
+[2025-04-21 01:01:03] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_9fc8bc6b-97f1-4311-8ec3-fdc3be111bf2
+[2025-04-21 01:01:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Junx_966ef065-ec65-49dd-a59f-675d2428948d
+[2025-04-21 01:01:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Junx_966ef065-ec65-49dd-a59f-675d2428948d
+[2025-04-21 01:01:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Junx
+[2025-04-21 01:01:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Qyqo_fbcd9246-32e8-4e84-8488-4d1ee2dfe5ab
+[2025-04-21 01:01:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Qyqo_fbcd9246-32e8-4e84-8488-4d1ee2dfe5ab
+[2025-04-21 01:01:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Qyqo
+[2025-04-21 01:01:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Jowu_0e58c65d-02ee-4ac3-92df-9c4293d30c42
+[2025-04-21 01:01:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Jowu_0e58c65d-02ee-4ac3-92df-9c4293d30c42
+[2025-04-21 01:01:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Jowu
+[2025-04-21 01:01:15] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Qyqo_fbcd9246-32e8-4e84-8488-4d1ee2dfe5ab
+[2025-04-21 01:01:15] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Qyqo_fbcd9246-32e8-4e84-8488-4d1ee2dfe5ab
+[2025-04-21 01:01:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Qyqo
+[2025-04-21 01:01:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Wauia_4c2a11f3-2b46-4709-bcc9-22f7aa5f0170
+[2025-04-21 01:01:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Wauia_4c2a11f3-2b46-4709-bcc9-22f7aa5f0170
+[2025-04-21 01:01:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Wauia
+[2025-04-21 01:01:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca
+[2025-04-21 01:01:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Raeo_526a15ec-651a-4848-a2c1-0cf70b5260ca
+[2025-04-21 01:01:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 01:01:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Raeo

@@ -1,0 +1,131 @@
+[2025-04-12 23:47:35] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-12 23:47:35] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-12 23:47:35] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-12 23:47:35] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-12 23:47:35] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-12 23:47:35] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-12 23:47:35] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-12 23:47:35] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-12 23:47:35] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-12 23:47:35] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-12 23:47:35] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-12 23:47:35] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-12 23:47:35] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-12 23:47:35] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-12 23:47:36] [INFO] [Component] Setting fire_dragon_Dyro_11af005b-9fb6-4b16-8127-57dc72672ddc on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Dyro_11af005b-9fb6-4b16-8127-57dc72672ddc","column":0,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Dyro into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting water_dragon_Uiau_24c8475d-e3e0-48b3-b3ef-e8cdd119c78f on to {"spawn_region":[],"collider":"","unit":"water_dragon_Uiau_24c8475d-e3e0-48b3-b3ef-e8cdd119c78f","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Uiau into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting water_dragon_Byfuu_35955ab5-8cae-48c0-bdcb-a375405a4c47 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Byfuu_35955ab5-8cae-48c0-bdcb-a375405a4c47","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Byfuu into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting earth_dragon_Vamu_a5e1cccc-9bfe-443f-b5f9-6c5079ae729f on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Vamu_a5e1cccc-9bfe-443f-b5f9-6c5079ae729f","column":0,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Vamu into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d on to {"spawn_region":[],"collider":"","unit":"dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Rigi into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting water_dragon_Bewo_5909f740-433a-4ca6-bdd4-b0c2719880e0 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Bewo_5909f740-433a-4ca6-bdd4-b0c2719880e0","column":7,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Bewo into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting water_dragon_Nyiu_fa97624c-d24c-49ab-afaa-b5bd44ed246e on to {"spawn_region":[],"collider":"","unit":"water_dragon_Nyiu_fa97624c-d24c-49ab-afaa-b5bd44ed246e","column":1,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Nyiu into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting dark_dragon_Xomen_3e055524-ec84-4a18-845b-b0a8d85dc67d on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Xomen_3e055524-ec84-4a18-845b-b0a8d85dc67d","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Xomen into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting fire_dragon_Dyqh_57ce3d04-4a29-4870-84d1-6bd402b14819 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Dyqh_57ce3d04-4a29-4870-84d1-6bd402b14819","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit enemy:Dyqh into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting dark_dragon_Ayhyf_65687ec1-dcd5-471a-a8f2-67aaaeb41224 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ayhyf_65687ec1-dcd5-471a-a8f2-67aaaeb41224","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit user:Ayhyf into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting light_dragon_Quycu_5a19f27d-6f4c-403d-ab98-a0e67366560e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Quycu_5a19f27d-6f4c-403d-ab98-a0e67366560e","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit user:Quycu into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting earth_dragon_Rektc_0955384d-d361-4828-8a81-3f030c763239 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Rektc_0955384d-d361-4828-8a81-3f030c763239","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit user:Rektc into queue
+[2025-04-12 23:47:36] [INFO] [Component] Setting earth_dragon_Letu_d7f9cf07-bd63-4da9-be56-09f8f1d2c8a4 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Letu_d7f9cf07-bd63-4da9-be56-09f8f1d2c8a4","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Added unit user:Letu into queue
+[2025-04-12 23:47:36] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-12 23:47:36] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-12 23:47:36] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-12 23:47:36] [INFO] [FontPool] Started initializing FontPool
+[2025-04-12 23:47:36] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-12 23:47:36] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-12 23:47:36] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-12 23:47:36] [INFO] [AbilityPanel] Updating ability selection for dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d
+[2025-04-12 23:47:36] [INFO] [AbilityPanel] Finished ability selection for dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d
+[2025-04-12 23:47:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-12 23:47:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-12 23:47:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-12 23:47:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-12 23:47:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 23:47:36] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-12 23:47:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d
+[2025-04-12 23:47:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d
+[2025-04-12 23:47:36] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-12 23:47:36] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-12 23:47:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-12 23:47:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-12 23:47:36] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-12 23:47:37] [INFO] [VisualsSystem] Finished creating blurred background after 0.4861692786216736 seconds
+[2025-04-12 23:47:42] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_397e5e84-5b20-4dc6-a6c0-f082bc9973fb
+[2025-04-12 23:47:42] [INFO] [InputHandler] Gliding 1 camera to new tile 3_0_397e5e84-5b20-4dc6-a6c0-f082bc9973fb
+[2025-04-12 23:47:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 23:47:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Rigi
+[2025-04-12 23:47:43] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_397e5e84-5b20-4dc6-a6c0-f082bc9973fb
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement range to 5 for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [7, 4] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement range to 5 for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [7, 4] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [6, 4] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [6, 4] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [5, 3] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [5, 3] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 3] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 3] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 2] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [4, 2] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 2] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 2] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 1] for Rigi
+[2025-04-12 23:47:43] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 1] for Rigi
+[2025-04-12 23:47:44] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Rigi
+[2025-04-12 23:47:44] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Rigi
+[2025-04-12 23:47:44] [INFO] [Component] Setting dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d on to {"spawn_region":[],"collider":"","unit":"dragon_Rigi_6678f3c3-23ac-48cf-bca0-d379f76a4a5d","column":1,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-12 23:47:44] [INFO] [MovementSystem] Moved from [3, 0] to [3, 1]
+[2025-04-12 23:47:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-12 23:47:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Rigi
+[2025-04-12 23:47:44] [INFO] [InputHandler] Gliding 0 camera to new tile 3_1_af34877d-5257-4974-a74e-c01cba495c54
+[2025-04-12 23:47:44] [INFO] [InputHandler] Gliding 1 camera to new tile 3_1_af34877d-5257-4974-a74e-c01cba495c54
+[2025-04-12 23:47:46] [INFO] [InputHandler] Gliding 0 camera to new tile 3_1_af34877d-5257-4974-a74e-c01cba495c54
+[2025-04-12 23:47:47] [INFO] [AbilityPanel] Selecting soak
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Rigi is planning to use soak on [6, 5]
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of sight for Rigi, viewing 9 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 3 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:47:47] [INFO] [CombatSystem] Started constructing damage mappings for Rigi to use soak
+[2025-04-12 23:47:47] [INFO] [CombatSystem] Finished constructing damage mappings for Rigi to use soak
+[2025-04-12 23:47:47] [INFO] [CombatSystem] Started constructing cost mappings for Rigi to use soak
+[2025-04-12 23:47:47] [INFO] [CombatSystem] Finished constructing cost mappings for Rigi to use soak
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Rigi is planning to use soak on [6, 4]
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 2 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Rigi is planning to use soak on [5, 4]
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 3 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Rigi is planning to use soak on [5, 3]
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 2 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Rigi is planning to use soak on [5, 2]
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 2 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Rigi is planning to use soak on [4, 2]
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 2 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Rigi is planning to use soak on [4, 1]
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 2 tiles
+[2025-04-12 23:47:47] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Rigi is planning to use soak on [3, 0]
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 2 tiles
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Rigi is planning to use soak on [2, 0]
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 3 tiles
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 1 tiles
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Rigi is planning to use soak on null
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Updated line of sight for Rigi, viewing 0 tiles
+[2025-04-12 23:48:03] [INFO] [AbilitySystem] Updated area of effect for Rigi viewing 0 tiles

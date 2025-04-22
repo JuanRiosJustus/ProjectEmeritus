@@ -1,0 +1,318 @@
+[2025-04-13 18:16:08] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 18:16:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 18:16:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 18:16:08] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 18:16:08] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 18:16:08] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 18:16:08] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 18:16:08] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 18:16:08] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 18:16:08] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 18:16:08] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 18:16:08] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 18:16:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 18:16:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 18:16:08] [INFO] [Component] Setting dragon_Qiqyi_f0a33d1e-16b4-4c09-bd04-8832f85fb332 on to {"spawn_region":[],"collider":"","unit":"dragon_Qiqyi_f0a33d1e-16b4-4c09-bd04-8832f85fb332","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit enemy:Qiqyi into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting water_dragon_Loyyi_5175fd5c-9399-44be-abd2-f2836bda96cf on to {"spawn_region":[],"collider":"","unit":"water_dragon_Loyyi_5175fd5c-9399-44be-abd2-f2836bda96cf","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit enemy:Loyyi into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting dark_dragon_Bubqb_39991abd-bbac-4322-8bd0-81c41c3489f3 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Bubqb_39991abd-bbac-4322-8bd0-81c41c3489f3","column":7,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit enemy:Bubqb into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting air_dragon_Wejyfi_a277cca8-a037-4573-9ffe-b195155a695e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Wejyfi_a277cca8-a037-4573-9ffe-b195155a695e","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit enemy:Wejyfi into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting dark_dragon_Iihohu_8ee1aaaf-a214-4306-9c7b-7c6e1d575ba0 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iihohu_8ee1aaaf-a214-4306-9c7b-7c6e1d575ba0","column":1,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit enemy:Iihohu into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting air_dragon_Hohaq_0602df6b-1920-4a9c-9f93-2ff0a1660b8e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Hohaq_0602df6b-1920-4a9c-9f93-2ff0a1660b8e","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit enemy:Hohaq into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit enemy:Dyxae into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting fire_dragon_Fixii_248a8521-3c2c-4a90-a752-aa8b1fd40d14 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Fixii_248a8521-3c2c-4a90-a752-aa8b1fd40d14","column":2,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit user:Fixii into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting earth_dragon_Burae_e3dc46ca-2e68-4ad5-8656-8d21473a690d on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Burae_e3dc46ca-2e68-4ad5-8656-8d21473a690d","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit user:Burae into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting dark_dragon_Qyzoeo_dae233d2-d243-4bc8-b9d7-fa17610bda04 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Qyzoeo_dae233d2-d243-4bc8-b9d7-fa17610bda04","column":6,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit user:Qyzoeo into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting air_dragon_Hiqroa_3dc3bcb3-5664-43e1-80e6-a75e215f1141 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Hiqroa_3dc3bcb3-5664-43e1-80e6-a75e215f1141","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit user:Hiqroa into queue
+[2025-04-13 18:16:08] [INFO] [Component] Setting earth_dragon_Mohk_158e58b9-ecbb-41d5-93c1-b3e56e46dd1e on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Mohk_158e58b9-ecbb-41d5-93c1-b3e56e46dd1e","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Added unit user:Mohk into queue
+[2025-04-13 18:16:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 18:16:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 18:16:08] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 18:16:08] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 18:16:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 18:16:08] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 18:16:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 18:16:08] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:08] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 18:16:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 18:16:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 18:16:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 18:16:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 18:16:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 18:16:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:08] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 18:16:08] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 18:16:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 18:16:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 18:16:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 18:16:09] [INFO] [VisualsSystem] Finished creating blurred background after 0.49042844772338867 seconds
+[2025-04-13 18:16:10] [INFO] [InputHandler] Gliding 0 camera to new tile 0_1_cfe8e8ee-2937-4045-82b5-6c06ffa72d6c
+[2025-04-13 18:16:10] [INFO] [InputHandler] Gliding 1 camera to new tile 0_1_cfe8e8ee-2937-4045-82b5-6c06ffa72d6c
+[2025-04-13 18:16:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 18:16:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Dyxae
+[2025-04-13 18:16:11] [INFO] [InputHandler] Gliding 0 camera to new tile 0_1_cfe8e8ee-2937-4045-82b5-6c06ffa72d6c
+[2025-04-13 18:16:12] [INFO] [AbilityPanel] Selecting shine
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Dyxae is planning to use shine on [3, 6]
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated area of sight for Dyxae, viewing 8 tiles
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started calculating damage after defenses for Burae
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished calculating damage after defenses for Burae
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Dyxae is planning to use shine on [3, 5]
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 4 tiles
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Dyxae is planning to use shine on [3, 4]
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 7 tiles
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 3]
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 5 tiles
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 2]
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 1]
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:12] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:12] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:12] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:22] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 2]
+[2025-04-13 18:16:22] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:22] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:22] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:22] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:23] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 1]
+[2025-04-13 18:16:23] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:23] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:23] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:23] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:23] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:23] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:23] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 2]
+[2025-04-13 18:16:25] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:25] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 1]
+[2025-04-13 18:16:25] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:25] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:25] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:25] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:25] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:25] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:25] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 2]
+[2025-04-13 18:16:26] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:26] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 1]
+[2025-04-13 18:16:26] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:26] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:26] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:26] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:26] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:26] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:26] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 2]
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 1]
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:27] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:27] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:27] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:27] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 2]
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:27] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:27] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 1]
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 2]
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Dyxae is planning to use shine on [2, 1]
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Updated line of sight for Dyxae, viewing 3 tiles
+[2025-04-13 18:16:28] [INFO] [AbilitySystem] Updated area of effect for Dyxae viewing 1 tiles
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:28] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:28] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Checking cost requirements for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Dyxae is able to pay for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Paying cost requirements for Dyxae using shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use shine
+[2025-04-13 18:16:30] [INFO] [AbilitySystem] Used from shine on [2, 1]
+[2025-04-13 18:16:30] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:30] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 18:16:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:30] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Dyxae_eb31ecbf-50f8-44ec-9ad4-281a68a5eb47
+[2025-04-13 18:16:30] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 18:16:30] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 18:16:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing cost mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started dealing damage with shine to Iihohu 
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing damage mappings for Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started constructing damage mappings after defense Dyxae to use shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 10.0 Raw damage before modifiers for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Dyxae lands a Same-Type-Attack-Bonus with shine, for 15.0
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 25.0 damage after modifiers for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished calculating damage after modifiers for Dyxae
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Started calculating damage after defenses for Iihohu
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 25.0 Raw damage after defenses for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished calculating damage after defenses for Iihohu
+[2025-04-13 18:16:30] [INFO] [CombatSystem] 22.727274 damage after defenses for shine
+[2025-04-13 18:16:30] [INFO] [CombatSystem] Finished constructing damage mappings after for Dyxae to use shine

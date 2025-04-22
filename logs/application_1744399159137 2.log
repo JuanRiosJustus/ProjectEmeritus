@@ -1,0 +1,172 @@
+[2025-04-11 12:19:19] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-11 12:19:19] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-11 12:19:19] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-11 12:19:19] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-11 12:19:19] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-11 12:19:19] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-11 12:19:19] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-11 12:19:19] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-11 12:19:19] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-11 12:19:19] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-11 12:19:19] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-11 12:19:19] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-11 12:19:19] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-11 12:19:19] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-11 12:19:19] [INFO] [Component] Setting air_dragon_Zymeu_493f81bb-6aba-4a2e-b945-6525ea7c751b on to {"spawn_region":[],"collider":"","unit":"air_dragon_Zymeu_493f81bb-6aba-4a2e-b945-6525ea7c751b","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Zymeu into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dark_dragon_Hadev_c94c8791-02e4-42e9-a21d-30f3012ebaa3 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Hadev_c94c8791-02e4-42e9-a21d-30f3012ebaa3","column":8,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Hadev into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting water_dragon_Wuqky_9596f81f-cc78-4bbe-8570-754d4981a76e on to {"spawn_region":[],"collider":"","unit":"water_dragon_Wuqky_9596f81f-cc78-4bbe-8570-754d4981a76e","column":0,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Wuqky into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting air_dragon_Piftiw_fec60989-c002-4b74-a18d-49b0d4a0f74c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Piftiw_fec60989-c002-4b74-a18d-49b0d4a0f74c","column":13,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Piftiw into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting light_dragon_Zehd_1ffbd7bd-fcdd-4236-a0ff-c81943ee601d on to {"spawn_region":[],"collider":"","unit":"light_dragon_Zehd_1ffbd7bd-fcdd-4236-a0ff-c81943ee601d","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Zehd into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting light_dragon_Nyxpak_99cdaf7e-fa88-48c7-a822-613522fa818e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Nyxpak_99cdaf7e-fa88-48c7-a822-613522fa818e","column":4,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Nyxpak into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting air_dragon_Eeuz_ff02d94f-5f40-47a3-8244-34eba477cede on to {"spawn_region":[],"collider":"","unit":"air_dragon_Eeuz_ff02d94f-5f40-47a3-8244-34eba477cede","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Eeuz into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dragon_Xopn_7273075e-ce58-4848-8c38-d1ce33962932 on to {"spawn_region":[],"collider":"","unit":"dragon_Xopn_7273075e-ce58-4848-8c38-d1ce33962932","column":7,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Xopn into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting light_dragon_Davw_2df5e971-4e03-4548-b71d-8cdbc7d03df7 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Davw_2df5e971-4e03-4548-b71d-8cdbc7d03df7","column":9,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Davw into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dark_dragon_Xipe_58ab8dd6-b6c8-4eec-a5f3-c185071ba9c4 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Xipe_58ab8dd6-b6c8-4eec-a5f3-c185071ba9c4","column":3,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Xipe into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting air_dragon_Hogyfb_3581599a-2ab4-41ec-a7ad-3e65645076f0 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Hogyfb_3581599a-2ab4-41ec-a7ad-3e65645076f0","column":4,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Hogyfb into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting light_dragon_Kupi_ed0265c9-1c24-40c3-81e7-a674ce399711 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Kupi_ed0265c9-1c24-40c3-81e7-a674ce399711","column":10,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Kupi into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dark_dragon_Lywaqe_ad9da247-d1ee-482e-b87a-551aa15a398c on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Lywaqe_ad9da247-d1ee-482e-b87a-551aa15a398c","column":7,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Lywaqe into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dragon_Zohiow_a16346c7-fcd8-4483-8f64-9e9bafacd9ee on to {"spawn_region":[],"collider":"","unit":"dragon_Zohiow_a16346c7-fcd8-4483-8f64-9e9bafacd9ee","column":4,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Zohiow into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting air_dragon_Ceyd_a3320d1c-1ec0-491a-80cc-d4eaccbc80b3 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Ceyd_a3320d1c-1ec0-491a-80cc-d4eaccbc80b3","column":14,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Ceyd into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dark_dragon_Mahjyj_b10036d5-bda9-42af-bc73-e1d2ded15056 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Mahjyj_b10036d5-bda9-42af-bc73-e1d2ded15056","column":2,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Mahjyj into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting light_dragon_Zehl_323868a5-4cee-488b-97a8-14dcf2cbae6a on to {"spawn_region":[],"collider":"","unit":"light_dragon_Zehl_323868a5-4cee-488b-97a8-14dcf2cbae6a","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Zehl into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting air_dragon_Nypaoa_f536b2f7-9c20-48d4-921b-98e1f6de1866 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Nypaoa_f536b2f7-9c20-48d4-921b-98e1f6de1866","column":11,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit enemy:Nypaoa into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting earth_dragon_Famole_cd875332-d4f0-4e3a-b4a0-d9487d9fff43 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Famole_cd875332-d4f0-4e3a-b4a0-d9487d9fff43","column":1,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Famole into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dragon_Nyslyu_9baad170-d5e5-4987-9ae8-ab8b4ed40d99 on to {"spawn_region":[],"collider":"","unit":"dragon_Nyslyu_9baad170-d5e5-4987-9ae8-ab8b4ed40d99","column":14,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Nyslyu into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dark_dragon_Vaibfz_7b124423-1102-48c1-b186-13ac76180802 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Vaibfz_7b124423-1102-48c1-b186-13ac76180802","column":10,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Vaibfz into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dark_dragon_Depp_0c27b3a5-6915-479d-8f66-504d59c5cfeb on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Depp_0c27b3a5-6915-479d-8f66-504d59c5cfeb","column":12,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Depp into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting earth_dragon_Cipeay_71d8b4f3-bc94-47a9-a99d-96c233dbdec9 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Cipeay_71d8b4f3-bc94-47a9-a99d-96c233dbdec9","column":10,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Cipeay into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dragon_Mudmuo_5f6e1c92-455c-46c6-9059-cc0a3c6a1c7f on to {"spawn_region":[],"collider":"","unit":"dragon_Mudmuo_5f6e1c92-455c-46c6-9059-cc0a3c6a1c7f","column":6,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Mudmuo into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting dragon_Nonyir_67e66674-95ae-4d3f-8935-61d1a3d9cff6 on to {"spawn_region":[],"collider":"","unit":"dragon_Nonyir_67e66674-95ae-4d3f-8935-61d1a3d9cff6","column":12,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Nonyir into queue
+[2025-04-11 12:19:19] [INFO] [Component] Setting water_dragon_Namy_ef896131-7aad-4a42-996b-273689398528 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Namy_ef896131-7aad-4a42-996b-273689398528","column":13,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 12:19:19] [INFO] [SpeedQueue] Added unit user:Namy into queue
+[2025-04-11 12:19:19] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-11 12:19:19] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-11 12:19:19] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-11 12:19:19] [INFO] [FontPool] Started initializing FontPool
+[2025-04-11 12:19:19] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-11 12:19:19] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-11 12:19:20] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-11 12:19:20] [INFO] [AbilitySelectionPanel] Updating ability selection for dark_dragon_Hadev_c94c8791-02e4-42e9-a21d-30f3012ebaa3
+[2025-04-11 12:19:20] [INFO] [AbilitySelectionPanel] Finished ability selection for dark_dragon_Hadev_c94c8791-02e4-42e9-a21d-30f3012ebaa3
+[2025-04-11 12:19:20] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 12:19:20] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 12:19:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 12:19:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 12:19:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 12:19:20] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 12:19:20] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dark_dragon_Hadev_c94c8791-02e4-42e9-a21d-30f3012ebaa3
+[2025-04-11 12:19:20] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dark_dragon_Hadev_c94c8791-02e4-42e9-a21d-30f3012ebaa3
+[2025-04-11 12:19:20] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 12:19:20] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 12:19:20] [INFO] [GreaterAbilityInformationPanel] Started updating Greater Ability Information Panel
+[2025-04-11 12:19:20] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater Ability Information Panel
+[2025-04-11 12:19:20] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-11 12:19:20] [INFO] [VisualsSystem] Finished creating blurred background after 0.5075544714927673 seconds
+[2025-04-11 12:19:23] [INFO] [InputHandler] Gliding 0 camera to new tile 1_8_005ea1fa-f6dd-4760-87fc-db9873a92c54
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement range to 8 for Hadev
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement path from [1, 8] to [5, 11] for Hadev
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement range to 8 for Hadev
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement path from [1, 8] to [5, 11] for Hadev
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 11] for Hadev
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 11] for Hadev
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 12] for Hadev
+[2025-04-11 12:19:23] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 12] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 10] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 10] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 10] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 10] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 9] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 9] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [1, 9] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [1, 9] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [1, 8] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [1, 8] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [1, 9] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [1, 9] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 10] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 10] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [2, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 11] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 12] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [3, 12] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 12] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 12] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 13] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 13] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [5, 13] for Hadev
+[2025-04-11 12:19:24] [INFO] [MovementSystem] Updated movement path from [1, 8] to [5, 13] for Hadev
+[2025-04-11 12:19:25] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 13] for Hadev
+[2025-04-11 12:19:25] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 13] for Hadev
+[2025-04-11 12:19:25] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 12] for Hadev
+[2025-04-11 12:19:25] [INFO] [MovementSystem] Updated movement path from [1, 8] to [4, 12] for Hadev
+[2025-04-11 12:19:26] [INFO] [InputHandler] Gliding 0 camera to new tile 1_8_005ea1fa-f6dd-4760-87fc-db9873a92c54
+[2025-04-11 12:19:27] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Hadev is planning to use ember on [4, 13]
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated area of sight for Hadev, viewing 9 tiles
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 3 tiles
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:27] [INFO] [CombatSystem] Started constructing damage mappings for Hadev to use ember
+[2025-04-11 12:19:27] [INFO] [CombatSystem] Finished constructing damage mappings for Hadev to use ember
+[2025-04-11 12:19:27] [INFO] [CombatSystem] Started constructing cost mappings for Hadev to use ember
+[2025-04-11 12:19:27] [INFO] [CombatSystem] Finished constructing cost mappings for Hadev to use ember
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Hadev is planning to use ember on [3, 12]
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 3 tiles
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Hadev is planning to use ember on [3, 11]
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 6 tiles
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Hadev is planning to use ember on [2, 11]
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 3 tiles
+[2025-04-11 12:19:27] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:28] [INFO] [AbilitySystem] Hadev is planning to use ember on [2, 10]
+[2025-04-11 12:19:28] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 4 tiles
+[2025-04-11 12:19:28] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Hadev is planning to use ember on [1, 10]
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 3 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Hadev is planning to use ember on [1, 9]
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 2 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Hadev is planning to use ember on [0, 9]
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 3 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Hadev is planning to use ember on [0, 8]
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 2 tiles
+[2025-04-11 12:19:29] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:30] [INFO] [AbilitySystem] Hadev is planning to use ember on [0, 6]
+[2025-04-11 12:19:30] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 4 tiles
+[2025-04-11 12:19:30] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 1 tiles
+[2025-04-11 12:19:30] [INFO] [AbilitySystem] Hadev is planning to use ember on null
+[2025-04-11 12:19:30] [INFO] [AbilitySystem] Updated line of sight for Hadev, viewing 0 tiles
+[2025-04-11 12:19:30] [INFO] [AbilitySystem] Updated area of effect for Hadev viewing 0 tiles

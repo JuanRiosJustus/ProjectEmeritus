@@ -1,0 +1,716 @@
+[2025-04-15 02:31:32] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 02:31:32] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 02:31:32] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 02:31:32] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 02:31:32] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 02:31:32] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 02:31:32] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 02:31:32] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 02:31:32] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 02:31:32] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 02:31:32] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 02:31:32] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 02:31:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 02:31:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 02:31:32] [INFO] [Component] Setting air_dragon_Faozw_cc980f3f-23e9-4e04-99e7-6b2f6413a1c5 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Faozw_cc980f3f-23e9-4e04-99e7-6b2f6413a1c5","column":4,"row":4,"structure":"","height":0}.
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Added unit enemy:Faozw into queue
+[2025-04-15 02:31:32] [INFO] [Component] Setting light_dragon_Autiy_1e2f4a0a-ba4c-4d74-a213-88225281c3ce on to {"spawn_region":[],"collider":"","unit":"light_dragon_Autiy_1e2f4a0a-ba4c-4d74-a213-88225281c3ce","column":0,"row":2,"structure":"","height":0}.
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Added unit enemy:Autiy into queue
+[2025-04-15 02:31:32] [INFO] [Component] Setting dark_dragon_Qokate_2869566d-f580-4ea2-b042-22acdc6303b7 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Qokate_2869566d-f580-4ea2-b042-22acdc6303b7","column":2,"row":7,"structure":"","height":0}.
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Added unit enemy:Qokate into queue
+[2025-04-15 02:31:32] [INFO] [Component] Setting water_dragon_Xuix_9c58bcbf-be9d-4c53-a6af-7b64bfc5e849 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Xuix_9c58bcbf-be9d-4c53-a6af-7b64bfc5e849","column":0,"row":3,"structure":"","height":0}.
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Added unit enemy:Xuix into queue
+[2025-04-15 02:31:32] [INFO] [Component] Setting fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287","column":5,"row":0,"structure":"","height":0}.
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Added unit enemy:Iutt into queue
+[2025-04-15 02:31:32] [INFO] [Component] Setting water_dragon_Zexo_86797b6c-314d-4593-a26b-456f9a4cf0bb on to {"spawn_region":[],"collider":"","unit":"water_dragon_Zexo_86797b6c-314d-4593-a26b-456f9a4cf0bb","column":0,"row":1,"structure":"","height":0}.
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Added unit user:Zexo into queue
+[2025-04-15 02:31:32] [INFO] [Component] Setting dragon_Lyne_04eca161-ce33-4786-8efb-650e4f211633 on to {"spawn_region":[],"collider":"","unit":"dragon_Lyne_04eca161-ce33-4786-8efb-650e4f211633","column":2,"row":3,"structure":"","height":0}.
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Added unit user:Lyne into queue
+[2025-04-15 02:31:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 02:31:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 02:31:32] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-15 02:31:32] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 02:31:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 02:31:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-15 02:31:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-15 02:31:32] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287
+[2025-04-15 02:31:32] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287
+[2025-04-15 02:31:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-15 02:31:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-15 02:31:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 02:31:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 02:31:32] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287
+[2025-04-15 02:31:32] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287
+[2025-04-15 02:31:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 02:31:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 02:31:32] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-15 02:31:32] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-15 02:31:32] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:32] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 02:31:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.48793211579322815 seconds
+[2025-04-15 02:31:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 02:31:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 02:31:36] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_6987cdea-06a2-41f9-98b9-afe1d38ca5f1
+[2025-04-15 02:31:36] [INFO] [InputHandler] Gliding 1 camera to new tile 0_5_6987cdea-06a2-41f9-98b9-afe1d38ca5f1
+[2025-04-15 02:31:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 02:31:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Iutt
+[2025-04-15 02:31:37] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_6987cdea-06a2-41f9-98b9-afe1d38ca5f1
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement range to 7 for Iutt
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement path from [0, 5] to null for Iutt
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement range to 7 for Iutt
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement path from [0, 5] to null for Iutt
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 7] for Iutt
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 7] for Iutt
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 6] for Iutt
+[2025-04-15 02:31:37] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 6] for Iutt
+[2025-04-15 02:31:38] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 5] for Iutt
+[2025-04-15 02:31:38] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 5] for Iutt
+[2025-04-15 02:31:38] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Iutt
+[2025-04-15 02:31:38] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Iutt
+[2025-04-15 02:31:39] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Iutt
+[2025-04-15 02:31:39] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Iutt
+[2025-04-15 02:31:39] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 4] for Iutt
+[2025-04-15 02:31:39] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 4] for Iutt
+[2025-04-15 02:31:40] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Iutt
+[2025-04-15 02:31:40] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Iutt
+[2025-04-15 02:31:40] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Iutt
+[2025-04-15 02:31:40] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Iutt
+[2025-04-15 02:31:40] [INFO] [Component] Setting fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Iutt_0c793e7b-988f-461f-b558-acbaecc47287","column":5,"row":2,"structure":"","height":0}.
+[2025-04-15 02:31:40] [INFO] [MovementSystem] Moved from [0, 5] to [2, 5]
+[2025-04-15 02:31:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 02:31:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Iutt
+[2025-04-15 02:31:40] [INFO] [InputHandler] Gliding 0 camera to new tile 2_5_007c8d80-921e-4d2a-bca8-120bd343c83b
+[2025-04-15 02:31:40] [INFO] [InputHandler] Gliding 1 camera to new tile 2_5_007c8d80-921e-4d2a-bca8-120bd343c83b
+[2025-04-15 02:31:41] [INFO] [InputHandler] Gliding 0 camera to new tile 2_5_007c8d80-921e-4d2a-bca8-120bd343c83b
+[2025-04-15 02:31:42] [INFO] [AbilityPanel] Selecting ember
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Iutt is planning to use ember on null
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated area of sight for Iutt, viewing 13 tiles
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 0 tiles
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 0 tiles
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Iutt is planning to use ember on [5, 7]
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 6 tiles
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 7]
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 5 tiles
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 6]
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 5]
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 3 tiles
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 4]
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:42] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Faozw
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Faozw
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:44] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 3]
+[2025-04-15 02:31:44] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:44] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:44] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 2]
+[2025-04-15 02:31:44] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 6 tiles
+[2025-04-15 02:31:44] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 2]
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 5 tiles
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lyne
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lyne
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 1]
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 0]
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:45] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xuix
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xuix
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Iutt is planning to use ember on [2, 0]
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Autiy
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Autiy
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 0]
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Iutt lands a CRIT bonus with ember for 33.0
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 55.0 damage after modifiers for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xuix
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 55.0 Raw damage after defenses for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xuix
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 50.0 damage after defenses for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 1]
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 2]
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 5 tiles
+[2025-04-15 02:31:46] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lyne
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lyne
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:47] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 1]
+[2025-04-15 02:31:47] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:47] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:47] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 0]
+[2025-04-15 02:31:47] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:47] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xuix
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xuix
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:48] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 0]
+[2025-04-15 02:31:48] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:48] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:48] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:48] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:48] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:48] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:48] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:48] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:48] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:48] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:49] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 0]
+[2025-04-15 02:31:49] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:49] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xuix
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xuix
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:49] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:50] [INFO] [AbilitySystem] Iutt is planning to use ember on [2, 0]
+[2025-04-15 02:31:50] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:50] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Autiy
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Autiy
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:50] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Iutt is planning to use ember on [1, 0]
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Zexo
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Zexo
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Iutt is planning to use ember on [2, 0]
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Autiy
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Autiy
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 0]
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:51] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xuix
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xuix
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:52] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 1]
+[2025-04-15 02:31:52] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:52] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:52] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 2]
+[2025-04-15 02:31:52] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 5 tiles
+[2025-04-15 02:31:52] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lyne
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lyne
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 2]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 6 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 3]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 4]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Faozw
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Faozw
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 3]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 2]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 6 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 1]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 5 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [4, 0]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Iutt is planning to use ember on [3, 0]
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:53] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xuix
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xuix
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:31:54] [INFO] [AbilitySystem] Iutt is planning to use ember on [2, 0]
+[2025-04-15 02:31:54] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:31:54] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Autiy
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Autiy
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:31:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:31:54] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:31:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Iutt is planning to use ember on [1, 0]
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iutt
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Iutt lands a Same-Type-Attack-Bonus with ember, for 12.0
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iutt
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Zexo
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Zexo
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] 20.0 damage after defenses for ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Iutt is planning to use ember on [0, 0]
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 4 tiles
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 1 tiles
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Iutt is planning to use ember on null
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Updated line of sight for Iutt, viewing 0 tiles
+[2025-04-15 02:32:04] [INFO] [AbilitySystem] Updated area of effect for Iutt viewing 0 tiles
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Started constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Finished constructing damage mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Started constructing cost mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [CombatSystem] Finished constructing cost mappings for Iutt to use ember
+[2025-04-15 02:32:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

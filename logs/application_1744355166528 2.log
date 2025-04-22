@@ -1,0 +1,162 @@
+[2025-04-11 00:06:06] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-11 00:06:06] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-11 00:06:06] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-11 00:06:06] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-11 00:06:06] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-11 00:06:06] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-11 00:06:06] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-11 00:06:06] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-11 00:06:06] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-11 00:06:06] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-11 00:06:06] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-11 00:06:06] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-11 00:06:06] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-11 00:06:06] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Kovh_4573d47e-ff6a-4da4-b0a6-cfc083bd00b6 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Kovh_4573d47e-ff6a-4da4-b0a6-cfc083bd00b6","column":9,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Kovh into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting earth_dragon_Wyptwy_c9738967-b123-4273-ad27-06d333bcffd0 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Wyptwy_c9738967-b123-4273-ad27-06d333bcffd0","column":8,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Wyptwy into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dragon_Yosi_4249b2fd-1f91-4dca-94dc-a507d393d181 on to {"spawn_region":[],"collider":"","unit":"dragon_Yosi_4249b2fd-1f91-4dca-94dc-a507d393d181","column":7,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Yosi into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting fire_dragon_Jyxa_d5a5f510-9f7b-4c79-bc24-b901e94ecdde on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Jyxa_d5a5f510-9f7b-4c79-bc24-b901e94ecdde","column":5,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Jyxa into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting earth_dragon_Ieqyka_c5f015fa-5f22-4b3e-a13e-4fc533e9c501 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Ieqyka_c5f015fa-5f22-4b3e-a13e-4fc533e9c501","column":13,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Ieqyka into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting earth_dragon_Oaabc_224344fa-50c9-4281-96ec-2f857bda8c11 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Oaabc_224344fa-50c9-4281-96ec-2f857bda8c11","column":3,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Oaabc into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Sipluv_11a734a1-56d6-4ed3-8875-20544119113d on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Sipluv_11a734a1-56d6-4ed3-8875-20544119113d","column":8,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Sipluv into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting light_dragon_Ooqvo_0133cdaf-4165-46e4-8c7f-40009293e756 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Ooqvo_0133cdaf-4165-46e4-8c7f-40009293e756","column":11,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Ooqvo into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Dottn_580c1ec0-0258-40be-b388-069063b4725c on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Dottn_580c1ec0-0258-40be-b388-069063b4725c","column":1,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Dottn into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting fire_dragon_Puvy_9753acdf-ed45-45b6-b313-5657d8e2468c on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Puvy_9753acdf-ed45-45b6-b313-5657d8e2468c","column":2,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Puvy into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting earth_dragon_Wabjyv_8e5f214c-2d95-4d86-a2aa-e91c997a2c81 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Wabjyv_8e5f214c-2d95-4d86-a2aa-e91c997a2c81","column":14,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Wabjyv into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting light_dragon_Fyio_0ec6d67e-ad46-4418-a933-cc3800df1605 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Fyio_0ec6d67e-ad46-4418-a933-cc3800df1605","column":2,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Fyio into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dragon_Lacek_b4414523-117b-4afb-b5f7-b7764cd00ea1 on to {"spawn_region":[],"collider":"","unit":"dragon_Lacek_b4414523-117b-4afb-b5f7-b7764cd00ea1","column":1,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Lacek into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Vilujz_3b231b37-7158-4cc6-967c-3613976196ce on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Vilujz_3b231b37-7158-4cc6-967c-3613976196ce","column":12,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Vilujz into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting water_dragon_Yijiy_c205a076-fd4f-44c4-a6b3-52c72d0e8859 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Yijiy_c205a076-fd4f-44c4-a6b3-52c72d0e8859","column":2,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Yijiy into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dragon_Nybxy_407499f7-6a34-41cd-b83d-4e7705e2029a on to {"spawn_region":[],"collider":"","unit":"dragon_Nybxy_407499f7-6a34-41cd-b83d-4e7705e2029a","column":11,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Nybxy into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Zeld_50dcd764-5910-4a4d-9e4e-cd7f94899c81 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zeld_50dcd764-5910-4a4d-9e4e-cd7f94899c81","column":8,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Zeld into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting fire_dragon_Aumuay_80574432-8166-4851-9e61-a301734e6da2 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Aumuay_80574432-8166-4851-9e61-a301734e6da2","column":9,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Aumuay into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Auwk_a996089b-850b-4ead-b0b7-841721d64d6f on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Auwk_a996089b-850b-4ead-b0b7-841721d64d6f","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Auwk into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting light_dragon_Jikmek_1148f08d-2788-43f1-b846-f65c6fefb0ee on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jikmek_1148f08d-2788-43f1-b846-f65c6fefb0ee","column":4,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Jikmek into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting fire_dragon_Kerev_efc78e87-8110-48c7-8343-49086482d559 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Kerev_efc78e87-8110-48c7-8343-49086482d559","column":14,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Kerev into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting air_dragon_Ouxwie_c76f20f0-9504-4be4-9d3a-b7dd9dd73003 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Ouxwie_c76f20f0-9504-4be4-9d3a-b7dd9dd73003","column":14,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Ouxwie into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dragon_Qupsva_cf734c32-a714-4a6c-b9de-08d19a47d817 on to {"spawn_region":[],"collider":"","unit":"dragon_Qupsva_cf734c32-a714-4a6c-b9de-08d19a47d817","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit enemy:Qupsva into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Qowzeu_b73c32d2-bd07-4185-b574-99e778e666e8 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Qowzeu_b73c32d2-bd07-4185-b574-99e778e666e8","column":11,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Qowzeu into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting water_dragon_Dydn_79083192-28ad-48fa-905a-41c9eb6a7866 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Dydn_79083192-28ad-48fa-905a-41c9eb6a7866","column":5,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Dydn into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting water_dragon_Vuiaod_0e443126-4387-4600-86bb-116b13b2c476 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Vuiaod_0e443126-4387-4600-86bb-116b13b2c476","column":11,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Vuiaod into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting air_dragon_Iyrie_84654d94-c9ab-4853-8523-2c716affe2df on to {"spawn_region":[],"collider":"","unit":"air_dragon_Iyrie_84654d94-c9ab-4853-8523-2c716affe2df","column":10,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Iyrie into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting dark_dragon_Jakur_481efdff-d922-497d-9b98-3ef3a01a14e5 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Jakur_481efdff-d922-497d-9b98-3ef3a01a14e5","column":12,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Jakur into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting water_dragon_Hyjeje_fabb45a2-5ef0-40f3-a756-49a2da252335 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Hyjeje_fabb45a2-5ef0-40f3-a756-49a2da252335","column":12,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Hyjeje into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting fire_dragon_Fihe_2e6612d0-69b8-4b80-8c2b-1ead25e4c0c4 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Fihe_2e6612d0-69b8-4b80-8c2b-1ead25e4c0c4","column":13,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Fihe into queue
+[2025-04-11 00:06:07] [INFO] [Component] Setting fire_dragon_Civi_07597e31-2827-4838-9177-fc1c28a75f7d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Civi_07597e31-2827-4838-9177-fc1c28a75f7d","column":1,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 00:06:07] [INFO] [SpeedQueue] Added unit user:Civi into queue
+[2025-04-11 00:06:07] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-11 00:06:07] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-11 00:06:07] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-11 00:06:07] [INFO] [FontPool] Started initializing FontPool
+[2025-04-11 00:06:07] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-11 00:06:07] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-11 00:06:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-11 00:06:08] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Yijiy_c205a076-fd4f-44c4-a6b3-52c72d0e8859
+[2025-04-11 00:06:08] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Yijiy_c205a076-fd4f-44c4-a6b3-52c72d0e8859
+[2025-04-11 00:06:08] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 00:06:08] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 00:06:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 00:06:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 00:06:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 00:06:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 00:06:08] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-11 00:06:08] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-11 00:06:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-11 00:06:08] [INFO] [VisualsSystem] Finished creating blurred background after 0.4910808205604553 seconds
+[2025-04-11 00:06:11] [INFO] [InputHandler] Gliding 0 camera to new tile 9_2_59768cb3-c36e-44d8-8665-c9aeab8e4149
+[2025-04-11 00:06:15] [INFO] [InputHandler] Gliding 0 camera to new tile 9_2_59768cb3-c36e-44d8-8665-c9aeab8e4149
+[2025-04-11 00:06:16] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [11, 6]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of sight for Yijiy, viewing 13 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 6 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:16] [INFO] [CombatSystem] Started constructing damage mappings for Yijiy to use ember
+[2025-04-11 00:06:16] [INFO] [CombatSystem] Finished constructing damage mappings for Yijiy to use ember
+[2025-04-11 00:06:16] [INFO] [CombatSystem] Started constructing cost mappings for Yijiy to use ember
+[2025-04-11 00:06:16] [INFO] [CombatSystem] Finished constructing cost mappings for Yijiy to use ember
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [12, 7]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 6 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [11, 6]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 6 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [11, 5]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 5 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [10, 5]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 5 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [10, 4]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 4 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [9, 4]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 3 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Yijiy is planning to use ember on [9, 3]
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 2 tiles
+[2025-04-11 00:06:16] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Yijiy is planning to use ember on [9, 2]
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 1 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Yijiy is planning to use ember on [10, 3]
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 3 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Yijiy is planning to use ember on [11, 4]
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 5 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Yijiy is planning to use ember on [11, 5]
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 5 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Yijiy is planning to use ember on [12, 6]
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 5 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Yijiy is planning to use ember on [12, 8]
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 4 tiles
+[2025-04-11 00:06:17] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:21] [INFO] [InputHandler] Gliding 0 camera to new tile 9_2_59768cb3-c36e-44d8-8665-c9aeab8e4149
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement range to 12 for Yijiy
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement path from [9, 2] to [11, 8] for Yijiy
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement range to 12 for Yijiy
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement path from [9, 2] to [11, 8] for Yijiy
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement path from [9, 2] to [12, 8] for Yijiy
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement path from [9, 2] to [12, 8] for Yijiy
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement path from [9, 2] to [12, 7] for Yijiy
+[2025-04-11 00:06:21] [INFO] [MovementSystem] Updated movement path from [9, 2] to [12, 7] for Yijiy
+[2025-04-11 00:06:22] [INFO] [InputHandler] Gliding 0 camera to new tile 9_2_59768cb3-c36e-44d8-8665-c9aeab8e4149
+[2025-04-11 00:06:22] [INFO] [AbilitySystem] Yijiy is planning to use ember on [12, 7]
+[2025-04-11 00:06:22] [INFO] [AbilitySystem] Updated line of sight for Yijiy, viewing 6 tiles
+[2025-04-11 00:06:22] [INFO] [AbilitySystem] Updated area of effect for Yijiy viewing 1 tiles
+[2025-04-11 00:06:25] [INFO] [InputHandler] Gliding 0 camera to new tile 9_2_59768cb3-c36e-44d8-8665-c9aeab8e4149
+[2025-04-11 00:06:25] [INFO] [InputHandler] Gliding 1 camera to new tile 9_2_59768cb3-c36e-44d8-8665-c9aeab8e4149
+[2025-04-11 00:06:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 00:06:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Yijiy

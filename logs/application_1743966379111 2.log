@@ -1,0 +1,195 @@
+[2025-04-06 12:06:19] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 12:06:19] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 12:06:19] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 12:06:19] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 12:06:19] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 12:06:19] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 12:06:19] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 12:06:19] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 12:06:19] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 12:06:19] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 12:06:19] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 12:06:19] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 12:06:19] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 12:06:19] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 12:06:19] [INFO] [Component] Setting dark_dragon_Gyur_43ef1d9a-654c-4a75-a27a-3372ff446c35 on to 14_6_881ab984-8a1c-432c-9eef-f190b93ba834.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Gyur into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dark_dragon_Ouiqe_cb40d5ba-e06e-49f4-a72b-e9a09b94b17d on to 2_3_08a79bf9-f1c9-4268-8cdb-1994b7e6e49e.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Ouiqe into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting air_dragon_Masob_4e2b6a44-7652-4bad-988a-8532bd2d46b7 on to 10_12_43c80413-9f6a-46cc-abf3-29d4201f905e.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Masob into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dragon_Momaoi_ccc41af1-5364-41bf-8b21-4afa651d1765 on to 7_8_76f7aa4c-b691-4526-b6bc-87d5fa1d1685.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Momaoi into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dragon_Semja_577474ae-9432-4bdc-92f8-9dcf4fdd5f17 on to 13_12_8d7ea2a1-f276-4578-a036-78beeb4a5c8b.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Semja into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting earth_dragon_Qumuiy_6f873ef8-0afd-49d0-bab8-d90d9d6bd454 on to 14_3_09d286b2-0f5a-4ea5-9070-d8c74c7b6d03.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Qumuiy into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting light_dragon_Hovu_c2c67062-41ec-422f-be37-ce0cf97eb17b on to 5_2_e03c7b9e-66e5-45f6-9f37-6d9342562590.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Hovu into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dragon_Peio_09fd0dd5-70f9-4f7e-a1dd-db5157049bb2 on to 7_6_54605680-8852-47dd-b1a9-847eb9c14962.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Peio into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting air_dragon_Xekoe_2c0fcda5-280e-40b4-9f21-2bd847836744 on to 3_11_2fae8dc7-c5b8-4698-88fc-96bcd6d16dc7.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Xekoe into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting earth_dragon_Luvua_c781f326-1f8e-4bac-8b3c-85b5042c0c9e on to 7_13_2c37675f-8100-4bb1-bdd4-c15fb4734b90.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Luvua into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting air_dragon_Liksyu_8a1cb311-a604-4d29-8774-1c5dc29e2a89 on to 2_13_ccc90961-a503-40ad-a273-b5e62287ba05.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Liksyu into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting air_dragon_Menw_559b7fcd-13e0-4c38-a128-61efcc8ae8fe on to 9_11_8082d065-6ee4-4bbf-a1ae-68058c8021ba.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Menw into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting fire_dragon_Siyiu_f3729ef8-91b2-4d7c-9b09-3df301fa6bf5 on to 6_2_9e7570ac-b9b3-4f65-afe7-f188df1d4ce9.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Siyiu into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting water_dragon_Pupy_29063574-9832-4be1-98f2-82cf298ea82c on to 14_10_34d896d1-1bc8-4795-9fd8-4921da40e5bc.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Pupy into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting fire_dragon_Jiyfxo_df7e16d3-4c16-49a7-b97b-0247fc36caeb on to 12_14_b252dba0-cedc-4dcb-b8fc-d4e8ee97c5ea.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Jiyfxo into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dark_dragon_Yaryui_89a31d76-7c3a-4d88-9298-42ffba77697b on to 3_7_2a8c05b7-85d7-4cf7-abce-c1e678f89315.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Yaryui into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting light_dragon_Yecjej_81ae7017-0c4b-4867-b5f7-191f8cc65591 on to 10_4_8ed2129c-308d-41d4-83fc-a55ab89b516a.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Yecjej into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting water_dragon_Bozw_d857afe5-74ba-42f4-9660-077a6d2a2753 on to 12_12_844520d9-a79c-4a27-ab0c-1d79c3b82883.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Bozw into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting light_dragon_Wufie_4f3451e0-a91e-4de6-9a19-ee58a3f777f1 on to 0_3_450b526e-9d64-4032-a31f-bc6b74711738.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Wufie into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dragon_Rajyre_bae42109-c320-4868-b883-76d7bad8baea on to 5_5_0613eaa3-ece7-4470-abb3-14a52dd22b0a.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit enemy:Rajyre into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dark_dragon_Xowe_44c3b5ff-88a2-4933-8f10-a9ee76ec16fc on to 9_2_396bbfec-f53b-478d-8dc9-4bfdaadf5760.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Xowe into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting fire_dragon_Xyjgto_6e754a9d-4481-4a69-af13-fd4bfe8c27db on to 4_2_8234a157-4175-4c30-81bf-16561a9767f9.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Xyjgto into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dark_dragon_Syyece_2b99dac9-d071-4c22-9640-23cab6e11409 on to 12_8_14370bcb-761c-436c-a3d4-aff6ff34a1b1.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Syyece into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting light_dragon_Wytes_f7da455b-3ed0-4435-8888-719105df80f0 on to 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Wytes into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dragon_Fump_3b20ce68-bd0e-4b33-87c1-d3fe283cdc76 on to 13_1_dded5811-8c64-4771-b709-a1bc11afd077.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Fump into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting fire_dragon_Bard_e9f2a37d-46fd-4978-b21b-1bd3870654e3 on to 11_7_7967e814-679b-437c-9293-37e55bb13a03.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Bard into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting dark_dragon_Pysi_41c14209-ce4a-469f-9d97-8da41709bf9e on to 2_1_16bf6522-0fbf-40ee-83cc-9bfa501eaaed.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Pysi into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting earth_dragon_Yereee_ee0f3475-7188-4f48-8b2c-4503beba0a44 on to 0_7_261d6be7-0a72-4d7b-a956-59d27cc38d5b.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Yereee into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting fire_dragon_Ueczu_7aace90d-eeb3-4798-b0a2-0df708d17649 on to 0_12_71eb3358-d5be-4196-a15d-4c4c6eb1e841.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Ueczu into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting earth_dragon_Sohuka_14700039-5b15-440f-8732-cb0e9f45fd2e on to 14_1_b0494baa-39d2-4517-b487-91e10d538462.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Sohuka into queue
+[2025-04-06 12:06:19] [INFO] [Component] Setting air_dragon_Vuleea_f546f146-0356-4ca8-9bbd-8c41a9fab5b2 on to 1_14_dcb3850a-e307-4b86-a0f6-7255bc24d107.
+[2025-04-06 12:06:19] [INFO] [SpeedQueue] Added unit user:Vuleea into queue
+[2025-04-06 12:06:19] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 12:06:19] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 12:06:19] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 12:06:19] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 12:06:20] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 12:06:20] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 12:06:20] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 12:06:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:06:20] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 12:06:20] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit light_dragon_Yecjej_81ae7017-0c4b-4867-b5f7-191f8cc65591
+[2025-04-06 12:06:20] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 12:06:21] [INFO] [VisualsSystem] Finished creating blurred background after 0.49041929841041565 seconds
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Yecjej Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Masob Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Bozw Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Siyiu Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Momaoi Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Menw Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Peio Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Gyur Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Xekoe Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Hovu Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Yaryui Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Liksyu Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Ouiqe Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Pupy Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Wufie Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Luvua Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Jiyfxo Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Qumuiy Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Semja Triggered ability system
+[2025-04-06 12:06:21] [INFO] [AbilitySystem] Rajyre Triggered ability system
+[2025-04-06 12:06:21] [INFO] [MovementSystem] Updated movement range for Yecjej
+[2025-04-06 12:06:21] [INFO] [MovementSystem] Updated movement path for Yecjej
+[2025-04-06 12:06:21] [INFO] [Component] Setting light_dragon_Yecjej_81ae7017-0c4b-4867-b5f7-191f8cc65591 on to 10_5_6f2549c4-5646-44eb-a334-ee9d1d9b8fae.
+[2025-04-06 12:06:21] [INFO] [MovementSystem] Moved from [10, 4] to [10, 5]
+[2025-04-06 12:06:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:22] [INFO] [MovementSystem] Updated movement range for Rajyre
+[2025-04-06 12:06:22] [INFO] [MovementSystem] Updated movement path for Rajyre
+[2025-04-06 12:06:22] [INFO] [Component] Setting dragon_Rajyre_bae42109-c320-4868-b883-76d7bad8baea on to 4_6_dbb09729-1c81-4680-8bda-4730e67ed4e7.
+[2025-04-06 12:06:22] [INFO] [MovementSystem] Moved from [5, 5] to [4, 6]
+[2025-04-06 12:06:23] [INFO] [AbilitySystem] Yecjej Triggered ability system
+[2025-04-06 12:06:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:23] [INFO] [MovementSystem] Updated movement range for Semja
+[2025-04-06 12:06:23] [INFO] [MovementSystem] Updated movement path for Semja
+[2025-04-06 12:06:23] [INFO] [Component] Setting dragon_Semja_577474ae-9432-4bdc-92f8-9dcf4fdd5f17 on to 14_13_f165511a-1cee-467d-b551-40cf1d66689a.
+[2025-04-06 12:06:23] [INFO] [MovementSystem] Moved from [13, 12] to [14, 13]
+[2025-04-06 12:06:24] [INFO] [AbilitySystem] Rajyre Triggered ability system
+[2025-04-06 12:06:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:06:25] [INFO] [AbilitySystem] Semja Triggered ability system
+[2025-04-06 12:06:30] [INFO] [InputHandler] Gliding 0 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:06:30] [INFO] [InputHandler] Gliding 1 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:06:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:06:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Wytes
+[2025-04-06 12:06:30] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 12:06:36] [INFO] [InputHandler] Gliding 0 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:06:48] [INFO] [InputHandler] Gliding 1 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:06:55] [INFO] [InputHandler] Gliding 0 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:06:55] [INFO] [MovementSystem] Updated movement range for Wytes
+[2025-04-06 12:06:55] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:06:55] [INFO] [MovementSystem] Updated movement range for Wytes
+[2025-04-06 12:06:55] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:06:55] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:06:55] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:14] [INFO] [InputHandler] Gliding 0 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:07:16] [INFO] [InputHandler] Gliding 0 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:18] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:19] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:19] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:19] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:19] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:19] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:19] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:20] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:07:20] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:48] [INFO] [InputHandler] Gliding 0 camera to new tile 12_7_6d9aa875-21c7-4569-b474-e929a4f2b52a
+[2025-04-06 12:08:48] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:48] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:48] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:48] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:49] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:49] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:49] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:49] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:49] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:08:49] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement path for Wytes
+[2025-04-06 12:09:04] [INFO] [MovementSystem] Updated movement pat

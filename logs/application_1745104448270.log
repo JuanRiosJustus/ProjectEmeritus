@@ -1,0 +1,43 @@
+[2025-04-19 16:14:08] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 16:14:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 16:14:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 16:14:08] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 16:14:08] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 16:14:08] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 16:14:08] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 16:14:08] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 16:14:08] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 16:14:08] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 16:14:08] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 16:14:08] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 16:14:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 16:14:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 16:14:08] [INFO] [Component] Setting dragon_Zyvauo_1f2783d0-545f-4889-bc8e-960dd6d7379a on to {"row":0,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Zyvauo_1f2783d0-545f-4889-bc8e-960dd6d7379a","structure":""}.
+[2025-04-19 16:14:08] [INFO] [SpeedQueue] Added unit enemy:Zyvauo into queue
+[2025-04-19 16:14:08] [INFO] [Component] Setting light_dragon_Reri_a38f4335-26c8-447e-b46b-6d7db2a6e238 on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Reri_a38f4335-26c8-447e-b46b-6d7db2a6e238","structure":""}.
+[2025-04-19 16:14:08] [INFO] [SpeedQueue] Added unit enemy:Reri into queue
+[2025-04-19 16:14:08] [INFO] [Component] Setting dark_dragon_Pyqouq_fd39f5f7-1b77-428a-85d7-032e3e319bbb on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Pyqouq_fd39f5f7-1b77-428a-85d7-032e3e319bbb","structure":""}.
+[2025-04-19 16:14:08] [INFO] [SpeedQueue] Added unit enemy:Pyqouq into queue
+[2025-04-19 16:14:08] [INFO] [Component] Setting dark_dragon_Kobuj_7ed0f704-04c9-4368-a59f-9665edce17df on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Kobuj_7ed0f704-04c9-4368-a59f-9665edce17df","structure":""}.
+[2025-04-19 16:14:08] [INFO] [SpeedQueue] Added unit enemy:Kobuj into queue
+[2025-04-19 16:14:08] [INFO] [Component] Setting light_dragon_Bozfeh_0693fed2-fb5a-4722-9ff0-8cc9366a62a3 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Bozfeh_0693fed2-fb5a-4722-9ff0-8cc9366a62a3","structure":""}.
+[2025-04-19 16:14:08] [INFO] [SpeedQueue] Added unit enemy:Bozfeh into queue
+[2025-04-19 16:14:08] [INFO] [Component] Setting fire_dragon_Duhe_1e78d7e6-d63f-490d-8796-6b0e339cefa7 on to {"row":7,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Duhe_1e78d7e6-d63f-490d-8796-6b0e339cefa7","structure":""}.
+[2025-04-19 16:14:08] [INFO] [SpeedQueue] Added unit user:Duhe into queue
+[2025-04-19 16:14:08] [INFO] [Component] Setting fire_dragon_Oudoxy_44539359-db78-4377-9397-1a1f82914a40 on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Oudoxy_44539359-db78-4377-9397-1a1f82914a40","structure":""}.
+[2025-04-19 16:14:08] [INFO] [SpeedQueue] Added unit user:Oudoxy into queue
+[2025-04-19 16:14:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 16:14:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 16:14:08] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 16:14:08] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 16:14:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 16:14:08] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 16:14:09] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 16:14:09] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 16:14:09] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_3133ff36-db5d-420e-8a83-6d81a9322466
+[2025-04-19 16:14:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 16:14:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 16:14:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 16:14:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 16:14:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 16:14:09] [INFO] [VisualsSystem] Finished creating blurred background after 0.4885479807853699 seconds

@@ -1,0 +1,43 @@
+[2025-04-15 18:46:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 18:46:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 18:46:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 18:46:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 18:46:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 18:46:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 18:46:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 18:46:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 18:46:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 18:46:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 18:46:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 18:46:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 18:46:51] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 18:46:51] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 18:46:51] [INFO] [Component] Setting fire_dragon_Wizvoa_4ca7d0a2-6f65-4614-a15c-9f8cb1ac3a29 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Wizvoa_4ca7d0a2-6f65-4614-a15c-9f8cb1ac3a29","column":1,"row":3,"structure":"","height":0}.
+[2025-04-15 18:46:51] [INFO] [SpeedQueue] Added unit enemy:Wizvoa into queue
+[2025-04-15 18:46:51] [INFO] [Component] Setting dark_dragon_Gisnwi_a1466cfb-9475-4a5d-8b69-e6eb8d295c7c on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Gisnwi_a1466cfb-9475-4a5d-8b69-e6eb8d295c7c","column":1,"row":2,"structure":"","height":0}.
+[2025-04-15 18:46:51] [INFO] [SpeedQueue] Added unit enemy:Gisnwi into queue
+[2025-04-15 18:46:51] [INFO] [Component] Setting earth_dragon_Megb_6b77ebb6-0107-4a93-8a51-8790e4cd1805 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Megb_6b77ebb6-0107-4a93-8a51-8790e4cd1805","column":7,"row":7,"structure":"","height":0}.
+[2025-04-15 18:46:51] [INFO] [SpeedQueue] Added unit enemy:Megb into queue
+[2025-04-15 18:46:51] [INFO] [Component] Setting light_dragon_Moha_7bc6d770-d393-4e06-ae4e-c6a5d6f37da9 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Moha_7bc6d770-d393-4e06-ae4e-c6a5d6f37da9","column":7,"row":6,"structure":"","height":0}.
+[2025-04-15 18:46:51] [INFO] [SpeedQueue] Added unit enemy:Moha into queue
+[2025-04-15 18:46:51] [INFO] [Component] Setting light_dragon_Heeyci_ee4dcbbd-2096-4616-84f6-af6a9e595570 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Heeyci_ee4dcbbd-2096-4616-84f6-af6a9e595570","column":0,"row":7,"structure":"","height":0}.
+[2025-04-15 18:46:51] [INFO] [SpeedQueue] Added unit user:Heeyci into queue
+[2025-04-15 18:46:51] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 18:46:51] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 18:46:51] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-15 18:46:51] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 18:46:51] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 18:46:51] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-15 18:46:51] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-15 18:46:51] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-15 18:46:51] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_7746576c-b9da-4719-a961-a840c45b3382
+[2025-04-15 18:46:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 18:46:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 18:46:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 18:46:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 18:46:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 18:46:52] [INFO] [VisualsSystem] Finished creating blurred background after 0.4844311475753784 seconds
+[2025-04-15 18:46:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 18:46:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 18:47:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 18:47:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

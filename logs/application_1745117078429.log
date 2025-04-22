@@ -1,0 +1,39 @@
+[2025-04-19 19:44:38] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 19:44:38] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 19:44:38] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 19:44:38] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 19:44:38] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 19:44:38] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 19:44:38] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 19:44:38] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 19:44:38] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 19:44:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 19:44:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 19:44:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 19:44:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 19:44:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 19:44:38] [INFO] [Component] Setting dark_dragon_Oarv_1d8f20fc-a134-4095-9e13-ad1d4897d680 on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Oarv_1d8f20fc-a134-4095-9e13-ad1d4897d680","structure":""}.
+[2025-04-19 19:44:38] [INFO] [SpeedQueue] Added unit enemy:Oarv into queue
+[2025-04-19 19:44:38] [INFO] [Component] Setting dark_dragon_Helyei_a5d680bd-0f36-4024-83e9-7cee02b07c1e on to {"row":2,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Helyei_a5d680bd-0f36-4024-83e9-7cee02b07c1e","structure":""}.
+[2025-04-19 19:44:38] [INFO] [SpeedQueue] Added unit enemy:Helyei into queue
+[2025-04-19 19:44:38] [INFO] [Component] Setting water_dragon_Yycoo_1dd682ea-50ef-46d3-a037-8a9db4d43423 on to {"row":0,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Yycoo_1dd682ea-50ef-46d3-a037-8a9db4d43423","structure":""}.
+[2025-04-19 19:44:38] [INFO] [SpeedQueue] Added unit enemy:Yycoo into queue
+[2025-04-19 19:44:38] [INFO] [Component] Setting dark_dragon_Jotu_6e43c2db-512d-454d-902b-d6a6ceb47354 on to {"row":7,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Jotu_6e43c2db-512d-454d-902b-d6a6ceb47354","structure":""}.
+[2025-04-19 19:44:38] [INFO] [SpeedQueue] Added unit user:Jotu into queue
+[2025-04-19 19:44:38] [INFO] [Component] Setting light_dragon_Lyeam_c2c8669f-5b60-4f4f-a31e-6831e4438923 on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Lyeam_c2c8669f-5b60-4f4f-a31e-6831e4438923","structure":""}.
+[2025-04-19 19:44:38] [INFO] [SpeedQueue] Added unit user:Lyeam into queue
+[2025-04-19 19:44:38] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 19:44:38] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 19:44:39] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 19:44:39] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 19:44:39] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 19:44:39] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 19:44:39] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 19:44:39] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 19:44:39] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_1de8158c-0752-4740-8d55-697146108ca5
+[2025-04-19 19:44:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 19:44:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 19:44:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 19:44:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 19:44:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 19:44:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.49116775393486023 seconds

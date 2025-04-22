@@ -1,0 +1,427 @@
+[2025-04-21 02:45:09] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 02:45:09] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 02:45:09] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 02:45:09] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 02:45:09] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 02:45:09] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 02:45:09] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 02:45:09] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 02:45:09] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 02:45:09] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 02:45:09] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 02:45:09] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 02:45:09] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 02:45:09] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 02:45:09] [INFO] [Component] Setting air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit enemy:Vozo into queue
+[2025-04-21 02:45:09] [INFO] [Component] Setting dragon_Vybou_dd5547c6-ac3e-4a52-adb2-741b2c2a4878 on to {"row":0,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Vybou_dd5547c6-ac3e-4a52-adb2-741b2c2a4878","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit enemy:Vybou into queue
+[2025-04-21 02:45:09] [INFO] [Component] Setting light_dragon_Mata_eb73f29f-e1ea-4b6b-b722-440e84c8b136 on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Mata_eb73f29f-e1ea-4b6b-b722-440e84c8b136","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit enemy:Mata into queue
+[2025-04-21 02:45:09] [INFO] [Component] Setting earth_dragon_Tabgaq_6e510ac5-6b87-4eab-a1bd-d4f805f07144 on to {"row":0,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Tabgaq_6e510ac5-6b87-4eab-a1bd-d4f805f07144","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit enemy:Tabgaq into queue
+[2025-04-21 02:45:09] [INFO] [Component] Setting fire_dragon_Qucp_30b0ff3a-eb76-4e37-bb3b-34f44e796c1d on to {"row":7,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Qucp_30b0ff3a-eb76-4e37-bb3b-34f44e796c1d","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit enemy:Qucp into queue
+[2025-04-21 02:45:09] [INFO] [Component] Setting air_dragon_Lyys_2a5c3a32-1dc9-4442-851b-b9c4933995cc on to {"row":5,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Lyys_2a5c3a32-1dc9-4442-851b-b9c4933995cc","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit user:Lyys into queue
+[2025-04-21 02:45:09] [INFO] [Component] Setting water_dragon_Zadioi_c7b6524e-8992-4494-a021-7cd5bc5f66bc on to {"row":4,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Zadioi_c7b6524e-8992-4494-a021-7cd5bc5f66bc","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit user:Zadioi into queue
+[2025-04-21 02:45:09] [INFO] [Component] Setting earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930 on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930","structure":""}.
+[2025-04-21 02:45:09] [INFO] [SpeedQueue] Added unit user:Zaiyo into queue
+[2025-04-21 02:45:09] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-21 02:45:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-21 02:45:10] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-21 02:45:10] [INFO] [FontPool] Started initializing FontPool
+[2025-04-21 02:45:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-21 02:45:10] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-21 02:45:10] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-21 02:45:10] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-21 02:45:10] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-21 02:45:10] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-21 02:45:10] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-21 02:45:10] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930
+[2025-04-21 02:45:10] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930
+[2025-04-21 02:45:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 02:45:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 02:45:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 02:45:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 02:45:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:45:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-21 02:45:10] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-21 02:45:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.48759135603904724 seconds
+[2025-04-21 02:45:12] [INFO] [AbilitySystem] Zaiyo is planning to use oblation on [5, 4]
+[2025-04-21 02:45:12] [INFO] [AbilitySystem] Updated area of sight for Zaiyo, viewing 12 tiles
+[2025-04-21 02:45:12] [INFO] [AbilitySystem] Updated line of sight for Zaiyo, viewing 3 tiles
+[2025-04-21 02:45:12] [INFO] [AbilitySystem] Updated area of effect for Zaiyo viewing 1 tiles
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Checking cost requirements for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Zaiyo is able to pay for oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Paying cost requirements for Zaiyo using oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-21 02:45:12] [INFO] [AbilitySystem] Used from oblation on [5, 4]
+[2025-04-21 02:45:12] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930
+[2025-04-21 02:45:12] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930
+[2025-04-21 02:45:12] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 02:45:12] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Zaiyo
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Zaiyo
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lyys
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lyys
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Zaiyo
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Zaiyo
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lyys
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lyys
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-21 02:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zaiyo to use oblation
+[2025-04-21 02:45:12] [INFO] [CombatSystem] Started dealing damage with oblation to Lyys 
+[2025-04-21 02:45:12] [INFO] [InputHandler] Gliding 0 camera to new tile 6_3_ebba151d-20ed-466f-a131-d7d9e4c7a8b5
+[2025-04-21 02:45:12] [INFO] [InputHandler] Gliding 1 camera to new tile 6_3_ebba151d-20ed-466f-a131-d7d9e4c7a8b5
+[2025-04-21 02:45:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930
+[2025-04-21 02:45:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930
+[2025-04-21 02:45:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:45:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Zaiyo
+[2025-04-21 02:45:13] [INFO] [MovementSystem] Updated movement range to 11 for Zaiyo
+[2025-04-21 02:45:13] [INFO] [MovementSystem] Updated movement path from [6, 3] to [7, 4] for Zaiyo
+[2025-04-21 02:45:13] [INFO] [Component] Setting earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930 on to {"row":7,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Zaiyo_529e1cbf-d36b-42b0-bcaa-a497635b9930","structure":""}.
+[2025-04-21 02:45:13] [INFO] [MovementSystem] Moved from [6, 3] to [7, 4]
+[2025-04-21 02:45:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:45:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Zaiyo
+[2025-04-21 02:45:13] [INFO] [InputHandler] Gliding 0 camera to new tile 7_4_49f802a4-d5ac-4e82-aacc-e1804623e3fc
+[2025-04-21 02:45:13] [INFO] [InputHandler] Gliding 1 camera to new tile 7_4_49f802a4-d5ac-4e82-aacc-e1804623e3fc
+[2025-04-21 02:45:13] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:13] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 02:45:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 02:45:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 02:45:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 02:45:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:45:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Vozo
+[2025-04-21 02:45:13] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_8c8bfd81-c48e-4c90-91e5-54e3deb884f3
+[2025-04-21 02:45:13] [INFO] [InputHandler] Gliding 1 camera to new tile 0_5_8c8bfd81-c48e-4c90-91e5-54e3deb884f3
+[2025-04-21 02:45:14] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_8c8bfd81-c48e-4c90-91e5-54e3deb884f3
+[2025-04-21 02:45:14] [INFO] [InputHandler] Gliding 1 camera to new tile 0_5_8c8bfd81-c48e-4c90-91e5-54e3deb884f3
+[2025-04-21 02:45:16] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_8c8bfd81-c48e-4c90-91e5-54e3deb884f3
+[2025-04-21 02:45:16] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 02:45:16] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement range to 4 for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 7] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement range to 4 for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 7] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 6] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 6] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 5] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 5] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 6] for Vozo
+[2025-04-21 02:45:17] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 6] for Vozo
+[2025-04-21 02:45:18] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Vozo
+[2025-04-21 02:45:18] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Vozo
+[2025-04-21 02:45:18] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 5] for Vozo
+[2025-04-21 02:45:18] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 5] for Vozo
+[2025-04-21 02:45:19] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 6] for Vozo
+[2025-04-21 02:45:19] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 6] for Vozo
+[2025-04-21 02:45:19] [INFO] [Component] Setting air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe","structure":""}.
+[2025-04-21 02:45:19] [INFO] [MovementSystem] Moved from [0, 5] to [1, 6]
+[2025-04-21 02:45:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 02:45:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Vozo
+[2025-04-21 02:45:19] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_6fafde97-1fab-48bf-be57-4ba94925f8c2
+[2025-04-21 02:45:19] [INFO] [InputHandler] Gliding 1 camera to new tile 1_6_6fafde97-1fab-48bf-be57-4ba94925f8c2
+[2025-04-21 02:45:20] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_6fafde97-1fab-48bf-be57-4ba94925f8c2
+[2025-04-21 02:45:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:21] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-21 02:45:21] [INFO] [AbilitySystem] Vozo is planning to use oblation on null
+[2025-04-21 02:45:21] [INFO] [AbilitySystem] Updated area of sight for Vozo, viewing 9 tiles
+[2025-04-21 02:45:21] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 0 tiles
+[2025-04-21 02:45:21] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 0 tiles
+[2025-04-21 02:45:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use oblation
+[2025-04-21 02:45:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use oblation
+[2025-04-21 02:45:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:21] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use oblation
+[2025-04-21 02:45:21] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use oblation
+[2025-04-21 02:45:21] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use oblation
+[2025-04-21 02:45:21] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use oblation
+[2025-04-21 02:45:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:22] [INFO] [AbilityPanel] Selecting soft_shell_i
+[2025-04-21 02:45:22] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on null
+[2025-04-21 02:45:22] [INFO] [AbilitySystem] Updated area of sight for Vozo, viewing 5 tiles
+[2025-04-21 02:45:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:22] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:22] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:22] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:22] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [2, 7]
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 3 tiles
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [2, 6]
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [1, 6]
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 1 tiles
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [1, 7]
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:23] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:24] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [2, 6]
+[2025-04-21 02:45:24] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:24] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:24] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [1, 6]
+[2025-04-21 02:45:24] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 1 tiles
+[2025-04-21 02:45:24] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [0, 6]
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on [1, 7]
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Vozo is planning to use soft_shell_i on null
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 0 tiles
+[2025-04-21 02:45:25] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 0 tiles
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use soft_shell_i
+[2025-04-21 02:45:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [AbilityPanel] Selecting air_attack
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Vozo is planning to use air_attack on null
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Updated area of sight for Vozo, viewing 9 tiles
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Vozo is planning to use air_attack on [2, 7]
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 3 tiles
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Vozo is planning to use air_attack on [1, 6]
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 1 tiles
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vozo
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Vozo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vozo
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vozo
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Vozo defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vozo
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Vozo is planning to use air_attack on [1, 5]
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:26] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:27] [INFO] [AbilitySystem] Vozo is planning to use air_attack on [0, 5]
+[2025-04-21 02:45:27] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:27] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:27] [INFO] [AbilitySystem] Vozo is planning to use air_attack on [0, 6]
+[2025-04-21 02:45:27] [INFO] [AbilitySystem] Updated line of sight for Vozo, viewing 2 tiles
+[2025-04-21 02:45:27] [INFO] [AbilitySystem] Updated area of effect for Vozo viewing 1 tiles
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vozo
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Vozo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vozo
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vybou
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vybou
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-21 02:45:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Checking cost requirements for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Vozo is able to pay for air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Paying cost requirements for Vozo using air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-04-21 02:45:34] [INFO] [AbilitySystem] Used from air_attack on [0, 6]
+[2025-04-21 02:45:34] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:34] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 02:45:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 02:45:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Vozo_cd2f84a6-cb83-47e4-84ee-309b307baebe
+[2025-04-21 02:45:34] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Started constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [CombatSystem] Finished constructing cost mappings for Vozo to use air_attack
+[2025-04-21 02:45:34] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vozo to use air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vozo
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Vozo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vozo
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vybou
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vybou
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vozo to use air_attack
+[2025-04-21 02:45:35] [INFO] [CombatSystem] Started dealing damage with air_attack to Vybou 
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vozo to use air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vozo to use air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vozo
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Vozo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vozo
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vybou
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vybou
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-21 02:45:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vozo to use air_attack

@@ -1,0 +1,73 @@
+[2025-04-21 00:51:30] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 00:51:30] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 00:51:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 00:51:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 00:51:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 00:51:30] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 00:51:30] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 00:51:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 00:51:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 00:51:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 00:51:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 00:51:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 00:51:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 00:51:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 00:51:30] [INFO] [Component] Setting water_dragon_Nyaion_85431c5e-6587-4f84-a7c1-820a86e9341e on to {"row":4,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Nyaion_85431c5e-6587-4f84-a7c1-820a86e9341e","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit enemy:Nyaion into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting dragon_Neyjt_2e633d9b-ff3b-44a0-9367-967eb364c639 on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Neyjt_2e633d9b-ff3b-44a0-9367-967eb364c639","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit enemy:Neyjt into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting water_dragon_Xoquau_a34cd316-70e1-4c72-8645-a66cec15f104 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Xoquau_a34cd316-70e1-4c72-8645-a66cec15f104","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit enemy:Xoquau into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811 on to {"row":4,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit enemy:Einuen into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting light_dragon_Oesr_977d7aa8-1488-4dad-b6a3-2e0c13956d20 on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Oesr_977d7aa8-1488-4dad-b6a3-2e0c13956d20","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit enemy:Oesr into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting light_dragon_Zovuu_26e1673a-0356-4809-829e-dbb11afa1dc9 on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Zovuu_26e1673a-0356-4809-829e-dbb11afa1dc9","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit user:Zovuu into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting air_dragon_Cylaa_6a245f8d-d251-47c5-96a7-30c2939fa4a3 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Cylaa_6a245f8d-d251-47c5-96a7-30c2939fa4a3","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit user:Cylaa into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting water_dragon_Mejo_30c2da17-7310-4bd3-abff-821e1519a93b on to {"row":5,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Mejo_30c2da17-7310-4bd3-abff-821e1519a93b","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit user:Mejo into queue
+[2025-04-21 00:51:30] [INFO] [Component] Setting earth_dragon_Jyatuu_bb031387-c162-49c5-aec3-865d365b4de5 on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Jyatuu_bb031387-c162-49c5-aec3-865d365b4de5","structure":""}.
+[2025-04-21 00:51:30] [INFO] [SpeedQueue] Added unit user:Jyatuu into queue
+[2025-04-21 00:51:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-21 00:51:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-21 00:51:31] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-21 00:51:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-21 00:51:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-21 00:51:31] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-21 00:51:31] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-21 00:51:31] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-21 00:51:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-21 00:51:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-21 00:51:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-21 00:51:31] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:31] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-21 00:51:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-21 00:51:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-21 00:51:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-21 00:51:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 00:51:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-21 00:51:31] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-21 00:51:31] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-21 00:51:31] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-21 00:51:31] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-21 00:51:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-21 00:51:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.4839119017124176 seconds
+[2025-04-21 00:51:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 00:51:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Oesr
+[2025-04-21 00:51:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 00:51:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Einuen
+[2025-04-21 00:51:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 00:51:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Mejo
+[2025-04-21 00:51:46] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:46] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Einuen_b0c3ef39-3aba-45cb-8010-8d9129cb5811
+[2025-04-21 00:51:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-21 00:51:46] [INFO] [SelectedTilePanel] Updated selected tile display to view Einuen

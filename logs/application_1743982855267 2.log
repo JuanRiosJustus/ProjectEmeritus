@@ -1,0 +1,265 @@
+[2025-04-06 16:40:55] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 16:40:55] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 16:40:55] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 16:40:55] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 16:40:55] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 16:40:55] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 16:40:55] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 16:40:55] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 16:40:55] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 16:40:55] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 16:40:55] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 16:40:55] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 16:40:55] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 16:40:55] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 16:40:55] [INFO] [Component] Setting dark_dragon_Tadz_ecf7ac87-6679-48ef-9689-529fae7de85e on to 5_1_7a0bf1da-974c-4614-8a5e-780bf17cca73.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Tadz into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dragon_Kuxqou_1ca140ea-c0e6-40fe-a1a3-382101fe4556 on to 9_2_b3682283-a509-4771-bef7-ca1a56009569.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Kuxqou into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting earth_dragon_Ooqr_0f7dca74-3025-4982-8792-357ff41dc048 on to 14_1_f8a31ac4-d3a1-48a3-8bc0-8756f4920c77.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Ooqr into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dark_dragon_Giko_5a4dc169-7ded-415d-a239-ba2fa9463227 on to 13_11_d4475900-1b87-439b-a877-a68ab88b4516.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Giko into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting light_dragon_Ceiou_d1f0c169-1eb0-468b-a68a-87e9fdd9d2a8 on to 6_12_6cad8096-6d5a-4a55-9020-b5b34bc55155.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Ceiou into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting air_dragon_Yioue_31b38852-d951-4864-84fd-0ab1e60ab52c on to 0_5_ab940677-b3df-4199-b786-d09e1fdb90c3.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Yioue into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dark_dragon_Ietymd_2e6050fd-7eac-4b37-add7-57e530726e55 on to 10_3_4124043d-2822-48fd-a0cb-f73be1b79260.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Ietymd into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting earth_dragon_Oapae_2f062610-53c1-40a5-99fd-0b9c6d24ccd5 on to 12_11_bb6c2639-093f-45e0-9eb4-2fc41534c14e.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Oapae into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dark_dragon_Najuia_e5853714-610f-4fa1-93cf-e37302bf2814 on to 7_12_7b0b289b-00d5-4f96-823e-0ae5ce68d43c.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Najuia into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting air_dragon_Ryluy_6b617f1e-c962-455f-98fa-7eb8ddb5f28c on to 14_5_f5003e5b-758d-4247-957c-862de520cf48.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Ryluy into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting earth_dragon_Puuev_e428978b-55cc-4ae2-9c31-35214989f31c on to 0_6_0e88fb4c-8bc2-4581-908d-5c8e5f35dfef.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Puuev into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting air_dragon_Ieuqol_640c685b-4a5e-4ac9-9626-3d3891ef2184 on to 8_10_1ca37f46-76ef-4fb3-8dc4-8798d0bb3e5c.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Ieuqol into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dragon_Lasuak_974cb52f-77b3-49b8-b703-e1e57354fa9f on to 3_1_74c58530-a810-490b-9914-e17ea892eb70.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Lasuak into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dark_dragon_Licy_426d6b64-a326-4426-a922-c663ea92ad9c on to 5_11_c5850778-fae9-4851-ac73-4ccd4563e794.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Licy into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting air_dragon_Xegivs_6575ab38-dd81-466c-85e1-01a79eda84f4 on to 1_9_b9171f4c-2572-408b-ae77-e3b8f97ab637.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Xegivs into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting air_dragon_Ticns_a5d467b6-2537-4af4-a953-461df3d2ce93 on to 14_9_28ab6d81-31a9-45db-81ad-ff49f119f7a3.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Ticns into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dragon_Vyoi_a49afc02-4ab8-4c53-ac9f-4d9f59f3e8fa on to 2_10_d29db08f-9ad4-4627-95a1-22233f943be4.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Vyoi into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting earth_dragon_Byio_38a26fcb-252f-4141-85dd-6c10d44213bb on to 7_5_67224495-1911-444f-a550-1bcc5f0aeb39.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Byio into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting air_dragon_Byozb_d4dd0315-8747-4c6b-8184-1b457df74e14 on to 12_9_58e628db-a30f-44c7-bd47-f1c5fe872bb2.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Byozb into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting light_dragon_Jouiay_96a84489-11ff-4d0d-9672-ce5d45964051 on to 11_13_8b8e01a4-3a81-46a0-b332-cb5ed79be2e5.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Jouiay into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting water_dragon_Lugao_10ce0c5d-afce-4cf4-ada0-765108bdcedb on to 1_1_8fbd2061-a145-4074-b6ee-78d76e7dbf09.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Lugao into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting fire_dragon_Zykdi_8f9a4f7f-2b17-4142-9fb4-7c409326cb17 on to 10_0_6759761a-3310-4c30-9d9c-edb1bc8cfa4b.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit enemy:Zykdi into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dragon_Lanh_1160970d-5142-4673-ad42-207ec89b6105 on to 0_2_921769e1-f7cb-4e35-938a-26562f0d7992.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Lanh into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dark_dragon_Suozlo_79ec4696-b05a-4f29-952d-af21959e4c18 on to 3_6_9c3df2eb-8cb7-49cc-a21e-31c4d8d65952.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Suozlo into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting fire_dragon_Zexi_81d5e635-ba29-4290-ae4e-65707888ed52 on to 11_6_4fd6b8d6-3c6d-47ce-863d-71bfee2971ae.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Zexi into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting fire_dragon_Oykw_f9ffbbd5-8435-41ab-a3e4-49f652457d83 on to 6_8_ffcb04f2-b1b3-4c2e-9cb1-7995fbed9fa4.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Oykw into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting air_dragon_Ouvi_e47f00db-552e-44ca-b3a6-8b6c0dafe09c on to 11_2_8f968151-f782-425e-ab22-e3552931b892.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Ouvi into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting earth_dragon_Rysqi_71383905-a960-4cb8-9e9e-2e0f403a50b1 on to 1_6_74a7e454-8498-4b2c-b9bf-cd527943e7cd.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Rysqi into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting water_dragon_Puue_c96f035d-b802-4b29-a879-fe67c06020a6 on to 10_8_2fbb53aa-e515-4011-b84f-9f167344f485.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Puue into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting dragon_Eeti_87e620bf-2e97-432e-a4ab-37f3a03c40e3 on to 9_10_64317393-6327-4bce-9e48-35df0e5cb7dc.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Eeti into queue
+[2025-04-06 16:40:55] [INFO] [Component] Setting light_dragon_Heyepu_253e386e-5d7f-428e-9cdf-cba6c2082357 on to 4_13_e65a0550-3221-4a60-a924-baac2610b7ff.
+[2025-04-06 16:40:55] [INFO] [SpeedQueue] Added unit user:Heyepu into queue
+[2025-04-06 16:40:55] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 16:40:55] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 16:40:55] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 16:40:55] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 16:40:55] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 16:40:56] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 16:40:56] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 16:40:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:40:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:40:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:40:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:40:56] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit air_dragon_Ryluy_6b617f1e-c962-455f-98fa-7eb8ddb5f28c
+[2025-04-06 16:40:56] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 16:40:57] [INFO] [VisualsSystem] Finished creating blurred background after 0.49555495381355286 seconds
+[2025-04-06 16:40:57] [INFO] [InputHandler] Gliding 0 camera to new tile 14_5_f5003e5b-758d-4247-957c-862de520cf48
+[2025-04-06 16:40:57] [INFO] [InputHandler] Gliding 1 camera to new tile 14_5_f5003e5b-758d-4247-957c-862de520cf48
+[2025-04-06 16:40:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:40:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Ryluy
+[2025-04-06 16:40:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:40:59] [INFO] [MovementSystem] Updated movement range for Ryluy
+[2025-04-06 16:40:59] [INFO] [MovementSystem] Updated movement path for Ryluy
+[2025-04-06 16:40:59] [INFO] [Component] Setting air_dragon_Ryluy_6b617f1e-c962-455f-98fa-7eb8ddb5f28c on to 13_6_24f2901f-da8e-41a9-9fc9-545f84247287.
+[2025-04-06 16:40:59] [INFO] [MovementSystem] Moved from [14, 5] to [13, 6]
+[2025-04-06 16:40:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:40:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:41:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:41:00] [INFO] [MovementSystem] Updated movement range for Yioue
+[2025-04-06 16:41:00] [INFO] [MovementSystem] Updated movement path for Yioue
+[2025-04-06 16:41:00] [INFO] [Component] Setting air_dragon_Yioue_31b38852-d951-4864-84fd-0ab1e60ab52c on to 0_4_82de0adf-c350-4acd-9b48-79843e6d73f3.
+[2025-04-06 16:41:00] [INFO] [MovementSystem] Moved from [0, 5] to [0, 4]
+[2025-04-06 16:41:01] [INFO] [AbilitySystem] Yioue is planning to use energy_beam on [0, 2]
+[2025-04-06 16:41:01] [INFO] [AbilitySystem] Updated area of sight for Yioue, viewing 6 tiles
+[2025-04-06 16:41:01] [INFO] [AbilitySystem] Updated line of sight for Yioue, viewing 3 tiles
+[2025-04-06 16:41:01] [INFO] [AbilitySystem] Updated area of effect for Yioue viewing 1 tiles
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Started constructing cost mappings for Yioue to use energy_beam
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Finished constructing cost mappings for Yioue to use energy_beam
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Checking cost requirements for Yioue to use energy_beam
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Yioue is able to pay for energy_beam
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Started constructing cost mappings for Yioue to use energy_beam
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Finished constructing cost mappings for Yioue to use energy_beam
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Paying cost requirements for Yioue using energy_beam
+[2025-04-06 16:41:01] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:41:01] [INFO] [AbilitySystem] Used from energy_beam on [0, 2]
+[2025-04-06 16:41:02] [INFO] [CombatSystem] Started constructing damage mappings for Yioue to use energy_beam
+[2025-04-06 16:41:02] [INFO] [CombatSystem] Finished constructing damage mappings for Yioue to use energy_beam
+[2025-04-06 16:41:02] [INFO] [CombatSystem] Started dealing damage with energy_beam to Lanh 
+[2025-04-06 16:41:02] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:41:02] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:41:02] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:41:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:02] [INFO] [InputHandler] Gliding 0 camera to new tile 12_11_bb6c2639-093f-45e0-9eb4-2fc41534c14e
+[2025-04-06 16:41:02] [INFO] [InputHandler] Gliding 1 camera to new tile 12_11_bb6c2639-093f-45e0-9eb4-2fc41534c14e
+[2025-04-06 16:41:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:41:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Oapae
+[2025-04-06 16:41:02] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:41:03] [INFO] [AbilitySystem] Oapae is planning to use slash on [12, 9]
+[2025-04-06 16:41:03] [INFO] [AbilitySystem] Updated area of sight for Oapae, viewing 10 tiles
+[2025-04-06 16:41:03] [INFO] [AbilitySystem] Updated line of sight for Oapae, viewing 3 tiles
+[2025-04-06 16:41:03] [INFO] [AbilitySystem] Updated area of effect for Oapae viewing 1 tiles
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Started constructing cost mappings for Oapae to use slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Finished constructing cost mappings for Oapae to use slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Checking cost requirements for Oapae to use slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Oapae is able to pay for slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Started constructing cost mappings for Oapae to use slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Finished constructing cost mappings for Oapae to use slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Paying cost requirements for Oapae using slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:41:03] [INFO] [AbilitySystem] Used from slash on [12, 9]
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Started constructing damage mappings for Oapae to use slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Finished constructing damage mappings for Oapae to use slash
+[2025-04-06 16:41:03] [INFO] [CombatSystem] Started dealing damage with slash to Byozb 
+[2025-04-06 16:41:03] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:41:03] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:41:03] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:41:04] [INFO] [MovementSystem] Updated movement range for Oapae
+[2025-04-06 16:41:04] [INFO] [MovementSystem] Updated movement path for Oapae
+[2025-04-06 16:41:04] [INFO] [Component] Setting earth_dragon_Oapae_2f062610-53c1-40a5-99fd-0b9c6d24ccd5 on to 11_11_1f9b6415-22f4-4e9d-a696-00d37af59dcc.
+[2025-04-06 16:41:04] [INFO] [MovementSystem] Moved from [12, 11] to [11, 11]
+[2025-04-06 16:41:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:41:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:41:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:41:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:41:07] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_74a7e454-8498-4b2c-b9bf-cd527943e7cd
+[2025-04-06 16:41:07] [INFO] [InputHandler] Gliding 1 camera to new tile 1_6_74a7e454-8498-4b2c-b9bf-cd527943e7cd
+[2025-04-06 16:41:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:41:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Rysqi
+[2025-04-06 16:41:07] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:41:08] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_74a7e454-8498-4b2c-b9bf-cd527943e7cd
+[2025-04-06 16:41:08] [INFO] [MovementSystem] Updated movement range for Rysqi
+[2025-04-06 16:41:08] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:08] [INFO] [MovementSystem] Updated movement range for Rysqi
+[2025-04-06 16:41:08] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:09] [INFO] [MovementSystem] Updated movement path for Rysqi
+[2025-04-06 16:41:10] [INFO] [Component] Setting earth_dragon_Rysqi_71383905-a960-4cb8-9e9e-2e0f403a50b1 on to 1_7_d8529a4f-536b-418c-944f-922ef916b015.
+[2025-04-06 16:41:10] [INFO] [MovementSystem] Moved from [1, 6] to [1, 7]
+[2025-04-06 16:41:12] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 16:41:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:16] [INFO] [InputHandler] Gliding 0 camera to new tile 9_10_64317393-6327-4bce-9e48-35df0e5cb7dc
+[2025-04-06 16:41:16] [INFO] [InputHandler] Gliding 1 camera to new tile 9_10_64317393-6327-4bce-9e48-35df0e5cb7dc
+[2025-04-06 16:41:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:41:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Eeti
+[2025-04-06 16:41:16] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:41:18] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 16:41:20] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 16:41:21] [INFO] [InputHandler] Gliding 0 camera to new tile 0_2_921769e1-f7cb-4e35-938a-26562f0d7992
+[2025-04-06 16:41:21] [INFO] [InputHandler] Gliding 1 camera to new tile 0_2_921769e1-f7cb-4e35-938a-26562f0d7992
+[2025-04-06 16:41:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:41:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Lanh
+[2025-04-06 16:41:21] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:41:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:30] [INFO] [MovementSystem] Updated movement range for Zykdi
+[2025-04-06 16:41:30] [INFO] [MovementSystem] Updated movement path for Zykdi
+[2025-04-06 16:41:30] [INFO] [Component] Setting fire_dragon_Zykdi_8f9a4f7f-2b17-4142-9fb4-7c409326cb17 on to 11_1_ab04fddc-8d5e-4eae-84a3-f0be8ad8f3ee.
+[2025-04-06 16:41:30] [INFO] [MovementSystem] Moved from [10, 0] to [11, 1]
+[2025-04-06 16:41:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:32] [INFO] [MovementSystem] Updated movement range for Ceiou
+[2025-04-06 16:41:32] [INFO] [MovementSystem] Updated movement path for Ceiou
+[2025-04-06 16:41:32] [INFO] [Component] Setting light_dragon_Ceiou_d1f0c169-1eb0-468b-a68a-87e9fdd9d2a8 on to 6_13_9f4b655f-1645-4221-b8cb-34508c3ec116.
+[2025-04-06 16:41:32] [INFO] [MovementSystem] Moved from [6, 12] to [6, 13]
+[2025-04-06 16:41:33] [INFO] [AbilitySystem] Ceiou is planning to use slash on [4, 13]
+[2025-04-06 16:41:33] [INFO] [AbilitySystem] Updated area of sight for Ceiou, viewing 12 tiles
+[2025-04-06 16:41:33] [INFO] [AbilitySystem] Updated line of sight for Ceiou, viewing 3 tiles
+[2025-04-06 16:41:33] [INFO] [AbilitySystem] Updated area of effect for Ceiou viewing 1 tiles
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Started constructing cost mappings for Ceiou to use slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiou to use slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Checking cost requirements for Ceiou to use slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Ceiou is able to pay for slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Started constructing cost mappings for Ceiou to use slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiou to use slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Paying cost requirements for Ceiou using slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:41:33] [INFO] [AbilitySystem] Used from slash on [4, 13]
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Started constructing damage mappings for Ceiou to use slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiou to use slash
+[2025-04-06 16:41:33] [INFO] [CombatSystem] Started dealing damage with slash to Heyepu 
+[2025-04-06 16:41:33] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:41:33] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:41:33] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:41:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:34] [INFO] [AbilitySystem] Giko is planning to use energy_beam on [11, 11]
+[2025-04-06 16:41:34] [INFO] [AbilitySystem] Updated area of sight for Giko, viewing 12 tiles
+[2025-04-06 16:41:34] [INFO] [AbilitySystem] Updated line of sight for Giko, viewing 3 tiles
+[2025-04-06 16:41:34] [INFO] [AbilitySystem] Updated area of effect for Giko viewing 1 tiles
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Started constructing cost mappings for Giko to use energy_beam
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Finished constructing cost mappings for Giko to use energy_beam
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Checking cost requirements for Giko to use energy_beam
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Giko is able to pay for energy_beam
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Started constructing cost mappings for Giko to use energy_beam
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Finished constructing cost mappings for Giko to use energy_beam
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Paying cost requirements for Giko using energy_beam
+[2025-04-06 16:41:34] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:41:34] [INFO] [AbilitySystem] Used from energy_beam on [11, 11]
+[2025-04-06 16:41:35] [INFO] [CombatSystem] Started constructing damage mappings for Giko to use energy_beam
+[2025-04-06 16:41:35] [INFO] [CombatSystem] Finished constructing damage mappings for Giko to use energy_beam
+[2025-04-06 16:41:35] [INFO] [CombatSystem] Started dealing damage with energy_beam to Oapae 
+[2025-04-06 16:41:35] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:41:35] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:41:35] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:41:35] [INFO] [MovementSystem] Updated movement range for Giko
+[2025-04-06 16:41:35] [INFO] [MovementSystem] Updated movement path for Giko
+[2025-04-06 16:41:35] [INFO] [Component] Setting dark_dragon_Giko_5a4dc169-7ded-415d-a239-ba2fa9463227 on to 13_9_bd68775e-4a24-4da3-8d64-ae6f956c4a50.
+[2025-04-06 16:41:35] [INFO] [MovementSystem] Moved from [13, 11] to [13, 9]
+[2025-04-06 16:41:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:41:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

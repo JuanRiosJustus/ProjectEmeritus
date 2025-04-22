@@ -1,0 +1,208 @@
+[2025-04-11 17:39:00] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-11 17:39:00] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-11 17:39:00] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-11 17:39:00] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-11 17:39:00] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-11 17:39:00] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-11 17:39:00] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-11 17:39:00] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-11 17:39:00] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-11 17:39:00] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-11 17:39:00] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-11 17:39:00] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-11 17:39:00] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-11 17:39:00] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-11 17:39:00] [INFO] [Component] Setting fire_dragon_Begez_18dd17a3-2f1e-43df-8957-d3aaefc7b9c2 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Begez_18dd17a3-2f1e-43df-8957-d3aaefc7b9c2","column":11,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Begez into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting air_dragon_Kapioe_3eabfb29-ffe3-489a-be04-f1a054ccb6db on to {"spawn_region":[],"collider":"","unit":"air_dragon_Kapioe_3eabfb29-ffe3-489a-be04-f1a054ccb6db","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Kapioe into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting light_dragon_Iedyi_b28cbb82-23f4-41d0-8999-702428c3b545 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iedyi_b28cbb82-23f4-41d0-8999-702428c3b545","column":8,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Iedyi into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting light_dragon_Uodu_1e7c0c03-d735-4b4f-8265-4be3c1b19079 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Uodu_1e7c0c03-d735-4b4f-8265-4be3c1b19079","column":13,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Uodu into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting light_dragon_Iotoho_7fd5961c-e8f5-401e-bfb9-90f12debc3a7 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iotoho_7fd5961c-e8f5-401e-bfb9-90f12debc3a7","column":11,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Iotoho into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting water_dragon_Zilly_df5ccce2-c542-40fb-a2dc-13b39f3cbe32 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Zilly_df5ccce2-c542-40fb-a2dc-13b39f3cbe32","column":13,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Zilly into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dragon_Heuy_5a25643d-f64f-47d7-b295-db69eeedfd20 on to {"spawn_region":[],"collider":"","unit":"dragon_Heuy_5a25643d-f64f-47d7-b295-db69eeedfd20","column":3,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Heuy into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting water_dragon_Kypr_d2b35960-43c4-4b1f-8576-985d820e00df on to {"spawn_region":[],"collider":"","unit":"water_dragon_Kypr_d2b35960-43c4-4b1f-8576-985d820e00df","column":2,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Kypr into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting fire_dragon_Myoek_4ce27727-22f1-419d-a8d1-c99d814448ab on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Myoek_4ce27727-22f1-419d-a8d1-c99d814448ab","column":11,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Myoek into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dragon_Xoqi_fc2fdfee-9846-4bad-bece-b11f3aa5b957 on to {"spawn_region":[],"collider":"","unit":"dragon_Xoqi_fc2fdfee-9846-4bad-bece-b11f3aa5b957","column":6,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Xoqi into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dragon_Aihos_dcc5d385-0c9a-4ea4-b458-9b18998fe01b on to {"spawn_region":[],"collider":"","unit":"dragon_Aihos_dcc5d385-0c9a-4ea4-b458-9b18998fe01b","column":13,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Aihos into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting earth_dragon_Uinuo_df54ab60-cf35-456b-bf5e-df7d9ca4bbe5 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uinuo_df54ab60-cf35-456b-bf5e-df7d9ca4bbe5","column":14,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Uinuo into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting air_dragon_Jouytc_661c4e5b-29fa-4a20-ab1b-3258ab8188bd on to {"spawn_region":[],"collider":"","unit":"air_dragon_Jouytc_661c4e5b-29fa-4a20-ab1b-3258ab8188bd","column":11,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Jouytc into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dragon_Zuxxv_7baaff5f-9117-4266-86b3-46f63c9112d6 on to {"spawn_region":[],"collider":"","unit":"dragon_Zuxxv_7baaff5f-9117-4266-86b3-46f63c9112d6","column":5,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Zuxxv into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting water_dragon_Wayeeo_52e0cb29-2521-48fa-9aa9-954e94299909 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Wayeeo_52e0cb29-2521-48fa-9aa9-954e94299909","column":14,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Wayeeo into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting fire_dragon_Tiqaj_58d764b1-d129-4bd8-b1d2-74d344a9160a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Tiqaj_58d764b1-d129-4bd8-b1d2-74d344a9160a","column":10,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Tiqaj into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting air_dragon_Wula_917331dc-b9b1-4fe0-b28c-eb0f28458288 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Wula_917331dc-b9b1-4fe0-b28c-eb0f28458288","column":8,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Wula into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting fire_dragon_Buqy_f24c7931-6444-44d0-be09-0661be139ed7 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Buqy_f24c7931-6444-44d0-be09-0661be139ed7","column":3,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Buqy into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dark_dragon_Iosv_9322bc22-f512-4c6b-aa49-4886899bcf49 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iosv_9322bc22-f512-4c6b-aa49-4886899bcf49","column":11,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Iosv into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting fire_dragon_Eaguj_d1825780-36bd-4410-9015-7441035c3655 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Eaguj_d1825780-36bd-4410-9015-7441035c3655","column":8,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Eaguj into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting earth_dragon_Ayry_53b243f1-d378-44fc-a067-d89796ce4719 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Ayry_53b243f1-d378-44fc-a067-d89796ce4719","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Ayry into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting earth_dragon_Syjuuz_0cd2d2a7-9ba1-476e-8fb6-3a968bd24b3a on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Syjuuz_0cd2d2a7-9ba1-476e-8fb6-3a968bd24b3a","column":10,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Syjuuz into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dragon_Yoio_64242220-046f-412f-b54b-28d3fe01e4d1 on to {"spawn_region":[],"collider":"","unit":"dragon_Yoio_64242220-046f-412f-b54b-28d3fe01e4d1","column":7,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit enemy:Yoio into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting air_dragon_Vowa_b1d3ae6c-d341-434d-bb19-6a11a1f86b64 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Vowa_b1d3ae6c-d341-434d-bb19-6a11a1f86b64","column":8,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Vowa into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting water_dragon_Ieji_1be2bb2d-b470-4085-8a7f-2f846c01d952 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ieji_1be2bb2d-b470-4085-8a7f-2f846c01d952","column":6,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Ieji into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dark_dragon_Gendpe_1208f24d-553d-4ee6-9b08-0309b65a1621 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Gendpe_1208f24d-553d-4ee6-9b08-0309b65a1621","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Gendpe into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting earth_dragon_Pydxoa_a13ecd12-4565-4057-bc1a-e6e7b004d252 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Pydxoa_a13ecd12-4565-4057-bc1a-e6e7b004d252","column":14,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Pydxoa into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting light_dragon_Qyqau_0deaadc6-0b22-4934-88a3-57d2ba14dc11 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Qyqau_0deaadc6-0b22-4934-88a3-57d2ba14dc11","column":12,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Qyqau into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dark_dragon_Xuan_5e945c92-b3dd-401e-bccb-b6c1107b32d1 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Xuan_5e945c92-b3dd-401e-bccb-b6c1107b32d1","column":8,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Xuan into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting dark_dragon_Gyxauu_2fc52545-af9b-4556-bd1d-3358e619fc0b on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Gyxauu_2fc52545-af9b-4556-bd1d-3358e619fc0b","column":5,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Gyxauu into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting water_dragon_Bozu_f4016285-5305-44d8-846b-84b4a41bcca2 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Bozu_f4016285-5305-44d8-846b-84b4a41bcca2","column":7,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Bozu into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting fire_dragon_Gebe_19366128-de1e-4dcc-92fa-e3913ef07eec on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Gebe_19366128-de1e-4dcc-92fa-e3913ef07eec","column":12,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Gebe into queue
+[2025-04-11 17:39:00] [INFO] [Component] Setting light_dragon_Zahaup_757a3837-5b56-4a52-9ddd-f93ac82e7bde on to {"spawn_region":[],"collider":"","unit":"light_dragon_Zahaup_757a3837-5b56-4a52-9ddd-f93ac82e7bde","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 17:39:00] [INFO] [SpeedQueue] Added unit user:Zahaup into queue
+[2025-04-11 17:39:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-11 17:39:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-11 17:39:00] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-11 17:39:00] [INFO] [FontPool] Started initializing FontPool
+[2025-04-11 17:39:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-11 17:39:00] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-11 17:39:01] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-11 17:39:01] [INFO] [AbilitySelectionPanel] Updating ability selection for air_dragon_Jouytc_661c4e5b-29fa-4a20-ab1b-3258ab8188bd
+[2025-04-11 17:39:01] [INFO] [AbilitySelectionPanel] Finished ability selection for air_dragon_Jouytc_661c4e5b-29fa-4a20-ab1b-3258ab8188bd
+[2025-04-11 17:39:01] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 17:39:01] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 17:39:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 17:39:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 17:39:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 17:39:01] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 17:39:01] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity air_dragon_Jouytc_661c4e5b-29fa-4a20-ab1b-3258ab8188bd
+[2025-04-11 17:39:01] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity air_dragon_Jouytc_661c4e5b-29fa-4a20-ab1b-3258ab8188bd
+[2025-04-11 17:39:01] [INFO] [StatisticsInformationPanel] Started updating statistics information panel
+[2025-04-11 17:39:01] [INFO] [StatisticsInformationPanel] Finished updating statistics information panel
+[2025-04-11 17:39:01] [INFO] [GreaterAbilityInformationPanel] Started updating Greater Ability Information Panel
+[2025-04-11 17:39:01] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater Ability Information Panel
+[2025-04-11 17:39:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-11 17:39:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.49244141578674316 seconds
+[2025-04-11 17:39:02] [INFO] [InputHandler] Gliding 0 camera to new tile 12_11_8ef3b03c-466f-40e6-8eb8-e89a3dd7e0d7
+[2025-04-11 17:39:02] [INFO] [InputHandler] Gliding 1 camera to new tile 12_11_8ef3b03c-466f-40e6-8eb8-e89a3dd7e0d7
+[2025-04-11 17:39:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 17:39:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Jouytc
+[2025-04-11 17:39:04] [INFO] [InputHandler] Gliding 0 camera to new tile 12_11_8ef3b03c-466f-40e6-8eb8-e89a3dd7e0d7
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement range to 11 for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to null for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement range to 11 for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to null for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [14, 14] for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [14, 14] for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [13, 14] for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [13, 14] for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [13, 13] for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [13, 13] for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [12, 13] for Jouytc
+[2025-04-11 17:39:04] [INFO] [MovementSystem] Updated movement path from [12, 11] to [12, 13] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [11, 13] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [11, 13] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [12, 13] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [12, 13] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [12, 14] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [12, 14] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [13, 14] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [13, 14] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [14, 14] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to [14, 14] for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to null for Jouytc
+[2025-04-11 17:39:05] [INFO] [MovementSystem] Updated movement path from [12, 11] to null for Jouytc
+[2025-04-11 17:39:06] [INFO] [InputHandler] Gliding 0 camera to new tile 12_11_8ef3b03c-466f-40e6-8eb8-e89a3dd7e0d7
+[2025-04-11 17:39:11] [INFO] [InputHandler] Gliding 0 camera to new tile 12_11_8ef3b03c-466f-40e6-8eb8-e89a3dd7e0d7
+[2025-04-11 17:39:17] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-11 17:39:17] [INFO] [AbilitySystem] Jouytc is planning to use slash on null
+[2025-04-11 17:39:17] [INFO] [AbilitySystem] Updated area of sight for Jouytc, viewing 5 tiles
+[2025-04-11 17:39:17] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 0 tiles
+[2025-04-11 17:39:17] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 0 tiles
+[2025-04-11 17:39:17] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-11 17:39:17] [INFO] [AbilitySystem] Jouytc is planning to use ember on null
+[2025-04-11 17:39:17] [INFO] [AbilitySystem] Updated area of sight for Jouytc, viewing 13 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [14, 14]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [13, 14]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [12, 13]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 3 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [11, 12]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 3 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [11, 11]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 2 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [10, 11]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 3 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [11, 12]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 3 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [11, 13]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [12, 13]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 3 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Jouytc is planning to use ember on [13, 14]
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:18] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [14, 14]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [13, 13]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [13, 12]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 3 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [12, 11]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [11, 8]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 5 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [10, 7]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 7 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [10, 6]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [9, 6]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 8 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [9, 5]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [8, 5]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 8 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Jouytc is planning to use ember on [8, 4]
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:19] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles
+[2025-04-11 17:39:20] [INFO] [AbilitySystem] Jouytc is planning to use ember on [7, 3]
+[2025-04-11 17:39:20] [INFO] [AbilitySystem] Updated line of sight for Jouytc, viewing 4 tiles
+[2025-04-11 17:39:20] [INFO] [AbilitySystem] Updated area of effect for Jouytc viewing 1 tiles

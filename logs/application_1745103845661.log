@@ -1,0 +1,37 @@
+[2025-04-19 16:04:05] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 16:04:05] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 16:04:05] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 16:04:05] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 16:04:05] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 16:04:05] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 16:04:05] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 16:04:05] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 16:04:05] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 16:04:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 16:04:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 16:04:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 16:04:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 16:04:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 16:04:06] [INFO] [Component] Setting air_dragon_Seza_65e96ac0-e3f8-4fba-bac4-12c0ad053491 on to {"row":5,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Seza_65e96ac0-e3f8-4fba-bac4-12c0ad053491","structure":""}.
+[2025-04-19 16:04:06] [INFO] [SpeedQueue] Added unit enemy:Seza into queue
+[2025-04-19 16:04:06] [INFO] [Component] Setting earth_dragon_Kuxyi_83d503fd-ec38-44ca-b82b-3ee408d791df on to {"row":1,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Kuxyi_83d503fd-ec38-44ca-b82b-3ee408d791df","structure":""}.
+[2025-04-19 16:04:06] [INFO] [SpeedQueue] Added unit enemy:Kuxyi into queue
+[2025-04-19 16:04:06] [INFO] [Component] Setting earth_dragon_Fohyg_8f849a7c-8675-4825-83a6-19ff657a5dfa on to {"row":5,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Fohyg_8f849a7c-8675-4825-83a6-19ff657a5dfa","structure":""}.
+[2025-04-19 16:04:06] [INFO] [SpeedQueue] Added unit enemy:Fohyg into queue
+[2025-04-19 16:04:06] [INFO] [Component] Setting light_dragon_Pere_04d00066-bf30-4862-aa22-06f6096765ec on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Pere_04d00066-bf30-4862-aa22-06f6096765ec","structure":""}.
+[2025-04-19 16:04:06] [INFO] [SpeedQueue] Added unit enemy:Pere into queue
+[2025-04-19 16:04:06] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 16:04:06] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 16:04:06] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 16:04:06] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 16:04:06] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 16:04:06] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 16:04:06] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 16:04:06] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 16:04:06] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_80242931-cd17-4ec7-b607-3a2a23d4716a
+[2025-04-19 16:04:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 16:04:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 16:04:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 16:04:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 16:04:06] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 16:04:07] [INFO] [VisualsSystem] Finished creating blurred background after 0.49312907457351685 seconds

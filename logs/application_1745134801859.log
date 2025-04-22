@@ -1,0 +1,57 @@
+[2025-04-20 00:40:01] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-20 00:40:01] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-20 00:40:01] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-20 00:40:01] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-20 00:40:01] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-20 00:40:01] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-20 00:40:01] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-20 00:40:01] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-20 00:40:01] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-20 00:40:02] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-20 00:40:02] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-20 00:40:02] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-20 00:40:02] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-20 00:40:02] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-20 00:40:02] [INFO] [Component] Setting air_dragon_Zirgea_89ae90a8-4d51-4ac5-8f3c-a20e9b13cbc1 on to {"row":1,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Zirgea_89ae90a8-4d51-4ac5-8f3c-a20e9b13cbc1","structure":""}.
+[2025-04-20 00:40:02] [INFO] [SpeedQueue] Added unit enemy:Zirgea into queue
+[2025-04-20 00:40:02] [INFO] [Component] Setting dragon_Voyac_be002343-4cf5-4025-94cc-cf0fa38e3588 on to {"row":0,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Voyac_be002343-4cf5-4025-94cc-cf0fa38e3588","structure":""}.
+[2025-04-20 00:40:02] [INFO] [SpeedQueue] Added unit enemy:Voyac into queue
+[2025-04-20 00:40:02] [INFO] [Component] Setting water_dragon_Aowea_c687a0f1-3973-4f6a-a4f7-d7e905e8f60c on to {"row":7,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Aowea_c687a0f1-3973-4f6a-a4f7-d7e905e8f60c","structure":""}.
+[2025-04-20 00:40:02] [INFO] [SpeedQueue] Added unit enemy:Aowea into queue
+[2025-04-20 00:40:02] [INFO] [Component] Setting air_dragon_Aokh_c82ba709-e1f8-4bc5-91a9-729789901a3b on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Aokh_c82ba709-e1f8-4bc5-91a9-729789901a3b","structure":""}.
+[2025-04-20 00:40:02] [INFO] [SpeedQueue] Added unit enemy:Aokh into queue
+[2025-04-20 00:40:02] [INFO] [Component] Setting air_dragon_Yarlj_03fd088b-92f9-496b-9636-fed9d2b5b888 on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Yarlj_03fd088b-92f9-496b-9636-fed9d2b5b888","structure":""}.
+[2025-04-20 00:40:02] [INFO] [SpeedQueue] Added unit user:Yarlj into queue
+[2025-04-20 00:40:02] [INFO] [Component] Setting light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84 on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84","structure":""}.
+[2025-04-20 00:40:02] [INFO] [SpeedQueue] Added unit user:Jyyy into queue
+[2025-04-20 00:40:02] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-20 00:40:02] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-20 00:40:02] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-20 00:40:02] [INFO] [FontPool] Started initializing FontPool
+[2025-04-20 00:40:02] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-20 00:40:02] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-20 00:40:02] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-20 00:40:02] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84
+[2025-04-20 00:40:02] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84
+[2025-04-20 00:40:02] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-20 00:40:02] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-20 00:40:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-20 00:40:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-20 00:40:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84
+[2025-04-20 00:40:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84
+[2025-04-20 00:40:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 00:40:02] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-20 00:40:02] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-20 00:40:02] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-20 00:40:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-20 00:40:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-20 00:40:02] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-20 00:40:03] [INFO] [VisualsSystem] Finished creating blurred background after 0.48906370997428894 seconds
+[2025-04-20 00:40:04] [INFO] [MovementSystem] Updated movement range to 7 for Jyyy
+[2025-04-20 00:40:04] [INFO] [MovementSystem] Updated movement path from [6, 7] to [5, 7] for Jyyy
+[2025-04-20 00:40:04] [INFO] [Component] Setting light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84 on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Jyyy_b7143973-df58-44af-8c00-e7d46b80ec84","structure":""}.
+[2025-04-20 00:40:04] [INFO] [MovementSystem] Moved from [6, 7] to [5, 7]
+[2025-04-20 00:40:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-20 00:40:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Jyyy
+[2025-04-20 00:40:04] [INFO] [InputHandler] Gliding 0 camera to new tile 5_7_4098d01a-ff86-41cc-827f-b560a4ec9aa3
+[2025-04-20 00:40:04] [INFO] [InputHandler] Gliding 1 camera to new tile 5_7_4098d01a-ff86-41cc-827f-b560a4ec9aa3

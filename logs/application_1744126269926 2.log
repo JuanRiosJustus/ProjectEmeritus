@@ -1,0 +1,80 @@
+[2025-04-08 08:31:09] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-08 08:31:09] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-08 08:31:10] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-08 08:31:10] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-08 08:31:10] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-08 08:31:10] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-08 08:31:10] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-08 08:31:10] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-08 08:31:10] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-08 08:31:10] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-08 08:31:10] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-08 08:31:10] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-08 08:31:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-08 08:31:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"air_dragon_Eusire_dd6b32ee-2f0d-4293-b804-deb2873c4627","column":11,"layers":[],"row":13,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Eusire into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"dragon_Vafxo_bed9b054-8233-4fd2-97ec-65368d9c583a","column":14,"layers":[],"row":5,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Vafxo into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"air_dragon_Nyui_9beed568-2f28-4dc1-8c69-027c105e2bda","column":0,"layers":[],"row":11,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Nyui into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"water_dragon_Lakoeo_d821f2d7-c44a-43bb-b178-8ec862dc8855","column":7,"layers":[],"row":1,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Lakoeo into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"dark_dragon_Maoig_91d195e6-7cd4-4b1c-80a3-bb5e30316f58","column":6,"layers":[],"row":12,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Maoig into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"air_dragon_Giicle_2168347d-f3ea-4d0e-a9b5-140c8da6ec72","column":12,"layers":[],"row":8,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Giicle into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"light_dragon_Kico_3c727b98-102b-4737-9952-378305092313","column":13,"layers":[],"row":10,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Kico into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"fire_dragon_Piua_8792358d-0f37-4bd5-934b-baac03e6c804","column":12,"layers":[],"row":7,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Piua into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"dragon_Cifsj_0e9fdb75-0e98-4bdb-820b-40d9580936cc","column":11,"layers":[],"row":9,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Cifsj into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"water_dragon_Xupmo_de68ef78-24d3-4930-a964-3ede0625efea","column":7,"layers":[],"row":0,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Xupmo into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"earth_dragon_Pofia_77b6cfef-9841-4fc2-bcc4-f4cfde43447b","column":14,"layers":[],"row":1,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Pofia into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"fire_dragon_Revhi_edc0e4da-7d34-4f5a-beb6-af1bfb297eee","column":12,"layers":[],"row":11,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Revhi into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"fire_dragon_Jimciw_be66dcae-ba51-4383-a86b-62ff2da28332","column":4,"layers":[],"row":6,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Jimciw into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"earth_dragon_Jaeieo_ee4423e1-f30b-4137-8d0c-7fed36b26057","column":2,"layers":[],"row":0,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Jaeieo into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"fire_dragon_Eodufr_c47b1477-f1f9-476d-952f-2f6bca89eaf7","column":3,"layers":[],"row":2,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Eodufr into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"dragon_Oorti_97274cc0-049a-414c-9522-8d6330a2ae08","column":10,"layers":[],"row":4,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Oorti into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"earth_dragon_Iyky_b932e0f4-92ef-4f45-b15f-43116f90e7b5","column":3,"layers":[],"row":11,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Iyky into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"air_dragon_Dosulq_b8f7b4cd-f737-45f9-9031-63f7fb901907","column":11,"layers":[],"row":6,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Dosulq into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"light_dragon_Weequy_0daddef8-ed99-4eee-aa3a-316881150379","column":6,"layers":[],"row":1,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Weequy into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"earth_dragon_Jofyeu_65bbdcbb-b9fa-415c-a4ec-87814f328e1a","column":12,"layers":[],"row":13,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Jofyeu into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"fire_dragon_Aecq_82b3e38a-470d-40f1-9c61-0549f31d9953","column":13,"layers":[],"row":3,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Aecq into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"earth_dragon_Yiaq_fbb35e39-ed3b-4331-8783-d0aaea86ecfb","column":11,"layers":[],"row":14,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit enemy:Yiaq into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"air_dragon_Yyia_da4d9294-e87b-42b9-9607-1ac06a1951b6","column":0,"layers":[],"row":5,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Yyia into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"dragon_Nykds_58f75cb1-6f14-4f1b-86ac-4b943ee64836","column":2,"layers":[],"row":6,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Nykds into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"dark_dragon_Kihju_4f252422-f37f-4a88-8881-fb25a48a2896","column":8,"layers":[],"row":12,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Kihju into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"earth_dragon_Gukyuf_700099a6-8487-421f-94e6-ccaa722f9a3f","column":10,"layers":[],"row":1,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Gukyuf into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"light_dragon_Lapb_2841dab9-88fc-48c2-bc8f-8bdcbd965301","column":9,"layers":[],"row":14,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Lapb into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"earth_dragon_Defa_7c2b8e35-f108-45b0-966e-dd1d8c6b4446","column":3,"layers":[],"row":4,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Defa into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"dark_dragon_Wokv_5436c996-4bbe-49f7-91ba-95e39f4eb66b","column":1,"layers":[],"row":6,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Wokv into queue
+[2025-04-08 08:31:10] [INFO] [Component] Putting unit on {}{"spawn_region":[],"collider":"","unit":"light_dragon_Dygv_5e100ea3-0498-4910-a3fa-0d2ce9c77fda","column":0,"layers":[],"row":3,"structure":"","height":0}
+[2025-04-08 08:31:10] [INFO] [SpeedQueue] Added unit user:Dygv into queue
+[2025-04-08 08:31:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-08 08:31:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-08 08:31:10] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-08 08:31:10] [INFO] [FontPool] Started initializing FontPool
+[2025-04-08 08:31:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-08 08:31:11] [INFO] [EngineController] Finished setting scene to GAME_SCENE

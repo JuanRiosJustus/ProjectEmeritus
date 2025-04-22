@@ -1,0 +1,103 @@
+[2025-04-11 00:13:03] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-11 00:13:03] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-11 00:13:03] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-11 00:13:03] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-11 00:13:03] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-11 00:13:03] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-11 00:13:03] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-11 00:13:03] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-11 00:13:03] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-11 00:13:03] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-11 00:13:03] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-11 00:13:03] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-11 00:13:04] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-11 00:13:04] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-11 00:13:04] [INFO] [Component] Setting earth_dragon_Ietd_89b1df89-b3ce-4608-bedc-170ee1fd19d1 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Ietd_89b1df89-b3ce-4608-bedc-170ee1fd19d1","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Ietd into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting fire_dragon_Aimt_4088c614-5b97-4e3b-8c59-a9be801f1d83 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Aimt_4088c614-5b97-4e3b-8c59-a9be801f1d83","column":12,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Aimt into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dark_dragon_Bowa_900d3b4d-12ff-40fc-88b6-c6a43894818f on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Bowa_900d3b4d-12ff-40fc-88b6-c6a43894818f","column":9,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Bowa into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting water_dragon_Tevyoe_d274e31b-3912-40f0-88d6-c72d8d2928fa on to {"spawn_region":[],"collider":"","unit":"water_dragon_Tevyoe_d274e31b-3912-40f0-88d6-c72d8d2928fa","column":5,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Tevyoe into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting water_dragon_Modn_650c7e52-245b-406f-992e-7ec3f91bf270 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Modn_650c7e52-245b-406f-992e-7ec3f91bf270","column":1,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Modn into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting air_dragon_Oajmif_5304a360-5e6f-48da-9069-8ba292119474 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Oajmif_5304a360-5e6f-48da-9069-8ba292119474","column":1,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Oajmif into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dragon_Danyi_199c1488-65d3-475f-903b-7d4c6e7cbf83 on to {"spawn_region":[],"collider":"","unit":"dragon_Danyi_199c1488-65d3-475f-903b-7d4c6e7cbf83","column":0,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Danyi into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dark_dragon_Furir_2eef48bd-a1fe-4a95-b755-376a0950431d on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Furir_2eef48bd-a1fe-4a95-b755-376a0950431d","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Furir into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting light_dragon_Tyqvf_8fea9998-c706-4989-9534-e8a3bf24346c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Tyqvf_8fea9998-c706-4989-9534-e8a3bf24346c","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Tyqvf into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dragon_Jyht_ba19216e-ccd6-44d5-865c-a95782e29a06 on to {"spawn_region":[],"collider":"","unit":"dragon_Jyht_ba19216e-ccd6-44d5-865c-a95782e29a06","column":13,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Jyht into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting air_dragon_Cahoi_4683a2ef-0012-420b-87a1-f7c031ff0e92 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Cahoi_4683a2ef-0012-420b-87a1-f7c031ff0e92","column":6,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Cahoi into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting air_dragon_Vukoh_7c1eeb6c-dfd1-4d17-ad92-a77cf59c3469 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Vukoh_7c1eeb6c-dfd1-4d17-ad92-a77cf59c3469","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Vukoh into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dragon_Zigaob_09c89fc7-9906-4db7-b63c-bd1a636df700 on to {"spawn_region":[],"collider":"","unit":"dragon_Zigaob_09c89fc7-9906-4db7-b63c-bd1a636df700","column":4,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Zigaob into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting light_dragon_Jykpke_78041ac4-22d0-458c-b954-ad91ca213e18 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jykpke_78041ac4-22d0-458c-b954-ad91ca213e18","column":0,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Jykpke into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting light_dragon_Reqcee_193c2c56-7872-421b-afa5-01c77312f93b on to {"spawn_region":[],"collider":"","unit":"light_dragon_Reqcee_193c2c56-7872-421b-afa5-01c77312f93b","column":1,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Reqcee into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting light_dragon_Kibus_bc5627b9-9f0a-4ddd-8004-0445012fbca1 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Kibus_bc5627b9-9f0a-4ddd-8004-0445012fbca1","column":3,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Kibus into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting water_dragon_Gebi_a192d124-9bc2-4b48-b56a-8bad99d63f2a on to {"spawn_region":[],"collider":"","unit":"water_dragon_Gebi_a192d124-9bc2-4b48-b56a-8bad99d63f2a","column":10,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Gebi into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting earth_dragon_Xeiuo_87b33e10-f51b-4b41-b4dd-ae2e142c60af on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Xeiuo_87b33e10-f51b-4b41-b4dd-ae2e142c60af","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Xeiuo into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting light_dragon_Jiyna_c067ee42-8971-4c07-9743-d88ac93695c0 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jiyna_c067ee42-8971-4c07-9743-d88ac93695c0","column":4,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Jiyna into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting light_dragon_Jyre_213df471-a139-4397-9fc9-bf9d8f06d371 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Jyre_213df471-a139-4397-9fc9-bf9d8f06d371","column":12,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Jyre into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting air_dragon_Yupya_90a078ae-8588-4cde-a5d0-4dea05c57576 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Yupya_90a078ae-8588-4cde-a5d0-4dea05c57576","column":0,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Yupya into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting water_dragon_Daylic_a39151a8-0290-47fd-a414-0360308112dd on to {"spawn_region":[],"collider":"","unit":"water_dragon_Daylic_a39151a8-0290-47fd-a414-0360308112dd","column":5,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Daylic into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting fire_dragon_Vokizg_dc91c498-93a7-4862-9283-f877925d4a97 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vokizg_dc91c498-93a7-4862-9283-f877925d4a97","column":1,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit enemy:Vokizg into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting fire_dragon_Kyvta_2bc29d54-aff8-433c-aac0-68dfd7a50bc1 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Kyvta_2bc29d54-aff8-433c-aac0-68dfd7a50bc1","column":9,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Kyvta into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting air_dragon_Neqeuu_09014ae9-be2d-45fd-a977-ed078e58e4c3 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Neqeuu_09014ae9-be2d-45fd-a977-ed078e58e4c3","column":4,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Neqeuu into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting air_dragon_Tanaaq_f5ea13a2-e8b4-4c38-92bd-e8186f121508 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Tanaaq_f5ea13a2-e8b4-4c38-92bd-e8186f121508","column":11,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Tanaaq into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting earth_dragon_Zyhoao_c9a88cfd-8049-42bb-9bd0-da429150c7ed on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Zyhoao_c9a88cfd-8049-42bb-9bd0-da429150c7ed","column":2,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Zyhoao into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dark_dragon_Qegqi_59304023-2786-423a-88ed-2047da19d710 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Qegqi_59304023-2786-423a-88ed-2047da19d710","column":9,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Qegqi into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dragon_Zeiapg_ea8547d9-4672-4803-8e60-ae31470f7e87 on to {"spawn_region":[],"collider":"","unit":"dragon_Zeiapg_ea8547d9-4672-4803-8e60-ae31470f7e87","column":2,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Zeiapg into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting dragon_Fozpua_1a0683fe-e36e-4f47-8311-b11247012a7e on to {"spawn_region":[],"collider":"","unit":"dragon_Fozpua_1a0683fe-e36e-4f47-8311-b11247012a7e","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Fozpua into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting fire_dragon_Puana_e5574481-c9cd-425c-8a9b-4662c71483f3 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Puana_e5574481-c9cd-425c-8a9b-4662c71483f3","column":4,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Puana into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting earth_dragon_Wymyds_480d961c-0179-4a5b-aee1-dcc2508f9447 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Wymyds_480d961c-0179-4a5b-aee1-dcc2508f9447","column":5,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Wymyds into queue
+[2025-04-11 00:13:04] [INFO] [Component] Setting earth_dragon_Iiqeve_96b7d6ea-a62a-4b09-b771-f2c7bdfaf622 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iiqeve_96b7d6ea-a62a-4b09-b771-f2c7bdfaf622","column":4,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-11 00:13:04] [INFO] [SpeedQueue] Added unit user:Iiqeve into queue
+[2025-04-11 00:13:04] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-11 00:13:04] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-11 00:13:04] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-11 00:13:04] [INFO] [FontPool] Started initializing FontPool
+[2025-04-11 00:13:04] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-11 00:13:05] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-11 00:13:05] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-11 00:13:05] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Reqcee_193c2c56-7872-421b-afa5-01c77312f93b
+[2025-04-11 00:13:05] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Reqcee_193c2c56-7872-421b-afa5-01c77312f93b
+[2025-04-11 00:13:05] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-11 00:13:05] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-11 00:13:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-11 00:13:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-11 00:13:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 00:13:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-11 00:13:05] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-11 00:13:05] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-11 00:13:05] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-11 00:13:06] [INFO] [VisualsSystem] Finished creating blurred background after 0.49713441729545593 seconds
+[2025-04-11 00:13:09] [INFO] [InputHandler] Gliding 0 camera to new tile 8_1_8934cebc-6a76-4865-bf81-6f106bdff55f
+[2025-04-11 00:13:09] [INFO] [InputHandler] Gliding 1 camera to new tile 8_1_8934cebc-6a76-4865-bf81-6f106bdff55f
+[2025-04-11 00:13:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-11 00:13:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Reqcee

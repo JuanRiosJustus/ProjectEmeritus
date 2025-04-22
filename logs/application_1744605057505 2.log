@@ -1,0 +1,61 @@
+[2025-04-13 21:30:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 21:30:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 21:30:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 21:30:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 21:30:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 21:30:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 21:30:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 21:30:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 21:30:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 21:30:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 21:30:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 21:30:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 21:30:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 21:30:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 21:30:57] [INFO] [Component] Setting light_dragon_Suzwz_9308e7dd-8ace-4dbb-8adf-e47b7de964fa on to {"spawn_region":[],"collider":"","unit":"light_dragon_Suzwz_9308e7dd-8ace-4dbb-8adf-e47b7de964fa","column":7,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Suzwz into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting fire_dragon_Laatby_46b44746-0511-4625-b922-be857990e632 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Laatby_46b44746-0511-4625-b922-be857990e632","column":5,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Laatby into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting fire_dragon_Uine_a7130727-9ecc-4d2a-9e75-0f3917078ecd on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Uine_a7130727-9ecc-4d2a-9e75-0f3917078ecd","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Uine into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting water_dragon_Oaauz_faa34504-fe16-4a03-a2ab-8810c8437cc8 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Oaauz_faa34504-fe16-4a03-a2ab-8810c8437cc8","column":7,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Oaauz into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting dragon_Dicyju_7dafcef6-fd8d-497c-9d2c-4fe76124df85 on to {"spawn_region":[],"collider":"","unit":"dragon_Dicyju_7dafcef6-fd8d-497c-9d2c-4fe76124df85","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Dicyju into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting fire_dragon_Yohye_8d14c9d1-b7ad-4300-a3ba-536b507c4c98 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Yohye_8d14c9d1-b7ad-4300-a3ba-536b507c4c98","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Yohye into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting fire_dragon_Eyia_459da3f7-15ab-4c4c-96a6-8f0a6b2c8422 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Eyia_459da3f7-15ab-4c4c-96a6-8f0a6b2c8422","column":5,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Eyia into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting light_dragon_Ooguru_e95ed400-41ac-4445-9418-360c68770435 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Ooguru_e95ed400-41ac-4445-9418-360c68770435","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit enemy:Ooguru into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting dragon_Iojyue_fb9e8fe4-5b76-4a5e-a090-85f6c871c9db on to {"spawn_region":[],"collider":"","unit":"dragon_Iojyue_fb9e8fe4-5b76-4a5e-a090-85f6c871c9db","column":6,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit user:Iojyue into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting earth_dragon_Pumby_4f546dba-06f3-46ed-876f-0dbaf33a231d on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Pumby_4f546dba-06f3-46ed-876f-0dbaf33a231d","column":3,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit user:Pumby into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting air_dragon_Bompi_33e5c212-13d4-4d51-9c15-561e15f108d4 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Bompi_33e5c212-13d4-4d51-9c15-561e15f108d4","column":4,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit user:Bompi into queue
+[2025-04-13 21:30:57] [INFO] [Component] Setting light_dragon_Gypcux_7a18fe16-ec79-4a46-ba35-3aa143ea7e02 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Gypcux_7a18fe16-ec79-4a46-ba35-3aa143ea7e02","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-13 21:30:57] [INFO] [SpeedQueue] Added unit user:Gypcux into queue
+[2025-04-13 21:30:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 21:30:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 21:30:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 21:30:57] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 21:30:58] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 21:30:58] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 21:30:58] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 21:30:58] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Yohye_8d14c9d1-b7ad-4300-a3ba-536b507c4c98
+[2025-04-13 21:30:58] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Yohye_8d14c9d1-b7ad-4300-a3ba-536b507c4c98
+[2025-04-13 21:30:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:30:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:30:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:30:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:30:58] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Yohye_8d14c9d1-b7ad-4300-a3ba-536b507c4c98
+[2025-04-13 21:30:58] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Yohye_8d14c9d1-b7ad-4300-a3ba-536b507c4c98
+[2025-04-13 21:30:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:30:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 21:30:58] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:30:58] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:30:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:30:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:30:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 21:30:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.48220333456993103 seconds

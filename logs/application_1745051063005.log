@@ -1,0 +1,86 @@
+[2025-04-19 01:24:23] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 01:24:23] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 01:24:23] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 01:24:23] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 01:24:23] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 01:24:23] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 01:24:23] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 01:24:23] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 01:24:23] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 01:24:23] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 01:24:23] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 01:24:23] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 01:24:23] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 01:24:23] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 01:24:23] [INFO] [Component] Setting light_dragon_Raki_06e0193a-f8c6-4e7e-8edf-db15901a0677 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Raki_06e0193a-f8c6-4e7e-8edf-db15901a0677","structure":""}.
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Added unit enemy:Raki into queue
+[2025-04-19 01:24:23] [INFO] [Component] Setting fire_dragon_Womii_7b4dfb3e-6cdd-4d20-ab11-2a537bf01679 on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Womii_7b4dfb3e-6cdd-4d20-ab11-2a537bf01679","structure":""}.
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Added unit enemy:Womii into queue
+[2025-04-19 01:24:23] [INFO] [Component] Setting air_dragon_Rebyk_ae68c16d-a8ba-4932-b2b0-5b3ebaad5f92 on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Rebyk_ae68c16d-a8ba-4932-b2b0-5b3ebaad5f92","structure":""}.
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Added unit enemy:Rebyk into queue
+[2025-04-19 01:24:23] [INFO] [Component] Setting water_dragon_Mycy_56ccb325-08b1-47f7-992d-a27926710dd5 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Mycy_56ccb325-08b1-47f7-992d-a27926710dd5","structure":""}.
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Added unit enemy:Mycy into queue
+[2025-04-19 01:24:23] [INFO] [Component] Setting air_dragon_Kezl_583c62f0-3762-43cc-987a-0d01ad316dc7 on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Kezl_583c62f0-3762-43cc-987a-0d01ad316dc7","structure":""}.
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Added unit enemy:Kezl into queue
+[2025-04-19 01:24:23] [INFO] [Component] Setting fire_dragon_Filvo_3624214c-2550-4c49-a9d7-87f856782477 on to {"row":3,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Filvo_3624214c-2550-4c49-a9d7-87f856782477","structure":""}.
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Added unit user:Filvo into queue
+[2025-04-19 01:24:23] [INFO] [Component] Setting air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8 on to {"row":1,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8","structure":""}.
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Added unit user:Uuvzyq into queue
+[2025-04-19 01:24:23] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 01:24:23] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 01:24:23] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-19 01:24:23] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 01:24:23] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 01:24:23] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-19 01:24:23] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-19 01:24:23] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:23] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-19 01:24:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-19 01:24:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 01:24:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 01:24:23] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:23] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 01:24:24] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 01:24:24] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-19 01:24:24] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-19 01:24:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-19 01:24:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-19 01:24:24] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 01:24:24] [INFO] [VisualsSystem] Finished creating blurred background after 0.49545177817344666 seconds
+[2025-04-19 01:24:25] [INFO] [MovementSystem] Updated movement range to 12 for Uuvzyq
+[2025-04-19 01:24:25] [INFO] [MovementSystem] Updated movement path from [1, 3] to [2, 4] for Uuvzyq
+[2025-04-19 01:24:25] [INFO] [Component] Setting air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8 on to {"row":2,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8","structure":""}.
+[2025-04-19 01:24:25] [INFO] [MovementSystem] Moved from [1, 3] to [2, 4]
+[2025-04-19 01:24:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 01:24:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Uuvzyq
+[2025-04-19 01:24:25] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_93422e77-3de1-4bab-bc2a-8b80800742f1
+[2025-04-19 01:24:25] [INFO] [InputHandler] Gliding 1 camera to new tile 2_4_93422e77-3de1-4bab-bc2a-8b80800742f1
+[2025-04-19 01:24:26] [INFO] [AbilitySystem] Uuvzyq is planning to use ember on [3, 4]
+[2025-04-19 01:24:26] [INFO] [AbilitySystem] Updated area of sight for Uuvzyq, viewing 10 tiles
+[2025-04-19 01:24:26] [INFO] [AbilitySystem] Updated line of sight for Uuvzyq, viewing 2 tiles
+[2025-04-19 01:24:26] [INFO] [AbilitySystem] Updated area of effect for Uuvzyq viewing 1 tiles
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Started constructing cost mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Finished constructing cost mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Checking cost requirements for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Uuvzyq is able to pay for ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Started constructing cost mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Finished constructing cost mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Paying cost requirements for Uuvzyq using ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-19 01:24:26] [INFO] [AbilitySystem] Used from ember on [3, 4]
+[2025-04-19 01:24:26] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:26] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-19 01:24:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-19 01:24:26] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:26] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uuvzyq_6fd74d72-2940-4bc5-9035-5ea125b29cd8
+[2025-04-19 01:24:26] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-19 01:24:26] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-19 01:24:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Started constructing damage mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Finished constructing damage mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Started constructing cost mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [CombatSystem] Finished constructing cost mappings for Uuvzyq to use ember
+[2025-04-19 01:24:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

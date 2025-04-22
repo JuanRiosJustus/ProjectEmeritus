@@ -1,0 +1,45 @@
+[2025-04-19 16:19:21] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 16:19:21] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 16:19:21] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 16:19:21] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 16:19:21] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 16:19:21] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 16:19:21] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 16:19:21] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 16:19:21] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 16:19:21] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 16:19:21] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 16:19:21] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 16:19:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 16:19:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 16:19:22] [INFO] [Component] Setting dark_dragon_Hezeoy_d4d0727d-ea94-4ddc-b963-04eaadf858ef on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Hezeoy_d4d0727d-ea94-4ddc-b963-04eaadf858ef","structure":""}.
+[2025-04-19 16:19:22] [INFO] [SpeedQueue] Added unit enemy:Hezeoy into queue
+[2025-04-19 16:19:22] [INFO] [Component] Setting light_dragon_Tuauau_9909db48-0080-46b6-8884-2b2c925aa90b on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Tuauau_9909db48-0080-46b6-8884-2b2c925aa90b","structure":""}.
+[2025-04-19 16:19:22] [INFO] [SpeedQueue] Added unit enemy:Tuauau into queue
+[2025-04-19 16:19:22] [INFO] [Component] Setting fire_dragon_Teei_a8a866c1-841c-408f-84c2-805b814db0f6 on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Teei_a8a866c1-841c-408f-84c2-805b814db0f6","structure":""}.
+[2025-04-19 16:19:22] [INFO] [SpeedQueue] Added unit enemy:Teei into queue
+[2025-04-19 16:19:22] [INFO] [Component] Setting water_dragon_Wapoyy_80645bd6-f815-4e4e-8d81-a2a238441f7b on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Wapoyy_80645bd6-f815-4e4e-8d81-a2a238441f7b","structure":""}.
+[2025-04-19 16:19:22] [INFO] [SpeedQueue] Added unit enemy:Wapoyy into queue
+[2025-04-19 16:19:22] [INFO] [Component] Setting dragon_Dydii_8a5507b0-d960-4944-a5f0-e3fca1ce1ce4 on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Dydii_8a5507b0-d960-4944-a5f0-e3fca1ce1ce4","structure":""}.
+[2025-04-19 16:19:22] [INFO] [SpeedQueue] Added unit user:Dydii into queue
+[2025-04-19 16:19:22] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 16:19:22] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 16:19:22] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 16:19:22] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 16:19:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 16:19:22] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 16:19:22] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 16:19:22] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 16:19:22] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_368c7f02-8f76-4faf-87e1-caf28b1fd3d1
+[2025-04-19 16:19:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 16:19:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 16:19:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 16:19:22] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 16:19:22] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 16:19:23] [INFO] [VisualsSystem] Finished creating blurred background after 0.49356865882873535 seconds
+[2025-04-19 16:19:25] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 16:19:25] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 16:19:27] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 16:19:27] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 16:19:28] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 16:19:28] [INFO] [MapEditorSceneEditorPanel] Finished logging

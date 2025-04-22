@@ -1,0 +1,345 @@
+[2025-04-19 18:31:59] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-19 18:31:59] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-19 18:31:59] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-19 18:31:59] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-19 18:31:59] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-19 18:31:59] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-19 18:31:59] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-19 18:31:59] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-19 18:31:59] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-19 18:31:59] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-19 18:31:59] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-19 18:31:59] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-19 18:31:59] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-19 18:31:59] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-19 18:31:59] [INFO] [Component] Setting earth_dragon_Eylnw_9f2cefac-0c84-49bf-8291-1671e8f58cca on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Eylnw_9f2cefac-0c84-49bf-8291-1671e8f58cca","structure":""}.
+[2025-04-19 18:31:59] [INFO] [SpeedQueue] Added unit enemy:Eylnw into queue
+[2025-04-19 18:31:59] [INFO] [Component] Setting dragon_Gosauv_52344eef-2921-4d24-bbdf-45c239c8745f on to {"row":7,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Gosauv_52344eef-2921-4d24-bbdf-45c239c8745f","structure":""}.
+[2025-04-19 18:31:59] [INFO] [SpeedQueue] Added unit enemy:Gosauv into queue
+[2025-04-19 18:31:59] [INFO] [Component] Setting light_dragon_Xyaas_ff7cfe30-7f28-496b-8336-2129e0022044 on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Xyaas_ff7cfe30-7f28-496b-8336-2129e0022044","structure":""}.
+[2025-04-19 18:31:59] [INFO] [SpeedQueue] Added unit enemy:Xyaas into queue
+[2025-04-19 18:31:59] [INFO] [Component] Setting earth_dragon_Xons_0ebc592d-e355-4b4c-9018-da01959c866a on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Xons_0ebc592d-e355-4b4c-9018-da01959c866a","structure":""}.
+[2025-04-19 18:31:59] [INFO] [SpeedQueue] Added unit enemy:Xons into queue
+[2025-04-19 18:31:59] [INFO] [Component] Setting water_dragon_Jyvtio_62097ce5-b7f3-40f9-889e-b8bec3555b61 on to {"row":3,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Jyvtio_62097ce5-b7f3-40f9-889e-b8bec3555b61","structure":""}.
+[2025-04-19 18:31:59] [INFO] [SpeedQueue] Added unit user:Jyvtio into queue
+[2025-04-19 18:31:59] [INFO] [Component] Setting dark_dragon_Fazee_001b3993-701e-4579-8f10-8dc5369ba712 on to {"row":7,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Fazee_001b3993-701e-4579-8f10-8dc5369ba712","structure":""}.
+[2025-04-19 18:31:59] [INFO] [SpeedQueue] Added unit user:Fazee into queue
+[2025-04-19 18:31:59] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-19 18:32:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-19 18:32:00] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-19 18:32:00] [INFO] [FontPool] Started initializing FontPool
+[2025-04-19 18:32:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-19 18:32:00] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-19 18:32:00] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-19 18:32:00] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-19 18:32:00] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_94989119-9548-49b2-9c1b-31b43162f69c
+[2025-04-19 18:32:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-19 18:32:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-19 18:32:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-19 18:32:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-19 18:32:00] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-19 18:32:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.49802589416503906 seconds
+[2025-04-19 18:32:03] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 18:32:03] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 18:32:05] [INFO] [MapEditorSceneEditorPanel] Started swapping
+[2025-04-19 18:32:05] [INFO] [MapEditorSceneEditorPanel] Finished logging
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:05] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:06] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Started updating cursor size
+[2025-04-19 18:32:11] [INFO] [MapEditorScene] Finished updating cursor size

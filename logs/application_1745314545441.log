@@ -1,0 +1,109 @@
+[2025-04-22 02:35:45] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-22 02:35:45] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-22 02:35:45] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-22 02:35:45] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-22 02:35:45] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-22 02:35:45] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-22 02:35:45] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-22 02:35:45] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-22 02:35:45] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-22 02:35:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-22 02:35:45] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-22 02:35:45] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-22 02:35:45] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-22 02:35:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-22 02:35:45] [INFO] [Component] Setting light_dragon_Saes_c855abb7-c2a7-4cb7-8193-429003d78b14 on to {"row":2,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Saes_c855abb7-c2a7-4cb7-8193-429003d78b14","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit enemy:Saes into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting water_dragon_Laiu_48639566-f6d7-485e-8b60-534344c3c410 on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Laiu_48639566-f6d7-485e-8b60-534344c3c410","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit enemy:Laiu into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting water_dragon_Daqkg_415ed3f7-cd87-4ac9-8eea-f4b0db0765fe on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Daqkg_415ed3f7-cd87-4ac9-8eea-f4b0db0765fe","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit enemy:Daqkg into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting light_dragon_Cejl_a540c731-ddb3-42b9-b5b0-58b7ade73b5f on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Cejl_a540c731-ddb3-42b9-b5b0-58b7ade73b5f","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit enemy:Cejl into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting dragon_Joxax_61e9ca2a-be27-4885-b54b-1df2dd7e31e9 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Joxax_61e9ca2a-be27-4885-b54b-1df2dd7e31e9","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit enemy:Joxax into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting dragon_Zali_e60085df-e01d-42b2-bc71-0f9d4a00c57b on to {"row":3,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Zali_e60085df-e01d-42b2-bc71-0f9d4a00c57b","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit user:Zali into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting dark_dragon_Rezuio_35b91f82-67a1-42d6-9a1d-3201167cf7ab on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Rezuio_35b91f82-67a1-42d6-9a1d-3201167cf7ab","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit user:Rezuio into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724 on to {"row":5,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit user:Wybaob into queue
+[2025-04-22 02:35:45] [INFO] [Component] Setting water_dragon_Saaxio_9fdd1e0f-f123-4f67-8f51-cac5a864cc4e on to {"row":6,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Saaxio_9fdd1e0f-f123-4f67-8f51-cac5a864cc4e","structure":""}.
+[2025-04-22 02:35:45] [INFO] [SpeedQueue] Added unit user:Saaxio into queue
+[2025-04-22 02:35:45] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-22 02:35:46] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-22 02:35:46] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:35:46] [INFO] [FontPool] Started initializing FontPool
+[2025-04-22 02:35:46] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-22 02:35:46] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-22 02:35:46] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-22 02:35:46] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-22 02:35:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-22 02:35:46] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-22 02:35:46] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-22 02:35:46] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724
+[2025-04-22 02:35:46] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724
+[2025-04-22 02:35:46] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:35:46] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:35:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-22 02:35:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-22 02:35:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:35:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-22 02:35:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-22 02:35:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.5011026263237 seconds
+[2025-04-22 02:35:48] [INFO] [MovementSystem] Updated movement range to 9 for Wybaob
+[2025-04-22 02:35:48] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Wybaob
+[2025-04-22 02:35:48] [INFO] [Component] Setting air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724 on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724","structure":""}.
+[2025-04-22 02:35:48] [INFO] [MovementSystem] Moved from [5, 0] to [5, 2]
+[2025-04-22 02:35:48] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724
+[2025-04-22 02:35:48] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724
+[2025-04-22 02:35:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:35:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Wybaob
+[2025-04-22 02:35:48] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_af66c904-c431-4c1f-b705-23f8bafece54
+[2025-04-22 02:35:48] [INFO] [InputHandler] Gliding 1 camera to new tile 5_2_af66c904-c431-4c1f-b705-23f8bafece54
+[2025-04-22 02:35:48] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-04-22 02:35:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:35:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-22 02:35:49] [INFO] [AbilitySystem] Wybaob is planning to use air_attack on [3, 2]
+[2025-04-22 02:35:49] [INFO] [AbilitySystem] Updated area of sight for Wybaob, viewing 13 tiles
+[2025-04-22 02:35:49] [INFO] [AbilitySystem] Updated line of sight for Wybaob, viewing 3 tiles
+[2025-04-22 02:35:49] [INFO] [AbilitySystem] Updated area of effect for Wybaob viewing 1 tiles
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Started constructing cost mappings for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Finished constructing cost mappings for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Checking cost requirements for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Wybaob is able to pay for air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Started constructing cost mappings for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Finished constructing cost mappings for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Paying cost requirements for Wybaob using air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-04-22 02:35:49] [INFO] [AbilitySystem] Used from air_attack on [3, 2]
+[2025-04-22 02:35:49] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724
+[2025-04-22 02:35:49] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Wybaob_a3f19cc2-65b7-4a9e-a876-289af846f724
+[2025-04-22 02:35:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:35:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Wybaob
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Wybaob lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Wybaob
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Zali
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Zali
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-22 02:35:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Wybaob to use air_attack
+[2025-04-22 02:35:49] [INFO] [CombatSystem] Started dealing damage with air_attack to Zali 
+[2025-04-22 02:35:49] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Cejl_a540c731-ddb3-42b9-b5b0-58b7ade73b5f
+[2025-04-22 02:35:49] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Cejl_a540c731-ddb3-42b9-b5b0-58b7ade73b5f
+[2025-04-22 02:35:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-22 02:35:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-22 02:35:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-22 02:35:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-22 02:35:49] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Cejl_a540c731-ddb3-42b9-b5b0-58b7ade73b5f
+[2025-04-22 02:35:49] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Cejl_a540c731-ddb3-42b9-b5b0-58b7ade73b5f
+[2025-04-22 02:35:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-22 02:35:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Cejl
+[2025-04-22 02:35:49] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_2d618de0-5521-453a-a87d-4c79c4e069d0
+[2025-04-22 02:35:49] [INFO] [InputHandler] Gliding 1 camera to new tile 2_1_2d618de0-5521-453a-a87d-4c79c4e069d0

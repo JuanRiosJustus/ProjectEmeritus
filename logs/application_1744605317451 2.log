@@ -1,0 +1,270 @@
+[2025-04-13 21:35:17] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-13 21:35:17] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-13 21:35:17] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-13 21:35:17] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-13 21:35:17] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-13 21:35:17] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-13 21:35:17] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-13 21:35:17] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-13 21:35:17] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-13 21:35:17] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-13 21:35:17] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-13 21:35:17] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-13 21:35:17] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-13 21:35:17] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-13 21:35:17] [INFO] [Component] Setting dragon_Zetzdi_497ddeef-9402-4cb7-9659-67b1954b2106 on to {"spawn_region":[],"collider":"","unit":"dragon_Zetzdi_497ddeef-9402-4cb7-9659-67b1954b2106","column":4,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Zetzdi into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting earth_dragon_Kawee_63cb5705-fb0d-4121-8696-a3c8aa31daab on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Kawee_63cb5705-fb0d-4121-8696-a3c8aa31daab","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Kawee into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting air_dragon_Cuwo_58487b89-6d3d-4527-8ac1-a60145e19b98 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Cuwo_58487b89-6d3d-4527-8ac1-a60145e19b98","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Cuwo into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting earth_dragon_Qietxf_a28a533f-8625-4e6a-a00f-a7646048a721 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Qietxf_a28a533f-8625-4e6a-a00f-a7646048a721","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Qietxf into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting air_dragon_Cuzet_95196b14-33ef-4c41-bdb8-171616a572a0 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Cuzet_95196b14-33ef-4c41-bdb8-171616a572a0","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Cuzet into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting dark_dragon_Iapuzi_1a989e75-a932-4de7-aad4-65c9df5aa5ef on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iapuzi_1a989e75-a932-4de7-aad4-65c9df5aa5ef","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Iapuzi into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe","column":6,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Museoo into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting dragon_Vidp_232fe9d4-9167-4aa8-baa3-ebeb1ee95631 on to {"spawn_region":[],"collider":"","unit":"dragon_Vidp_232fe9d4-9167-4aa8-baa3-ebeb1ee95631","column":6,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit enemy:Vidp into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting water_dragon_Eiqe_c507fbed-ab07-4f43-acb1-93832a37e23e on to {"spawn_region":[],"collider":"","unit":"water_dragon_Eiqe_c507fbed-ab07-4f43-acb1-93832a37e23e","column":2,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit user:Eiqe into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting air_dragon_Iiqfie_78a241db-1038-4d27-8c5f-00a62986f75e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Iiqfie_78a241db-1038-4d27-8c5f-00a62986f75e","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit user:Iiqfie into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting earth_dragon_Uuxg_15cabdc3-4cc3-4eb8-93a1-f50e35097746 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uuxg_15cabdc3-4cc3-4eb8-93a1-f50e35097746","column":2,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit user:Uuxg into queue
+[2025-04-13 21:35:17] [INFO] [Component] Setting light_dragon_Guvk_f2d5df98-7a0a-4275-b15c-4eb1e787f71f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Guvk_f2d5df98-7a0a-4275-b15c-4eb1e787f71f","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-13 21:35:17] [INFO] [SpeedQueue] Added unit user:Guvk into queue
+[2025-04-13 21:35:17] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-13 21:35:17] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-13 21:35:17] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-13 21:35:17] [INFO] [FontPool] Started initializing FontPool
+[2025-04-13 21:35:17] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-13 21:35:18] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-13 21:35:18] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-13 21:35:18] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe
+[2025-04-13 21:35:18] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe
+[2025-04-13 21:35:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-13 21:35:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-13 21:35:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-13 21:35:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-13 21:35:18] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe
+[2025-04-13 21:35:18] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe
+[2025-04-13 21:35:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:35:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-13 21:35:18] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-13 21:35:18] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-13 21:35:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:18] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-13 21:35:18] [INFO] [VisualsSystem] Finished creating blurred background after 0.4843713641166687 seconds
+[2025-04-13 21:35:20] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_699932e9-5b74-4c93-ac87-ab3dbc7af870
+[2025-04-13 21:35:20] [INFO] [InputHandler] Gliding 1 camera to new tile 2_6_699932e9-5b74-4c93-ac87-ab3dbc7af870
+[2025-04-13 21:35:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:35:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Museoo
+[2025-04-13 21:35:21] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_699932e9-5b74-4c93-ac87-ab3dbc7af870
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement range to 9 for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to null for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement range to 9 for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to null for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [4, 7] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [4, 7] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 7] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 7] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 6] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 6] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 5] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [3, 5] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [2, 5] for Museoo
+[2025-04-13 21:35:21] [INFO] [MovementSystem] Updated movement path from [2, 6] to [2, 5] for Museoo
+[2025-04-13 21:35:22] [INFO] [MovementSystem] Updated movement path from [2, 6] to [2, 4] for Museoo
+[2025-04-13 21:35:22] [INFO] [MovementSystem] Updated movement path from [2, 6] to [2, 4] for Museoo
+[2025-04-13 21:35:22] [INFO] [Component] Setting dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Museoo_0999a859-69d3-4fc0-ae16-36a7d3c952fe","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-13 21:35:22] [INFO] [MovementSystem] Moved from [2, 6] to [2, 4]
+[2025-04-13 21:35:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-13 21:35:22] [INFO] [SelectedTilePanel] Updated selected tile display to view Museoo
+[2025-04-13 21:35:22] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_8e464598-7f72-4e51-9dac-e2af52e94b35
+[2025-04-13 21:35:22] [INFO] [InputHandler] Gliding 1 camera to new tile 2_4_8e464598-7f72-4e51-9dac-e2af52e94b35
+[2025-04-13 21:35:23] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_8e464598-7f72-4e51-9dac-e2af52e94b35
+[2025-04-13 21:35:23] [INFO] [AbilityPanel] Selecting gust
+[2025-04-13 21:35:23] [INFO] [AbilitySystem] Museoo is planning to use gust on null
+[2025-04-13 21:35:23] [INFO] [AbilitySystem] Updated area of sight for Museoo, viewing 13 tiles
+[2025-04-13 21:35:23] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 0 tiles
+[2025-04-13 21:35:23] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 0 tiles
+[2025-04-13 21:35:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:23] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:23] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:23] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:23] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Museoo is planning to use gust on [5, 7]
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 3 tiles
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Museoo is planning to use gust on [5, 6]
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 6 tiles
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Museoo is planning to use gust on [4, 6]
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 3 tiles
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Museoo
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Museoo
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vidp
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vidp
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] 9.090909 damage after defenses for gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Museoo is planning to use gust on [4, 5]
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 4 tiles
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Museoo is planning to use gust on [4, 4]
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 3 tiles
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Museoo is planning to use gust on [3, 4]
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 2 tiles
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Museoo is planning to use gust on [3, 3]
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 3 tiles
+[2025-04-13 21:35:25] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:26] [INFO] [AbilitySystem] Museoo is planning to use gust on [2, 3]
+[2025-04-13 21:35:26] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 2 tiles
+[2025-04-13 21:35:26] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:26] [INFO] [AbilitySystem] Museoo is planning to use gust on [2, 2]
+[2025-04-13 21:35:26] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 3 tiles
+[2025-04-13 21:35:26] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Museoo
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Museoo
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eiqe
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eiqe
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] 9.090909 damage after defenses for gust
+[2025-04-13 21:35:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Museoo is planning to use gust on [1, 2]
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 3 tiles
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Museoo is planning to use gust on [0, 0]
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 3 tiles
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 1 tiles
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Museoo
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Museoo
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Guvk
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Guvk
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] 9.090909 damage after defenses for gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Museoo is planning to use gust on null
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Updated line of sight for Museoo, viewing 0 tiles
+[2025-04-13 21:35:28] [INFO] [AbilitySystem] Updated area of effect for Museoo viewing 0 tiles
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Started constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Finished constructing damage mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Started constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [CombatSystem] Finished constructing cost mappings for Museoo to use gust
+[2025-04-13 21:35:28] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

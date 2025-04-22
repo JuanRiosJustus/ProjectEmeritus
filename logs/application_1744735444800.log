@@ -1,0 +1,45 @@
+[2025-04-15 09:44:04] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-15 09:44:04] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-15 09:44:04] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-15 09:44:04] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-15 09:44:04] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-15 09:44:04] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-15 09:44:04] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-15 09:44:04] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-15 09:44:04] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-15 09:44:04] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-15 09:44:04] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-15 09:44:04] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-15 09:44:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-15 09:44:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-15 09:44:05] [INFO] [Component] Setting fire_dragon_Oowia_9e49353c-14de-42df-a03c-871896913cac on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oowia_9e49353c-14de-42df-a03c-871896913cac","column":0,"row":1,"structure":"","height":0}.
+[2025-04-15 09:44:05] [INFO] [SpeedQueue] Added unit enemy:Oowia into queue
+[2025-04-15 09:44:05] [INFO] [Component] Setting dark_dragon_Kamory_7102ac94-3c6c-4c5c-b759-37849debf0c4 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Kamory_7102ac94-3c6c-4c5c-b759-37849debf0c4","column":5,"row":3,"structure":"","height":0}.
+[2025-04-15 09:44:05] [INFO] [SpeedQueue] Added unit enemy:Kamory into queue
+[2025-04-15 09:44:05] [INFO] [Component] Setting fire_dragon_Dugmg_a9e64b54-60f0-4cf3-ae03-8d2f294137d1 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Dugmg_a9e64b54-60f0-4cf3-ae03-8d2f294137d1","column":1,"row":2,"structure":"","height":0}.
+[2025-04-15 09:44:05] [INFO] [SpeedQueue] Added unit user:Dugmg into queue
+[2025-04-15 09:44:05] [INFO] [Component] Setting earth_dragon_Cueleo_3ed44b49-9483-42c3-bbef-e8e42eb59a98 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Cueleo_3ed44b49-9483-42c3-bbef-e8e42eb59a98","column":5,"row":5,"structure":"","height":0}.
+[2025-04-15 09:44:05] [INFO] [SpeedQueue] Added unit user:Cueleo into queue
+[2025-04-15 09:44:05] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-15 09:44:05] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-15 09:44:05] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-15 09:44:05] [INFO] [FontPool] Started initializing FontPool
+[2025-04-15 09:44:05] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-15 09:44:05] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-15 09:44:05] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-15 09:44:05] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-15 09:44:05] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_d1f3cab7-b82b-40a1-b227-86264c0fb213
+[2025-04-15 09:44:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-15 09:44:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-15 09:44:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 09:44:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 09:44:05] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-15 09:44:06] [INFO] [VisualsSystem] Finished creating blurred background after 0.4844375252723694 seconds
+[2025-04-15 09:44:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 09:44:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 09:44:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 09:44:12] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 09:44:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 09:44:24] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-15 09:44:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-15 09:44:24] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

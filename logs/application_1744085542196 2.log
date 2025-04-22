@@ -1,0 +1,167 @@
+[2025-04-07 21:12:22] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-07 21:12:22] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-07 21:12:22] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-07 21:12:22] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-07 21:12:22] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-07 21:12:22] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-07 21:12:22] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-07 21:12:22] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-07 21:12:22] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-07 21:12:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-07 21:12:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-07 21:12:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-07 21:12:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-07 21:12:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-07 21:12:22] [INFO] [Component] Setting light_dragon_Rebl_e6587435-7513-4a70-860a-26b8c486d705 on to 6_10_d3266e92-68a6-423f-9bd4-77ba8c31ec7a.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Rebl into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dark_dragon_Ayms_8a724aeb-5809-410f-9474-5de559fc2c52 on to 5_11_0dca60a1-dfcc-49bb-90ac-de58d814200d.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Ayms into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting fire_dragon_Jaleua_874d16fc-31e7-4cf0-b9b0-210dafc3c3c2 on to 8_5_71047d9d-f78f-495a-ab08-77072b1ba39c.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Jaleua into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dark_dragon_Bikt_31a57986-9696-4ff6-acdc-cbad42174a37 on to 3_6_1bb7474d-05ba-4f1a-8191-1ace567d2354.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Bikt into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting earth_dragon_Bifjy_5a989863-d0a7-4394-9df8-437b0cb7dc17 on to 7_14_95e99441-0c02-483f-a1d1-6960b5d391a0.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Bifjy into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dragon_Repu_8c9667a5-e3a5-4f1c-a55b-f691c076dd00 on to 14_6_586a51a6-cf94-4320-a012-ef1eca974f43.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Repu into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting light_dragon_Gajxe_807a7025-0966-4254-876a-ab4e94bfa216 on to 7_6_370f3a3f-37e2-43ae-856c-561dd70635ed.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Gajxe into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dragon_Ligost_5c96eb69-7f42-4c4e-a0e0-dd88ad00c4f0 on to 2_14_5b5c0ec3-1864-4fb7-8617-b9725a42099c.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Ligost into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671 on to 10_7_613d42d7-952e-4b07-911b-26bff7526496.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Cawoek into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting water_dragon_Qocaoo_648d825e-5a6d-4f85-976a-f1b433812db7 on to 11_11_f66103d9-0940-47bc-b047-b6c3b021328c.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Qocaoo into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dragon_Kuaoa_270f8215-161c-43af-94f7-6548d5feb1f8 on to 0_9_5854862e-c3b2-44cf-88ee-6b4d0c7b0ede.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Kuaoa into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting light_dragon_Gyrq_d1b28634-38be-4953-8499-dc3adac80301 on to 3_8_8ea5fa1c-3ee3-4921-a559-bd1ed54d02ac.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Gyrq into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting air_dragon_Vuibj_9e8551e1-08cc-49c4-851b-7a7fd9eec8cb on to 11_2_7cbae636-497b-49a3-a809-fea9f8570ead.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Vuibj into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dragon_Uauw_896ece3a-a246-40ed-8254-fd09add22037 on to 14_13_b9fea02f-7253-4447-a7fb-eb732c8b68a1.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Uauw into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting air_dragon_Hoyunz_5fdb075b-bcd1-4f69-bc23-6981d68a3136 on to 0_5_dd5784e7-c4ce-47d3-8c35-bce96af292f2.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Hoyunz into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting water_dragon_Sybu_38a2a6e3-17d6-4d1b-82d9-e0e7a0c484fa on to 3_13_e5bf4e69-6367-48b3-9119-d7be90502828.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Sybu into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dragon_Zoech_eb493895-bd8c-4cc2-a463-d7607ee114d5 on to 13_13_14dfb274-cfba-4425-ab50-bc60c62b19bb.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Zoech into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting fire_dragon_Hyiid_868d03c0-f3ee-44a4-b739-c5943b21f556 on to 3_5_e1bb4bbb-9e01-450b-bd84-292c2021ce8c.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Hyiid into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting water_dragon_Naqoxb_71912ab2-fd13-443d-8e12-9c7d0d446200 on to 4_5_f3218e82-1668-4730-9819-6b3fba6e4262.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Naqoxb into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting air_dragon_Worad_4c6b841c-2051-4f12-b3ee-cf302a67e328 on to 10_12_5a078282-c985-4512-9716-1babbb3a73ef.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit enemy:Worad into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting earth_dragon_Suzu_0881ccf9-a3da-4e38-bd95-dade36262179 on to 6_7_83c8e442-e2c8-4008-af75-4305316f98f3.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Suzu into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dark_dragon_Gewp_ad019df4-2729-49bf-b6cf-f8fa389d53f9 on to 3_12_86d58e93-41a9-4e69-a0e7-bc73e8127bb8.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Gewp into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dark_dragon_Taei_2e434759-2798-4de3-9b28-049b3ac57688 on to 4_1_f9f5f8fb-16d1-4868-bc40-088d1ed60348.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Taei into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dark_dragon_Vosa_d20c9b85-5910-4c01-a86a-b5a06769106d on to 0_4_32d40627-4fbe-47dc-9c02-da541a2d9029.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Vosa into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting earth_dragon_Vujd_ceba21cf-b98c-45cf-805c-046e5b83f771 on to 13_8_dc72a6ce-3fae-48ef-86d8-6a0ba1b568ce.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Vujd into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dark_dragon_Lity_20dbe7c7-08bf-4f65-8ca2-5de5aefde00e on to 8_2_f603e4ea-21e2-401d-a8d7-9a9132303540.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Lity into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting air_dragon_Ougi_2ecd5359-061e-4780-b509-01e69a933021 on to 4_0_1c3dcb42-61bd-49c3-9ce7-1a63e5646a9d.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Ougi into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting fire_dragon_Wooow_e056549c-6c99-460f-995f-37dfc06cc56b on to 5_1_392ea86c-3601-4c9e-83ac-d6bdfe57826e.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Wooow into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting water_dragon_Naiuj_31d1291a-70d8-4216-bc7a-a6c7fc665a6f on to 1_2_36ff7eca-abeb-4958-b621-1622e6a00221.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Naiuj into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting fire_dragon_Aiboio_688e05ef-bdf2-4e49-98fc-281b839fd90c on to 0_1_98134b92-c7fc-4a65-a16d-91cbfd97a586.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Aiboio into queue
+[2025-04-07 21:12:22] [INFO] [Component] Setting dark_dragon_Maguiq_1b1e9404-b9e7-48e5-ac92-14daa7b77d21 on to 13_5_5974fca4-a560-4189-a9ad-327bd0a5d5b1.
+[2025-04-07 21:12:22] [INFO] [SpeedQueue] Added unit user:Maguiq into queue
+[2025-04-07 21:12:22] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-07 21:12:22] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-07 21:12:22] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-07 21:12:22] [INFO] [FontPool] Started initializing FontPool
+[2025-04-07 21:12:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-07 21:12:22] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-07 21:12:23] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-07 21:12:23] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:23] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:23] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-07 21:12:23] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-07 21:12:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-07 21:12:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-07 21:12:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-07 21:12:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-07 21:12:23] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:23] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:23] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-07 21:12:23] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-07 21:12:23] [INFO] [VisualsSystem] Finished creating blurred background after 0.4962221086025238 seconds
+[2025-04-07 21:12:25] [INFO] [InputHandler] Gliding 0 camera to new tile 10_7_613d42d7-952e-4b07-911b-26bff7526496
+[2025-04-07 21:12:27] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-07 21:12:27] [INFO] [AbilitySystem] Cawoek is planning to use ember on [12, 12]
+[2025-04-07 21:12:27] [INFO] [AbilitySystem] Updated area of sight for Cawoek, viewing 17 tiles
+[2025-04-07 21:12:27] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 6 tiles
+[2025-04-07 21:12:27] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:27] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:27] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:27] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-07 21:12:27] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-07 21:12:27] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:27] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Cawoek_6ebe5f39-582c-4301-8d96-8e365aad5671
+[2025-04-07 21:12:27] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-07 21:12:27] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-07 21:12:28] [INFO] [AbilitySystem] Cawoek is planning to use ember on [13, 12]
+[2025-04-07 21:12:28] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 8 tiles
+[2025-04-07 21:12:28] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Cawoek is planning to use ember on [12, 11]
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 7 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Cawoek is planning to use ember on [12, 10]
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 6 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Cawoek is planning to use ember on [12, 9]
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 5 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Cawoek is planning to use ember on [11, 9]
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 4 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Cawoek is planning to use ember on [11, 8]
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 3 tiles
+[2025-04-07 21:12:41] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:42] [INFO] [AbilitySystem] Cawoek is planning to use ember on [11, 7]
+[2025-04-07 21:12:42] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 2 tiles
+[2025-04-07 21:12:42] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:43] [INFO] [AbilitySystem] Cawoek is planning to use ember on [11, 6]
+[2025-04-07 21:12:43] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 3 tiles
+[2025-04-07 21:12:43] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:44] [INFO] [AbilitySystem] Cawoek is planning to use ember on [11, 5]
+[2025-04-07 21:12:44] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 4 tiles
+[2025-04-07 21:12:44] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:45] [INFO] [AbilitySystem] Cawoek is planning to use ember on [10, 5]
+[2025-04-07 21:12:45] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 3 tiles
+[2025-04-07 21:12:45] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:46] [INFO] [AbilitySystem] Cawoek is planning to use ember on [10, 4]
+[2025-04-07 21:12:46] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 4 tiles
+[2025-04-07 21:12:46] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:46] [INFO] [AbilitySystem] Cawoek is planning to use ember on [9, 5]
+[2025-04-07 21:12:46] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 4 tiles
+[2025-04-07 21:12:46] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Cawoek is planning to use ember on [9, 4]
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 5 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Cawoek is planning to use ember on [8, 3]
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 7 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Cawoek is planning to use ember on [8, 2]
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 8 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Cawoek is planning to use ember on [7, 2]
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 9 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Cawoek is planning to use ember on [7, 1]
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 8 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Cawoek is planning to use ember on [6, 0]
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 8 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Cawoek is planning to use ember on [5, 0]
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated line of sight for Cawoek, viewing 12 tiles
+[2025-04-07 21:12:57] [INFO] [AbilitySystem] Updated area of effect for Cawoek viewing 1 tiles

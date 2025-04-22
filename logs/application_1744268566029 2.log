@@ -1,0 +1,170 @@
+[2025-04-10 00:02:46] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-10 00:02:46] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-10 00:02:46] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-10 00:02:46] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-10 00:02:46] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-10 00:02:46] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-10 00:02:46] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-10 00:02:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-10 00:02:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-10 00:02:46] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-10 00:02:46] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-10 00:02:46] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-10 00:02:46] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-10 00:02:46] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-10 00:02:46] [INFO] [Component] Setting water_dragon_Xorqd_685d87ad-d5dc-4e1d-a3e5-0025efd982db on to {"spawn_region":[],"collider":"","unit":"water_dragon_Xorqd_685d87ad-d5dc-4e1d-a3e5-0025efd982db","column":6,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Xorqd into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting earth_dragon_Yeef_118b5ece-651f-4e1a-9f16-aa38e8e579d4 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Yeef_118b5ece-651f-4e1a-9f16-aa38e8e579d4","column":14,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Yeef into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dragon_Mijet_271a7e5c-9fe6-4bec-8fba-e4c4e600cc3b on to {"spawn_region":[],"collider":"","unit":"dragon_Mijet_271a7e5c-9fe6-4bec-8fba-e4c4e600cc3b","column":13,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Mijet into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dark_dragon_Dyltx_95da6059-603d-4754-9c25-61ee298e1978 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Dyltx_95da6059-603d-4754-9c25-61ee298e1978","column":6,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Dyltx into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting earth_dragon_Caoeaa_4f7997af-b10c-4c5a-b2a2-19b714f44eb2 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Caoeaa_4f7997af-b10c-4c5a-b2a2-19b714f44eb2","column":10,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Caoeaa into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting air_dragon_Gakwrp_17b47249-a678-4b10-a293-7e2de11866a2 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Gakwrp_17b47249-a678-4b10-a293-7e2de11866a2","column":10,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Gakwrp into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting air_dragon_Jeraa_96e979ac-b60f-4fb7-a102-e53e8cf6dcd9 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Jeraa_96e979ac-b60f-4fb7-a102-e53e8cf6dcd9","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Jeraa into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting light_dragon_Rusowb_61ccf706-202e-48f9-a5f7-d290c3d6b87d on to {"spawn_region":[],"collider":"","unit":"light_dragon_Rusowb_61ccf706-202e-48f9-a5f7-d290c3d6b87d","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Rusowb into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting water_dragon_Pyrui_1d32f4ca-1442-4659-afee-7b7332e796d6 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Pyrui_1d32f4ca-1442-4659-afee-7b7332e796d6","column":3,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Pyrui into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting light_dragon_Yusp_981a1b9b-c445-4bf6-aaa5-6c1f2e05a60d on to {"spawn_region":[],"collider":"","unit":"light_dragon_Yusp_981a1b9b-c445-4bf6-aaa5-6c1f2e05a60d","column":1,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Yusp into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dragon_Vyyi_3e6202c2-9310-4d65-8e3f-3234d11c13c3 on to {"spawn_region":[],"collider":"","unit":"dragon_Vyyi_3e6202c2-9310-4d65-8e3f-3234d11c13c3","column":14,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Vyyi into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting light_dragon_Yyuiba_c96b6a37-9bdb-424a-8cbe-6ef803d02ef0 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Yyuiba_c96b6a37-9bdb-424a-8cbe-6ef803d02ef0","column":9,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Yyuiba into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dragon_Zepjy_eb95d53a-cc72-43d0-9291-a044b2bf724f on to {"spawn_region":[],"collider":"","unit":"dragon_Zepjy_eb95d53a-cc72-43d0-9291-a044b2bf724f","column":11,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Zepjy into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting earth_dragon_Cucd_c9993afb-b613-4fe5-912f-b57242fdc3a9 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Cucd_c9993afb-b613-4fe5-912f-b57242fdc3a9","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Cucd into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b","column":13,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Menjzu into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting light_dragon_Goyyio_55ab823e-7d84-401c-a9ee-9c56a2e8d840 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Goyyio_55ab823e-7d84-401c-a9ee-9c56a2e8d840","column":2,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Goyyio into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting fire_dragon_Pohhf_0ac8f1ce-674e-41cf-b12d-c5568a03e9b5 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Pohhf_0ac8f1ce-674e-41cf-b12d-c5568a03e9b5","column":12,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Pohhf into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting fire_dragon_Vyrfi_869a95b0-acf8-4241-a4d3-612573268a06 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vyrfi_869a95b0-acf8-4241-a4d3-612573268a06","column":8,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Vyrfi into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting earth_dragon_Sumyao_f1b196bd-1264-4d60-9e92-475377314a72 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Sumyao_f1b196bd-1264-4d60-9e92-475377314a72","column":11,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Sumyao into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dragon_Tutkk_82921b18-71fb-4910-ba80-666cefb92254 on to {"spawn_region":[],"collider":"","unit":"dragon_Tutkk_82921b18-71fb-4910-ba80-666cefb92254","column":0,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Tutkk into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting light_dragon_Taqgf_38b82581-27c6-48c8-9312-f5411264108d on to {"spawn_region":[],"collider":"","unit":"light_dragon_Taqgf_38b82581-27c6-48c8-9312-f5411264108d","column":3,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Taqgf into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dragon_Pycawe_46e26a8c-fd61-42a1-82a1-290128ef68e3 on to {"spawn_region":[],"collider":"","unit":"dragon_Pycawe_46e26a8c-fd61-42a1-82a1-290128ef68e3","column":13,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit enemy:Pycawe into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting light_dragon_Aevjda_70dc7a22-4974-459b-bd39-a0f420e7ec81 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Aevjda_70dc7a22-4974-459b-bd39-a0f420e7ec81","column":8,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Aevjda into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting fire_dragon_Ziody_07312f36-d3a8-402e-881c-bce8cdca79dc on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Ziody_07312f36-d3a8-402e-881c-bce8cdca79dc","column":8,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Ziody into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dragon_Zeeuiy_687bf9c9-498d-456d-a8fb-799a73b253bc on to {"spawn_region":[],"collider":"","unit":"dragon_Zeeuiy_687bf9c9-498d-456d-a8fb-799a73b253bc","column":9,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Zeeuiy into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting water_dragon_Ouxm_19728f3a-1e4f-4da9-8cf9-03fc3a3a48a3 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ouxm_19728f3a-1e4f-4da9-8cf9-03fc3a3a48a3","column":1,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Ouxm into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting air_dragon_Redok_3de74cfa-b4de-4950-a95b-eb0678da2055 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Redok_3de74cfa-b4de-4950-a95b-eb0678da2055","column":7,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Redok into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting water_dragon_Tolt_b5330e79-e1c7-4ad1-98c9-07a8a0261dba on to {"spawn_region":[],"collider":"","unit":"water_dragon_Tolt_b5330e79-e1c7-4ad1-98c9-07a8a0261dba","column":7,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Tolt into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dark_dragon_Zomvba_91e4909e-d1f3-44b2-b69c-cb77bc2e1c62 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zomvba_91e4909e-d1f3-44b2-b69c-cb77bc2e1c62","column":8,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Zomvba into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting earth_dragon_Kiio_4d3c06f2-4a32-423e-9604-ef13d35af93b on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Kiio_4d3c06f2-4a32-423e-9604-ef13d35af93b","column":11,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Kiio into queue
+[2025-04-10 00:02:46] [INFO] [Component] Setting dark_dragon_Ioaouy_b910c83f-6afd-4926-ac73-db0abbe91413 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ioaouy_b910c83f-6afd-4926-ac73-db0abbe91413","column":12,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-10 00:02:46] [INFO] [SpeedQueue] Added unit user:Ioaouy into queue
+[2025-04-10 00:02:46] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-10 00:02:46] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-10 00:02:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-10 00:02:46] [INFO] [FontPool] Started initializing FontPool
+[2025-04-10 00:02:46] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-10 00:02:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-10 00:02:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-10 00:02:47] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b
+[2025-04-10 00:02:47] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b
+[2025-04-10 00:02:47] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-10 00:02:47] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-10 00:02:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-10 00:02:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-10 00:02:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-10 00:02:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-10 00:02:47] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-10 00:02:47] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-10 00:02:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-10 00:02:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.48387691378593445 seconds
+[2025-04-10 00:02:50] [INFO] [InputHandler] Gliding 0 camera to new tile 6_13_7bc31d89-314a-4f42-a0fa-3888f1943ad8
+[2025-04-10 00:02:50] [INFO] [InputHandler] Gliding 1 camera to new tile 6_13_7bc31d89-314a-4f42-a0fa-3888f1943ad8
+[2025-04-10 00:02:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-10 00:02:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Menjzu
+[2025-04-10 00:02:52] [INFO] [InputHandler] Gliding 0 camera to new tile 6_13_7bc31d89-314a-4f42-a0fa-3888f1943ad8
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement range to 10 for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to null for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement range to 10 for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to null for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to [8, 14] for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to [8, 14] for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to [8, 13] for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to [8, 13] for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to [7, 13] for Menjzu
+[2025-04-10 00:02:52] [INFO] [MovementSystem] Updated movement path from [6, 13] to [7, 13] for Menjzu
+[2025-04-10 00:02:53] [INFO] [MovementSystem] Updated movement path from [6, 13] to [6, 13] for Menjzu
+[2025-04-10 00:02:53] [INFO] [MovementSystem] Updated movement path from [6, 13] to [6, 13] for Menjzu
+[2025-04-10 00:02:53] [INFO] [MovementSystem] Updated movement path from [6, 13] to [5, 13] for Menjzu
+[2025-04-10 00:02:53] [INFO] [MovementSystem] Updated movement path from [6, 13] to [5, 13] for Menjzu
+[2025-04-10 00:02:54] [INFO] [Component] Setting fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b","column":13,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-10 00:02:54] [INFO] [MovementSystem] Moved from [6, 13] to [5, 13]
+[2025-04-10 00:02:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-10 00:02:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Menjzu
+[2025-04-10 00:02:54] [INFO] [InputHandler] Gliding 0 camera to new tile 5_13_f252baaf-a610-42f8-b6c7-c28a5e91bbdd
+[2025-04-10 00:02:54] [INFO] [InputHandler] Gliding 1 camera to new tile 5_13_f252baaf-a610-42f8-b6c7-c28a5e91bbdd
+[2025-04-10 00:02:56] [INFO] [InputHandler] Gliding 0 camera to new tile 5_13_f252baaf-a610-42f8-b6c7-c28a5e91bbdd
+[2025-04-10 00:02:57] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-10 00:02:57] [INFO] [AbilitySystem] Menjzu is planning to use energy_wave on null
+[2025-04-10 00:02:57] [INFO] [AbilitySystem] Updated area of sight for Menjzu, viewing 11 tiles
+[2025-04-10 00:02:57] [INFO] [AbilitySystem] Updated line of sight for Menjzu, viewing 0 tiles
+[2025-04-10 00:02:57] [INFO] [AbilitySystem] Updated area of effect for Menjzu viewing 0 tiles
+[2025-04-10 00:02:57] [INFO] [CombatSystem] Started constructing damage mappings for Menjzu to use energy_wave
+[2025-04-10 00:02:57] [INFO] [CombatSystem] Finished constructing damage mappings for Menjzu to use energy_wave
+[2025-04-10 00:02:57] [INFO] [CombatSystem] Started constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:02:57] [INFO] [CombatSystem] Finished constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Menjzu is planning to use energy_wave on [5, 14]
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated line of sight for Menjzu, viewing 2 tiles
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated area of effect for Menjzu viewing 1 tiles
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Menjzu is planning to use energy_wave on [4, 14]
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated line of sight for Menjzu, viewing 3 tiles
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated area of effect for Menjzu viewing 1 tiles
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Menjzu is planning to use energy_wave on [4, 13]
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated line of sight for Menjzu, viewing 2 tiles
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated area of effect for Menjzu viewing 1 tiles
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Menjzu is planning to use energy_wave on [3, 13]
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated line of sight for Menjzu, viewing 3 tiles
+[2025-04-10 00:02:58] [INFO] [AbilitySystem] Updated area of effect for Menjzu viewing 1 tiles
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Started constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Finished constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Checking cost requirements for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Menjzu is able to pay for energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Started constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Finished constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Paying cost requirements for Menjzu using energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-10 00:03:00] [INFO] [AbilitySystem] Used from energy_wave on [3, 13]
+[2025-04-10 00:03:00] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b
+[2025-04-10 00:03:00] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b
+[2025-04-10 00:03:00] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-10 00:03:00] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-10 00:03:00] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b
+[2025-04-10 00:03:00] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity fire_dragon_Menjzu_2122d961-fdab-421f-a252-e42b6e387a0b
+[2025-04-10 00:03:00] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Started constructing damage mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Finished constructing damage mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Started constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Finished constructing cost mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Started constructing damage mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Finished constructing damage mappings for Menjzu to use energy_wave
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Started dealing damage with energy_wave to Mijet 
+[2025-04-10 00:03:00] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-10 00:03:00] [INFO] [CombatSystem] Menjzu lands a critical hit! for 18.0
+[2025-04-10 00:03:00] [INFO] [CombatSystem] 28 = Damage after modifiers
+[2025-04-10 00:03:00] [INFO] [CombatSystem] 25 = Damage after defenses

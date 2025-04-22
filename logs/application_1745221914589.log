@@ -1,0 +1,26 @@
+[2025-04-21 00:51:54] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-21 00:51:54] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-21 00:51:54] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-21 00:51:54] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-21 00:51:54] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-21 00:51:54] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-21 00:51:54] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-21 00:51:54] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-21 00:51:54] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-21 00:51:54] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-21 00:51:54] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-21 00:51:54] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-21 00:51:54] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-21 00:51:54] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-21 00:51:54] [INFO] [Component] Setting water_dragon_Gyuat_4c78c8d9-0ead-4f24-a52f-eb8e85449283 on to {"row":0,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Gyuat_4c78c8d9-0ead-4f24-a52f-eb8e85449283","structure":""}.
+[2025-04-21 00:51:54] [INFO] [SpeedQueue] Added unit enemy:Gyuat into queue
+[2025-04-21 00:54:50] [INFO] [Component] Setting earth_dragon_Boqh_9a882f3a-bcbf-4f36-ac94-2cc1637650be on to {"row":0,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Boqh_9a882f3a-bcbf-4f36-ac94-2cc1637650be","structure":""}.
+[2025-04-21 00:54:50] [INFO] [SpeedQueue] Added unit enemy:Boqh into queue
+[2025-04-21 00:54:50] [INFO] [Component] Setting earth_dragon_Ioavy_aaa01858-6378-4157-a2c8-bee6fd927ccb on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Ioavy_aaa01858-6378-4157-a2c8-bee6fd927ccb","structure":""}.
+[2025-04-21 00:54:50] [INFO] [SpeedQueue] Added unit enemy:Ioavy into queue
+[2025-04-21 00:54:50] [INFO] [Component] Setting water_dragon_Luliuf_69f97d14-7e94-42db-bf1e-3f2e4b9600d2 on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Luliuf_69f97d14-7e94-42db-bf1e-3f2e4b9600d2","structure":""}.
+[2025-04-21 00:54:50] [INFO] [SpeedQueue] Added unit enemy:Luliuf into queue
+[2025-04-21 00:54:50] [INFO] [Component] Setting water_dragon_Quuvpw_4c111a6e-27fd-47ee-affc-71e8d9b641eb on to {"row":4,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Quuvpw_4c111a6e-27fd-47ee-affc-71e8d9b641eb","structure":""}.
+[2025-04-21 00:54:50] [INFO] [SpeedQueue] Added unit user:Quuvpw into queue
+[2025-04-21 00:54:50] [INFO] [Component] Setting fire_dragon_Iygij_0cc98946-f6ac-4684-86dd-b2568132deb4 on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Iygij_0cc98946-f6ac-4684-86dd-b2568132deb4","structure":""}.
+[2025-04-21 00:54:50] [INFO] [SpeedQueue] A
