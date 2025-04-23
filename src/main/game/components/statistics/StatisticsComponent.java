@@ -1,11 +1,11 @@
 package main.game.components.statistics;
 
-import main.constants.HashSlingingSlasher;
 import main.game.components.Component;
 import main.game.stats.Attribute;
 import main.game.stats.Tag;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
+import org.w3c.dom.Attr;
 
 import java.util.*;
 
@@ -28,18 +28,18 @@ public class StatisticsComponent extends Component {
     public void addTag(String key) {
         Tag tag = new Tag(key, "????", -1);
         mTagMap.put(key, tag);
-        recalculateCheckSum();
+        recalculateHash();
     }
 
     public void addTag(String key, String source, int duration) {
         Tag tag = new Tag(key, source, duration);
         mTagMap.put(key, tag);
-        recalculateCheckSum();
+        recalculateHash();
     }
 
     public void removeTag(String tag) {
         mTagMap.remove(tag);
-        recalculateCheckSum();
+        recalculateHash();
     }
 
     public String getUnit() { return getString(UNIT); }
@@ -80,7 +80,7 @@ public class StatisticsComponent extends Component {
             Attribute attribute = new Attribute(key, value);
             updatedMap.put(key, attribute);
         }
-        recalculateCheckSum();
+        recalculateHash();
     }
 
 
@@ -126,24 +126,38 @@ public class StatisticsComponent extends Component {
     public void toResource(String attribute, float value) {
         Attribute attributeNode = mAttributeMap.get(attribute);
         attributeNode.setCurrent(attributeNode.getCurrent() + value);
-        recalculateCheckSum();
+        recalculateHash();
     }
 
 
 
-    public void putAdditiveModification(String attribute, String source, float value, int lifetime) {
+//    public void putAdditiveModification(String key, String attribute, String source, float value, int lifetime) {
+//        Attribute node = mAttributeMap.get(attribute);
+//        node.putAdditiveModification(source, value);
+//        recalculateHash();
+//    }
+
+    public void putAdditiveModification(String source, String attribute, float value) {
         Attribute node = mAttributeMap.get(attribute);
-        node.putAdditiveModification(source, value, lifetime);
-        recalculateCheckSum();
+        node.putAdditiveModification(source, value);
+        recalculateHash();
     }
 
-    public void putMultiplicativeModification(String attribute, String source, float value, int lifetime) {
+    public void putMultiplicativeModification(String attribute, String source, float value) {
         Attribute node = mAttributeMap.get(attribute);
-        node.putMultiplicativeModification(source, value, lifetime);
-        recalculateCheckSum();
+        node.putMultiplicativeModification(source, value);
+        recalculateHash();
     }
 
-    private void recalculateCheckSum() {
+
+    public void removeModification(String source) {
+        Map<String, Attribute> attributes = mAttributeMap;
+        for (Map.Entry<String, Attribute> entry : attributes.entrySet()) {
+            Attribute attribute = entry.getValue();
+            attribute.removeModification(source);
+        }
+    }
+    private void recalculateHash() {
         Set<Integer> hashCodes = new HashSet<>();
         for (Map.Entry<String, Attribute> entry : mAttributeMap.entrySet()) {
             String key = entry.getKey();
@@ -151,7 +165,12 @@ public class StatisticsComponent extends Component {
             int hashcode = attribute.hashCode();
             hashCodes.add(hashcode);
         }
-        mHashCode = hashCodes.hashCode();
+
+        mHashCode = 17;
+        mHashCode = mHashCode * 31 + mAttributeMap.hashCode();
+        mHashCode = mHashCode * 31 + (getBasicAbility() == null ? -1 : getBasicAbility().hashCode());
+        mHashCode = mHashCode * 31 + (getOtherAbility() == null ? - 1 : getOtherAbility().hashCode());
+        mHashCode = mHashCode * 31 + (getPassiveAbility() == null ? -1 : getPassiveAbility().hashCode());
     }
 
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }

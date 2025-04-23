@@ -742,7 +742,7 @@ class JSONSQLFunctionsTest {
                 """;
 
         // ✅ Execute query
-        JSONTable table = new JSONTable("employess", jsonData);
+        JSONTable table = new JSONTable("employees", jsonData);
         JSONArray results = table.select(sql);
 
         // ✅ Verify LIMIT applied correctly
@@ -4656,7 +4656,7 @@ class JSONSQLFunctionsTest {
         table.add(JSONObject.of("id", 1, "name", "Alice"));
         table.add(JSONObject.of("id", 2));
 
-        mJSONSQLFunctions.normalizeSchemas(table);
+        mJSONSQLFunctions.normalizeRows(table);
 
         JSONObject row0 = table.getJSONObject(0);
         JSONObject row1 = table.getJSONObject(1);
@@ -4689,7 +4689,7 @@ class JSONSQLFunctionsTest {
             }
         """));
 
-        mJSONSQLFunctions.normalizeSchemas(table);
+        mJSONSQLFunctions.normalizeRows(table);
 
         JSONObject user2 = table.getJSONObject(1).getJSONObject("user");
         assertTrue(user2.containsKey("contact"));
@@ -4719,7 +4719,7 @@ class JSONSQLFunctionsTest {
             }
         """));
 
-        mJSONSQLFunctions.normalizeSchemas(table);
+        mJSONSQLFunctions.normalizeRows(table);
 
         JSONArray team = table.getJSONObject(1).getJSONArray("team");
         JSONObject carol = team.getJSONObject(0);
@@ -5281,4 +5281,130 @@ class JSONSQLFunctionsTest {
         assertEquals(6, flat.size());
     }
 
+
+
+
+
+
+
+    @Test
+    public void testSelectQuery() {
+        String query = "SELECT * FROM my_table WHERE id = 1";
+        assertEquals("my_table", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testInsertQuery() {
+        String query = "INSERT INTO users VALUES ({\"name\": \"Alice\"})";
+        assertEquals("users", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testUpdateQuery() {
+        String query = "UPDATE products SET price = 9.99 WHERE id = 5";
+        assertEquals("products", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testDeleteQuery() {
+        String query = "DELETE FROM logs WHERE timestamp < 1000";
+        assertEquals("logs", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testMixedCaseKeywords() {
+        String query = "SeLeCt * FrOm inventory";
+        assertEquals("inventory", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testInvalidQuery() {
+        String query = "DROP TABLE users";
+        assertNull(mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testMultipleClauses() {
+        String query = "UPDATE books SET author = 'John' WHERE id = 3";
+        assertEquals("books", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testTableWithUnderscoreAndNumbers() {
+        String query = "SELECT * FROM table_2025_logs";
+        assertEquals("table_2025_logs", mJSONSQLFunctions.extractTableName(query));
+    }
+
+
+
+
+
+
+    @Test
+    public void testSelectFromSimpleTable() {
+        String query = "SELECT * FROM users";
+        assertEquals("users", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testSelectFromTableWithWhere() {
+        String query = "SELECT name, age FROM employees WHERE age > 30";
+        assertEquals("employees", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    // === INSERT Tests ===
+
+    @Test
+    public void testInsertIntoSimpleTable() {
+        String query = "INSERT INTO orders VALUES ({\"id\": 1})";
+        assertEquals("orders", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testInsertWithWhitespace() {
+        String query = "   INSERT INTO   logs   VALUES ({\"entry\": \"error\"})";
+        assertEquals("logs", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    // === UPDATE Tests ===
+
+    @Test
+    public void testUpdateSimpleTable() {
+        String query = "UPDATE products SET price = 19.99 WHERE id = 3";
+        assertEquals("products", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testUpdateTableCaseInsensitive() {
+        String query = "update ITEMS set quantity = 5";
+        assertEquals("ITEMS", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    // === DELETE Tests ===
+
+    @Test
+    public void testDeleteFromTable() {
+        String query = "DELETE FROM sessions WHERE active = false";
+        assertEquals("sessions", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testDeleteCaseInsensitive() {
+        String query = "delete from ARCHIVES where date < '2020-01-01'";
+        assertEquals("ARCHIVES", mJSONSQLFunctions.extractTableName(query));
+    }
+
+    // === Invalid Queries ===
+
+    @Test
+    public void testInvalidQueryShouldReturnNull() {
+        String query = "CREATE TABLE test (id INT)";
+        assertNull(mJSONSQLFunctions.extractTableName(query));
+    }
+
+    @Test
+    public void testEmptyQueryShouldReturnNull() {
+        String query = "";
+        assertNull(mJSONSQLFunctions.extractTableName(query));
+    }
 }

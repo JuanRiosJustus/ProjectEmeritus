@@ -1,7 +1,9 @@
 package main.game.systems;
 
+import com.alibaba.fastjson2.JSONArray;
 import main.game.components.*;
 import main.game.components.ActionsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
@@ -17,11 +19,12 @@ import java.util.*;
 public class AbilitySystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
     private static final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySystem.class);
-    private final PathingAlgorithms algorithm = new PathingAlgorithms() {
-    };
+    private final PathingAlgorithms algorithm = new PathingAlgorithms();
+    private final Map<String, Integer> mState = new LinkedHashMap<>();
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private static final int DEFAULT_VISION_RANGE = 8;
+    private static final String PASSIVE = "PASSIVE";
 
 
 //
@@ -134,5 +137,58 @@ public class AbilitySystem extends GameSystem {
         mLogger.info("Used from {} on {}", ability, targetedTileEntity);
 
         return true;
+    }
+
+    @Override
+    public void update(GameModel model, SystemContext systemContext) {
+        systemContext.getAllUnitEntityIDs().forEach(entityID -> {
+            Entity entity = getEntityWithID(entityID);
+            StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+            int hashCode = statisticsComponent.hashCode();
+
+            int currentHash = mState.getOrDefault(entityID, -1);
+            if (currentHash == hashCode) { return; }
+            mLogger.info("Started updating {} because of ability");
+
+            removePassiveAbility(entityID);
+            initializePassiveAbility(entityID);
+            mState.put(entityID, hashCode);
+
+            mLogger.info("Finished update updating {} because of ability");
+        });
+    }
+
+    private void removePassiveAbility(String entityID) {
+        Entity entity = getEntityWithID(entityID);
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        statisticsComponent.removeModification(PASSIVE);
+    }
+
+    private void initializePassiveAbility(String entityID) {
+        Entity entity = getEntityWithID(entityID);
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        String passiveAbility = statisticsComponent.getPassiveAbility();
+        JSONArray attributeModifiers = AbilityTable.getInstance().getPassiveAttributes(passiveAbility);
+        if (!attributeModifiers.isEmpty()) {
+            for (int i = 0; i < attributeModifiers.size(); i++) {
+                JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
+                String scalingType = AbilityTable.getInstance().getScalingType(attributeModifier);
+                String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
+                float scalingMagnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
+                boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(attributeModifier);
+
+
+                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(scalingAttribute, scalingType);
+                float value = baseModifiedTotalMissingCurrent * scalingMagnitude;
+                if (isBaseScaling) {
+                    value = scalingMagnitude;
+                }
+
+                statisticsComponent.putAdditiveModification(PASSIVE, scalingAttribute, value);
+            }
+
+            statisticsComponent.addTag(passiveAbility);
+            System.out.println("toto");
+        }
     }
 }

@@ -14,10 +14,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class JSONTable {
-    private List<String> mQueryTokens = null;
-    private JSONSQLFunctions mJSONSQLFunctions = null;
+    protected List<String> mQueryTokens = null;
+    protected JSONSQLFunctions mJSONSQLFunctions = null;
     protected JSONArray mTable = null;
     protected String mName = null;
+
 
     public JSONTable() {
         mName = "";
@@ -47,10 +48,17 @@ public class JSONTable {
 
     public JSONArray update(String sql) {
         JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Update");
+        final JSONArray result = new JSONArray();
+
+        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        if (!tableName.equalsIgnoreCase(mName)) {
+            throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
+        }
 
         mQueryTokens.clear();
         List<String> tokens = mJSONSQLFunctions.getTokens(sql);
         mQueryTokens.addAll(tokens);
+
 
         // Extract everything between SET and WHERE
         Pattern setPattern = Pattern.compile("(?i)SET\\s+(.*?)\\s+WHERE", Pattern.DOTALL);
@@ -66,7 +74,6 @@ public class JSONTable {
 
         // Extract WHERE clause and parse conditions
         JSONSQLCondition where = mJSONSQLFunctions.extractWhereConditions(mQueryTokens);
-        JSONArray result = new JSONArray();
 
         for (int i = 0; i < mTable.size(); i++) {
             JSONObject row = mTable.getJSONObject(i);
@@ -109,7 +116,13 @@ public class JSONTable {
 
     public JSONArray insert(String sql) {
         JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Insert");
-        JSONArray result = new JSONArray();
+        final JSONArray result = new JSONArray();
+
+        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        if (!tableName.equalsIgnoreCase(mName)) {
+            throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
+        }
+
 
         Pattern pattern = Pattern.compile(
                 "(?i)^INSERT\\s+INTO\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s+VALUES\\s*(.*)$",
@@ -121,7 +134,6 @@ public class JSONTable {
             throw new IllegalArgumentException("Invalid INSERT SQL format.");
         }
 
-        String tableName = matcher.group(1).trim();
         String valuesSection = matcher.group(2).trim();
 
         if (!tableName.equalsIgnoreCase(mName)) {
@@ -170,6 +182,13 @@ public class JSONTable {
 
     public JSONArray delete(String sql) {
         JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("delete");
+        final JSONArray result = new JSONArray();
+
+        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        if (!tableName.equalsIgnoreCase(mName)) {
+            throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
+        }
+
         List<String> tokens = mJSONSQLFunctions.getTokens(sql);
         mQueryTokens.clear();
         mQueryTokens.addAll(tokens);
@@ -177,11 +196,6 @@ public class JSONTable {
         // Validate query type and table name
         if (!tokens.get(0).equalsIgnoreCase("DELETE") || !tokens.get(1).equalsIgnoreCase("FROM")) {
             throw new IllegalArgumentException("Invalid DELETE query syntax");
-        }
-
-        String tableName = tokens.get(2);
-        if (!tableName.equalsIgnoreCase(mName)) {
-            throw new IllegalArgumentException("DELETE table name does not match this table instance");
         }
 
         JSONSQLCondition where = mJSONSQLFunctions.extractWhereConditions(tokens);
@@ -195,7 +209,6 @@ public class JSONTable {
             }
         }
 
-        JSONArray result = new JSONArray();
         // Remove from last index to avoid shifting
         Collections.reverse(deleteIndexes);
         for (int index : deleteIndexes) {
@@ -213,6 +226,12 @@ public class JSONTable {
 
     public JSONArray select(String sql) {
         JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Select");
+        final JSONArray result = new JSONArray();
+
+        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        if (!tableName.equalsIgnoreCase(mName)) {
+            throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
+        }
 
         mQueryTokens.clear();
         List<String> tokens = mJSONSQLFunctions.getTokens(sql);
@@ -284,8 +303,15 @@ public class JSONTable {
     }
 
 
+    public JSONObject flattenedSchema() {
+        normalize();
+        JSONObject row = mTable.getJSONObject(0);
+        JSONObject flattenedRow = mJSONSQLFunctions.flattenRow(row);
+        return flattenedRow;
+    }
 
-    public void normalizeSchema() { mJSONSQLFunctions.normalizeSchemas(mTable); }
+
+    public void normalize() { mJSONSQLFunctions.normalizeRows(mTable); }
     public JSONObject get(int i) { return mTable.getJSONObject(i); }
     public int size() { return mTable.size(); }
 

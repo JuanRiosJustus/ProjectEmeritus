@@ -6,19 +6,14 @@ import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.text.Font;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
-import main.constants.JavaFXUtils;
-import main.game.stores.FontPool;
-import main.game.stores.FontPoolV2;
 
 import java.io.File;
 import java.nio.file.Files;
-import java.util.List;
 import java.util.Optional;
 
 public class JSONTableEditorFX extends Application {
@@ -39,7 +34,7 @@ public class JSONTableEditorFX extends Application {
             if (newTab != null && "➕".equals(newTab.getText())) {
                 JSONArray emptyTable = new JSONArray();
                 emptyTable.add(new JSONObject()); // One empty row
-                Tab newTabInstance = new JSONTableEditorTable("Untitled Table", emptyTable);
+                Tab newTabInstance = new JSONTableEditorTable("Untitled Table", jsonDatabase);
                 tabPane.getTabs().add(tabPane.getTabs().size() - 1, newTabInstance);
                 tabPane.getSelectionModel().select(newTabInstance);
             }
@@ -48,9 +43,16 @@ public class JSONTableEditorFX extends Application {
         BorderPane root = new BorderPane();
 
         // Query Bar
+        double queryFieldMultiplier = 0.02;
         TextField queryField = new TextField();
         queryField.setPromptText("Enter query...");
         HBox.setHgrow(queryField, Priority.ALWAYS);
+
+        // Bind font size and height proportionally to scene height
+        queryField.prefHeightProperty().bind(primaryStage.heightProperty().multiply(queryFieldMultiplier));
+        queryField.styleProperty().bind(
+                primaryStage.heightProperty().multiply(queryFieldMultiplier).asString("-fx-font-size: %.0fpx;")
+        );
 
         Button submitButton = new Button("Submit");
         submitButton.setMaxHeight(Double.MAX_VALUE);
@@ -84,6 +86,13 @@ public class JSONTableEditorFX extends Application {
                 queryResultsBox.getChildren().setAll(new Label("❌ Query Error: " + ex.getMessage()));
             }
         });
+        submitButton.prefHeightProperty().bind(primaryStage.heightProperty().multiply(queryFieldMultiplier));
+        submitButton.styleProperty().bind(
+                primaryStage.heightProperty().multiply(queryFieldMultiplier).asString("-fx-font-size: %.0fpx;")
+        );
+
+
+
 
         VBox centerLayout = new VBox(queryBar, splitPane);
         VBox.setVgrow(splitPane, Priority.ALWAYS);
@@ -116,7 +125,7 @@ public class JSONTableEditorFX extends Application {
         createButton.setOnAction(e -> {
             JSONArray emptyTable = new JSONArray();
             emptyTable.add(new JSONObject());
-            Tab newTab = new JSONTableEditorTable("Untitled Table", emptyTable);
+            Tab newTab = new JSONTableEditorTable("Untitled Table", jsonDatabase);
             tabPane.getTabs().add(tabPane.getTabs().size() - 1, newTab);
             tabPane.getSelectionModel().select(newTab);
         });
@@ -182,11 +191,9 @@ public class JSONTableEditorFX extends Application {
             String tableName = file.getName().replace(".json", "");
             jsonDatabase.addTable(tableName, content);
 
-            Tab newTab = new JSONTableEditorTable(file.getName(), jsonArray);
+            Tab newTab = new JSONTableEditorTable(tableName, jsonDatabase);
             tabPane.getTabs().add(tabPane.getTabs().size() - 1, newTab);
             tabPane.getSelectionModel().select(newTab);
-
-
 
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);

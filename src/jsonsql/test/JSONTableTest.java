@@ -1354,8 +1354,6 @@ public class JSONTableTest {
                 ({"name": "Tiger"})
             """);
         });
-
-        assertTrue(exception.getMessage().contains("INSERT table name does not match"));
     }
 
     @Test
@@ -1892,7 +1890,7 @@ public class JSONTableTest {
         table.insertRaw("{\"name\": \"Alice\"}");
         table.insertRaw("{\"name\": \"Bob\", \"age\": 30}");
 
-        table.normalizeSchema();
+        table.normalize();
 
         JSONObject row = table.get(0);
         assertTrue(row.containsKey("age"));
@@ -1905,7 +1903,7 @@ public class JSONTableTest {
         table.insertRaw("{\"profile\": {\"name\": \"Alice\"}}");
         table.insertRaw("{\"profile\": {\"name\": \"Bob\", \"email\": \"bob@example.com\"}}");
 
-        table.normalizeSchema();
+        table.normalize();
 
         JSONObject row = table.get(0);
         JSONObject profile = row.getJSONObject("profile");
@@ -1919,7 +1917,7 @@ public class JSONTableTest {
         table.insertRaw("{\"members\": [{\"name\": \"Alice\"}]}");
         table.insertRaw("{\"members\": [{\"name\": \"Bob\", \"role\": \"QA\"}]}");
 
-        table.normalizeSchema();
+        table.normalize();
 
         JSONArray members = table.get(0).getJSONArray("members");
         JSONObject first = members.getJSONObject(0);
@@ -1933,7 +1931,7 @@ public class JSONTableTest {
         table.insertRaw("{\"name\": \"Alice\", \"age\": 25}");
         table.insertRaw("{\"name\": \"Bob\", \"age\": 30}");
 
-        table.normalizeSchema();
+        table.normalize();
 
         JSONObject row = table.get(0);
         assertEquals("Alice", row.getString("name"));
@@ -1946,13 +1944,53 @@ public class JSONTableTest {
         table.insertRaw("{}");
         table.insertRaw("{\"a\": 1, \"b\": 2}");
 
-        table.normalizeSchema();
+        table.normalize();
 
         JSONObject row = table.get(0);
         assertTrue(row.containsKey("a"));
         assertTrue(row.containsKey("b"));
         assertNull(row.get("a"));
         assertNull(row.get("b"));
+    }
+
+
+
+
+
+
+    @Test
+    public void testInsertWrongTableThrows() {
+        JSONTable table = new JSONTable("heroes");
+        String query = "INSERT INTO villains VALUES ({\"name\": \"Joker\"})";
+        assertThrows(IllegalArgumentException.class, () -> table.insert(query));
+    }
+
+    @Test
+    public void testSelectWrongTableThrows() {
+        JSONTable table = new JSONTable("heroes");
+        String query = "SELECT * FROM villains WHERE name = 'Joker'";
+        assertThrows(IllegalArgumentException.class, () -> table.select(query));
+    }
+
+    @Test
+    public void testUpdateWrongTableThrows() {
+        JSONTable table = new JSONTable("heroes");
+        String query = "UPDATE villains SET evilness = 100 WHERE name = 'Joker'";
+        assertThrows(IllegalArgumentException.class, () -> table.update(query));
+    }
+
+    @Test
+    public void testDeleteWrongTableThrows() {
+        JSONTable table = new JSONTable("heroes");
+        String query = "DELETE FROM villains WHERE name = 'Joker'";
+        assertThrows(IllegalArgumentException.class, () -> table.delete(query));
+    }
+
+    @Test
+    public void testCorrectTableNameDoesNotThrow() {
+        JSONTable table = new JSONTable("heroes");
+        String query = "INSERT INTO heroes VALUES ({\"name\": \"Batman\"})";
+        assertDoesNotThrow(() -> table.insert(query));
     }
 
 }

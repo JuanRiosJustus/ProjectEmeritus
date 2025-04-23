@@ -331,15 +331,9 @@ public class AbilityTable {
     public String getTargetTagObjectName(JSONObject targetTag) { return targetTag.getString("tag"); }
     public int getTargetTagObjectDuration(JSONObject targetTag) { return targetTag.getIntValue("duration"); }
 
-    public JSONArray getAttributes(String ability) {
+    public JSONArray getPassiveAttributes(String ability) {
         JSONObject result = getOrCacheResult(ability);
-        JSONArray attributes = result.getJSONArray("attributes");
+        JSONArray attributes = result.getJSONArray("passive_attributes");
         return attributes;
     }
-
-
-//    public JSONArray getCostObject(String ability) {
-//        JSONObject result = getOrCacheResult(ability);
-//        return result.getJSONArray("costs");
-//    }
 }

@@ -1,6 +1,7 @@
 package jsonsql.main;
 
 import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -31,7 +32,6 @@ public class JSONDatabase {
         mTables.put(name, new JSONTable(name));
     }
 
-
     private final Pattern mTablePattern = Pattern.compile(
             "(?i)(FROM|INTO|UPDATE)\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
     );
@@ -43,6 +43,7 @@ public class JSONDatabase {
         }
         return matcher.group(2); // Table name is always the second group
     }
+
 
     public JSONArray execute(String sql) {
         String queryType = mSqlFunctions.getQueryType(sql);

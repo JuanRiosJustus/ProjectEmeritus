@@ -37,7 +37,7 @@ public class JSONTableEditorTable extends Tab {
     private ToggleButton mToggleEditHeaders = new ToggleButton("Edit Headers");
     private Font mTableEditorFont = null;
 
-    public JSONTableEditorTable(String title, JSONArray jsonArray) {
+    public JSONTableEditorTable(String title, JSONArray results) {
         mColumns = new LinkedHashSet<>();
         mFlattenedObjects = new ArrayList<>();
 
@@ -58,11 +58,175 @@ public class JSONTableEditorTable extends Tab {
 
         mTableEditorFont = new Font("System", 13);
 
-        for (int i = 0; i < jsonArray.size(); i++) {
-            JSONObject obj = jsonArray.getJSONObject(i);
-            Map<String, Object> flat = JsonTableUtilities.flatten(obj);
-            mFlattenedObjects.add(flat);
-            mColumns.addAll(flat.keySet());
+        JSONArray flattenedRows = results;
+        for (int i = 0; i < flattenedRows.size(); i++) {
+            JSONObject obj = flattenedRows.getJSONObject(i);
+            mFlattenedObjects.add(obj);
+            mColumns.addAll(obj.keySet());
+        }
+
+        JSONTableColumn rowNumberColumn = createRowNumberColumn(mBaseTable);
+        mBaseTable.getColumns().add(rowNumberColumn);
+
+        for (String columnName : mColumns) {
+            JSONTableColumn baseTableColumn = setupTableColumn(columnName);
+            mBaseTable.getColumns().add(baseTableColumn);
+        }
+
+        mBaseTable.getItems().addAll(mFlattenedObjects);
+
+        mAddRowButton.setDisable(true);
+        mAddColButton.setDisable(true);
+        mDelRowButton.setDisable(true);
+        mDelColButton.setDisable(true);
+        saveButton.setDisable(false);
+
+        mToggleEditHeaders.setDisable(true);
+
+        mToggleEditSchema.setOnAction(e -> {
+            mEditMode = mToggleEditSchema.isSelected();
+            mToggleEditHeaders.setDisable(!mEditMode);
+            mAddRowButton.setDisable(!mEditMode);
+            mAddColButton.setDisable(!mEditMode);
+            mDelRowButton.setDisable(!mEditMode);
+            mDelColButton.setDisable(!mEditMode);
+            mBaseTable.setEditable(!mEditMode);
+            mBaseTable.getSelectionModel().clearSelection();
+        });
+
+        mToggleEditHeaders.setOnAction(e -> mEditFields = mToggleEditHeaders.isSelected());
+
+        mAddRowButton.setOnAction(e -> {
+            if (!mEditMode || mEditFields) return;
+            TablePosition<Map<String, Object>, ?> pos = mBaseTable.getSelectionModel().getSelectedCells().stream().findFirst().orElse(null);
+            int row = (pos != null) ? pos.getRow() : mBaseTable.getItems().size() - 1;
+            row = Math.max(0, row);
+
+            Map<String, Object> newRow = new LinkedHashMap<>();
+            for (String column : mColumns) {
+                newRow.put(column, "");
+            }
+            mBaseTable.getItems().add(row + 1, newRow);
+        });
+
+        mDelRowButton.setOnAction(e -> {
+            if (!mEditMode || mEditFields) return;
+            TablePosition<Map<String, Object>, ?> pos = mBaseTable.getSelectionModel().getSelectedCells().stream().findFirst().orElse(null);
+            if (pos != null) {
+                int row = pos.getRow();
+                if (row >= 0 && row < mBaseTable.getItems().size()) {
+                    mBaseTable.getItems().remove(row);
+                }
+            }
+        });
+
+        mAddColButton.setOnAction(e -> {
+            if (!mEditMode || mEditFields) return;
+
+            TablePosition<?, ?> pos = mBaseTable.getSelectionModel().getSelectedCells().stream().findFirst().orElse(null);
+
+            // Clamp the insert index safely to within bounds of the column list
+            int col = pos != null ? pos.getColumn() : mBaseTable.getColumns().size() - 1;
+            int insertIndex = Math.max(1, Math.min(col + 1, mBaseTable.getColumns().size()));
+
+            String newColName = "new_col_" + mBaseTable.getColumns().size();
+            JSONTableColumn newCol = setupTableColumn(newColName);
+
+            // Add the column and ensure rows get the field
+            mBaseTable.getColumns().add(insertIndex, newCol);
+
+            for (Map<String, Object> row : mBaseTable.getItems()) {
+                row.put(newColName, "");
+            }
+
+            mColumns.add(newColName);
+        });
+
+
+        mDelColButton.setOnAction(e -> {
+            if (!mEditMode || mEditFields) return;
+            TablePosition<Map<String, Object>, ?> pos = mBaseTable.getSelectionModel().getSelectedCells().stream().findFirst().orElse(null);
+            if (pos != null) {
+                int col = pos.getColumn();
+                if (col > 0 && col < mBaseTable.getColumns().size()) {
+                    mBaseTable.getColumns().remove(col);
+                }
+            }
+        });
+
+        saveButton.setOnAction(e -> {
+            System.out.println("Saving current table state:");
+            mBaseTable.getItems().forEach(System.out::println);
+        });
+
+        // Let buttons grow and fill evenly
+        for (ButtonBase btn : List.of(
+                mToggleEditSchema, mToggleEditHeaders,
+                mAddRowButton, mDelRowButton,
+                mAddColButton, mDelColButton,
+                saveButton)) {
+
+            HBox.setHgrow(btn, Priority.ALWAYS);   // Make them grow with parent
+            btn.setMaxWidth(Double.MAX_VALUE);     // Allow full width
+            btn.setMaxHeight(Double.MAX_VALUE);    // Allow full height
+        }
+
+
+
+        VBox baseSection = new VBox(mBaseTable);
+        VBox.setVgrow(mBaseTable, Priority.ALWAYS);
+
+        setOnCloseRequest(event -> {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Close Tab");
+            alert.setHeaderText("Are you sure you want to close this tab?");
+            alert.setContentText("Unsaved changes will be lost.");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isEmpty() || result.get() != ButtonType.OK) {
+                event.consume();
+            }
+        });
+
+        setText(title);
+//        setText(null);
+
+
+//        BeveledButton b = new BeveledButton(200, 200);
+//        b.setFitText(title);
+//        setGraphic(title);
+
+        setContent(baseSection);
+        setClosable(true);
+    }
+
+    public JSONTableEditorTable(String title, JSONDatabase database) {
+        mColumns = new LinkedHashSet<>();
+        mFlattenedObjects = new ArrayList<>();
+
+        mAddRowButton = new Button("+Row");
+        mAddColButton = new Button("+Col");
+        mDelRowButton = new Button("-Row");
+        mDelColButton = new Button("-Col");
+        saveButton = new Button("Save");
+
+        mToggleEditSchema = new ToggleButton("Edit Schema");
+        mToggleEditHeaders = new ToggleButton("Edit Headers");
+
+        mBaseTable = new TableView<>();
+        mBaseTable.setEditable(true);
+
+        mBaseTable.getSelectionModel().setCellSelectionEnabled(true);
+        mBaseTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        mTableEditorFont = new Font("System", 13);
+
+        JSONArray rows = database.execute("SELECT * FROM " + title );
+        JSONArray flattenedRows = JsonTableUtilities.flattenJSONArray(rows);
+        for (int i = 0; i < flattenedRows.size(); i++) {
+            JSONObject obj = flattenedRows.getJSONObject(i);
+            mFlattenedObjects.add(obj);
+            mColumns.addAll(obj.keySet());
         }
 
         JSONTableColumn rowNumberColumn = createRowNumberColumn(mBaseTable);

@@ -113,28 +113,28 @@ public class EntityStore {
 //            }
 //        }
 
-        JSONArray attributeModifiers = AbilityTable.getInstance().getAttributes(passiveAbility);
-        if (!attributeModifiers.isEmpty()) {
-            for (int i = 0; i < attributeModifiers.size(); i++) {
-                JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
-                String scalingType = AbilityTable.getInstance().getScalingType(attributeModifier);
-                String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
-                float scalingMagnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
-                boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(attributeModifier);
-
-
-                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(scalingAttribute, scalingType);
-                float value = baseModifiedTotalMissingCurrent * scalingMagnitude;
-                if (isBaseScaling) {
-                    value = scalingMagnitude;
-                }
-
-                statisticsComponent.putAdditiveModification(scalingAttribute, passiveAbility, value, 2);
-            }
-
-            statisticsComponent.addTag(passiveAbility);
-            System.out.println("toto");
-        }
+//        JSONArray attributeModifiers = AbilityTable.getInstance().getAttributes(passiveAbility);
+//        if (!attributeModifiers.isEmpty()) {
+//            for (int i = 0; i < attributeModifiers.size(); i++) {
+//                JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
+//                String scalingType = AbilityTable.getInstance().getScalingType(attributeModifier);
+//                String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
+//                float scalingMagnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
+//                boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(attributeModifier);
+//
+//
+//                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(scalingAttribute, scalingType);
+//                float value = baseModifiedTotalMissingCurrent * scalingMagnitude;
+//                if (isBaseScaling) {
+//                    value = scalingMagnitude;
+//                }
+//
+//                statisticsComponent.putAdditiveModification(scalingAttribute, passiveAbility, value, 2);
+//            }
+//
+//            statisticsComponent.addTag(passiveAbility);
+//            System.out.println("toto");
+//        }
 
 
 

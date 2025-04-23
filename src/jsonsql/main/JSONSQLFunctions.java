@@ -62,6 +62,18 @@ public class JSONSQLFunctions {
         }
     }
 
+    private final Pattern mTablePattern = Pattern.compile(
+            "(?i)(FROM|INTO|UPDATE)\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
+    );
+
+    public String extractTableName(String query) {
+        Matcher matcher = mTablePattern.matcher(query);
+        if (!matcher.find()) {
+            return null;
+        }
+        return matcher.group(2); // Table name is always the second group
+    }
+
     public int getFirstIndexOf(Map<Integer, String[]> tokens, String token) {
         return tokens.entrySet()
                 .stream()
@@ -153,30 +165,6 @@ public class JSONSQLFunctions {
         }
         return current;
     }
-
-//    public Object getJsonPathValue(JSONObject jsonObject, String path) {
-//        String[] keys = path.split("\\.");
-//        Object current = jsonObject;
-//
-//        for (String key : keys) {
-//            if (current instanceof JSONObject obj && obj.containsKey(key)) {
-//                current = obj.get(key);
-//            } else if (current instanceof JSONArray arr) {
-//                try {
-//                    int index = Integer.parseInt(key);
-//                    if (index >= arr.size()) {
-//                        return null;
-//                    }
-//                    current = arr.get(index);
-//                } catch (NumberFormatException e) {
-//                    return null; // Invalid array index in path
-//                }
-//            } else {
-//                return null;
-//            }
-//        }
-//        return current;
-//    }
 
     public Map<String, Object> extractUpdates(List<String> assignments) {
         Map<String, Object> updates = new LinkedHashMap<>();
@@ -1097,7 +1085,7 @@ public class JSONSQLFunctions {
 
 
 
-    public Map<String, Object> flattenRow(JSONObject root) {
+    public JSONObject flattenRow(JSONObject root) {
         Map<String, Object> result = new LinkedHashMap<>();
         Deque<Map.Entry<String, Object>> stack = new ArrayDeque<>();
         stack.push(Map.entry("", root));
@@ -1122,12 +1110,13 @@ public class JSONSQLFunctions {
             }
         }
 
-        return result;
+        JSONObject row = new JSONObject(result);
+        return row;
     }
 
 
 
-    public void normalizeSchemas(JSONArray table) {
+    public void normalizeRows(JSONArray table) {
         JSONObject schema = getMasterSchema(table); // Master schema
         for (int i = 0; i < table.size(); i++) {
             JSONObject row = table.getJSONObject(i);

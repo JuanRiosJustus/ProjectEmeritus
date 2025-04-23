@@ -8,36 +8,39 @@ import com.alibaba.fastjson2.JSONObject;
 import java.util.*;
 
 public class JsonTableUtilities {
-    public static Map<String, Object> flatten(JSONObject json) {
-        Map<String, Object> result = new LinkedHashMap<>();
-        Deque<Map.Entry<String, Object>> stack = new ArrayDeque<>();
-        stack.push(Map.entry("", json));
+    public static JSONArray flattenJSONArray(JSONArray input) {
+        JSONArray result = new JSONArray();
 
-        while (!stack.isEmpty()) {
-            Map.Entry<String, Object> current = stack.pop();
-            String prefix = current.getKey();
-            Object obj = current.getValue();
-
-            if (obj instanceof JSONObject jsonObj) {
-                List<String> keys = new ArrayList<>(jsonObj.keySet());
-                Collections.reverse(keys);
-                for (String key : keys) {
-                    String newPrefix = prefix.isEmpty() ? key : prefix + "." + key;
-                    stack.push(Map.entry(newPrefix, jsonObj.get(key)));
-                }
-            } else if (obj instanceof JSONArray jsonArr) {
-                for (int i = jsonArr.size() - 1; i >= 0; i--) {
-                    String newPrefix = prefix.isEmpty() ? String.valueOf(i) : prefix + "." + i;
-                    stack.push(Map.entry(newPrefix, jsonArr.get(i)));
-                }
+        for (Object item : input) {
+            if (item instanceof JSONObject obj) {
+                JSONObject flat = new JSONObject();
+                flatten("", obj, flat);
+                result.add(flat);
             } else {
-                result.put(prefix, obj);
+                throw new IllegalArgumentException("All elements in the input array must be JSONObjects.");
             }
         }
 
         return result;
     }
 
+    private static void flatten(String prefix, Object value, JSONObject output) {
+        if (value instanceof JSONObject jsonObject) {
+            for (String key : jsonObject.keySet()) {
+                Object nestedValue = jsonObject.get(key);
+                String newKey = prefix.isEmpty() ? key : prefix + "." + key;
+                flatten(newKey, nestedValue, output);
+            }
+        } else if (value instanceof JSONArray jsonArray) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                Object nestedValue = jsonArray.get(i);
+                String newKey = prefix + "[" + i + "]";
+                flatten(newKey, nestedValue, output);
+            }
+        } else {
+            output.put(prefix, value);
+        }
+    }
     public static boolean isNumber(String str) {
         try {
             Double.parseDouble(str);

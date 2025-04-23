@@ -40,25 +40,30 @@ public class Attribute {
         mDirty = true;
     }
 
-    public void putAdditiveModification(String source, float value, int duration) {
-        putModification(ADDITIVE, source, value, duration);
-    }
-    public void putMultiplicativeModification(String source, float value, int duration) {
-        putModification(MULTIPLICATIVE, source, value, duration);
-    }
-
     public void putAdditiveModification(String source, float value) {
-        putModification(ADDITIVE, source, value, -1);
+        putModification(source, ADDITIVE, value);
     }
     public void putMultiplicativeModification(String source, float value) {
-        putModification(MULTIPLICATIVE, source, value, -1);
+        putModification(source, MULTIPLICATIVE, value);
     }
 
-    public void putModification(String modType, String source, float value) {
-        putModification(modType, source, value, -1);
+//    public void putAdditiveModification(String source, float value) {
+//        putModification(ADDITIVE, source, value, -1);
+//    }
+//    public void putMultiplicativeModification(String source, float value) {
+//        putModification(MULTIPLICATIVE, source, value, -1);
+//    }
+//
+//    public void putModification(String modType, String source, float value) {
+//        putModification(modType, source, value, -1);
+//    }
+
+    public void removeModification(String key) {
+        mAdditiveMap.remove(key);
+        mMultiplicativeMap.remove(key);
     }
 
-    public void putModification(String modification, String source, float value, int duration) {
+    public void putModification(String source, String modification, float value) {
 
         switch (modification) {
             case ADDITIVE -> mAdditiveMap.put(source, value);
