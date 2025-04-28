@@ -56,7 +56,7 @@ public class JSONTable {
         }
 
         mQueryTokens.clear();
-        List<String> tokens = mJSONSQLFunctions.getTokens(sql);
+        List<String> tokens = mJSONSQLFunctions.tokenize(sql);
         mQueryTokens.addAll(tokens);
 
 
@@ -180,6 +180,67 @@ public class JSONTable {
         return result;
     }
 
+
+//    public JSONArray insertV2(String sql) {
+//        JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Insert");
+//        final JSONArray result = new JSONArray();
+//
+//        String tableName = mJSONSQLFunctions.extractTableName(sql);
+//        if (!tableName.equalsIgnoreCase(mName)) {
+//            throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
+//        }
+//
+//        // ✅ Extract columns and values sections
+//        Pattern fullPattern = Pattern.compile(
+//                "(?i)^INSERT\\s+INTO\\s+([a-zA-Z_][a-zA-Z0-9_]*)(\\s*\\((.*?)\\))?\\s+VALUES\\s*(\\(.*\\))$",
+//                Pattern.DOTALL
+//        );
+//        Matcher matcher = fullPattern.matcher(sql.trim());
+//
+//        if (!matcher.matches()) {
+//            throw new IllegalArgumentException("Invalid INSERT SQL format.");
+//        }
+//
+//        String rawColumns = matcher.group(3); // Might be null if no columns specified
+//        String rawValues = matcher.group(4);
+//
+//        List<String> columns = new ArrayList<>();
+//        if (rawColumns != null) {
+//            // ✅ Extract column names, split by commas
+//            for (String col : rawColumns.split(",")) {
+//                columns.add(col.trim());
+//            }
+//        }
+//
+//        // ✅ Extract values
+//        List<String> values = mJSONSQLFunctions.smartSplitAssignments(rawValues.substring(1, rawValues.length() - 1)); // Strip outer parentheses
+//
+//        // If columns are missing, create column names as "0", "1", "2", etc.
+//        if (columns.isEmpty()) {
+//            for (int i = 0; i < values.size(); i++) {
+//                columns.add(String.valueOf(i));
+//            }
+//        }
+//
+//        if (columns.size() != values.size()) {
+//            throw new IllegalArgumentException("Number of columns does not match number of values");
+//        }
+//
+//        // ✅ Build JSON object
+//        JSONObject newRow = new JSONObject();
+//        for (int i = 0; i < columns.size(); i++) {
+//            String path = columns.get(i);
+//            Object value = mJSONSQLFunctions.parseLiteral(values.get(i).trim());
+//            mJSONSQLFunctions.setAndCreateJSONValue(newRow, path, value);
+//        }
+//
+//        mTable.add(newRow);
+//        result.add(newRow);
+//
+//        logger.stop();
+//        return result;
+//    }
+
     public JSONArray delete(String sql) {
         JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("delete");
         final JSONArray result = new JSONArray();
@@ -189,7 +250,7 @@ public class JSONTable {
             throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
         }
 
-        List<String> tokens = mJSONSQLFunctions.getTokens(sql);
+        List<String> tokens = mJSONSQLFunctions.tokenize(sql);
         mQueryTokens.clear();
         mQueryTokens.addAll(tokens);
 
@@ -234,7 +295,7 @@ public class JSONTable {
         }
 
         mQueryTokens.clear();
-        List<String> tokens = mJSONSQLFunctions.getTokens(sql);
+        List<String> tokens = mJSONSQLFunctions.tokenize(sql);
         mQueryTokens.addAll(tokens);
 
         List<String> selectedColumns = mJSONSQLFunctions.extractSelectedColumns(mQueryTokens);

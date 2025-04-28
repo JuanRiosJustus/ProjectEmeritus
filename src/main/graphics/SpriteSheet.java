@@ -49,7 +49,16 @@ public class SpriteSheet {
 
     public Image getSprite(int row, int column) { return mFrames[row][column]; }
     public Image[] getSpriteArray(int row) { return mFrames[row]; }
-    public int getColumns(int row) { return mFrames[row].length; }
+    public int getColumns(int row) {
+//        try {
+//
+//            return mFrames[row].length;
+//        } catch (Exception ex) {
+//            System.out.println("Ttpll");
+//        }
+//        return -1;
+        return mFrames[row].length;
+    }
     public int getColumns() { return getColumns(0); }
     public int getRows() { return mFrames.length; }
     public String getName() { return mSpriteSheetLocation; }

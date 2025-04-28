@@ -1993,4 +1993,85 @@ public class JSONTableTest {
         assertDoesNotThrow(() -> table.insert(query));
     }
 
+
+
+
+
+//
+//
+//
+//    @Test
+//    public void testInsertSimpleRow() {
+//        JSONTable table = new JSONTable("customers");
+//
+//        table.insertV2("INSERT INTO customers (ID, NAME, AGE) VALUES (1, 'Alice', 30);");
+//
+//        assertEquals(1, table.size());
+//        JSONObject row = table.get(0);
+//        assertEquals(1, row.getIntValue("ID"));
+//        assertEquals("Alice", row.getString("NAME"));
+//        assertEquals(30, row.getIntValue("AGE"));
+//    }
+//
+//    @Test
+//    public void testInsertNestedFields() {
+//        JSONTable table = new JSONTable("customers");
+//
+//        table.insert("INSERT INTO customers (profile.name, profile.contact.email) VALUES ('Bob', 'bob@example.com');");
+//
+//        assertEquals(1, table.size());
+//        JSONObject profile = table.get(0).getJSONObject("profile");
+//        assertNotNull(profile);
+//        assertEquals("Bob", profile.getString("name"));
+//        assertEquals("bob@example.com", profile.getJSONObject("contact").getString("email"));
+//    }
+//
+//    @Test
+//    public void testInsertArrayFields() {
+//        JSONTable table = new JSONTable("customers");
+//
+//        table.insert("INSERT INTO customers (skills[0], skills[1]) VALUES ('Fishing', 'Cooking');");
+//
+//        assertEquals(1, table.size());
+//        JSONArray skills = table.get(0).getJSONArray("skills");
+//        assertNotNull(skills);
+//        assertEquals("Fishing", skills.getString(0));
+//        assertEquals("Cooking", skills.getString(1));
+//    }
+//
+//    @Test
+//    public void testInsertNestedObjectsAndArrays() {
+//        JSONTable table = new JSONTable("customers");
+//
+//        table.insert("""
+//            INSERT INTO customers (profile.name, profile.address.city, skills[0], skills[1], skills[2])
+//            VALUES ('Charlie', 'New York', 'Archery', 'Tracking', 'Swordsmanship');
+//        """);
+//
+//        assertEquals(1, table.size());
+//        JSONObject profile = table.get(0).getJSONObject("profile");
+//        assertEquals("Charlie", profile.getString("name"));
+//        assertEquals("New York", profile.getJSONObject("address").getString("city"));
+//
+//        JSONArray skills = table.get(0).getJSONArray("skills");
+//        assertEquals(3, skills.size());
+//        assertEquals("Archery", skills.getString(0));
+//        assertEquals("Tracking", skills.getString(1));
+//        assertEquals("Swordsmanship", skills.getString(2));
+//    }
+//
+//    @Test
+//    public void testMultipleInsertsV2() {
+//        JSONTable table = new JSONTable("customers");
+//
+//        table.insert("INSERT INTO customers (ID, NAME) VALUES (1, 'Alice');");
+//        table.insert("INSERT INTO customers (ID, NAME) VALUES (2, 'Bob');");
+//        table.insert("INSERT INTO customers (ID, NAME) VALUES (3, 'Charlie');");
+//
+//        assertEquals(3, table.size());
+//
+//        assertEquals("Alice", table.get(0).getString("NAME"));
+//        assertEquals("Bob", table.get(1).getString("NAME"));
+//        assertEquals("Charlie", table.get(2).getString("NAME"));
+//    }
 }

@@ -796,4 +796,67 @@ class JSONDatabaseTest {
 
         assertEquals("blueberry", items.getString(1));
     }
+
+
+
+//    @Test
+//    public void testShowTables_EmptyDatabase() {
+//        JSONDatabase db = new JSONDatabase();
+//
+//        JSONArray result = db.execute("SHOW TABLES");
+//
+//        assertNotNull(result);
+//        assertEquals(0, result.size(), "Database should have no tables");
+//    }
+//
+//    @Test
+//    public void testShowTables_SingleTable() {
+//        JSONDatabase db = new JSONDatabase();
+//        db.addTable("users");
+//
+//        JSONArray result = db.execute("SHOW TABLES");
+//
+//        assertNotNull(result);
+//        assertEquals(1, result.size(), "Database should have 1 table");
+//
+//        JSONObject tableObj = result.getJSONObject(0);
+//        assertEquals("users", tableObj.getString("Table"));
+//    }
+//
+//    @Test
+//    public void testShowTables_MultipleTables() {
+//        JSONDatabase db = new JSONDatabase();
+//        db.addTable("users");
+//        db.addTable("products");
+//        db.addTable("orders");
+//
+//        JSONArray result = db.execute("SHOW TABLES");
+//
+//        assertNotNull(result);
+//        assertEquals(3, result.size(), "Database should have 3 tables");
+//
+//        // You can collect all table names and assert they exist
+//        String[] expectedTables = {"users", "products", "orders"};
+//        for (String tableName : expectedTables) {
+//            boolean found = result.stream()
+//                    .map(obj -> ((JSONObject) obj).getString("Table"))
+//                    .anyMatch(name -> name.equals(tableName));
+//            assertTrue(found, "Expected table not found: " + tableName);
+//        }
+//    }
+//
+//    @Test
+//    public void testShowTables_TableNamesAreLowercased() {
+//        JSONDatabase db = new JSONDatabase();
+//        db.addTable("Users"); // intentionally with capital U
+//
+//        JSONArray result = db.execute("SHOW TABLES");
+//
+//        assertNotNull(result);
+//        assertEquals(1, result.size());
+//
+//        JSONObject tableObj = result.getJSONObject(0);
+//        assertEquals("users", tableObj.getString("Table"), "Table names should be lowercased");
+//    }
 }
+

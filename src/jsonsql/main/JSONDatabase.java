@@ -12,8 +12,10 @@ import java.util.regex.Pattern;
 public class JSONDatabase {
     private final Map<String, JSONTable> mTables = new HashMap<>();
     private final JSONSQLFunctions mSqlFunctions = new JSONSQLFunctions();
+    private final String SYSTEM_TABLE = "system.table";
+    public JSONDatabase() {
 
-    public JSONDatabase() { }
+    }
     public JSONDatabase(Map<String, String> tableData) {
         for (Map.Entry<String, String> entry : tableData.entrySet()) {
             String tableName = entry.getKey().trim().toLowerCase(Locale.ROOT);
@@ -22,7 +24,14 @@ public class JSONDatabase {
             mTables.put(tableName, table);
         }
     }
+
+    private JSONTable getOrCreateSystemTable() {
+        JSONTable table = mTables.getOrDefault(SYSTEM_TABLE, new JSONTable(SYSTEM_TABLE));
+        mTables.put(SYSTEM_TABLE, table);
+        return table;
+    }
     public void addTable(String tableName, String tableData) {
+        if (tableName.equalsIgnoreCase(SYSTEM_TABLE)) { return; }
         String name = tableName.trim().toLowerCase(Locale.ROOT);
         mTables.put(name, new JSONTable(name, tableData));
     }
@@ -48,10 +57,11 @@ public class JSONDatabase {
     public JSONArray execute(String sql) {
         String queryType = mSqlFunctions.getQueryType(sql);
         String tableName = getQueryTable(sql);
-        JSONTable table = mTables.get(tableName);
+        JSONTable table = mTables.getOrDefault(tableName, null);
 
         JSONArray result = null;
         switch (queryType) {
+            case "SHOW TABLES" -> { result = getAllTableNames(); }
             case "SELECT" -> { result = table.select(sql); }
             case "INSERT" -> { result = table.insert(sql); }
             case "UPDATE" -> { result = table.update(sql); }
@@ -60,6 +70,16 @@ public class JSONDatabase {
         };
 
         return result;
+    }
+
+    private JSONArray getAllTableNames() {
+        JSONArray tablesArray = new JSONArray();
+        for (String tableName : mTables.keySet()) {
+            JSONObject obj = new JSONObject();
+            obj.put("Table", tableName);
+            tablesArray.add(obj);
+        }
+        return tablesArray;
     }
 
     /**

@@ -188,7 +188,7 @@ public class AbilitySystem extends GameSystem {
             }
 
             statisticsComponent.addTag(passiveAbility);
-            System.out.println("toto");
+//            System.out.println("toto");
         }
     }
 }

@@ -9,6 +9,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class JSONSQLFunctions {
+    private static final String SHOW_TABLE_KEYWORD = "SHOW_TABLES";
+    private static final String VALUES_KEYWORD = "VALUES";
     private static final String INSERT_KEYWORD = "INSERT";
     private static final String SELECT_KEYWORD = "SELECT";
     private static final String UPDATE_KEYWORD = "UPDATE";
@@ -25,6 +27,8 @@ public class JSONSQLFunctions {
     private static final String IS_KEYWORD = "IS";
     private static final String NOT_KEYWORD = "NOT";
     private static final String IS_NOT_KEYWORD = "IS NOT";
+    private static final String OPEN_PARENTHESIS = "(", CLOSE_PARENTHESIS = ")";
+    private static final String COMA = ",";
 
     private static final Pattern TOKEN_PATTERN = Pattern.compile(
             "'([^']*)'" + // Quoted strings
@@ -46,6 +50,128 @@ public class JSONSQLFunctions {
             "SELECT", "UPDATE", "FROM", "WHERE", "AND", "OR", "ORDER", "BY", "LIMIT", "ASC", "DESC"
     );
 
+    public JSONArray extractInsertInto(String sql) {
+        List<String> tokens = tokenize(sql);
+        String tableName = extractTableName(sql);
+
+        JSONArray results = new JSONArray();
+        if (tokens.isEmpty() || tableName == null) {
+            return results;
+        }
+
+        List<String> columns = new ArrayList<>();
+        boolean parsingColumns = false;
+
+        // Get Column values
+        for (String token : tokens) {
+            // Phase 1: Before VALUES (collecting, "column", 'names')
+            if (token.equals(OPEN_PARENTHESIS)) {
+                parsingColumns = true;
+                continue;
+            }
+            if (token.equals(CLOSE_PARENTHESIS)) {
+                parsingColumns = false;
+                break;
+            }
+
+            if (token.equals(COMA)) { continue; }
+            if (!parsingColumns) { continue; }
+
+            columns.add(token); // Only add real columns (skip commas)
+        }
+
+
+        List<List<String>> allValueGroups = new ArrayList<>();
+        List<String> currentGroup = null;
+        boolean parsingValues = false;
+
+        for (String token : tokens) {
+            if (token.equalsIgnoreCase(VALUES_KEYWORD)) {
+                parsingValues = true; // Switch to parsing values phase
+                continue;
+            }
+
+            if (!parsingValues) { continue; }
+
+            if (token.equals(OPEN_PARENTHESIS)) {
+                currentGroup = new ArrayList<>(); // New row
+                continue;
+            } else if (token.equals(CLOSE_PARENTHESIS)) {
+                if (currentGroup != null) {
+                    allValueGroups.add(currentGroup); // Finished a row
+                    currentGroup = null;
+                }
+                continue;
+            }
+
+            if (currentGroup != null && !token.equals(COMA)) {
+                currentGroup.add(token); // Add value to the current row
+            }
+        }
+
+
+        // Now map columns to values
+        for (List<String> values : allValueGroups) {
+            JSONObject row = new JSONObject();
+            if (columns.isEmpty()) {
+                // No explicit columns → treat as root keys "col0", "col1", etc.
+                for (int j = 0; j < values.size(); j++) {
+                    row.put(String.valueOf(j), parseLiteral(values.get(j)));
+                }
+            } else {
+                for (int j = 0; j < columns.size() && j < values.size(); j++) {
+                    row.put(columns.get(j), parseLiteral(values.get(j)));
+                }
+            }
+            results.add(row);
+        }
+
+        return results;
+    }
+
+//    public String extractTableName(String sql) {
+//        if (sql == null || sql.isBlank()) {
+//            return null;
+//        }
+//
+//        List<String> tokens = getTokens(sql);
+//        if (tokens.isEmpty()) {
+//            return null;
+//        }
+//
+//        String queryType = tokens.get(0).toUpperCase();
+//
+//        switch (queryType) {
+//            case "SELECT":
+//            case "DELETE": {
+//                // Look for "FROM <table>"
+//                for (int i = 0; i < tokens.size() - 1; i++) {
+//                    if (tokens.get(i).equalsIgnoreCase("FROM")) {
+//                        return tokens.get(i + 1);
+//                    }
+//                }
+//                break;
+//            }
+//            case "UPDATE": {
+//                // "UPDATE <table>"
+//                if (tokens.size() >= 2) {
+//                    return tokens.get(1);
+//                }
+//                break;
+//            }
+//            case "INSERT": {
+//                // "INSERT INTO <table>"
+//                for (int i = 0; i < tokens.size() - 1; i++) {
+//                    if (tokens.get(i).equalsIgnoreCase("INTO")) {
+//                        return tokens.get(i + 1);
+//                    }
+//                }
+//                break;
+//            }
+//        }
+//        return null;
+//    }
+
     public static class BenchmarkLogger {
         private final long mStart;
         private final String mLabel;
@@ -66,12 +192,47 @@ public class JSONSQLFunctions {
             "(?i)(FROM|INTO|UPDATE)\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
     );
 
-    public String extractTableName(String query) {
-        Matcher matcher = mTablePattern.matcher(query);
-        if (!matcher.find()) {
+    public String extractTableName(String sql) {
+        if (sql == null || sql.isBlank()) {
             return null;
         }
-        return matcher.group(2); // Table name is always the second group
+
+        List<String> tokens = tokenize(sql);
+        if (tokens.isEmpty()) {
+            return null;
+        }
+
+        String queryType = tokens.get(0).toUpperCase();
+
+        switch (queryType) {
+            case SELECT_KEYWORD:
+            case DELETE_KEYWORD: {
+                // Look for "FROM <table>"
+                for (int i = 0; i < tokens.size() - 1; i++) {
+                    if (tokens.get(i).equalsIgnoreCase("FROM")) {
+                        return tokens.get(i + 1);
+                    }
+                }
+                break;
+            }
+            case UPDATE_KEYWORD: {
+                // "UPDATE <table>"
+                if (tokens.size() >= 2) {
+                    return tokens.get(1);
+                }
+                break;
+            }
+            case INSERT_KEYWORD: {
+                // "INSERT INTO <table>"
+                for (int i = 0; i < tokens.size() - 1; i++) {
+                    if (tokens.get(i).equalsIgnoreCase("INTO")) {
+                        return tokens.get(i + 1);
+                    }
+                }
+                break;
+            }
+        }
+        return null; // Unknown format
     }
 
     public int getFirstIndexOf(Map<Integer, String[]> tokens, String token) {
@@ -240,27 +401,117 @@ public class JSONSQLFunctions {
     }
 
 
-    public List<String> getTokens(String sql) {
+    public List<String> tokenize(String sql) {
         List<String> tokens = new ArrayList<>();
-        Matcher matcher = TOKEN_PATTERN.matcher(sql);
+        if (sql == null || sql.isEmpty()) {
+            return tokens;
+        }
 
-        while (matcher.find()) {
-            String token = null;
+        StringBuilder current = new StringBuilder();
+        boolean insideSingleQuote = false;
+        boolean insideDoubleQuote = false;
 
-            if (matcher.group(1) != null) {
-                // ✅ Handle Quoted Strings (e.g., 'New York')
-                token = "'" + matcher.group(1) + "'";
-            } else {
-                token = matcher.group().trim();
-                if (SQL_KEYWORDS.contains(token.toUpperCase())) {
-                    // ✅ SQL Keywords (SELECT, WHERE, ORDER BY)
-                    token = token.toUpperCase();
-                }
+        for (int index = 0; index < sql.length(); index++) {
+            char c = sql.charAt(index);
+
+            if (c == '\'' && !insideDoubleQuote) {
+                insideSingleQuote = !insideSingleQuote;
+                current.append(c);
+                continue;
+            }
+            if (c == '"' && !insideSingleQuote) {
+                insideDoubleQuote = !insideDoubleQuote;
+                current.append(c);
+                continue;
             }
 
-            tokens.add(token);
+            if (insideSingleQuote || insideDoubleQuote) {
+                current.append(c);
+                continue;
+            }
+
+
+            if (Character.isWhitespace(c)) {
+                if (!current.isEmpty()) {
+                    tokens.add(processToken(current.toString()));
+                    current.setLength(0);
+                }
+                continue;
+            }
+
+            // 🔥 Handle two-character operators like >=, <=, !=
+            if (isOperatorChar(c)) {
+                if (!current.isEmpty()) {
+                    tokens.add(processToken(current.toString()));
+                    current.setLength(0);
+                }
+
+                // Look ahead one character
+                if (index + 1 < sql.length()) {
+                    char next = sql.charAt(index + 1);
+                    if (isOperatorChar(next)) {
+                        tokens.add("" + c + next);
+                        index++; // Skip the next character
+                        continue;
+                    }
+                }
+                tokens.add(String.valueOf(c));
+                continue;
+            }
+
+            if (isSpecialSingleChar(c)) {
+                if (!current.isEmpty()) {
+                    tokens.add(processToken(current.toString()));
+                    current.setLength(0);
+                }
+                tokens.add(String.valueOf(c));
+                continue;
+            }
+
+            // Special cases, special word here
+            String specialWord = isOperatorKeyword(sql, index);
+            if (specialWord != null) {
+                index += specialWord.length();
+                tokens.add(specialWord);
+                continue;
+            }
+
+            current.append(c);
         }
+
+        if (!current.isEmpty()) {
+            tokens.add(processToken(current.toString()));
+        }
+
         return tokens;
+    }
+
+    private boolean isSpecialSingleChar(char c) {
+        return c == '(' || c == ')' || c == ',';
+    }
+
+    private boolean isOperatorChar(char c) {
+        return c == '=' || c == '!' || c == '<' || c == '>';
+    }
+
+    private String isOperatorKeyword(String str, int index) {
+        List<String> words = List.of("IS", "IS NOT", "LIKE");
+
+        String result = null;
+        for (String word : words) {
+            if (!str.startsWith(word, index)) { continue; }
+            result = word;
+        }
+        return result;
+    }
+
+
+    private String processToken(String raw) {
+        String token = raw.trim();
+        if (SQL_KEYWORDS.contains(token.toUpperCase())) {
+            return token.toUpperCase(); // Normalize keywords
+        }
+        return token;
     }
 
 

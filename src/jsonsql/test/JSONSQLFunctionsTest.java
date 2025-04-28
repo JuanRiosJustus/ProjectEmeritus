@@ -294,7 +294,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_SimpleSelect() {
         String sql = "SELECT name, age FROM users WHERE age > 30";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(0, mJSONSQLFunctions.getFirstIndexOf(map, "SELECT"), "Expected 'SELECT' at index 0");
         assertEquals(4, mJSONSQLFunctions.getFirstIndexOf(map, "FROM"), "Expected 'FROM' at index 3");
@@ -305,7 +305,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_WithOrderBy() {
         String sql = "SELECT name FROM employees ORDER BY salary DESC";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(0, mJSONSQLFunctions.getFirstIndexOf(map, "SELECT"), "Expected 'SELECT' at index 0");
         assertEquals(2, mJSONSQLFunctions.getFirstIndexOf(map, "FROM"), "Expected 'FROM' at index 2");
@@ -318,7 +318,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_CaseInsensitive() {
         String sql = "select ID, Name FROM customers WHERE city = 'New York'";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(0, mJSONSQLFunctions.getFirstIndexOf(map, "SELECT"), "Expected 'SELECT' at index 0 (case insensitive)");
         assertEquals(4, mJSONSQLFunctions.getFirstIndexOf(map, "FROM"), "Expected 'FROM' at index 3");
@@ -330,7 +330,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_ComplexWhereClause() {
         String sql = "SELECT * FROM sales WHERE region = 'West' AND revenue > 50000 OR category = 'Electronics'";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(0, mJSONSQLFunctions.getFirstIndexOf(map, "SELECT"), "Expected 'SELECT' at index 0");
         assertEquals(2, mJSONSQLFunctions.getFirstIndexOf(map, "FROM"), "Expected 'FROM' at index 2");
@@ -344,7 +344,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_MultipleConditions() {
         String sql = "SELECT product, price FROM inventory WHERE (price > 100 AND stock < 50) OR category = 'Books'";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(0, mJSONSQLFunctions.getFirstIndexOf(map, "SELECT"), "Expected 'SELECT' at index 0");
         assertEquals(4, mJSONSQLFunctions.getFirstIndexOf(map, "FROM"), "Expected 'FROM' at index 4");
@@ -358,7 +358,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_StringLiterals() {
         String sql = "SELECT * FROM customers WHERE name = 'John Doe' AND city = 'Los Angeles'";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(0, mJSONSQLFunctions.getFirstIndexOf(map, "SELECT"), "Expected 'SELECT' at index 0");
         assertEquals(2, mJSONSQLFunctions.getFirstIndexOf(map, "FROM"), "Expected 'FROM' at index 2");
@@ -372,7 +372,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_ParenthesesAndOperators() {
         String sql = "SELECT id FROM data WHERE (score > 80 OR grade = 'A') AND passed = TRUE";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(0, mJSONSQLFunctions.getFirstIndexOf(map, "SELECT"), "Expected 'SELECT' at index 0");
         assertEquals(2, mJSONSQLFunctions.getFirstIndexOf(map, "FROM"), "Expected 'FROM' at index 2");
@@ -389,7 +389,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testGetFirstIndexOf_MissingTokens() {
         String sql = "SELECT first_name FROM employees WHERE salary > 50000";
-		List<String> map = mJSONSQLFunctions.getTokens(sql);
+		List<String> map = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(-1, mJSONSQLFunctions.getFirstIndexOf(map, "GROUP"), "Expected -1 for non-existent token 'GROUP'");
         assertEquals(-1, mJSONSQLFunctions.getFirstIndexOf(map, "HAVING"), "Expected -1 for non-existent token 'HAVING'");
@@ -910,7 +910,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testSingleColumnDefaultOrder() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY age");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY age");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertEquals(1, orderBy.size());
@@ -919,7 +919,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testSingleColumnExplicitAsc() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY salary ASC");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY salary ASC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertEquals(1, orderBy.size());
@@ -928,7 +928,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testSingleColumnExplicitDesc() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY name DESC");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY name DESC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertEquals(1, orderBy.size());
@@ -937,7 +937,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testMultipleColumnsDefaultOrder() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY age, salary");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY age, salary");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertEquals(2, orderBy.size());
@@ -947,7 +947,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testMultipleColumnsWithAscAndDesc() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens(
+        List<String> queryTokens = mJSONSQLFunctions.tokenize(
                 "SELECT * FROM users ORDER BY age DESC, salary ASC, name DESC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
@@ -959,7 +959,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testMultipleColumnsMixedOrder() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens(
+        List<String> queryTokens = mJSONSQLFunctions.tokenize(
                 "SELECT * FROM users ORDER BY id ASC, username, email DESC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
@@ -971,7 +971,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testNoOrderByClause() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users WHERE age > 30");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users WHERE age > 30");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertTrue(orderBy.isEmpty());
@@ -979,7 +979,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithoutColumn() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertTrue(orderBy.isEmpty());
@@ -987,7 +987,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithoutByKeyword() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER age DESC");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER age DESC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertTrue(orderBy.isEmpty());
@@ -995,7 +995,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithInvalidKeywordAfter() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY age DESC LIMIT 10");
+        List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY age DESC LIMIT 10");
             List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertEquals(1, orderBy.size());
@@ -1004,7 +1004,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithWhereClauseBefore() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens(
+        List<String> queryTokens = mJSONSQLFunctions.tokenize(
                 "SELECT * FROM users WHERE age > 25 ORDER BY salary ASC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
@@ -1014,7 +1014,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithDifferentCasing() {
-        List<String> map = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER bY AGE dEsc, salary AsC");
+        List<String> map = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER bY AGE dEsc, salary AsC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(map);
 
         assertEquals(2, orderBy.size());
@@ -1024,7 +1024,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithSpecialCharactersInColumn() {
-        List<String> map = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY created_at DESC, user-name ASC");
+        List<String> map = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY created_at DESC, user-name ASC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(map);
 
         assertEquals(2, orderBy.size());
@@ -1034,7 +1034,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithSQLKeywordsAsColumnNames() {
-        List<String> queryTokens = mJSONSQLFunctions.getTokens(
+        List<String> queryTokens = mJSONSQLFunctions.tokenize(
                 "SELECT * FROM users ORDER BY `select` ASC, `where` DESC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
@@ -1045,7 +1045,7 @@ class JSONSQLFunctionsTest {
 
     @Test
     void testOrderByWithNumbersAsColumnNames() {
-		List<String> queryTokens = mJSONSQLFunctions.getTokens("SELECT * FROM users ORDER BY `123` ASC, `456` DESC");
+		List<String> queryTokens = mJSONSQLFunctions.tokenize("SELECT * FROM users ORDER BY `123` ASC, `456` DESC");
         List<String[]> orderBy = mJSONSQLFunctions.extractOrderBy(queryTokens);
 
         assertEquals(2, orderBy.size());
@@ -1613,7 +1613,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testTokenCount_SimpleQuery() {
         String sql = "SELECT name FROM users";
-		List<String> queryTokens = mJSONSQLFunctions.getTokens(sql);
+		List<String> queryTokens = mJSONSQLFunctions.tokenize(sql);
 
         int expectedTokenCount = 4; // SELECT, name, FROM, users
         assertEquals(expectedTokenCount, queryTokens.size(), "Token count should match for a simple query.");
@@ -1622,7 +1622,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testTokenCount_QueryWithWhereClause() {
         String sql = "SELECT name FROM users WHERE age > 30";
-        List<String> queryTokens = mJSONSQLFunctions.getTokens(sql);
+        List<String> queryTokens = mJSONSQLFunctions.tokenize(sql);
 
         int expectedTokenCount = 8; // SELECT, name, FROM, users, WHERE, age, >, 30
         assertEquals(expectedTokenCount, queryTokens.size(), "Token count should match for WHERE clause query.");
@@ -1880,7 +1880,7 @@ class JSONSQLFunctionsTest {
     @Test
     void testComplexNestedParenthesisTokenization() {
         String sql = "SELECT name, age FROM users WHERE ((city = 'New York' AND (age > 30 OR salary <= 50000)) OR ((department = 'Engineering' OR (location != 'Remote' AND rank > 3))))";
-		List<String> queryTokens = mJSONSQLFunctions.getTokens(sql);
+		List<String> queryTokens = mJSONSQLFunctions.tokenize(sql);
 
         assertEquals(42, queryTokens.size());
 
@@ -5407,4 +5407,250 @@ class JSONSQLFunctionsTest {
         String query = "";
         assertNull(mJSONSQLFunctions.extractTableName(query));
     }
+
+//
+//
+////
+    @Test
+    public void testTokenizer_InsertWithColumnsAndMultipleValues() {
+        String sql = """
+            INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES
+            (4, 'Chaitali', 25, 'Mumbai', 6500.00 ),
+            (5, 'Hardik', 27, 'Bhopal', 8500.00 ),
+            (6, 'Komal', 22, 'Hyderabad', 4500.00 );
+            """;
+
+        List<String> tokens = mJSONSQLFunctions.tokenize(sql);
+
+        assertTrue(tokens.contains("INSERT"));
+        assertTrue(tokens.contains("INTO"));
+        assertTrue(tokens.contains("CUSTOMERS"));
+        assertTrue(tokens.contains("("));
+        assertTrue(tokens.contains("ID"));
+        assertTrue(tokens.contains(","));
+        assertTrue(tokens.contains("NAME"));
+        assertTrue(tokens.contains("VALUES"));
+        assertTrue(tokens.contains("4"));
+        assertTrue(tokens.contains("'Chaitali'"));
+        assertTrue(tokens.contains("25"));
+        assertTrue(tokens.contains("'Mumbai'"));
+        assertTrue(tokens.contains("6500.00"));
+        assertTrue(tokens.contains(")"));
+    }
+
+
+    @Test
+    public void testTokenizer_InsertWithCol() {
+        String sql = """
+            INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES
+            (4, 'Chaitali', 25, 'Mumbai', 6500.00 ),
+            (5, 'Hardik', 27, 'Bhopal', 8500.00 ),
+            (6, 'Komal', 22, 'Hyderabad', 4500.00 );
+            """;
+
+        JSONArray tokens = mJSONSQLFunctions.extractInsertInto(sql);
+
+        System.out.println("egplepkw");
+//        assertTrue(tokens.contains("INSERT"));
+//        assertTrue(tokens.contains("INTO"));
+//        assertTrue(tokens.contains("CUSTOMERS"));
+//        assertTrue(tokens.contains("("));
+//        assertTrue(tokens.contains("ID"));
+//        assertTrue(tokens.contains(","));
+//        assertTrue(tokens.contains("NAME"));
+//        assertTrue(tokens.contains("VALUES"));
+//        assertTrue(tokens.contains("4"));
+//        assertTrue(tokens.contains("'Chaitali'"));
+//        assertTrue(tokens.contains("25"));
+//        assertTrue(tokens.contains("'Mumbai'"));
+//        assertTrue(tokens.contains("6500.00"));
+//        assertTrue(tokens.contains(")"));
+    }
+
+
+
+
+
+    @Test
+    void testDeeplyNestedObjectInsertion() {
+        String sql = """
+            INSERT INTO users (id, profile.name, profile.details.age, profile.details.address.city)
+            VALUES (1, 'Alice', 30, 'New York');
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(1, row.get("id"));
+        assertEquals("Alice", row.get("profile.name"));
+        assertEquals(30, row.get("profile.details.age"));
+        assertEquals("New York", row.get("profile.details.address.city"));
+    }
+
+    @Test
+    void testDeeplyNestedArrayInsertion() {
+        String sql = """
+            INSERT INTO users (id, tags[0].label, tags[0].value, tags[1].label, tags[1].value)
+            VALUES (2, 'admin', 'yes', 'vip', 'no');
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(2, row.get("id"));
+        assertEquals("admin", row.get("tags[0].label"));
+        assertEquals("yes", row.get("tags[0].value"));
+        assertEquals("vip", row.get("tags[1].label"));
+        assertEquals("no", row.get("tags[1].value"));
+    }
+
+    @Test
+    void testMixedNestedObjectsAndArraysInsertion() {
+        String sql = """
+            INSERT INTO orders (order.id, order.items[0].name, order.items[0].quantity, order.items[1].name, order.items[1].quantity)
+            VALUES (1001, 'Laptop', 1, 'Mouse', 2);
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(1001, row.get("order.id"));
+        assertEquals("Laptop", row.get("order.items[0].name"));
+        assertEquals(1, row.get("order.items[0].quantity"));
+        assertEquals("Mouse", row.get("order.items[1].name"));
+        assertEquals(2, row.get("order.items[1].quantity"));
+    }
+
+    @Test
+    void testVeryDeepInsertion() {
+        String sql = """
+            INSERT INTO config (settings.display.theme.color.primary.value)
+            VALUES ('#FF0000');
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals("#FF0000", row.get("settings.display.theme.color.primary.value"));
+    }
+
+    @Test
+    void testSimpleInsertWithColumns() {
+        String sql = """
+            INSERT INTO customers (id, name, age)
+            VALUES (1, 'Alice', 30);
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(1, row.get("id"));
+        assertEquals("Alice", row.get("name"));
+        assertEquals(30, row.get("age"));
+    }
+
+    @Test
+    void testMultipleInsertsWithColumns() {
+        String sql = """
+            INSERT INTO customers (id, name, age)
+            VALUES (1, 'Alice', 30),
+                   (2, 'Bob', 25),
+                   (3, 'Charlie', 22);
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(3, result.size());
+
+        JSONObject second = result.getJSONObject(1);
+        assertEquals(2, second.get("id"));
+        assertEquals("Bob", second.get("name"));
+        assertEquals(25, second.get("age"));
+    }
+
+    @Test
+    void testInsertWithoutColumns() {
+        String sql = """
+            INSERT INTO customers
+            VALUES (4, 'David', 40);
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(4, row.get("col0"));
+        assertEquals("David", row.get("col1"));
+        assertEquals(40, row.get("col2"));
+    }
+
+    @Test
+    void testInsertWithNestedObjects() {
+        String sql = """
+            INSERT INTO customers (id, profile.name, profile.age)
+            VALUES (5, 'Eva', 28);
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(5, row.get("id"));
+        assertEquals("Eva", row.get("profile.name"));
+        assertEquals(28, row.get("profile.age"));
+    }
+
+    @Test
+    void testInsertWithArrayNotation() {
+        String sql = """
+            INSERT INTO customers (id, tags[0], tags[1])
+            VALUES (6, 'vip', 'new');
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(6, row.get("id"));
+        assertEquals("vip", row.get("tags[0]"));
+        assertEquals("new", row.get("tags[1]"));
+    }
+
+    @Test
+    void testInsertWithMixedTypes() {
+        String sql = """
+            INSERT INTO customers (id, name, isActive, balance)
+            VALUES (7, 'Frank', true, 1234.56);
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(7, row.get("id"));
+        assertEquals("Frank", row.get("name"));
+        assertEquals(true, row.get("isActive"));
+        assertEquals(1234.56, ((Number) row.get("balance")).doubleValue(), 0.0001);
+    }
+
+    @Test
+    void testInsertWithNullValues() {
+        String sql = """
+            INSERT INTO customers (id, name, city)
+            VALUES (8, null, 'Unknown');
+        """;
+
+        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+        assertEquals(1, result.size());
+
+        JSONObject row = result.getJSONObject(0);
+        assertEquals(8, row.get("id"));
+        assertNull(row.get("name"));
+        assertEquals("Unknown", row.get("city"));
+    }
+
 }

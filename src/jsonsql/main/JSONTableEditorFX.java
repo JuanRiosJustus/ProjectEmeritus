@@ -6,6 +6,7 @@ import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
+import javafx.scene.text.Font;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -14,6 +15,8 @@ import com.alibaba.fastjson2.JSONObject;
 
 import java.io.File;
 import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class JSONTableEditorFX extends Application {
@@ -80,8 +83,23 @@ public class JSONTableEditorFX extends Application {
             query = query.trim();
             try {
                 JSONArray result = jsonDatabase.execute(query);
-                Tab newTabInstance = new JSONTableEditorTable("Untitled Table", result);
-                queryResultsBox.getChildren().setAll(newTabInstance.getContent());
+                if (result == null || result.isEmpty()) { return; }
+                JSONObject schema = result.getJSONObject(0);
+
+                CustomTable table = new CustomTable();
+                table.setColumns(new ArrayList<>(schema.keySet()));
+                table.bindVisibleRowCountToParent(8);
+
+                for (int i = 0; i < result.size(); i++) {
+                    JSONObject item = result.getJSONObject(i);
+                    table.addRow(item);
+                }
+
+                VBox tableContainer = new VBox(table);
+                tableContainer.setAlignment(Pos.CENTER_LEFT);
+                VBox.setVgrow(table, Priority.ALWAYS); // ✨ this tells the table to expand
+                queryResultsBox.getChildren().setAll(tableContainer);
+                VBox.setVgrow(tableContainer, Priority.ALWAYS); // ✨ also let the container expand
             } catch (Exception ex) {
                 queryResultsBox.getChildren().setAll(new Label("❌ Query Error: " + ex.getMessage()));
             }
@@ -115,17 +133,21 @@ public class JSONTableEditorFX extends Application {
 
 //        JavaFXUtils.bindFontToSize(welcomeLabel, 12, true);
 
-//        welcomeLabel.setFont(new Font("System", 20));
+        welcomeLabel.setFont(new Font("System", 20));
 
         Button loadButton = new Button("📂 Load JSON");
         Button createButton = new Button("✨ Create Table From Scratch");
 
         loadButton.setOnAction(e -> openNewJsonFile(stage));
 
+
         createButton.setOnAction(e -> {
-            JSONArray emptyTable = new JSONArray();
-            emptyTable.add(new JSONObject());
-            Tab newTab = new JSONTableEditorTable("Untitled Table", jsonDatabase);
+
+            String tableName = "untitled_table";
+            jsonDatabase.addTable(tableName);
+
+            Tab newTab = new JSONTableEditorTable(tableName, jsonDatabase);
+
             tabPane.getTabs().add(tabPane.getTabs().size() - 1, newTab);
             tabPane.getSelectionModel().select(newTab);
         });
@@ -143,55 +165,34 @@ public class JSONTableEditorFX extends Application {
     }
 
     private void openNewJsonFile(Stage stage) {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open JSON File");
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("JSON Files", "*.json"),
-                new FileChooser.ExtensionFilter("All Files", "*.*")
-        );
-
         DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("Open JSON Directory");
+        File selected = directoryChooser.showDialog(stage);
 
-        Alert choiceAlert = new Alert(Alert.AlertType.CONFIRMATION);
-        choiceAlert.setTitle("Open JSON Source");
-        choiceAlert.setHeaderText("Would you like to open a single file or an entire directory?");
-        ButtonType fileButton = new ButtonType("Single File");
-        ButtonType dirButton = new ButtonType("Directory");
-        ButtonType cancelButton = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
-        choiceAlert.getButtonTypes().setAll(fileButton, dirButton, cancelButton);
+        if (selected == null) { return; }
 
-        Optional<ButtonType> result = choiceAlert.showAndWait();
-        if (result.isEmpty() || result.get() == cancelButton) return;
-
-        if (result.get() == fileButton) {
-            File selectedFile = fileChooser.showOpenDialog(stage);
-            if (selectedFile != null) {
-                loadJsonFileAsTab(selectedFile);
-            }
-        } else if (result.get() == dirButton) {
-            File selectedDir = directoryChooser.showDialog(stage);
-            if (selectedDir != null && selectedDir.isDirectory()) {
-                File[] jsonFiles = selectedDir.listFiles((dir, name) -> name.toLowerCase().endsWith(".json"));
-                if (jsonFiles != null) {
-                    for (File file : jsonFiles) {
-                        loadJsonFileAsTab(file);
-                    }
-                }
+        File[] jsonFiles = selected.listFiles((dir, name) -> name.toLowerCase().endsWith(".json"));
+        if (jsonFiles != null) {
+            for (File file : jsonFiles) {
+                loadJsonFileAsTab(file);
             }
         }
     }
 
+
+
+
     private void loadJsonFileAsTab(File file) {
         try {
             String content = Files.readString(file.toPath());
-            JSONArray jsonArray = JSON.parseArray(content);
 
             // Register table with JSONDatabase
             String tableName = file.getName().replace(".json", "");
             jsonDatabase.addTable(tableName, content);
 
             Tab newTab = new JSONTableEditorTable(tableName, jsonDatabase);
+            newTab.setText(tableName);
+
             tabPane.getTabs().add(tabPane.getTabs().size() - 1, newTab);
             tabPane.getSelectionModel().select(newTab);
 
