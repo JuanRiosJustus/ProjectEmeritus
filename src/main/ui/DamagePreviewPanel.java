@@ -198,16 +198,37 @@ public class DamagePreviewPanel extends BevelStyle {
         Map<String, Float> finalDamageMap = adr.getFinalDamageMap();
         Map<String, Float> upperDamageMap = adr.getUpperDamageMap();
         Map<String, Float> lowerDamageMap = adr.getLowerDamageMap();
+        Map<String, String> acronyms = Map.of("health", "HP", "mana", "MP", "Stamina", "SP");
 
         for (Map.Entry<String, Float> entry : finalDamageMap.entrySet()) {
             String key = entry.getKey();
-            int lowerDamage = lowerDamageMap.get(key).intValue();
-            int upperDamage = upperDamageMap.get(key).intValue();
+
+
+            int rawLowerDamage = lowerDamageMap.get(key).intValue();
+            int rawUpperDamage = upperDamageMap.get(key).intValue();
+            int rawAverageDamage = (rawLowerDamage + rawUpperDamage) / 2;
+
+            int lowerDamage = Math.min(Math.abs(rawLowerDamage), Math.abs(rawUpperDamage));
+            int upperDamage = Math.max(Math.abs(rawLowerDamage), Math.abs(rawUpperDamage));
+            int averageDamage = (lowerDamage + upperDamage) / 2;
+
+            Color goodOrBad = Color.ORANGE;
+            String sign = "";
+            if (rawAverageDamage > 0) {
+                goodOrBad = Color.LIGHTCORAL;
+                sign = "-";
+            } else if (rawAverageDamage < 0) {
+                goodOrBad = Color.LIGHTGREEN;
+                sign = "+";
+            }
+
 
             row = getOrCreateRow(key);
             row.getSecond().setVisible(false);
-            row.getThird().setTextColor(Color.ORANGE);
-            row.getThird().setText("(" + lowerDamage + " - " + upperDamage + ") " + key + " damage");
+            row.getThird().setTextColor(goodOrBad);
+            row.getThird().setText(sign + " ( " +
+                    lowerDamage + " , " +
+                    upperDamage + " ) " + StringUtils.convertSnakeCaseToCapitalized(key) );
         }
 
         Map<String, Float> tagsToTargetMap = adr.getTagsToTargetMap();

@@ -184,6 +184,9 @@ public class GreaterAbilityPanel extends GamePanel {
         label.getSecond().setText("Area:");
         label.getThird().setText(area + "");
 
+
+        Map<String, Float> modifier = null;
+
         label = getOrCreateRow("User tags");
         label.getSecond().setText("User Tags");
         label.getThird().setText("------------------");

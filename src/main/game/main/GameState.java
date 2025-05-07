@@ -213,6 +213,22 @@ public class GameState extends JSONObject {
 
 
 
+    private static final String TEAMS = "GAME_TEAMS";
+    public void addUnitToTeam(String unitID, String teamID) {
+        JSONObject teams = getJSONObject(TEAMS);
+        if (teams == null) {
+            teams = new JSONObject();
+            put(TEAMS, teams);
+        }
+
+        JSONObject team = teams.getJSONObject(teamID);
+        if (team == null) {
+            team = new JSONObject();
+            teams.put(teamID, team);
+        }
+
+        team.put(unitID, unitID);
+    }
 //    public List<JSONObject> getHoveredTiles() {
 //        JSONArray hoveredTiles = optJSONArray(HOVERED_TILES_STORE, EMPTY_JSON_ARRAY);
 //        List<JSONObject> result = new ArrayList<>();

@@ -17,7 +17,6 @@ public class BehaviorSystem extends GameSystem {
     private final EmeritusLogger logger = EmeritusLogger.create(BehaviorSystem.class);
     private final SplittableRandom mRandom = new SplittableRandom();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
-//    public BehaviorSystem() { }
     public BehaviorSystem(GameModel gameModel) { super(gameModel); }
 
 
@@ -65,7 +64,7 @@ public class BehaviorSystem extends GameSystem {
     private void handleMovement(GameModel model, String entityID) {
         String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, entityID);
         if (tileToMoveToID == null) {
-            Entity entity = EntityStore.getInstance().get(entityID);
+            Entity entity = getEntityWithID(entityID);
             ActionsComponent actionsComponentComponent = entity.get(ActionsComponent.class);
             actionsComponentComponent.setHasFinishedMoving(true);
             return;
@@ -77,7 +76,7 @@ public class BehaviorSystem extends GameSystem {
     private void handleTryUsingAbility(GameModel model, String entityID) {
         Pair<String, String> abilityAndTileID = mRandomnessBehavior.toActOn(model, entityID);
         if (abilityAndTileID == null) {
-            Entity entity = EntityStore.getInstance().get(entityID);
+            Entity entity = getEntityWithID(entityID);
             ActionsComponent actionsComponentComponent = entity.get(ActionsComponent.class);
             actionsComponentComponent.setHasFinishedUsingAbility(true);
             return;

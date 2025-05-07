@@ -28,27 +28,13 @@ public class TileComponent extends Component {
     public final static String LIQUID = "liquid";
     public final static String LAYERS = "layers";
     public final static String OBSTRUCTION = "obstruction";
-    public final static String SPAWNERS = "spawn_region";
+    public final static String SPAWN_REGION = "spawn_region";
     private static final String ORIGIN_FRAME = "origin_frame";
     private static final String EMPTY_STRING = "";
     private JSONStack mLayers = null;
-    public final static String LAYER_ASSET = "asset";
 
 
-//    public static class Builder {
-//        public static Tile newTile() {
-//            Tile tile = new Tile(new JSONObject());
-//            return tile;
-//        }
-//    }
-
-
-    public TileComponent(int row, int column) {
-        this(new JSONObject());
-        put(ROW, row);
-        put(COLUMN, column);
-        put(BASE_ELEVATION, 0);
-    }
+    public TileComponent(int row, int column) { this(row, column, 0); }
 
     public TileComponent(int row, int column, int elevation) {
         this(new JSONObject());
@@ -65,7 +51,7 @@ public class TileComponent extends Component {
         put(BASE_ELEVATION, 0);
 
         mLayers = new JSONStack();
-        put(SPAWNERS, new JSONArray());
+        put(SPAWN_REGION, null);
         put(COLLIDER, EMPTY_STRING);
         put(UNIT, EMPTY_STRING);
         put(STRUCTURE, EMPTY_STRING);
@@ -215,8 +201,8 @@ public class TileComponent extends Component {
     public boolean hasUnit() { return !getUnitID().isBlank(); }
     public boolean hasStructure() { return !getStructureID().isBlank(); }
     public boolean isOccupied() { return hasUnit() || hasStructure(); }
-    public void setSpawnRegion(int value) { put(SPAWNERS, value); }
-    public String getSpawnRegion() { return (String) get(SPAWNERS); }
+    public void setSpawnRegion(Object value) { put(SPAWN_REGION, String.valueOf(value)); }
+    public String getSpawnRegion() { return getString(SPAWN_REGION); }
     public String getUnitID() { return getString(UNIT); }
     public void removeUnit() {
         put(UNIT, EMPTY_STRING);

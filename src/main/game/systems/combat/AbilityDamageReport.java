@@ -44,6 +44,7 @@ public class AbilityDamageReport  {
     private Map<String, Float> getTargetTagsChanceMap(String ability) {
         JSONArray userTags = AbilityTable.getInstance().getTargetTagObjects(ability);
         Map<String, Float> chanceMap = new HashMap<>();
+        if (userTags == null) { return chanceMap; }
         for (int i = 0; i < userTags.size(); i++) {
             JSONObject targetTag = userTags.getJSONObject(i);
             float chance = AbilityTable.getInstance().getTargetTagObjectChance(targetTag);
@@ -56,6 +57,7 @@ public class AbilityDamageReport  {
     private Map<String, Float> getUserTagsChanceMap(String ability) {
         JSONArray userTags = AbilityTable.getInstance().getUserTagObjects(ability);
         Map<String, Float> chanceMap = new HashMap<>();
+        if (userTags == null) { return chanceMap; }
         for (int i = 0; i < userTags.size(); i++) {
             JSONObject targetTag = userTags.getJSONObject(i);
             float chance = AbilityTable.getInstance().getTargetTagObjectChance(targetTag);

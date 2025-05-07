@@ -3,8 +3,8 @@ package main.game.main.rendering;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import main.constants.Direction;
 import main.constants.Point;
@@ -12,12 +12,14 @@ import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
+import main.game.stores.FontPool;
+import main.game.systems.texts.FloatingText;
 import main.graphics.AssetPool;
 
 import java.util.*;
 
 public abstract class Renderer {
-
+    protected final Text mTextMetrics = new Text();
     private final Point mEphemeralPoint = new Point();
     public abstract void render(GraphicsContext gc, RenderContext rc);
 
@@ -178,15 +180,103 @@ public abstract class Renderer {
         }
     }
 
-    public void renderTextWithOutline(GraphicsContext gc, int x, int y, String str, float fontSize, Color fg, Color bg) {
-        // Save original state
-        Font originalFont = gc.getFont();
-        Paint originalFill = gc.getFill();
-        Paint originalStroke = gc.getStroke();
-        double originalLineWidth = gc.getLineWidth();
-        TextAlignment originalTextAlign = gc.getTextAlign();
+//    public void renderTextWithOutline(GraphicsContext gc, FloatingText ft) {
+//        // Save original state
+//        mTextMetrics.setText(ft.getText());
+//        mTextMetrics.setFont(fontToUse);
+//
+//        int textWidth = (int) mTextMetrics.getLayoutBounds().getWidth();
+//        int textHeight = (int) mTextMetrics.getLayoutBounds().getHeight();
+//
+//        // Calculate the world position
+//        Point p = calculateWorldPosition(model, camera, ft.getX(), ft.getY(), textWidth, textHeight);
+//        int x = p.x;
+//        int y = p.y;
+//
+//        // Set font
+//        Font textFont = new Font(gc.getFont().getName(), fontSize);
+//        gc.setFont(textFont);
+//        gc.setTextAlign(TextAlignment.LEFT);
+//
+//        // Set outline width
+//        double outlineWidth = Math.max(2, fontSize * 0.1); // Dynamic thickness
+//
+//        // Draw outline by drawing the text in different directions
+//        gc.setFill(bg);
+//        for (double dx = -outlineWidth; dx <= outlineWidth; dx += outlineWidth / 2) {
+//            for (double dy = -outlineWidth; dy <= outlineWidth; dy += outlineWidth / 2) {
+//                if (dx != 0 || dy != 0) {
+//                    gc.fillText(str, x + dx, y + dy);
+//                }
+//            }
+//        }
+//
+//        // Draw the foreground text
+//        gc.setFill(fg);
+//        gc.fillText(str, x, y);
+//
+//        // Restore original settings
+//        gc.setFont(originalFont);
+//        gc.setFill(originalFill);
+//        gc.setStroke(originalStroke);
+//        gc.setLineWidth(originalLineWidth);
+//        gc.setTextAlign(originalTextAlign);
+//    }
+
+    public void renderFloatingText(GraphicsContext gc, RenderContext rc, FloatingText ft) {
+        gc.save();
 
         // Set font
+        float fontSize = ft.getFontSize();
+        Font fontToUse = FontPool.getInstance().getFont(fontSize);
+        gc.setFont(fontToUse);
+        gc.setTextAlign(TextAlignment.LEFT);
+        String str = ft.getText();
+        Color bg = ft.getBackground();
+        Color fg = ft.getForeground();
+
+        GameModel model = rc.getGameModel();
+        String camera = rc.getCamera();
+        mTextMetrics.setText(ft.getText());
+        mTextMetrics.setFont(fontToUse);
+        int textWidth = (int) mTextMetrics.getLayoutBounds().getWidth();
+        int textHeight = (int) mTextMetrics.getLayoutBounds().getHeight();
+        Point p = calculateWorldPosition(model, camera, ft.getX(), ft.getY(), textWidth, textHeight);
+        int x = p.x;
+        int y = p.y;
+
+
+        // Set outline width
+        double outlineWidth = Math.max(2, fontSize * 0.1); // Dynamic thickness
+
+        // Draw outline by drawing the text in different directions
+        gc.setFill(bg);
+        for (double dx = -outlineWidth; dx <= outlineWidth; dx += outlineWidth / 2) {
+            for (double dy = -outlineWidth; dy <= outlineWidth; dy += outlineWidth / 2) {
+                if (dx != 0 || dy != 0) {
+                    gc.fillText(str, x + dx, y + dy);
+                }
+            }
+        }
+
+        // Draw the foreground text
+        gc.setFill(fg);
+        gc.fillText(str, x, y);
+
+        gc.restore();
+    }
+
+    public void renderTextWithOutline(GraphicsContext gc, int x, int y, String str, float fontSize, Color fg, Color bg) {
+        // Save original state
+//        Font originalFont = gc.getFont();
+//        Paint originalFill = gc.getFill();
+//        Paint originalStroke = gc.getStroke();
+//        double originalLineWidth = gc.getLineWidth();
+//        TextAlignment originalTextAlign = gc.getTextAlign();
+        gc.save();
+
+        // Set font
+
         Font textFont = new Font(gc.getFont().getName(), fontSize);
         gc.setFont(textFont);
         gc.setTextAlign(TextAlignment.LEFT);
@@ -208,13 +298,48 @@ public abstract class Renderer {
         gc.setFill(fg);
         gc.fillText(str, x, y);
 
+        gc.restore();
         // Restore original settings
-        gc.setFont(originalFont);
-        gc.setFill(originalFill);
-        gc.setStroke(originalStroke);
-        gc.setLineWidth(originalLineWidth);
-        gc.setTextAlign(originalTextAlign);
+//        gc.setFont(originalFont);
+//        gc.setFill(originalFill);
+//        gc.setStroke(originalStroke);
+//        gc.setLineWidth(originalLineWidth);
+//        gc.setTextAlign(originalTextAlign);
     }
+
+//    public void renderBoundingTextBox(GraphicsContext gc, RenderContext rc,  FloatingText floatingText) {
+//        // ====== ADD THIS FOR DEBUGGING RECTANGLES ======
+//        gc.save(); // Save previous GC state
+//
+//        int textWidth = (int) mTextMetrics.getLayoutBounds().getWidth();
+//        int textHeight = (int) mTextMetrics.getLayoutBounds().getHeight();
+//
+//        // Calculate the world position
+//        GameModel model = rc.getGameModel();
+//        String camera = rc.getCamera();
+//        String str = floatingText.getText();
+//        Color bg = floatingText.getBackground();
+//        Color fg = floatingText.getForeground();
+//
+//        Point p = calculateWorldPosition(model, camera, floatingText.getX(), floatingText.getY(), textWidth, textHeight);
+//
+//        double fontSize = gc.getFont().getSize();
+//        gc.setStroke(Color.DARKGRAY);  // Red color for the debug box
+//        double outlineWidth = Math.max(2, fontSize * 0.1); // Dynamic thickness
+//        // Draw outline by drawing the text in different directions
+//        gc.setFill(bg);
+//        for (double dx = -outlineWidth; dx <= outlineWidth; dx += outlineWidth / 2) {
+//            for (double dy = -outlineWidth; dy <= outlineWidth; dy += outlineWidth / 2) {
+//                if (dx != 0 || dy != 0) {
+//                    gc.fillText(str, p.x, + dx, p.y + dy);
+//                }
+//            }
+//        }
+////        gc.setLineWidth(outlineWidth);                          // Thin rectangle
+//        gc.strokeRect(p.x, p.y - textHeight, textWidth, textHeight);
+//        gc.restore(); // Restore previous GC state
+//        // ====== END DEBUGGING RECTANGLE ======
+//    }
 
 //    public Point calculateWorldPositionRaw(GameModel model, int localX, int localY, int width, int height) {
 //        // Convert localX and localY to global coordinates

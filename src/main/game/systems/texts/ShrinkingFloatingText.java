@@ -101,37 +101,41 @@ public class ShrinkingFloatingText extends FloatingText {
      * Called each frame to update position, fade out, and
      * the special size/growth effect.
      */
+    @Override
     public void update() {
         put(CURRENT_AGE, mUtilityTimer.getElapsedSeconds());
 
-        // Example: Move upwards each frame
+        // Move upwards
         put(Y, getY() - 1);
 
-        // Typical fade logic
         double elapsed = getAge();
         double lifeExpectancy = getLifeExpectancy();
-        if (elapsed >= lifeExpectancy) {
-            return; // We skip further updates if at end-of-life
-        }
 
-        double fadeStart = lifeExpectancy * 0.5; // fade begins halfway
+        if (elapsed >= lifeExpectancy) return;
+
+        // Start fading at 30% of life span
+        double fadeStart = lifeExpectancy * 0.3;
         if (elapsed >= fadeStart) {
             double fadeProgress = (elapsed - fadeStart) / (lifeExpectancy - fadeStart);
-            int alpha = (int) (255 * (1 - fadeProgress)); // Linearly reduce alpha from 255 to 0
-            alpha = Math.max(0, alpha); // Clamp to prevent negative values
 
-            // Adjust colors with new alpha (divide alpha by 255.0 to convert to opacity value)
+            // Apply exponential fade (faster than linear)
+            fadeProgress = Math.pow(fadeProgress, 2.0); // Exponent of 2 = quadratic ease-out
+
+            double opacity = 1.0 - fadeProgress;
+            opacity = Math.max(0.0, Math.min(1.0, opacity)); // Clamp between 0–1
+
             mForeground = new Color(
                     mForeground.getRed(),
                     mForeground.getGreen(),
                     mForeground.getBlue(),
-                    alpha / 255.0
+                    opacity
             );
+
             mBackground = new Color(
                     mBackground.getRed(),
                     mBackground.getGreen(),
                     mBackground.getBlue(),
-                    alpha / 255.0
+                    opacity
             );
         }
     }

@@ -140,14 +140,39 @@ public class GameController extends EngineRunnable {
 
 
     public boolean isRunning() { return mGameModel.isRunning(); }
-    public boolean spawnUnit(Entity entity, String team, int row, int column) {
-        return mGameModel.spawnUnit(entity, team, row, column);
+
+
+    /**
+     * Attempts to place a unit on a tile using the provided {@link JSONObject} data.
+     *
+     * <p>The input JSON object must include the following fields:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): The unique identifier of the unit to be placed.</li>
+     *   <li><b>"tile_id"</b> (String): The unique identifier of the destination tile.</li>
+     *   <li><b>"team_id"</b> (String, optional): The team to which the unit belongs. Defaults to {@code "neutral"} if absent.</li>
+     * </ul>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "unit_id": "fire_dragon_342423-522452-52662-252432",
+     *   "tile_id": "4_2_43242-2555223-5234324-25324",
+     *   "team_id": "Enemy"
+     * }
+     * }</pre>
+     *
+     * @param object the JSON object containing placement data; must not be {@code null}
+     * @return {@code true} if the unit was successfully placed and queued; {@code false} if placement failed
+     */
+    public boolean setUnitSpawn(JSONObject object) {
+        return mGameModel.setUnitSpawn(object);
     }
 
 
 
 
-
+//    public JSONArray getSpawnRegions() { return mGameModel.getSpawnRegions(); }
+    public JSONObject getSpawnRegionsData() { return mGameModel.getSpawnRegionsData(); }
 
     public JSONObject getHoveredTile() { return mGameMapEditorAPI.getHoveredTile(); }
 

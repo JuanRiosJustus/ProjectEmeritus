@@ -23,6 +23,7 @@ public class TileMap extends JSONArray {
     private final List<String> mTileEntityIDs = new ArrayList<>();
     private final Random mRandom = new Random();
     private TileMapParameters mTileMapParameters = null;
+    private final Map<String, List<String>> mSpawnRegions = new HashMap<>();
 
     public TileMap(TileMapParameters parameters) {
         mTileMapParameters = parameters;
@@ -160,6 +161,84 @@ public class TileMap extends JSONArray {
 //        applySimplexNoise(mTileMapLayers.get(HEIGHT_LAYER), minHeight, maxHeight, zoom);
         mLogger.info("Finished setting up TileMap");
     }
+
+    public void designateSpawns(boolean refresh) {
+        if (!refresh) { return; }
+
+        int rows = getRows();;
+        int columns = getColumns();
+        int maxSpawnAreaColumns = (int) Math.max(2, getColumns() * .05);
+
+        String leftRegionName = "Left";
+        String rightRegionName = "Right";
+        List<String> leftRegion = new ArrayList<>();
+        List<String> rightRegion = new ArrayList<>();
+        for (int row = 0; row < rows; row++) {
+            for (int column = 0; column < columns; column++) {
+
+                String entityID = null;
+
+                if (column < maxSpawnAreaColumns) {
+                    entityID = tryFetchingEntityIDAt(row, column);
+                    Entity entity = getEntityWithID(entityID);
+                    TileComponent tile = entity.get(TileComponent.class);
+                    tile.deleteStructure();
+                    tile.setSpawnRegion(leftRegionName);
+                    leftRegion.add(entityID);
+                }
+
+                if (column >= columns - maxSpawnAreaColumns) {
+                    entityID = tryFetchingEntityIDAt(row, column);
+                    Entity entity = getEntityWithID(entityID);
+                    TileComponent tile = entity.get(TileComponent.class);
+                    tile.deleteStructure();
+                    tile.setSpawnRegion(rightRegionName);
+                    rightRegion.add(entityID);
+
+                }
+            }
+        }
+        mSpawnRegions.clear();
+        mSpawnRegions.put(leftRegionName, leftRegion);
+        mSpawnRegions.put(rightRegionName, rightRegion);
+    }
+
+    public JSONObject getSpawnRegionsData() {
+        JSONObject result = new JSONObject();
+        if (mSpawnRegions.isEmpty()) {
+            return result;
+        }
+
+        for (Map.Entry<String, List<String>> entries : mSpawnRegions.entrySet()) {
+            String region = entries.getKey();
+            List<String> tileIDs = entries.getValue();
+            JSONArray regionTiles = new JSONArray();
+            for (String tileID : tileIDs) {
+                Entity entity = getEntityWithID(tileID);
+                TileComponent tileComponent = entity.get(TileComponent.class);
+                tileComponent.deleteStructure();
+                tileComponent.removeUnit();
+                int row = tileComponent.getRow();
+                int column = tileComponent.getColumn();
+                JSONObject tileData = new JSONObject();
+                tileData.put("tile_id", tileID);
+                tileData.put("row", row);
+                tileData.put("column", column);
+                regionTiles.add(tileData);
+            }
+            result.put(region, regionTiles);
+        }
+
+        return result;
+    }
+
+    public JSONArray getSpawnRegions() {
+        JSONArray result = new JSONArray();
+        result.addAll(mSpawnRegions.keySet());
+        return result;
+    }
+
+
 
     private static int[][] applySimplexNoise(int rows, int columns, int minHeight, int maxHeight, float zoom) {
         SimplexNoise simplexNoise = new SimplexNoise();
@@ -438,7 +517,7 @@ public class TileMap extends JSONArray {
     public Entity setSpawnRegion(String region, int row, int column) {
         Entity tileEntity = tryFetchingEntityAt(row, column);
         TileComponent tile = tileEntity.get(TileComponent.class);
-        tile.set(TileComponent.SPAWNERS, region);
+        tile.set(TileComponent.SPAWN_REGION, region);
         return tileEntity;
     }
 
@@ -564,4 +643,5 @@ public class TileMap extends JSONArray {
     public long getSeed() { return (long) mTileMapParameters.get(TileMapParameters.SEED_KEY); }
     public Object getConfiguration(String config) { return mTileMapParameters.get(config); }
     public List<String> getAllTileEntityIDs() { return mTileEntityIDs; }
+    public Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
 }

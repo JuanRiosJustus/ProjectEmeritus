@@ -25,9 +25,36 @@ public class PathingAlgorithms {
      * @param model        The game model containing the grid and entities.
      * @param startTileID       The starting entity.
      * @param endTileID          The target entity.
-     * @param respectfully Whether to respect obstacles (e.g., walls).
      * @return A set of entities forming the line of sight.
      */
+//    public boolean hasLineOfSight(GameModel model, String startTileID, String endTileID, int startUnitHeight, int endUnitHeight) {
+//        List<String> path = computeLineOfSight(model, startTileID, endTileID, false); // false = ignore navigability
+//
+//        if (path.size() < 2) return false;
+//
+//        Entity start = getEntityWithID(startTileID);
+//        Entity end = getEntityWithID(endTileID);
+//
+//        TileComponent startTile = start.get(TileComponent.class);
+//        TileComponent endTile = end.get(TileComponent.class);
+//
+//        float eyeStart = startTile.getTotalElevation() + startUnitHeight;
+//        float eyeEnd = endTile.getTotalElevation() + endUnitHeight;
+//
+//        for (int i = 1; i < path.size() - 1; i++) {
+//            Entity middle = getEntityWithID(path.get(i));
+//            TileComponent tile = middle.get(TileComponent.class);
+//
+//            float t = i / (float)(path.size() - 1); // normalized position on line
+//            float lineHeight = eyeStart * (1 - t) + eyeEnd * t;
+//
+//            if (tile.getTotalElevation() >= lineHeight) {
+//                return false; // blocked
+//            }
+//        }
+//
+//        return true;
+//    }
 
     public List<String> computeLineOfSight(GameModel model, String startTileID, String endTileID) {
         return computeLineOfSight(model, startTileID, endTileID, true);

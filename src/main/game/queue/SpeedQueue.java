@@ -1,13 +1,13 @@
 package main.game.queue;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import main.constants.Constants;
 import main.constants.HashSlingingSlasher;
 import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
+import main.game.stores.EntityStore;
 import main.logging.EmeritusLogger;
 import com.alibaba.fastjson2.JSONArray;
 
@@ -23,81 +23,80 @@ public class SpeedQueue {
     private final HashSlingingSlasher mFinishedEntitiesHashSlingingSlasher = new HashSlingingSlasher();
     private final HashSlingingSlasher mAllEntitiesHashSlingingSlasher = new HashSlingingSlasher();
     private final HashSlingingSlasher mCheckSum = new HashSlingingSlasher()
-;    private final PriorityQueue<Entity> mQueued = new PriorityQueue<>(turnOrdering());
+;    private final PriorityQueue<Entity> mSpeedQueue = new PriorityQueue<>(turnOrdering());
     private final PriorityQueue<Entity> mFinished = new PriorityQueue<>(turnOrdering());
 
     private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
-    private final Map<Entity, String> mIdentityMap = new HashMap<>();
+    private final Map<String, Entity> mEntityMap = new LinkedHashMap<>();
     private int mIterations = 0;
 
     public String peek() {
-        Entity unitEntity = mQueued.peek();
+        Entity unitEntity = mSpeedQueue.peek();
         if (unitEntity == null) { return null; }
         IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
         return identityComponent.getID();
     }
 
-    public String toString() { return mQueued.toString(); }
+    public String toString() { return mSpeedQueue.toString(); }
     public int getCycleCount() { return mIterations; }
 
     public boolean update() {
-        boolean update = mQueued.isEmpty();
-        if (update && !mIdentityMap.isEmpty()) {
-            mQueued.addAll(mIdentityMap.keySet());
-            mFinished.clear();
-            mIterations++;
-            mLogger.info("Speed queue updated.");
-        }
-        return update;
-    }
+        if (!mSpeedQueue.isEmpty()) { return false; }
 
-//    public boolean removeIfNoCurrentHealth(Entity toRemove) {
-//        if (toRemove.get(StatisticsComponent.class).getCurrentHealth() > 0) {
-//            return false;
-//        }
-//        mQueue.remove(toRemove);
-//        mFinished.remove(toRemove);
-//        String teamId = mIdentityMap.get(toRemove);
-//        if (mTeamMap.get(teamId).remove(toRemove)) {
-//            if (mTeamMap.get(teamId).isEmpty()) { mTeamMap.remove(teamId); }
-//        }
-//        mIdentityMap.remove(toRemove);
-////        toRemove.get(MovementComponent.class).mCurrentTile.get(Tile.class).removeUnit();
-////        toRemove.get(MovementComponent.class).
-////        System.out.println("SHOULD KILLED UNIT");
+        mSpeedQueue.addAll(mEntityMap.values());
+        mFinished.clear();
+        mIterations++;
+        mLogger.info("Speed queue updated.");
+        return true;
+//        if (mSpeedQueue.isEmpty() && mEntityMap.isEmpty()) { return false; }
+//        mSpeedQueue.addAll(mEntityMap.values());
+//        mFinished.clear();
+//        mIterations++;
+//        mLogger.info("Speed queue updated.");
 //        return true;
-//    }
+    }
 
     public void dequeue() {
-        Entity dequeued = mQueued.poll();
+        Entity dequeued = mSpeedQueue.poll();
         mFinished.add(dequeued);
-        mQueuedEntitiesHashSlingingSlasher.setOnDifference(mQueued.toString());
+        mQueuedEntitiesHashSlingingSlasher.setOnDifference(mSpeedQueue.toString());
         mFinishedEntitiesHashSlingingSlasher.setOnDifference(mFinished.toString());
-        mCheckSum.setOnDifference(mQueued.toString());
+        mCheckSum.setOnDifference(mSpeedQueue.toString());
     }
 
-    public void enqueue(Entity entity, String teamName) {
-        // Get team if exists
-        List<Entity> team = mTeamMap.getOrDefault(teamName, new ArrayList<>());
+    public void add(String entityID) {
+        Entity entity = mEntityMap.get(entityID);
+        if (entity != null) { return; }
 
-        // Ensure the entity does not already exist in the team
-        if (team.contains(entity)) { return; }
+        entity = getEntityWithID(entityID);
+        if (entity == null) { return; }
 
-        // Add the entity
-        team.add(entity);
+        mEntityMap.put(entityID, entity);
 
-        // re-register
-        mIdentityMap.put(entity, teamName);
-        mTeamMap.put(teamName, team);
-
-        mQueuedEntitiesHashSlingingSlasher.setOnDifference(mIdentityMap.keySet().toString());
-        mCheckSum.setOnDifference(mIdentityMap.keySet().toString());
-        mLogger.info("Added unit {}:{} into queue", teamName, entity);
+        mQueuedEntitiesHashSlingingSlasher.setOnDifference(mEntityMap.keySet().toString());
+        mCheckSum.setOnDifference(mEntityMap.keySet().toString());
+        mLogger.info("Added unit {} into queue", entityID);
     }
 
-    public void enqueue(Entity[] entities, String teamId) {
-        for (Entity entity : entities) { enqueue(entity, teamId); }
-    }
+//    public void enqueue(Entity entity, String teamName) {
+//        // Get team if exists
+//        List<Entity> team = mTeamMap.getOrDefault(teamName, new ArrayList<>());
+//
+//        // Ensure the entity does not already exist in the team
+//        if (team.contains(entity)) { return; }
+//
+//        // Add the entity
+//        team.add(entity);
+//
+//        // re-register
+//        mIdentityMap.put(entity, teamName);
+//        mTeamMap.put(teamName, team);
+//
+//        mQueuedEntitiesHashSlingingSlasher.setOnDifference(mIdentityMap.keySet().toString());
+//        mCheckSum.setOnDifference(mIdentityMap.keySet().toString());
+//        mLogger.info("Added unit {}:{} into queue", teamName, entity);
+//    }
+
 
 
 //    public boolean isOnSameTeam(Entity entity1, Entity entity2) {
@@ -113,7 +112,7 @@ public class SpeedQueue {
 
     public List<String> getAllEntitiesInTurnQueueWithPendingTurn() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mQueued);
+        copy.addAll(mSpeedQueue);
         List<String> ordering = new ArrayList<>();
         while (!copy.isEmpty()) {
             Entity entity = copy.poll();
@@ -139,7 +138,7 @@ public class SpeedQueue {
 
     public List<String> getAllEntitiesInTurnQueue() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mIdentityMap.keySet());
+        copy.addAll(mEntityMap.values());
         List<String> ordering = new ArrayList<>();
         while (!copy.isEmpty()) {
             Entity entity = copy.poll();
@@ -154,7 +153,7 @@ public class SpeedQueue {
 
     public JSONArray getAllEntityIDsInTurnQueue() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mIdentityMap.keySet());
+        copy.addAll(mEntityMap.values());
         JSONArray ordering = new JSONArray();
         while (!copy.isEmpty()) {
             Entity entity = copy.poll();
@@ -167,7 +166,7 @@ public class SpeedQueue {
 
     public JSONArray getAllEntityIDsPendingTurnInTurnQueue() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mQueued);
+        copy.addAll(mSpeedQueue);
         JSONArray ordering = new JSONArray();
         while (!copy.isEmpty()) {
             Entity entity = copy.poll();
@@ -178,15 +177,11 @@ public class SpeedQueue {
         return ordering;
     }
 
+    private Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
     public int getCheckSum() { return mCheckSum.get(); }
     public int teams() { return mTeamMap.size(); }
     public int getAllEntitiesInTurnQueueWithPendingTurnChecksum() { return mQueuedEntitiesHashSlingingSlasher.get(); }
     public int getAllEntitiesInTurnQueueWithFinishedTurnChecksum() { return mFinishedEntitiesHashSlingingSlasher.get(); }
     public int getAllEntitiesInTurnQueueChecksum() { return mAllEntitiesHashSlingingSlasher.get(); }
-    public List<String> getAllUnitIDs() {
-        return mIdentityMap.keySet().stream().map(e -> {
-            IdentityComponent identityComponent = e.get(IdentityComponent.class);
-            return identityComponent.getID();
-        }).collect(Collectors.toList());
-    }
+    public Set<String> getAllUnitIDs() { return mEntityMap.keySet(); }
 }

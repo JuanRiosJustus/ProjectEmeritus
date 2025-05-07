@@ -17,10 +17,12 @@ public class FloatingText extends JSONObject {
     protected static final String FONT_SIZE = "size";
     protected static final String CENTER_TEXT = "center_text";
     protected final SplittableRandom mRandom;
-
     protected Color mBackground;
     protected Color mForeground;
     protected UtilityTimer mUtilityTimer;
+
+    protected double mTargetY;
+    protected double mCurrentYVelocity = 0;
 
     public FloatingText(String txt, float size, int x, int y, Color color, double lifetime) {
         put(TEXT, txt);
@@ -33,6 +35,10 @@ public class FloatingText extends JSONObject {
 
         mForeground = ColorPalette.WHITE_LEVEL_4;
         mBackground = ColorPalette.BLACK_LEVEL_4;
+
+
+        mTargetY = y;
+
 
         mUtilityTimer = new UtilityTimer();
         mUtilityTimer.start();
@@ -53,6 +59,8 @@ public class FloatingText extends JSONObject {
         return getDouble(CURRENT_AGE);
     }
 
+
+
     public double getLifeExpectancy() {
         return getDouble(LIFE_EXPECTANCY);
     }
@@ -64,6 +72,7 @@ public class FloatingText extends JSONObject {
     public double getElapsedSeconds() {
         return mUtilityTimer.getElapsedSeconds();
     }
+    public void setFontSize(int size) { put(FONT_SIZE, size); }
 
     /**
      * Updates the position and appearance of the floating text.

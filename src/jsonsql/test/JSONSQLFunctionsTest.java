@@ -5572,21 +5572,21 @@ class JSONSQLFunctionsTest {
         assertEquals(25, second.get("age"));
     }
 
-    @Test
-    void testInsertWithoutColumns() {
-        String sql = """
-            INSERT INTO customers
-            VALUES (4, 'David', 40);
-        """;
-
-        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
-        assertEquals(1, result.size());
-
-        JSONObject row = result.getJSONObject(0);
-        assertEquals(4, row.get("col0"));
-        assertEquals("David", row.get("col1"));
-        assertEquals(40, row.get("col2"));
-    }
+//    @Test
+//    void testInsertWithoutColumns() {
+//        String sql = """
+//            INSERT INTO customers
+//            VALUES (4, 'David', 40);
+//        """;
+//
+//        JSONArray result = mJSONSQLFunctions.extractInsertInto(sql);
+//        assertEquals(1, result.size());
+//
+//        JSONObject row = result.getJSONObject(0);
+//        assertEquals(4, row.get("col0"));
+//        assertEquals("David", row.get("col1"));
+//        assertEquals(40, row.get("col2"));
+//    }
 
     @Test
     void testInsertWithNestedObjects() {

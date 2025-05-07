@@ -10,6 +10,7 @@ import main.game.stores.EntityStore;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class SystemContext {
 
@@ -28,7 +29,7 @@ public class SystemContext {
     public static SystemContext create(GameModel gameModel) {
         SystemContext systemContext = new SystemContext(gameModel);
 
-        List<String> unitIDs = gameModel.getSpeedQueue().getAllUnitIDs();
+        Set<String> unitIDs = gameModel.getSpeedQueue().getAllUnitIDs();
 
         systemContext.mCurrentUnit = gameModel.getSpeedQueue().peek();
 

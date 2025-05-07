@@ -23,17 +23,11 @@ public class MovementSystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
-    private InputController mInput = null;
-
-
     public MovementSystem(GameModel gameModel) {
         super(gameModel);
 
         mEventBus.subscribe(MOVE_ENTITY_EVENT, this::handleMoveEntityEvent);
     }
-
-
-
 
     public static String MOVE_ENTITY_EVENT = "entity.move.event";
     private static final String MOVE_ENTITY_EVENT_ENTITY_TO_MOVE_ID = "entity.to.move.id";

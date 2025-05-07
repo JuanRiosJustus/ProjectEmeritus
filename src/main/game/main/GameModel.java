@@ -65,19 +65,18 @@ public class GameModel {
         mEventBus = new JSONEventBus();
         mInputHandler = new InputHandler(mEventBus);
         mSystem = new UpdateSystem(this);
+        mTileMap.designateSpawns(true);
+//        designateTypicalSpawns();
     }
+
+//    public JSONArray getSpawnRegions() { return mTileMap.getSpawnRegions(); }
+
+    public JSONObject getSpawnRegionsData() { return mTileMap.getSpawnRegionsData(); }
+
 
 
 
     public void setDeltaTime(double newDeltaTime) { getGameState().setDeltaTime(newDeltaTime); }
-
-    public boolean spawnUnit(Entity entity, String team, int row, int column) {
-        boolean wasPlaced = mTileMap.spawnUnit(entity, row, column);
-        if (wasPlaced) {
-            mSpeedQueue.enqueue(new Entity[]{ entity }, team);
-        }
-        return wasPlaced;
-    }
 
 
     public void update() {
@@ -220,9 +219,6 @@ public class GameModel {
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
     public Image getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
     public JSONEventBus getEventBus() { return mEventBus; }
-    public List<String> getAllUnitIDs() {
-        return mSpeedQueue.getAllUnitIDs();
-    }
 
 
 
@@ -1344,7 +1340,51 @@ public class GameModel {
         mGameState.setShouldForcefullyEndTurn(true);
     }
 
+    /**
+     * Attempts to place a unit on a tile using the provided {@link JSONObject} data.
+     *
+     * <p>The input JSON object must include the following fields:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): The unique identifier of the unit to be placed.</li>
+     *   <li><b>"tile_id"</b> (String): The unique identifier of the destination tile.</li>
+     *   <li><b>"team_id"</b> (String, optional): The team to which the unit belongs. Defaults to {@code "neutral"} if absent.</li>
+     * </ul>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "unit_id": "fire_dragon_342423-522452-52662-252432",
+     *   "tile_id": "4_2_43242-2555223-5234324-25324",
+     *   "team_id": "Enemy"
+     * }
+     * }</pre>
+     *
+     * @param input the JSON object containing placement data; must not be {@code null}
+     * @return {@code true} if the unit was successfully placed and queued; {@code false} if placement failed
+     */
+    public boolean setUnitSpawn(JSONObject input) {
+        String tileID = input.getString("tile_id");
+        String unitID = input.getString("unit_id");
+        String teamID = (String) input.getOrDefault("team_id", "neutral");
 
+        Entity tileEntity = getEntityWithID(tileID);
+        if (tileEntity == null) { return false; }
 
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null) { return false; }
 
+        TileComponent tile = tileEntity.get(TileComponent.class);
+        if (tile.isNotNavigable()) { return false; }
+
+        tile.setUnit(unitID);
+
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        movementComponent.stageTarget(tileID);
+        movementComponent.commit();
+
+        mSpeedQueue.add(unitID);
+        mGameState.addUnitToTeam(unitID, teamID);
+
+        return true;
+    }
 }

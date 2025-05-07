@@ -25,6 +25,9 @@ public class AbilityTable {
     private static final String COST_FROM_USER_KEY = "cost_from_user";
     private static final String UNDERSCORE_DELIMITER = "_";
     private static final String EQUAL_DELIMITER = "=";
+    private static final String ATTRIBUTE_KEY = "attribute_key";
+    private static final String ATTRIBUTE_SCALING = "attribute_scaling";
+    private static final String ATTRIBUTE_VALUE = "attribute_value";
 
     public static AbilityTable getInstance() {
         if (instance == null) {
@@ -296,10 +299,12 @@ public class AbilityTable {
     public String getTargetAttribute(JSONObject resourceObject) {
         return resourceObject.getString("target_attribute");
     }
-    public String getScalingType(JSONObject attrMod) { return attrMod.getString("scaling_type"); }
-    public boolean isBaseScaling(JSONObject attrMod) { return attrMod.getString("scaling_type").equals("base"); }
-    public String getScalingAttribute(JSONObject attrMod) { return attrMod.getString("scaling_attribute"); }
-    public float getScalingMagnitude(JSONObject attrMod) { return attrMod.getFloat("scaling_magnitude"); }
+
+//    public Map<String, Float> get
+    public String getScalingType(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_SCALING); }
+    public boolean isBaseScaling(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_SCALING).equals("base"); }
+    public String getScalingAttribute(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_KEY); }
+    public float getScalingMagnitude(JSONObject attrMod) { return attrMod.getFloat(ATTRIBUTE_VALUE); }
 
     public JSONArray getDamage(String ability) {
         JSONObject result = getOrCacheResult(ability);
