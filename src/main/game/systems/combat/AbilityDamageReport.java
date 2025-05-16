@@ -5,7 +5,6 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.stores.AbilityTable;
 import main.game.stores.EntityStore;
-import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
 import main.utils.MathUtils;
 import com.alibaba.fastjson2.JSONArray;
@@ -94,9 +93,9 @@ public class AbilityDamageReport  {
         for (int i = 0; i < rawDamages.size(); i++) {
             JSONObject damage = rawDamages.getJSONObject(i);
             String targetAttribute = AbilityTable.getInstance().getTargetAttribute(damage);
-            String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(damage);
-            String scalingType = AbilityTable.getInstance().getScalingType(damage);
-            float scalingValue = AbilityTable.getInstance().getScalingMagnitude(damage);
+            String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(damage);
+            String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(damage);
+            float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(damage);
             boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(damage);
 
             // Get previous calculations if available

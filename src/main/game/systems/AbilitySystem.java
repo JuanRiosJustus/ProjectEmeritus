@@ -172,9 +172,9 @@ public class AbilitySystem extends GameSystem {
         if (!attributeModifiers.isEmpty()) {
             for (int i = 0; i < attributeModifiers.size(); i++) {
                 JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
-                String scalingType = AbilityTable.getInstance().getScalingType(attributeModifier);
-                String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
-                float scalingMagnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
+                String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(attributeModifier);
+                String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(attributeModifier);
+                float scalingMagnitude = AbilityTable.getInstance().getScalingAttributeValue(attributeModifier);
                 boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(attributeModifier);
 
 

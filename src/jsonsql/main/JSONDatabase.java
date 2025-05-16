@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class JSONDatabase {
     private final Map<String, JSONTable> mTables = new HashMap<>();
-    private final JSONSQLFunctions mSqlFunctions = new JSONSQLFunctions();
+    private final JSONFunctions mSqlFunctions = new JSONFunctions();
     private final String SYSTEM_TABLE = "system.table";
     public JSONDatabase() {
 

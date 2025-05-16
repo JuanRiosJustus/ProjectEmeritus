@@ -301,10 +301,10 @@ public class AbilityTable {
     }
 
 //    public Map<String, Float> get
-    public String getScalingType(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_SCALING); }
+    public String getScalingAttributeScaling(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_SCALING); }
     public boolean isBaseScaling(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_SCALING).equals("base"); }
-    public String getScalingAttribute(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_KEY); }
-    public float getScalingMagnitude(JSONObject attrMod) { return attrMod.getFloat(ATTRIBUTE_VALUE); }
+    public String getScalingAttributeKey(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_KEY); }
+    public float getScalingAttributeValue(JSONObject attrMod) { return attrMod.getFloat(ATTRIBUTE_VALUE); }
 
     public JSONArray getDamage(String ability) {
         JSONObject result = getOrCacheResult(ability);

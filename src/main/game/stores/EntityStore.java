@@ -3,6 +3,7 @@ package main.game.stores;
 import main.game.components.*;
 import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
+import main.game.components.tile.StructureComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.utils.RandomUtils;
@@ -146,19 +147,20 @@ public class EntityStore {
     }
 
 
-    public String getOrCreateStructure(String nickname) {
-        return getOrCreateStructure(null, nickname);
+    public String getOrCreateStructure(String structure) {
+        return getOrCreateStructure(null, structure);
     }
-    public String getOrCreateStructure(String id, String nickname) {
+    public String getOrCreateStructure(String id, String structure) {
 
         if (mEntityMap.containsKey(id)) { return id; }
         if (id == null) { id = UUID.randomUUID().toString(); }
-        if (nickname == null) { nickname = id; }
+        if (structure == null) { structure = id; }
 
-        Entity newEntity = createBaseEntity(id, nickname, STRUCTURE_ENTITY);
+        Entity newEntity = createBaseEntity(id, structure, STRUCTURE_ENTITY);
 
         newEntity.add(new StatisticsComponent());
         newEntity.add(new AssetComponent());
+        newEntity.add(new StructureComponent(structure));
 
         return id;
     }

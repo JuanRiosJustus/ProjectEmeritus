@@ -146,9 +146,9 @@ public class CombatSystem extends GameSystem {
         for (int i = 0; i < costs.size(); i++) {
             JSONObject cost = costs.getJSONObject(i);
             String targetAttribute = AbilityTable.getInstance().getTargetAttribute(cost);
-            String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(cost);
-            String scalingType = AbilityTable.getInstance().getScalingType(cost);
-            float scalingValue = AbilityTable.getInstance().getScalingMagnitude(cost);
+            String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(cost);
+            String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(cost);
+            float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(cost);
 
             boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(cost);
 
@@ -314,9 +314,9 @@ public class CombatSystem extends GameSystem {
         for (int i = 0; i < rawDamages.size(); i++) {
             JSONObject damage = rawDamages.getJSONObject(i);
             String targetAttribute = AbilityTable.getInstance().getTargetAttribute(damage);
-            String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(damage);
-            String scalingType = AbilityTable.getInstance().getScalingType(damage);
-            float scalingValue = AbilityTable.getInstance().getScalingMagnitude(damage);
+            String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(damage);
+            String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(damage);
+            float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(damage);
             boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(damage);
 
             // Get previous calculations if available

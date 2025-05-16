@@ -1,5 +1,6 @@
 package main.game.map.base;
 
+import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
 import main.game.main.GameConfigs;
@@ -87,6 +88,10 @@ public class TileMap extends JSONArray {
                     String structureName = structures.getFirst();
                     String structureID = EntityStore.getInstance().getOrCreateStructure(structureName);
                     newTile.addStructure(structureID);
+
+//                    Entity structureEntity = getEntityWithID(structureID);
+//                    AssetComponent assetComponent = structureEntity.get(AssetComponent.class);
+//                    assetComponent.putStructureID(structureID);
                 }
 
                 mTileEntityMap[row][column] = newTileEntity;

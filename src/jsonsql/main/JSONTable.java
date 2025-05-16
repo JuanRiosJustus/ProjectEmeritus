@@ -10,77 +10,71 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class JSONTable {
-    protected List<String> mQueryTokens = null;
-    protected JSONSQLFunctions mJSONSQLFunctions = null;
+    protected JSONFunctions mFunctions = null;
     protected JSONArray mTable = null;
+    private final JSONArray mFlatTable = new JSONArray();
     protected String mName = null;
 
 
     public JSONTable() {
         mName = "";
         mTable = new JSONArray();
-        mQueryTokens = new ArrayList<>();
-        mJSONSQLFunctions = new JSONSQLFunctions();
+        mFunctions = new JSONFunctions();
     }
 
     public JSONTable(String name) {
         mName = name.toLowerCase(Locale.ROOT);
         mTable = new JSONArray();
-        mQueryTokens = new ArrayList<>();
-        mJSONSQLFunctions = new JSONSQLFunctions();
+        mFunctions = new JSONFunctions();
     }
 
     public JSONTable(String name, String table) {
         mName = name.toLowerCase(Locale.ROOT);
         mTable = JSON.parseArray(table);
-        mQueryTokens = new ArrayList<>();
-        mJSONSQLFunctions = new JSONSQLFunctions();
+        mFunctions = new JSONFunctions();
     }
 
 
     public JSONObject getSchema() {
-        return mJSONSQLFunctions.getMasterSchema(mTable);
+        return mFunctions.getMasterSchema(mTable);
     }
 
     public JSONArray update(String sql) {
-        JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Update");
+        JSONFunctions.BenchmarkLogger logger = new JSONFunctions.BenchmarkLogger("Update");
         final JSONArray result = new JSONArray();
 
-        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        String tableName = mFunctions.extractTableName(sql);
         if (!tableName.equalsIgnoreCase(mName)) {
             throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
         }
 
-        mQueryTokens.clear();
-        List<String> tokens = mJSONSQLFunctions.tokenize(sql);
-        mQueryTokens.addAll(tokens);
+        List<String> tokens = mFunctions.tokenize(sql);
+        int setIndex = mFunctions.getFirstIndexOf(tokens, "SET");
+        int whereIndex = mFunctions.getFirstIndexOf(tokens, "WHERE");
 
-
-        // Extract everything between SET and WHERE
-        Pattern setPattern = Pattern.compile("(?i)SET\\s+(.*?)\\s+WHERE", Pattern.DOTALL);
-        Matcher setMatcher = setPattern.matcher(sql);
-        if (!setMatcher.find()) {
-            throw new IllegalArgumentException("Missing or malformed SET clause.");
+        if (setIndex == -1 || whereIndex == -1 || whereIndex <= setIndex + 1) {
+            throw new IllegalArgumentException("Missing or malformed SET/WHERE clause.");
         }
 
-        String setClause = setMatcher.group(1);
+        // 🔹 Join tokens between SET and WHERE into a single string
+        StringBuilder setBuilder = new StringBuilder();
+        for (int i = setIndex + 1; i < whereIndex; i++) {
+            if (i > setIndex + 1) { setBuilder.append(" "); }
+            setBuilder.append(tokens.get(i));
+        }
 
-        List<String> assignments = mJSONSQLFunctions.smartSplitAssignments(setClause);
-        Map<String, Object> updates = mJSONSQLFunctions.extractUpdates(assignments);
-
-        // Extract WHERE clause and parse conditions
-        JSONSQLCondition where = mJSONSQLFunctions.extractWhereConditions(mQueryTokens);
+        List<String> assignments = mFunctions.splitAssignments(setBuilder.toString());
+        Map<String, Object> updates = mFunctions.extractUpdates(assignments);
+        JSONSQLCondition where = mFunctions.extractWhereConditions(tokens);
 
         for (int i = 0; i < mTable.size(); i++) {
             JSONObject row = mTable.getJSONObject(i);
-            if (!mJSONSQLFunctions.matchesConditions(row, where)) continue;
+            if (!mFunctions.matchesConditions(row, where)) continue;
 
             for (Map.Entry<String, Object> entry : updates.entrySet()) {
-                mJSONSQLFunctions.setAndCreateJSONValue(row, entry.getKey(), entry.getValue());
+                mFunctions.setAndCreateJSONValue(row, entry.getKey(), entry.getValue());
             }
 
             result.add(row);
@@ -91,7 +85,7 @@ public class JSONTable {
     }
 
     public JSONArray insertRaw(String newObject) {
-        JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Insert");
+        JSONFunctions.BenchmarkLogger logger = new JSONFunctions.BenchmarkLogger("Insert");
         JSONArray result = new JSONArray();
         try {
             if (newObject == null || newObject.isEmpty()) { return result; }
@@ -115,57 +109,37 @@ public class JSONTable {
     }
 
     public JSONArray insert(String sql) {
-        JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Insert");
+        JSONFunctions.BenchmarkLogger logger = new JSONFunctions.BenchmarkLogger("Insert");
         final JSONArray result = new JSONArray();
 
-        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        List<String> tokens = mFunctions.tokenize(sql);
+        if (tokens.size() < 4 || !tokens.get(0).equalsIgnoreCase("INSERT") || !tokens.get(1).equalsIgnoreCase("INTO")) {
+            throw new IllegalArgumentException("Malformed INSERT query. Expected: INSERT INTO <table> VALUES (...)");
+        }
+
+        String tableName = tokens.get(2);
         if (!tableName.equalsIgnoreCase(mName)) {
-            throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
+            throw new IllegalArgumentException("Incorrect table name: " + tableName + ", expected: " + mName);
         }
 
+        int valuesIndex = mFunctions.getFirstIndexOf(tokens, "VALUES");
 
-        Pattern pattern = Pattern.compile(
-                "(?i)^INSERT\\s+INTO\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s+VALUES\\s*(.*)$",
-                Pattern.DOTALL
-        );
-        Matcher matcher = pattern.matcher(sql.trim());
-
-        if (!matcher.matches()) {
-            throw new IllegalArgumentException("Invalid INSERT SQL format.");
+        if (valuesIndex == -1 || valuesIndex + 1 >= tokens.size()) {
+            throw new IllegalArgumentException("INSERT missing VALUES section.");
         }
 
-        String valuesSection = matcher.group(2).trim();
-
-        if (!tableName.equalsIgnoreCase(mName)) {
-            throw new IllegalArgumentException("INSERT table name does not match this table instance.");
+        // ✅ Recover everything after VALUES as a string
+        StringBuilder valuesPart = new StringBuilder();
+        for (int i = valuesIndex + 1; i < tokens.size(); i++) {
+            valuesPart.append(tokens.get(i)).append(" ");
         }
 
-        // Use stack-based parsing to safely extract JSON blocks inside () even if nested
-        List<String> jsonValues = new ArrayList<>();
-        int depth = 0;
-        StringBuilder current = new StringBuilder();
+        String valuesSection = valuesPart.toString().trim();
 
-        for (int i = 0; i < valuesSection.length(); i++) {
-            char c = valuesSection.charAt(i);
+        // ✅ Parse blocks inside ( ... )
+        List<String> jsonValues = mFunctions.extractJsonValueBlocks(valuesSection);
 
-            if (c == '(') {
-                if (depth > 0) current.append(c);
-                depth++;
-            } else if (c == ')') {
-                depth--;
-                if (depth == 0) {
-                    jsonValues.add(current.toString().trim());
-                    current.setLength(0);
-                } else {
-                    current.append(c);
-                }
-            } else {
-                if (depth > 0) {
-                    current.append(c);
-                }
-            }
-        }
-
+        // ✅ Parse and add each object
         for (String jsonText : jsonValues) {
             try {
                 JSONObject obj = JSON.parseObject(jsonText);
@@ -180,94 +154,33 @@ public class JSONTable {
         return result;
     }
 
-
-//    public JSONArray insertV2(String sql) {
-//        JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Insert");
-//        final JSONArray result = new JSONArray();
-//
-//        String tableName = mJSONSQLFunctions.extractTableName(sql);
-//        if (!tableName.equalsIgnoreCase(mName)) {
-//            throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
-//        }
-//
-//        // ✅ Extract columns and values sections
-//        Pattern fullPattern = Pattern.compile(
-//                "(?i)^INSERT\\s+INTO\\s+([a-zA-Z_][a-zA-Z0-9_]*)(\\s*\\((.*?)\\))?\\s+VALUES\\s*(\\(.*\\))$",
-//                Pattern.DOTALL
-//        );
-//        Matcher matcher = fullPattern.matcher(sql.trim());
-//
-//        if (!matcher.matches()) {
-//            throw new IllegalArgumentException("Invalid INSERT SQL format.");
-//        }
-//
-//        String rawColumns = matcher.group(3); // Might be null if no columns specified
-//        String rawValues = matcher.group(4);
-//
-//        List<String> columns = new ArrayList<>();
-//        if (rawColumns != null) {
-//            // ✅ Extract column names, split by commas
-//            for (String col : rawColumns.split(",")) {
-//                columns.add(col.trim());
-//            }
-//        }
-//
-//        // ✅ Extract values
-//        List<String> values = mJSONSQLFunctions.smartSplitAssignments(rawValues.substring(1, rawValues.length() - 1)); // Strip outer parentheses
-//
-//        // If columns are missing, create column names as "0", "1", "2", etc.
-//        if (columns.isEmpty()) {
-//            for (int i = 0; i < values.size(); i++) {
-//                columns.add(String.valueOf(i));
-//            }
-//        }
-//
-//        if (columns.size() != values.size()) {
-//            throw new IllegalArgumentException("Number of columns does not match number of values");
-//        }
-//
-//        // ✅ Build JSON object
-//        JSONObject newRow = new JSONObject();
-//        for (int i = 0; i < columns.size(); i++) {
-//            String path = columns.get(i);
-//            Object value = mJSONSQLFunctions.parseLiteral(values.get(i).trim());
-//            mJSONSQLFunctions.setAndCreateJSONValue(newRow, path, value);
-//        }
-//
-//        mTable.add(newRow);
-//        result.add(newRow);
-//
-//        logger.stop();
-//        return result;
-//    }
-
     public JSONArray delete(String sql) {
-        JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("delete");
+        JSONFunctions.BenchmarkLogger logger = new JSONFunctions.BenchmarkLogger("delete");
         final JSONArray result = new JSONArray();
 
-        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        String tableName = mFunctions.extractTableName(sql);
         if (!tableName.equalsIgnoreCase(mName)) {
             throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
         }
 
-        List<String> tokens = mJSONSQLFunctions.tokenize(sql);
-        mQueryTokens.clear();
-        mQueryTokens.addAll(tokens);
+        List<String> tokens = mFunctions.tokenize(sql);
 
         // Validate query type and table name
         if (!tokens.get(0).equalsIgnoreCase("DELETE") || !tokens.get(1).equalsIgnoreCase("FROM")) {
             throw new IllegalArgumentException("Invalid DELETE query syntax");
         }
 
-        JSONSQLCondition where = mJSONSQLFunctions.extractWhereConditions(tokens);
+        JSONSQLCondition where = mFunctions.extractWhereConditions(tokens);
 
         // Iterate and collect indexes to delete
         List<Integer> deleteIndexes = new ArrayList<>();
         for (int i = 0; i < mTable.size(); i++) {
             JSONObject row = mTable.getJSONObject(i);
-            if (mJSONSQLFunctions.matchesConditions(row, where)) {
-                deleteIndexes.add(i);
-            }
+
+            boolean matchesCondition = mFunctions.matchesConditions(row, where);
+            if (!matchesCondition) { continue; }
+
+            deleteIndexes.add(i);
         }
 
         // Remove from last index to avoid shifting
@@ -286,36 +199,36 @@ public class JSONTable {
 
 
     public JSONArray select(String sql) {
-        JSONSQLFunctions.BenchmarkLogger logger = new JSONSQLFunctions.BenchmarkLogger("Select");
-        final JSONArray result = new JSONArray();
+        JSONFunctions.BenchmarkLogger logger = new JSONFunctions.BenchmarkLogger("Select");
 
-        String tableName = mJSONSQLFunctions.extractTableName(sql);
+        String tableName = mFunctions.extractTableName(sql);
         if (!tableName.equalsIgnoreCase(mName)) {
             throw new IllegalArgumentException("Incorrect Table Name detected: " + tableName + ", expected: " + mName);
         }
 
-        mQueryTokens.clear();
-        List<String> tokens = mJSONSQLFunctions.tokenize(sql);
-        mQueryTokens.addAll(tokens);
+        List<String> tokens = mFunctions.tokenize(sql);
 
-        List<String> selectedColumns = mJSONSQLFunctions.extractSelectedColumns(mQueryTokens);
-        JSONSQLCondition whereConditions = mJSONSQLFunctions.extractWhereConditions(mQueryTokens);
-        List<String[]> orderByColumns = mJSONSQLFunctions.extractOrderBy(mQueryTokens);
-        int limit = mJSONSQLFunctions.extractLimit(mQueryTokens);
+        List<String> selectedColumns = mFunctions.extractSelectedColumns(tokens);
+        JSONSQLCondition whereConditions = mFunctions.extractWhereConditions(tokens);
+        List<String[]> orderByColumns = mFunctions.extractOrderBy(tokens);
+        int limit = mFunctions.extractLimit(tokens);
 
-        JSONArray filteredResults = new JSONArray();
+        List<JSONObject> matchedRows = new ArrayList<>();
 
+        // Filter rows using flattened representation
+        for (int index = 0; index < mTable.size(); index++) {
+            JSONObject structuredRow = mTable.getJSONObject(index);
 
-        JSONArray table = mTable;
-        for (int index = 0; index < table.size(); index++) {
-            JSONObject row = table.getJSONObject(index);
-            boolean matchedConditions = mJSONSQLFunctions.matchesConditions(row, whereConditions);
-            if (!matchedConditions) { continue; }
-            filteredResults.add(row);
+            boolean matchesCondition = mFunctions.matchesConditions(structuredRow, whereConditions);
+            if (!matchesCondition) { continue; }
+
+            matchedRows.add(structuredRow);
         }
 
-        JSONArray sortedResults = mJSONSQLFunctions.sortResults(filteredResults, orderByColumns);
+        // Sort using flattened version
+        JSONArray sortedResults = mFunctions.sortResults(new JSONArray(matchedRows), orderByColumns);
 
+        // Apply limit
         if (limit > 0 && sortedResults.size() > limit) {
             JSONArray limitedResults = new JSONArray();
             for (int i = 0; i < limit; i++) {
@@ -324,7 +237,7 @@ public class JSONTable {
             sortedResults = limitedResults;
         }
 
-        // ✅ Fix: Return JSON objects correctly
+        // Final projection
         JSONArray finalResults = new JSONArray();
         for (int index = 0; index < sortedResults.size(); index++) {
             JSONObject row = sortedResults.getJSONObject(index);
@@ -334,7 +247,7 @@ public class JSONTable {
                 filteredRow = row;
             } else {
                 for (String column : selectedColumns) {
-                    Object columnValue = mJSONSQLFunctions.getJsonPathValue(row, column);
+                    Object columnValue = mFunctions.getJsonPathValue(row, column);
                     filteredRow.put(column, columnValue);
                 }
             }
@@ -344,7 +257,6 @@ public class JSONTable {
         logger.stop();
         return finalResults;
     }
-
 
     public boolean persist() { return persist(false); }
     public boolean persist(boolean beautify) {
@@ -363,18 +275,7 @@ public class JSONTable {
         return result;
     }
 
-
-    public JSONObject flattenedSchema() {
-        normalize();
-        JSONObject row = mTable.getJSONObject(0);
-        JSONObject flattenedRow = mJSONSQLFunctions.flattenRow(row);
-        return flattenedRow;
-    }
-
-
-    public void normalize() { mJSONSQLFunctions.normalizeRows(mTable); }
+    public void normalize() { mFunctions.normalizeRows(mTable); }
     public JSONObject get(int i) { return mTable.getJSONObject(i); }
     public int size() { return mTable.size(); }
-
-
 }

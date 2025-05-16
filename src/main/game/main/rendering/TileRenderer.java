@@ -71,7 +71,7 @@ public class TileRenderer extends Renderer {
 
         // 4. Draw outline
         double outlineWidth = Math.max(1.0, fontSize * 0.08);
-        gc.setFill(ColorPalette.BLACK_LEVEL_1);
+        gc.setFill(ColorPalette.BLACK_LEVEL_2);
         for (double dx = -outlineWidth; dx <= outlineWidth; dx += outlineWidth) {
             for (double dy = -outlineWidth; dy <= outlineWidth; dy += outlineWidth) {
                 if (dx != 0 || dy != 0) {

@@ -460,6 +460,21 @@ public class GameModel {
 
 
 
+    public JSONArray getAllEntities() { return mGameState.getAllEntities(); }
+    public String getEntityTeam(String entityID) { return mGameState.getTeam(entityID); }
+    public JSONArray getAllEnemyEntities(String activeEntityID) {
+        JSONArray allEntities = mGameState.getAllEntities();
+        String currentEntityTeam = mGameState.getTeam(activeEntityID);
+        JSONArray result = new JSONArray();
+        for (int i = 0; i < allEntities.size(); i++) {
+            String entityID = allEntities.getString(i);
+            String team = mGameState.getTeam(entityID);
+            boolean isSameTeam = currentEntityTeam.equalsIgnoreCase(team);
+            if (isSameTeam) { continue; }
+            result.add(entityID);
+        }
+        return result;
+    }
 
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED = "HasMoved";
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED = "HasActed";
@@ -1383,7 +1398,7 @@ public class GameModel {
         movementComponent.commit();
 
         mSpeedQueue.add(unitID);
-        mGameState.addUnitToTeam(unitID, teamID);
+        mGameState.addEntityToTeam(unitID, teamID);
 
         return true;
     }

@@ -213,22 +213,38 @@ public class GameState extends JSONObject {
 
 
 
-    private static final String TEAMS = "GAME_TEAMS";
-    public void addUnitToTeam(String unitID, String teamID) {
-        JSONObject teams = getJSONObject(TEAMS);
-        if (teams == null) {
-            teams = new JSONObject();
-            put(TEAMS, teams);
-        }
+    private static final String TEAM_TO_ENTITY_MAP = "TEAMS_TO_UNITS";
+    private static final String ENTITY_TO_TEAM_MAP = "ENTITIES_TO_TEAMS";
+    public void addEntityToTeam(String entityID, String teamID) {
+        JSONObject teams = getOrPutDefault(this, TEAM_TO_ENTITY_MAP);
+        JSONObject team = getOrPutDefault(teams, teamID);
+        team.put(entityID, entityID);
 
-        JSONObject team = teams.getJSONObject(teamID);
-        if (team == null) {
-            team = new JSONObject();
-            teams.put(teamID, team);
-        }
-
-        team.put(unitID, unitID);
+        JSONObject entityMap = getOrPutDefault(this, ENTITY_TO_TEAM_MAP);
+        entityMap.put(entityID, teamID);
     }
+
+    public String getTeam(String entityID) {
+        JSONObject entityMap = getOrPutDefault(this, ENTITY_TO_TEAM_MAP);
+        String team = entityMap.getString(entityID);
+        return team;
+    }
+    public JSONArray getAllEntities() {
+        JSONObject entityMap = getOrPutDefault(this, ENTITY_TO_TEAM_MAP);
+        JSONArray entityList = new JSONArray();
+        entityList.addAll(entityMap.keySet());
+        return entityList;
+    }
+
+    private JSONObject getOrPutDefault(JSONObject root, String key) {
+        JSONObject object = root.getJSONObject(key);
+        if (object == null) {
+            object = new JSONObject();
+            root.put(key, object);
+        }
+        return object;
+    }
+
 //    public List<JSONObject> getHoveredTiles() {
 //        JSONArray hoveredTiles = optJSONArray(HOVERED_TILES_STORE, EMPTY_JSON_ARRAY);
 //        List<JSONObject> result = new ArrayList<>();

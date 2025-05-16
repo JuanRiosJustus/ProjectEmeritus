@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class JSONSQLFunctions {
+public class JSONFunctions {
     private static final String SHOW_TABLE_KEYWORD = "SHOW_TABLES";
     private static final String VALUES_KEYWORD = "VALUES";
     private static final String INSERT_KEYWORD = "INSERT";
@@ -27,8 +27,12 @@ public class JSONSQLFunctions {
     private static final String IS_KEYWORD = "IS";
     private static final String NOT_KEYWORD = "NOT";
     private static final String IS_NOT_KEYWORD = "IS NOT";
-    private static final String OPEN_PARENTHESIS = "(", CLOSE_PARENTHESIS = ")";
+    private static final String INTO_KEYWORD = "INTO";
+    private static final char OPEN_PARENTHESIS = '(', CLOSE_PARENTHESIS = ')';
+    private static final char OPEN_SQUARE_BRACKETS = '[', CLOSE_SQUARE_BRACKETS = ']';
+    private static final char OPEN_CURLY_BRACKETS = '{', CLOSE_CURLY_BRACKETS = '}';
     private static final String COMA = ",";
+    private static final char SINGLE_QUOTE = '\'', DOUBLE_QUOTE = '\"';
 
     private static final Pattern TOKEN_PATTERN = Pattern.compile(
             "'([^']*)'" + // Quoted strings
@@ -38,13 +42,6 @@ public class JSONSQLFunctions {
                     "|[^\\s=<>!(),']+", // Identifiers
             Pattern.CASE_INSENSITIVE
     );
-//    private static final Pattern TOKEN_PATTERN = Pattern.compile(
-//            "'([^']*)'" +                                // Quoted strings: 'New York'
-//                    "|\\b(SELECT|FROM|WHERE|AND|OR|ORDER|BY|LIMIT|ASC|DESC|IS|NOT)\\b" + // SQL keywords
-//                    "|[=<>!]+" +                                  // Operators
-//                    "|[(),]" +                                    // Symbols: parenthesis and comma
-//                    "|[^\\s=<>!(),']+"                            // Identifiers (everything else)
-//            , Pattern.CASE_INSENSITIVE);
 
     private static final Set<String> SQL_KEYWORDS = Set.of(
             "SELECT", "UPDATE", "FROM", "WHERE", "AND", "OR", "ORDER", "BY", "LIMIT", "ASC", "DESC"
@@ -65,11 +62,11 @@ public class JSONSQLFunctions {
         // Get Column values
         for (String token : tokens) {
             // Phase 1: Before VALUES (collecting, "column", 'names')
-            if (token.equals(OPEN_PARENTHESIS)) {
+            if (token.length() == 1 && token.charAt(0) == OPEN_PARENTHESIS) {
                 parsingColumns = true;
                 continue;
             }
-            if (token.equals(CLOSE_PARENTHESIS)) {
+            if (token.length() == 1 && token.charAt(0) == CLOSE_PARENTHESIS) {
                 parsingColumns = false;
                 break;
             }
@@ -80,35 +77,7 @@ public class JSONSQLFunctions {
             columns.add(token); // Only add real columns (skip commas)
         }
 
-
-        List<List<String>> allValueGroups = new ArrayList<>();
-        List<String> currentGroup = null;
-        boolean parsingValues = false;
-
-        for (String token : tokens) {
-            if (token.equalsIgnoreCase(VALUES_KEYWORD)) {
-                parsingValues = true; // Switch to parsing values phase
-                continue;
-            }
-
-            if (!parsingValues) { continue; }
-
-            if (token.equals(OPEN_PARENTHESIS)) {
-                currentGroup = new ArrayList<>(); // New row
-                continue;
-            } else if (token.equals(CLOSE_PARENTHESIS)) {
-                if (currentGroup != null) {
-                    allValueGroups.add(currentGroup); // Finished a row
-                    currentGroup = null;
-                }
-                continue;
-            }
-
-            if (currentGroup != null && !token.equals(COMA)) {
-                currentGroup.add(token); // Add value to the current row
-            }
-        }
-
+        List<List<String>> allValueGroups = getAllInsertIntoValueGroupings(tokens);
 
         // Now map columns to values
         for (List<String> values : allValueGroups) {
@@ -129,48 +98,36 @@ public class JSONSQLFunctions {
         return results;
     }
 
-//    public String extractTableName(String sql) {
-//        if (sql == null || sql.isBlank()) {
-//            return null;
-//        }
-//
-//        List<String> tokens = getTokens(sql);
-//        if (tokens.isEmpty()) {
-//            return null;
-//        }
-//
-//        String queryType = tokens.get(0).toUpperCase();
-//
-//        switch (queryType) {
-//            case "SELECT":
-//            case "DELETE": {
-//                // Look for "FROM <table>"
-//                for (int i = 0; i < tokens.size() - 1; i++) {
-//                    if (tokens.get(i).equalsIgnoreCase("FROM")) {
-//                        return tokens.get(i + 1);
-//                    }
-//                }
-//                break;
-//            }
-//            case "UPDATE": {
-//                // "UPDATE <table>"
-//                if (tokens.size() >= 2) {
-//                    return tokens.get(1);
-//                }
-//                break;
-//            }
-//            case "INSERT": {
-//                // "INSERT INTO <table>"
-//                for (int i = 0; i < tokens.size() - 1; i++) {
-//                    if (tokens.get(i).equalsIgnoreCase("INTO")) {
-//                        return tokens.get(i + 1);
-//                    }
-//                }
-//                break;
-//            }
-//        }
-//        return null;
-//    }
+    public List<List<String>> getAllInsertIntoValueGroupings(List<String> tokens) {
+        List<List<String>> allValueGroups = new ArrayList<>();
+        List<String> currentGroup = null;
+        boolean parsingValues = false;
+
+        for (String token : tokens) {
+            if (token.equalsIgnoreCase(VALUES_KEYWORD)) {
+                parsingValues = true; // Switch to parsing values phase
+                continue;
+            }
+
+            if (!parsingValues) { continue; }
+
+            if (token.length() == 1 && token.charAt(0) == OPEN_PARENTHESIS) {
+                currentGroup = new ArrayList<>(); // New row
+                continue;
+            } else if (token.length() == 1 && token.charAt(0) == CLOSE_PARENTHESIS) {
+                if (currentGroup != null) {
+                    allValueGroups.add(currentGroup); // Finished a row
+                    currentGroup = null;
+                }
+                continue;
+            }
+
+            if (currentGroup != null && !token.equals(COMA)) {
+                currentGroup.add(token); // Add value to the current row
+            }
+        }
+        return allValueGroups;
+    }
 
     public static class BenchmarkLogger {
         private final long mStart;
@@ -187,10 +144,6 @@ public class JSONSQLFunctions {
                     mLabel, elapsed, elapsed / 1_000.0, elapsed / 1_000_000.0);
         }
     }
-
-    private final Pattern mTablePattern = Pattern.compile(
-            "(?i)(FROM|INTO|UPDATE)\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
-    );
 
     public String extractTableName(String sql) {
         if (sql == null || sql.isBlank()) {
@@ -209,7 +162,7 @@ public class JSONSQLFunctions {
             case DELETE_KEYWORD: {
                 // Look for "FROM <table>"
                 for (int i = 0; i < tokens.size() - 1; i++) {
-                    if (tokens.get(i).equalsIgnoreCase("FROM")) {
+                    if (tokens.get(i).equalsIgnoreCase(FROM_KEYWORD)) {
                         return tokens.get(i + 1);
                     }
                 }
@@ -225,7 +178,7 @@ public class JSONSQLFunctions {
             case INSERT_KEYWORD: {
                 // "INSERT INTO <table>"
                 for (int i = 0; i < tokens.size() - 1; i++) {
-                    if (tokens.get(i).equalsIgnoreCase("INTO")) {
+                    if (tokens.get(i).equalsIgnoreCase(INTO_KEYWORD)) {
                         return tokens.get(i + 1);
                     }
                 }
@@ -251,6 +204,57 @@ public class JSONSQLFunctions {
             }
         }
         return -1;
+    }
+
+    public List<String> extractJsonValueBlocks(String input) {
+        List<String> jsonValues = new ArrayList<>();
+        int depth = 0;
+        boolean inString = false;
+        char stringDelimiter = 0;
+        StringBuilder current = new StringBuilder();
+
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+
+            if ((c == '\'' || c == '"')) {
+                if (!inString) {
+                    inString = true;
+                    stringDelimiter = c;
+                } else if (c == stringDelimiter) {
+                    inString = false;
+                }
+            }
+
+            if (inString) {
+                current.append(c);
+                continue;
+            }
+
+            if (c == OPEN_PARENTHESIS) {
+                if (depth > 0) {
+                    current.append(c);
+                }
+                depth++;
+            } else if (c == CLOSE_PARENTHESIS) {
+                depth--;
+                if (depth == 0) {
+                    jsonValues.add(current.toString().trim());
+                    current.setLength(0);
+                } else {
+                    current.append(c);
+                }
+            } else {
+                if (depth > 0) {
+                    current.append(c);
+                }
+            }
+        }
+
+        if (depth != 0) {
+            throw new IllegalArgumentException("Mismatched parentheses in VALUES block");
+        }
+
+        return jsonValues;
     }
 
     public JSONArray sortResults(JSONArray results, List<String[]> orderByColumns) {
@@ -295,22 +299,9 @@ public class JSONSQLFunctions {
         return new JSONArray(sortedList);
     }
 
-    public List<String> tokenizeJsonPath(String path) {
-        List<String> tokens = new ArrayList<>();
-        Matcher matcher = Pattern.compile("[^.\\[\\]]+|\\[\\d+]").matcher(path);
-        while (matcher.find()) {
-            String token = matcher.group();
-            if (token.matches("\\[\\d+]")) {
-                tokens.add(token.substring(1, token.length() - 1)); // Only number
-            } else {
-                tokens.add(token);
-            }
-        }
-        return tokens;
-    }
 
     public Object getJsonPathValue(JSONObject jsonObject, String path) {
-        List<String> tokens = tokenizeJsonPath(path);
+        List<String> tokens = tokenizePath(path);
         Object current = jsonObject;
 
         for (String token : tokens) {
@@ -321,7 +312,7 @@ public class JSONSQLFunctions {
                 if (index >= arr.size()) { return null; }
                 current = arr.get(index);
             } else {
-                return null;
+                current = null;
             }
         }
         return current;
@@ -734,7 +725,7 @@ public class JSONSQLFunctions {
     }
 
 
-    public List<String> smartSplitAssignments(String input) {
+    public List<String> splitAssignments(String input) {
         List<String> parts = new ArrayList<>();
         int braceDepth = 0;
         int bracketDepth = 0;
@@ -883,6 +874,78 @@ public class JSONSQLFunctions {
         return result;
     }
 
+
+    public void setAndCreateJSONValue(JSONObject root, String path, Object value) {
+        List<String> tokens = tokenizePath(path);
+        Object current = root;
+
+        for (int i = 0; i < tokens.size(); i++) {
+            String token = tokens.get(i);
+            boolean isLast = (i == tokens.size() - 1);
+
+            if (current instanceof JSONObject obj) {
+                if (isLast) {
+                    obj.put(token, value);
+                } else {
+                    Object next = obj.get(token);
+                    if (next == null) {
+                        String nextToken = tokens.get(i + 1);
+                        next = nextToken.matches("\\d+") ? new JSONArray() : new JSONObject();
+                        obj.put(token, next);
+                    }
+                    current = obj.get(token);
+                }
+            } else if (current instanceof JSONArray arr) {
+                int index = Integer.parseInt(token);
+                while (arr.size() <= index) { arr.add(null); }
+
+                if (isLast) {
+                    arr.set(index, value);
+                } else {
+                    Object next = arr.get(index);
+                    if (next == null) {
+                        String nextToken = tokens.get(i + 1);
+                        next = nextToken.matches("\\d+") ? new JSONArray() : new JSONObject();
+                        arr.set(index, next);
+                    }
+                    current = arr.get(index); // ✅ Must re-fetch after setting
+                }
+            } else {
+                throw new IllegalStateException("Invalid structure at: " + token);
+            }
+        }
+    }
+
+    public boolean matchesCondition(JSONObject row, JSONSQLCondition condition) {
+        String column = condition.getColumn();
+        String operator = condition.getOperator();
+        String value = condition.getValue();
+
+        if (column.equals("*") && operator.equals("=") && value.equals("*")) {
+            return true; // wildcard match
+        }
+
+        // Constant vs constant evaluation
+        boolean isConstant = column.matches("^-?\\d+(\\.\\d+)?$")
+                || column.matches("^'.*'$") || column.matches("^\".*\"$");
+
+        if (isConstant) {
+            Object leftVal = parseLiteral(column);
+            Object rightVal = parseLiteral(value);
+            return compareValues(leftVal, rightVal, operator);
+        }
+
+        Object leftValue = getJsonPathValue(row, column);
+        Object rightValue = parseLiteral(value);
+
+        if (rightValue == null) {
+            return operator.equalsIgnoreCase("IS") ? leftValue == null
+                    : operator.equalsIgnoreCase("IS NOT") && leftValue != null;
+        }
+
+        return compareValues(leftValue, rightValue, operator);
+    }
+
     public boolean matchesConditions(JSONObject row, JSONSQLCondition rootCondition) {
         Map<JSONSQLCondition, JSONSQLCondition> mChildToParentMap = new LinkedHashMap<>();
         Stack<JSONSQLCondition> conditionStack = new Stack<>();
@@ -932,7 +995,7 @@ public class JSONSQLFunctions {
         }
 
         // ✅ Ensure stack has exactly one final value
-        boolean finalResult = !resultStack.isEmpty() && resultStack.get(0);
+        boolean finalResult = !resultStack.isEmpty() && resultStack.getFirst();
 //        System.out.println("FINAL MATCHES CONDITIONS RESULT: " + finalResult);
         return finalResult;
     }
@@ -989,102 +1052,25 @@ public class JSONSQLFunctions {
         }
     }
 
-//    public boolean compareValues(Object left, Object right, String operator) {
-//        if (left == null || right == null) {
-//            return false;
-//        }
-//
-//        if (left instanceof Number && right instanceof Number) {
-//            double a = ((Number) left).doubleValue();
-//            double b = ((Number) right).doubleValue();
-//
-//            return switch (operator) {
-//                case "=" -> a == b;
-//                case "!=" -> a != b;
-//                case ">" -> a > b;
-//                case "<" -> a < b;
-//                case ">=" -> a >= b;
-//                case "<=" -> a <= b;
-//                default -> false;
-//            };
-//        }
-//
-//        // Case-sensitive string and general object comparison
-//        String leftStr = left.toString();
-//        String rightStr = right.toString();
-//
-//        return switch (operator) {
-//            case "=" -> leftStr.equals(rightStr);
-//            case "!=" -> !leftStr.equals(rightStr);
-//            case ">" -> leftStr.compareTo(rightStr) > 0;
-//            case "<" -> leftStr.compareTo(rightStr) < 0;
-//            case ">=" -> leftStr.compareTo(rightStr) >= 0;
-//            case "<=" -> leftStr.compareTo(rightStr) <= 0;
-//            case "LIKE" -> leftStr.contains(rightStr);
-//            default -> false;
-//        };
-//    }
-
-//    public Object parseLiteral(String raw) {
-//        if (raw == null || raw.isEmpty()) return null;
-//
-//        raw = raw.trim();
-//
-//        // Handle quoted strings: unwrap single quotes
-//        if (raw.matches("^'(.*)'$")) {
-//            raw = raw.substring(1, raw.length() - 1).trim();
-//
-//            // If it looks like JSON, try parsing it
-//            if (raw.startsWith("{") && raw.endsWith("}")) {
-//                try { return JSON.parseObject(raw); } catch (Exception ignored) {}
-//            }
-//            if (raw.startsWith("[") && raw.endsWith("]")) {
-//                try { return JSON.parseArray(raw); } catch (Exception ignored) {}
-//            }
-//
-//            // Otherwise, treat as string
-//            return raw;
-//        }
-//
-//        // Handle JSON values outside of quotes
-//        try {
-//            if (raw.startsWith("{") && raw.endsWith("}")) {
-//                return JSON.parseObject(raw);
-//            }
-//            if (raw.startsWith("[") && raw.endsWith("]")) {
-//                return JSON.parseArray(raw);
-//            }
-//            if (raw.equalsIgnoreCase("true") || raw.equalsIgnoreCase("false")) {
-//                return Boolean.parseBoolean(raw);
-//            }
-//            if (raw.equalsIgnoreCase("null")) {
-//                return null;
-//            }
-//            if (raw.matches("-?\\d+\\.\\d+")) {
-//                return Double.parseDouble(raw);
-//            }
-//            if (raw.matches("-?\\d+")) {
-//                return Integer.parseInt(raw);
-//            }
-//        } catch (Exception ignored) {}
-//
-//        return raw;
-//    }
-
-
     public Object parseLiteral(String raw) {
         if (raw == null || raw.isEmpty()) { return null; }
 
         raw = raw.trim();
 
         // Unwrap quoted strings (single or double)
-        if ((raw.startsWith("'") && raw.endsWith("'")) || (raw.startsWith("\"") && raw.endsWith("\""))) {
+        boolean isSingleQuoted = startsWith(raw, SINGLE_QUOTE) && endsWith(raw, SINGLE_QUOTE);
+        boolean isDoubleQuoted = startsWith(raw, DOUBLE_QUOTE) && endsWith(raw, DOUBLE_QUOTE);
+        if (isSingleQuoted || isDoubleQuoted) {
             raw = raw.substring(1, raw.length() - 1).trim();
-
             // Try parsing JSON inside quotes
             try {
-                if (raw.startsWith("{") && raw.endsWith("}")) { return JSON.parseObject(raw); }
-                if (raw.startsWith("[") && raw.endsWith("]")) { return JSON.parseArray(raw); }
+                boolean isCurlyBrackets = startsWith(raw, OPEN_CURLY_BRACKETS) && endsWith(raw, CLOSE_CURLY_BRACKETS);
+                boolean isSquareBrackets = startsWith(raw, OPEN_SQUARE_BRACKETS) && endsWith(raw, CLOSE_SQUARE_BRACKETS);
+                if (isCurlyBrackets) {
+                    return JSON.parseObject(raw);
+                } else if (isSquareBrackets) {
+                    return JSON.parseArray(raw);
+                }
             } catch (Exception ignored) {}
 
             return raw; // Fallback to plain string
@@ -1092,8 +1078,13 @@ public class JSONSQLFunctions {
 
         // JSON objects and arrays without quotes
         try {
-            if (raw.startsWith("{") && raw.endsWith("}")) { return JSON.parseObject(raw); }
-            if (raw.startsWith("[") && raw.endsWith("]")) { return JSON.parseArray(raw); }
+            boolean isCurlyBrackets = startsWith(raw, OPEN_CURLY_BRACKETS) && endsWith(raw, CLOSE_CURLY_BRACKETS);
+            boolean isSquareBrackets = startsWith(raw, OPEN_SQUARE_BRACKETS) && endsWith(raw, CLOSE_SQUARE_BRACKETS);
+            if (isCurlyBrackets) {
+                return JSON.parseObject(raw);
+            } else if (isSquareBrackets) {
+                return JSON.parseArray(raw);
+            }
         } catch (Exception ignored) {}
 
         // Booleans
@@ -1112,6 +1103,9 @@ public class JSONSQLFunctions {
         // Fallback to raw text
         return raw;
     }
+
+    private boolean startsWith(String str, char c) { return !str.isEmpty() && str.charAt(0) == c; }
+    private boolean endsWith(String str, char c) { return !str.isEmpty() && str.charAt(str.length() - 1) == c; }
 
 
     public boolean evaluateCondition(JSONObject row, JSONSQLCondition condition) {
@@ -1272,44 +1266,94 @@ public class JSONSQLFunctions {
         }
     }
 
-    public void setAndCreateJSONValue(JSONObject root, String path, Object value) {
-        List<String> tokens = tokenizeJsonPath(path);
-        Object current = root;
+    public List<String> tokenizePath(String path) {
+        List<String> tokens = new ArrayList<>();
+        StringBuilder token = new StringBuilder();
+        boolean inBracket = false;
 
-        for (int i = 0; i < tokens.size(); i++) {
-            String token = tokens.get(i);
-            boolean isLast = (i == tokens.size() - 1);
+        for (int i = 0; i < path.length(); i++) {
+            char c = path.charAt(i);
 
-            if (current instanceof JSONObject obj) {
-                if (isLast) {
-                    obj.put(token, value);
-                } else {
-                    Object next = obj.get(token);
-                    if (next == null) {
-                        next = tokens.get(i + 1).matches("\\d+") ? new JSONArray() : new JSONObject();
-                        obj.put(token, next);
-                    }
-                    current = next;
+            boolean isEmpty = token.isEmpty();
+
+            if (c == '.' && !inBracket) {
+                if (!isEmpty) {
+                    tokens.add(token.toString());
+                    token.setLength(0);
                 }
-            } else if (current instanceof JSONArray arr) {
-                int index = Integer.parseInt(token);
-                while (arr.size() <= index) { arr.add(null); }
-
-                if (isLast) {
-                    arr.set(index, value);
-                } else {
-                    Object next = arr.get(index);
-                    if (next == null) {
-                        next = tokens.get(i + 1).matches("\\d+") ? new JSONArray() : new JSONObject();
-                        arr.set(index, next);
-                    }
-                    current = next;
+            } else if (c == OPEN_SQUARE_BRACKETS) {
+                if (inBracket) {
+                    throw new IllegalArgumentException("Malformed path: nested '[' at position " + i);
                 }
+                if (!isEmpty) {
+                    tokens.add(token.toString());
+                    token.setLength(0);
+                }
+                inBracket = true;
+            } else if (c == CLOSE_SQUARE_BRACKETS) {
+                if (!inBracket) {
+                    throw new IllegalArgumentException("Malformed path: unmatched ']' at position " + i);
+                }
+                if (isEmpty) {
+                    throw new IllegalArgumentException("Malformed path: empty index in brackets at position " + i);
+                }
+                tokens.add(token.toString());
+                token.setLength(0);
+                inBracket = false;
             } else {
-                throw new IllegalStateException("Invalid path structure at: " + token);
+                token.append(c);
             }
         }
+
+        if (inBracket) {
+            throw new IllegalArgumentException("Malformed path: unclosed '[' at end of path");
+        }
+
+        if (!token.isEmpty()) {
+            tokens.add(token.toString());
+        }
+
+        return tokens;
     }
+
+//    public void setAndCreateJSONValue(JSONObject root, String path, Object value) {
+//        List<String> tokens = tokenizeDotNotationPath(path);
+//        Object current = root;
+//
+//        for (int i = 0; i < tokens.size(); i++) {
+//            String token = tokens.get(i);
+//            boolean isLast = (i == tokens.size() - 1);
+//
+//            if (current instanceof JSONObject obj) {
+//                if (isLast) {
+//                    obj.put(token, value);
+//                } else {
+//                    Object next = obj.get(token);
+//                    if (next == null) {
+//                        next = tokens.get(i + 1).matches("\\d+") ? new JSONArray() : new JSONObject();
+//                        obj.put(token, next);
+//                    }
+//                    current = next;
+//                }
+//            } else if (current instanceof JSONArray arr) {
+//                int index = Integer.parseInt(token);
+//                while (arr.size() <= index) { arr.add(null); }
+//
+//                if (isLast) {
+//                    arr.set(index, value);
+//                } else {
+//                    Object next = arr.get(index);
+//                    if (next == null) {
+//                        next = tokens.get(i + 1).matches("\\d+") ? new JSONArray() : new JSONObject();
+//                        arr.set(index, next);
+//                    }
+//                    current = next;
+//                }
+//            } else {
+//                throw new IllegalStateException("Invalid path structure at: " + token);
+//            }
+//        }
+//    }
 
     public String getQueryType(String sql) {
         if (sql == null || sql.isBlank()) { return null; }
@@ -1335,35 +1379,68 @@ public class JSONSQLFunctions {
     }
 
 
+//
+    public JSONObject flatten(JSONObject root) {
+        return flattenWithBoxNotation(root);
+    }
 
-    public JSONObject flattenRow(JSONObject root) {
-        Map<String, Object> result = new LinkedHashMap<>();
-        Deque<Map.Entry<String, Object>> stack = new ArrayDeque<>();
-        stack.push(Map.entry("", root));
+
+    public JSONObject flattenWithBoxNotation(JSONObject root) {
+        Map<String, Object> flatMap = new LinkedHashMap<>();
+        Deque<Object[]> stack = new ArrayDeque<>();
+        stack.push(new Object[]{ "", root });
 
         while (!stack.isEmpty()) {
-            Map.Entry<String, Object> current = stack.pop();
-            String prefix = current.getKey();
-            Object value = current.getValue();
+            Object[] entry = stack.pop();
+            String path = (String) entry[0];
+            Object value = entry[1];
 
             if (value instanceof JSONObject obj) {
-                for (String key : obj.keySet()) {
-                    String newKey = prefix.isEmpty() ? key : prefix + "." + key;
-                    stack.push(new AbstractMap.SimpleEntry<>(newKey, obj.get(key)));
+                for (Map.Entry<String, Object> child : obj.entrySet()) {
+                    String childPath = path.isEmpty() ? child.getKey() : path + "." + child.getKey();
+                    stack.push(new Object[]{ childPath, child.getValue() });
                 }
             } else if (value instanceof JSONArray arr) {
-                for (int i = 0; i < arr.size(); i++) {
-                    String newKey = prefix + "[" + i + "]";
-                    stack.push(new AbstractMap.SimpleEntry<>(newKey, arr.get(i)));
+                for (int index = 0; index < arr.size(); index++) {
+                    String childPath = path + "[" + index + "]";
+                    stack.push(new Object[]{ childPath, arr.get(index)});
                 }
             } else {
-                result.put(prefix, value);
+                flatMap.put(path, value);
             }
         }
 
-        JSONObject row = new JSONObject(result);
-        return row;
+        return new JSONObject(flatMap);
     }
+
+//    public JSONObject flattenRow(JSONObject root) {
+//        Map<String, Object> result = new LinkedHashMap<>();
+//        Deque<Map.Entry<String, Object>> stack = new ArrayDeque<>();
+//        stack.push(Map.entry("", root));
+//
+//        while (!stack.isEmpty()) {
+//            Map.Entry<String, Object> current = stack.pop();
+//            String prefix = current.getKey();
+//            Object value = current.getValue();
+//
+//            if (value instanceof JSONObject object) {
+//                for (String key : object.keySet()) {
+//                    String newKey = prefix.isEmpty() ? key : prefix + "." + key;
+//                    stack.push(new AbstractMap.SimpleEntry<>(newKey, object.get(key)));
+//                }
+//            } else if (value instanceof JSONArray array) {
+//                for (int index = 0; index < array.size(); index++) {
+//                    String newKey = prefix.isEmpty() ? String.valueOf(index) : prefix + "." + index;
+//                    stack.push(new AbstractMap.SimpleEntry<>(newKey, array.get(index)));
+//                }
+//            } else {
+//                result.put(prefix, value);
+//            }
+//        }
+//
+//        JSONObject row = new JSONObject(result);
+//        return row;
+//    }
 
 
 
@@ -1496,9 +1573,4 @@ public class JSONSQLFunctions {
             this.source = source;
         }
     }
-
-
-
-
-
 }

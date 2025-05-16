@@ -51,12 +51,74 @@ public class MapEditorSceneLayersPanel extends UpwardGrowingUI.Pane {
             addRow(hBox);
         }
 
+        JSONObject structure = hoveredTile.getJSONObject("structure");
+        if (structure != null) {
+            HBox hBox = createTileLayerStructure(structure);
+            addRow(hBox);
+        }
+
         if (mLastBackground != null) { setBackground(mLastBackground); }
     }
 
+
+    private HBox createTileLayerStructure(JSONObject layer) {
+        String asset = layer.getString("asset");
+
+        int newPaneWidth = (int) getItemWidth();
+        int newPaneHeight = (int) getItemHeight();
+        HBox hBox = new HBox();
+        hBox.setPrefSize(newPaneWidth, newPaneHeight);
+        hBox.setMinSize(newPaneWidth, newPaneHeight);
+        hBox.setMaxSize(newPaneWidth, newPaneHeight);
+
+        int imageWidth = Math.min(newPaneHeight, newPaneWidth);
+        int imageHeight = imageWidth;
+        String id = AssetPool.getInstance().getOrCreateStaticAsset(
+                imageWidth, imageHeight, asset, -1, asset + "_map_editor_scene_structure"
+        );
+        Image image = AssetPool.getInstance().getImage(id);
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(imageWidth);
+        imageView.setFitHeight(imageHeight);
+
+        int labelVBoxWidth = newPaneWidth - imageWidth;
+        int labelVBoxHeight = newPaneHeight;
+        VBox vBox = new VBox();
+        vBox.setPrefSize(labelVBoxWidth, labelVBoxHeight);
+        vBox.setMinSize(labelVBoxWidth, labelVBoxHeight);
+        vBox.setMaxSize(labelVBoxWidth, labelVBoxHeight);
+        vBox.setBackground(new Background(new BackgroundFill(ColorPalette.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
+
+        int upperButtonWidth = labelVBoxWidth;
+        int upperButtonHeight = (int) (labelVBoxHeight * .7);
+        BeveledLabel upperBeveledLabel = new BeveledLabel(upperButtonWidth, upperButtonHeight);
+        String upperText = "[" + asset + "]";
+        upperBeveledLabel.setFitText(upperText);
+
+
+        int lowerButtonWidth = upperButtonWidth;
+        int lowerButtonHeight = labelVBoxHeight - upperButtonHeight;
+        BeveledLabel lowerBeveledLabel = new BeveledLabel(lowerButtonWidth, lowerButtonHeight);
+        String lowerText = asset;
+        if (asset.contains("/")) {
+            lowerText = asset.substring(asset.lastIndexOf("/") + 1, asset.lastIndexOf("."));
+        }
+        upperBeveledLabel.setFitText(lowerText);
+
+        vBox.getChildren().addAll(upperBeveledLabel, lowerBeveledLabel);
+        hBox.getChildren().addAll(imageView, vBox);
+
+
+        Background background = getBackgroundForLayerItem(layer);
+        mLastBackground = background;
+        vBox.setBackground(background);
+
+        return hBox;
+    }
+
+
     private HBox createTileLayerItem(JSONObject layer) {
         String asset = layer.getString("asset");
-        String state = layer.getString("state");
         int depth = layer.getIntValue("depth");
         int lowest = layer.getIntValue("lowest");
         int highest = layer.getIntValue("highest");

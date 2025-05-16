@@ -752,7 +752,6 @@ class JSONDatabaseTest {
     public void testUpdateNestedField() {
         JSONDatabase db = new JSONDatabase();
         db.addTable("profiles");
-
         db.execute("""
             INSERT INTO profiles VALUES
             ({"id": 1, "user": {"name": "Alice", "location": "NY"}}),

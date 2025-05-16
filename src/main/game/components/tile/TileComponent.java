@@ -18,7 +18,8 @@ public class TileComponent extends Component {
     public final static String ROW = "row";
     public final static String COLUMN = "column";
     public final static String COLLIDER = "collider";
-    public final static String BASE_ELEVATION = "height";
+    public final static String BASE_ELEVATION = "base_elevation";
+    public final static String TOTAL_ELEVATION = "total_elevation";
     public final static String TERRAIN = "terrain";
     public final static String UNIT = "unit";
     public final static String STRUCTURE = "structure";
@@ -75,6 +76,7 @@ public class TileComponent extends Component {
     public void deleteStructure() { put(STRUCTURE, EMPTY_STRING); }
     public String getStructureID() { return getString(STRUCTURE); }
 
+
     public void addGas(String asset, int amount) { addLayer(asset, Layer.STATE_GAS, amount); }
     public void addSolid(String asset, int amount) {
         addLayer(asset, Layer.STATE_SOLID, amount);
@@ -94,6 +96,7 @@ public class TileComponent extends Component {
         }
 
         mLayers.push(newLayer);
+        put(TOTAL_ELEVATION, getTotalElevation());
     }
     public void removeLayer() { removeLayer(-1); }
     public void removeLayer(int amount) {
@@ -108,18 +111,11 @@ public class TileComponent extends Component {
         }
     }
 
-    public void skimLayer(int amount) {
-        for (int i = 0; i < amount; i++) {
-            Layer topLayer = (Layer) mLayers.peek();
-            if (topLayer == null) { continue; }
-            if (topLayer.getDepth() > 1) {
-                topLayer.setDepth(topLayer.getDepth() - 1);
-            } else {
-//                mLayers.removeLast(); . .
-            }
-        }
+    public JSONObject getStructure() {
+        JSONObject structure = new JSONObject();
+        structure.put("asset", getStructureID());
+        return structure;
     }
-
     public JSONArray getLayers() {
         JSONArray layering = new JSONArray();
         int range = getBaseElevation();

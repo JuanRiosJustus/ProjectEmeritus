@@ -210,12 +210,19 @@ public class AssetPool {
         return id;
     }
 
+    public int getFrame(String id) {
+        Animation animation = mAssetMap.getOrDefault(id, null);
+        if (animation == null) {
+            return -1;
+        }
+
+        return animation.getCurrentFrame();
+    }
     private void createAsset(String id, String asset, String effect, int frame, BufferedImage image) {
         createAsset(id, asset, effect, frame, new BufferedImage[] { image });
     }
 
     private void createAsset(String id, String asset, String effect, int frame, BufferedImage[] images) {
         mAssetMap.put(id, new Animation(images));
-//        System.out.println("Created assets: " + mAssetMap.size());
     }
 }

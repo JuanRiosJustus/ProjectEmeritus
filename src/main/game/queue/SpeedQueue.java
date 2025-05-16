@@ -22,8 +22,8 @@ public class SpeedQueue {
     private final HashSlingingSlasher mQueuedEntitiesHashSlingingSlasher = new HashSlingingSlasher();
     private final HashSlingingSlasher mFinishedEntitiesHashSlingingSlasher = new HashSlingingSlasher();
     private final HashSlingingSlasher mAllEntitiesHashSlingingSlasher = new HashSlingingSlasher();
-    private final HashSlingingSlasher mCheckSum = new HashSlingingSlasher()
-;    private final PriorityQueue<Entity> mSpeedQueue = new PriorityQueue<>(turnOrdering());
+    private final HashSlingingSlasher mCheckSum = new HashSlingingSlasher();
+    private final PriorityQueue<Entity> mSpeedQueue = new PriorityQueue<>(turnOrdering());
     private final PriorityQueue<Entity> mFinished = new PriorityQueue<>(turnOrdering());
 
     private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
@@ -41,6 +41,7 @@ public class SpeedQueue {
     public int getCycleCount() { return mIterations; }
 
     public boolean update() {
+        if (mEntityMap.isEmpty()) { return false; }
         if (!mSpeedQueue.isEmpty()) { return false; }
 
         mSpeedQueue.addAll(mEntityMap.values());

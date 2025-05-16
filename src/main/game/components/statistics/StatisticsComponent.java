@@ -83,6 +83,19 @@ public class StatisticsComponent extends Component {
         recalculateHash();
     }
 
+    public void getStatChanges(JSONObject attributes) {
+        Map<String, Attribute> updatedMap = mAttributeMap;
+        updatedMap.clear();
+
+        for (String key : attributes.keySet()) {
+            float value = attributes.getFloat(key);
+
+            Attribute attribute = new Attribute(key, value);
+            updatedMap.put(key, attribute);
+        }
+        recalculateHash();
+    }
+
 
 
     public void putUnit(String unit) { put(StatisticsComponent.UNIT, unit); }

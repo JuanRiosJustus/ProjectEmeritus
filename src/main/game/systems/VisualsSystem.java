@@ -265,6 +265,29 @@ public class VisualsSystem extends GameSystem {
         assetComponent.putMainID(id);
     }
 
+//    public void updateStructures(GameModel model, Entity tileEntity) {
+//        TileComponent tile = tileEntity.get(TileComponent.class);
+//        String structureID = tile.getStructureID();
+//        Entity structureEntity = EntityStore.getInstance().get(structureID);
+//        if (structureEntity == null) { return; }
+//
+//        IdentityComponent identityComponent = structureEntity.get(IdentityComponent.class);
+//        AssetComponent assetComponent = structureEntity.get(AssetComponent.class);
+//        String id = AssetPool.getInstance().getOrCreateTopSwayingAsset(
+//                mSpriteWidth,
+//                mSpriteHeight,
+//                identityComponent.getNickname(),
+//                -1,
+//                identityComponent.getNickname() + tile + mSpriteWidth + mSpriteHeight
+//        );
+//
+//        assetComponent.putMainID(id);
+//
+////        Asset asset = AssetPool.getInstance().getAsset(id);
+////        asset.getAnimation().update();
+//        AssetPool.getInstance().update(id);
+//    }
+
     public void updateStructures(GameModel model, Entity tileEntity) {
         TileComponent tile = tileEntity.get(TileComponent.class);
         String structureID = tile.getStructureID();

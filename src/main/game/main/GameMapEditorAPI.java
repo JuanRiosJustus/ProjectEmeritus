@@ -1,5 +1,6 @@
 package main.game.main;
 
+import main.game.components.tile.StructureComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.stores.EntityStore;
@@ -23,12 +24,24 @@ public class GameMapEditorAPI {
         Entity entity = getEntityWithID(hoveredTileID);
         TileComponent tile = entity.get(TileComponent.class);
 
+        String structureID = tile.getStructureID();
+        entity = getEntityWithID(structureID);
+        JSONObject structure = null;
+        if (entity != null) {
+            StructureComponent structureComponent = entity.get(StructureComponent.class);
+            String name = structureComponent.getName();
+
+            structure = new JSONObject();
+            structure.put("asset", name);
+        }
+
         JSONObject hoveredTile = new JSONObject();
         hoveredTile.put("row", tile.getRow());
         hoveredTile.put("column", tile.getColumn());
         hoveredTile.put("base_elevation", tile.getBaseElevation());
         hoveredTile.put("modified_elevation", tile.getModifiedElevation());
         hoveredTile.put("layers", tile.getLayers());
+        hoveredTile.put("structure", structure);
 
 
         return hoveredTile;

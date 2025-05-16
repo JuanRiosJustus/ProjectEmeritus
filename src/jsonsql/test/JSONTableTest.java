@@ -290,7 +290,7 @@ public class JSONTableTest {
                         SELECT name, age, salary, address.city 
                         FROM users 
                         WHERE ( city = 'New York' AND age >= 30 ) 
-                        OR ( salary > 50000 OR skills.0. = 'Python' OR skills.0. = 'Rust' ) 
+                        OR ( salary > 50000 OR skills[0]. = 'Python' OR skills[0]. = 'Rust' ) 
                         ORDER BY salary DESC, age ASC 
                         LIMIT 5
                 """;
@@ -476,7 +476,7 @@ public class JSONTableTest {
         // ✅ Update: Change second skill of Dana
         table.update("""
             UPDATE employees
-            SET skills.1 = 'Budgeting'
+            SET skills[1] = 'Budgeting'
             WHERE name = 'Dana'
         """);
 
@@ -501,7 +501,7 @@ public class JSONTableTest {
         // ✅ Update: Change duration of project Y to 8
         table.update("""
             UPDATE employees
-            SET metadata.projects.1.duration = 8
+            SET metadata.projects[1].duration = 8
             WHERE name = 'Frank'
         """);
 
@@ -575,7 +575,7 @@ public class JSONTableTest {
         // ✅ UPDATE nested array field (change hours of a specific task)
         table.update("""
             UPDATE projects
-            SET tasks.1.hours = 40
+            SET tasks[1].hours = 40
             WHERE id = 1
         """);
 
@@ -683,7 +683,7 @@ public class JSONTableTest {
         // ✅ Update nested experience field
         table.update("""
             UPDATE departments
-            SET employees.0.profile.experience = 8
+            SET employees[0].profile.experience = 8
             WHERE name = 'Engineering'
         """);
         assertEquals(8, table.get(0).getJSONArray("employees").getJSONObject(0)
@@ -692,7 +692,7 @@ public class JSONTableTest {
         // ✅ Add new skill in the skill array
         table.update("""
             UPDATE departments
-            SET employees.0.skills.2 = 'Docker'
+            SET employees[0].skills[2] = 'Docker'
             WHERE name = 'Engineering'
         """);
         JSONArray skills = table.get(0).getJSONArray("employees").getJSONObject(0).getJSONArray("skills");
@@ -719,8 +719,8 @@ public class JSONTableTest {
         assertEquals("Design", results.getJSONObject(1).getString("name"));
 
         // ✅ Select and verify deeply nested skill
-        JSONArray skillQuery = table.select("SELECT employees.0.skills.1 FROM departments WHERE name = 'Engineering'");
-        assertEquals("Kubernetes", skillQuery.getJSONObject(0).getString("employees.0.skills.1"));
+        JSONArray skillQuery = table.select("SELECT employees[0].skills[1] FROM departments WHERE name = 'Engineering'");
+        assertEquals("Kubernetes", skillQuery.getJSONObject(0).getString("employees[0].skills[1]"));
 
         // ✅ Update nested object that didn't previously exist
         table.update("""
@@ -856,7 +856,7 @@ public class JSONTableTest {
             }
         """);
 
-        table.delete("DELETE FROM groups WHERE members.1.role = 'design'");
+        table.delete("DELETE FROM groups WHERE members[1].role = 'design'");
 
         assertEquals(1, table.size());
         assertEquals("Alpha", table.get(0).getString("group"));
@@ -887,7 +887,7 @@ public class JSONTableTest {
             }
         """);
 
-        table.delete("DELETE FROM records WHERE log.entries.0.type = 'warning'");
+        table.delete("DELETE FROM records WHERE log.entries[0].type = 'warning'");
 
         assertEquals(1, table.size());
         JSONArray entries = table.get(0).getJSONObject("log").getJSONArray("entries");
@@ -1192,7 +1192,7 @@ public class JSONTableTest {
             }
         """);
 
-        JSONArray deleted = table.delete("DELETE FROM projects WHERE metadata.milestones.1.status = 'pending'");
+        JSONArray deleted = table.delete("DELETE FROM projects WHERE metadata.milestones[1].status = 'pending'");
         assertEquals(1, deleted.size());
         assertEquals("Gamma", deleted.getJSONObject(0).getString("name"));
         assertEquals(1, table.size());
@@ -1206,7 +1206,7 @@ public class JSONTableTest {
               "hostname": "alpha",
               "config": {
                 "network": {
-                  "ip": "192.168.1.1"
+                  "ip": "192.168[1].1"
                 }
               }
             }
@@ -1216,13 +1216,13 @@ public class JSONTableTest {
               "hostname": "beta",
               "config": {
                 "network": {
-                  "ip": "192.168.1.2"
+                  "ip": "192.168[1].2"
                 }
               }
             }
         """);
 
-        JSONArray deleted = table.delete("DELETE FROM systems WHERE config.network.ip = '192.168.1.99'");
+        JSONArray deleted = table.delete("DELETE FROM systems WHERE config.network.ip = '192.168[1].99'");
         assertEquals(0, deleted.size());
         assertEquals(2, table.size());
     }
@@ -1249,7 +1249,7 @@ public class JSONTableTest {
             }
         """);
 
-        JSONArray deleted = table.delete("DELETE FROM inventory WHERE tags.0 = 'fragile'");
+        JSONArray deleted = table.delete("DELETE FROM inventory WHERE tags[0] = 'fragile'");
         assertEquals(2, deleted.size());
         assertEquals("Widget", deleted.getJSONObject(0).getString("item"));
         assertEquals("Gadget", deleted.getJSONObject(1).getString("item"));
@@ -1350,7 +1350,7 @@ public class JSONTableTest {
 
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             table.insert("""
-                INSERT INTO wrong_table VALUES 
+                INSERT INTO wrong_table VALUES
                 ({"name": "Tiger"})
             """);
         });
@@ -1359,7 +1359,9 @@ public class JSONTableTest {
     @Test
     public void testInsertEmptyValues() {
         JSONTable table = new JSONTable("empty");
-        assertTrue(table.insert("INSERT INTO empty VALUES").isEmpty());
+        assertThrows(IllegalArgumentException.class, () -> {
+            table.insert("INSERT INTO empty VALUES").isEmpty();
+        });
     }
 
 
