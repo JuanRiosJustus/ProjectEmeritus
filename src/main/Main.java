@@ -8,13 +8,14 @@ import javafx.stage.Stage;
 import main.constants.Constants;
 import main.engine.EngineController;
 import main.game.entity.Entity;
+import main.game.main.GameConfigs;
 import main.game.main.GameController;
 import main.game.stores.AbilityTable;
 import main.game.stores.UnitTable;
 import main.state.UserSaveStateManager;
 import main.logging.EmeritusLogger;
 import main.game.stores.EntityStore;
-import main.ui.scenes.mapeditor.MapEditorScene;
+import main.ui.scenes.GameScene;
 import main.ui.scenes.MenuScene;
 
 import java.util.Collections;
@@ -36,13 +37,19 @@ public class Main extends Application {
 
         EngineController engineController = EngineController.getInstance();
 
-        GameController gameController = GameController.create(8, 12, 1500, 950);
+        GameController gameController = GameController.createVariousHeightTestMapWithLiquid(12, 15, 1500, 950);
+        gameController.setCameraZoom(new JSONObject().fluentPut("zoom", 1));
+//        GameController gameController = GameController.createFlatTestMapWithLiquid(8, 12, 1500, 950);
+
+
+
         setup(gameController, 5);
 
 
         engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));
-        engineController.stage(Constants.MAP_EDITOR_SCENE, new MapEditorScene(1500, 950));
-        engineController.stage(Constants.GAME_SCENE, gameController);
+//        engineController.stage(Constants.MAP_EDITOR_SCENE, new MapEditorScene(1500, 950));
+        engineController.stage(Constants.GAME_SCENE, new GameScene(1500, 950, gameController));
+//        engineController.stage(Constants.GAME_SCENE, gameController);
 
 
         engineController.setOnCloseRequest(t -> {
@@ -69,7 +76,7 @@ public class Main extends Application {
         Collections.shuffle(tiles);
         for (int i = 0; i < unitsPerTeam; i++) {
 
-            String randomUnitID = EntityStore.getInstance().getOrCreateUnit(false);
+            String randomUnitID = EntityStore.getInstance().createUnit(false);
             JSONObject tile = tiles.getJSONObject(0);
             tiles.removeFirst();
             String tileID = tile.getString("tile_id");
@@ -78,7 +85,7 @@ public class Main extends Application {
             spawnPlacementData.put("unit_id", randomUnitID);
             spawnPlacementData.put("tile_id", tileID);
             spawnPlacementData.put("team_id", "Enemy");
-            gameController.setUnitSpawn(spawnPlacementData);
+            gameController.setUnit(spawnPlacementData);
         }
 
         spawnRegion = spawnIterator.next();
@@ -87,7 +94,7 @@ public class Main extends Application {
 
         // Setup friendly
         for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnitID = EntityStore.getInstance().getOrCreateUnit(true);
+            String randomUnitID = EntityStore.getInstance().createUnit(true);
             JSONObject tile = tiles.getJSONObject(0);
             tiles.removeFirst();
 
@@ -98,7 +105,7 @@ public class Main extends Application {
             spawnPlacementData.put("tile_id", tileID);
             spawnPlacementData.put("team_id", "Ally");
 
-            gameController.setUnitSpawn(spawnPlacementData);
+            gameController.setUnit(spawnPlacementData);
         }
 
         return gameController;

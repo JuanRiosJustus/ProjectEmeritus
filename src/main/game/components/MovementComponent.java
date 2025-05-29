@@ -50,9 +50,6 @@ public class MovementComponent extends Component {
     public List<String> getStagedMovementPath() { return mStagedMovementPath; }
 
     public boolean isValidMovementPath() { return mStagedMovementRange.contains(mStagedTilePosition); }
-    public void setPosition(int x, int y) { mPosition.x = x; mPosition.y = y; }
-    public int getX() { return (int) mPosition.x; }
-    public int getY() { return (int) mPosition.y; }
 
     public String getStagedTarget() { return mStagedTilePosition; }
     public String getFinalTarget() { return mFinalTilePosition; }

@@ -190,23 +190,23 @@ public class InputHandler {
 
 
         if (keyboard.isPressed(KeyEvent.VK_9)) {
-            int newSpriteWidth = (int) (gameState.getSpriteWidth() * .8);
-            int newSpriteHeight = (int) (gameState.getSpriteHeight() * .8);
-            gameState.setSpriteWidth(newSpriteWidth).setSpriteHeight(newSpriteHeight);
+            JSONObject cameraZoomData = model.getViewportData();
+            float zoom = cameraZoomData.getFloatValue("zoom") * .8f;
+            model.setViewportZoom(new JSONObject().fluentPut("zoom", zoom));
 //            System.out.println(gameState.getSpriteWidth() + ", " + gameState.getSpriteHeight() + " GETTING SMALLER " + Platform.isFxApplicationThread());
             return;
         }
 
         if (keyboard.isPressed(KeyEvent.VK_0)) {
-            int newSpriteWidth = (int) (gameState.getSpriteWidth() * 1.2);
-            int newSpriteHeight = (int) (gameState.getSpriteHeight() * 1.2);
-            gameState.setSpriteWidth(newSpriteWidth).setSpriteHeight(newSpriteHeight);
+            JSONObject cameraZoomData = model.getViewportData();
+            float zoom = cameraZoomData.getFloatValue("zoom") * 1.2f;
+            model.setViewportZoom(new JSONObject().fluentPut("zoom", zoom));
 //            System.out.println(gameState.getSpriteWidth() + ", " + gameState.getSpriteHeight() + " GETTING BIGGER " + Platform.isFxApplicationThread());
             return;
         }
 
 
-        // Handles Unit Movement
+        // Handles Unit Movement. This triggers 2x TODO, make sure only triggers once
         boolean shouldPublish = mMovementMonitor.setOnDifference(isMovementPanelOpen, isHoveredTileChanged, isPressed);
         if (isMovementPanelOpen && shouldPublish && isUserCharacter) {
             mEventBus.publish(MovementSystem.createMoveEntityEvent(currentEntityID, hoveredTileID, isPressed));

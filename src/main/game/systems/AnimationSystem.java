@@ -3,6 +3,7 @@ package main.game.systems;
 import main.constants.Vector3f;
 import main.game.components.AnimationComponent;
 import main.game.components.MovementComponent;
+import main.game.components.PositionComponent;
 import main.game.components.animation.AnimationTrack;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
@@ -180,7 +181,8 @@ public class AnimationSystem extends GameSystem {
             if (tileEntity == null) { return; }
             TileComponent tile = tileEntity.get(TileComponent.class);
             Vector3f vector = tile.getLocalVector(model);
-            movementComponent.setPosition((int) vector.x, (int) vector.y);
+            PositionComponent positionComponent = unitEntity.get(PositionComponent.class);
+            positionComponent.setPosition((int) vector.x, (int) vector.y);
 
             // Mark the current entity being animated to keep track of currently animated entities
             mMap.put(unitID, unitEntity);
@@ -201,7 +203,7 @@ public class AnimationSystem extends GameSystem {
                     currentAnimationTrack.getProgressToNextNode()
             );
 
-            movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
+            positionComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
 
             if (currentAnimationTrack.getProgressToNextNode() >= 1) {
                 currentAnimationTrack.setToNextNode();

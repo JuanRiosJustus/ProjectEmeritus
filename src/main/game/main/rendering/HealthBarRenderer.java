@@ -4,6 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import main.constants.Point;
 import main.game.components.MovementComponent;
+import main.game.components.PositionComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
@@ -35,17 +36,17 @@ public class HealthBarRenderer extends Renderer {
 
             if (unit == null) { return; }
 
-            MovementComponent movement = unit.get(MovementComponent.class);
+            PositionComponent position = unit.get(PositionComponent.class);
 
             // Sprite dimensions
             int width = model.getGameState().getSpriteWidth();
             int height = model.getGameState().getSpriteHeight();
-            int x = movement.getX();
-            int y = movement.getY();
-            Point position = calculateWorldPosition(model, camera, x, y, width, height);
+            int x = position.getX();
+            int y = position.getY();
+            Point point = calculateWorldPosition(model, camera, x, y, width, height);
 
-            int tileX = position.x;
-            int tileY = position.y;
+            int tileX = point.x;
+            int tileY = point.y;
 
             // Health bar dimensions
             int healthBarBorderWidth = (int) (width * 0.8);

@@ -3,6 +3,7 @@ package main.game.systems.actions.behaviors;
 import main.constants.Pair;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
+import main.game.components.PositionComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
@@ -25,22 +26,35 @@ public class OmniscientBehavior extends MoveActionBehavior {
 
         List<String> allEnemyUnits = mBehaviorLibrary.getAllEnemyUnits(model, unitID);
 
-        // Get all tiles that can be walked to
-        List<String> tilesThatCantBeMovedTo = mAlgorithm.getMovementRange(
+        // Tiles this unit can move to
+        List<String> movableTiles = mAlgorithm.getMovementRange(
                 model,
                 currentTileID,
                 statisticsComponent.getTotalMovement()
         );
 
+        // Exclude current tile (optional)
+        movableTiles.remove(currentTileID);
+        if (movableTiles.isEmpty()) return null;
 
-        // Move to a random tile other than current
-        tilesThatCantBeMovedTo.remove(movementComponent.getCurrentTileID());
-        if (tilesThatCantBeMovedTo.isEmpty()) {
-            return null;
+        // Choose tile closest to any enemy
+        String bestTile = null;
+        int minDistance = Integer.MAX_VALUE;
+
+        for (String tileID : movableTiles) {
+            PositionComponent tilePos = getEntityWithID(tileID).get(PositionComponent.class);
+
+            for (String enemyID : allEnemyUnits) {
+                PositionComponent enemyPos = getEntityWithID(enemyID).get(PositionComponent.class);
+                int distance = PositionComponent.getManhattanDistance(tilePos, enemyPos);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    bestTile = tileID;
+                }
+            }
         }
 
-        String randomTileID = tilesThatCantBeMovedTo.get(mRandom.nextInt(tilesThatCantBeMovedTo.size()));
-        return randomTileID;
+        return bestTile;
     }
 
     @Override

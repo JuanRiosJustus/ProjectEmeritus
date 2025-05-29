@@ -3,8 +3,16 @@ package jsonsql.main;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
+import com.alibaba.fastjson2.JSONReader;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -1554,6 +1562,8 @@ public class JSONFunctions {
 
         return target;
     }
+
+
 
     public JSONObject getMasterSchema(JSONArray rows) {
         JSONObject result = new JSONObject();

@@ -60,9 +60,12 @@ public class GameState extends JSONObject {
         gameState.getOrCreateCamera(MAIN_CAMERA);
         gameState.getOrCreateCamera(SECONDARY_CAMERA);
 
-        gameState.getMainCamera();
+        gameState.getViewport();
         gameState.getSecondaryCamera();
 
+        gameState.setViewportZoom(1);
+        gameState.setOriginalSpriteWidth(64);
+        gameState.setOriginalSpriteHeight(64);
         gameState.setSpriteWidth(64);
         gameState.setSpriteHeight(64);
 
@@ -105,7 +108,7 @@ public class GameState extends JSONObject {
 
 
     public String getMainCameraID() { return MAIN_CAMERA; }
-    private JSONCamera getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
+    private JSONCamera getViewport() { return getOrCreateCamera(MAIN_CAMERA); }
     public String getSecondaryCameraID() { return SECONDARY_CAMERA; }
     public JSONCamera getSecondaryCamera() { return getOrCreateCamera(SECONDARY_CAMERA); }
 
@@ -124,16 +127,21 @@ public class GameState extends JSONObject {
         return cameraData;
     }
 
-    public GameState setMainCameraX(float x) { getMainCamera().setX(x); return this; }
-    public GameState setMainCameraY(float y) { getMainCamera().setY(y); return this; }
-    public int getMainCameraX() { return (int) getMainCamera().getX(); }
-    public int getMainCameraY() { return (int) getMainCamera().getY(); }
-    public GameState setMainCameraWidth(int width) { getMainCamera().setWidth(width); return this; }
-    public GameState setMainCameraHeight(int height) { getMainCamera().setHeight(height); return this; }
-    public int getMainCameraWidth() { return (int) getMainCamera().getWidth(); }
-    public int getMainCameraHeight() { return (int) getMainCamera().getHeight(); }
-    public int getGlobalX(int x) { return x - getMainCameraX(); }
-    public int getGlobalY(int y) { return y - getMainCameraY(); }
+
+    private static final String VIEWPORT_ZOOM = "viewport.zoom";
+    public float getViewportZoom() { return getFloatValue(VIEWPORT_ZOOM); }
+    public void setViewportZoom(float zoom) { put(VIEWPORT_ZOOM, zoom); }
+
+    public GameState setViewportX(float x) { getViewport().setX(x); return this; }
+    public GameState setViewportY(float y) { getViewport().setY(y); return this; }
+    public int getViewportX() { return (int) getViewport().getX(); }
+    public int getViewportY() { return (int) getViewport().getY(); }
+    public GameState setViewportWidth(int width) { getViewport().setWidth(width); return this; }
+    public GameState setViewportHeight(int height) { getViewport().setHeight(height); return this; }
+    public int getMainCameraWidth() { return (int) getViewport().getWidth(); }
+    public int getMainCameraHeight() { return (int) getViewport().getHeight(); }
+    public int getGlobalX(int x) { return x - getViewportX(); }
+    public int getGlobalY(int y) { return y - getViewportY(); }
 
 
 
@@ -441,11 +449,14 @@ public class GameState extends JSONObject {
     public GameState setSpriteHeight(int spriteHeight) { put(VIEW_SPRITE_HEIGHT, spriteHeight); return this; }
 
 
+
+
+
     public int getOriginalSpriteWidth() { return getIntValue(VIEW_ORIGINAL_SPRITE_WIDTH); }
-    public GameState setOriginalSpriteWidth(int spriteWidth) { put(VIEW_ORIGINAL_SPRITE_WIDTH, spriteWidth); return this; }
+    private GameState setOriginalSpriteWidth(int width) { put(VIEW_ORIGINAL_SPRITE_WIDTH, width); return this; }
 
     public int getOriginalSpriteHeight() { return getIntValue(VIEW_ORIGINAL_SPRITE_HEIGHT); }
-    public GameState setOriginalSpriteHeight(int spriteHeight) { put(VIEW_ORIGINAL_SPRITE_HEIGHT, spriteHeight); return this; }
+    private GameState setOriginalSpriteHeight(int height) { put(VIEW_ORIGINAL_SPRITE_HEIGHT, height); return this; }
 
 
 

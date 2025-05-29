@@ -7,6 +7,8 @@ import main.game.components.TimerComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
+import main.game.systems.actions.behaviors.MoveActionBehavior;
+import main.game.systems.actions.behaviors.OmniscientBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.logging.EmeritusLogger;
 
@@ -16,7 +18,8 @@ import java.util.SplittableRandom;
 public class BehaviorSystem extends GameSystem {
     private final EmeritusLogger logger = EmeritusLogger.create(BehaviorSystem.class);
     private final SplittableRandom mRandom = new SplittableRandom();
-    private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
+    private final MoveActionBehavior mRandomnessBehavior = new OmniscientBehavior();
+//    private final MoveActionBehavior mRandomnessBehavior = new RandomnessBehavior();
     public BehaviorSystem(GameModel gameModel) { super(gameModel); }
 
 
@@ -71,6 +74,7 @@ public class BehaviorSystem extends GameSystem {
         }
 
         mEventBus.publish(MovementSystem.createMoveEntityEvent(entityID, tileToMoveToID, true));
+        System.out.println("roo");
     }
 
     private void handleTryUsingAbility(GameModel model, String entityID) {

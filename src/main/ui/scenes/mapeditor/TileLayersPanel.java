@@ -18,17 +18,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class MapEditorSceneLayersPanel extends UpwardGrowingUI.Pane {
+public class TileLayersPanel extends UpwardGrowingUI.Pane {
 
     private static final Map<Integer, Background> mBackgroundCache = new HashMap<>();
     private Background mLastBackground = null;
-    public MapEditorSceneLayersPanel(double baseX, double baseY, double itemWidth, double itemHeight) {
+    public TileLayersPanel(double baseX, double baseY, double itemWidth, double itemHeight) {
         super(baseX, baseY, itemWidth, itemHeight);
     }
 
     public void update(JSONObject hoveredTile, int rowWidth, int rowHeight) {
         clearRows();
-        setBackground(new Background(new BackgroundFill(Color.LEMONCHIFFON, CornerRadii.EMPTY, Insets.EMPTY)));
+        setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
         setItemSize(rowWidth, rowHeight);
 
         int newPaneWidth = (int) getItemWidth();
@@ -151,7 +151,7 @@ public class MapEditorSceneLayersPanel extends UpwardGrowingUI.Pane {
         int upperButtonWidth = labelVBoxWidth;
         int upperButtonHeight = (int) (labelVBoxHeight * .7);
         BeveledLabel upperBeveledLabel = new BeveledLabel(upperButtonWidth, upperButtonHeight);
-        String upperText = "Layer (" + lowest + " - " + highest + "] (" + depth + ")";
+        String upperText = "Layer [" + lowest + ", " + highest + "] (" + depth + ")";
         upperBeveledLabel.setFitText(upperText);
 
 

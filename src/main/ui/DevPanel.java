@@ -29,17 +29,23 @@ public class DevPanel extends Stage {
     private Tuple<HBox, Label, CheckBox> mAutoEndTurnsRow = null;
     private Tuple<HBox, Label, ComboBox<String>> mCameraModesRow = null;
     private Pair<HBox, Button> mForcefullyEndTurnRow = null;
+//    private MapEditorSceneLayersPanel mLayersPanel;
+    private int mWidth = -1;
+    private int mHeight = -1;
+
 
     public DevPanel(GameModel gameModel, int width, int height) {
         setTitle("Dev Panel");
 
 //        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         List<Screen> screens = Screen.getScreens();
-        setX(screens.get(0).getBounds().getWidth() - width);
-        setY((0));
-//        setX
+//        setX(screens.get(0).getBounds().getWidth() - width);
+        setY(0);
+        setX(0);
 //        setAlwaysOnTop(true);
         setOpacity(.9f);
+        mWidth = width;
+        mHeight = height;
 
 //        setFont(Font.font("Verdana", FontWeight.BOLD, 70));
 
@@ -71,6 +77,9 @@ public class DevPanel extends Stage {
         mForcefullyEndTurnRow.getSecond().setText("Force Turn End");
         mForcefullyEndTurnRow.getSecond().setOnAction(e -> { gameModel.forcefullyEndTurn(); });
 
+//
+//        mLayersPanel = new MapEditorSceneLayersPanel(0, 0, mWidth, 30);
+//        mTileLayerPane.getChildren().add(mLayersPanel);
 
 
         VBox vBox = new VBox();
@@ -78,6 +87,7 @@ public class DevPanel extends Stage {
                 mAutoEndTurnsRow.getFirst(),
                 mCameraModesRow.getFirst(),
                 mForcefullyEndTurnRow.getFirst()
+//                mLayersPanel
         );
 
 //        vBox.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -86,7 +96,6 @@ public class DevPanel extends Stage {
         vBox.setCacheHint(CacheHint.SPEED);
 
         setScene(new Scene(vBox, width, height));
-
     }
 
 //    public DevPanel(GameController controller, int width, int height) {
@@ -152,6 +161,22 @@ public class DevPanel extends Stage {
 
     public void gameUpdate(GameController gc) {
 
+
+//        mGamePaneContainer.setOnMouseMoved(e -> {
+//            if (currentX.get() == e.getX() && currentY.get() == e.getY()) { return; }
+//            currentX.set((int) e.getX());
+//            currentY.set((int) e.getY());
+//
+//            JSONObject hoveredTile = mGameController.getHoveredTile();
+//            if (hoveredTile == null || hoveredTile.isEmpty()) { return; }
+//
+//            mLayersPanel.update(hoveredTile, (int) (mWidth * .15), (int) (mHeight * .05));
+//        });
+
+//        JSONObject hoveredTile = gc.getHoveredTile();
+//        if (hoveredTile == null || hoveredTile.isEmpty()) { return; }
+//
+//        mLayersPanel.update(hoveredTile, (int) (mWidth * .15), (int) (mHeight * .05));
 //        if (st.elapsed() <= 5) { return; }
 //        JSONArray allUnitIDs = gc.getAllUnitIDs();
 //        for (int i = 0; i < allUnitIDs.length(); i++) {
@@ -168,6 +193,11 @@ public class DevPanel extends Stage {
     }
 
     public void gameUpdate(GameModel gameModel) {
+
+
+//        JSONObject hoveredTile = gameModel.getHoveredTile();
+//        if (hoveredTile == null || hoveredTile.isEmpty()) { return; }
+//        mLayersPanel.update(hoveredTile, (int) (mWidth * .15), (int) (mHeight * .05));
 
 //        if (st.elapsed() <= 5) { return; }
 //        JSONArray allUnitIDs = gc.getAllUnitIDs();

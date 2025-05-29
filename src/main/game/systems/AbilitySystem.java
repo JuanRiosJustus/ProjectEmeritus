@@ -21,8 +21,6 @@ public class AbilitySystem extends GameSystem {
     private static final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySystem.class);
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
     private final Map<String, Integer> mState = new LinkedHashMap<>();
-    private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
-    private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private static final int DEFAULT_VISION_RANGE = 8;
     private static final String PASSIVE = "PASSIVE";
 
@@ -79,36 +77,58 @@ public class AbilitySystem extends GameSystem {
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
-        Entity currentTileEntity = getEntityWithID(currentTileID);
-        Entity targetedTileEntity = getEntityWithID(targetedTileID);
         int range = AbilityTable.getInstance().getRange(ability);
         int area = AbilityTable.getInstance().getArea(ability);
 
 
-        boolean shouldUpdateLogger = isUpdated("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
+        boolean shouldUpdateLogger = isUpdated("planning_to_act_logger", unitEntity, ability, targetedTileID);
         if (shouldUpdateLogger) {
-            mLogger.info("{} is planning to use {} on {}", unitEntity, ability, targetedTileEntity);
+            mLogger.info("{} is planning to use {} on {}", unitEntity, ability, targetedTileID);
         }
 
         boolean isUpdated = isUpdated("action_range", currentTileID, range);
         if (isUpdated) {
-            List<String> aos = algorithm.computeAreaOfSight(model, currentTileID, range);
+            // Setup request
+            JSONArray request = model.getTilesInAreaOfSight(GameModel.createGetTilesInAreaOfSightRequest(
+                    currentTileID, range, true
+            ));
+            // Process response
+            List<String> aos = new ArrayList<>();
+            for (int i = 0; i < request.size(); i++) { aos.add(request.getString(i)); }
+            // Apply processing
             abilityComponent.stageRange(aos);
             mLogger.info("Updated area of sight for {}, viewing {} tiles", unitEntity, aos.size());
         }
 
         isUpdated = isUpdated("action_line_of_sight", currentTileID, targetedTileID);
         if (isUpdated) {
-            List<String> los = algorithm.computeLineOfSight(model, currentTileID, targetedTileID);
+            // Setup request
+            JSONArray request = model.getTilesInLineOfSight(GameModel.createGetTilesInLineOfSightRequest(
+                    currentTileID, targetedTileID, true
+            ));
+            // Process response
+            List<String> los = new ArrayList<>();
+            for (int i = 0; i < request.size(); i++) { los.add(request.getString(i)); }
+            // Apply processing
             abilityComponent.stageLineOfSight(los);
             mLogger.info("Updated line of sight for {}, viewing {} tiles", unitEntity, los.size());
         }
 
         isUpdated = isUpdated("action_area_of_effect", targetedTileID, area);
         if (isUpdated) {
-            List<String> aoe = algorithm.computeAreaOfEffect(model, targetedTileID, area);
+            // Setup request
+            JSONArray request = model.getTilesInAreaOfSight(GameModel.createGetTilesInAreaOfSightRequest(
+                    targetedTileID, area - 1, true
+            ));
+            // Process response
+            List<String> aoe = new ArrayList<>();
+            for (int i = 0; i < request.size(); i++) { aoe.add(request.getString(i)); }
+            // Apply processing
             abilityComponent.stageAreaOfEffect(aoe);
-            mLogger.info("Updated area of effect for {} viewing {} tiles", unitEntity, aoe.size());
+            mLogger.info("Updated area of sight for {}, viewing {} tiles", unitEntity, aoe.size());
+//            List<String> aoe = algorithm.computeAreaOfEffect(model, targetedTileID, area);
+//            abilityComponent.stageAreaOfEffect(aoe);
+//            mLogger.info("Updated area of effect for {} viewing {} tiles", unitEntity, aoe.size());
         }
 
         // Below may or may not be used
@@ -134,7 +154,7 @@ public class AbilitySystem extends GameSystem {
         abilityComponent.commit();
 
         mEventBus.publish(CombatSystem.createCombatStartEvent(actingUnitID, ability));
-        mLogger.info("Used from {} on {}", ability, targetedTileEntity);
+        mLogger.info("Used from {} on {}", ability, targetedTileID);
 
         return true;
     }

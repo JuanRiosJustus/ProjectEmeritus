@@ -141,68 +141,45 @@ public class GameAPI {
     public static final String GET_TILES_AT_RADIUS = "radius";
     public static final String GET_TILES_AT_ROW = "row";
     public static final String GET_TILES_AT_COLUMN = "column";
-    public JSONArray getTilesAtRowColumn(GameModel gameModel, JSONObject request) {
-        TileMap tileMap = gameModel.getTileMap();
-
-
-        int radius = request.getIntValue(GET_TILES_AT_RADIUS, 0);
-        int row = request.getIntValue(GET_TILES_AT_ROW);
-        int column = request.getIntValue(GET_TILES_AT_COLUMN);
-
-        TileComponent tile = tileMap.tryFetchingTileAt(row, column);
-        if (tile == null) { return null; }
-
-        // Get tiles for the specified radius
-        JSONArray tiles = new JSONArray();
-        for (row = tile.getRow() - radius; row <= tile.getRow() + radius; row++) {
-            for (column = tile.getColumn() - radius; column <= tile.getColumn() + radius; column++) {
-                TileComponent adjacentTile = tileMap.tryFetchingTileAt(row, column);
-                if (adjacentTile == null) { continue; }
-                tiles.add(adjacentTile);
-            }
-        }
-
-        return tiles;
-    }
 
     public static final String GET_TILES_AT_X = "x";
     public static final String GET_TILES_AT_Y = "y";
 
-    public JSONArray getTilesAtXY(GameModel gameModel, JSONObject request) {
-        GameState gameStateV2 = gameModel.getGameState();
-        TileMap tileMap = gameModel.getTileMap();
-        JSONArray response = mEphemeralArrayResponse;
-        response.clear();
-
-        try {
-            int radius = request.getIntValue(GET_TILES_AT_RADIUS, 0);
-            int x = request.getIntValue(GET_TILES_AT_X);
-            int y = request.getIntValue(GET_TILES_AT_Y);
-
-            int cameraX = gameStateV2.getMainCameraX();
-            int cameraY = gameStateV2.getMainCameraY();
-            int spriteWidth = gameStateV2.getSpriteWidth();
-            int spriteHeight = gameStateV2.getSpriteHeight();
-            int column = (x + cameraX) / spriteWidth;
-            int row = (y +cameraY) / spriteHeight;
-
-            TileComponent tile = tileMap.tryFetchingTileAt(row, column);
-            if (tile == null) { return null; }
-
-            // Get tiles for the specified radius
-            for (row = tile.getRow() - radius; row <= tile.getRow() + radius; row++) {
-                for (column = tile.getColumn() - radius; column <= tile.getColumn() + radius; column++) {
-                    TileComponent adjacentTile = tileMap.tryFetchingTileAt(row, column);
-                    if (adjacentTile == null) { continue; }
-                    response.add(adjacentTile);
-                }
-            }
-        } catch (Exception ex) {
-            response.clear();
-        }
-
-        return response;
-    }
+//    public JSONArray getTilesAtXY(GameModel gameModel, JSONObject request) {
+//        GameState gameStateV2 = gameModel.getGameState();
+//        TileMap tileMap = gameModel.getTileMap();
+//        JSONArray response = mEphemeralArrayResponse;
+//        response.clear();
+//
+//        try {
+//            int radius = request.getIntValue(GET_TILES_AT_RADIUS, 0);
+//            int x = request.getIntValue(GET_TILES_AT_X);
+//            int y = request.getIntValue(GET_TILES_AT_Y);
+//
+//            int cameraX = gameStateV2.getMainCameraX();
+//            int cameraY = gameStateV2.getMainCameraY();
+//            int spriteWidth = gameStateV2.getSpriteWidth();
+//            int spriteHeight = gameStateV2.getSpriteHeight();
+//            int column = (x + cameraX) / spriteWidth;
+//            int row = (y +cameraY) / spriteHeight;
+//
+//            TileComponent tile = tileMap.tryFetchingTileAt(row, column);
+//            if (tile == null) { return null; }
+//
+//            // Get tiles for the specified radius
+//            for (row = tile.getRow() - radius; row <= tile.getRow() + radius; row++) {
+//                for (column = tile.getColumn() - radius; column <= tile.getColumn() + radius; column++) {
+//                    TileComponent adjacentTile = tileMap.tryFetchingTileAt(row, column);
+//                    if (adjacentTile == null) { continue; }
+//                    response.add(adjacentTile);
+//                }
+//            }
+//        } catch (Exception ex) {
+//            response.clear();
+//        }
+//
+//        return response;
+//    }
 
 
 
@@ -272,82 +249,82 @@ public class GameAPI {
 
 
     // TODO
-    private static void stripTerrain(TileMap tileMap, List<JSONObject> selectedTiles, String type, String asset) {
-        if (selectedTiles.isEmpty()) { return; }
-        // Get starting tile
-        JSONObject tileJson = selectedTiles.get(0);
-        TileComponent tile = (TileComponent) tileJson;
-        int heightOfStartingTile = tile.getModifiedElevation();
-        // Fill all tiles
-        Queue<TileComponent> queue = new LinkedList<>();
-        queue.add(tile);
-        Set<TileComponent> set = new HashSet<>();
-        List<TileComponent> tilesToUpdate = new ArrayList<>();
+//    private static void stripTerrain(TileMap tileMap, List<JSONObject> selectedTiles, String type, String asset) {
+//        if (selectedTiles.isEmpty()) { return; }
+//        // Get starting tile
+//        JSONObject tileJson = selectedTiles.get(0);
+//        TileComponent tile = (TileComponent) tileJson;
+//        int heightOfStartingTile = tile.getModifiedElevation();
+//        // Fill all tiles
+//        Queue<TileComponent> queue = new LinkedList<>();
+//        queue.add(tile);
+//        Set<TileComponent> set = new HashSet<>();
+//        List<TileComponent> tilesToUpdate = new ArrayList<>();
+//
+//        while (!queue.isEmpty()) {
+//            TileComponent traversedTile = queue.poll();
+//            // If we've seen he current tile, skip
+//            if (set.contains(traversedTile)) { continue; }
+//            // If the current tile is HIGHER than starting tile, skip
+//            if (heightOfStartingTile < traversedTile.getModifiedElevation() && traversedTile != tile) { continue; }
+//            set.add(traversedTile);
+//            // Mark tile to process
+//            tilesToUpdate.add(traversedTile);
+//            // Collect more tiles
+//            for (Direction direction : Direction.values()) {
+//                int row = traversedTile.getRow() + direction.y;
+//                int column = traversedTile.getColumn() + direction.x;
+//                TileComponent adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
+//                if (adjacentNeighborTile == null) { continue; }
+//                queue.add(adjacentNeighborTile);
+//            }
+//        }
+//        heightOfStartingTile += 1;
+//        for (TileComponent tileToUpdate : tilesToUpdate) {
+//            int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
+//            int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
+//            if (heightDelta <= 0) { continue; }
+//            tileToUpdate.addLayer(asset, type, heightDelta);
+//        }
+//    }
 
-        while (!queue.isEmpty()) {
-            TileComponent traversedTile = queue.poll();
-            // If we've seen he current tile, skip
-            if (set.contains(traversedTile)) { continue; }
-            // If the current tile is HIGHER than starting tile, skip
-            if (heightOfStartingTile < traversedTile.getModifiedElevation() && traversedTile != tile) { continue; }
-            set.add(traversedTile);
-            // Mark tile to process
-            tilesToUpdate.add(traversedTile);
-            // Collect more tiles
-            for (Direction direction : Direction.values()) {
-                int row = traversedTile.getRow() + direction.y;
-                int column = traversedTile.getColumn() + direction.x;
-                TileComponent adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
-                if (adjacentNeighborTile == null) { continue; }
-                queue.add(adjacentNeighborTile);
-            }
-        }
-        heightOfStartingTile += 1;
-        for (TileComponent tileToUpdate : tilesToUpdate) {
-            int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
-            int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
-            if (heightDelta <= 0) { continue; }
-            tileToUpdate.addLayer(asset, type, heightDelta);
-        }
-    }
-
-    private static void tileFillToLevel(TileMap tileMap, List<JSONObject> selectedTiles, String type, String asset) {
-        if (selectedTiles.isEmpty()) { return; }
-        JSONObject tileJson = selectedTiles.get(0);
-        TileComponent tile = (TileComponent) tileJson;
-        int heightOfStartingTile = tile.getModifiedElevation();
-        // Fill all tiles
-        Queue<TileComponent> queue = new LinkedList<>();
-        queue.add(tile);
-        Set<TileComponent> set = new HashSet<>();
-        List<TileComponent> tilesToUpdate = new ArrayList<>();
-
-        while (!queue.isEmpty()) {
-            TileComponent traversedTile = queue.poll();
-            // If we've seen he current tile, skip
-            if (set.contains(traversedTile)) { continue; }
-            // If the current tile is HIGHER than starting tile, skip
-            if (heightOfStartingTile < traversedTile.getModifiedElevation() && traversedTile != tile) { continue; }
-            set.add(traversedTile);
-            // Mark tile to process
-            tilesToUpdate.add(traversedTile);
-            // Collect more tiles
-            for (Direction direction : Direction.values()) {
-                int row = traversedTile.getRow() + direction.y;
-                int column = traversedTile.getColumn() + direction.x;
-                TileComponent adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
-                if (adjacentNeighborTile == null) { continue; }
-                queue.add(adjacentNeighborTile);
-            }
-        }
-        heightOfStartingTile += 1;
-        for (TileComponent tileToUpdate : tilesToUpdate) {
-            int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
-            int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
-            if (heightDelta <= 0) { continue; }
-            tileToUpdate.addLayer(asset, type, heightDelta);
-        }
-    }
+//    private static void tileFillToLevel(TileMap tileMap, List<JSONObject> selectedTiles, String type, String asset) {
+//        if (selectedTiles.isEmpty()) { return; }
+//        JSONObject tileJson = selectedTiles.get(0);
+//        TileComponent tile = (TileComponent) tileJson;
+//        int heightOfStartingTile = tile.getModifiedElevation();
+//        // Fill all tiles
+//        Queue<TileComponent> queue = new LinkedList<>();
+//        queue.add(tile);
+//        Set<TileComponent> set = new HashSet<>();
+//        List<TileComponent> tilesToUpdate = new ArrayList<>();
+//
+//        while (!queue.isEmpty()) {
+//            TileComponent traversedTile = queue.poll();
+//            // If we've seen he current tile, skip
+//            if (set.contains(traversedTile)) { continue; }
+//            // If the current tile is HIGHER than starting tile, skip
+//            if (heightOfStartingTile < traversedTile.getModifiedElevation() && traversedTile != tile) { continue; }
+//            set.add(traversedTile);
+//            // Mark tile to process
+//            tilesToUpdate.add(traversedTile);
+//            // Collect more tiles
+//            for (Direction direction : Direction.values()) {
+//                int row = traversedTile.getRow() + direction.y;
+//                int column = traversedTile.getColumn() + direction.x;
+//                TileComponent adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
+//                if (adjacentNeighborTile == null) { continue; }
+//                queue.add(adjacentNeighborTile);
+//            }
+//        }
+//        heightOfStartingTile += 1;
+//        for (TileComponent tileToUpdate : tilesToUpdate) {
+//            int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
+//            int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
+//            if (heightDelta <= 0) { continue; }
+//            tileToUpdate.addLayer(asset, type, heightDelta);
+//        }
+//    }
 
     public static final String SHOULD_END_THE_TURN = "should.end.the.turn";
     public static final String SHOULD_AUTOMATICALLY_GO_TO_HOME_CONTROLS = "should.automatically.go.to.home.controls";

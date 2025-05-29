@@ -24,6 +24,7 @@ public class GameHud extends GamePanel {
     private final DamagePreviewPanel mDamagePreviewFromPanel;
     private final DamagePreviewPanel mDamagePreviewToPanel;
     private final DevPanel mDevPanel;
+    private final TilerLayersStage mLayersStage;
 
     public GameHud(GameModel gameModel, int width, int height) {
         super(width, height);
@@ -96,8 +97,16 @@ public class GameHud extends GamePanel {
                 }
         );
 
+        mLayersStage = new TilerLayersStage(mainControlsWidth, mainControlsHeight);
+        mLayersStage.show();
+
         mDevPanel = new DevPanel(gameModel, mainControlsWidth, mainControlsHeight);
+        mDevPanel.setX(mLayersStage.getX());
+        mDevPanel.setY(mLayersStage.getY() + mLayersStage.getHeight());
         mDevPanel.show();
+
+
+
 
         mSettingsPanel = new SettingsPanel(
                 mainControlsX,
@@ -275,6 +284,7 @@ public class GameHud extends GamePanel {
     public void gameUpdate(GameModel gameModel) {
 
         mDevPanel.gameUpdate(gameModel);
+        mLayersStage.gameUpdate(gameModel);
 
         mMainControlsPanel.gameUpdate(gameModel);
         mAbilityPanel.gameUpdate(gameModel);

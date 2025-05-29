@@ -1,5 +1,6 @@
 package main.game.systems;
 
+import com.alibaba.fastjson2.JSONArray;
 import main.constants.Direction;
 import main.game.components.*;
 import main.game.components.ActionsComponent;
@@ -9,19 +10,15 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.EntityStore;
-import main.game.systems.actions.behaviors.AggressiveBehavior;
-import main.game.systems.actions.behaviors.RandomnessBehavior;
-import main.input.InputController;
 import main.logging.EmeritusLogger;
 
 import com.alibaba.fastjson2.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MovementSystem extends GameSystem {
     private final EmeritusLogger mLogger = EmeritusLogger.create(MovementSystem.class);
-    private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
-    private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
     public MovementSystem(GameModel gameModel) {
         super(gameModel);
@@ -65,7 +62,7 @@ public class MovementSystem extends GameSystem {
 
     public void update(GameModel model, SystemContext systemContext) { }
 
-    private boolean move(GameModel model, String unitToMoveID, String ToMoveToTileID, boolean commit) {
+    private boolean move(GameModel model, String unitToMoveID, String toMoveToTileID, boolean commit) {
         Entity unitEntity = getEntityWithID(unitToMoveID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -74,7 +71,7 @@ public class MovementSystem extends GameSystem {
 
         String toMoveFromTileID = movementComponent.getCurrentTileID();
         Entity toMoveFromTileEntity = getEntityWithID(toMoveFromTileID);
-        Entity toMoveToTileEntity = getEntityWithID(ToMoveToTileID);
+        Entity toMoveToTileEntity = getEntityWithID(toMoveToTileID);
 
         // This can be flood the console, statelock to prevent flooding, probably not necessary
         boolean shouldUpdateLogger = isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
@@ -85,20 +82,34 @@ public class MovementSystem extends GameSystem {
         // Only update then the tile to move from has changed, or the units move or climb stat changed
         boolean isUpdated = isUpdated("movement_range", toMoveFromTileID, move, climb);
         if (isUpdated) {
-            List<String> range = algorithm.getMovementRange(model, toMoveFromTileID, move);
+            // Setup request
+            JSONArray response = model.getTilesInMovementRange(GameModel.createGetTilesInMovementRangeRequest(
+                    toMoveFromTileID, move, true
+            ));
+            // process response
+            List<String> range = new ArrayList<>();
+            for (int i = 0; i < response.size(); i++) { String tile = response.getString(i); range.add(tile); }
+            // Apply range
             movementComponent.stageMovementRange(range);
             mLogger.info("Updated movement range to {} for {}", range.size(), unitEntity);
         }
 
         // Only update when the tile to move to has changed, or the units move or climb stat changed
-        isUpdated = isUpdated("movement_path", ToMoveToTileID, move, climb);
+        isUpdated = isUpdated("movement_path", toMoveToTileID, move, climb);
         if (isUpdated) {
-            List<String> path = algorithm.getMovementPath(model, toMoveFromTileID, ToMoveToTileID);
+            // Setup request
+            JSONArray response = model.getTilesInMovementPath(GameModel.createGetTilesInMovementPathRequest(
+                    toMoveFromTileID, move, toMoveToTileID, true
+            ));
+            // Process response
+            List<String> path = new ArrayList<>();
+            for (int i = 0; i < response.size(); i++) { String tile = response.getString(i); path.add(tile); }
+            // Apply pathing
             movementComponent.stageMovementPath(path);
             mLogger.info("Updated movement path from {} to {} for {}", toMoveFromTileEntity, toMoveToTileEntity, unitEntity);
         }
 
-        movementComponent.stageTarget(ToMoveToTileID);
+        movementComponent.stageTarget(toMoveToTileID);
 
         // try executing action only if specified
         // - Target is not null
@@ -111,11 +122,9 @@ public class MovementSystem extends GameSystem {
         if (!movementComponent.isValidMovementPath()) { return false; }
 
 
-
         removeUnitFromTile(unitToMoveID);
         movementComponent.commit();
         putUnitOnTile(unitToMoveID);
-
 
         // do the animation for the tile
         mEventBus.publish(AnimationSystem.createPathingAnimationEvent(
@@ -136,6 +145,107 @@ public class MovementSystem extends GameSystem {
         mLogger.info("Moved from {} to {}", toMoveFromTileEntity, toMoveToTileEntity);
         return true;
     }
+
+//    private boolean move(GameModel model, String unitToMoveID, String toMoveToTileID, boolean commit) {
+//        Entity unitEntity = getEntityWithID(unitToMoveID);
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+//        PositionComponent positionComponent = unitEntity.get(PositionComponent.class);
+//        int move = statisticsComponent.getTotalMovement();
+//        int climb = statisticsComponent.getTotalClimb();
+//
+//        String toMoveFromTileID = movementComponent.getCurrentTileID();
+//        Entity toMoveFromTileEntity = getEntityWithID(toMoveFromTileID);
+//        Entity toMoveToTileEntity = getEntityWithID(toMoveToTileID);
+//
+//        // This can be flood the console, statelock to prevent flooding, probably not necessary
+//        boolean shouldUpdateLogger = isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
+//        if (shouldUpdateLogger) {
+////            mLogger.info("{} is planning to move from {} to {}", unitEntity, toMoveFromTileEntity, toMoveToTileEntity);
+//        }
+//
+//        // Only update then the tile to move from has changed, or the units move or climb stat changed
+//        boolean isUpdated = isUpdated("movement_range", toMoveFromTileID, move, climb);
+//        if (isUpdated) {
+////            List<String> range = model.getTilesInMovementRangeInternal(new JSONObject().fluentPut("tile_id", toMoveFromTileID).fluentPut("range", move));
+////            List<String> range = algorithm.getMovementRange(model, toMoveFromTileID, move);
+//            JSONObject request = new JSONObject();
+//            request.put("tile_id", toMoveFromTileID);
+//            request.put("range", move);
+//            JSONArray response = model.getTilesInMovementRange(request);
+//
+//            List<String> range = new ArrayList<>();
+//            for (int i = 0; i < response.size(); i++) {
+//                String tile = response.getString(i);
+//                range.add(tile);
+//            }
+//
+//            movementComponent.stageMovementRange(range);
+//            mLogger.info("Updated movement range to {} for {}", range.size(), unitEntity);
+//        }
+//
+//        // Only update when the tile to move to has changed, or the units move or climb stat changed
+//        isUpdated = isUpdated("movement_path", toMoveToTileID, move, climb);
+//        if (isUpdated) {
+////            List<String> path = algorithm.getMovementPath(model, toMoveFromTileID, ToMoveToTileID);
+////            JSONArray path2 = model.getTileInMovementPath();
+////            movementComponent.stageMovementPath(path);
+////            mLogger.info("Updated movement path from {} to {} for {}", toMoveFromTileEntity, toMoveToTileEntity, unitEntity);
+//
+//            JSONObject request = new JSONObject();
+//            request.put("tile_id", toMoveFromTileID);
+//            request.put("range", move);
+//            request.put("end_tile_id", toMoveToTileID);
+//
+//            JSONArray response = model.getTilesInMovementPath(request);
+//            List<String> path = new ArrayList<>();
+//            for (int i = 0; i < response.size(); i++) {
+//                String tile = response.getString(i);
+//                path.add(tile);
+//            }
+//
+//            movementComponent.stageMovementPath(path);
+//            mLogger.info("Updated movement path from {} to {} for {}", toMoveFromTileEntity, toMoveToTileEntity, unitEntity);
+//        }
+//
+//        movementComponent.stageTarget(toMoveToTileID);
+//
+//        // try executing action only if specified
+//        // - Target is not null
+//        // - Target is within range
+//        // - We are not in preview mode
+//        // - We are targeting the current tile were one
+//        if (!commit) { return false; }
+//        if (toMoveToTileEntity == null) { return false; }
+//        if (toMoveToTileEntity == toMoveFromTileEntity) { return false; }
+//        if (!movementComponent.isValidMovementPath()) { return false; }
+//
+//
+//
+//        removeUnitFromTile(unitToMoveID);
+//        movementComponent.commit();
+//        putUnitOnTile(unitToMoveID);
+//
+//
+//        // do the animation for the tile
+//        mEventBus.publish(AnimationSystem.createPathingAnimationEvent(
+//                unitToMoveID,  movementComponent.getTilesInFinalMovementPath()
+//        ));
+//
+//
+//        model.focusCamerasAndSelectionsOfActiveEntity();
+//
+////        boolean isLockedOnActivityCamera = mGameState.isLockOnActivityCamera();
+////        if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
+////        model.focusCamerasAndSelectionsOfActiveEntity(tileToMoveUnitToID);
+//
+////        DirectionComponent directionComponent = unitEntity.get(DirectionComponent.class);
+////        directionComponent.setDirection(getDirection(currentTile, tileToMoveTo));
+//
+//
+//        mLogger.info("Moved from {} to {}", toMoveFromTileEntity, toMoveToTileEntity);
+//        return true;
+//    }
 
     public void removeUnitFromTile(String unitID) {
         Entity unitEntity = getEntityWithID(unitID);

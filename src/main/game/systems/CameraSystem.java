@@ -1,7 +1,7 @@
 package main.game.systems;
 
 import main.constants.Vector3f;
-import main.game.components.MovementComponent;
+import main.game.components.PositionComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -136,8 +136,8 @@ public class CameraSystem extends GameSystem {
         Vector3f dragOffset = currentMousePosition.subtract(previousMousePosition);
 
         // Move the camera by the offset
-        gameState.setMainCameraX(gameState.getMainCameraX() - (int) dragOffset.x);
-        gameState.setMainCameraY(gameState.getMainCameraY() - (int) dragOffset.y);
+        gameState.setViewportX(gameState.getViewportX() - (int) dragOffset.x);
+        gameState.setViewportY(gameState.getViewportY() - (int) dragOffset.y);
 
         // Ensure minimum momentum for a noticeable release movement
         if (dragOffset.magnitude() < MINIMUM_MOMENTUM) {
@@ -156,9 +156,10 @@ public class CameraSystem extends GameSystem {
         if (gameModel.getGameState().isFixedOnActiveCamera()) {
             String anchoredEntityID = gameModel.getSpeedQueue().peek();
             Entity entity = getEntityWithID(anchoredEntityID);
-            MovementComponent movementComponent = entity.get(MovementComponent.class);
-            setCamera("0", movementComponent.getX(), movementComponent.getY());
-            setCamera("1", movementComponent.getX(), movementComponent.getY());
+//            MovementComponent movementComponent = entity.get(MovementComponent.class);
+            PositionComponent positionComponent = entity.get(PositionComponent.class);
+            setCamera("0", positionComponent.getX(), positionComponent.getY());
+            setCamera("1", positionComponent.getX(), positionComponent.getY());
             return;
         }
 
@@ -210,8 +211,8 @@ public class CameraSystem extends GameSystem {
                 System.currentTimeMillis() - momentumStartTime <= MOMENTUM_DURATION) {
 
             // Apply momentum to camera
-            gameState.setMainCameraX(gameState.getMainCameraX() - (int) momentumVelocity.x);
-            gameState.setMainCameraY(gameState.getMainCameraY() - (int) momentumVelocity.y);
+            gameState.setViewportX(gameState.getViewportX() - (int) momentumVelocity.x);
+            gameState.setViewportY(gameState.getViewportY() - (int) momentumVelocity.y);
 
             // Decay momentum over time
             momentumVelocity.scale(MOMENTUM_DECAY);

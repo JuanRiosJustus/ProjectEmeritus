@@ -31,7 +31,6 @@ public class TileComponent extends Component {
     public final static String OBSTRUCTION = "obstruction";
     public final static String SPAWN_REGION = "spawn_region";
     private static final String ORIGIN_FRAME = "origin_frame";
-    private static final String EMPTY_STRING = "";
     private JSONStack mLayers = null;
 
 
@@ -53,9 +52,9 @@ public class TileComponent extends Component {
 
         mLayers = new JSONStack();
         put(SPAWN_REGION, null);
-        put(COLLIDER, EMPTY_STRING);
-        put(UNIT, EMPTY_STRING);
-        put(STRUCTURE, EMPTY_STRING);
+        put(COLLIDER, null);
+        put(UNIT, null);
+        put(STRUCTURE, null);
 
         for (String key : jsonObject.keySet()) {
             put(key, jsonObject.get(key));
@@ -70,10 +69,10 @@ public class TileComponent extends Component {
      |___|___/___/___|_|\_| |_| |___/_/ \_\____|
      */
 
-    public int getRow() { return getIntValue(ROW); }
-    public int getColumn() { return getIntValue(COLUMN); }
-    public void addStructure(String structureID) { put(STRUCTURE, structureID); }
-    public void deleteStructure() { put(STRUCTURE, EMPTY_STRING); }
+    public int getRow() { return getIntValue(ROW, -1); }
+    public int getColumn() { return getIntValue(COLUMN, -1); }
+    public void putStructureID(String structureID) { put(STRUCTURE, structureID); }
+    public void removetructure() { put(STRUCTURE, null); }
     public String getStructureID() { return getString(STRUCTURE); }
 
 
@@ -96,6 +95,8 @@ public class TileComponent extends Component {
         }
 
         mLayers.push(newLayer);
+
+        put("layers", mLayers);
         put(TOTAL_ELEVATION, getTotalElevation());
     }
     public void removeLayer() { removeLayer(-1); }
@@ -126,7 +127,7 @@ public class TileComponent extends Component {
             obj.put("state", layer.getState());
             obj.put("depth", layer.getDepth());
             obj.put("lowest", range);
-            range += layer.getDepth();
+            range += (layer.getDepth() > 0 ? layer.getDepth() - 1 : 1);
             obj.put("highest", range);
             range += 1;
             layering.add(obj);
@@ -194,15 +195,13 @@ public class TileComponent extends Component {
 
     public boolean isPath() { return true; }
     public boolean isWall() { return false; }
-    public boolean hasUnit() { return !getUnitID().isBlank(); }
-    public boolean hasStructure() { return !getStructureID().isBlank(); }
+    public boolean hasUnit() { return getUnitID() != null && !getUnitID().isBlank(); }
+    public boolean hasStructure() { return getStructureID() != null && !getStructureID().isBlank(); }
     public boolean isOccupied() { return hasUnit() || hasStructure(); }
     public void setSpawnRegion(Object value) { put(SPAWN_REGION, String.valueOf(value)); }
     public String getSpawnRegion() { return getString(SPAWN_REGION); }
     public String getUnitID() { return getString(UNIT); }
-    public void removeUnit() {
-        put(UNIT, EMPTY_STRING);
-
+    public void removeUnit() { put(UNIT, null); }
 
 
 
@@ -228,7 +227,7 @@ public class TileComponent extends Component {
 //        }
 
 //        put(UNIT, EMPTY_STRING);
-    }
+//    }
 
 
     public void setUnit(String unitID) {

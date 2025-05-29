@@ -4,11 +4,14 @@ import javafx.scene.image.Image;
 import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.components.statistics.StatisticsComponent;
+import main.game.components.tile.StructureComponent;
 import main.game.components.tile.TileComponent;
+import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.EntityStore;
 import main.game.systems.InputHandler;
 import main.game.systems.JSONEventBus;
 import main.game.systems.UpdateSystem;
+import main.graphics.AssetPool;
 import main.input.InputController;
 import main.input.Mouse;
 import com.alibaba.fastjson2.JSONArray;
@@ -23,14 +26,17 @@ import java.util.*;
 
 public class GameModel {
     private JSONEventBus mEventBus = null;
-    private TileMap mTileMap = null;
+    private TileMap mTileMap = new TileMap();
     private SpeedQueue mSpeedQueue = null;
     public ActivityLogger mLogger = null;
     public InputHandler mInputHandler = null;
     public UpdateSystem mSystem = null;
     private GameState mGameState = null;
+
+    private final PathingAlgorithms algorithm = new PathingAlgorithms();
     private GameAssetStore mGameAssetStore = null;
     private boolean mRunning = false;
+    public GameModel() { }
     public GameModel(JSONObject rawConfigs, JSONArray map) { setup(rawConfigs, map); }
     public void setup(JSONObject rawConfigs, JSONArray map) {
         GameConfigs configs = new GameConfigs(rawConfigs);
@@ -38,26 +44,27 @@ public class GameModel {
         mTileMap = new TileMap(configs, map);
         mGameState = new GameState(configs);
 
-        mGameState.setSpriteWidth(configs.getOnStartupSpriteWidth())
-                .setSpriteHeight(configs.getOnStartupSpriteHeight())
-                .setOriginalSpriteWidth(configs.getOnStartupSpriteWidth())
-                .setOriginalSpriteHeight(configs.getOnStartupSpriteHeight())
-                .setMainCameraX(configs.getOnStartupCameraX())
-                .setMainCameraY(configs.getOnStartupCameraY())
-                .setMainCameraWidth(configs.getOnStartupCameraWidth())
-                .setMainCameraHeight(configs.getOnStartupCameraHeight());
+        mGameState
+//                .setSpriteWidth(configs.getOnStartupSpriteWidth())
+//                .setSpriteHeight(configs.getOnStartupSpriteHeight())
+//                .setOriginalSpriteWidth(configs.getOnStartupSpriteWidth())
+//                .setOriginalSpriteHeight(configs.getOnStartupSpriteHeight())
+                .setViewportX(configs.getOnStartupCameraX())
+                .setViewportY(configs.getOnStartupCameraY())
+                .setViewportWidth(configs.getViewportWidth())
+                .setViewportHeight(configs.getViewportHeight());
 
         if (configs.setOnStartupCenterCameraOnMap()) {
             Vector3f centerValues = Vector3f.getCenteredVector(
                     0,
                     0,
-                    configs.getOnStartupSpriteWidth() * configs.getColumns(),
-                    configs.getOnStartupSpriteHeight() * configs.getRows(),
-                    configs.getOnStartupCameraWidth(),
-                    configs.getOnStartupCameraHeight()
+                    configs.getOnStartupSpriteWidth() * configs.getMapGenerationColumns(),
+                    configs.getOnStartupSpriteHeight() * configs.getMapGenerationRows(),
+                    configs.getViewportWidth(),
+                    configs.getViewportHeight()
             );
-            mGameState.setMainCameraX(mGameState.getMainCameraX() - centerValues.x);
-            mGameState.setMainCameraY(mGameState.getMainCameraY() - centerValues.y);
+            mGameState.setViewportX(mGameState.getViewportX() - centerValues.x);
+            mGameState.setViewportY(mGameState.getViewportY() - centerValues.y);
         }
 
         mLogger = new ActivityLogger();
@@ -66,8 +73,11 @@ public class GameModel {
         mInputHandler = new InputHandler(mEventBus);
         mSystem = new UpdateSystem(this);
         mTileMap.designateSpawns(true);
+
 //        designateTypicalSpawns();
     }
+
+
 
 //    public JSONArray getSpawnRegions() { return mTileMap.getSpawnRegions(); }
 
@@ -109,10 +119,13 @@ public class GameModel {
     }
 
     public Entity tryFetchingTileWithXY(int x, int y) {
-        int cameraX = mGameState.getMainCameraX();
-        int cameraY = mGameState.getMainCameraY();
+        int cameraX = mGameState.getViewportX();
+        int cameraY = mGameState.getViewportY();
         int spriteWidth = mGameState.getSpriteWidth();
         int spriteHeight = mGameState.getSpriteHeight();
+        if (spriteWidth == 0) {
+            System.out.println("too");
+        }
         int column = (x + cameraX) / spriteWidth;
         int row = (y + cameraY) / spriteHeight;
         return tryFetchingEntityAt(row, column);
@@ -127,25 +140,25 @@ public class GameModel {
 
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
-        int x = mGameState.getMainCameraX();
+        int x = mGameState.getViewportX();
         int spriteWidth = mGameState.getSpriteWidth();
         return x / (double) spriteWidth;
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
-        int x = mGameState.getMainCameraX();
+        int x = mGameState.getViewportX();
         int screenWidth = mGameState.getMainCameraWidth();
         int spriteWidth = mGameState.getSpriteWidth();
         return (double) (x + screenWidth) / spriteWidth;
     }
     public double getVisibleStartOfRows() {
-        int y = mGameState.getMainCameraY();
+        int y = mGameState.getViewportY();
         int spriteHeight = mGameState.getSpriteHeight();
         return y / (double) spriteHeight;
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
-        int y = mGameState.getMainCameraY();
+        int y = mGameState.getViewportY();
         int screenHeight = mGameState.getMainCameraHeight();
         int spriteHeight = mGameState.getSpriteHeight();
         return (double) (y + screenHeight) / spriteHeight;
@@ -211,9 +224,12 @@ public class GameModel {
 
     private static Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
     public TileMap getTileMap() { return mTileMap; }
-    public Entity tryFetchingEntityAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
+    public Entity tryFetchingEntityAt(int row, int column) {
+        String tileID = mTileMap.tryFetchingTileID(row, column);
+        return getEntityWithID(tileID);
+    }
     public String tryFetchingTileEntityID(int row, int column) {
-        return mTileMap.tryFetchingEntityIDAt(row, column);
+        return mTileMap.tryFetchingTileID(row, column);
     }
     public GameState getGameState() { return mGameState; }
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
@@ -414,10 +430,43 @@ public class GameModel {
 
 
 
+    public JSONObject getHoveredTile() {
+        String hoveredTileID = getHoveredTileID();
+        if (hoveredTileID == null) { return null; }
+
+        Entity entity = getEntityWithID(hoveredTileID);
+        TileComponent tile = entity.get(TileComponent.class);
+
+        String structureID = tile.getStructureID();
+        entity = getEntityWithID(structureID);
+        JSONObject structure = null;
+        if (entity != null) {
+            StructureComponent structureComponent = entity.get(StructureComponent.class);
+            String name = structureComponent.getName();
+
+            structure = new JSONObject();
+            structure.put("asset", name);
+        }
+
+        JSONObject hoveredTile = new JSONObject();
+        hoveredTile.put("row", tile.getRow());
+        hoveredTile.put("column", tile.getColumn());
+        hoveredTile.put("base_elevation", tile.getBaseElevation());
+        hoveredTile.put("modified_elevation", tile.getModifiedElevation());
+        hoveredTile.put("layers", tile.getLayers());
+        hoveredTile.put("structure", structure);
+
+
+        return hoveredTile;
+    }
 
 
 
-//    public JSONArray getHoveredTileIDs() { return getGameState().getHoveredTileIDs(); }
+
+
+
+
+    //    public JSONArray getHoveredTileIDs() { return getGameState().getHoveredTileIDs(); }
     public String getHoveredTileID() { return getGameState().getHoveredTileID(); }
 
     public boolean isAbilityPanelOpen() { return getGameState().isAbilityPanelOpen(); }
@@ -562,32 +611,32 @@ public class GameModel {
         }
     }
 
-    public static final String GET_TILES_AT_RADIUS = "radius";
-    public static final String GET_TILES_AT_ROW = "row";
-    public static final String GET_TILES_AT_COLUMN = "column";
-    public JSONArray getTilesAtRowColumn(GameModel gameModel, JSONObject request) {
-        TileMap tileMap = gameModel.getTileMap();
-
-
-        int radius = request.getIntValue(GET_TILES_AT_RADIUS, 0);
-        int row = request.getIntValue(GET_TILES_AT_ROW);
-        int column = request.getIntValue(GET_TILES_AT_COLUMN);
-
-        TileComponent tile = tileMap.tryFetchingTileAt(row, column);
-        if (tile == null) { return null; }
-
-        // Get tiles for the specified radius
-        JSONArray tiles = new JSONArray();
-        for (row = tile.getRow() - radius; row <= tile.getRow() + radius; row++) {
-            for (column = tile.getColumn() - radius; column <= tile.getColumn() + radius; column++) {
-                TileComponent adjacentTile = tileMap.tryFetchingTileAt(row, column);
-                if (adjacentTile == null) { continue; }
-                tiles.add(adjacentTile);
-            }
-        }
-
-        return tiles;
-    }
+//    public static final String GET_TILES_AT_RADIUS = "radius";
+//    public static final String GET_TILES_AT_ROW = "row";
+//    public static final String GET_TILES_AT_COLUMN = "column";
+//    public JSONArray getTilesAtRowColumn(GameModel gameModel, JSONObject request) {
+//        TileMap tileMap = gameModel.getTileMap();
+//
+//
+//        int radius = request.getIntValue(GET_TILES_AT_RADIUS, 0);
+//        int row = request.getIntValue(GET_TILES_AT_ROW);
+//        int column = request.getIntValue(GET_TILES_AT_COLUMN);
+//
+//        TileComponent tile = tileMap.tryFetchingTileAt(row, column);
+//        if (tile == null) { return null; }
+//
+//        // Get tiles for the specified radius
+//        JSONArray tiles = new JSONArray();
+//        for (row = tile.getRow() - radius; row <= tile.getRow() + radius; row++) {
+//            for (column = tile.getColumn() - radius; column <= tile.getColumn() + radius; column++) {
+//                TileComponent adjacentTile = tileMap.tryFetchingTileAt(row, column);
+//                if (adjacentTile == null) { continue; }
+//                tiles.add(adjacentTile);
+//            }
+//        }
+//
+//        return tiles;
+//    }
 
     public static final String GET_TILES_AT_X = "x";
     public static final String GET_TILES_AT_Y = "y";
@@ -1333,11 +1382,6 @@ public class GameModel {
         return response;
     }
 
-    public JSONObject setEntityWaitTimeBetweenActivities(JSONObject request) {
-        JSONObject response = new JSONObject();
-
-        return response;
-    }
 
     public JSONObject setCameraMode(JSONObject request) {
         JSONObject response = new JSONObject();
@@ -1356,40 +1400,59 @@ public class GameModel {
     }
 
     /**
-     * Attempts to place a unit on a tile using the provided {@link JSONObject} data.
+     * Attempts to place a unit on a tile using the provided {@link JSONObject} input.
      *
-     * <p>The input JSON object must include the following fields:</p>
+     * <p>This method will:</p>
      * <ul>
-     *   <li><b>"unit_id"</b> (String): The unique identifier of the unit to be placed.</li>
-     *   <li><b>"tile_id"</b> (String): The unique identifier of the destination tile.</li>
-     *   <li><b>"team_id"</b> (String, optional): The team to which the unit belongs. Defaults to {@code "neutral"} if absent.</li>
+     *   <li>Resolve the destination tile using <b>"tile_id"</b> or fallback to <b>"row"</b> and <b>"column"</b>.</li>
+     *   <li>Stage and commit the unit's movement to the destination tile.</li>
+     *   <li>Assign the unit to the specified team, or to the {@code "neutral"} team by default.</li>
+     *   <li>Add the unit to the turn order queue.</li>
      * </ul>
      *
-     * <p>Example input:</p>
+     * <p>The input JSON object must contain:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): The unique ID of the unit to place.</li>
+     * </ul>
+     * <p>Additionally, one of the following must be provided to identify the tile:</p>
+     * <ul>
+     *   <li><b>"tile_id"</b> (String): The ID of the target tile entity.</li>
+     *   <li><b>"row"</b> (int) and <b>"column"</b> (int): Used if "tile_id" is not given.</li>
+     * </ul>
+     *
+     * <p><b>Optional:</b></p>
+     * <ul>
+     *   <li><b>"team_id"</b> (String): The team to assign the unit to. Defaults to {@code "neutral"}.</li>
+     * </ul>
+     *
+     * <p>If the tile is not navigable or the unit/tile ID is invalid, the method returns {@code null}.</p>
+     *
+     * <p>Example:</p>
      * <pre>{@code
      * {
      *   "unit_id": "fire_dragon_342423-522452-52662-252432",
-     *   "tile_id": "4_2_43242-2555223-5234324-25324",
+     *   "row": 4,
+     *   "column": 2,
      *   "team_id": "Enemy"
      * }
      * }</pre>
      *
-     * @param input the JSON object containing placement data; must not be {@code null}
-     * @return {@code true} if the unit was successfully placed and queued; {@code false} if placement failed
+     * @param request the JSON object containing unit and tile placement data; must not be {@code null}
+     * @return the resolved tile ID where the unit was placed, or {@code null} on failure
      */
-    public boolean setUnitSpawn(JSONObject input) {
-        String tileID = input.getString("tile_id");
-        String unitID = input.getString("unit_id");
-        String teamID = (String) input.getOrDefault("team_id", "neutral");
+    public JSONObject setUnit(JSONObject request) {
+        String tileID = getTile(request);
+        String unitID = request.getString("unit_id");
+        String teamID = (String) request.getOrDefault("team_id", "neutral");
 
         Entity tileEntity = getEntityWithID(tileID);
-        if (tileEntity == null) { return false; }
+        if (tileEntity == null) { return null; }
 
         Entity unitEntity = getEntityWithID(unitID);
-        if (unitEntity == null) { return false; }
+        if (unitEntity == null) { return null; }
 
         TileComponent tile = tileEntity.get(TileComponent.class);
-        if (tile.isNotNavigable()) { return false; }
+        if (tile.isNotNavigable()) { return null; }
 
         tile.setUnit(unitID);
 
@@ -1400,6 +1463,672 @@ public class GameModel {
         mSpeedQueue.add(unitID);
         mGameState.addEntityToTeam(unitID, teamID);
 
-        return true;
+        JSONObject response = getTileWithMetadata(request);
+
+        return response;
     }
+
+    /**
+     * Places a structure on a specified tile by updating the tile's structure component.
+     *
+     * <p>This method allows external systems to assign a structure entity (such as a building, obstacle,
+     * or decoration) to a tile entity in the map. The structure is referenced by its ID and must exist
+     * in the {@link EntityStore}. The tile must also exist and be valid.</p>
+     *
+     * <p>The input JSON object must contain:</p>
+     * <ul>
+     *   <li><b>"structure"</b> (String): The structure to place.</li>
+     *   <li><b>"tile_id"</b> (String): The unique identifier of the tile entity on which the structure should be placed.</li>
+     * </ul>
+     *
+     * <p>If either the structure or tile ID is invalid, or the entities are not found in the store,
+     * this method performs no action.</p>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "structure_id": "fortress",
+     *   "tile_id": "tile_3_4_fds890"
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing structure and tile placement data; must not be {@code null}
+     */
+    public JSONObject setStructure(JSONObject request) {
+        String tileID = getTile(request);
+        String structure = request.getString("structure");
+
+        JSONObject response = new JSONObject();
+        Entity tileEntity = getEntityWithID(tileID);
+        if (tileEntity == null) { return response; }
+        TileComponent tileComponent = tileEntity.get(TileComponent.class);
+
+        if (tileComponent.hasUnit()) { return response; }
+
+        String structureID = EntityStore.getInstance().createStructure(structure);
+        tileComponent.putStructureID(structureID);
+
+        Entity structureEntity = getEntityWithID(structureID);
+        AssetComponent assetComponent = structureEntity.get(AssetComponent.class);
+        assetComponent.putMainID(structureID);
+
+        System.out.println("Put Structure: " + structure);
+
+        return getTileWithMetadata(request);
+    }
+
+    public JSONObject updateLayering(JSONObject request) {
+        String tileID = getTile(request);
+        String function = request.getString("function");
+
+        JSONObject response = new JSONObject();
+        Entity tileEntity = getEntityWithID(tileID);
+        if (tileEntity == null) { return response; }
+        TileComponent tileComponent = tileEntity.get(TileComponent.class);
+
+
+        if (function.equalsIgnoreCase("add")) {
+            try {
+                String asset = (String) request.getOrDefault("asset", tileComponent.getTopLayerAsset());
+                String state = (String) request.getOrDefault("state", tileComponent.getTopLayerState());
+                int depth = request.getInteger("depth");
+                tileComponent.addLayer(asset, state, depth);
+            } catch (Exception ex) {
+                System.out.println("prkookok");
+            }
+        }
+
+        return getTileWithMetadata(request);
+    }
+
+    /**
+     * Retrieves the unique identifier of the unit currently occupying the tile at the specified row and column.
+     *
+     * <p>The input JSON object must include the following fields:</p>
+     * <ul>
+     *   <li><b>"row"</b> (int): The row index of the target tile.</li>
+     *   <li><b>"column"</b> (int): The column index of the target tile.</li>
+     * </ul>
+     *
+     * <p>If the specified tile is invalid or unoccupied, this method returns {@code null}.</p>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "row": 5,
+     *   "column": 2
+     * }
+     * }</pre>
+     *
+     * @param input the JSON object specifying tile coordinates; must not be {@code null}
+     * @return the unique identifier of the unit on the tile, or {@code null} if no unit is present or the tile does not exist
+     */
+    public String getUnitOfTile(JSONObject input) {
+        String tileID = getTile(input);
+        Entity tileEntity = getEntityWithID(tileID);
+        if (tileEntity == null) { return null; }
+
+        TileComponent tileComponent = tileEntity.get(TileComponent.class);
+        String entityID = tileComponent.getUnitID();
+
+        return entityID;
+    }
+
+
+    /**
+     * Retrieves the unique identifier of a tile based on the provided input.
+     *
+     * <p>The input may specify the tile in one of two ways:</p>
+     * <ul>
+     *   <li><b>"tile_id"</b> (String): The unique identifier of the tile. If present, this is returned directly.</li>
+     *   <li><b>"row"</b> (int) and <b>"column"</b> (int): Used to locate the tile ID if "tile_id" is not provided.</li>
+     * </ul>
+     *
+     * <p>If the tile cannot be resolved using either approach, {@code null} is returned.</p>
+     *
+     * <p>Example inputs:</p>
+     * <pre>{@code
+     * { "tile_id": "tile_4_2_xyz" }
+     * }</pre>
+     *
+     * or
+     *
+     * <pre>{@code
+     * { "row": 4, "column": 2 }
+     * }</pre>
+     *
+     * @param input a {@link JSONObject} containing either "tile_id", or "row" and "column"
+     * @return the tile's unique identifier, or {@code null} if not found
+     */
+    private String getTile(JSONObject input) {
+        String tileID = input.getString("tile_id");
+        if (tileID == null) {
+            int row = input.getIntValue("row");
+            int column = input.getIntValue("column");
+            tileID = mTileMap.tryFetchingTileID(row, column);
+        }
+
+        return tileID;
+    }
+
+
+    /**
+     * Retrieves detailed metadata about a tile specified by a row/column or tile ID.
+     *
+     * <p>This method provides a high-level external representation of a tile's spatial
+     * and elevation data. The input {@link JSONObject} must contain either:
+     * <ul>
+     *   <li><b>"tile_id"</b> (String): the ID of the target tile</li>
+     *   <li>or <b>"row"</b> (int) and <b>"column"</b> (int): the coordinates of the tile</li>
+     * </ul>
+     *
+     * <p>The returned {@link JSONObject} contains:
+     * <ul>
+     *   <li><b>"tile_id"</b> (String): the resolved tile ID</li>
+     *   <li><b>"row"</b> (int): the row position of the tile</li>
+     *   <li><b>"column"</b> (int): the column position of the tile</li>
+     *   <li><b>"base_elevation"</b> (int): the base terrain height of the tile</li>
+     *   <li><b>"modified_elevation"</b> (int): the final elevation including all stacked layers</li>
+     * </ul>
+     *
+     * <p>Example usage:
+     * <pre>{@code
+     * {
+     *   "row": 2,
+     *   "column": 5
+     * }
+     * }</pre>
+     *
+     * or
+     *
+     * <pre>{@code
+     * {
+     *   "tile_id": "tile_2_5_abc123"
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing tile coordinates or ID; must not be {@code null}
+     * @return a {@link JSONObject} with detailed tile information, or {@code null} if the tile doesn't exist
+     */
+    public JSONObject getTileWithMetadata(JSONObject request) {
+        String tileID = getTile(request);
+        Entity tileEntity = getEntityWithID(tileID);
+        if (tileEntity == null) { return null; }
+
+        TileComponent tileComponent = tileEntity.get(TileComponent.class);
+
+        // Get the most shallowest of data to ensure mutation cant happen
+        JSONObject result = new JSONObject();
+        for (String key : tileComponent.keySet()) {
+            Object value = tileComponent.get(key);
+            if (value instanceof JSONObject || value instanceof JSONArray) { continue; }
+            result.put(key, value);
+        }
+        result.put("tile_id", tileID);
+        result.put("id", tileID);
+        result.put("row", tileComponent.getRow());
+        result.put("column", tileComponent.getColumn());
+        result.put("base_elevation", tileComponent.getBaseElevation());
+        result.put("modified_elevation", tileComponent.getModifiedElevation());
+        result.put("structure_id", tileComponent.getStructureID());
+        result.put("unit_id", tileComponent.getUnitID());
+        result.put("is_liquid", tileComponent.isTopLayerLiquid());
+
+        return result;
+    }
+
+    /**
+     * Retrieves the unique identifier of the tile currently occupied by a unit.
+     *
+     * <p>The input JSON object must include the following field:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): The unique identifier of the unit whose tile location is being queried.</li>
+     * </ul>
+     *
+     * <p>If the unit ID is invalid or the unit is not currently placed on a tile, this method returns {@code null}.</p>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "unit_id": "warrior_abc123-xyz987"
+     * }
+     * }</pre>
+     *
+     * @param input the JSON object containing the unit ID; must not be {@code null}
+     * @return the unique identifier of the tile the unit is on, or {@code null} if the unit is not found or not placed
+     */
+    public String getTileOfUnit(JSONObject input) {
+        String unitID = input.getString("unit_id");
+        Entity entity = getEntityWithID(unitID);
+        if (entity == null) { return null; }
+
+        MovementComponent movementComponent = entity.get(MovementComponent.class);
+        String tileID = movementComponent.getCurrentTileID();
+
+        return tileID;
+    }
+
+
+
+    public static JSONObject createGetTilesInMovementRangeRequest(String startTileID, int range, boolean respectfully) {
+        JSONObject request = new JSONObject();
+        request.put(START_TILE_ID, startTileID);
+        request.put(RANGE, range);
+        request.put(RESPECTFULLY, respectfully);
+        return request;
+    }
+    /**
+     * Constructs a directed tile graph representing all reachable tiles from a given origin within a specified range.
+     *
+     * <p>The input JSON object must include the following fields:</p>
+     * <ul>
+     *   <li><b>"start_tile_id"</b> (String): The unique identifier of the origin tile.</li>
+     *   <li><b>"range"</b> (int): The maximum number of steps allowed from the origin tile.</li>
+     *   <li><b>"respectfully"</b> (boolean): Whether to respect tile traversal constraints such as navigability or obstruction.</li>
+     * </ul>
+     *
+     * <p>The result is a {@code Map<String, Set<String>>} where each key is a tile ID, and each value is a set of adjacent tile IDs
+     * that can be reached directly from that tile (i.e., outgoing edges in a directional graph).</p>
+     *
+     * <p>This method is typically used for generating movement or interaction graphs in tactical grid-based games,
+     * such as determining all possible destinations a unit can move to, or paths available for area-of-effect abilities.</p>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "tile_id": "3_4_abc123",
+     *   "range": 3,
+     *   "respectfully": true
+     * }
+     * }</pre>
+     *
+     * @param request the JSON object specifying the origin tile, range limit, and movement rules; must not be {@code null}
+     * @return a directed graph of reachable tiles within the specified range and constraints, or an empty map if none are reachable
+     */
+    public JSONArray getTilesInMovementRange(JSONObject request) {
+        String tileID = request.getString(START_TILE_ID);//getTile(request);
+        int range = request.getIntValue(RANGE);
+        boolean respectfully = request.getBooleanValue(RESPECTFULLY, true);
+
+        Map<String, String> graph = mTileMap.createDirectedGraph(tileID, range, respectfully);
+        List<String> inMovementRange = new ArrayList<>(graph.keySet());
+        JSONArray result = new JSONArray(inMovementRange);
+        return result;
+    }
+
+
+
+    private static final String START_TILE_ID = "start_tile_id";
+    private static final String END_TILE_ID = "end_tile_id";
+    private static final String RANGE = "range";
+    private static final String RESPECTFULLY = "respectfully";
+    public static JSONObject createGetTilesInMovementPathRequest(String startTileID, int range, String endTileID, boolean respectfully) {
+        JSONObject request = new JSONObject();
+        request.put(START_TILE_ID, startTileID);
+        request.put(RANGE, range);
+        request.put(END_TILE_ID, endTileID);
+        request.put(RESPECTFULLY, respectfully);
+        return request;
+    }
+    /**
+     * Computes the shortest traversable path from a starting tile to a specified destination tile,
+     * given a movement range and tile traversal constraints.
+     *
+     * <p>This method uses a directed graph (generated via {@code TileMap#createDirectedGraph})
+     * to trace a backwards path from the destination tile to the origin, following recorded parent links.
+     * The graph respects range and optionally tile navigability or obstructions based on the {@code respectfully} flag.</p>
+     *
+     * <p>The input {@link JSONObject} must include:</p>
+     * <ul>
+     *   <li><b>"tile_id"</b> (String): The origin tile ID.</li>
+     *   <li><b>"end_tile_id"</b> (String): The target destination tile ID.</li>
+     *   <li><b>"range"</b> (int): The number of tiles the unit can move.</li>
+     * </ul>
+     *
+     * <p>Optional:</p>
+     * <ul>
+     *   <li><b>"respectfully"</b> (boolean): Whether to respect terrain and movement rules (default: {@code true}).</li>
+     * </ul>
+     *
+     * <p>If no path exists, or either tile is invalid or unreachable within the constraints, the method returns an empty array.</p>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "tile_id": "start_3_4",
+     *   "end_tile_id": "end_5_7",
+     *   "range": 5,
+     *   "respectfully": true
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} specifying start tile, end tile, movement range, and constraints
+     * @return a {@link JSONArray} of tile IDs from origin to destination (inclusive), or an empty array if no valid path exists
+     */
+    public JSONArray getTilesInMovementPath(JSONObject request) {
+        String tileID = request.getString(START_TILE_ID); //getTile(request);
+        int range = request.getIntValue(RANGE);
+        boolean respectfully = request.getBooleanValue(RESPECTFULLY, true);
+        String endTileID = request.getString(END_TILE_ID);
+
+        Map<String, String> graph = mTileMap.createDirectedGraph(tileID, range, respectfully);
+
+        JSONArray response = new JSONArray();
+        if (!graph.containsKey(tileID)) { return response; }
+        if (!graph.containsKey(endTileID)) { return response; }
+
+
+        LinkedList<String> queue = new LinkedList<>();
+        String currentTileID = endTileID;
+        while (currentTileID != null) {
+            queue.addFirst(currentTileID);
+            currentTileID = graph.get(currentTileID);
+        }
+
+        response.addAll(queue);
+        return response;
+    }
+
+
+
+
+
+    public static JSONObject createGetTilesInLineOfSightRequest(String startTileID, String endTileID, boolean respectfully) {
+        JSONObject request = new JSONObject();
+        request.put(START_TILE_ID, startTileID);
+        request.put(END_TILE_ID, endTileID);
+        request.put(RESPECTFULLY, respectfully);
+
+        return request;
+    }
+    /**
+     * Computes the line of sight between two tiles and returns all tiles along that path.
+     * <p>
+     * This method delegates to {@code computeLineOfSightJSON} and returns the tile IDs that form the
+     * visible path from a starting tile to an ending tile. The result may be truncated early if an
+     * obstructing tile is encountered and the {@code respectfully} flag is enabled.
+     *
+     * @param request a {@link JSONObject} containing the following required fields:
+     *                <ul>
+     *                  <li><b>"start_tile_id"</b>: the ID of the tile where the line of sight begins</li>
+     *                  <li><b>"end_tile_id"</b>: the ID of the target tile</li>
+     *                  <li><b>"respectfully"</b> (optional): if true, the line of sight stops when a non-navigable tile is encountered; defaults to true</li>
+     *                </ul>
+     *
+     * @return a {@link JSONArray} of tile ID strings representing the ordered path of tiles
+     *         from the start to the end tile (inclusive), possibly truncated by obstruction.
+     */
+    public JSONArray getTilesInLineOfSight(JSONObject request) {
+        String startTileID = request.getString(START_TILE_ID);
+        String endTileID = request.getString(END_TILE_ID);
+        boolean respectfully = request.getBooleanValue(RESPECTFULLY, true);
+
+        JSONArray response = mTileMap.computeLineOfSightJSON(startTileID, endTileID, respectfully);
+
+        return response;
+    }
+
+
+    public static JSONObject createGetTilesInAreaOfSightRequest(String startTileID, int range, boolean respectfully) {
+        JSONObject request = new JSONObject();
+        request.put(START_TILE_ID, startTileID);
+        request.put(RANGE, range);
+        request.put(RESPECTFULLY, respectfully);
+        return request;
+    }
+    /**
+     * Computes the full area of tiles visible from a given starting tile within a specified range.
+     * <p>
+     * This method delegates to {@code computeAreaOfSightJSON}, returning all tiles that are within a
+     * diamond-shaped Manhattan range and are reachable via line-of-sight from the start tile.
+     * <p>
+     * The result is the union of all line-of-sight paths from the origin to each tile in range,
+     * optionally stopping early for obstructed paths if {@code respectfully} is true.
+     *
+     * @param request a {@link JSONObject} containing the following fields:
+     *                <ul>
+     *                    <li><b>"start_tile_id"</b> (String): the ID of the tile at the origin of sight</li>
+     *                    <li><b>"range"</b> (int): the maximum Manhattan distance for line-of-sight checks</li>
+     *                    <li><b>"respectfully"</b> (boolean, optional): whether to stop lines early when encountering non-navigable tiles; defaults to true</li>
+     *                </ul>
+     *
+     * @return a {@link JSONArray} of tile ID strings representing all tiles visible from the start tile
+     *         within the given range, following line-of-sight constraints.
+     */
+    public JSONArray getTilesInAreaOfSight(JSONObject request) {
+        String startTileID = request.getString(START_TILE_ID);
+        int range = request.getIntValue(RANGE);
+        boolean respectfully = request.getBooleanValue(RESPECTFULLY, true);
+        JSONArray response = mTileMap.computeAreaOfSightJSON(startTileID, range, respectfully);
+        return response;
+    }
+
+    public JSONObject useAbilityOnTarget(JSONObject request) {
+        String actorID = request.getString("actor");
+        String targetTileID = request.getString("tile_id");
+        String ability = request.getString("ability");
+
+        Entity actorEntity = getEntityWithID(actorID);
+
+//        JSONObject tilesWithinRange = getTilesInMovementRange();
+//        StatisticsComponent statisticsComponent = actorEntity.get(StatisticsComponent.class);
+
+
+
+        return null;
+    }
+
+
+    /**
+     * Creates a unit entity with the given parameters and sets its type to "unit".
+     * @param request the unit creation parameters
+     * @return a {@link JSONObject} containing the new unit ID
+     */
+    public JSONObject createUnit(JSONObject request) {
+        request.put("type", "unit");
+        return createEntity(request);
+    }
+    /**
+     * Creates a structure entity with the given parameters and sets its type to "structure".
+     * @param request the structure creation parameters
+     * @return a {@link JSONObject} containing the new structure ID
+     */
+    public JSONObject createStructure(JSONObject request) {
+        request.put("type", "structure");
+        return createEntity(request);
+    }
+    /**
+     * Creates a tile entity with the given parameters and sets its type to "tile".
+     * @param request the tile creation parameters
+     * @return a {@link JSONObject} containing the new tile ID
+     */
+    public JSONObject createTile(JSONObject request) {
+        request.put("type", "unit");
+        return createEntity(request);
+    }
+    /**
+     * Creates a new entity in the game world based on the parameters defined in the request.
+     * <p>
+     * The type of entity is determined by the `"type"` field in the request, which must be one of:
+     * <ul>
+     *     <li><b>"unit"</b> – creates a unit with optional nickname and playable flag</li>
+     *     <li><b>"structure"</b> – creates a structure from a base definition</li>
+     *     <li><b>"tile"</b> – creates a tile at the specified row, column, and elevation</li>
+     * </ul>
+     *
+     * @param request a {@link JSONObject} containing the parameters for entity creation:
+     * <ul>
+     *     <li><b>Common:</b> <code>"type"</code> (required): one of <code>"unit"</code>, <code>"structure"</code>, or <code>"tile"</code></li>
+     *     <li><b>Unit:</b> <code>"unit"</code> (required), <code>"nickname"</code> (optional), <code>"playable"</code> (optional)</li>
+     *     <li><b>Structure:</b> <code>"structure"</code> (required)</li>
+     *     <li><b>Tile:</b> <code>"row"</code> (required), <code>"column"</code> (required), <code>"elevation"</code> (optional)</li>
+     * </ul>
+     *
+     * @return a {@link JSONObject} containing the created entity ID under the key <code>"id"</code>, e.g. <code>{"id": "U123"}</code>.
+     */
+    public JSONObject createEntity(JSONObject request) {
+        String type = request.getString("type");
+
+        String unit = request.getString("unit");
+        String structure = request.getString("structure");
+        String tile = request.getString("tile");
+        String nickname = request.getString("nickname");
+        int row = request.getIntValue("row", -1);
+        int column = request.getIntValue("column", -1);
+        int elevation = request.getIntValue("elevation", -1);
+        boolean playable = request.getBooleanValue("playable", false);
+
+        String id = null;
+        switch (type) {
+            case "unit" -> {
+                if (unit == null && nickname == null && !playable) {
+                    id = EntityStore.getInstance().createUnit(true);
+                } else {
+                    id = EntityStore.getInstance().createUnit(unit, nickname, playable);
+                }
+            }
+            case "structure" -> id = EntityStore.getInstance().createStructure(structure);
+            case "tile" -> id = EntityStore.getInstance().createTile(row, column);
+        }
+
+        JSONObject response = new JSONObject();
+        response.put("id", id);
+        return response;
+    }
+
+
+    public JSONObject getViewportData() {
+        JSONObject result = new JSONObject();
+        result.put("zoom", getGameState().getViewportZoom());
+        result.put("x", getGameState().getViewportX());
+        result.put("y", getGameState().getViewportY());
+        return result;
+    }
+
+    /**
+     * Adjusts the game's viewport zoom level and updates the sprite dimensions accordingly.
+     * <p>
+     * This method sets the zoom factor for the current game state, which affects how tiles and assets
+     * are scaled during rendering. It retrieves the original sprite dimensions and scales them by the
+     * new zoom factor, then updates the game state with the resulting dimensions.
+     *
+     * <p>
+     * Expected input format:
+     * <pre>{@code
+     * {
+     *   "zoom": 1.5
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing:
+     *                <ul>
+     *                  <li><b>"zoom"</b> (float): the new zoom factor (e.g., 1.0 for 100%, 2.0 for 200%)</li>
+     *                </ul>
+     *
+     * @throws IllegalArgumentException if the zoom factor is non-positive
+     */
+    public void setViewportZoom(JSONObject request) {
+        float zoom = request.getFloatValue("zoom");
+
+        getGameState().setViewportZoom(zoom);
+        zoom = getGameState().getViewportZoom();
+
+        int spriteWidth = getGameState().getOriginalSpriteWidth();
+        int spriteHeight = getGameState().getOriginalSpriteHeight();
+
+        int newSpriteWidth = (int) (spriteWidth * zoom);
+        int newSpriteHeight = (int) (spriteHeight * zoom);
+
+        getGameState().setSpriteWidth(newSpriteWidth);
+        getGameState().setSpriteHeight(newSpriteHeight);
+    }
+
+    /**
+     * Initializes and generates a new tile map based on the given request parameters.
+     * <p>
+     * This method sets up a grid of tiles using elevation noise, floor/terrain/liquid assets,
+     * and foundational configuration. It also prepares the internal game state, viewport,
+     * event systems, and input handlers required for gameplay.
+     *
+     * <p><b>Expected request fields:</b>
+     * <ul>
+     *   <li><b>"rows"</b> (int): Number of tile rows in the map</li>
+     *   <li><b>"columns"</b> (int): Number of tile columns in the map</li>
+     *   <li><b>"viewport_width"</b> (int): Width of the game viewport in pixels</li>
+     *   <li><b>"viewport_height"</b> (int): Height of the game viewport in pixels</li>
+     *   <li><b>"viewport_x"</b> (int): Initial horizontal offset of the viewport</li>
+     *   <li><b>"viewport_y"</b> (int): Initial vertical offset of the viewport</li>
+     *   <li><b>"foundation_asset"</b> (String, optional): Asset ID for the tile base layer</li>
+     *   <li><b>"foundation_depth"</b> (int, optional): Number of foundation layers to apply (default: 3)</li>
+     *   <li><b>"liquid_asset"</b> (String, optional): Asset ID for liquid layers</li>
+     *   <li><b>"liquid_elevation"</b> (int, optional): Threshold elevation below which liquid is applied (default: 4)</li>
+     *   <li><b>"terrain_asset"</b> (String, optional): Asset ID for upper terrain layers</li>
+     *   <li><b>"lower_terrain_elevation"</b> (int): Minimum elevation for terrain noise</li>
+     *   <li><b>"upper_terrain_elevation"</b> (int): Maximum elevation for terrain noise</li>
+     *   <li><b>"terrain_elevation_noise"</b> (float): Amplitude/frequency factor for terrain elevation noise</li>
+     *   <li><b>"terrain_elevation_noise_seed"</b> (long, optional): Random seed for deterministic terrain generation</li>
+     * </ul>
+     *
+     * <p>
+     * After tile map generation, this method:
+     * <ul>
+     *   <li>Centers the camera view based on map and viewport dimensions</li>
+     *   <li>Initializes gameplay systems: event bus, logger, input, update loop</li>
+     *   <li>Designates spawn regions using the generated tile data</li>
+     * </ul>
+     *
+     * @param request a {@link JSONObject} containing the map dimensions, asset settings, and viewport config
+     * @return {@code null} (the map is generated internally and accessible through state)
+     */
+    public JSONObject generateTileMap(JSONObject request) {
+        int rows = request.getIntValue("rows", 0);
+        int columns = request.getIntValue("columns", 0);
+        int viewportWidth = request.getIntValue("viewport_width", 0);
+        int viewportHeight = request.getIntValue("viewport_height", 0);
+        int viewportX = request.getIntValue("viewport_x", 0);
+        int viewportY = request.getIntValue("viewport_y", 0);
+
+        mTileMap = new TileMap();
+        mTileMap.generate(request);
+
+        mGameState = new GameState(GameState.getDefaults());
+        mGameState.setViewportX(viewportX)
+                .setViewportY(viewportY)
+                .setViewportWidth(viewportWidth)
+                .setViewportHeight(viewportHeight);
+
+        if (true) {
+            Vector3f centerValues = Vector3f.getCenteredVector(
+                    0,
+                    0,
+                    getGameState().getSpriteWidth() * columns,
+                    getGameState().getSpriteHeight() * rows,
+                    viewportWidth,
+                    viewportHeight
+            );
+            mGameState.setViewportX(mGameState.getViewportX() - centerValues.x);
+            mGameState.setViewportY(mGameState.getViewportY() - centerValues.y);
+        }
+
+        mLogger = new ActivityLogger();
+        mSpeedQueue = new SpeedQueue();;
+        mEventBus = new JSONEventBus();
+        mInputHandler = new InputHandler(mEventBus);
+        mSystem = new UpdateSystem(this);
+        mTileMap.designateSpawns(true);
+
+        return null;
+    }
+//
+//    public float getCameraZoom() { return getGameState().getMapZoom(); }
+
+//    public List<String> getTilesInUnitsMovementRangeInternal(JSONObject input) {
+//        String unitID = input.getString("unit_id");
+//        boolean respectfully = input.getBooleanValue("respectfully", true);
+//
+//        Map<String, Set<String>> graph = mTileMap.createDirectedGraph(tileID, range, respectfully);
+//        List<String> inMovementRange = new ArrayList<>(graph.keySet());
+//        return inMovementRange;
+//    }
+
 }

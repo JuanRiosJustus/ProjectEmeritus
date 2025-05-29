@@ -7,6 +7,7 @@ import main.constants.Point;
 import main.game.components.AssetComponent;
 import main.game.components.DirectionComponent;
 import main.game.components.MovementComponent;
+import main.game.components.PositionComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -28,13 +29,16 @@ public class UnitRenderer extends Renderer {
             if (unitEntity == null) { return; } // Maybe this is because of things happening from seperate thread?
             AssetComponent unitAssetComponent = unitEntity.get(AssetComponent.class);
             MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+            PositionComponent positionComponent = unitEntity.get(PositionComponent.class);
             String id = unitAssetComponent.getMainID();
             Image image = AssetPool.getInstance().getImage(id);
             if (image == null) { return; } // TODO why is this null sometimes??
 
             // Default origin with not animation consideration
-            int x = movementComponent.getX();
-            int y = movementComponent.getY();
+            int x = positionComponent.getX();
+            int y = positionComponent.getY();
+//            int x = movementComponent.getX();
+//            int y = movementComponent.getY();
 
             // Offset Y just a bit so it looks more natural
             y = (int) (y - (model.getGameState().getSpriteHeight() * .1));

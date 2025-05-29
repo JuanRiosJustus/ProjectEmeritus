@@ -33,7 +33,7 @@ public abstract class TileMapAlgorithm {
             int column = mRandom.nextInt(tileMap.getColumns());
 
             // Cell must not already have a structure placed on it
-            Entity tileEntity = tileMap.tryFetchingEntityAt(row, column);
+            Entity tileEntity = null; //tileMap.tryFetchingEntityAt(row, column);
             TileComponent tile = tileEntity.get(TileComponent.class);
 
             if (tile.isNotNavigable()) { continue; }
@@ -46,7 +46,7 @@ public abstract class TileMapAlgorithm {
                 int nextRow = row + direction.y;
                 int nextColumn = column + direction.x;
 
-                Entity adjacentEntity = tileMap.tryFetchingEntityAt(nextRow, nextColumn);
+                Entity adjacentEntity = null; //tileMap.tryFetchingEntityAt(nextRow, nextColumn);
                 if (adjacentEntity == null) { continue; }
                 TileComponent adjacentTile = adjacentEntity.get(TileComponent.class);
                 if (adjacentTile.isNotNavigable()) { hasEntirePathAround = false; }

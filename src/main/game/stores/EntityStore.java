@@ -38,35 +38,36 @@ public class EntityStore {
     }
 
 
-    public String getOrCreateTile(int row, int column, int elevation) {
-        String id = row + "_" + column + "_" + UUID.randomUUID();
+    public String createTile(int row, int column) {
+        String id = createUUID("ROW", row, "COLUMN", column);
         Entity newEntity = createBaseEntity(id, id, TILE_ENTITY);
 
         newEntity.add(new AssetComponent());
-        newEntity.add(new TileComponent(row, column, elevation));
+        newEntity.add(new TileComponent(row, column));
         newEntity.add(new Overlay());
+        newEntity.add(new PositionComponent());
         newEntity.add(new History());
 
         return id;
     }
 
 
-    public String getOrCreateUnit(boolean isAI) {
+    public String createUnit(boolean isAI) {
         List<String> units = new ArrayList<>(UnitTable.getInstance().getAllUnits());
         Collections.shuffle(units);
-        String randomUnit = units.get(0);
+        String randomUnit = units.getFirst();
         String nickname = RandomUtils.createRandomName(3, 6);
-        return getOrCreateUnit(randomUnit, nickname, isAI);
+        return createUnit(randomUnit, nickname, isAI);
     }
-    public String getOrCreateUnit(String unit, String nickname, boolean isAI) {
-
-        String id = unit + "_" + nickname + "_" + UUID.randomUUID();
+    public String createUnit(String unit, String nickname, boolean isAI) {
+        String id = createUUID("UNIT", unit, "NICKNAME", nickname);
         Entity newEntity = createBaseEntity(id, nickname, UNIT_ENTITY);
 
         newEntity.add(new ActionsComponent());
         newEntity.add(new AIComponent(isAI));
         newEntity.add(new AbilityComponent());
         newEntity.add(new MovementComponent());
+        newEntity.add(new PositionComponent());
         newEntity.add(new AnimationComponent());
         newEntity.add(new Overlay());
         newEntity.add(new TagComponent());
@@ -97,70 +98,20 @@ public class EntityStore {
         statisticsComponent.putUnit(unit);
 
 
-
-
-        // Add any passive effects from the abilities to the units
-//        for (int index = 0; index < otherAbility.size(); index++) {
-//            String ability = otherAbility.getString(index);
-//            JSONArray attributeModifiers = AbilityTable.getInstance().getAttributes(ability);
-//            if (!attributeModifiers.isEmpty()) {
-//                for (int i = 0; i < attributeModifiers.size(); i++) {
-//                    JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
-//                    String modifier = AbilityTable.getInstance().getScalingType(attributeModifier);
-//                    String attribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
-//                    float magnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
-//                }
-//                System.out.println("toto");
-//            }
-//        }
-
-//        JSONArray attributeModifiers = AbilityTable.getInstance().getAttributes(passiveAbility);
-//        if (!attributeModifiers.isEmpty()) {
-//            for (int i = 0; i < attributeModifiers.size(); i++) {
-//                JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
-//                String scalingType = AbilityTable.getInstance().getScalingType(attributeModifier);
-//                String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
-//                float scalingMagnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
-//                boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(attributeModifier);
-//
-//
-//                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(scalingAttribute, scalingType);
-//                float value = baseModifiedTotalMissingCurrent * scalingMagnitude;
-//                if (isBaseScaling) {
-//                    value = scalingMagnitude;
-//                }
-//
-//                statisticsComponent.putAdditiveModification(scalingAttribute, passiveAbility, value, 2);
-//            }
-//
-//            statisticsComponent.addTag(passiveAbility);
-//            System.out.println("toto");
-//        }
-
-
-
-
-
         newEntity.add(statisticsComponent);
 
         return id;
     }
 
 
-    public String getOrCreateStructure(String structure) {
-        return getOrCreateStructure(null, structure);
-    }
-    public String getOrCreateStructure(String id, String structure) {
-
-        if (mEntityMap.containsKey(id)) { return id; }
-        if (id == null) { id = UUID.randomUUID().toString(); }
-        if (structure == null) { structure = id; }
-
+    public String createStructure(String structure) {
+        String id = createUUID("STRUCTURE", structure);
         Entity newEntity = createBaseEntity(id, structure, STRUCTURE_ENTITY);
 
         newEntity.add(new StatisticsComponent());
         newEntity.add(new AssetComponent());
         newEntity.add(new StructureComponent(structure));
+        newEntity.add(new PositionComponent());
 
         return id;
     }
@@ -215,5 +166,17 @@ public class EntityStore {
         }
 
         return result;
+    }
+
+    private static String createUUID(Object... args) {
+        StringBuilder sb = new StringBuilder();
+        if (args.length > 0 && args.length % 2 == 0) {
+            for (int i = 0; i < args.length; i += 2) {
+                Object key = String.valueOf(args[i]);
+                Object value = String.valueOf(args[i + 1]);
+                sb.append(key).append("_").append(value).append("___");
+            }
+        }
+        return sb.toString() + UUID.randomUUID();
     }
 }

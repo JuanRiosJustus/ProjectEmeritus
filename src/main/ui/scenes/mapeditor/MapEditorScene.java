@@ -14,7 +14,6 @@ import main.game.stores.FontPool;
 import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;
 import main.constants.JavaFXUtils;
-import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
@@ -54,7 +53,7 @@ public class MapEditorScene extends EngineRunnable {
     private StackPane mStackPane = new StackPane();
     private MapEditorSceneGeneratorPanel mGeneratorPanel = null;
     private MapEditorSceneEditorPanel mEditorPanel = null;
-    private MapEditorSceneLayersPanel mLayersPanel = null;
+    private TileLayersPanel mLayersPanel = null;
     private Tuple<HBox, Label, ComboBox<String>> mMapTileSelectionBrushMode = null;
 
 
@@ -71,7 +70,7 @@ public class MapEditorScene extends EngineRunnable {
         mDisplayPane.setBackground(new Background(new BackgroundFill(Color.ORCHID, CornerRadii.EMPTY, Insets.EMPTY)));
 
         Pane mTileLayerPane = createWrapperPane(mWidth, mHeight);
-        mLayersPanel = new MapEditorSceneLayersPanel(20, mHeight - 40, 200, 30);
+        mLayersPanel = new TileLayersPanel(20, mHeight - 40, 200, 30);
         mTileLayerPane.getChildren().add(mLayersPanel);
 
 
@@ -300,14 +299,15 @@ public class MapEditorScene extends EngineRunnable {
             GameConfigs gc = GameConfigs.getDefaults()
                     .setOnStartupSpriteWidth(spriteWidth)
                     .setOnStartupSpriteHeight(spriteHeight)
-                    .setOnStartupCameraWidth(viewportWidth)
-                    .setOnStartupCameraHeight(viewportHeight)
+                    .setViewportWidth(viewportWidth)
+                    .setViewportHeight(viewportHeight)
                     .setMapGenerationRows(rows)
                     .setMapGenerationColumns(columns)
-                    .setMapGenerationTerrainMinimumElevation(minElevation)
+                    .setMapGenerationTerrainHeightNoise(.75f)
+                    .setMapGenerationTerrainStartingElevation(minElevation)
                     .setMapGenerationLiquidElevation(liquidElevation)
-                    .setMapGenerationTerrainMaximumElevation(maxElevation)
-                    .setMapGenerationNoiseZoom((float) noiseZoom)
+                    .setMapGenerationTerrainEndingElevation(maxElevation)
+                    .setMapGenerationTerrainHeightNoise((float) noiseZoom)
                     .setMapGenerationTerrainAsset("./" + terrain)
                     .setMapGenerationLiquidAsset("./" + liquid)
                     .setMapGenerationStructureAssets(List.of("./" + structure));

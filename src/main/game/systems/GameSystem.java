@@ -6,9 +6,7 @@ import main.game.main.GameModel;
 import main.game.main.GameState;
 import main.game.stores.EntityStore;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.SplittableRandom;
+import java.util.*;
 
 public abstract class GameSystem {
     protected final SplittableRandom mRandom = new SplittableRandom();
@@ -16,6 +14,7 @@ public abstract class GameSystem {
     protected GameState mGameState = null;
     protected GameModel mGameModel = null;
     private final Map<String, HashSlingingSlasher> mCheckSumMap = new LinkedHashMap<>();
+    private final Map<String, Integer> mHashMap = new HashMap<>();
 
     public GameSystem(GameModel gameModel) {
         mGameState = gameModel.getGameState();
@@ -26,14 +25,28 @@ public abstract class GameSystem {
     public void update(GameModel model, SystemContext systemContext) { }
     public static Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
 
+//    protected boolean isUpdated(String key, Object... values) {
+//        HashSlingingSlasher checkSum = mCheckSumMap.get(key);
+//        if (checkSum != null) {
+//            return checkSum.setOnDifference(values);
+//        }
+//
+//        checkSum = new HashSlingingSlasher();
+//        mCheckSumMap.put(key, checkSum);
+//        return checkSum.setOnDifference(values);
+//    }
+
+
     protected boolean isUpdated(String key, Object... values) {
-        HashSlingingSlasher checkSum = mCheckSumMap.get(key);
-        if (checkSum != null) {
-            return checkSum.setOnDifference(values);
+        int previousHashcode = mHashMap.getOrDefault(key, -1);
+        int currentHashcode = Objects.hash(values);
+
+        boolean updated = false;
+        if (previousHashcode != currentHashcode) {
+            updated = true;
+            mHashMap.put(key, currentHashcode);
         }
 
-        checkSum = new HashSlingingSlasher();
-        mCheckSumMap.put(key, checkSum);
-        return checkSum.setOnDifference(values);
+        return updated;
     }
 }
