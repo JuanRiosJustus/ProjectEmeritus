@@ -131,6 +131,10 @@ public class StatisticsComponent extends Component {
         Attribute statisticNode = mAttributeMap.get(attribute);
         return statisticNode.getCurrent();
     }
+    public int getMissing(String attribute) {
+        Attribute statisticNode = mAttributeMap.get(attribute);
+        return statisticNode.getMissing();
+    }
     public float getScaling(String attribute, String type) {
         Attribute statisticNode = mAttributeMap.get(attribute);
         return statisticNode.getScaling(type);
@@ -150,13 +154,19 @@ public class StatisticsComponent extends Component {
 //        recalculateHash();
 //    }
 
+    public void putModification(String source, String name, String attribute, float value) {
+        Attribute node = mAttributeMap.get(attribute);
+        node.putModificationV2(source, name, value);
+        recalculateHash();
+    }
+
     public void putAdditiveModification(String source, String attribute, float value) {
         Attribute node = mAttributeMap.get(attribute);
         node.putAdditiveModification(source, value);
         recalculateHash();
     }
 
-    public void putMultiplicativeModification(String attribute, String source, float value) {
+    public void putMultiplicativeModification(String source, String attribute, float value) {
         Attribute node = mAttributeMap.get(attribute);
         node.putMultiplicativeModification(source, value);
         recalculateHash();

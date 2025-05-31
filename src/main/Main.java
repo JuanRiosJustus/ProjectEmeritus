@@ -12,6 +12,7 @@ import main.game.main.GameConfigs;
 import main.game.main.GameController;
 import main.game.stores.AbilityTable;
 import main.game.stores.UnitTable;
+import main.graphics.AssetPool;
 import main.state.UserSaveStateManager;
 import main.logging.EmeritusLogger;
 import main.game.stores.EntityStore;
@@ -20,6 +21,7 @@ import main.ui.scenes.MenuScene;
 
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 
 public class Main extends Application {
@@ -37,10 +39,12 @@ public class Main extends Application {
 
         EngineController engineController = EngineController.getInstance();
 
-        GameController gameController = GameController.createVariousHeightTestMapWithLiquid(12, 15, 1500, 950);
-        gameController.setCameraZoom(new JSONObject().fluentPut("zoom", 1));
-//        GameController gameController = GameController.createFlatTestMapWithLiquid(8, 12, 1500, 950);
+        GameController gameController = GameController.createVariousHeightTestMapWithLiquid(10, 13, 1500, 950);
+        gameController.setCameraZoom(new JSONObject().fluentPut("zoom", 1.4));
 
+        List<String> structures = AssetPool.getInstance().getStructureTileSets();
+        String structure = structures.get(new Random().nextInt(structures.size()));
+        gameController.setStructure(new JSONObject().fluentPut("bulk", true).fluentPut("chance", .25).fluentPut("structure", structure));
 
 
         setup(gameController, 5);

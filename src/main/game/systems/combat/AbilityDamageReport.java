@@ -92,7 +92,7 @@ public class AbilityDamageReport  {
         Map<String, Float> damageMap = new LinkedHashMap<>();
         for (int i = 0; i < rawDamages.size(); i++) {
             JSONObject damage = rawDamages.getJSONObject(i);
-            String targetAttribute = AbilityTable.getInstance().getTargetAttribute(damage);
+            String targetAttribute = AbilityTable.getInstance().getCostedAttribute(damage);
             String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(damage);
             String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(damage);
             float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(damage);

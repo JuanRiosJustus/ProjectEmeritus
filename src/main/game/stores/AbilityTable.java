@@ -296,11 +296,9 @@ public class AbilityTable {
         JSONObject result = getOrCacheResult(ability);
         return result.getJSONArray("costs");
     }
-    public String getTargetAttribute(JSONObject resourceObject) {
-        return resourceObject.getString("target_attribute");
+    public String getCostedAttribute(JSONObject resourceObject) {
+        return resourceObject.getString("costed_attribute");
     }
-
-//    public Map<String, Float> get
     public String getScalingAttributeScaling(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_SCALING); }
     public boolean isBaseScaling(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_SCALING).equals("base"); }
     public String getScalingAttributeKey(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_KEY); }

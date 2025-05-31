@@ -91,8 +91,8 @@ public class GameController extends EngineRunnable {
                 .fluentPut("foundation_depth", 3)
                 .fluentPut("lower_terrain_elevation", 3)
                 .fluentPut("liquid_elevation", 4)
-                .fluentPut("upper_terrain_elevation", 6)
-                .fluentPut("terrain_elevation_noise", .777)
+                .fluentPut("upper_terrain_elevation", 8)
+                .fluentPut("terrain_elevation_noise", .8)
         );
         return gameController;
     }
@@ -502,6 +502,164 @@ public class GameController extends EngineRunnable {
      */
     public JSONArray getTileInAreaOfSight(JSONObject request) { return mGameModel.getTilesInAreaOfSight(request); }
 
+    /**
+     * Retrieves detailed statistics for a specific attribute from a unit entity.
+     *
+     * <p>This method returns the breakdown of an attribute's values for a unit, including:</p>
+     * <ul>
+     *   <li><b>base</b>: The initial, unmodified value of the attribute.</li>
+     *   <li><b>modified</b>: The value after applying permanent modifiers (e.g. gear, passive effects).</li>
+     *   <li><b>current</b>: The current in-battle value (e.g. after taking damage or receiving a buff).</li>
+     *   <li><b>missing</b>: The difference between the total and the current value.</li>
+     *   <li><b>total</b>: The maximum attainable value after all modifiers.</li>
+     * </ul>
+     *
+     * <p>The request must include:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): The unique identifier of the unit entity.</li>
+     *   <li><b>"attribute"</b> (String): The name of the attribute to query (e.g., "hp", "attack").</li>
+     * </ul>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "unit_id": "unit_abc123",
+     *   "attribute": "hp"
+     * }
+     * }</pre>
+     *
+     * <p>Example output:</p>
+     * <pre>{@code
+     * {
+     *   "base": 100,
+     *   "modified": 120,
+     *   "current": 85,
+     *   "missing": 35,
+     *   "total": 120
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing the unit ID and attribute name
+     * @return a {@link JSONObject} containing the base, modified, current, missing, and total values of the attribute
+     */
+    public JSONObject getStatisticsFromUnit(JSONObject request) {
+        return mGameModel.getStatisticsFromUnit(request);
+    }
+
+    /**
+     * Applies a named additive or multiplicative statistic modification to a unit's attribute.
+     *
+     * <p>This method calculates a value to add (or subtract) based on a specified scaling rule
+     * and applies it as a named modifier to a target unit's attribute. The modification is stored
+     * under a given source and name, allowing later reference or removal. It supports both flat
+     * and percent-based modifications.</p>
+     *
+     * <p>The JSON input must include the following fields:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): ID of the unit to modify.</li>
+     *   <li><b>"attribute"</b> (String): The attribute to modify (e.g., "hp", "attack").</li>
+     *   <li><b>"name"</b> (String): A unique name for this specific modifier (used for replacement or removal).</li>
+     *   <li><b>"value"</b> (float): The amount to apply. Treated as a flat value unless scaling is specified.</li>
+     * </ul>
+     *
+     * <p>Optional fields:</p>
+     * <ul>
+     *   <li><b>"scaling"</b> (String): Optional scaling method; valid values are:
+     *     <ul>
+     *       <li><code>"flat"</code>: Apply the value as-is.</li>
+     *       <li><code>"base"</code>: Scale based on the base value of the attribute.</li>
+     *       <li><code>"modified"</code>: Scale based on the modified (base + additive) value.</li>
+     *       <li><code>"total"</code> or <code>"max"</code>: Scale based on the total (after all modifiers).</li>
+     *       <li><code>"current"</code>: Scale based on the current value.</li>
+     *       <li><code>"missing"</code>: Scale based on the difference between total and current.</li>
+     *     </ul>
+     *   </li>
+     *   <li><b>"source"</b> (String): Logical group or system applying the modifier (default: "system").</li>
+     * </ul>
+     *
+     * <p>Returns a JSON object with the following response fields:</p>
+     * <ul>
+     *   <li><b>"before"</b>: The total value of the attribute before applying the modifier.</li>
+     *   <li><b>"after"</b>: The total value after the modifier is applied.</li>
+     *   <li><b>"delta"</b>: The difference between before and after.</li>
+     *   <li><b>"source"</b>: The source string used for this modification.</li>
+     *   <li><b>"scaling"</b>: The scaling mode applied ("flat" by default).</li>
+     *   <li><b>"error"</b>: A message if the request is invalid or the scaling source is not available.</li>
+     * </ul>
+     *
+     * <p>Example usage:</p>
+     * <pre>{@code
+     * {
+     *   "unit_id": "unit_123",
+     *   "attribute": "hp",
+     *   "name": "regen_buff",
+     *   "value": 0.15,
+     *   "scaling": "base",
+     *   "source": "regen_system"
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing unit ID, attribute, value, and scaling mode
+     * @return a {@link JSONObject} with the result of the operation, including before/after stats or an error
+     */
+    public JSONObject addUOrSubtractUnitStatisticModification(JSONObject request) {
+        return mGameModel.addUOrSubtractUnitStatisticModification(request);
+    }
+
+    public JSONObject addUOrSubtractFromUnitStatisticResource(JSONObject request) {
+        return mGameModel.addUOrSubtractFromUnitStatisticResource(request);
+    }
+    public JSONObject useAbility(JSONObject request) {
+        return mGameModel.useAbilityOnTarget(request);
+    }
+
+    public JSONObject canPayAbilityCost(JSONObject request) {
+        return mGameModel.payAbilityCost(request);
+    }
+
+    /**
+     * Places a structure on a specified tile or randomly distributes structures across the entire tile map.
+     *
+     * <p>This method allows a structure (e.g., building, obstacle, decoration) to be assigned to a tile by
+     * updating the tile's structure component. The placement can be done for a single tile or in bulk across
+     * the entire map depending on the {@code "bulk"} flag in the input.</p>
+     *
+     * <p><b>Input fields:</b></p>
+     * <ul>
+     *   <li><b>"structure"</b> (String): The ID or type of structure to create and place</li>
+     *   <li><b>"tile_id"</b> (String): The ID of the target tile (only required for non-bulk placement)</li>
+     *   <li><b>"bulk"</b> (boolean, optional): If true, places structures across the map using random chance</li>
+     *   <li><b>"chance"</b> (float, optional): Used with bulk placement; a value from 0.0 to 1.0 indicating
+     *       the probability that a structure will be placed on each tile (e.g., 0.25 = 25% chance)</li>
+     * </ul>
+     *
+     * <p><b>Placement rules:</b></p>
+     * <ul>
+     *   <li>Tiles already containing a unit or liquid at the top layer will be skipped</li>
+     *   <li>Structure entities are created via {@link EntityStore#createStructure}</li>
+     *   <li>Each placed structure is associated with its tile and given a main asset ID</li>
+     * </ul>
+     *
+     * <p><b>Examples:</b></p>
+     *
+     * <pre>{@code
+     * // Single placement
+     * {
+     *   "structure": "watchtower",
+     *   "tile_id": "tile_3_4_abc123"
+     * }
+     *
+     * // Bulk placement with 30% chance per tile
+     * {
+     *   "structure": "tree",
+     *   "bulk": true,
+     *   "chance": 0.3
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing structure placement data
+     * @return the updated tile's metadata as a {@link JSONObject}, or an empty object if placement failed
+     */
     public JSONObject setStructure(JSONObject request) {
         return mGameModel.setStructure(request);
     }

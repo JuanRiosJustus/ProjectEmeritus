@@ -1428,4 +1428,100 @@ public class TileMap extends JSONArray {
 //
 //        System.out.println("-------------------");
 //    }
+
+
+    public List<String> getShortestPathAStar(String startTileID, String endTileID) {
+        if (startTileID == null || endTileID == null) return Collections.emptyList();
+
+        Entity startEntity = getEntityWithID(startTileID);
+        Entity endEntity = getEntityWithID(endTileID);
+        if (startEntity == null || endEntity == null) return Collections.emptyList();
+
+        TileComponent startTile = startEntity.get(TileComponent.class);
+        TileComponent endTile = endEntity.get(TileComponent.class);
+
+        Map<String, Integer> gScore = new HashMap<>();
+        Map<String, Integer> fScore = new HashMap<>();
+        Map<String, String> cameFrom = new HashMap<>();
+        Set<String> closedSet = new HashSet<>();
+
+        Comparator<String> comparator = Comparator.comparingInt(fScore::get);
+        PriorityQueue<String> openSet = new PriorityQueue<>(comparator);
+
+        gScore.put(startTileID, 0);
+        fScore.put(startTileID, heuristic(startTileID, endTileID));
+        openSet.add(startTileID);
+
+        while (!openSet.isEmpty()) {
+            String current = openSet.poll();
+            if (current.equals(endTileID)) {
+                return reconstructPath(cameFrom, current);
+            }
+
+            closedSet.add(current);
+
+            for (String neighborID : getNavigableNeighbors(current)) {
+                if (closedSet.contains(neighborID)) continue;
+
+                int tentativeG = gScore.getOrDefault(current, Integer.MAX_VALUE) + 1;
+                if (tentativeG < gScore.getOrDefault(neighborID, Integer.MAX_VALUE)) {
+                    cameFrom.put(neighborID, current);
+                    gScore.put(neighborID, tentativeG);
+
+                    Entity neighborEntity = getEntityWithID(neighborID);
+                    TileComponent neighborTile = neighborEntity.get(TileComponent.class);
+                    int f = tentativeG + heuristic(neighborID, endTileID);
+                    fScore.put(neighborID, f);
+                    if (!openSet.contains(neighborID)) {
+                        openSet.add(neighborID);
+                    }
+                }
+            }
+        }
+
+        return Collections.emptyList(); // No path found
+    }
+
+    private int heuristic(String startTileID, String endTileID) {
+        Entity startEntity = getEntityWithID(startTileID);
+        TileComponent startTile = startEntity.get(TileComponent.class);
+
+        Entity endEntity = getEntityWithID(endTileID);
+        TileComponent endTile = endEntity.get(TileComponent.class);
+
+        return Math.abs(startTile.getRow() - endTile.getRow()) + Math.abs(startTile.getColumn() - endTile.getColumn());
+    }
+
+    private List<String> reconstructPath(Map<String, String> cameFrom, String current) {
+        LinkedList<String> path = new LinkedList<>();
+        path.addFirst(current);
+        while (cameFrom.containsKey(current)) {
+            current = cameFrom.get(current);
+            path.addFirst(current);
+        }
+        return path;
+    }
+
+    private List<String> getNavigableNeighbors(String tileID) {
+        Entity entity = getEntityWithID(tileID);
+        TileComponent tile = entity.get(TileComponent.class);
+        int row = tile.getRow();
+        int col = tile.getColumn();
+
+        List<String> neighbors = new ArrayList<>();
+        for (Direction direction : Direction.cardinal) {
+            int neighborRow = row + direction.y;
+            int neighborColumn = col + direction.x;
+            String neighborID = tryFetchingTileID(neighborRow, neighborColumn);
+            if (neighborID == null) { continue; }
+
+            Entity neighbor = getEntityWithID(neighborID);
+            if (neighbor == null) { continue; }
+
+            TileComponent nTile = neighbor.get(TileComponent.class);
+            if (nTile.isNotNavigable()) { continue; }
+            neighbors.add(neighborID);
+        }
+        return neighbors;
+    }
 }

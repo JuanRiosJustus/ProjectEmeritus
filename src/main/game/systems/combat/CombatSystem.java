@@ -145,7 +145,7 @@ public class CombatSystem extends GameSystem {
 
         for (int i = 0; i < costs.size(); i++) {
             JSONObject cost = costs.getJSONObject(i);
-            String targetAttribute = AbilityTable.getInstance().getTargetAttribute(cost);
+            String targetAttribute = AbilityTable.getInstance().getCostedAttribute(cost);
             String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(cost);
             String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(cost);
             float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(cost);
@@ -164,7 +164,6 @@ public class CombatSystem extends GameSystem {
             float newAccruedCost = currentAccruedCost + additionalCost;
             costMap.put(targetAttribute,newAccruedCost);
         }
-
 
         mLogger.info("Finished constructing cost mappings for {} to use {}", userEntity, ability);
         return costMap;
@@ -313,7 +312,7 @@ public class CombatSystem extends GameSystem {
         // Calculate the raw damage from the ability
         for (int i = 0; i < rawDamages.size(); i++) {
             JSONObject damage = rawDamages.getJSONObject(i);
-            String targetAttribute = AbilityTable.getInstance().getTargetAttribute(damage);
+            String targetAttribute = AbilityTable.getInstance().getCostedAttribute(damage);
             String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(damage);
             String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(damage);
             float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(damage);

@@ -40,12 +40,8 @@ public class Attribute {
         mDirty = true;
     }
 
-    public void putAdditiveModification(String source, float value) {
-        putModification(source, ADDITIVE, value);
-    }
-    public void putMultiplicativeModification(String source, float value) {
-        putModification(source, MULTIPLICATIVE, value);
-    }
+    public void putAdditiveModification(String source, float value) { putModification(source, ADDITIVE, value); }
+    public void putMultiplicativeModification(String source, float value) { putModification(source, MULTIPLICATIVE, value); }
 
 //    public void putAdditiveModification(String source, float value) {
 //        putModification(ADDITIVE, source, value, -1);
@@ -61,6 +57,38 @@ public class Attribute {
     public void removeModification(String key) {
         mAdditiveMap.remove(key);
         mMultiplicativeMap.remove(key);
+    }
+
+    public void putModificationV2(String source, String name, float value) {
+        mAdditiveMap.put(source, value);
+//
+        float modifiedValue = 0;
+
+        for (Map.Entry<String, Float> entry : mAdditiveMap.entrySet()) {
+            String entrySource = entry.getKey();
+            Float entryValue = entry.getValue();
+            modifiedValue += entryValue;
+        }
+
+
+        mTotal = mBase + modifiedValue;
+
+        if (mCurrent > mTotal) {
+            mCurrent = mTotal;
+        } else if (mCurrent < 0) {
+            mCurrent = 0;
+        }
+//        mAgeMapping.put(source, 0);
+//        mDurationMapping.put(source, duration);
+        mDirty = true;
+//        // We can update the hash here because its not going to be updated outside of this
+//
+//        int base = getBase(); // Base value remains unchanged
+//        int modification = getModified(); // Modified value is the total minus base
+//        int current = getCurrent();
+//        String additiveState = mAdditiveModifiers.toString();
+//        String multiplicativeState = mMultiplicativeModifiers.toString();
+//        mChecksum.hasChanged(base, modification, current, additiveState, multiplicativeState);
     }
 
     public void putModification(String source, String modification, float value) {

@@ -7,11 +7,11 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.StructureComponent;
 import main.game.components.tile.TileComponent;
 import main.game.pathing.lineofsight.PathingAlgorithms;
+import main.game.stores.AbilityTable;
 import main.game.stores.EntityStore;
 import main.game.systems.InputHandler;
 import main.game.systems.JSONEventBus;
 import main.game.systems.UpdateSystem;
-import main.graphics.AssetPool;
 import main.input.InputController;
 import main.input.Mouse;
 import com.alibaba.fastjson2.JSONArray;
@@ -20,18 +20,21 @@ import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
 import com.alibaba.fastjson2.JSONObject;
+import main.logging.EmeritusLogger;
 
 import java.util.*;
 
 
 public class GameModel {
+    private static final EmeritusLogger mLogger = EmeritusLogger.create(GameModel.class);
     private JSONEventBus mEventBus = null;
     private TileMap mTileMap = new TileMap();
     private SpeedQueue mSpeedQueue = null;
-    public ActivityLogger mLogger = null;
+    public ActivityLogger mActivityLogger = null;
     public InputHandler mInputHandler = null;
     public UpdateSystem mSystem = null;
     private GameState mGameState = null;
+    private Random mRandom = new Random();
 
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
     private GameAssetStore mGameAssetStore = null;
@@ -67,7 +70,7 @@ public class GameModel {
             mGameState.setViewportY(mGameState.getViewportY() - centerValues.y);
         }
 
-        mLogger = new ActivityLogger();
+        mActivityLogger = new ActivityLogger();
         mSpeedQueue = new SpeedQueue();;
         mEventBus = new JSONEventBus();
         mInputHandler = new InputHandler(mEventBus);
@@ -1469,41 +1472,83 @@ public class GameModel {
     }
 
     /**
-     * Places a structure on a specified tile by updating the tile's structure component.
+     * Places a structure on a specified tile or randomly distributes structures across the entire tile map.
      *
-     * <p>This method allows external systems to assign a structure entity (such as a building, obstacle,
-     * or decoration) to a tile entity in the map. The structure is referenced by its ID and must exist
-     * in the {@link EntityStore}. The tile must also exist and be valid.</p>
+     * <p>This method allows a structure (e.g., building, obstacle, decoration) to be assigned to a tile by
+     * updating the tile's structure component. The placement can be done for a single tile or in bulk across
+     * the entire map depending on the {@code "bulk"} flag in the input.</p>
      *
-     * <p>The input JSON object must contain:</p>
+     * <p><b>Input fields:</b></p>
      * <ul>
-     *   <li><b>"structure"</b> (String): The structure to place.</li>
-     *   <li><b>"tile_id"</b> (String): The unique identifier of the tile entity on which the structure should be placed.</li>
+     *   <li><b>"structure"</b> (String): The ID or type of structure to create and place</li>
+     *   <li><b>"tile_id"</b> (String): The ID of the target tile (only required for non-bulk placement)</li>
+     *   <li><b>"bulk"</b> (boolean, optional): If true, places structures across the map using random chance</li>
+     *   <li><b>"chance"</b> (float, optional): Used with bulk placement; a value from 0.0 to 1.0 indicating
+     *       the probability that a structure will be placed on each tile (e.g., 0.25 = 25% chance)</li>
      * </ul>
      *
-     * <p>If either the structure or tile ID is invalid, or the entities are not found in the store,
-     * this method performs no action.</p>
+     * <p><b>Placement rules:</b></p>
+     * <ul>
+     *   <li>Tiles already containing a unit or liquid at the top layer will be skipped</li>
+     *   <li>Structure entities are created via {@link EntityStore#createStructure}</li>
+     *   <li>Each placed structure is associated with its tile and given a main asset ID</li>
+     * </ul>
      *
-     * <p>Example input:</p>
+     * <p><b>Examples:</b></p>
+     *
      * <pre>{@code
+     * // Single placement
      * {
-     *   "structure_id": "fortress",
-     *   "tile_id": "tile_3_4_fds890"
+     *   "structure": "watchtower",
+     *   "tile_id": "tile_3_4_abc123"
+     * }
+     *
+     * // Bulk placement with 30% chance per tile
+     * {
+     *   "structure": "tree",
+     *   "bulk": true,
+     *   "chance": 0.3
      * }
      * }</pre>
      *
-     * @param request a {@link JSONObject} containing structure and tile placement data; must not be {@code null}
+     * @param request a {@link JSONObject} containing structure placement data
+     * @return the updated tile's metadata as a {@link JSONObject}, or an empty object if placement failed
      */
     public JSONObject setStructure(JSONObject request) {
-        String tileID = getTile(request);
         String structure = request.getString("structure");
+        boolean massPlace = request.getBooleanValue("bulk", false);
+        float chance = request.getFloatValue("chance");
 
-        JSONObject response = new JSONObject();
+        if (massPlace) {
+            for (int row = 0; row < getRows(); row++) {
+                for (int column = 0; column < getColumns(); column++) {
+                    if (mRandom.nextFloat() > chance) continue;
+
+                    String tileID = mTileMap.tryFetchingTileID(row, column);
+                    tryPlaceStructureOnTile(tileID, structure);
+                }
+            }
+            return new JSONObject(); // Bulk mode doesn't return a single tile
+        } else {
+            String tileID = getTile(request);
+            boolean success = tryPlaceStructureOnTile(tileID, structure);
+            return success ? getTileWithMetadata(request) : new JSONObject();
+        }
+    }
+
+    /**
+     * Attempts to place a structure on the given tile.
+     *
+     * @param tileID     ID of the tile to place the structure on
+     * @param structure  Type or ID of the structure to create
+     * @return true if the structure was successfully placed; false otherwise
+     */
+    private boolean tryPlaceStructureOnTile(String tileID, String structure) {
         Entity tileEntity = getEntityWithID(tileID);
-        if (tileEntity == null) { return response; }
-        TileComponent tileComponent = tileEntity.get(TileComponent.class);
+        if (tileEntity == null)  { return false; }
 
-        if (tileComponent.hasUnit()) { return response; }
+        TileComponent tileComponent = tileEntity.get(TileComponent.class);
+        if (tileComponent.hasUnit() || tileComponent.isTopLayerLiquid()) { return false; }
 
         String structureID = EntityStore.getInstance().createStructure(structure);
         tileComponent.putStructureID(structureID);
@@ -1513,8 +1558,7 @@ public class GameModel {
         assetComponent.putMainID(structureID);
 
         System.out.println("Put Structure: " + structure);
-
-        return getTileWithMetadata(request);
+        return true;
     }
 
     public JSONObject updateLayering(JSONObject request) {
@@ -1903,6 +1947,278 @@ public class GameModel {
         return response;
     }
 
+    /**
+     * Applies a named additive or multiplicative statistic modification to a unit's attribute.
+     *
+     * <p>This method calculates a value to add (or subtract) based on a specified scaling rule
+     * and applies it as a named modifier to a target unit's attribute. The modification is stored
+     * under a given source and name, allowing later reference or removal. It supports both flat
+     * and percent-based modifications.</p>
+     *
+     * <p>The JSON input must include the following fields:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): ID of the unit to modify.</li>
+     *   <li><b>"attribute"</b> (String): The attribute to modify (e.g., "hp", "attack").</li>
+     *   <li><b>"name"</b> (String): A unique name for this specific modifier (used for replacement or removal).</li>
+     *   <li><b>"value"</b> (float): The amount to apply. Treated as a flat value unless scaling is specified.</li>
+     * </ul>
+     *
+     * <p>Optional fields:</p>
+     * <ul>
+     *   <li><b>"scaling"</b> (String): Optional scaling method; valid values are:
+     *     <ul>
+     *       <li><code>"flat"</code>: Apply the value as-is.</li>
+     *       <li><code>"base"</code>: Scale based on the base value of the attribute.</li>
+     *       <li><code>"modified"</code>: Scale based on the modified (base + additive) value.</li>
+     *       <li><code>"total"</code> or <code>"max"</code>: Scale based on the total (after all modifiers).</li>
+     *       <li><code>"current"</code>: Scale based on the current value.</li>
+     *       <li><code>"missing"</code>: Scale based on the difference between total and current.</li>
+     *     </ul>
+     *   </li>
+     *   <li><b>"source"</b> (String): Logical group or system applying the modifier (default: "system").</li>
+     * </ul>
+     *
+     * <p>Returns a JSON object with the following response fields:</p>
+     * <ul>
+     *   <li><b>"before"</b>: The total value of the attribute before applying the modifier.</li>
+     *   <li><b>"after"</b>: The total value after the modifier is applied.</li>
+     *   <li><b>"delta"</b>: The difference between before and after.</li>
+     *   <li><b>"source"</b>: The source string used for this modification.</li>
+     *   <li><b>"scaling"</b>: The scaling mode applied ("flat" by default).</li>
+     *   <li><b>"error"</b>: A message if the request is invalid or the scaling source is not available.</li>
+     * </ul>
+     *
+     * <p>Example usage:</p>
+     * <pre>{@code
+     * {
+     *   "unit_id": "unit_123",
+     *   "attribute": "hp",
+     *   "name": "regen_buff",
+     *   "value": 0.15,
+     *   "scaling": "base",
+     *   "source": "regen_system"
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing unit ID, attribute, value, and scaling mode
+     * @return a {@link JSONObject} with the result of the operation, including before/after stats or an error
+     */
+    public JSONObject addUOrSubtractUnitStatisticModification(JSONObject request) {
+        String unitID = request.getString("unit_id");
+        String attribute = request.getString("attribute");
+        String scaling = request.getString("scaling");
+        float value = request.getFloatValue("value");
+        String name = request.getString("name");
+        String source = (String) request.getOrDefault("source", "system");
+
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null || attribute == null) {
+            return new JSONObject().fluentPut("error", "Invalid unit or attribute");
+        }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        if (statisticsComponent == null) {
+            return new JSONObject().fluentPut("error", "No statistics component found");
+        }
+
+        float toAdd = 0;
+        if (scaling == null || scaling.equalsIgnoreCase("flat")) {
+            toAdd = value;
+        } else {
+            float baseValue = switch (scaling.toLowerCase()) {
+                case "base" -> statisticsComponent.getBase(attribute);
+                case "modified" -> statisticsComponent.getModified(attribute);
+                case "total", "max" -> statisticsComponent.getTotal(attribute);
+                case "current" -> statisticsComponent.getCurrent(attribute);
+                case "missing" -> statisticsComponent.getMissing(attribute);
+                default -> 0f;
+            };
+
+            if (baseValue == 0) {
+                return new JSONObject().fluentPut("error", "Invalid scaling source");
+            }
+
+            // Interpret value as percent (e.g. 0.1f = +10%)
+            toAdd = baseValue * value; // multiply by this factor
+        }
+
+        float before = statisticsComponent.getTotal(attribute);
+        statisticsComponent.putModification(source, name, attribute, toAdd);
+        float after = statisticsComponent.getTotal(attribute);
+
+        return new JSONObject()
+                .fluentPut("before", before)
+                .fluentPut("after", after)
+                .fluentPut("delta", after - before)
+                .fluentPut("source", source)
+                .fluentPut("scaling", scaling == null ? "flat" : scaling);
+    }
+
+
+    public JSONObject addUOrSubtractFromUnitStatisticResource(JSONObject request) {
+        String unitID = request.getString("unit_id");
+        String attribute = request.getString("attribute");
+        float value = request.getFloatValue("value");
+        String source = (String) request.getOrDefault("source", "system");
+
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null || attribute == null) {
+            return new JSONObject().fluentPut("error", "Invalid unit or attribute");
+        }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        if (statisticsComponent == null) {
+            return new JSONObject().fluentPut("error", "No statistics component found");
+        }
+
+        float before = statisticsComponent.getCurrent(attribute);
+        statisticsComponent.toResource(attribute, value);
+        float after = statisticsComponent.getCurrent(attribute);
+
+        return new JSONObject()
+                .fluentPut("before", before)
+                .fluentPut("after", after)
+                .fluentPut("delta", after - before)
+                .fluentPut("source", source);
+    }
+
+    /**
+     * Retrieves detailed statistics for a specific attribute from a unit entity.
+     *
+     * <p>This method returns the breakdown of an attribute's values for a unit, including:</p>
+     * <ul>
+     *   <li><b>base</b>: The initial, unmodified value of the attribute.</li>
+     *   <li><b>modified</b>: The value after applying permanent modifiers (e.g. gear, passive effects).</li>
+     *   <li><b>current</b>: The current in-battle value (e.g. after taking damage or receiving a buff).</li>
+     *   <li><b>missing</b>: The difference between the total and the current value.</li>
+     *   <li><b>total</b>: The maximum attainable value after all modifiers.</li>
+     * </ul>
+     *
+     * <p>The request must include:</p>
+     * <ul>
+     *   <li><b>"unit_id"</b> (String): The unique identifier of the unit entity.</li>
+     *   <li><b>"attribute"</b> (String): The name of the attribute to query (e.g., "hp", "attack").</li>
+     * </ul>
+     *
+     * <p>Example input:</p>
+     * <pre>{@code
+     * {
+     *   "unit_id": "unit_abc123",
+     *   "attribute": "hp"
+     * }
+     * }</pre>
+     *
+     * <p>Example output:</p>
+     * <pre>{@code
+     * {
+     *   "base": 100,
+     *   "modified": 120,
+     *   "current": 85,
+     *   "missing": 35,
+     *   "total": 120
+     * }
+     * }</pre>
+     *
+     * @param request a {@link JSONObject} containing the unit ID and attribute name
+     * @return a {@link JSONObject} containing the base, modified, current, missing, and total values of the attribute
+     */
+    public JSONObject getStatisticsFromUnit(JSONObject request) {
+        String unitID = request.getString("unit_id");
+        String attribute = request.getString("attribute");
+
+        Entity unitEntity = getEntityWithID(unitID);
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+        float total = statisticsComponent.getTotal(attribute);
+        float base = statisticsComponent.getBase(attribute);
+        float modified = statisticsComponent.getModified(attribute);
+        float current = statisticsComponent.getCurrent(attribute);
+        float missing = statisticsComponent.getMissing(attribute);
+
+        JSONObject result = new JSONObject();
+        result.put("base", base);
+        result.put("modified", modified);
+        result.put("current", current);
+        result.put("missing", missing);
+        result.put("total", total);
+
+        return result;
+    }
+
+    public JSONObject payAbilityCost(JSONObject request) {
+        String unitID = request.getString("unit_id");
+        String ability = request.getString("ability");
+        boolean commit = request.getBooleanValue("commit", false);
+
+        Entity userEntity = getEntityWithID(unitID);
+        StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
+        JSONObject costMap = new JSONObject();
+        JSONArray costs = AbilityTable.getInstance().getCosts(ability);
+        mLogger.info("Started gathering cost requirements for {}", ability);
+
+        for (int i = 0; i < costs.size(); i++) {
+            JSONObject cost = costs.getJSONObject(i);
+            String costedAttribute = AbilityTable.getInstance().getCostedAttribute(cost);
+            String attributeKey = AbilityTable.getInstance().getScalingAttributeKey(cost);
+            String attributeScaling = AbilityTable.getInstance().getScalingAttributeScaling(cost);
+            float attributeValue = AbilityTable.getInstance().getScalingAttributeValue(cost);
+            boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(cost);
+
+            float currentAccruedCost = (float) costMap.getOrDefault(costedAttribute, 0f);
+            float additionalCost = 0;
+            if (isBaseScaling) {
+                additionalCost += attributeValue;
+            } else {
+                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(attributeKey, attributeScaling);
+                additionalCost = baseModifiedTotalMissingCurrent * attributeValue;
+            }
+
+            float newAccruedCost = currentAccruedCost + additionalCost;
+            costMap.put(costedAttribute,newAccruedCost);
+        }
+
+        mLogger.info("Finished gathering cost requirements for {}", ability);
+        mLogger.info("Checking cost requirements can be payed from {}", unitID);
+        boolean canPay = true;
+
+        for (String attribute : costMap.keySet()) {
+            float cost = costMap.getFloatValue(attribute);
+            int currentValue = statisticsComponent.getCurrent(attribute);
+            if (currentValue >= cost) { continue; }
+            mLogger.info("{} is unable to pay for {} because of {}", userEntity, ability, attribute);
+            canPay = false;
+        }
+
+        mLogger.info((canPay ? "Can" : "Can't") + " pay cost requirements for {} from {}", ability, unitID);
+
+        JSONObject response = null;
+        if (canPay) {
+            response = costMap;
+        }
+
+        return response;
+    }
+
+//    public JSONObject canPayAbilityCosts(String userUnitID, String ability) {
+//        Map<String, Float> costMap = getCostMapping(userUnitID, ability);
+//        Entity userEntity = getEntityWithID(userUnitID);
+//        StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
+//        mLogger.info("Checking cost requirements for {} to use {}", userEntity, ability);
+//
+//        for (Map.Entry<String, Float> entry : costMap.entrySet()) {
+//            String attribute = entry.getKey();
+//            float cost = entry.getValue();
+//
+//            int currentValue = statisticsComponent.getCurrent(attribute);
+//            if (currentValue >= cost) { continue; }
+//            mLogger.info("{} is unable to pay for {} because of {}", userEntity, ability, attribute);
+//            return false;
+//        }
+//
+//        mLogger.info("{} is able to pay for {}", userEntity, ability);
+//        return true;
+//    }
+
     public JSONObject useAbilityOnTarget(JSONObject request) {
         String actorID = request.getString("actor");
         String targetTileID = request.getString("tile_id");
@@ -1978,6 +2294,7 @@ public class GameModel {
         int elevation = request.getIntValue("elevation", -1);
         boolean playable = request.getBooleanValue("playable", false);
 
+        JSONObject response = new JSONObject();
         String id = null;
         switch (type) {
             case "unit" -> {
@@ -1986,13 +2303,19 @@ public class GameModel {
                 } else {
                     id = EntityStore.getInstance().createUnit(unit, nickname, playable);
                 }
+                response.put("unit_id", id);
             }
-            case "structure" -> id = EntityStore.getInstance().createStructure(structure);
-            case "tile" -> id = EntityStore.getInstance().createTile(row, column);
+            case "structure" -> {
+                id = EntityStore.getInstance().createStructure(structure);
+                response.put("structure_id", id);
+            }
+            case "tile" -> {
+                id = EntityStore.getInstance().createTile(row, column);
+                response.put("tile_id", id);
+            }
         }
-
-        JSONObject response = new JSONObject();
         response.put("id", id);
+
         return response;
     }
 
@@ -2110,7 +2433,7 @@ public class GameModel {
             mGameState.setViewportY(mGameState.getViewportY() - centerValues.y);
         }
 
-        mLogger = new ActivityLogger();
+        mActivityLogger = new ActivityLogger();
         mSpeedQueue = new SpeedQueue();;
         mEventBus = new JSONEventBus();
         mInputHandler = new InputHandler(mEventBus);
@@ -2130,5 +2453,11 @@ public class GameModel {
 //        List<String> inMovementRange = new ArrayList<>(graph.keySet());
 //        return inMovementRange;
 //    }
+
+
+
+
+
+
 
 }
