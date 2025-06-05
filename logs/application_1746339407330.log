@@ -1,0 +1,435 @@
+[2025-05-03 23:16:47] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-03 23:16:47] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-03 23:16:47] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-03 23:16:47] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-03 23:16:47] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-03 23:16:47] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-03 23:16:47] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-03 23:16:47] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-03 23:16:47] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-03 23:16:47] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-03 23:16:47] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-03 23:16:47] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-03 23:16:47] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-03 23:16:47] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-03 23:16:47] [INFO] [Component] Setting water_dragon_Zoro_e35371be-97d3-41ab-b66c-76c568ed9003 on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Zoro_e35371be-97d3-41ab-b66c-76c568ed9003","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit water_dragon_Zoro_e35371be-97d3-41ab-b66c-76c568ed9003 into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting dark_dragon_Qixuup_9f224556-8349-4fa2-ac0b-15d6dc8b16d4 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Qixuup_9f224556-8349-4fa2-ac0b-15d6dc8b16d4","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit dark_dragon_Qixuup_9f224556-8349-4fa2-ac0b-15d6dc8b16d4 into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting earth_dragon_Fidyd_8fffa6d2-f0b1-4d6a-8fdb-d3e58db8ec9e on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Fidyd_8fffa6d2-f0b1-4d6a-8fdb-d3e58db8ec9e","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit earth_dragon_Fidyd_8fffa6d2-f0b1-4d6a-8fdb-d3e58db8ec9e into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting dark_dragon_Dokiyy_eb13b577-9840-4486-9237-f8b085860078 on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Dokiyy_eb13b577-9840-4486-9237-f8b085860078","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit dark_dragon_Dokiyy_eb13b577-9840-4486-9237-f8b085860078 into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting dark_dragon_Memoqo_d2391684-babf-443f-8c83-2a51aafda917 on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Memoqo_d2391684-babf-443f-8c83-2a51aafda917","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit dark_dragon_Memoqo_d2391684-babf-443f-8c83-2a51aafda917 into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting light_dragon_Cifya_72f32f63-7c40-49fa-9cb1-9f7b6679fea5 on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Cifya_72f32f63-7c40-49fa-9cb1-9f7b6679fea5","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit light_dragon_Cifya_72f32f63-7c40-49fa-9cb1-9f7b6679fea5 into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56 on to {"row":2,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56 into queue
+[2025-05-03 23:16:47] [INFO] [Component] Setting dark_dragon_Eepep_fa831122-8924-42bd-8d70-cda24990adba on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Eepep_fa831122-8924-42bd-8d70-cda24990adba","structure":""}.
+[2025-05-03 23:16:47] [INFO] [SpeedQueue] Added unit dark_dragon_Eepep_fa831122-8924-42bd-8d70-cda24990adba into queue
+[2025-05-03 23:16:47] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-03 23:16:47] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-03 23:16:47] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-03 23:16:47] [INFO] [FontPool] Started initializing FontPool
+[2025-05-03 23:16:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-03 23:16:47] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-03 23:16:48] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-03 23:16:48] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-03 23:16:48] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-03 23:16:48] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:48] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-03 23:16:48] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:48] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:48] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:48] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-03 23:16:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-03 23:16:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:16:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-03 23:16:48] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-03 23:16:49] [INFO] [VisualsSystem] Finished creating blurred background after 0.4877205789089203 seconds
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:49] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:49] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:49] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:49] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:50] [INFO] [MovementSystem] Updated movement range to 8 for Lugg
+[2025-05-03 23:16:50] [INFO] [MovementSystem] Updated movement path from [3, 10] to [3, 9] for Lugg
+[2025-05-03 23:16:50] [INFO] [Component] Setting air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a on to {"row":3,"column":9,"height":0,"collider":"","unit":"air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a","structure":""}.
+[2025-05-03 23:16:50] [INFO] [MovementSystem] Moved from [3, 10] to [3, 9]
+[2025-05-03 23:16:50] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:50] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:16:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:16:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Lugg
+[2025-05-03 23:16:50] [INFO] [InputHandler] Gliding 0 camera to new tile 3_9_965c8377-b283-42a0-9f6d-d9f97193a8e2
+[2025-05-03 23:16:50] [INFO] [InputHandler] Gliding 1 camera to new tile 3_9_965c8377-b283-42a0-9f6d-d9f97193a8e2
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Lugg is planning to use air_attack on [2, 10]
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Updated area of sight for Lugg, viewing 13 tiles
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Updated line of sight for Lugg, viewing 3 tiles
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Updated area of effect for Lugg viewing 1 tiles
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Started constructing cost mappings for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Finished constructing cost mappings for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Checking cost requirements for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Lugg is able to pay for air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Started constructing cost mappings for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Finished constructing cost mappings for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Paying cost requirements for Lugg using air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Used from air_attack on [2, 10]
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lugg
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Lugg lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lugg
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Aomfs
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Aomfs defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Aomfs
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-03 23:16:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lugg to use air_attack
+[2025-05-03 23:16:51] [INFO] [CombatSystem] Started dealing damage with air_attack to Aomfs 
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-03 23:16:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:16:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Aomfs
+[2025-05-03 23:16:51] [INFO] [InputHandler] Gliding 0 camera to new tile 2_10_6da40793-4e3d-451b-ab28-abe978270302
+[2025-05-03 23:16:51] [INFO] [InputHandler] Gliding 1 camera to new tile 2_10_6da40793-4e3d-451b-ab28-abe978270302
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:52] [INFO] [MovementSystem] Updated movement range to 9 for Aomfs
+[2025-05-03 23:16:52] [INFO] [MovementSystem] Updated movement path from [2, 10] to [1, 9] for Aomfs
+[2025-05-03 23:16:52] [INFO] [Component] Setting air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56 on to {"row":1,"column":9,"height":0,"collider":"","unit":"air_dragon_Aomfs_843da757-5876-4677-8341-57bf7512dc56","structure":""}.
+[2025-05-03 23:16:52] [INFO] [MovementSystem] Moved from [2, 10] to [1, 9]
+[2025-05-03 23:16:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:16:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Aomfs
+[2025-05-03 23:16:52] [INFO] [InputHandler] Gliding 0 camera to new tile 1_9_71fdbf20-0fcb-42b5-b428-66a992baba5a
+[2025-05-03 23:16:52] [INFO] [InputHandler] Gliding 1 camera to new tile 1_9_71fdbf20-0fcb-42b5-b428-66a992baba5a
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Aomfs is planning to use air_attack on [1, 11]
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Updated area of sight for Aomfs, viewing 9 tiles
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Updated line of sight for Aomfs, viewing 3 tiles
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Updated area of effect for Aomfs viewing 1 tiles
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Started constructing cost mappings for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Finished constructing cost mappings for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Checking cost requirements for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Aomfs is able to pay for air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Started constructing cost mappings for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Finished constructing cost mappings for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Paying cost requirements for Aomfs using air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Used from air_attack on [1, 11]
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aomfs
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Aomfs lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aomfs
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Memoqo
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Memoqo
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-03 23:16:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Aomfs to use air_attack
+[2025-05-03 23:16:53] [INFO] [CombatSystem] Started dealing damage with air_attack to Memoqo 
+[2025-05-03 23:16:53] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b
+[2025-05-03 23:16:53] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b
+[2025-05-03 23:16:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-03 23:16:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-03 23:16:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-03 23:16:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-03 23:16:53] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b
+[2025-05-03 23:16:53] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b
+[2025-05-03 23:16:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:16:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Jyoo
+[2025-05-03 23:16:53] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_85712997-0679-4177-8990-d56808e8562f
+[2025-05-03 23:16:53] [INFO] [InputHandler] Gliding 1 camera to new tile 5_0_85712997-0679-4177-8990-d56808e8562f
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-03 23:16:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-03 23:16:56] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_85712997-0679-4177-8990-d56808e8562f
+[2025-05-03 23:16:56] [INFO] [InputHandler] Gliding 1 camera to new tile 5_0_85712997-0679-4177-8990-d56808e8562f
+[2025-05-03 23:16:57] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_85712997-0679-4177-8990-d56808e8562f
+[2025-05-03 23:16:57] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-03 23:16:57] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement range to 7 for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement range to 7 for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Jyoo
+[2025-05-03 23:16:57] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Jyoo
+[2025-05-03 23:16:58] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Jyoo
+[2025-05-03 23:16:58] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Jyoo
+[2025-05-03 23:17:51] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Jyoo
+[2025-05-03 23:17:53] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_85712997-0679-4177-8990-d56808e8562f
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Jyoo
+[2025-05-03 23:17:53] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Jyoo
+[2025-05-03 23:17:54] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 0] for Jyoo
+[2025-05-03 23:17:54] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 0] for Jyoo
+[2025-05-03 23:17:54] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 0] for Jyoo
+[2025-05-03 23:17:54] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 0] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 0] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 0] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Jyoo
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Jyoo
+[2025-05-03 23:17:55] [INFO] [Component] Setting water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b on to {"row":5,"column":2,"height":0,"collider":"","unit":"water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b","structure":""}.
+[2025-05-03 23:17:55] [INFO] [MovementSystem] Moved from [5, 0] to [5, 2]
+[2025-05-03 23:17:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:17:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Jyoo
+[2025-05-03 23:17:55] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_962bfc32-5217-45ba-8382-230de410dcb8
+[2025-05-03 23:17:55] [INFO] [InputHandler] Gliding 1 camera to new tile 5_2_962bfc32-5217-45ba-8382-230de410dcb8
+[2025-05-03 23:17:56] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-03 23:17:56] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-03 23:17:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:17:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-03 23:18:00] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_962bfc32-5217-45ba-8382-230de410dcb8
+[2025-05-03 23:18:02] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_962bfc32-5217-45ba-8382-230de410dcb8
+[2025-05-03 23:18:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:02] [INFO] [AbilityPanel] Selecting water_attack
+[2025-05-03 23:18:02] [INFO] [AbilitySystem] Jyoo is planning to use water_attack on null
+[2025-05-03 23:18:02] [INFO] [AbilitySystem] Updated area of sight for Jyoo, viewing 13 tiles
+[2025-05-03 23:18:02] [INFO] [AbilitySystem] Updated line of sight for Jyoo, viewing 0 tiles
+[2025-05-03 23:18:02] [INFO] [AbilitySystem] Updated area of effect for Jyoo viewing 0 tiles
+[2025-05-03 23:18:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:02] [INFO] [CombatSystem] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:02] [INFO] [CombatSystem] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:02] [INFO] [CombatSystem] Started constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:02] [INFO] [CombatSystem] Finished constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Jyoo is planning to use water_attack on [7, 5]
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated line of sight for Jyoo, viewing 6 tiles
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated area of effect for Jyoo viewing 1 tiles
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Jyoo is planning to use water_attack on [7, 4]
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated line of sight for Jyoo, viewing 5 tiles
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated area of effect for Jyoo viewing 1 tiles
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Jyoo is planning to use water_attack on [7, 3]
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated line of sight for Jyoo, viewing 4 tiles
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated area of effect for Jyoo viewing 1 tiles
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Jyoo is planning to use water_attack on [7, 4]
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated line of sight for Jyoo, viewing 5 tiles
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated area of effect for Jyoo viewing 1 tiles
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Jyoo is planning to use water_attack on [7, 5]
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated line of sight for Jyoo, viewing 6 tiles
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated area of effect for Jyoo viewing 1 tiles
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Jyoo is planning to use water_attack on null
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated line of sight for Jyoo, viewing 0 tiles
+[2025-05-03 23:18:03] [INFO] [AbilitySystem] Updated area of effect for Jyoo viewing 0 tiles
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing damage mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Started constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [CombatSystem] Finished constructing cost mappings for Jyoo to use water_attack
+[2025-05-03 23:18:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-03 23:18:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b
+[2025-05-03 23:18:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Jyoo_d2cb632a-304e-4023-8d79-18e0ca8c846b
+[2025-05-03 23:18:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:18:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Jyoo
+[2025-05-03 23:18:06] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-03 23:18:06] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-03 23:18:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Qixuup_9f224556-8349-4fa2-ac0b-15d6dc8b16d4
+[2025-05-03 23:18:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Qixuup_9f224556-8349-4fa2-ac0b-15d6dc8b16d4
+[2025-05-03 23:18:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:18:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Qixuup
+[2025-05-03 23:18:07] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-03 23:18:07] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-03 23:18:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:18:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lugg_30bb7be8-1c5d-4a27-9b12-15914d36800a
+[2025-05-03 23:18:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:18:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Lugg
+[2025-05-03 23:18:08] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-03 23:18:08] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-03 23:19:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-03 23:19:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-03 23:19:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:19:38] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-03 23:19:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Eepep_fa831122-8924-42bd-8d70-cda24990adba
+[2025-05-03 23:19:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Eepep_fa831122-8924-42bd-8d70-cda24990adba
+[2025-05-03 23:19:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:19:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Eepep
+[2025-05-03 23:19:41] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-03 23:19:41] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-03 23:19:46] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-03 23:19:46] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-03 23:19:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 23:19:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

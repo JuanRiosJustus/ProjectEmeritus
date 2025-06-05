@@ -1,0 +1,158 @@
+[2025-05-26 14:41:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-26 14:41:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-26 14:41:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-26 14:41:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-26 14:41:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-26 14:41:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-26 14:41:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-26 14:41:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-26 14:41:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-26 14:41:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-26 14:41:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-26 14:41:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-26 14:41:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-26 14:41:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3 on to {"row":3,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3 into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Yukg___69c38768-c92d-413c-8b85-84d342668b0b on to {"row":6,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Yukg___69c38768-c92d-413c-8b85-84d342668b0b","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Yukg___69c38768-c92d-413c-8b85-84d342668b0b into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Tunioo___8a2663cc-2cff-4a98-9b61-daccccb2ee6d on to {"row":5,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Tunioo___8a2663cc-2cff-4a98-9b61-daccccb2ee6d","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Tunioo___8a2663cc-2cff-4a98-9b61-daccccb2ee6d into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Bobuf___6d413491-4648-498d-97f1-6644600d6543 on to {"row":1,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Bobuf___6d413491-4648-498d-97f1-6644600d6543","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Bobuf___6d413491-4648-498d-97f1-6644600d6543 into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Jiauc___f9cdfc73-f694-481e-a612-058fded5aa65 on to {"row":9,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Jiauc___f9cdfc73-f694-481e-a612-058fded5aa65","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Jiauc___f9cdfc73-f694-481e-a612-058fded5aa65 into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Zadyo___5db2a356-1bf7-4163-af77-346a1c0d8338 on to {"row":2,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Zadyo___5db2a356-1bf7-4163-af77-346a1c0d8338","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Zadyo___5db2a356-1bf7-4163-af77-346a1c0d8338 into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Jyen___8697c0fc-a0ed-4c64-8ea8-334d9f9079ae on to {"row":4,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Jyen___8697c0fc-a0ed-4c64-8ea8-334d9f9079ae","layers":{"empty":false},"total_elevation":5}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Jyen___8697c0fc-a0ed-4c64-8ea8-334d9f9079ae into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Ryqee___77dc6a49-3c42-474d-af20-f8d898a390df on to {"row":3,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Ryqee___77dc6a49-3c42-474d-af20-f8d898a390df","layers":{"empty":false},"total_elevation":5}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Ryqee___77dc6a49-3c42-474d-af20-f8d898a390df into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Cegeyd___7e354cf4-245a-44d0-9aad-af651123df56 on to {"row":5,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Cegeyd___7e354cf4-245a-44d0-9aad-af651123df56","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Cegeyd___7e354cf4-245a-44d0-9aad-af651123df56 into queue
+[2025-05-26 14:41:57] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Iypt___6a866e82-5c63-4ed7-92ab-804ee2a43093 on to {"row":7,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Iypt___6a866e82-5c63-4ed7-92ab-804ee2a43093","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 14:41:57] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Iypt___6a866e82-5c63-4ed7-92ab-804ee2a43093 into queue
+[2025-05-26 14:41:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-26 14:41:58] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-26 14:41:58] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-26 14:41:58] [INFO] [FontPool] Started initializing FontPool
+[2025-05-26 14:41:58] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-26 14:41:58] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-26 14:41:58] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3
+[2025-05-26 14:41:58] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3
+[2025-05-26 14:41:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 14:41:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 14:41:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-26 14:41:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-26 14:41:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 14:41:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-26 14:41:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 14:41:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.4849165678024292 seconds
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:58] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3
+[2025-05-26 14:41:58] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3
+[2025-05-26 14:41:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 14:41:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 14:41:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 14:42:01] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_0___85767f33-de58-431a-9d6b-8d621de01bec
+[2025-05-26 14:42:01] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_0___85767f33-de58-431a-9d6b-8d621de01bec
+[2025-05-26 14:42:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3
+[2025-05-26 14:42:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3
+[2025-05-26 14:42:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 14:42:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Wyyu
+[2025-05-26 14:42:02] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_0___85767f33-de58-431a-9d6b-8d621de01bec
+[2025-05-26 14:42:02] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-26 14:42:02] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-26 14:42:19] [INFO] [MovementSystem] Updated movement range to 12 for Wyyu
+[2025-05-26 14:42:26] [INFO] [MovementSystem] Updated movement path from [3, 0] to [8, 6] for Wyyu
+[2025-05-26 14:42:26] [INFO] [MovementSystem] Updated movement range to 12 for Wyyu
+[2025-05-26 14:42:26] [INFO] [MovementSystem] Updated movement path from [3, 0] to [8, 6] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [0, 0] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [0, 0] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 0] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 0] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 1] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 1] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Wyyu
+[2025-05-26 14:42:28] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Wyyu
+[2025-05-26 14:42:30] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:42:30] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:42:31] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 3] for Wyyu
+[2025-05-26 14:42:31] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 3] for Wyyu
+[2025-05-26 14:42:32] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:42:32] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 1] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 0] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 0] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 0] for Wyyu
+[2025-05-26 14:42:34] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 0] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [0, 0] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [0, 0] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 0] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 1] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [1, 1] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 1] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 1] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 2] for Wyyu
+[2025-05-26 14:44:52] [INFO] [MovementSystem] Updated movement path from [3, 0] to [2, 2] for Wyyu
+[2025-05-26 14:44:53] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:44:53] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 2] for Wyyu
+[2025-05-26 14:44:53] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 3] for Wyyu
+[2025-05-26 14:44:53] [INFO] [MovementSystem] Updated movement path from [3, 0] to [3, 3] for Wyyu
+[2025-05-26 14:44:54] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3 on to {"row":3,"column":3,"base_elevation":-3,"unit":"UNIT_fire_dragon___NICKNAME_Wyyu___32ae3544-31c3-4a11-87e0-dbc05df93bd3","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 14:44:54] [INFO] [MovementSystem] Moved from [3, 0] to [3, 3]
+[2025-05-26 14:44:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 14:44:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Wyyu
+[2025-05-26 14:44:54] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_3___1c4f13df-f01f-4c7d-90a6-8f6cbc515846
+[2025-05-26 14:44:54] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_3___1c4f13df-f01f-4c7d-90a6-8f6cbc515846

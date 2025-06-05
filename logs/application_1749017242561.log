@@ -1,0 +1,40 @@
+[2025-06-03 23:07:22] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 23:07:22] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 23:07:22] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 23:07:22] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 23:07:22] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 23:07:22] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 23:07:22] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 23:07:22] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 23:07:22] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 23:07:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 23:07:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 23:07:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 23:07:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 23:07:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Nisuee___f4bd91ab-6403-468f-b8c7-830c0879ce7e on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Nisuee___f4bd91ab-6403-468f-b8c7-830c0879ce7e","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Nisuee___f4bd91ab-6403-468f-b8c7-830c0879ce7e into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Wywfax___f3557178-a850-4f8c-a134-cd33ff5b01d6 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Wywfax___f3557178-a850-4f8c-a134-cd33ff5b01d6","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Wywfax___f3557178-a850-4f8c-a134-cd33ff5b01d6 into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Poooj___e5b16b55-c8c5-45d0-8a78-c619680464cd on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Poooj___e5b16b55-c8c5-45d0-8a78-c619680464cd","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Poooj___e5b16b55-c8c5-45d0-8a78-c619680464cd into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Yyxkig___969c1e1d-cc7b-447e-bceb-c126215bca6a on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Yyxkig___969c1e1d-cc7b-447e-bceb-c126215bca6a","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Yyxkig___969c1e1d-cc7b-447e-bceb-c126215bca6a into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Pylu___d7b30ac3-c573-4239-8ac2-78a86c8c2874 on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Pylu___d7b30ac3-c573-4239-8ac2-78a86c8c2874","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Pylu___d7b30ac3-c573-4239-8ac2-78a86c8c2874 into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Bikuu___a1f96501-e384-4b8d-89a6-1b95d02aa9df on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Bikuu___a1f96501-e384-4b8d-89a6-1b95d02aa9df","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Bikuu___a1f96501-e384-4b8d-89a6-1b95d02aa9df into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Aawooo___88d94714-5d81-4a15-b7c0-72eb023da72c on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Aawooo___88d94714-5d81-4a15-b7c0-72eb023da72c","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Aawooo___88d94714-5d81-4a15-b7c0-72eb023da72c into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Sogl___4150dc5f-c7fd-42bb-ae4b-9b229c030d84 on to {"row":9,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Sogl___4150dc5f-c7fd-42bb-ae4b-9b229c030d84","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Sogl___4150dc5f-c7fd-42bb-ae4b-9b229c030d84 into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Rodcji___0c431fa1-29d9-4baf-a4fe-a5ae399cdea3 on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Rodcji___0c431fa1-29d9-4baf-a4fe-a5ae399cdea3","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Rodcji___0c431fa1-29d9-4baf-a4fe-a5ae399cdea3 into queue
+[2025-06-03 23:07:22] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Iieeul___20b31e27-e0bc-4495-9adb-7d99e17e7602 on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Iieeul___20b31e27-e0bc-4495-9adb-7d99e17e7602","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:07:22] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Iieeul___20b31e27-e0bc-4495-9adb-7d99e17e7602 into queue
+[2025-06-03 23:07:22] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-03 23:07:23] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-03 23:07:23] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-03 23:07:23] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 23:07:23] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 23:07:23] [INFO] [EngineController] Finished setting sce

@@ -1,0 +1,253 @@
+[2025-06-04 02:07:35] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-04 02:07:35] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-04 02:07:35] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-04 02:07:35] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-04 02:07:35] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-04 02:07:35] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-04 02:07:35] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-04 02:07:35] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-04 02:07:35] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-04 02:07:35] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-04 02:07:35] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-04 02:07:35] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-04 02:07:35] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-04 02:07:35] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a on to {"row":9,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Dyzfe___36636414-1ad6-4aa3-b589-16e49b968c78 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Dyzfe___36636414-1ad6-4aa3-b589-16e49b968c78","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Dyzfe___36636414-1ad6-4aa3-b589-16e49b968c78 into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Oiwe___8284f071-c637-4b91-a803-4b5ff684aaf2 on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Oiwe___8284f071-c637-4b91-a803-4b5ff684aaf2","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Oiwe___8284f071-c637-4b91-a803-4b5ff684aaf2 into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Heoaii___0f81dc60-c5ab-40c3-ae53-dbada7798fe9 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Heoaii___0f81dc60-c5ab-40c3-ae53-dbada7798fe9","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Heoaii___0f81dc60-c5ab-40c3-ae53-dbada7798fe9 into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Meqi___7f3876d6-dffc-4653-9dda-0d030a5a7449 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Meqi___7f3876d6-dffc-4653-9dda-0d030a5a7449","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Meqi___7f3876d6-dffc-4653-9dda-0d030a5a7449 into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420 on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420 into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Oaiuf___6243a75c-8110-4372-9cc8-4ffefaabad77 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Oaiuf___6243a75c-8110-4372-9cc8-4ffefaabad77","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Oaiuf___6243a75c-8110-4372-9cc8-4ffefaabad77 into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Sewee___b48fd200-0b47-46f4-b62f-1a69d01f337e on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Sewee___b48fd200-0b47-46f4-b62f-1a69d01f337e","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Sewee___b48fd200-0b47-46f4-b62f-1a69d01f337e into queue
+[2025-06-04 02:07:35] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Qyemd___f05de676-ebfd-4740-af2b-d84f6c2a119b on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Qyemd___f05de676-ebfd-4740-af2b-d84f6c2a119b","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:07:35] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Qyemd___f05de676-ebfd-4740-af2b-d84f6c2a119b into queue
+[2025-06-04 02:07:35] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-04 02:07:36] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-04 02:07:36] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-04 02:07:36] [INFO] [FontPool] Started initializing FontPool
+[2025-06-04 02:07:36] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-04 02:07:36] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-04 02:07:39] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-04 02:07:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c
+[2025-06-04 02:07:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c
+[2025-06-04 02:07:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:07:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:07:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:07:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:07:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:07:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-04 02:07:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-04 02:07:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.4826824963092804 seconds
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c
+[2025-06-04 02:07:53] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c
+[2025-06-04 02:07:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:07:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:07:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:08:07] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:08:10] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___a7cb6e5a-bd82-4b53-95c7-d84ed8718017
+[2025-06-04 02:08:10] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_1___a7cb6e5a-bd82-4b53-95c7-d84ed8718017
+[2025-06-04 02:08:10] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c
+[2025-06-04 02:08:10] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c
+[2025-06-04 02:08:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:08:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Hookzd
+[2025-06-04 02:08:12] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___a7cb6e5a-bd82-4b53-95c7-d84ed8718017
+[2025-06-04 02:08:12] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-04 02:08:12] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement range to 9 for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 7] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement range to 9 for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 7] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 7] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 7] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 6] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 6] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 5] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 5] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 4] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 4] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 3] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 3] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 2] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 2] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 1] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 1] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 1] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 1] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Hookzd
+[2025-06-04 02:08:12] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Hookzd
+[2025-06-04 02:08:13] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c on to {"row":5,"column":3,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Hookzd___8f685a9a-5242-432b-812c-f985ad05715c","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:08:13] [INFO] [MovementSystem] Moved from [5, 1] to [5, 3]
+[2025-06-04 02:08:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:08:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Hookzd
+[2025-06-04 02:08:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_3___59640190-828b-4e9e-9189-6cd003fad5e3
+[2025-06-04 02:08:13] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_3___59640190-828b-4e9e-9189-6cd003fad5e3
+[2025-06-04 02:08:15] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a
+[2025-06-04 02:08:15] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a
+[2025-06-04 02:08:15] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:08:15] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:08:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:08:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:08:15] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a
+[2025-06-04 02:08:15] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a
+[2025-06-04 02:08:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:08:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Naci
+[2025-06-04 02:08:15] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_0___cecfaa7c-8d0a-496c-878c-6bd090b9c084
+[2025-06-04 02:08:15] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_9___COLUMN_0___cecfaa7c-8d0a-496c-878c-6bd090b9c084
+[2025-06-04 02:08:19] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_0___cecfaa7c-8d0a-496c-878c-6bd090b9c084
+[2025-06-04 02:08:19] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-04 02:08:19] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement range to 6 for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [9, 3] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement range to 6 for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [9, 3] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [9, 2] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [9, 2] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [8, 2] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [8, 2] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [8, 1] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [8, 1] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [7, 1] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [7, 1] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [8, 1] for Naci
+[2025-06-04 02:08:19] [INFO] [MovementSystem] Updated movement path from [9, 0] to [8, 1] for Naci
+[2025-06-04 02:08:20] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Naci___b6cd53ea-35b9-444b-b4ca-74100da7a98a","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 02:08:20] [INFO] [MovementSystem] Moved from [9, 0] to [8, 1]
+[2025-06-04 02:08:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:08:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Naci
+[2025-06-04 02:08:20] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_1___30f6a125-18a5-43b0-bbcf-db555baaad02
+[2025-06-04 02:08:20] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_1___30f6a125-18a5-43b0-bbcf-db555baaad02
+[2025-06-04 02:08:21] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420
+[2025-06-04 02:08:21] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420
+[2025-06-04 02:08:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:08:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:08:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:08:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:08:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420
+[2025-06-04 02:08:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420
+[2025-06-04 02:08:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:08:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Zawea
+[2025-06-04 02:08:21] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_12___f96bc3ff-402a-451b-96df-347a644c068c
+[2025-06-04 02:08:21] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_12___f96bc3ff-402a-451b-96df-347a644c068c
+[2025-06-04 02:08:46] [INFO] [GameModel] Updated area of sight for Zawea, viewing 4 tiles
+[2025-06-04 02:08:46] [INFO] [GameModel] Updated line of sight for Zawea, viewing 2 tiles
+[2025-06-04 02:08:46] [INFO] [GameModel] Updated area of sight for Zawea, viewing 1 tiles
+[2025-06-04 02:08:46] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:08:46] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:08:46] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:08:46] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:08:46] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:08:46] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:08:46] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Updated area of sight for Zawea, viewing 4 tiles
+[2025-06-04 02:09:03] [INFO] [GameModel] Updated line of sight for Zawea, viewing 2 tiles
+[2025-06-04 02:09:03] [INFO] [GameModel] Updated area of sight for Zawea, viewing 1 tiles
+[2025-06-04 02:09:03] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:09:03] [INFO] [GameModel] Started dealing damage with test_slash to Sewee 
+[2025-06-04 02:09:03] [INFO] [GameModel] Started dealing damage with test_slash to Sewee 
+[2025-06-04 02:09:03] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420
+[2025-06-04 02:09:03] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Zawea___590db034-ff61-4e33-9f79-e27c2d512420
+[2025-06-04 02:09:03] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:09:03] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:09:03] [INFO] [StatisticsPanel] Sta

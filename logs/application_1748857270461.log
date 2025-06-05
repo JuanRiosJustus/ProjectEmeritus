@@ -1,0 +1,31 @@
+[2025-06-02 02:41:10] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 02:41:10] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 02:41:10] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 02:41:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 02:41:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 02:41:10] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 02:41:10] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 02:41:10] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 02:41:10] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 02:41:10] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 02:41:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Fidoiu___73fa81b6-c0d3-4e0d-a535-6accc87cfafa on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_light_dragon___NICKNAME_Fidoiu___73fa81b6-c0d3-4e0d-a535-6accc87cfafa","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:41:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Fidoiu___73fa81b6-c0d3-4e0d-a535-6accc87cfafa into queue
+[2025-06-02 02:41:10] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Xazkyg___72360653-6fdf-43e3-a871-65183144e669 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Xazkyg___72360653-6fdf-43e3-a871-65183144e669","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:41:10] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Xazkyg___72360653-6fdf-43e3-a871-65183144e669 into queue
+[2025-06-02 02:41:10] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 02:41:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:41:10] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 02:41:10] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 02:41:10] [INFO] [GameModel] Updated area of sight for Fidoiu, viewing 5 tiles
+[2025-06-02 02:41:10] [INFO] [GameModel] Updated line of sight for Fidoiu, viewing 2 tiles
+[2025-06-02 02:41:10] [INFO] [GameModel] Updated area of sight for Fidoiu, viewing 1 tiles
+[2025-06-02 02:41:10] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 02:41:10] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 02:41:10] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 02:41:10] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-02 02:41:10] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-02 02:41:10] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:41:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:41:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:41:10] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:41:10] [INFO] [GameModel] Finis

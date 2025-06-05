@@ -1,0 +1,29 @@
+[2025-06-03 00:44:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 00:44:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 00:44:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 00:44:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 00:44:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 00:44:39] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 00:44:39] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 00:44:39] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 00:44:39] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 00:44:39] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 00:44:39] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 00:44:39] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 00:44:39] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Zayad___7386d51d-d837-4f78-bf3b-ffe3b7178678 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Zayad___7386d51d-d837-4f78-bf3b-ffe3b7178678","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 00:44:39] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Zayad___7386d51d-d837-4f78-bf3b-ffe3b7178678 into queue
+[2025-06-03 00:44:39] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Domm___5b2a83a4-0f42-4ee0-9398-c9fbfd21cd3d on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Domm___5b2a83a4-0f42-4ee0-9398-c9fbfd21cd3d","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 00:44:39] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Domm___5b2a83a4-0f42-4ee0-9398-c9fbfd21cd3d into queue
+[2025-06-03 00:44:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 00:44:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_dragon___NICKNAME_Zayad___7386d51d-d837-4f78-bf3b-ffe3b7178678
+[2025-06-03 00:44:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_dragon___NICKNAME_Zayad___7386d51d-d837-4f78-bf3b-ffe3b7178678
+[2025-06-03 00:44:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 00:44:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 00:44:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-03 00:44:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-03 00:44:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 00:44:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 00:44:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-03 00:44:39] [INFO] [VisualsSystem] Finished creating blurred background after 0.3253994584083557 seconds
+[2025-06-03 00:44:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:44:39] [INFO] [AbilityTable] Starte

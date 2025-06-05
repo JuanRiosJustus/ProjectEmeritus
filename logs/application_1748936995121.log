@@ -1,0 +1,31 @@
+[2025-06-03 00:49:55] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 00:49:55] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 00:49:55] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 00:49:55] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 00:49:55] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 00:49:55] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 00:49:55] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 00:49:55] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 00:49:55] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 00:49:55] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 00:49:55] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 00:49:55] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 00:49:55] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Quua___7648119e-0c39-4dc9-86d5-512e1ccbbbc0 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Quua___7648119e-0c39-4dc9-86d5-512e1ccbbbc0","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 00:49:55] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Quua___7648119e-0c39-4dc9-86d5-512e1ccbbbc0 into queue
+[2025-06-03 00:49:55] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Rizuq___9be71db2-b2f8-46f4-a97d-11aae5ce3ff7 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Rizuq___9be71db2-b2f8-46f4-a97d-11aae5ce3ff7","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 00:49:55] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Rizuq___9be71db2-b2f8-46f4-a97d-11aae5ce3ff7 into queue
+[2025-06-03 00:49:55] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 00:49:55] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 00:49:55] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 00:49:55] [INFO] [GameModel] Updated area of sight for Quua, viewing 5 tiles
+[2025-06-03 00:49:55] [INFO] [GameModel] Updated line of sight for Quua, viewing 2 tiles
+[2025-06-03 00:49:55] [INFO] [GameModel] Updated area of sight for Quua, viewing 1 tiles
+[2025-06-03 00:49:55] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-03 00:49:55] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-03 00:49:55] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-03 00:49:55] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-03 00:49:55] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-03 00:49:55] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-03 00:49:55] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-03 00:49:55] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Quua___7648119e-0c39-4dc9-86d5-512e1ccbbbc0
+[2025-06-03 00:

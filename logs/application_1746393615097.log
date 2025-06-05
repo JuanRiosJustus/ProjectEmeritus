@@ -1,0 +1,313 @@
+[2025-05-04 14:20:15] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:20:15] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:20:15] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:20:15] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:20:15] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:20:15] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:20:15] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:20:15] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:20:15] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:20:15] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:20:15] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:20:15] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:20:15] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:20:15] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:20:15] [INFO] [Component] Setting earth_dragon_Xoroyx_bdaa859c-5017-4359-9108-fb6f83b67e82 on to {"row":0,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Xoroyx_bdaa859c-5017-4359-9108-fb6f83b67e82","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit earth_dragon_Xoroyx_bdaa859c-5017-4359-9108-fb6f83b67e82 into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658 on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658 into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting earth_dragon_Zigegu_8db9dda9-cbc9-4fa6-9a88-eec00832aafd on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Zigegu_8db9dda9-cbc9-4fa6-9a88-eec00832aafd","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit earth_dragon_Zigegu_8db9dda9-cbc9-4fa6-9a88-eec00832aafd into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting light_dragon_Miwoo_c13a8514-7ede-451f-a89a-7359be3c5ffe on to {"row":5,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Miwoo_c13a8514-7ede-451f-a89a-7359be3c5ffe","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit light_dragon_Miwoo_c13a8514-7ede-451f-a89a-7359be3c5ffe into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting light_dragon_Byvo_2d3fd5e4-9ecf-4952-8c19-c72d738fadf3 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Byvo_2d3fd5e4-9ecf-4952-8c19-c72d738fadf3","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit light_dragon_Byvo_2d3fd5e4-9ecf-4952-8c19-c72d738fadf3 into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting air_dragon_Oitao_fe77e172-afc2-4c42-af0a-976e3feb3034 on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Oitao_fe77e172-afc2-4c42-af0a-976e3feb3034","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit air_dragon_Oitao_fe77e172-afc2-4c42-af0a-976e3feb3034 into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting fire_dragon_Fuxo_4c31c835-02dd-4ec0-8919-107e475de95a on to {"row":5,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Fuxo_4c31c835-02dd-4ec0-8919-107e475de95a","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit fire_dragon_Fuxo_4c31c835-02dd-4ec0-8919-107e475de95a into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting dragon_Kiby_0bc832fd-953e-46ec-babe-7bbc07c06f77 on to {"row":2,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Kiby_0bc832fd-953e-46ec-babe-7bbc07c06f77","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit dragon_Kiby_0bc832fd-953e-46ec-babe-7bbc07c06f77 into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting fire_dragon_Eespo_f8015176-7f73-4bf3-aa07-f8221819a661 on to {"row":1,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Eespo_f8015176-7f73-4bf3-aa07-f8221819a661","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit fire_dragon_Eespo_f8015176-7f73-4bf3-aa07-f8221819a661 into queue
+[2025-05-04 14:20:15] [INFO] [Component] Setting light_dragon_Ooec_bd6446d6-3636-406f-88ae-1984e3e6b399 on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Ooec_bd6446d6-3636-406f-88ae-1984e3e6b399","structure":""}.
+[2025-05-04 14:20:15] [INFO] [SpeedQueue] Added unit light_dragon_Ooec_bd6446d6-3636-406f-88ae-1984e3e6b399 into queue
+[2025-05-04 14:20:15] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:20:15] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:20:15] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:20:15] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:20:15] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:20:15] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:20:15] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:20:16] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:20:16] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:20:16] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:20:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:20:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:20:16] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:20:16] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:20:16] [INFO] [VisualsSystem] Finished creating blurred background after 0.4853006899356842 seconds
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:20:17] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_767f222c-6933-4912-a508-f4bbcf903def
+[2025-05-04 14:20:17] [INFO] [InputHandler] Gliding 1 camera to new tile 2_1_767f222c-6933-4912-a508-f4bbcf903def
+[2025-05-04 14:20:17] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:17] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Qoju_a8e5929b-d794-44cd-8d99-7a6b6c2f4658
+[2025-05-04 14:20:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:20:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Qoju
+[2025-05-04 14:20:18] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_767f222c-6933-4912-a508-f4bbcf903def
+[2025-05-04 14:20:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [5, 7]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of sight for Qoju, viewing 12 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 9 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [5, 6]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 9 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [4, 6]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 8 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [4, 5]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 7 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [3, 5]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 6 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [3, 4]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 5 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [2, 4]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 4 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [2, 3]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 3 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [1, 2]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 3 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [0, 2]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 3 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Qoju is planning to use air_attack on [0, 1]
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated line of sight for Qoju, viewing 3 tiles
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Updated area of effect for Qoju viewing 1 tiles
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qoju
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Qoju lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qoju
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xoroyx
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xoroyx
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:20:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Checking cost requirements for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Qoju is able to pay for air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Started constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Finished constructing cost mappings for Qoju to use air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Paying cost requirements for Qoju using air_attack
+[2025-05-04 14:20:20] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-04 14:20:20] [INFO] [AbilitySystem] Used from air_attack on [0, 1]
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qoju
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Qoju lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Qoju lands a CRIT bonus with air_attack for 33.0
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 55.0 damage after modifiers for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qoju
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xoroyx
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 55.0 Raw damage after defenses for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xoroyx
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 45.833332 damage after defenses for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [CombatSystem] Started dealing damage with air_attack to Xoroyx 
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qoju
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Qoju lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qoju
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xoroyx
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xoroyx
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:20:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qoju to use air_attack
+[2025-05-04 14:20:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:20:21] [INFO] [AbilitySystem] Finished update updating {} because of ability

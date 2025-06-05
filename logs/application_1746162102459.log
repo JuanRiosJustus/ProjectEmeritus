@@ -1,0 +1,27 @@
+[2025-05-01 22:01:42] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-01 22:01:42] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-01 22:01:42] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-01 22:01:42] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-01 22:01:42] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-01 22:01:42] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-01 22:01:42] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-01 22:01:42] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-01 22:01:42] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-01 22:01:42] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-01 22:01:42] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-01 22:01:42] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-01 22:01:42] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-01 22:01:42] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-01 22:02:00] [INFO] [Component] Setting dragon_Baqdk_a43c0cbd-de97-4398-8e4e-90e77b9d56a5 on to {"row":6,"column":0,"height":0,"spawn_region":0,"collider":"","unit":"dragon_Baqdk_a43c0cbd-de97-4398-8e4e-90e77b9d56a5","structure":""}.
+[2025-05-01 22:02:00] [INFO] [SpeedQueue] Added unit enemy:Baqdk into queue
+[2025-05-01 22:02:00] [INFO] [Component] Setting dragon_Wykuoe_9c40e003-0478-4cff-9b38-9d214359fb8e on to {"row":4,"column":7,"height":0,"spawn_region":1,"collider":"","unit":"dragon_Wykuoe_9c40e003-0478-4cff-9b38-9d214359fb8e","structure":""}.
+[2025-05-01 22:02:00] [INFO] [SpeedQueue] Added unit enemy:Wykuoe into queue
+[2025-05-01 22:02:00] [INFO] [Component] Setting dark_dragon_Hewky_10158d2c-0051-4c90-b48b-6c48e0844065 on to {"row":0,"column":2,"height":0,"collider":"","unit":"dark_dragon_Hewky_10158d2c-0051-4c90-b48b-6c48e0844065","structure":""}.
+[2025-05-01 22:02:00] [INFO] [SpeedQueue] Added unit enemy:Hewky into queue
+[2025-05-01 22:02:00] [INFO] [Component] Setting air_dragon_Oypea_f8d0ca08-277d-4e70-9788-362a6e3ea06e on to {"row":6,"column":7,"height":0,"spawn_region":1,"collider":"","unit":"air_dragon_Oypea_f8d0ca08-277d-4e70-9788-362a6e3ea06e","structure":""}.
+[2025-05-01 22:02:00] [INFO] [SpeedQueue] Added unit enemy:Oypea into queue
+[2025-05-01 22:02:00] [INFO] [Component] Setting dark_dragon_Rasca_3650ff40-4179-47fd-a550-231f0ce7f3f2 on to {"row":7,"column":6,"height":0,"collider":"","unit":"dark_dragon_Rasca_3650ff40-4179-47fd-a550-231f0ce7f3f2","structure":""}.
+[2025-05-01 22:02:00] [INFO] [SpeedQueue] Added unit enemy:Rasca into queue
+[2025-05-01 22:02:00] [INFO] [Component] Setting dragon_Uoiary_0ed471a0-d399-4ad3-81c9-2a103df618bc on to {"row":6,"column":1,"height":0,"spawn_region":0,"collider":"","unit":"dragon_Uoiary_0ed471a0-d399-4ad3-81c9-2a103df618bc","structure":""}.
+[2025-05-01 22:02:00] [INFO] [SpeedQueue] Added unit user:Uoiary into queue
+[2025-05-01 22:02:00] [INFO] [Component] Setti

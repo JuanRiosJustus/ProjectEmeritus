@@ -1,0 +1,40 @@
+[2025-05-03 22:41:59] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-03 22:41:59] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-03 22:42:00] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-03 22:42:00] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-03 22:42:00] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-03 22:42:00] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-03 22:42:00] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-03 22:42:00] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-03 22:42:00] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-03 22:42:00] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-03 22:42:00] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-03 22:42:00] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-03 22:42:00] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-03 22:42:00] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-03 22:42:00] [INFO] [Component] Setting dark_dragon_Eilja_a9689b72-f35e-463e-b7e1-688df88d9390 on to {"row":0,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Eilja_a9689b72-f35e-463e-b7e1-688df88d9390","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting fire_dragon_Suoey_b8816ba2-a66c-47dc-8088-ac30ff9d16ae on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Suoey_b8816ba2-a66c-47dc-8088-ac30ff9d16ae","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting air_dragon_Eaduu_33903326-14a4-4f95-a8aa-2ee74fea245e on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Eaduu_33903326-14a4-4f95-a8aa-2ee74fea245e","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting fire_dragon_Nirp_e23a5c10-9591-434e-adc7-cb48bbe84b0e on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Nirp_e23a5c10-9591-434e-adc7-cb48bbe84b0e","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting water_dragon_Uuooba_2e007b44-1778-425a-9f84-27004fd4a77a on to {"row":5,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Uuooba_2e007b44-1778-425a-9f84-27004fd4a77a","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting fire_dragon_Nyte_c7705b45-9830-44f6-938f-3d04483abdd5 on to {"row":5,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Nyte_c7705b45-9830-44f6-938f-3d04483abdd5","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting dragon_Neycb_0b351fde-b16c-4e57-b003-d3de51fb8537 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Neycb_0b351fde-b16c-4e57-b003-d3de51fb8537","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting dragon_Euzy_8daf1fbc-4d99-4d24-9242-a0bdeb8c414b on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Euzy_8daf1fbc-4d99-4d24-9242-a0bdeb8c414b","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting light_dragon_Zoln_74f7baf4-3c04-4553-adde-7aa266ee94fb on to {"row":1,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Zoln_74f7baf4-3c04-4553-adde-7aa266ee94fb","structure":""}.
+[2025-05-03 22:42:00] [INFO] [Component] Setting earth_dragon_Wufdpw_d67e0e93-2bba-4819-98e2-637b3f66fcdb on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Wufdpw_d67e0e93-2bba-4819-98e2-637b3f66fcdb","structure":""}.
+[2025-05-03 22:42:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-03 22:42:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-03 22:42:00] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-03 22:42:00] [INFO] [FontPool] Started initializing FontPool
+[2025-05-03 22:42:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-03 22:42:00] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-03 22:42:00] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-03 22:42:00] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-03 22:42:00] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-03 22:42:00] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-03 22:42:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-03 22:42:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-03 22:42:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 22:42:01] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-03 22:42:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-03 22:42:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.4920889139175415 seconds

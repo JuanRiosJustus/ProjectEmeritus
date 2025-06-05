@@ -1,0 +1,312 @@
+[2025-05-26 17:03:52] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-26 17:03:52] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-26 17:03:52] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-26 17:03:52] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-26 17:03:52] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-26 17:03:52] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-26 17:03:52] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-26 17:03:52] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-26 17:03:52] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-26 17:03:52] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-26 17:03:52] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-26 17:03:52] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-26 17:03:52] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-26 17:03:52] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-26 17:03:52] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Uylqov___a5a2a6c4-58bb-4437-9a5d-bfdcf80b25ed on to {"row":9,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Uylqov___a5a2a6c4-58bb-4437-9a5d-bfdcf80b25ed","layers":{"empty":false},"total_elevation":5}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Uylqov___a5a2a6c4-58bb-4437-9a5d-bfdcf80b25ed into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Nayayc___fe201331-1655-477a-8cb1-d70e9b1f7875 on to {"row":6,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Nayayc___fe201331-1655-477a-8cb1-d70e9b1f7875","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Nayayc___fe201331-1655-477a-8cb1-d70e9b1f7875 into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25 on to {"row":9,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25 into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Xehks___2d0a3c00-7aad-416c-b758-385ee00af362 on to {"row":8,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Xehks___2d0a3c00-7aad-416c-b758-385ee00af362","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Xehks___2d0a3c00-7aad-416c-b758-385ee00af362 into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Iarii___c77c5c92-aaed-4623-8921-c882b35c4304 on to {"row":2,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Iarii___c77c5c92-aaed-4623-8921-c882b35c4304","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Iarii___c77c5c92-aaed-4623-8921-c882b35c4304 into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Runpi___4aec4557-2a77-4a51-9f02-c2f6575eb7d5 on to {"row":1,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Runpi___4aec4557-2a77-4a51-9f02-c2f6575eb7d5","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Runpi___4aec4557-2a77-4a51-9f02-c2f6575eb7d5 into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Uagtae___3be8a248-64a9-4977-89a4-00414cb1c71c on to {"row":5,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Uagtae___3be8a248-64a9-4977-89a4-00414cb1c71c","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Uagtae___3be8a248-64a9-4977-89a4-00414cb1c71c into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Nome___f55c0f91-108b-4e8f-b1f8-6933d0602ac2 on to {"row":0,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Nome___f55c0f91-108b-4e8f-b1f8-6933d0602ac2","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Nome___f55c0f91-108b-4e8f-b1f8-6933d0602ac2 into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Xeuin___0040eda8-304b-4f29-b9b0-67594f15dda0 on to {"row":9,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Xeuin___0040eda8-304b-4f29-b9b0-67594f15dda0","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Xeuin___0040eda8-304b-4f29-b9b0-67594f15dda0 into queue
+[2025-05-26 17:03:53] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Syoiaz___24545b4c-bf66-445e-b353-4bba4a3f1f68 on to {"row":6,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Syoiaz___24545b4c-bf66-445e-b353-4bba4a3f1f68","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Syoiaz___24545b4c-bf66-445e-b353-4bba4a3f1f68 into queue
+[2025-05-26 17:03:53] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-26 17:03:53] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-26 17:03:53] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-26 17:03:53] [INFO] [FontPool] Started initializing FontPool
+[2025-05-26 17:03:53] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-26 17:03:53] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:53] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-26 17:03:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:53] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 17:03:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 17:03:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-26 17:03:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-26 17:03:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:03:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-26 17:03:53] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 17:03:54] [INFO] [VisualsSystem] Finished creating blurred background after 0.4827125668525696 seconds
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:54] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:54] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 17:03:54] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:54] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:54] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 17:03:54] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:54] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:03:54] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 17:03:54] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:03:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:03:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:03:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-26 17:04:02] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_1___6ab15260-fad1-4896-ab18-1e371fc400af
+[2025-05-26 17:04:02] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-26 17:04:02] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-26 17:04:02] [INFO] [MovementSystem] Updated movement range to 6 for Dutogi
+[2025-05-26 17:04:02] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 5] for Dutogi
+[2025-05-26 17:04:02] [INFO] [MovementSystem] Updated movement range to 6 for Dutogi
+[2025-05-26 17:04:02] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 5] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 4] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 4] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 4] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 4] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 3] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 3] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 2] for Dutogi
+[2025-05-26 17:04:03] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 2] for Dutogi
+[2025-05-26 17:04:04] [INFO] [MovementSystem] Updated movement path from [9, 1] to [7, 2] for Dutogi
+[2025-05-26 17:04:04] [INFO] [MovementSystem] Updated movement path from [9, 1] to [7, 2] for Dutogi
+[2025-05-26 17:04:04] [INFO] [MovementSystem] Updated movement path from [9, 1] to [7, 1] for Dutogi
+[2025-05-26 17:04:04] [INFO] [MovementSystem] Updated movement path from [9, 1] to [7, 1] for Dutogi
+[2025-05-26 17:04:06] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25 on to {"row":7,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:04:06] [INFO] [MovementSystem] Moved from [9, 1] to [7, 1]
+[2025-05-26 17:04:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:04:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Dutogi___06aa4145-a60e-4068-a6f8-19f06295ac25
+[2025-05-26 17:04:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:04:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Dutogi
+[2025-05-26 17:04:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_1___add688fc-13d5-487f-97da-b0303e3337f0
+[2025-05-26 17:04:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_1___add688fc-13d5-487f-97da-b0303e3337f0
+[2025-05-26 17:04:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_1___add688fc-13d5-487f-97da-b0303e3337f0
+[2025-05-26 17:04:07] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:04:07] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:04:08] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-26 17:04:08] [INFO] [AbilitySystem] Dutogi is planning to use oblation on null
+[2025-05-26 17:04:08] [INFO] [AbilitySystem] Updated area of sight for Dutogi, viewing 9 tiles
+[2025-05-26 17:04:08] [INFO] [AbilitySystem] Updated line of sight for Dutogi, viewing 0 tiles
+[2025-05-26 17:04:08] [INFO] [AbilitySystem] Updated area of effect for Dutogi viewing 0 tiles
+[2025-05-26 17:04:08] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:08] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:04:08] [INFO] [CombatSystem] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:08] [INFO] [CombatSystem] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:08] [INFO] [CombatSystem] Started constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:08] [INFO] [CombatSystem] Finished constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Dutogi is planning to use oblation on [9, 2]
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated line of sight for Dutogi, viewing 4 tiles
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated area of effect for Dutogi viewing 1 tiles
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Dutogi is planning to use oblation on [9, 1]
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated line of sight for Dutogi, viewing 3 tiles
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated area of effect for Dutogi viewing 1 tiles
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Dutogi is planning to use oblation on [8, 1]
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated line of sight for Dutogi, viewing 2 tiles
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated area of effect for Dutogi viewing 1 tiles
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Dutogi is planning to use oblation on [8, 0]
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated line of sight for Dutogi, viewing 3 tiles
+[2025-05-26 17:04:09] [INFO] [AbilitySystem] Updated area of effect for Dutogi viewing 1 tiles
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-26 17:04:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Started constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [CombatSystem] Finished constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Checking cost requirements for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Dutogi is able to pay for oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Paying cost requirements for Dutogi using oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilitySystem] Used from oblation on [8, 0]
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [CombatSystem] Started dealing damage with oblation to Xehks 
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:04:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dutogi
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xehks
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-26 17:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Dutogi to use oblation
+[2025-05-26 17:04:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:04:10] [INFO] [AbilitySystem] Finished update updating {} because of ability

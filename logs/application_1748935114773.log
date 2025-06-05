@@ -1,0 +1,258 @@
+[2025-06-03 00:18:34] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 00:18:34] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 00:18:34] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 00:18:34] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 00:18:34] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 00:18:34] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 00:18:34] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 00:18:34] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 00:18:34] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 00:18:34] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 00:18:34] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 00:18:34] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 00:18:35] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 00:18:35] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8 into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Aophnw___e3e6a00d-018f-479b-8d39-50e39a90f195 on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Aophnw___e3e6a00d-018f-479b-8d39-50e39a90f195","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Aophnw___e3e6a00d-018f-479b-8d39-50e39a90f195 into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Bidi___4fccee01-5529-4e83-b8ca-8ba99e617c42 on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Bidi___4fccee01-5529-4e83-b8ca-8ba99e617c42","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Bidi___4fccee01-5529-4e83-b8ca-8ba99e617c42 into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Hapt___d0f5bef5-c854-4555-9d33-5cf2bef349bb on to {"row":9,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Hapt___d0f5bef5-c854-4555-9d33-5cf2bef349bb","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Hapt___d0f5bef5-c854-4555-9d33-5cf2bef349bb into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Zewqu___7b21eda4-5558-40d4-97ca-9adbc8676f2b on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Zewqu___7b21eda4-5558-40d4-97ca-9adbc8676f2b","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Zewqu___7b21eda4-5558-40d4-97ca-9adbc8676f2b into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Qyhsru___52a03c5e-ad59-4029-8608-83e5f0093b5f on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Qyhsru___52a03c5e-ad59-4029-8608-83e5f0093b5f","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Qyhsru___52a03c5e-ad59-4029-8608-83e5f0093b5f into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Iyoa___f5770bc3-73be-4240-9543-b2ee427fd7b2 on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Iyoa___f5770bc3-73be-4240-9543-b2ee427fd7b2","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Iyoa___f5770bc3-73be-4240-9543-b2ee427fd7b2 into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Fetduc___c5cd68d5-aac9-4faf-9544-98523bc1f06c on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Fetduc___c5cd68d5-aac9-4faf-9544-98523bc1f06c","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Fetduc___c5cd68d5-aac9-4faf-9544-98523bc1f06c into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Wusex___0cfac467-7c33-418b-941d-8ca4d8cb6eb6 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Wusex___0cfac467-7c33-418b-941d-8ca4d8cb6eb6","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Wusex___0cfac467-7c33-418b-941d-8ca4d8cb6eb6 into queue
+[2025-06-03 00:18:35] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Vynp___19510c65-440c-4eac-99ef-cc6add77be9f on to {"row":0,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Vynp___19510c65-440c-4eac-99ef-cc6add77be9f","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Vynp___19510c65-440c-4eac-99ef-cc6add77be9f into queue
+[2025-06-03 00:18:35] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 00:18:35] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-03 00:18:35] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-03 00:18:35] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-03 00:18:35] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 00:18:35] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 00:18:35] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8
+[2025-06-03 00:18:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8
+[2025-06-03 00:18:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 00:18:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 00:18:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-03 00:18:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-03 00:18:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 00:18:35] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 00:18:35] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-03 00:18:36] [INFO] [VisualsSystem] Finished creating blurred background after 0.4890010952949524 seconds
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilityPanel] Updating ability selection for UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8
+[2025-06-03 00:18:36] [INFO] [AbilityPanel] Finished ability selection for UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8
+[2025-06-03 00:18:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 00:18:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 00:18:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 00:18:38] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___dc4508c7-0acc-477b-adb8-23309800b633
+[2025-06-03 00:18:38] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-03 00:18:38] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement range to 9 for Fojeyq
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 9] for Fojeyq
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement range to 9 for Fojeyq
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 9] for Fojeyq
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 8] for Fojeyq
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 8] for Fojeyq
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 8] for Fojeyq
+[2025-06-03 00:18:38] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 8] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 7] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 7] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 6] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 6] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 5] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 5] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 4] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 4] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 3] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 3] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 3] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 3] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 2] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 2] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 1] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 1] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 1] for Fojeyq
+[2025-06-03 00:18:39] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 1] for Fojeyq
+[2025-06-03 00:18:40] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 00:18:40] [INFO] [MovementSystem] Moved from [5, 1] to [6, 1]
+[2025-06-03 00:18:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8
+[2025-06-03 00:18:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_light_dragon___NICKNAME_Fojeyq___92b65e1b-9177-4aa5-9324-a918f422b6b8
+[2025-06-03 00:18:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 00:18:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Fojeyq
+[2025-06-03 00:18:40] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___d1d7aa59-434a-4b46-87a9-44d78cd7b66a
+[2025-06-03 00:18:40] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_1___d1d7aa59-434a-4b46-87a9-44d78cd7b66a
+[2025-06-03 00:18:41] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___d1d7aa59-434a-4b46-87a9-44d78cd7b66a
+[2025-06-03 00:18:41] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:41] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:42] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-03 00:18:42] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:42] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:42] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:42] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:42] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 7 tiles
+[2025-06-03 00:18:42] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 6 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 2 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 2 tiles
+[2025-06-03 00:18:43] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fojeyq to use test_slash
+[2025-06-03 00:18:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fojeyq to use test_slash
+[2025-06-03 00:18:44] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fojeyq to use test_slash
+[2025-06-03 00:18:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fojeyq to use test_slash
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 7 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:18:44] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:18:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:18:46] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___d1d7aa59-434a-4b46-87a9-44d78cd7b66a
+[2025-06-03 00:19:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___d1d7aa59-434a-4b46-87a9-44d78cd7b66a
+[2025-06-03 00:19:15] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___d1d7aa59-434a-4b46-87a9-44d78cd7b66a
+[2025-06-03 00:19:15] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:19:15] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:19:15] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:19:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:19:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:19:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:19:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 4 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:19:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:19:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 5 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated line of sight for Fojeyq, viewing 3 tiles
+[2025-06-03 00:19:16] [INFO] [GameModel] Updated area of sight for Fojeyq, viewing 1 tiles
+[2025-06-03 00:19:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-03 00:19:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

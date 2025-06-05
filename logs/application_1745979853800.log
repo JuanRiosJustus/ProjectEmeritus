@@ -1,0 +1,273 @@
+[2025-04-29 19:24:13] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-29 19:24:13] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-29 19:24:13] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-29 19:24:13] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-29 19:24:13] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-29 19:24:13] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-29 19:24:13] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-29 19:24:13] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-29 19:24:13] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-29 19:24:13] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-29 19:24:13] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-29 19:24:13] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-29 19:24:14] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-29 19:24:14] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-29 19:24:14] [INFO] [Component] Setting fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f on to {"row":6,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f","structure":""}.
+[2025-04-29 19:24:14] [INFO] [SpeedQueue] Added unit enemy:Ourlog into queue
+[2025-04-29 19:24:14] [INFO] [Component] Setting dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534 on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534","structure":""}.
+[2025-04-29 19:24:14] [INFO] [SpeedQueue] Added unit enemy:Qeoj into queue
+[2025-04-29 19:24:14] [INFO] [Component] Setting water_dragon_Qapfi_ddfaf245-23e1-459b-8b9c-55f3de1722bb on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Qapfi_ddfaf245-23e1-459b-8b9c-55f3de1722bb","structure":""}.
+[2025-04-29 19:24:14] [INFO] [SpeedQueue] Added unit enemy:Qapfi into queue
+[2025-04-29 19:24:14] [INFO] [Component] Setting earth_dragon_Wyxm_e7513266-0925-4c42-ad67-465f2c1688b9 on to {"row":7,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Wyxm_e7513266-0925-4c42-ad67-465f2c1688b9","structure":""}.
+[2025-04-29 19:24:14] [INFO] [SpeedQueue] Added unit enemy:Wyxm into queue
+[2025-04-29 19:24:14] [INFO] [Component] Setting dark_dragon_Hyyo_4a046d69-e22d-4307-aae8-c4a70eee54f3 on to {"row":3,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Hyyo_4a046d69-e22d-4307-aae8-c4a70eee54f3","structure":""}.
+[2025-04-29 19:24:14] [INFO] [SpeedQueue] Added unit user:Hyyo into queue
+[2025-04-29 19:24:14] [INFO] [Component] Setting dragon_Wyrp_f15b5534-42f7-407b-8759-4cabd1660b70 on to {"row":2,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Wyrp_f15b5534-42f7-407b-8759-4cabd1660b70","structure":""}.
+[2025-04-29 19:24:14] [INFO] [SpeedQueue] Added unit user:Wyrp into queue
+[2025-04-29 19:24:14] [INFO] [Component] Setting dark_dragon_Sorcf_a593977e-5e74-42ae-be5b-f76e33c299c7 on to {"row":7,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Sorcf_a593977e-5e74-42ae-be5b-f76e33c299c7","structure":""}.
+[2025-04-29 19:24:14] [INFO] [SpeedQueue] Added unit user:Sorcf into queue
+[2025-04-29 19:24:14] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-29 19:24:14] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-29 19:24:14] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-29 19:24:14] [INFO] [FontPool] Started initializing FontPool
+[2025-04-29 19:24:14] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-29 19:24:14] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-29 19:24:14] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-29 19:24:14] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-29 19:24:14] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-29 19:24:15] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-29 19:24:15] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f
+[2025-04-29 19:24:15] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f
+[2025-04-29 19:24:15] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 19:24:15] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 19:24:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-29 19:24:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-29 19:24:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-29 19:24:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-29 19:24:15] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-29 19:24:15] [INFO] [VisualsSystem] Finished creating blurred background after 0.4889487326145172 seconds
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f
+[2025-04-29 19:24:15] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f
+[2025-04-29 19:24:15] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 19:24:15] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:17] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_017a2e1c-830e-4404-a5a7-23ece420de56
+[2025-04-29 19:24:17] [INFO] [InputHandler] Gliding 1 camera to new tile 6_0_017a2e1c-830e-4404-a5a7-23ece420de56
+[2025-04-29 19:24:17] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f
+[2025-04-29 19:24:17] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f
+[2025-04-29 19:24:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-29 19:24:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Ourlog
+[2025-04-29 19:24:18] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_017a2e1c-830e-4404-a5a7-23ece420de56
+[2025-04-29 19:24:18] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-29 19:24:18] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement range to 7 for Ourlog
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Ourlog
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement range to 7 for Ourlog
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Ourlog
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 4] for Ourlog
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 4] for Ourlog
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 3] for Ourlog
+[2025-04-29 19:24:18] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 3] for Ourlog
+[2025-04-29 19:24:19] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Ourlog
+[2025-04-29 19:24:19] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Ourlog
+[2025-04-29 19:24:19] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 3] for Ourlog
+[2025-04-29 19:24:19] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 3] for Ourlog
+[2025-04-29 19:24:19] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 2] for Ourlog
+[2025-04-29 19:24:19] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 2] for Ourlog
+[2025-04-29 19:24:20] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 2] for Ourlog
+[2025-04-29 19:24:20] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 2] for Ourlog
+[2025-04-29 19:24:20] [INFO] [Component] Setting fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Ourlog_01fad893-fc79-4fc6-981d-19b0e301a04f","structure":""}.
+[2025-04-29 19:24:20] [INFO] [MovementSystem] Moved from [6, 0] to [6, 2]
+[2025-04-29 19:24:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-29 19:24:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Ourlog
+[2025-04-29 19:24:20] [INFO] [InputHandler] Gliding 0 camera to new tile 6_2_4c45065c-e6e9-4f73-9d1a-6ae93370b891
+[2025-04-29 19:24:20] [INFO] [InputHandler] Gliding 1 camera to new tile 6_2_4c45065c-e6e9-4f73-9d1a-6ae93370b891
+[2025-04-29 19:24:21] [INFO] [AbilityPanel] Updating ability selection for dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:21] [INFO] [AbilityPanel] Finished ability selection for dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 19:24:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 19:24:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-29 19:24:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-29 19:24:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-29 19:24:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Qeoj
+[2025-04-29 19:24:21] [INFO] [InputHandler] Gliding 0 camera to new tile 3_5_7fc62a22-fa84-4d86-9a9e-470dca28d3d8
+[2025-04-29 19:24:21] [INFO] [InputHandler] Gliding 1 camera to new tile 3_5_7fc62a22-fa84-4d86-9a9e-470dca28d3d8
+[2025-04-29 19:24:23] [INFO] [InputHandler] Gliding 0 camera to new tile 3_5_7fc62a22-fa84-4d86-9a9e-470dca28d3d8
+[2025-04-29 19:24:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 19:24:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [AbilityPanel] Selecting water_attack
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Qeoj is planning to use water_attack on null
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated area of sight for Qeoj, viewing 11 tiles
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated line of sight for Qeoj, viewing 0 tiles
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated area of effect for Qeoj viewing 0 tiles
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Qeoj is planning to use water_attack on [5, 7]
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated line of sight for Qeoj, viewing 5 tiles
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated area of effect for Qeoj viewing 1 tiles
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Qeoj is planning to use water_attack on [4, 7]
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated line of sight for Qeoj, viewing 2 tiles
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated area of effect for Qeoj viewing 1 tiles
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Qeoj is planning to use water_attack on [4, 6]
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated line of sight for Qeoj, viewing 3 tiles
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated area of effect for Qeoj viewing 1 tiles
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Qeoj is planning to use water_attack on [3, 6]
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated line of sight for Qeoj, viewing 2 tiles
+[2025-04-29 19:24:24] [INFO] [AbilitySystem] Updated area of effect for Qeoj viewing 1 tiles
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Qeoj lands a CRIT bonus with water_attack for 15.0
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] 25.0 damage after modifiers for water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qapfi
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] 25.0 Raw damage after defenses for water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Qapfi defends with Same-Type-Defense-Bonus from water_attack for 17.5
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qapfi
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] 6.818182 damage after defenses for water_attack
+[2025-04-29 19:24:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Checking cost requirements for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Qeoj is able to pay for water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Paying cost requirements for Qeoj using water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilitySystem] Used from water_attack on [3, 6]
+[2025-04-29 19:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:25] [INFO] [AbilityPanel] Updating ability selection for dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:25] [INFO] [AbilityPanel] Finished ability selection for dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 19:24:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 19:24:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Qeoj_786fe1f9-82b3-4067-ac62-762e1a992534
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Started constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Finished constructing cost mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qapfi
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Qapfi defends with Same-Type-Defense-Bonus from water_attack for 7.0
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qapfi
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 2.7272727 damage after defenses for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [CombatSystem] Started dealing damage with water_attack to Qapfi 
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qapfi
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Qapfi defends with Same-Type-Defense-Bonus from water_attack for 7.0
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qapfi
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 2.7272727 damage after defenses for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qeoj
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qapfi
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Qapfi defends with Same-Type-Defense-Bonus from water_attack for 7.0
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qapfi
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] 2.7272727 damage after defenses for water_attack
+[2025-04-29 19:24:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qeoj to use water_attack
+[2025-04-29 19:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 19:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability

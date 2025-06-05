@@ -1,0 +1,265 @@
+[2025-05-04 14:31:55] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:31:55] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:31:55] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:31:55] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:31:55] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:31:55] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:31:55] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:31:55] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:31:55] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:31:55] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:31:55] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:31:55] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:31:55] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:31:55] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:31:55] [INFO] [Component] Setting fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147 on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147 into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting light_dragon_Dywui_9c36a82e-7dac-4d30-b16f-79b5ec223d61 on to {"row":0,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Dywui_9c36a82e-7dac-4d30-b16f-79b5ec223d61","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit light_dragon_Dywui_9c36a82e-7dac-4d30-b16f-79b5ec223d61 into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting dragon_Wybyp_251151ae-cf41-45a2-ae24-198b7ed81242 on to {"row":3,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Wybyp_251151ae-cf41-45a2-ae24-198b7ed81242","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit dragon_Wybyp_251151ae-cf41-45a2-ae24-198b7ed81242 into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting water_dragon_Main_1e8d9f9c-e461-4993-8dee-c2d5e5a9351e on to {"row":4,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Main_1e8d9f9c-e461-4993-8dee-c2d5e5a9351e","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit water_dragon_Main_1e8d9f9c-e461-4993-8dee-c2d5e5a9351e into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting fire_dragon_Jivutv_a1f25ec5-e697-4ad2-aedf-b07ca2b9725a on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Jivutv_a1f25ec5-e697-4ad2-aedf-b07ca2b9725a","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit fire_dragon_Jivutv_a1f25ec5-e697-4ad2-aedf-b07ca2b9725a into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting fire_dragon_Uuevyr_5f50aae5-1306-4bc0-b0e2-cf8aaec1af17 on to {"row":4,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Uuevyr_5f50aae5-1306-4bc0-b0e2-cf8aaec1af17","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit fire_dragon_Uuevyr_5f50aae5-1306-4bc0-b0e2-cf8aaec1af17 into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting earth_dragon_Sepooi_68b51a9c-7bac-4c67-906f-1b85e1ecdf10 on to {"row":5,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Sepooi_68b51a9c-7bac-4c67-906f-1b85e1ecdf10","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit earth_dragon_Sepooi_68b51a9c-7bac-4c67-906f-1b85e1ecdf10 into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting air_dragon_Qofy_34d0cdb7-d9a1-4c67-b1b3-03feda5bab56 on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Qofy_34d0cdb7-d9a1-4c67-b1b3-03feda5bab56","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit air_dragon_Qofy_34d0cdb7-d9a1-4c67-b1b3-03feda5bab56 into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting light_dragon_Moho_969855cb-5011-48e2-bc44-4aaa6b6b1f2e on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Moho_969855cb-5011-48e2-bc44-4aaa6b6b1f2e","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit light_dragon_Moho_969855cb-5011-48e2-bc44-4aaa6b6b1f2e into queue
+[2025-05-04 14:31:55] [INFO] [Component] Setting earth_dragon_Gulxo_cf8a16b7-0962-4f7b-83d9-401ceeab1f74 on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Gulxo_cf8a16b7-0962-4f7b-83d9-401ceeab1f74","structure":""}.
+[2025-05-04 14:31:55] [INFO] [SpeedQueue] Added unit earth_dragon_Gulxo_cf8a16b7-0962-4f7b-83d9-401ceeab1f74 into queue
+[2025-05-04 14:31:55] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:31:55] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:31:55] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:31:55] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:31:55] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:31:55] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:31:55] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:31:56] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:31:56] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:31:56] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:31:56] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147
+[2025-05-04 14:31:56] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147
+[2025-05-04 14:31:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:31:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:31:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:31:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:31:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:31:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:31:56] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:31:56] [INFO] [VisualsSystem] Finished creating blurred background after 0.4855257570743561 seconds
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147
+[2025-05-04 14:31:56] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147
+[2025-05-04 14:31:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:31:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:31:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:31:58] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_4a623ac9-d698-42e1-bac9-3c3709e84d59
+[2025-05-04 14:31:58] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_4a623ac9-d698-42e1-bac9-3c3709e84d59
+[2025-05-04 14:31:58] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147
+[2025-05-04 14:31:58] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Qiaeel_a54d0a69-12a6-4573-b9f2-fd1c06c22147
+[2025-05-04 14:31:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:31:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Qiaeel
+[2025-05-04 14:31:59] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_4a623ac9-d698-42e1-bac9-3c3709e84d59
+[2025-05-04 14:31:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:31:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [AbilityPanel] Selecting fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Qiaeel is planning to use fire_attack on [4, 5]
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated area of sight for Qiaeel, viewing 7 tiles
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated line of sight for Qiaeel, viewing 4 tiles
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated area of effect for Qiaeel viewing 1 tiles
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Qiaeel is planning to use fire_attack on [4, 4]
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated line of sight for Qiaeel, viewing 3 tiles
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated area of effect for Qiaeel viewing 1 tiles
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Qiaeel is planning to use fire_attack on [3, 3]
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated line of sight for Qiaeel, viewing 3 tiles
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated area of effect for Qiaeel viewing 1 tiles
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Qiaeel is planning to use fire_attack on [3, 2]
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated line of sight for Qiaeel, viewing 3 tiles
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated area of effect for Qiaeel viewing 1 tiles
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Qiaeel is planning to use fire_attack on [2, 2]
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated line of sight for Qiaeel, viewing 3 tiles
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated area of effect for Qiaeel viewing 1 tiles
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Qiaeel is planning to use fire_attack on [2, 1]
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated line of sight for Qiaeel, viewing 3 tiles
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Updated area of effect for Qiaeel viewing 1 tiles
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Qiaeel lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jivutv
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Jivutv defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jivutv
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Checking cost requirements for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Qiaeel is able to pay for fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Started constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Finished constructing cost mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Paying cost requirements for Qiaeel using fire_attack
+[2025-05-04 14:32:00] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use fire_attack
+[2025-05-04 14:32:00] [INFO] [AbilitySystem] Used from fire_attack on [2, 1]
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Qiaeel lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Qiaeel lands a CRIT bonus with fire_attack for 33.0
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 55.0 damage after modifiers for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jivutv
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 55.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Jivutv defends with Same-Type-Defense-Bonus from fire_attack for 38.5
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jivutv
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 15.0 damage after defenses for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [CombatSystem] Started dealing damage with fire_attack to Jivutv 
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Qiaeel lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jivutv
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Jivutv defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jivutv
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:32:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Qiaeel lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qiaeel
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jivutv
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Jivutv defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jivutv
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qiaeel to use fire_attack
+[2025-05-04 14:32:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:32:01] [INFO] [AbilitySystem] Finished update updating {} because of ability

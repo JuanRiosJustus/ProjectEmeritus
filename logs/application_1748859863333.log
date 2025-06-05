@@ -1,0 +1,117 @@
+[2025-06-02 03:24:23] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 03:24:23] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 03:24:23] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 03:24:23] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 03:24:23] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 03:24:23] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 03:24:23] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 03:24:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 03:24:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 03:24:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 03:24:24] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 03:24:24] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 03:24:24] [INFO] [VisualsSystem] Finished creating blurred background after 0.3190956115722656 seconds
+[2025-06-02 03:24:26] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 03:24:26] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 03:24:26] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 03:24:26] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 03:24:26] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 03:24:26] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:24:26] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c into queue
+[2025-06-02 03:24:26] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Cyliba___5b6e591f-6153-427e-9165-51eb505e3d9a on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Cyliba___5b6e591f-6153-427e-9165-51eb505e3d9a","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:24:26] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Cyliba___5b6e591f-6153-427e-9165-51eb505e3d9a into queue
+[2025-06-02 03:24:26] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:24:26] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 03:24:26] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 03:24:26] [INFO] [GameModel] Updated area of sight for Rixak, viewing 5 tiles
+[2025-06-02 03:24:26] [INFO] [GameModel] Updated line of sight for Rixak, viewing 2 tiles
+[2025-06-02 03:24:26] [INFO] [GameModel] Updated area of sight for Rixak, viewing 1 tiles
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 03:24:26] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-02 03:24:26] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-02 03:24:26] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 03:24:26] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 03:24:26] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-02 03:24:26] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 03:24:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c
+[2025-06-02 03:24:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c
+[2025-06-02 03:24:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 03:24:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 03:24:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 03:24:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c
+[2025-06-02 03:24:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c
+[2025-06-02 03:24:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 03:24:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c
+[2025-06-02 03:24:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Rixak___1eebb3ff-da93-41e6-9eee-4bf31e47009c
+[2025-06-02 03:24:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 03:24:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:24:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Rixak to use test_slash
+[2025-06-02 03:24:28] [INFO] [AbilitySystem] Rixak is planning to use oblation on ROW_4___COLUMN_5___c043315b-739d-461c-ba56-fe4a0d9d827c
+[2025-06-02 03:24:28] [INFO] [AbilitySystem] Updated area of sight for Rixak, viewing 12 tiles
+[2025-06-02 03:24:28] [INFO] [AbilitySystem] Updated line of sight for Rixak, viewing 2 tiles
+[2025-06-02 03:24:28] [INFO] [AbilitySystem] Updated area of sight for Rixak, viewing 1 tiles
+[2025-06-02 03:24:28] [INFO] [AbilitySystem] Used from oblation on ROW_4___COLUMN_5___c043315b-739d-461c-ba56-fe4a0d9d827c
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Started constructing damage mappings for Rixak to use oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Rixak to use oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Rixak to use oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Rixak
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] 25.0 Raw damage before modifiers for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] 25.0 damage after modifiers for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Rixak
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Cyliba
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] 25.0 Raw damage after defenses for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Cyliba
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] 22.727274 damage after defenses for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Rixak
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] -18.75 Raw damage before modifiers for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] -18.75 damage after modifiers for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Rixak
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Cyliba
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] -18.75 Raw damage after defenses for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Cyliba
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] -17.045456 damage after defenses for oblation
+[2025-06-02 03:24:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Rixak to use oblation
+[2025-06-02 03:24:28] [INFO] [CombatSystem] Started dealing damage with oblation to Cyliba 
+[2025-06-02 03:24:28] [INFO] [AbilityPanel] Updating ability selection for UNIT_dragon___NICKNAME_Cyliba___5b6e591f-6153-427e-9165-51eb505e3d9a
+[2025-06-02 03:24:28] [INFO] [AbilityPanel] Finished ability selection for UNIT_dragon___NICKNAME_Cyliba___5b6e591f-6153-427e-9165-51eb505e3d9a
+[2025-06-02 03:24:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 03:24:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 03:24:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 03:24:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 03:24:28] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dragon___NICKNAME_Cyliba___5b6e591f-6153-427e-9165-51eb505e3d9a
+[2025-06-02 03:24:28] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dragon___NICKNAME_Cyliba___5b6e591f-6153-427e-9165-51eb505e3d9a
+[2025-06-02 03:24:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 03:24:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Cyliba
+[2025-06-02 03:24:28] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_5___c043315b-739d-461c-ba56-fe4a0d9d827c
+[2025-06-02 03:24:28] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_5___c043315b-739d-461c-ba56-fe4a0d9d827c
+[2025-06-02 03:24:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:24:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:24:29] [INFO] [AbilitySystem] Cyliba is planning to use blunt_attack on ROW_4___COLUMN_4___27b8346b-e8ac-42b1-bb58-eb5ea555c999
+[2025-06-02 03:24:29] [INFO] [AbilitySystem] Updated area of sight for Cyliba, viewing 5 tiles
+[2025-06-02 03:24:29] [INFO] [AbilitySystem] Updated line of sight for Cyliba, viewing 2 tiles
+[2025-06-02 03:24:29] [INFO] [AbilitySystem] Updated area of sight for Cyliba, viewing 1 tiles
+[2025-06-02 03:24:29] [INFO] [AbilitySystem] Used from blunt_attack on ROW_4___COLUMN_4___27b8346b-e8ac-42b1-bb58-eb5ea555c999
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cyliba to use blunt_attack
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cyliba to use blunt_attack
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cyliba to use blunt_attack
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cyliba
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] 20.0 Raw damage before modifiers for blunt_attack
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] Cyliba lands a Same-Type-Attack-Bonus with blunt_attack, for 24.0
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] 44.0 damage after modifiers for blunt_attack
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cyliba
+[2025-06-02 03:24:29] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Rixak
+[2025-06-02 03:24:29] [INFO]

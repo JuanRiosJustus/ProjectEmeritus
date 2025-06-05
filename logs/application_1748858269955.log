@@ -1,0 +1,86 @@
+[2025-06-02 02:57:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 02:57:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 02:57:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 02:57:50] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 02:57:50] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 02:57:50] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 02:57:50] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 02:57:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 02:57:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 02:57:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 02:57:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 02:57:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 02:57:50] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Noouoh___0c6fea30-6265-4887-9d0c-c7ba510228c0 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Noouoh___0c6fea30-6265-4887-9d0c-c7ba510228c0","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:57:50] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Noouoh___0c6fea30-6265-4887-9d0c-c7ba510228c0 into queue
+[2025-06-02 02:57:50] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-b5db-3165a5f3eaa9 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-b5db-3165a5f3eaa9","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:57:50] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-b5db-3165a5f3eaa9 into queue
+[2025-06-02 02:57:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 02:57:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 02:57:50] [INFO] [GameModel] Updated area of sight for Noouoh, viewing 5 tiles
+[2025-06-02 02:57:50] [INFO] [GameModel] Updated line of sight for Noouoh, viewing 2 tiles
+[2025-06-02 02:57:50] [INFO] [GameModel] Updated area of sight for Noouoh, viewing 1 tiles
+[2025-06-02 02:57:50] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 02:57:50] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 02:57:50] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-02 02:57:50] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-02 02:57:50] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:57:50] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:57:50] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-02 02:57:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 02:57:50] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Noouoh___0c6fea30-6265-4887-9d0c-c7ba510228c0
+[2025-06-02 02:57:50] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Noouoh___0c6fea30-6265-4887-9d0c-c7ba510228c0
+[2025-06-02 02:57:50] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 02:57:50] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 02:57:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 02:57:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 02:57:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 02:57:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 02:57:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 02:57:51] [INFO] [VisualsSystem] Finished creating blurred background after 0.328016996383667 seconds
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Noouoh___0c6fea30-6265-4887-9d0c-c7ba510228c0
+[2025-06-02 02:57:51] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Noouoh___0c6fea30-6265-4887-9d0c-c7ba510228c0
+[2025-06-02 02:57:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 02:57:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:57:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noouoh to use test_slash
+[2025-06-02 02:57:53] [INFO] [AbilitySystem] Noouoh is planning to use dark_attack on ROW_4___COLUMN_5___a199f3de-73af-4c4e-96dc-41535f4b4a0b
+[2025-06-02 02:57:53] [INFO] [AbilitySystem] Updated area of sight for Noouoh, viewing 12 tiles
+[2025-06-02 02:57:53] [INFO] [AbilitySystem] Updated line of sight for Noouoh, viewing 2 tiles
+[2025-06-02 02:57:53] [INFO] [AbilitySystem] Updated area of sight for Noouoh, viewing 1 tiles
+[2025-06-02 02:57:53] [INFO] [AbilitySystem] Used from dark_attack on ROW_4___COLUMN_5___a199f3de-73af-4c4e-96dc-41535f4b4a0b
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Noouoh to use dark_attack
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Noouoh to use dark_attack
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Noouoh to use dark_attack
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Noouoh
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] 20.0 Raw damage before modifiers for dark_attack
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Noouoh lands a Same-Type-Attack-Bonus with dark_attack, for 24.0
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] 44.0 damage after modifiers for dark_attack
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Noouoh
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qymeag
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] 44.0 Raw damage after defenses for dark_attack
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qymeag
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] 40.0 damage after defenses for dark_attack
+[2025-06-02 02:57:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Noouoh to use dark_attack
+[2025-06-02 02:57:53] [INFO] [CombatSystem] Started dealing damage with dark_attack to Qymeag 
+[2025-06-02 02:57:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-b5db-3165a5f3eaa9
+[2025-06-02 02:57:53] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-b5db-3165a5f3eaa9
+[2025-06-02 02:57:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 02:57:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 02:57:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 02:57:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 02:57:53] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-b5db-3165a5f3eaa9
+[2025-06-02 02:57:53] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-b5db-3165a5f3eaa9
+[2025-06-02 02:57:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 02:57:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Qymeag
+[2025-06-02 02:57:53] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_5___a199f3de-73af-4c4e-96dc-41535f4b4a0b
+[2025-06-02 02:57:53] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_5___a199f3de-73af-4c4e-96dc-41535f4b4a0b
+[2025-06-02 02:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:57:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Qymeag___bcb3bd50-6ef2-4187-

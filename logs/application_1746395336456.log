@@ -1,0 +1,403 @@
+[2025-05-04 14:48:56] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:48:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:48:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:48:56] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:48:56] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:48:56] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:48:56] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:48:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:48:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:48:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:48:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:48:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:48:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:48:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:48:56] [INFO] [Component] Setting dark_dragon_Ayjl_02cc7070-9d8f-4b64-95d2-5bf1db7cf11e on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Ayjl_02cc7070-9d8f-4b64-95d2-5bf1db7cf11e","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit dark_dragon_Ayjl_02cc7070-9d8f-4b64-95d2-5bf1db7cf11e into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting light_dragon_Xopda_c091abc9-31c2-46e1-81f7-941ee637edac on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Xopda_c091abc9-31c2-46e1-81f7-941ee637edac","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit light_dragon_Xopda_c091abc9-31c2-46e1-81f7-941ee637edac into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting earth_dragon_Qynji_c5a4ac32-4458-499a-b1c2-660e0040865b on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Qynji_c5a4ac32-4458-499a-b1c2-660e0040865b","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit earth_dragon_Qynji_c5a4ac32-4458-499a-b1c2-660e0040865b into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49 on to {"row":6,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49 into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting earth_dragon_Kiny_b61a0465-2acd-45bf-8e96-e191df545e13 on to {"row":1,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Kiny_b61a0465-2acd-45bf-8e96-e191df545e13","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit earth_dragon_Kiny_b61a0465-2acd-45bf-8e96-e191df545e13 into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6 on to {"row":6,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6 into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116 on to {"row":1,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116 into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597 on to {"row":2,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597 into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting earth_dragon_Fyuuu_e73b5de5-99ff-44e1-8d89-e3cb28f08d76 on to {"row":4,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Fyuuu_e73b5de5-99ff-44e1-8d89-e3cb28f08d76","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit earth_dragon_Fyuuu_e73b5de5-99ff-44e1-8d89-e3cb28f08d76 into queue
+[2025-05-04 14:48:56] [INFO] [Component] Setting earth_dragon_Wojyoa_f4a7fd02-1368-46e3-8010-9b15b82b933d on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Wojyoa_f4a7fd02-1368-46e3-8010-9b15b82b933d","structure":""}.
+[2025-05-04 14:48:56] [INFO] [SpeedQueue] Added unit earth_dragon_Wojyoa_f4a7fd02-1368-46e3-8010-9b15b82b933d into queue
+[2025-05-04 14:48:56] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:48:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:48:57] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:48:57] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:48:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:48:57] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:48:57] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:48:57] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:48:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:48:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:57] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:48:57] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6
+[2025-05-04 14:48:57] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6
+[2025-05-04 14:48:57] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:48:57] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:48:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:48:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:48:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:48:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:48:57] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:48:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.48532554507255554 seconds
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6
+[2025-05-04 14:48:58] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6
+[2025-05-04 14:48:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:48:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:48:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:48:59] [INFO] [MovementSystem] Updated movement range to 8 for Peraaa
+[2025-05-04 14:48:59] [INFO] [MovementSystem] Updated movement path from [6, 11] to [6, 10] for Peraaa
+[2025-05-04 14:48:59] [INFO] [Component] Setting fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6 on to {"row":6,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6","structure":""}.
+[2025-05-04 14:48:59] [INFO] [MovementSystem] Moved from [6, 11] to [6, 10]
+[2025-05-04 14:48:59] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6
+[2025-05-04 14:48:59] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Peraaa_132708c4-ab0d-4eda-b7a1-dec14f64b5c6
+[2025-05-04 14:48:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:48:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Peraaa
+[2025-05-04 14:48:59] [INFO] [InputHandler] Gliding 0 camera to new tile 6_10_a19f8116-c63b-47f6-bd39-69e10b1da0c5
+[2025-05-04 14:48:59] [INFO] [InputHandler] Gliding 1 camera to new tile 6_10_a19f8116-c63b-47f6-bd39-69e10b1da0c5
+[2025-05-04 14:49:00] [INFO] [AbilitySystem] Peraaa is planning to use fire_attack on [4, 10]
+[2025-05-04 14:49:00] [INFO] [AbilitySystem] Updated area of sight for Peraaa, viewing 11 tiles
+[2025-05-04 14:49:00] [INFO] [AbilitySystem] Updated line of sight for Peraaa, viewing 3 tiles
+[2025-05-04 14:49:00] [INFO] [AbilitySystem] Updated area of effect for Peraaa viewing 1 tiles
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Checking cost requirements for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Peraaa is able to pay for fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Paying cost requirements for Peraaa using fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilitySystem] Used from fire_attack on [4, 10]
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Peraaa
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Peraaa lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Peraaa
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Fyuuu
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Fyuuu
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for fire_attack
+[2025-05-04 14:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Peraaa to use fire_attack
+[2025-05-04 14:49:00] [INFO] [CombatSystem] Started dealing damage with fire_attack to Fyuuu 
+[2025-05-04 14:49:00] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:00] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:00] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:00] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:49:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:49:00] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:00] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:49:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Geroyl
+[2025-05-04 14:49:00] [INFO] [InputHandler] Gliding 0 camera to new tile 2_11_d25f8ee3-189f-4313-872c-5c321505fe48
+[2025-05-04 14:49:00] [INFO] [InputHandler] Gliding 1 camera to new tile 2_11_d25f8ee3-189f-4313-872c-5c321505fe48
+[2025-05-04 14:49:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Geroyl is planning to use oblation on [1, 11]
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Updated area of sight for Geroyl, viewing 7 tiles
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Updated line of sight for Geroyl, viewing 2 tiles
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Updated area of effect for Geroyl viewing 1 tiles
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Started constructing cost mappings for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Finished constructing cost mappings for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Checking cost requirements for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Geroyl is able to pay for oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Started constructing cost mappings for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Finished constructing cost mappings for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Paying cost requirements for Geroyl using oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Used from oblation on [1, 11]
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Geroyl
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Geroyl
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wojyoa
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wojyoa
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Geroyl
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Geroyl
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wojyoa
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wojyoa
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] -3.3333333 damage after defenses for oblation
+[2025-05-04 14:49:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Geroyl to use oblation
+[2025-05-04 14:49:01] [INFO] [CombatSystem] Started dealing damage with oblation to Wojyoa 
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:49:02] [INFO] [MovementSystem] Updated movement range to 6 for Geroyl
+[2025-05-04 14:49:02] [INFO] [MovementSystem] Updated movement path from [2, 11] to [4, 11] for Geroyl
+[2025-05-04 14:49:02] [INFO] [Component] Setting air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597 on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Geroyl_499d8168-6b60-4a6d-8bb0-12cb6b3a9597","structure":""}.
+[2025-05-04 14:49:02] [INFO] [MovementSystem] Moved from [2, 11] to [4, 11]
+[2025-05-04 14:49:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:49:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Geroyl
+[2025-05-04 14:49:02] [INFO] [InputHandler] Gliding 0 camera to new tile 4_11_49e722f6-c455-4ce3-9c2b-145f1eed020c
+[2025-05-04 14:49:02] [INFO] [InputHandler] Gliding 1 camera to new tile 4_11_49e722f6-c455-4ce3-9c2b-145f1eed020c
+[2025-05-04 14:49:03] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116
+[2025-05-04 14:49:03] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116
+[2025-05-04 14:49:03] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:03] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:49:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:49:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116
+[2025-05-04 14:49:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116
+[2025-05-04 14:49:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:49:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Uuccsy
+[2025-05-04 14:49:03] [INFO] [InputHandler] Gliding 0 camera to new tile 1_10_9be59a12-71a8-4ef3-8e8a-4be840d3b7cb
+[2025-05-04 14:49:03] [INFO] [InputHandler] Gliding 1 camera to new tile 1_10_9be59a12-71a8-4ef3-8e8a-4be840d3b7cb
+[2025-05-04 14:49:04] [INFO] [MovementSystem] Updated movement range to 10 for Uuccsy
+[2025-05-04 14:49:04] [INFO] [MovementSystem] Updated movement path from [1, 10] to [0, 9] for Uuccsy
+[2025-05-04 14:49:04] [INFO] [Component] Setting air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116 on to {"row":0,"column":9,"height":0,"collider":"","unit":"air_dragon_Uuccsy_8daf1f72-0207-4cc3-88cc-e4570867e116","structure":""}.
+[2025-05-04 14:49:04] [INFO] [MovementSystem] Moved from [1, 10] to [0, 9]
+[2025-05-04 14:49:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:49:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Uuccsy
+[2025-05-04 14:49:04] [INFO] [InputHandler] Gliding 0 camera to new tile 0_9_8a4f3397-faa4-4dbf-af94-041acc7b4493
+[2025-05-04 14:49:04] [INFO] [InputHandler] Gliding 1 camera to new tile 0_9_8a4f3397-faa4-4dbf-af94-041acc7b4493
+[2025-05-04 14:49:05] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:05] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:49:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:49:05] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:05] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:49:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Luwyap
+[2025-05-04 14:49:05] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_73ce626c-cb06-4a26-8d83-ea4f74f147e2
+[2025-05-04 14:49:05] [INFO] [InputHandler] Gliding 1 camera to new tile 6_0_73ce626c-cb06-4a26-8d83-ea4f74f147e2
+[2025-05-04 14:49:24] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_73ce626c-cb06-4a26-8d83-ea4f74f147e2
+[2025-05-04 14:49:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:49:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:49:24] [INFO] [AbilityPanel] Selecting earth_attack
+[2025-05-04 14:49:24] [INFO] [AbilitySystem] Luwyap is planning to use earth_attack on null
+[2025-05-04 14:49:24] [INFO] [AbilitySystem] Updated area of sight for Luwyap, viewing 7 tiles
+[2025-05-04 14:49:24] [INFO] [AbilitySystem] Updated line of sight for Luwyap, viewing 0 tiles
+[2025-05-04 14:49:24] [INFO] [AbilitySystem] Updated area of effect for Luwyap viewing 0 tiles
+[2025-05-04 14:49:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:49:24] [INFO] [CombatSystem] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:24] [INFO] [CombatSystem] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:24] [INFO] [CombatSystem] Started constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:24] [INFO] [CombatSystem] Finished constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Luwyap is planning to use earth_attack on [7, 1]
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Updated line of sight for Luwyap, viewing 2 tiles
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Updated area of effect for Luwyap viewing 1 tiles
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Luwyap lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xopda
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xopda
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 20.0 damage after defenses for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Luwyap is planning to use earth_attack on [7, 0]
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Updated line of sight for Luwyap, viewing 2 tiles
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Updated area of effect for Luwyap viewing 1 tiles
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Luwyap lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qynji
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Qynji defends with Same-Type-Defense-Bonus from earth_attack for 15.4
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qynji
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] 5.5 damage after defenses for earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Checking cost requirements for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Luwyap is able to pay for earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Paying cost requirements for Luwyap using earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Used from earth_attack on [7, 0]
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:49:25] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:25] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:49:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:49:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Luwyap_9d6709de-7604-469f-b23d-bc84c0a5ed49
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Started constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [CombatSystem] Finished constructing cost mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Luwyap lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qynji
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Qynji defends with Same-Type-Defense-Bonus from earth_attack for 15.4
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qynji
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 5.5 damage after defenses for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [CombatSystem] Started dealing damage with earth_attack to Qynji 
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Luwyap lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Luwyap
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qynji
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Qynji defends with Same-Type-Defense-Bonus from earth_attack for 15.4
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qynji
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] 5.5 damage after defenses for earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Luwyap to use earth_attack
+[2025-05-04 14:49:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:49:26] [INFO] [AbilitySystem] Finished update updating {} because of ability

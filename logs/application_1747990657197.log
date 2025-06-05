@@ -1,0 +1,158 @@
+[2025-05-23 01:57:37] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-23 01:57:37] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-23 01:57:37] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-23 01:57:37] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-23 01:57:37] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-23 01:57:37] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-23 01:57:37] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-23 01:57:37] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-23 01:57:37] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-23 01:57:37] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-23 01:57:37] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-23 01:57:37] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-23 01:57:37] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-23 01:57:37] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-23 01:57:37] [INFO] [Component] Setting air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b","structure":"","total_elevation":6}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting air_dragon_Cone_f459104b-aeea-4e59-b2a4-0aabfb30f1cd on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Cone_f459104b-aeea-4e59-b2a4-0aabfb30f1cd","structure":"","total_elevation":3}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit air_dragon_Cone_f459104b-aeea-4e59-b2a4-0aabfb30f1cd into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting earth_dragon_Vaozi_f25248e1-c61f-4734-af84-a4051c8071fe on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Vaozi_f25248e1-c61f-4734-af84-a4051c8071fe","structure":"","total_elevation":8}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit earth_dragon_Vaozi_f25248e1-c61f-4734-af84-a4051c8071fe into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting light_dragon_Tosuga_28b7e3bc-0906-4f08-b3d0-0e42bb72cb71 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Tosuga_28b7e3bc-0906-4f08-b3d0-0e42bb72cb71","structure":"","total_elevation":3}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit light_dragon_Tosuga_28b7e3bc-0906-4f08-b3d0-0e42bb72cb71 into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting dark_dragon_Gafaya_3bf29f7e-2776-43d8-a219-cd5cf1c087b5 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Gafaya_3bf29f7e-2776-43d8-a219-cd5cf1c087b5","structure":"","total_elevation":2}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit dark_dragon_Gafaya_3bf29f7e-2776-43d8-a219-cd5cf1c087b5 into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting dark_dragon_Toci_f007c59e-60b6-4222-97e2-046b2b61977b on to {"row":0,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Toci_f007c59e-60b6-4222-97e2-046b2b61977b","structure":"","total_elevation":8}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit dark_dragon_Toci_f007c59e-60b6-4222-97e2-046b2b61977b into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting fire_dragon_Hiwa_d6477450-f24a-4346-91fe-6cf4ec911b4f on to {"row":5,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Hiwa_d6477450-f24a-4346-91fe-6cf4ec911b4f","structure":"","total_elevation":4}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit fire_dragon_Hiwa_d6477450-f24a-4346-91fe-6cf4ec911b4f into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting dragon_Nixxpq_994fc2c5-219c-457b-a019-2bc7dd441c76 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dragon_Nixxpq_994fc2c5-219c-457b-a019-2bc7dd441c76","structure":"","total_elevation":4}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit dragon_Nixxpq_994fc2c5-219c-457b-a019-2bc7dd441c76 into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting dragon_Qisa_c41f6701-04d4-453b-9dfd-ff2ea4909a5a on to {"row":7,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dragon_Qisa_c41f6701-04d4-453b-9dfd-ff2ea4909a5a","structure":"","total_elevation":6}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit dragon_Qisa_c41f6701-04d4-453b-9dfd-ff2ea4909a5a into queue
+[2025-05-23 01:57:37] [INFO] [Component] Setting dragon_Litoy_012e2baf-558e-4230-a76b-bf5542bdab19 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dragon_Litoy_012e2baf-558e-4230-a76b-bf5542bdab19","structure":"","total_elevation":8}.
+[2025-05-23 01:57:37] [INFO] [SpeedQueue] Added unit dragon_Litoy_012e2baf-558e-4230-a76b-bf5542bdab19 into queue
+[2025-05-23 01:57:37] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-23 01:57:37] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-23 01:57:37] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-23 01:57:37] [INFO] [FontPool] Started initializing FontPool
+[2025-05-23 01:57:37] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-23 01:57:37] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-23 01:57:37] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-23 01:57:38] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-23 01:57:38] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-23 01:57:38] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-23 01:57:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-23 01:57:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:57:38] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-23 01:57:38] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-23 01:57:38] [INFO] [VisualsSystem] Finished creating blurred background after 0.48743072152137756 seconds
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:57:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:57:41] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_265af8ad-1aa7-463f-9e76-035bddeaabfa
+[2025-05-23 01:57:41] [INFO] [InputHandler] Gliding 1 camera to new tile 2_1_265af8ad-1aa7-463f-9e76-035bddeaabfa
+[2025-05-23 01:57:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Riryq_0ff4c3ac-40ac-4458-a569-665dec67179b
+[2025-05-23 01:57:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:57:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Riryq
+[2025-05-23 01:57:43] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_265af8ad-1aa7-463f-9e76-035bddeaabfa
+[2025-05-23 01:57:43] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-23 01:57:43] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement range to 9 for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 6] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement range to 9 for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 6] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 4] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 4] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 4] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 4] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 3] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 3] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 1] for Riryq
+[2025-05-23 01:57:43] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 1] for Riryq
+[2025-05-23 01:57:44] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Riryq
+[2025-05-23 01:57:44] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [2, 2] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [2, 2] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [2, 1] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [2, 1] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [1, 1] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [1, 1] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [1, 0] for Riryq
+[2025-05-23 01:57:46] [INFO] [MovementSystem] Updated movement path from [2, 1] to [1, 0] for Riryq

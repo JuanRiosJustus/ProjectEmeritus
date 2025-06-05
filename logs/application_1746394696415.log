@@ -1,0 +1,298 @@
+[2025-05-04 14:38:16] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:38:16] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:38:16] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:38:16] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:38:16] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:38:16] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:38:16] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:38:16] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:38:16] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:38:16] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:38:16] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:38:16] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:38:16] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:38:16] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:38:16] [INFO] [Component] Setting fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting air_dragon_Eioio_ca630f34-a58c-43d6-98cd-c91b48d5a5d8 on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Eioio_ca630f34-a58c-43d6-98cd-c91b48d5a5d8","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit air_dragon_Eioio_ca630f34-a58c-43d6-98cd-c91b48d5a5d8 into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting light_dragon_Kiap_3547e8ef-8626-406b-b409-ecf12c563432 on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Kiap_3547e8ef-8626-406b-b409-ecf12c563432","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit light_dragon_Kiap_3547e8ef-8626-406b-b409-ecf12c563432 into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting fire_dragon_Yulup_8c85ef36-15b6-4a9f-aa4c-50f5777a65a1 on to {"row":3,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Yulup_8c85ef36-15b6-4a9f-aa4c-50f5777a65a1","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit fire_dragon_Yulup_8c85ef36-15b6-4a9f-aa4c-50f5777a65a1 into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting air_dragon_Maprxk_70f0e94b-e444-47a2-98d0-dd6f9a1d04d0 on to {"row":5,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Maprxk_70f0e94b-e444-47a2-98d0-dd6f9a1d04d0","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit air_dragon_Maprxk_70f0e94b-e444-47a2-98d0-dd6f9a1d04d0 into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting dragon_Eomq_ee0b078a-9946-4c81-bc7c-1209ca3f4915 on to {"row":5,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Eomq_ee0b078a-9946-4c81-bc7c-1209ca3f4915","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit dragon_Eomq_ee0b078a-9946-4c81-bc7c-1209ca3f4915 into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting earth_dragon_Pyfk_3b96b495-3bff-46f9-841f-49f06df66ca6 on to {"row":2,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Pyfk_3b96b495-3bff-46f9-841f-49f06df66ca6","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit earth_dragon_Pyfk_3b96b495-3bff-46f9-841f-49f06df66ca6 into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting air_dragon_Gykoji_439bb0c4-1032-4697-a9e0-72c210274494 on to {"row":1,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Gykoji_439bb0c4-1032-4697-a9e0-72c210274494","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit air_dragon_Gykoji_439bb0c4-1032-4697-a9e0-72c210274494 into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting dragon_Feaxuy_331152d7-30ba-4192-b850-4a34aaf87ddd on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Feaxuy_331152d7-30ba-4192-b850-4a34aaf87ddd","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit dragon_Feaxuy_331152d7-30ba-4192-b850-4a34aaf87ddd into queue
+[2025-05-04 14:38:16] [INFO] [Component] Setting dark_dragon_Xeked_958f347a-c961-48d4-b802-ba7adb77f540 on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Xeked_958f347a-c961-48d4-b802-ba7adb77f540","structure":""}.
+[2025-05-04 14:38:16] [INFO] [SpeedQueue] Added unit dark_dragon_Xeked_958f347a-c961-48d4-b802-ba7adb77f540 into queue
+[2025-05-04 14:38:16] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:38:17] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:38:17] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:38:17] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:38:17] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:38:17] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:38:17] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:38:17] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:38:17] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:38:17] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:17] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:38:17] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f
+[2025-05-04 14:38:17] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f
+[2025-05-04 14:38:17] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:38:17] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:38:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:38:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:38:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:38:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:38:17] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:38:18] [INFO] [VisualsSystem] Finished creating blurred background after 0.4857197105884552 seconds
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f
+[2025-05-04 14:38:18] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f
+[2025-05-04 14:38:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:38:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:18] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_136e87d7-60ba-475b-9fbc-b5104e473025
+[2025-05-04 14:38:18] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_136e87d7-60ba-475b-9fbc-b5104e473025
+[2025-05-04 14:38:18] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f
+[2025-05-04 14:38:18] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f
+[2025-05-04 14:38:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:38:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Yosuex
+[2025-05-04 14:38:19] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_136e87d7-60ba-475b-9fbc-b5104e473025
+[2025-05-04 14:38:19] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-04 14:38:19] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-04 14:38:19] [INFO] [MovementSystem] Updated movement range to 8 for Yosuex
+[2025-05-04 14:38:19] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 4] for Yosuex
+[2025-05-04 14:38:19] [INFO] [MovementSystem] Updated movement range to 8 for Yosuex
+[2025-05-04 14:38:19] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 4] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 3] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 3] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 2] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 2] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [2, 2] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [2, 2] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [2, 1] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [2, 1] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [1, 1] for Yosuex
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Updated movement path from [1, 0] to [1, 1] for Yosuex
+[2025-05-04 14:38:20] [INFO] [Component] Setting fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f on to {"row":1,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Yosuex_599752fe-aa03-4260-8174-a11c2395533f","structure":""}.
+[2025-05-04 14:38:20] [INFO] [MovementSystem] Moved from [1, 0] to [1, 1]
+[2025-05-04 14:38:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:38:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Yosuex
+[2025-05-04 14:38:20] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_882c8647-cd28-46e9-ae98-2a32c2447153
+[2025-05-04 14:38:20] [INFO] [InputHandler] Gliding 1 camera to new tile 1_1_882c8647-cd28-46e9-ae98-2a32c2447153
+[2025-05-04 14:38:21] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_882c8647-cd28-46e9-ae98-2a32c2447153
+[2025-05-04 14:38:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:21] [INFO] [AbilityPanel] Selecting fire_attack
+[2025-05-04 14:38:21] [INFO] [AbilitySystem] Yosuex is planning to use fire_attack on [4, 6]
+[2025-05-04 14:38:21] [INFO] [AbilitySystem] Updated area of sight for Yosuex, viewing 11 tiles
+[2025-05-04 14:38:21] [INFO] [AbilitySystem] Updated line of sight for Yosuex, viewing 9 tiles
+[2025-05-04 14:38:21] [INFO] [AbilitySystem] Updated area of effect for Yosuex viewing 1 tiles
+[2025-05-04 14:38:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:21] [INFO] [CombatSystem] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:21] [INFO] [CombatSystem] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:21] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:21] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Yosuex is planning to use fire_attack on [4, 5]
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated line of sight for Yosuex, viewing 8 tiles
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated area of effect for Yosuex viewing 1 tiles
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Yosuex is planning to use fire_attack on [4, 4]
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated line of sight for Yosuex, viewing 7 tiles
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated area of effect for Yosuex viewing 1 tiles
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Yosuex is planning to use fire_attack on [4, 3]
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated line of sight for Yosuex, viewing 3 tiles
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated area of effect for Yosuex viewing 1 tiles
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Yosuex is planning to use fire_attack on [4, 2]
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated line of sight for Yosuex, viewing 3 tiles
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated area of effect for Yosuex viewing 1 tiles
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Yosuex is planning to use fire_attack on [3, 2]
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated line of sight for Yosuex, viewing 3 tiles
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated area of effect for Yosuex viewing 1 tiles
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Yosuex is planning to use fire_attack on [3, 1]
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated line of sight for Yosuex, viewing 3 tiles
+[2025-05-04 14:38:22] [INFO] [AbilitySystem] Updated area of effect for Yosuex viewing 1 tiles
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Yosuex lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yulup
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Yulup defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yulup
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-04 14:38:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Checking cost requirements for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Yosuex is able to pay for fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Started constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Finished constructing cost mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Paying cost requirements for Yosuex using fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilitySystem] Used from fire_attack on [3, 1]
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Yosuex lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yulup
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Yulup defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yulup
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [CombatSystem] Started dealing damage with fire_attack to Yulup 
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Yosuex lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yulup
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Yulup defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yulup
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Yosuex lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Yosuex
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yulup
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Yulup defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yulup
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Yosuex to use fire_attack
+[2025-05-04 14:38:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:38:23] [INFO] [AbilitySystem] Finished update updating {} because of ability

@@ -1,0 +1,522 @@
+[2025-04-30 01:31:28] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-30 01:31:28] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-30 01:31:28] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-30 01:31:28] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-30 01:31:28] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-30 01:31:28] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-30 01:31:28] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-30 01:31:28] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-30 01:31:28] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-30 01:31:28] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-30 01:31:28] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-30 01:31:28] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-30 01:31:28] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-30 01:31:28] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-30 01:31:28] [INFO] [Component] Setting dark_dragon_Iaae_085197e6-58dd-4c34-b6ef-47d83d6c1d3d on to {"row":2,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Iaae_085197e6-58dd-4c34-b6ef-47d83d6c1d3d","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit enemy:Iaae into queue
+[2025-04-30 01:31:28] [INFO] [Component] Setting dragon_Mucyay_a21d4ac0-fdd9-47b8-b2a2-67ad152670b5 on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Mucyay_a21d4ac0-fdd9-47b8-b2a2-67ad152670b5","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit enemy:Mucyay into queue
+[2025-04-30 01:31:28] [INFO] [Component] Setting dragon_Mabef_23aae267-c469-44ae-9077-ce69ddf932b4 on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Mabef_23aae267-c469-44ae-9077-ce69ddf932b4","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit enemy:Mabef into queue
+[2025-04-30 01:31:28] [INFO] [Component] Setting air_dragon_Xyhii_8f817276-8775-4b53-bcef-ffda6502a652 on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Xyhii_8f817276-8775-4b53-bcef-ffda6502a652","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit enemy:Xyhii into queue
+[2025-04-30 01:31:28] [INFO] [Component] Setting air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit enemy:Sopi into queue
+[2025-04-30 01:31:28] [INFO] [Component] Setting fire_dragon_Eayial_5e73855a-b62f-49f3-afa3-01afcbc1ffe0 on to {"row":2,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Eayial_5e73855a-b62f-49f3-afa3-01afcbc1ffe0","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit user:Eayial into queue
+[2025-04-30 01:31:28] [INFO] [Component] Setting fire_dragon_Mywae_332b1e0d-b18c-4bb0-bfb1-16535e14963c on to {"row":7,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Mywae_332b1e0d-b18c-4bb0-bfb1-16535e14963c","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit user:Mywae into queue
+[2025-04-30 01:31:28] [INFO] [Component] Setting earth_dragon_Pikae_12cf1622-62af-4df3-9952-504c4e1061ef on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Pikae_12cf1622-62af-4df3-9952-504c4e1061ef","structure":""}.
+[2025-04-30 01:31:28] [INFO] [SpeedQueue] Added unit user:Pikae into queue
+[2025-04-30 01:31:28] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-30 01:31:28] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-30 01:31:28] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-30 01:31:28] [INFO] [FontPool] Started initializing FontPool
+[2025-04-30 01:31:28] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-30 01:31:28] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-30 01:31:28] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-30 01:31:28] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-30 01:31:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-30 01:31:28] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 01:31:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 01:31:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:31:29] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-30 01:31:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-30 01:31:29] [INFO] [VisualsSystem] Finished creating blurred background after 0.48903322219848633 seconds
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:31:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:31:30] [INFO] [InputHandler] Gliding 0 camera to new tile 2_7_23f93eee-5b91-45c1-a2c5-ce24e23ece58
+[2025-04-30 01:31:30] [INFO] [InputHandler] Gliding 1 camera to new tile 2_7_23f93eee-5b91-45c1-a2c5-ce24e23ece58
+[2025-04-30 01:31:30] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:30] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e
+[2025-04-30 01:31:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:31:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Sopi
+[2025-04-30 01:31:31] [INFO] [InputHandler] Gliding 0 camera to new tile 2_7_23f93eee-5b91-45c1-a2c5-ce24e23ece58
+[2025-04-30 01:31:31] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-30 01:31:31] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement range to 8 for Sopi
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement path from [2, 7] to [4, 7] for Sopi
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement range to 8 for Sopi
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement path from [2, 7] to [4, 7] for Sopi
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement path from [2, 7] to [3, 7] for Sopi
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement path from [2, 7] to [3, 7] for Sopi
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement path from [2, 7] to [3, 6] for Sopi
+[2025-04-30 01:31:32] [INFO] [MovementSystem] Updated movement path from [2, 7] to [3, 6] for Sopi
+[2025-04-30 01:31:33] [INFO] [Component] Setting air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Sopi_ea83fdcf-ba3e-474d-b930-c96036bd298e","structure":""}.
+[2025-04-30 01:31:33] [INFO] [MovementSystem] Moved from [2, 7] to [3, 6]
+[2025-04-30 01:31:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:31:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Sopi
+[2025-04-30 01:31:33] [INFO] [InputHandler] Gliding 0 camera to new tile 3_6_aedfd75b-ebfb-4df8-a184-8a74bb02b3dd
+[2025-04-30 01:31:33] [INFO] [InputHandler] Gliding 1 camera to new tile 3_6_aedfd75b-ebfb-4df8-a184-8a74bb02b3dd
+[2025-04-30 01:31:34] [INFO] [InputHandler] Gliding 0 camera to new tile 3_6_aedfd75b-ebfb-4df8-a184-8a74bb02b3dd
+[2025-04-30 01:31:34] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:34] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Sopi is planning to use oblation on null
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of sight for Sopi, viewing 11 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 0 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 0 tiles
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Sopi is planning to use oblation on [6, 7]
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 5 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Sopi is planning to use oblation on [5, 7]
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 4 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Sopi is planning to use oblation on [5, 6]
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 3 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Sopi is planning to use oblation on [5, 5]
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 4 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Sopi is planning to use oblation on [4, 5]
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 3 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Sopi is planning to use oblation on [3, 5]
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 2 tiles
+[2025-04-30 01:31:35] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sopi to use oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 01:31:35] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:38] [INFO] [AbilitySystem] Sopi is planning to use oblation on [4, 2]
+[2025-04-30 01:31:38] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 2 tiles
+[2025-04-30 01:31:38] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Sopi is planning to use oblation on null
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 0 tiles
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 0 tiles
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Sopi is planning to use oblation on [2, 7]
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 3 tiles
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Sopi is planning to use oblation on [3, 7]
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 2 tiles
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Sopi is planning to use oblation on [3, 6]
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 1 tiles
+[2025-04-30 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Sopi
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 01:31:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:41] [INFO] [AbilitySystem] Sopi is planning to use oblation on [3, 5]
+[2025-04-30 01:31:41] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 2 tiles
+[2025-04-30 01:31:41] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Sopi lands a CRIT bonus with oblation for 18.75
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] 31.25 damage after modifiers for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] 31.25 Raw damage after defenses for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] 28.409092 damage after defenses for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 01:31:41] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:41] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:41] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:58] [INFO] [AbilitySystem] Sopi is planning to use oblation on [2, 5]
+[2025-04-30 01:31:58] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 3 tiles
+[2025-04-30 01:31:58] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:31:58] [INFO] [AbilitySystem] Sopi is planning to use oblation on [3, 5]
+[2025-04-30 01:31:58] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 2 tiles
+[2025-04-30 01:31:58] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 01:31:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:31:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Sopi is planning to use oblation on [4, 5]
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 3 tiles
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Sopi is planning to use oblation on [5, 5]
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 4 tiles
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Sopi is planning to use oblation on [6, 6]
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 4 tiles
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Sopi is planning to use oblation on [5, 6]
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 3 tiles
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Sopi is planning to use oblation on [4, 5]
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 3 tiles
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Sopi is planning to use oblation on [3, 5]
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated line of sight for Sopi, viewing 2 tiles
+[2025-04-30 01:32:01] [INFO] [AbilitySystem] Updated area of effect for Sopi viewing 1 tiles
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 01:32:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Checking cost requirements for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Sopi is able to pay for oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Started constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Paying cost requirements for Sopi using oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilitySystem] Used from oblation on [3, 5]
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Sopi lands a CRIT bonus with oblation for 18.75
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 31.25 damage after modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 31.25 Raw damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 28.409092 damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [CombatSystem] Started dealing damage with oblation to Mucyay 
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sopi
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mucyay
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-30 01:32:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sopi to use oblation
+[2025-04-30 01:32:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:32:20] [INFO] [AbilitySystem] Finished update updating {} because of ability

@@ -1,0 +1,750 @@
+[2025-05-02 15:57:51] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-02 15:57:51] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-02 15:57:51] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-02 15:57:51] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-02 15:57:51] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-02 15:57:51] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-02 15:57:51] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-02 15:57:51] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-02 15:57:51] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-02 15:57:51] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-02 15:57:51] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-02 15:57:51] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-02 15:57:51] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-02 15:57:51] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-02 15:57:51] [INFO] [Component] Setting water_dragon_Ueruju_e61da000-2d93-4dc9-87b5-0afac0774be0 on to {"row":2,"column":2,"height":0,"collider":"","unit":"water_dragon_Ueruju_e61da000-2d93-4dc9-87b5-0afac0774be0","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit enemy:Ueruju into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting dark_dragon_Lonoee_2b75fc1b-d253-4164-ae1c-49df7a72f9c6 on to {"row":1,"column":11,"height":0,"spawn_region":"2","collider":"","unit":"dark_dragon_Lonoee_2b75fc1b-d253-4164-ae1c-49df7a72f9c6","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit enemy:Lonoee into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting light_dragon_Caxhu_720c0a18-903a-4cfb-913d-deccf63c073f on to {"row":4,"column":2,"height":0,"collider":"","unit":"light_dragon_Caxhu_720c0a18-903a-4cfb-913d-deccf63c073f","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit enemy:Caxhu into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2 on to {"row":6,"column":9,"height":0,"collider":"","unit":"water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit enemy:Sixoy into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting water_dragon_Bykutu_3efd517e-6ad7-44d9-8235-5549259ffd3c on to {"row":1,"column":4,"height":0,"collider":"","unit":"water_dragon_Bykutu_3efd517e-6ad7-44d9-8235-5549259ffd3c","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit enemy:Bykutu into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting dark_dragon_Yopo_a57e6965-5084-4323-a279-2c3ce77285c7 on to {"row":5,"column":9,"height":0,"collider":"","unit":"dark_dragon_Yopo_a57e6965-5084-4323-a279-2c3ce77285c7","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit user:Yopo into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting water_dragon_Jyuaoc_52ae15ad-2f49-4680-a066-1e9f55ea972a on to {"row":6,"column":7,"height":0,"collider":"","unit":"water_dragon_Jyuaoc_52ae15ad-2f49-4680-a066-1e9f55ea972a","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit user:Jyuaoc into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting light_dragon_Xyka_606dab40-7f72-435a-9e52-2e1455b5432a on to {"row":3,"column":9,"height":0,"collider":"","unit":"light_dragon_Xyka_606dab40-7f72-435a-9e52-2e1455b5432a","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit user:Xyka into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting light_dragon_Aahim_07ae798e-9289-4ad2-abab-f0706aae0729 on to {"row":4,"column":0,"height":0,"spawn_region":"1","collider":"","unit":"light_dragon_Aahim_07ae798e-9289-4ad2-abab-f0706aae0729","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit user:Aahim into queue
+[2025-05-02 15:57:51] [INFO] [Component] Setting water_dragon_Aidy_c28774a1-c725-40c4-bfca-9846c3d294d4 on to {"row":1,"column":9,"height":0,"collider":"","unit":"water_dragon_Aidy_c28774a1-c725-40c4-bfca-9846c3d294d4","structure":""}.
+[2025-05-02 15:57:51] [INFO] [SpeedQueue] Added unit user:Aidy into queue
+[2025-05-02 15:57:51] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-02 15:57:51] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-02 15:57:51] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-02 15:57:52] [INFO] [FontPool] Started initializing FontPool
+[2025-05-02 15:57:52] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-02 15:57:52] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-02 15:57:52] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-02 15:57:52] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-02 15:57:52] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-02 15:57:52] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:52] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-02 15:57:52] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:57:52] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:57:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-02 15:57:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-02 15:57:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-02 15:57:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-02 15:57:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:57:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-02 15:57:52] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-02 15:57:53] [INFO] [VisualsSystem] Finished creating blurred background after 0.4863791763782501 seconds
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:57:53] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:57:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-02 15:57:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:57:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:57:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:57:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-02 15:58:01] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_9956ae73-a330-4b14-80b8-36c7f13a4403
+[2025-05-02 15:58:01] [INFO] [InputHandler] Gliding 1 camera to new tile 6_9_9956ae73-a330-4b14-80b8-36c7f13a4403
+[2025-05-02 15:58:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:58:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:58:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:58:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Sixoy
+[2025-05-02 15:58:02] [INFO] [InputHandler] Gliding 0 camera to new tile 3_9_db9935a9-4a85-4717-8f7c-d032f3e1dee5
+[2025-05-02 15:58:02] [INFO] [InputHandler] Gliding 1 camera to new tile 3_9_db9935a9-4a85-4717-8f7c-d032f3e1dee5
+[2025-05-02 15:58:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Xyka_606dab40-7f72-435a-9e52-2e1455b5432a
+[2025-05-02 15:58:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Xyka_606dab40-7f72-435a-9e52-2e1455b5432a
+[2025-05-02 15:58:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:58:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Xyka
+[2025-05-02 15:58:43] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_9956ae73-a330-4b14-80b8-36c7f13a4403
+[2025-05-02 15:58:43] [INFO] [InputHandler] Gliding 1 camera to new tile 6_9_9956ae73-a330-4b14-80b8-36c7f13a4403
+[2025-05-02 15:58:43] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:58:43] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:58:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:58:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Sixoy
+[2025-05-02 15:58:44] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-02 15:58:44] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-02 15:58:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:58:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-02 15:58:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:58:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-02 15:58:46] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_9956ae73-a330-4b14-80b8-36c7f13a4403
+[2025-05-02 15:58:46] [INFO] [InputHandler] Gliding 1 camera to new tile 6_9_9956ae73-a330-4b14-80b8-36c7f13a4403
+[2025-05-02 15:58:46] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:58:46] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2
+[2025-05-02 15:58:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:58:46] [INFO] [SelectedTilePanel] Updated selected tile display to view Sixoy
+[2025-05-02 15:58:51] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_9956ae73-a330-4b14-80b8-36c7f13a4403
+[2025-05-02 15:58:51] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-02 15:58:51] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement range to 9 for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [7, 10] for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement range to 9 for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [7, 10] for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [6, 8] for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [6, 8] for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [6, 7] for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [6, 7] for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [5, 6] for Sixoy
+[2025-05-02 15:58:51] [INFO] [MovementSystem] Updated movement path from [6, 9] to [5, 6] for Sixoy
+[2025-05-02 15:58:52] [INFO] [MovementSystem] Updated movement path from [6, 9] to [5, 7] for Sixoy
+[2025-05-02 15:58:52] [INFO] [MovementSystem] Updated movement path from [6, 9] to [5, 7] for Sixoy
+[2025-05-02 15:58:52] [INFO] [MovementSystem] Updated movement path from [6, 9] to [5, 8] for Sixoy
+[2025-05-02 15:58:52] [INFO] [MovementSystem] Updated movement path from [6, 9] to [5, 8] for Sixoy
+[2025-05-02 15:58:52] [INFO] [Component] Setting water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2 on to {"row":5,"column":8,"height":0,"collider":"","unit":"water_dragon_Sixoy_9b1bb676-fca7-4929-a987-e1e4e23127f2","structure":""}.
+[2025-05-02 15:58:52] [INFO] [MovementSystem] Moved from [6, 9] to [5, 8]
+[2025-05-02 15:58:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 15:58:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Sixoy
+[2025-05-02 15:58:52] [INFO] [InputHandler] Gliding 0 camera to new tile 5_8_6384b530-82ae-48bd-93b1-4b8af42e59fc
+[2025-05-02 15:58:52] [INFO] [InputHandler] Gliding 1 camera to new tile 5_8_6384b530-82ae-48bd-93b1-4b8af42e59fc
+[2025-05-02 15:58:53] [INFO] [InputHandler] Gliding 0 camera to new tile 5_8_6384b530-82ae-48bd-93b1-4b8af42e59fc
+[2025-05-02 15:58:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:58:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:58:54] [INFO] [AbilityPanel] Selecting water_attack
+[2025-05-02 15:58:54] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on null
+[2025-05-02 15:58:54] [INFO] [AbilitySystem] Updated area of sight for Sixoy, viewing 12 tiles
+[2025-05-02 15:58:54] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 0 tiles
+[2025-05-02 15:58:54] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 0 tiles
+[2025-05-02 15:58:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:58:54] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [7, 10]
+[2025-05-02 15:58:54] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 5 tiles
+[2025-05-02 15:58:54] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:58:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [7, 9]
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [7, 8]
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [7, 7]
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [6, 7]
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:58:55] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Sixoy lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Sixoy lands a CRIT bonus with water_attack for 33.0
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] 55.0 damage after modifiers for water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jyuaoc
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] 55.0 Raw damage after defenses for water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Jyuaoc defends with Same-Type-Defense-Bonus from water_attack for 38.5
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jyuaoc
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] 15.0 damage after defenses for water_attack
+[2025-05-02 15:58:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:58:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [5, 7]
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [5, 8]
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 1 tiles
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Sixoy lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Sixoy
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Sixoy defends with Same-Type-Defense-Bonus from water_attack for 15.4
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Sixoy
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [4, 8]
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:00] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [4, 9]
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [3, 9]
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Sixoy lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xyka
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xyka
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] 20.0 damage after defenses for water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [4, 9]
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [4, 10]
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on [6, 11]
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Sixoy is planning to use water_attack on null
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 0 tiles
+[2025-05-02 15:59:01] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 0 tiles
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use water_attack
+[2025-05-02 15:59:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:02] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-02 15:59:02] [INFO] [AbilitySystem] Sixoy is planning to use oblation on null
+[2025-05-02 15:59:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:02] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:02] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:02] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:02] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [7, 8]
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [7, 7]
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [6, 7]
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:59:03] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jyuaoc
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jyuaoc
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jyuaoc
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jyuaoc
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-02 15:59:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [6, 8]
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [5, 9]
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [5, 10]
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Sixoy is planning to use oblation on null
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 0 tiles
+[2025-05-02 15:59:22] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 0 tiles
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:24] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [3, 11]
+[2025-05-02 15:59:24] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:24] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:24] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [3, 10]
+[2025-05-02 15:59:24] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:59:24] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [3, 9]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xyka
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Xyka defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xyka
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xyka
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Xyka defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xyka
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [3, 8]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [3, 7]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [3, 6]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 5 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [3, 7]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 4 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [4, 7]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [4, 8]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [4, 9]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 3 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Sixoy is planning to use oblation on [5, 9]
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated line of sight for Sixoy, viewing 2 tiles
+[2025-05-02 15:59:25] [INFO] [AbilitySystem] Updated area of effect for Sixoy viewing 1 tiles
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-02 15:59:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Checking cost requirements for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Sixoy is able to pay for oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Started constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Finished constructing cost mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Paying cost requirements for Sixoy using oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilitySystem] Used from oblation on [5, 9]
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [CombatSystem] Started dealing damage with oblation to Yopo 
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:59:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sixoy
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yopo
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-02 15:59:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sixoy to use oblation
+[2025-05-02 15:59:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 15:59:26] [INFO] [AbilitySystem] Finished update updating {} because of ability

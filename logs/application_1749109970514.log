@@ -1,0 +1,243 @@
+[2025-06-05 00:52:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 00:52:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 00:52:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 00:52:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 00:52:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 00:52:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 00:52:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 00:52:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 00:52:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 00:52:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 00:52:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 00:52:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 00:52:50] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 00:52:50] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Hyje___262633e9-03ef-4dc2-ae23-d5adc9441654 on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Hyje___262633e9-03ef-4dc2-ae23-d5adc9441654","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Hyje___262633e9-03ef-4dc2-ae23-d5adc9441654 into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866 on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866 into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Ouoi___d478b291-9e8a-48da-87b1-8d474ac6fdf0 on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Ouoi___d478b291-9e8a-48da-87b1-8d474ac6fdf0","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Ouoi___d478b291-9e8a-48da-87b1-8d474ac6fdf0 into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Jajqa___9af97552-5afe-4a66-b5d2-3e35a1982eb9 on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Jajqa___9af97552-5afe-4a66-b5d2-3e35a1982eb9","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Jajqa___9af97552-5afe-4a66-b5d2-3e35a1982eb9 into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Pusa___2dca787b-e3b0-4e14-a863-4a3acbfcad18 on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Pusa___2dca787b-e3b0-4e14-a863-4a3acbfcad18","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Pusa___2dca787b-e3b0-4e14-a863-4a3acbfcad18 into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Tijym___98f62224-c88c-486c-8605-eef4fdf3a2bd on to {"row":7,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Tijym___98f62224-c88c-486c-8605-eef4fdf3a2bd","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Tijym___98f62224-c88c-486c-8605-eef4fdf3a2bd into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Woeafo___f7014ce5-12ee-45dd-a9fb-4a6e8f6da171 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Woeafo___f7014ce5-12ee-45dd-a9fb-4a6e8f6da171","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Woeafo___f7014ce5-12ee-45dd-a9fb-4a6e8f6da171 into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Runa___758ed9a4-2ca7-4b69-ae23-8a6de9f3c60f on to {"row":0,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Runa___758ed9a4-2ca7-4b69-ae23-8a6de9f3c60f","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Runa___758ed9a4-2ca7-4b69-ae23-8a6de9f3c60f into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Zujii___509ed01d-0404-4a23-a53c-7934e6ec7624 on to {"row":3,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Zujii___509ed01d-0404-4a23-a53c-7934e6ec7624","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Zujii___509ed01d-0404-4a23-a53c-7934e6ec7624 into queue
+[2025-06-05 00:52:50] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Zoim___05e7a2a8-d198-48ab-8ce3-7a5f6c021b74 on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Zoim___05e7a2a8-d198-48ab-8ce3-7a5f6c021b74","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:52:50] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Zoim___05e7a2a8-d198-48ab-8ce3-7a5f6c021b74 into queue
+[2025-06-05 00:52:50] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 00:52:51] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 00:52:51] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 00:52:51] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 00:52:51] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 00:52:51] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:51] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 00:52:51] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 00:52:51] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866
+[2025-06-05 00:52:51] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866
+[2025-06-05 00:52:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 00:52:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 00:52:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 00:52:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 00:52:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 00:52:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 00:52:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 00:52:52] [INFO] [VisualsSystem] Finished creating blurred background after 0.48648473620414734 seconds
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866
+[2025-06-05 00:52:52] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866
+[2025-06-05 00:52:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 00:52:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:52:55] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___cc7f52a2-e090-4033-9fb9-b4b3c68d7943
+[2025-06-05 00:52:55] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_0___cc7f52a2-e090-4033-9fb9-b4b3c68d7943
+[2025-06-05 00:52:55] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866
+[2025-06-05 00:52:55] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Uyye___1ad5fbab-f53d-4ad8-8ea9-aa1fb6222866
+[2025-06-05 00:52:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 00:52:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyye
+[2025-06-05 00:52:56] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___cc7f52a2-e090-4033-9fb9-b4b3c68d7943
+[2025-06-05 00:52:56] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 00:52:56] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 00:53:09] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:11] [INFO] [GameModel] Updated movement path from [8, 0] to [0, 0] for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 0] for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 0] for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement path from [8, 0] to [0, 0] for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:33] [INFO] [GameModel] Updated movement path from [8, 0] to [0, 0] for Uyye
+[2025-06-05 00:53:35] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:35] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 0] for Uyye
+[2025-06-05 00:53:35] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:35] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 0] for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:36] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:37] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 0] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [9, 0] for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:38] [INFO] [GameModel] Updated movement path from [8, 0] to [0, 0] for Uyye
+[2025-06-05 00:53:42] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:42] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 0] for Uyye
+[2025-06-05 00:53:42] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:42] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 0] for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 0] for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 2] for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:43] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 2] for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:45] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 2] for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:46] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 2] for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 2] for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement path from [8, 0] to [6, 1] for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:53:47] [INFO] [GameModel] Updated movement path from [8, 0] to [6, 1] for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:37] [INFO] [GameModel] Updated movement path from [8, 0] to [8, 1] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 1] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 0] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [7, 0] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [6, 0] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [6, 0] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [0, 0] for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement range to 8 for Uyye
+[2025-06-05 00:58:38] [INFO] [GameModel] Updated movement path from [8, 0] to [0, 0] for Uyye

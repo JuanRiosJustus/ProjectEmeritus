@@ -1,0 +1,347 @@
+[2025-04-28 11:54:34] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 11:54:34] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 11:54:34] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 11:54:34] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 11:54:34] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 11:54:34] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 11:54:34] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 11:54:34] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 11:54:34] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 11:54:34] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 11:54:34] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 11:54:34] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 11:54:34] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 11:54:34] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 11:54:34] [INFO] [Component] Setting water_dragon_Auqs_80f80ad4-a7be-489f-918e-c4885b41fa8a on to {"row":4,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Auqs_80f80ad4-a7be-489f-918e-c4885b41fa8a","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit enemy:Auqs into queue
+[2025-04-28 11:54:34] [INFO] [Component] Setting air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96 on to {"row":0,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit enemy:Giopf into queue
+[2025-04-28 11:54:34] [INFO] [Component] Setting earth_dragon_Fepuc_5408f43d-68e0-4072-8237-bc81e2412b67 on to {"row":0,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Fepuc_5408f43d-68e0-4072-8237-bc81e2412b67","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit enemy:Fepuc into queue
+[2025-04-28 11:54:34] [INFO] [Component] Setting light_dragon_Voaxlw_837a74c1-78bd-4de6-b85a-45260a52dd74 on to {"row":4,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Voaxlw_837a74c1-78bd-4de6-b85a-45260a52dd74","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit user:Voaxlw into queue
+[2025-04-28 11:54:34] [INFO] [Component] Setting water_dragon_Tuxuqa_c4df569e-6bfc-45b4-8353-46f4e2190a58 on to {"row":1,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Tuxuqa_c4df569e-6bfc-45b4-8353-46f4e2190a58","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit user:Tuxuqa into queue
+[2025-04-28 11:54:34] [INFO] [Component] Setting air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit user:Nipmu into queue
+[2025-04-28 11:54:34] [INFO] [Component] Setting dragon_Hyqa_187e70d7-7082-4ddf-bcee-670eb9bb0c8b on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Hyqa_187e70d7-7082-4ddf-bcee-670eb9bb0c8b","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit user:Hyqa into queue
+[2025-04-28 11:54:34] [INFO] [Component] Setting fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070 on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070","structure":""}.
+[2025-04-28 11:54:34] [INFO] [SpeedQueue] Added unit user:Nyyu into queue
+[2025-04-28 11:54:34] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 11:54:34] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 11:54:34] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 11:54:34] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 11:54:34] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 11:54:34] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 11:54:35] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 11:54:35] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 11:54:35] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 11:54:35] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:54:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 11:54:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 11:54:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:54:35] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 11:54:35] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 11:54:35] [INFO] [VisualsSystem] Finished creating blurred background after 0.4783301055431366 seconds
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:54:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:54:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:36] [INFO] [AbilitySystem] Nipmu is planning to use oblation on [4, 6]
+[2025-04-28 11:54:36] [INFO] [AbilitySystem] Updated area of sight for Nipmu, viewing 9 tiles
+[2025-04-28 11:54:36] [INFO] [AbilitySystem] Updated line of sight for Nipmu, viewing 3 tiles
+[2025-04-28 11:54:36] [INFO] [AbilitySystem] Updated area of effect for Nipmu viewing 1 tiles
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Started constructing cost mappings for Nipmu to use oblation
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Finished constructing cost mappings for Nipmu to use oblation
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Checking cost requirements for Nipmu to use oblation
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Nipmu is able to pay for oblation
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Started constructing cost mappings for Nipmu to use oblation
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Finished constructing cost mappings for Nipmu to use oblation
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Paying cost requirements for Nipmu using oblation
+[2025-04-28 11:54:36] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-28 11:54:36] [INFO] [AbilitySystem] Used from oblation on [4, 6]
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Nipmu to use oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Nipmu to use oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Nipmu to use oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Nipmu
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Nipmu
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Voaxlw
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Voaxlw defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Voaxlw
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Nipmu
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Nipmu
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Voaxlw
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Voaxlw defends with Same-Type-Defense-Bonus from oblation for -2.8
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Voaxlw
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] -1.0909091 damage after defenses for oblation
+[2025-04-28 11:54:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Nipmu to use oblation
+[2025-04-28 11:54:37] [INFO] [CombatSystem] Started dealing damage with oblation to Voaxlw 
+[2025-04-28 11:54:37] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:37] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:37] [INFO] [MovementSystem] Updated movement range to 6 for Nipmu
+[2025-04-28 11:54:37] [INFO] [MovementSystem] Updated movement path from [5, 7] to [4, 7] for Nipmu
+[2025-04-28 11:54:37] [INFO] [Component] Setting air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa on to {"row":4,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa","structure":""}.
+[2025-04-28 11:54:37] [INFO] [MovementSystem] Moved from [5, 7] to [4, 7]
+[2025-04-28 11:54:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Nipmu_26ced1a3-e11d-412d-982b-d01702ed9afa
+[2025-04-28 11:54:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:54:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Nipmu
+[2025-04-28 11:54:37] [INFO] [InputHandler] Gliding 0 camera to new tile 4_7_e8b80d26-e827-4d09-9180-f2d26da6e8dd
+[2025-04-28 11:54:37] [INFO] [InputHandler] Gliding 1 camera to new tile 4_7_e8b80d26-e827-4d09-9180-f2d26da6e8dd
+[2025-04-28 11:54:38] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070
+[2025-04-28 11:54:38] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070
+[2025-04-28 11:54:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:54:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:54:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 11:54:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 11:54:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070
+[2025-04-28 11:54:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070
+[2025-04-28 11:54:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:54:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Nyyu
+[2025-04-28 11:54:38] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_eed42b5b-f70a-46b2-b2f5-86ad1fab1a4a
+[2025-04-28 11:54:38] [INFO] [InputHandler] Gliding 1 camera to new tile 5_2_eed42b5b-f70a-46b2-b2f5-86ad1fab1a4a
+[2025-04-28 11:54:39] [INFO] [MovementSystem] Updated movement range to 11 for Nyyu
+[2025-04-28 11:54:39] [INFO] [MovementSystem] Updated movement path from [5, 2] to [6, 3] for Nyyu
+[2025-04-28 11:54:39] [INFO] [Component] Setting fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070 on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Nyyu_387bbbb8-3a85-4cdd-8550-e3093334a070","structure":""}.
+[2025-04-28 11:54:39] [INFO] [MovementSystem] Moved from [5, 2] to [6, 3]
+[2025-04-28 11:54:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:54:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Nyyu
+[2025-04-28 11:54:39] [INFO] [InputHandler] Gliding 0 camera to new tile 6_3_43dc26ea-c066-4e35-b623-3802d99ca79e
+[2025-04-28 11:54:39] [INFO] [InputHandler] Gliding 1 camera to new tile 6_3_43dc26ea-c066-4e35-b623-3802d99ca79e
+[2025-04-28 11:54:40] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:40] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:54:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:54:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 11:54:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 11:54:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:54:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Giopf
+[2025-04-28 11:54:40] [INFO] [InputHandler] Gliding 0 camera to new tile 0_7_0ec99718-0253-436f-be94-9c0c265124f7
+[2025-04-28 11:54:40] [INFO] [InputHandler] Gliding 1 camera to new tile 0_7_0ec99718-0253-436f-be94-9c0c265124f7
+[2025-04-28 11:54:42] [INFO] [InputHandler] Gliding 0 camera to new tile 0_7_0ec99718-0253-436f-be94-9c0c265124f7
+[2025-04-28 11:54:42] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-28 11:54:42] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement range to 4 for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 7] for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement range to 4 for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 7] for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 5] for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 5] for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 5] for Giopf
+[2025-04-28 11:54:43] [INFO] [MovementSystem] Updated movement path from [0, 7] to [0, 5] for Giopf
+[2025-04-28 11:54:44] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 5] for Giopf
+[2025-04-28 11:54:44] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 5] for Giopf
+[2025-04-28 11:54:44] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Giopf
+[2025-04-28 11:54:44] [INFO] [MovementSystem] Updated movement path from [0, 7] to [1, 6] for Giopf
+[2025-04-28 11:54:44] [INFO] [Component] Setting air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96 on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96","structure":""}.
+[2025-04-28 11:54:44] [INFO] [MovementSystem] Moved from [0, 7] to [1, 6]
+[2025-04-28 11:54:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:54:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Giopf
+[2025-04-28 11:54:44] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_9ef61a51-c5c5-4df5-81e1-180ab86b882b
+[2025-04-28 11:54:44] [INFO] [InputHandler] Gliding 1 camera to new tile 1_6_9ef61a51-c5c5-4df5-81e1-180ab86b882b
+[2025-04-28 11:54:45] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_9ef61a51-c5c5-4df5-81e1-180ab86b882b
+[2025-04-28 11:54:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [AbilityPanel] Selecting air_attack
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Giopf is planning to use air_attack on null
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated area of sight for Giopf, viewing 8 tiles
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 0 tiles
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 0 tiles
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Giopf is planning to use air_attack on [3, 7]
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 2 tiles
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 1 tiles
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Giopf is planning to use air_attack on [2, 7]
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 2 tiles
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 1 tiles
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Giopf
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Giopf lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Giopf
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Hyqa
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Hyqa
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Giopf is planning to use air_attack on [3, 7]
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 2 tiles
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 1 tiles
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Giopf is planning to use air_attack on null
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 0 tiles
+[2025-04-28 11:54:46] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 0 tiles
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Giopf is planning to use air_attack on [3, 7]
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 2 tiles
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 1 tiles
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Giopf is planning to use air_attack on [3, 6]
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 2 tiles
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 1 tiles
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Giopf is planning to use air_attack on [2, 6]
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Updated line of sight for Giopf, viewing 2 tiles
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Updated area of effect for Giopf viewing 1 tiles
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Checking cost requirements for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Giopf is able to pay for air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Paying cost requirements for Giopf using air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Used from air_attack on [2, 6]
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:54:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:54:47] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:47] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:47] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:54:47] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:54:47] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:47] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Giopf_0627bd02-b156-4bd2-8b88-0c688179fd96
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing damage mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Started constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [CombatSystem] Finished constructing cost mappings for Giopf to use air_attack
+[2025-04-28 11:54:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

@@ -1,0 +1,165 @@
+[2025-04-27 00:39:39] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-27 00:39:39] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-27 00:39:39] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-27 00:39:39] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-27 00:39:39] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-27 00:39:39] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-27 00:39:39] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-27 00:39:39] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-27 00:39:39] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-27 00:39:39] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-27 00:39:39] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-27 00:39:39] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-27 00:39:39] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-27 00:39:39] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-27 00:39:39] [INFO] [Component] Setting earth_dragon_Fefy_bf936872-a4fd-49af-bbb7-3ce32710a151 on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Fefy_bf936872-a4fd-49af-bbb7-3ce32710a151","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit enemy:Fefy into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting water_dragon_Natyuo_aea73d45-d02e-4677-933f-eca7b6b75829 on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Natyuo_aea73d45-d02e-4677-933f-eca7b6b75829","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit enemy:Natyuo into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting light_dragon_Qajoi_6e3e8c82-0556-428d-8f47-1104d105ee8e on to {"row":5,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Qajoi_6e3e8c82-0556-428d-8f47-1104d105ee8e","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit enemy:Qajoi into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting fire_dragon_Iyyyou_932ac6e2-430d-4207-bd4e-0f269972a1e7 on to {"row":7,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Iyyyou_932ac6e2-430d-4207-bd4e-0f269972a1e7","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit enemy:Iyyyou into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting dark_dragon_Rimyyy_0c9270e5-9128-4f47-905e-29a05670e33d on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Rimyyy_0c9270e5-9128-4f47-905e-29a05670e33d","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit enemy:Rimyyy into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting earth_dragon_Eupfqi_32fe3569-ca5a-4878-98b9-c0fc546f3668 on to {"row":3,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Eupfqi_32fe3569-ca5a-4878-98b9-c0fc546f3668","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit user:Eupfqi into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting dragon_Gawqi_af130867-82d0-43c4-9192-ddd979933664 on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Gawqi_af130867-82d0-43c4-9192-ddd979933664","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit user:Gawqi into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting light_dragon_Pakfj_2a930de3-f0f7-42e3-8299-2946a0ec77f3 on to {"row":4,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Pakfj_2a930de3-f0f7-42e3-8299-2946a0ec77f3","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit user:Pakfj into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting light_dragon_Xyceau_1402f85e-d2c2-4883-9210-cde10eb44ee3 on to {"row":3,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Xyceau_1402f85e-d2c2-4883-9210-cde10eb44ee3","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit user:Xyceau into queue
+[2025-04-27 00:39:39] [INFO] [Component] Setting air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff","structure":""}.
+[2025-04-27 00:39:39] [INFO] [SpeedQueue] Added unit user:Balrsb into queue
+[2025-04-27 00:39:39] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-27 00:39:39] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-27 00:39:39] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-27 00:39:39] [INFO] [FontPool] Started initializing FontPool
+[2025-04-27 00:39:39] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-27 00:39:40] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-27 00:39:40] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-27 00:39:40] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-27 00:39:40] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-27 00:39:40] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:40] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-27 00:39:40] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:40] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 00:39:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 00:39:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-27 00:39:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-27 00:39:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 00:39:40] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-27 00:39:40] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-27 00:39:41] [INFO] [VisualsSystem] Finished creating blurred background after 0.48676055669784546 seconds
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:41] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 00:39:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:41] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 00:39:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:41] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Balrsb_f65818c8-ae71-4199-a8e3-080e50d348ff
+[2025-04-27 00:39:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 00:39:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:41] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 00:39:42] [INFO] [AbilitySystem] Balrsb is planning to use oblation on [5, 4]
+[2025-04-27 00:39:42] [INFO] [AbilitySystem] Updated area of sight for Balrsb, viewing 12 tiles
+[2025-04-27 00:39:42] [INFO] [AbilitySystem] Updated line of sight for Balrsb, viewing 3 tiles
+[2025-04-27 00:39:42] [INFO] [AbilitySystem] Updated area of effect for Balrsb viewing 1 tiles
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Started constructing cost mappings for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Finished constructing cost mappings for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Checking cost requirements for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Balrsb is able to pay for oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Started constructing cost mappings for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Finished constructing cost mappings for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Paying cost requirements for Balrsb using oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-27 00:39:42] [INFO] [AbilitySystem] Used from oblation on [5, 4]
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Balrsb
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Balrsb
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qajoi
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Qajoi defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qajoi
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Balrsb
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Balrsb
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qajoi
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Qajoi defends with Same-Type-Defense-Bonus from oblation for -2.8
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qajoi
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] -1.0909091 damage after defenses for oblation
+[2025-04-27 00:39:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Balrsb to use oblation
+[2025-04-27 00:39:42] [INFO] [CombatSystem] Started dealing damage with oblation to Qajoi 
+[2025-04-27 00:39:42] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 00:39:42] [INFO] [AbilitySystem] Finished update updating {} because of ability

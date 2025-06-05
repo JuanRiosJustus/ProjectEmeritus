@@ -1,0 +1,24 @@
+[2025-06-01 22:01:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-01 22:01:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-01 22:01:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-01 22:01:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-01 22:01:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-01 22:01:32] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-01 22:01:32] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-01 22:01:32] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-01 22:01:32] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-01 22:01:32] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-01 22:01:32] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Tocyyo___3e31a022-7a88-45ff-b55a-fae4d539aec0 on to {"row":3,"column":4,"base_elevation":0,"unit":"UNIT_light_dragon___NICKNAME_Tocyyo___3e31a022-7a88-45ff-b55a-fae4d539aec0","layers":{"empty":false},"total_elevation":10}.
+[2025-06-01 22:01:32] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Tocyyo___3e31a022-7a88-45ff-b55a-fae4d539aec0 into queue
+[2025-06-01 22:01:32] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Dogkfq___e18eaf03-eec2-4ff5-830c-46de878971ca on to {"row":3,"column":3,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Dogkfq___e18eaf03-eec2-4ff5-830c-46de878971ca","layers":{"empty":false},"total_elevation":10}.
+[2025-06-01 22:01:32] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Dogkfq___e18eaf03-eec2-4ff5-830c-46de878971ca into queue
+[2025-06-01 22:01:32] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Kaha___a02fe231-ff70-4d78-8507-349a603c6a88 on to {"row":3,"column":4,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Kaha___a02fe231-ff70-4d78-8507-349a603c6a88","layers":{"empty":false},"total_elevation":10}.
+[2025-06-01 22:01:32] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Kaha___a02fe231-ff70-4d78-8507-349a603c6a88 into queue
+[2025-06-01 22:01:32] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-01 22:01:32] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-01 22:01:32] [INFO] [GameModel] Started gathering cost requirements for potential_burst
+[2025-06-01 22:01:32] [INFO] [GameModel] Finished gathering cost requirements for potential_burst
+[2025-06-01 22:01:32] [INFO] [GameModel] Raykt is unable to pay for potential_burst because of mana
+[2025-06-01 22:01:32] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Pueoo___538cce50-39cd-4bc7-a71a-931e1ec4257a on to {"row":3,"column":3,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Pueoo___538cce50-39cd-4bc7-a71a-931e1ec4257a","layers":{"empty":false},"total_elevation":10}.
+[2025-06-01 22:01:32] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Pueoo___538cce50-39cd-4bc7-a71a-931e1ec4257a into queue
+[2025-06-01 22:01:32] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Pupiuo

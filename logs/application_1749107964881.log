@@ -1,0 +1,317 @@
+[2025-06-05 00:19:24] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 00:19:24] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 00:19:24] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 00:19:24] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 00:19:24] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 00:19:25] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 00:19:25] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 00:19:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 00:19:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 00:19:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 00:19:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 00:19:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 00:19:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 00:19:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Pijuby___4019a5b9-7b7d-4d91-8e34-9064cf4b928e on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Pijuby___4019a5b9-7b7d-4d91-8e34-9064cf4b928e","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Pijuby___4019a5b9-7b7d-4d91-8e34-9064cf4b928e into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Kenao___6dd7774f-4c8f-4ff4-9b53-8dd06f9c6642 on to {"row":9,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Kenao___6dd7774f-4c8f-4ff4-9b53-8dd06f9c6642","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Kenao___6dd7774f-4c8f-4ff4-9b53-8dd06f9c6642 into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Fytuke___bef929ea-af0b-4db6-b615-856d98a7113e on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Fytuke___bef929ea-af0b-4db6-b615-856d98a7113e","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Fytuke___bef929ea-af0b-4db6-b615-856d98a7113e into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Xinp___79e553ce-0319-4374-9128-520f3b06d9dd on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Xinp___79e553ce-0319-4374-9128-520f3b06d9dd","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Xinp___79e553ce-0319-4374-9128-520f3b06d9dd into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572 on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572 into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Uycfi___3a306940-a244-4fc3-8c00-7085569383be on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Uycfi___3a306940-a244-4fc3-8c00-7085569383be","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Uycfi___3a306940-a244-4fc3-8c00-7085569383be into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Jalyty___0010cd1a-2c9b-421c-911a-b88232c91f01 on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Jalyty___0010cd1a-2c9b-421c-911a-b88232c91f01","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Jalyty___0010cd1a-2c9b-421c-911a-b88232c91f01 into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Xaku___6e678ca2-b272-45ec-bcf5-4c711910e685 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Xaku___6e678ca2-b272-45ec-bcf5-4c711910e685","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Xaku___6e678ca2-b272-45ec-bcf5-4c711910e685 into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Eucl___e8527166-70a7-486d-8d28-06f0f73e66f8 on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Eucl___e8527166-70a7-486d-8d28-06f0f73e66f8","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Eucl___e8527166-70a7-486d-8d28-06f0f73e66f8 into queue
+[2025-06-05 00:19:25] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Palyy___bac41a3f-7425-4632-b454-a593a953c9b7 on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Palyy___bac41a3f-7425-4632-b454-a593a953c9b7","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 00:19:25] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Palyy___bac41a3f-7425-4632-b454-a593a953c9b7 into queue
+[2025-06-05 00:19:25] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 00:19:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 00:19:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 00:19:25] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 00:19:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 00:19:25] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 00:19:26] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 00:19:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572
+[2025-06-05 00:19:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572
+[2025-06-05 00:19:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 00:19:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 00:19:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 00:19:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 00:19:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 00:19:26] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 00:19:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 00:19:26] [INFO] [VisualsSystem] Finished creating blurred background after 0.4817652106285095 seconds
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572
+[2025-06-05 00:19:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572
+[2025-06-05 00:19:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 00:19:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 00:19:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 00:19:28] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_1___048952ca-f0a6-403b-9fc0-ddf8abacc592
+[2025-06-05 00:19:28] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 00:19:28] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 11] for Komoel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 11] for Komoel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 11] for Komoel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:28] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 11] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 7] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 7] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 6] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 6] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 5] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [9, 5] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 4] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 4] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 4] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 4] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 1] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 1] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 1] for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:29] [INFO] [GameModel] Updated movement path from [7, 1] to [8, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 1] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 0] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 0] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 0] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 0] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:30] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:31] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_1___048952ca-f0a6-403b-9fc0-ddf8abacc592
+[2025-06-05 00:19:31] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_1___048952ca-f0a6-403b-9fc0-ddf8abacc592
+[2025-06-05 00:19:31] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572
+[2025-06-05 00:19:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Komoel___b839ab32-668d-4a2e-93c6-aefea0e09572
+[2025-06-05 00:19:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 00:19:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [4, 0] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [4, 0] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [4, 0] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [4, 0] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 1] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 1] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 1] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 1] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 2] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 2] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 2] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 2] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 4] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 4] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 4] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 4] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:31] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:32] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 3] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [7, 2] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 2] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 2] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 1] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [6, 1] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [5, 0] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [4, 0] for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement range to 10 for Komoel
+[2025-06-05 00:19:33] [INFO] [GameModel] Updated movement path from [7, 1] to [4, 0] for Komoel

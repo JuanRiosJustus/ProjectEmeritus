@@ -1,0 +1,378 @@
+[2025-05-04 12:36:22] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 12:36:22] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 12:36:22] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 12:36:22] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 12:36:22] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 12:36:22] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 12:36:22] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 12:36:22] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 12:36:22] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 12:36:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 12:36:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 12:36:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 12:36:23] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 12:36:23] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 12:36:23] [INFO] [Component] Setting dragon_Domod_9efc1d9b-e9b7-4654-9a9b-34d1606259da on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Domod_9efc1d9b-e9b7-4654-9a9b-34d1606259da","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit dragon_Domod_9efc1d9b-e9b7-4654-9a9b-34d1606259da into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting light_dragon_Medy_52c4904d-c7cc-4b9a-bd63-d031958d1b96 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Medy_52c4904d-c7cc-4b9a-bd63-d031958d1b96","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit light_dragon_Medy_52c4904d-c7cc-4b9a-bd63-d031958d1b96 into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting earth_dragon_Aarx_b6118059-4c86-48f9-b6b2-9a1766b68a9e on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Aarx_b6118059-4c86-48f9-b6b2-9a1766b68a9e","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit earth_dragon_Aarx_b6118059-4c86-48f9-b6b2-9a1766b68a9e into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting light_dragon_Oycuia_237f65f3-e23d-40a3-befb-4c877c459411 on to {"row":4,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Oycuia_237f65f3-e23d-40a3-befb-4c877c459411","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit light_dragon_Oycuia_237f65f3-e23d-40a3-befb-4c877c459411 into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting dark_dragon_Peqyba_742d0e23-e39d-41c1-b7e1-057da569f26c on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Peqyba_742d0e23-e39d-41c1-b7e1-057da569f26c","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit dark_dragon_Peqyba_742d0e23-e39d-41c1-b7e1-057da569f26c into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834 on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834 into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d on to {"row":4,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c into queue
+[2025-05-04 12:36:23] [INFO] [Component] Setting earth_dragon_Tyytwo_bedcd859-0685-46cf-8efe-493aab7c5546 on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Tyytwo_bedcd859-0685-46cf-8efe-493aab7c5546","structure":""}.
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Added unit earth_dragon_Tyytwo_bedcd859-0685-46cf-8efe-493aab7c5546 into queue
+[2025-05-04 12:36:23] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 12:36:23] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 12:36:23] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 12:36:23] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 12:36:23] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 12:36:23] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 12:36:23] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 12:36:23] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 12:36:23] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 12:36:23] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:23] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 12:36:23] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:23] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 12:36:23] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 12:36:24] [INFO] [VisualsSystem] Finished creating blurred background after 0.4867520034313202 seconds
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:24] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:24] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:24] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:24] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:24] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:24] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:24] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:24] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:24] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:25] [INFO] [MovementSystem] Updated movement range to 9 for Oyxuuk
+[2025-05-04 12:36:25] [INFO] [MovementSystem] Updated movement path from [5, 10] to [5, 11] for Oyxuuk
+[2025-05-04 12:36:25] [INFO] [Component] Setting air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834 on to {"row":5,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834","structure":""}.
+[2025-05-04 12:36:25] [INFO] [MovementSystem] Moved from [5, 10] to [5, 11]
+[2025-05-04 12:36:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Oyxuuk_f22a210d-4db5-44d3-8e7e-8ac6d2b77834
+[2025-05-04 12:36:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Oyxuuk
+[2025-05-04 12:36:25] [INFO] [InputHandler] Gliding 0 camera to new tile 5_11_a292f8d4-ef64-427e-a77f-bf6cb234dfc9
+[2025-05-04 12:36:25] [INFO] [InputHandler] Gliding 1 camera to new tile 5_11_a292f8d4-ef64-427e-a77f-bf6cb234dfc9
+[2025-05-04 12:36:26] [INFO] [AbilitySystem] Oyxuuk is planning to use slash_attack on [4, 11]
+[2025-05-04 12:36:26] [INFO] [AbilitySystem] Updated area of sight for Oyxuuk, viewing 4 tiles
+[2025-05-04 12:36:26] [INFO] [AbilitySystem] Updated line of sight for Oyxuuk, viewing 2 tiles
+[2025-05-04 12:36:26] [INFO] [AbilitySystem] Updated area of effect for Oyxuuk viewing 1 tiles
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Started constructing cost mappings for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Finished constructing cost mappings for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Checking cost requirements for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Oyxuuk is able to pay for slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Started constructing cost mappings for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Finished constructing cost mappings for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Paying cost requirements for Oyxuuk using slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilitySystem] Used from slash_attack on [4, 11]
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Oyxuuk
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] 20.0 Raw damage before modifiers for slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] 20.0 damage after modifiers for slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Oyxuuk
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Tyytwo
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] 20.0 Raw damage after defenses for slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Tyytwo
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] 16.666666 damage after defenses for slash_attack
+[2025-05-04 12:36:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Oyxuuk to use slash_attack
+[2025-05-04 12:36:26] [INFO] [CombatSystem] Started dealing damage with slash_attack to Tyytwo 
+[2025-05-04 12:36:26] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:26] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:26] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:26] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Aidpy
+[2025-05-04 12:36:26] [INFO] [InputHandler] Gliding 0 camera to new tile 0_11_a7829609-8a98-4727-84a8-21ecdf8c1684
+[2025-05-04 12:36:26] [INFO] [InputHandler] Gliding 1 camera to new tile 0_11_a7829609-8a98-4727-84a8-21ecdf8c1684
+[2025-05-04 12:36:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:27] [INFO] [MovementSystem] Updated movement range to 6 for Aidpy
+[2025-05-04 12:36:27] [INFO] [MovementSystem] Updated movement path from [0, 11] to [2, 11] for Aidpy
+[2025-05-04 12:36:27] [INFO] [Component] Setting fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe on to {"row":2,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe","structure":""}.
+[2025-05-04 12:36:27] [INFO] [MovementSystem] Moved from [0, 11] to [2, 11]
+[2025-05-04 12:36:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Aidpy
+[2025-05-04 12:36:27] [INFO] [InputHandler] Gliding 0 camera to new tile 2_11_bf247f3f-f189-4e10-b86b-959276fe7755
+[2025-05-04 12:36:27] [INFO] [InputHandler] Gliding 1 camera to new tile 2_11_bf247f3f-f189-4e10-b86b-959276fe7755
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Aidpy is planning to use oblation on [3, 10]
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Updated area of sight for Aidpy, viewing 9 tiles
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Updated line of sight for Aidpy, viewing 3 tiles
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Updated area of effect for Aidpy viewing 1 tiles
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Started constructing cost mappings for Aidpy to use oblation
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Finished constructing cost mappings for Aidpy to use oblation
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Checking cost requirements for Aidpy to use oblation
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Aidpy is able to pay for oblation
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Started constructing cost mappings for Aidpy to use oblation
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Finished constructing cost mappings for Aidpy to use oblation
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Paying cost requirements for Aidpy using oblation
+[2025-05-04 12:36:28] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Used from oblation on [3, 10]
+[2025-05-04 12:36:28] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:28] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:28] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:28] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Aidpy_234e0db5-e5ca-475a-8c6c-dff9549fe9fe
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aidpy to use oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aidpy to use oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Aidpy to use oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aidpy
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aidpy
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Nocilu
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Nocilu defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Nocilu
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aidpy
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aidpy
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Nocilu
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Nocilu defends with Same-Type-Defense-Bonus from oblation for -2.8
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Nocilu
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] -1.0909091 damage after defenses for oblation
+[2025-05-04 12:36:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Aidpy to use oblation
+[2025-05-04 12:36:29] [INFO] [CombatSystem] Started dealing damage with oblation to Nocilu 
+[2025-05-04 12:36:29] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:29] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:29] [INFO] [SelectedTilePanel] Updated selected tile display to view Nocilu
+[2025-05-04 12:36:29] [INFO] [InputHandler] Gliding 0 camera to new tile 3_10_d8f2090e-ebfd-403a-9fd2-de2beeb7e685
+[2025-05-04 12:36:29] [INFO] [InputHandler] Gliding 1 camera to new tile 3_10_d8f2090e-ebfd-403a-9fd2-de2beeb7e685
+[2025-05-04 12:36:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:29] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:29] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c
+[2025-05-04 12:36:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:30] [INFO] [AbilitySystem] Nocilu is planning to use light_attack on [2, 11]
+[2025-05-04 12:36:30] [INFO] [AbilitySystem] Updated area of sight for Nocilu, viewing 9 tiles
+[2025-05-04 12:36:30] [INFO] [AbilitySystem] Updated line of sight for Nocilu, viewing 3 tiles
+[2025-05-04 12:36:30] [INFO] [AbilitySystem] Updated area of effect for Nocilu viewing 1 tiles
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Started constructing cost mappings for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Finished constructing cost mappings for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Checking cost requirements for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Nocilu is able to pay for light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Started constructing cost mappings for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Finished constructing cost mappings for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Paying cost requirements for Nocilu using light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use light_attack
+[2025-05-04 12:36:30] [INFO] [AbilitySystem] Used from light_attack on [2, 11]
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Nocilu
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for light_attack
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Nocilu lands a Same-Type-Attack-Bonus with light_attack, for 12.0
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for light_attack
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Nocilu
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Aidpy
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for light_attack
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Aidpy
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] 20.0 damage after defenses for light_attack
+[2025-05-04 12:36:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Nocilu to use light_attack
+[2025-05-04 12:36:30] [INFO] [CombatSystem] Started dealing damage with light_attack to Aidpy 
+[2025-05-04 12:36:31] [INFO] [MovementSystem] Updated movement range to 8 for Nocilu
+[2025-05-04 12:36:31] [INFO] [MovementSystem] Updated movement path from [3, 10] to [3, 8] for Nocilu
+[2025-05-04 12:36:31] [INFO] [Component] Setting light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c on to {"row":3,"column":8,"height":0,"collider":"","unit":"light_dragon_Nocilu_ce376129-7b64-42f0-99cd-1330f2747f3c","structure":""}.
+[2025-05-04 12:36:31] [INFO] [MovementSystem] Moved from [3, 10] to [3, 8]
+[2025-05-04 12:36:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Nocilu
+[2025-05-04 12:36:31] [INFO] [InputHandler] Gliding 0 camera to new tile 3_8_ec0b2306-75e4-48e6-a9d7-c69318956256
+[2025-05-04 12:36:31] [INFO] [InputHandler] Gliding 1 camera to new tile 3_8_ec0b2306-75e4-48e6-a9d7-c69318956256
+[2025-05-04 12:36:31] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:31] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:31] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Goxx
+[2025-05-04 12:36:31] [INFO] [InputHandler] Gliding 0 camera to new tile 4_10_7f0e72f7-4601-4eb2-87d1-f550525fcebd
+[2025-05-04 12:36:31] [INFO] [InputHandler] Gliding 1 camera to new tile 4_10_7f0e72f7-4601-4eb2-87d1-f550525fcebd
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Goxx is planning to use oblation on [4, 11]
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Updated area of sight for Goxx, viewing 12 tiles
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Updated line of sight for Goxx, viewing 2 tiles
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Updated area of effect for Goxx viewing 1 tiles
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Started constructing cost mappings for Goxx to use oblation
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Finished constructing cost mappings for Goxx to use oblation
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Checking cost requirements for Goxx to use oblation
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Goxx is able to pay for oblation
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Started constructing cost mappings for Goxx to use oblation
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Finished constructing cost mappings for Goxx to use oblation
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Paying cost requirements for Goxx using oblation
+[2025-05-04 12:36:32] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Used from oblation on [4, 11]
+[2025-05-04 12:36:32] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:32] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:32] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:32] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Goxx to use oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Goxx to use oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Goxx to use oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Goxx
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Goxx
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Tyytwo
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Tyytwo
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Goxx
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Goxx
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Tyytwo
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Tyytwo
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] -3.3333333 damage after defenses for oblation
+[2025-05-04 12:36:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Goxx to use oblation
+[2025-05-04 12:36:33] [INFO] [CombatSystem] Started dealing damage with oblation to Tyytwo 
+[2025-05-04 12:36:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 12:36:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 12:36:33] [INFO] [MovementSystem] Updated movement range to 10 for Goxx
+[2025-05-04 12:36:33] [INFO] [MovementSystem] Updated movement path from [4, 10] to [5, 9] for Goxx
+[2025-05-04 12:36:33] [INFO] [Component] Setting earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d on to {"row":5,"column":9,"height":0,"collider":"","unit":"earth_dragon_Goxx_58e6d2c3-08c2-41c6-82f8-c8ac958a885d","structure":""}.
+[2025-05-04 12:36:33] [INFO] [MovementSystem] Moved from [4, 10] to [5, 9]
+[2025-05-04 12:36:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Goxx
+[2025-05-04 12:36:33] [INFO] [InputHandler] Gliding 0 camera to new tile 5_9_167834bf-8cef-4f64-a2d4-b03c30988f56
+[2025-05-04 12:36:33] [INFO] [InputHandler] Gliding 1 camera to new tile 5_9_167834bf-8cef-4f64-a2d4-b03c30988f56
+[2025-05-04 12:36:34] [INFO] [AbilityPanel] Updating ability selection for dragon_Domod_9efc1d9b-e9b7-4654-9a9b-34d1606259da
+[2025-05-04 12:36:34] [INFO] [AbilityPanel] Finished ability selection for dragon_Domod_9efc1d9b-e9b7-4654-9a9b-34d1606259da
+[2025-05-04 12:36:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 12:36:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 12:36:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 12:36:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Domod_9efc1d9b-e9b7-4654-9a9b-34d1606259da
+[2025-05-04 12:36:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Domod_9efc1d9b-e9b7-4654-9a9b-34d1606259da
+[2025-05-04 12:36:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 12:36:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Domod
+[2025-05-04 12:36:34] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_3444e903-c4f0-4a0b-8dda-b792be8b69b4
+[2025-05-04 12:36:34] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_3444e903-c4f0-4a0b-8dda-b792be8b69b4

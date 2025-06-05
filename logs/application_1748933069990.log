@@ -1,0 +1,278 @@
+[2025-06-02 23:44:30] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 23:44:30] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 23:44:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 23:44:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 23:44:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 23:44:30] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 23:44:30] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 23:44:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-02 23:44:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-02 23:44:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 23:44:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 23:44:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 23:44:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 23:44:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Revss___9133deec-1d18-4dd9-a2ac-5dccd36faed7 on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Revss___9133deec-1d18-4dd9-a2ac-5dccd36faed7","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Revss___9133deec-1d18-4dd9-a2ac-5dccd36faed7 into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Yawwge___d78d42e0-92aa-437d-82c3-add766021ed1 on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Yawwge___d78d42e0-92aa-437d-82c3-add766021ed1","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Yawwge___d78d42e0-92aa-437d-82c3-add766021ed1 into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Sohez___8dc4af72-ba4c-4579-83d6-17c2986d3ae6 on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Sohez___8dc4af72-ba4c-4579-83d6-17c2986d3ae6","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Sohez___8dc4af72-ba4c-4579-83d6-17c2986d3ae6 into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Pagi___2cdd560f-9cfa-4cd0-bdd3-0d93d5d96fc8 on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Pagi___2cdd560f-9cfa-4cd0-bdd3-0d93d5d96fc8","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Pagi___2cdd560f-9cfa-4cd0-bdd3-0d93d5d96fc8 into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jodci___800b93db-e46a-43df-84d8-78bfd5f78e1b on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Jodci___800b93db-e46a-43df-84d8-78bfd5f78e1b","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Jodci___800b93db-e46a-43df-84d8-78bfd5f78e1b into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Oamou___508be7e6-e3e8-4d84-9935-3c4a0c9f5765 on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Oamou___508be7e6-e3e8-4d84-9935-3c4a0c9f5765","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Oamou___508be7e6-e3e8-4d84-9935-3c4a0c9f5765 into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Zifi___b41c86cf-ea07-4770-bcdb-930dcc76fa36 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Zifi___b41c86cf-ea07-4770-bcdb-930dcc76fa36","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Zifi___b41c86cf-ea07-4770-bcdb-930dcc76fa36 into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Baseu___681dfc22-6814-49cb-8c03-8b2ce88b15b5 on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Baseu___681dfc22-6814-49cb-8c03-8b2ce88b15b5","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Baseu___681dfc22-6814-49cb-8c03-8b2ce88b15b5 into queue
+[2025-06-02 23:44:30] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Iidel___22bfed2c-7d27-4775-b704-77b3506817bc on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Iidel___22bfed2c-7d27-4775-b704-77b3506817bc","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Iidel___22bfed2c-7d27-4775-b704-77b3506817bc into queue
+[2025-06-02 23:44:30] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 23:44:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-02 23:44:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-02 23:44:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-02 23:44:30] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 23:44:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 23:44:30] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc
+[2025-06-02 23:44:31] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc
+[2025-06-02 23:44:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:44:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:44:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 23:44:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 23:44:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:44:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 23:44:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 23:44:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.5047233700752258 seconds
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc
+[2025-06-02 23:44:31] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc
+[2025-06-02 23:44:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:44:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:44:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:44:33] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_0___477a667c-8ccc-4ac5-8e32-4d7da7570459
+[2025-06-02 23:44:33] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-02 23:44:33] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement range to 5 for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [6, 8] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement range to 5 for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [6, 8] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [5, 8] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [5, 8] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [5, 7] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [5, 7] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 7] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 7] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 6] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 6] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 5] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 5] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [3, 5] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [3, 5] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 6] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 6] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 5] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [4, 5] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [3, 4] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [3, 4] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [3, 3] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [3, 3] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [2, 2] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [2, 2] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [2, 1] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [2, 1] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [1, 1] for Nulye
+[2025-06-02 23:44:33] [INFO] [MovementSystem] Updated movement path from [0, 0] to [1, 1] for Nulye
+[2025-06-02 23:44:34] [INFO] [MovementSystem] Updated movement path from [0, 0] to [1, 0] for Nulye
+[2025-06-02 23:44:34] [INFO] [MovementSystem] Updated movement path from [0, 0] to [1, 0] for Nulye
+[2025-06-02 23:44:34] [INFO] [MovementSystem] Updated movement path from [0, 0] to [2, 0] for Nulye
+[2025-06-02 23:44:34] [INFO] [MovementSystem] Updated movement path from [0, 0] to [2, 0] for Nulye
+[2025-06-02 23:44:34] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:44:34] [INFO] [MovementSystem] Moved from [0, 0] to [2, 0]
+[2025-06-02 23:44:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc
+[2025-06-02 23:44:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Nulye___7f4679ff-72fb-4a54-8610-83a1001d2ffc
+[2025-06-02 23:44:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:44:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Nulye
+[2025-06-02 23:44:34] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_0___782b43f1-04bf-43be-8556-d2d0ff56346d
+[2025-06-02 23:44:34] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_0___782b43f1-04bf-43be-8556-d2d0ff56346d
+[2025-06-02 23:44:35] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_0___782b43f1-04bf-43be-8556-d2d0ff56346d
+[2025-06-02 23:44:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:36] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-02 23:44:36] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:36] [INFO] [GameModel] Updated line of sight for Nulye, viewing 3 tiles
+[2025-06-02 23:44:36] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:36] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:36] [INFO] [GameModel] Updated line of sight for Nulye, viewing 9 tiles
+[2025-06-02 23:44:36] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 7 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 7 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 6 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 5 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 3 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 3 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:37] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Nulye to use test_slash
+[2025-06-02 23:44:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Nulye to use test_slash
+[2025-06-02 23:44:38] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Nulye to use test_slash
+[2025-06-02 23:44:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Nulye to use test_slash
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:38] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 23:44:39] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 23:44:39] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-02 23:44:39] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-02 23:44:39] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-02 23:44:39] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-02 23:44:39] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated line of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:39] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Started dealing damage with test_slash to Nulye 
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated line of sight for Nulye, viewing 2 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated line of sight for Nulye, viewing 3 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles
+[2025-06-02 23:44:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:44:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 4 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated line of sight for Nulye, viewing 3 tiles
+[2025-06-02 23:44:40] [INFO] [GameModel] Updated area of sight for Nulye, viewing 1 tiles

@@ -1,0 +1,634 @@
+[2025-04-30 20:34:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-30 20:34:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-30 20:34:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-30 20:34:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-30 20:34:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-30 20:34:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-30 20:34:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-30 20:34:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-30 20:34:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-30 20:34:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-30 20:34:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-30 20:34:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-30 20:34:50] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-30 20:34:50] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-30 20:34:50] [INFO] [Component] Setting earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f on to {"row":0,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit enemy:Domna into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting light_dragon_Teaia_e59945ca-c28e-4b15-b90e-a4a01f94cc9e on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Teaia_e59945ca-c28e-4b15-b90e-a4a01f94cc9e","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit enemy:Teaia into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting water_dragon_Wyfee_9e346631-0e15-4084-bbc8-c03224da49c4 on to {"row":1,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Wyfee_9e346631-0e15-4084-bbc8-c03224da49c4","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit enemy:Wyfee into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting dark_dragon_Bijy_0a136ef2-e121-4cd6-9cba-c33cce26f693 on to {"row":3,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Bijy_0a136ef2-e121-4cd6-9cba-c33cce26f693","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit enemy:Bijy into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting dragon_Oiis_fbf625f9-70b8-4ec9-b775-b1d360820b73 on to {"row":3,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Oiis_fbf625f9-70b8-4ec9-b775-b1d360820b73","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit enemy:Oiis into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d on to {"row":7,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit user:Uyvi into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting dark_dragon_Eagea_86eb4a64-cf9f-4f29-8403-ba22c5618b5a on to {"row":4,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Eagea_86eb4a64-cf9f-4f29-8403-ba22c5618b5a","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit user:Eagea into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402 on to {"row":0,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit user:Givgu into queue
+[2025-04-30 20:34:50] [INFO] [Component] Setting light_dragon_Lado_b6ae1158-aee7-4244-8018-d84efc0775b2 on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Lado_b6ae1158-aee7-4244-8018-d84efc0775b2","structure":""}.
+[2025-04-30 20:34:50] [INFO] [SpeedQueue] Added unit user:Lado into queue
+[2025-04-30 20:34:50] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-30 20:34:50] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-30 20:34:50] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-30 20:34:50] [INFO] [FontPool] Started initializing FontPool
+[2025-04-30 20:34:50] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-30 20:34:50] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-30 20:34:50] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-30 20:34:51] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-30 20:34:51] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-30 20:34:51] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 20:34:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 20:34:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 20:34:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-30 20:34:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-30 20:34:51] [INFO] [VisualsSystem] Finished creating blurred background after 0.4914848208427429 seconds
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:52] [INFO] [MovementSystem] Updated movement range to 4 for Givgu
+[2025-04-30 20:34:52] [INFO] [MovementSystem] Updated movement path from [0, 0] to [0, 1] for Givgu
+[2025-04-30 20:34:52] [INFO] [Component] Setting air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402 on to {"row":0,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402","structure":""}.
+[2025-04-30 20:34:52] [INFO] [MovementSystem] Moved from [0, 0] to [0, 1]
+[2025-04-30 20:34:52] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:52] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Givgu_a716b340-e80d-4d10-bc58-fc38240a2402
+[2025-04-30 20:34:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 20:34:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Givgu
+[2025-04-30 20:34:52] [INFO] [InputHandler] Gliding 0 camera to new tile 0_1_27faf5f0-e9fe-4c6d-bc52-b78d3dc85fe3
+[2025-04-30 20:34:52] [INFO] [InputHandler] Gliding 1 camera to new tile 0_1_27faf5f0-e9fe-4c6d-bc52-b78d3dc85fe3
+[2025-04-30 20:34:53] [INFO] [InputHandler] Gliding 0 camera to new tile 0_1_27faf5f0-e9fe-4c6d-bc52-b78d3dc85fe3
+[2025-04-30 20:34:53] [INFO] [InputHandler] Gliding 1 camera to new tile 0_1_27faf5f0-e9fe-4c6d-bc52-b78d3dc85fe3
+[2025-04-30 20:34:53] [INFO] [AbilitySystem] Givgu is planning to use oblation on [1, 0]
+[2025-04-30 20:34:53] [INFO] [AbilitySystem] Updated area of sight for Givgu, viewing 8 tiles
+[2025-04-30 20:34:53] [INFO] [AbilitySystem] Updated line of sight for Givgu, viewing 3 tiles
+[2025-04-30 20:34:53] [INFO] [AbilitySystem] Updated area of effect for Givgu viewing 1 tiles
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Started constructing cost mappings for Givgu to use oblation
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Finished constructing cost mappings for Givgu to use oblation
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Checking cost requirements for Givgu to use oblation
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Givgu is able to pay for oblation
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Started constructing cost mappings for Givgu to use oblation
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Finished constructing cost mappings for Givgu to use oblation
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Paying cost requirements for Givgu using oblation
+[2025-04-30 20:34:53] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-30 20:34:53] [INFO] [AbilitySystem] Used from oblation on [1, 0]
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Givgu to use oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Givgu to use oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Givgu to use oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Givgu
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Givgu
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyfee
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyfee
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Givgu
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Givgu
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyfee
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyfee
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-30 20:34:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Givgu to use oblation
+[2025-04-30 20:34:54] [INFO] [CombatSystem] Started dealing damage with oblation to Wyfee 
+[2025-04-30 20:34:54] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:54] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:54] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:54] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 20:34:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 20:34:54] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:54] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 20:34:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyvi
+[2025-04-30 20:34:54] [INFO] [InputHandler] Gliding 0 camera to new tile 7_6_022426c4-b9fd-4b25-9970-9357759b8ccc
+[2025-04-30 20:34:54] [INFO] [InputHandler] Gliding 1 camera to new tile 7_6_022426c4-b9fd-4b25-9970-9357759b8ccc
+[2025-04-30 20:34:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:55] [INFO] [MovementSystem] Updated movement range to 5 for Uyvi
+[2025-04-30 20:34:55] [INFO] [MovementSystem] Updated movement path from [7, 6] to [7, 7] for Uyvi
+[2025-04-30 20:34:55] [INFO] [Component] Setting air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d on to {"row":7,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d","structure":""}.
+[2025-04-30 20:34:55] [INFO] [MovementSystem] Moved from [7, 6] to [7, 7]
+[2025-04-30 20:34:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 20:34:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyvi
+[2025-04-30 20:34:55] [INFO] [InputHandler] Gliding 0 camera to new tile 7_7_61edd443-6adc-46c9-b092-ba6744d602ba
+[2025-04-30 20:34:55] [INFO] [InputHandler] Gliding 1 camera to new tile 7_7_61edd443-6adc-46c9-b092-ba6744d602ba
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Uyvi is planning to use oblation on [6, 7]
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Updated area of sight for Uyvi, viewing 4 tiles
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Updated line of sight for Uyvi, viewing 2 tiles
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Updated area of effect for Uyvi viewing 1 tiles
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Started constructing cost mappings for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Finished constructing cost mappings for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Checking cost requirements for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Uyvi is able to pay for oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Started constructing cost mappings for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Finished constructing cost mappings for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Paying cost requirements for Uyvi using oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Used from oblation on [6, 7]
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Uyvi_acc21ef8-0e8f-4336-95a0-9a5d8611015d
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyvi
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyvi
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lado
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Lado defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lado
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Uyvi
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Uyvi
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lado
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Lado defends with Same-Type-Defense-Bonus from oblation for -2.8
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lado
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] -1.0909091 damage after defenses for oblation
+[2025-04-30 20:34:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Uyvi to use oblation
+[2025-04-30 20:34:56] [INFO] [CombatSystem] Started dealing damage with oblation to Lado 
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f
+[2025-04-30 20:34:56] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 20:34:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 20:34:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f
+[2025-04-30 20:34:56] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f
+[2025-04-30 20:34:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 20:34:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Domna
+[2025-04-30 20:34:56] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_02223787-8ba7-43a1-9a87-56084e388ff7
+[2025-04-30 20:34:56] [INFO] [InputHandler] Gliding 1 camera to new tile 0_5_02223787-8ba7-43a1-9a87-56084e388ff7
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 20:34:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 20:34:58] [INFO] [InputHandler] Gliding 0 camera to new tile 0_5_02223787-8ba7-43a1-9a87-56084e388ff7
+[2025-04-30 20:34:58] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-30 20:34:58] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement range to 8 for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 7] for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement range to 8 for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [3, 7] for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 7] for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 7] for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 6] for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 6] for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Domna
+[2025-04-30 20:34:58] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 5] for Domna
+[2025-04-30 20:34:59] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Domna
+[2025-04-30 20:34:59] [INFO] [MovementSystem] Updated movement path from [0, 5] to [2, 4] for Domna
+[2025-04-30 20:34:59] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 4] for Domna
+[2025-04-30 20:34:59] [INFO] [MovementSystem] Updated movement path from [0, 5] to [1, 4] for Domna
+[2025-04-30 20:34:59] [INFO] [Component] Setting earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Domna_2bb5287c-6e7f-42e5-ba1f-08ffda01455f","structure":""}.
+[2025-04-30 20:34:59] [INFO] [MovementSystem] Moved from [0, 5] to [1, 4]
+[2025-04-30 20:34:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 20:34:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Domna
+[2025-04-30 20:34:59] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_d24ce55f-1aab-4e14-8d51-8e90591d4c3e
+[2025-04-30 20:34:59] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_d24ce55f-1aab-4e14-8d51-8e90591d4c3e
+[2025-04-30 20:35:00] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_d24ce55f-1aab-4e14-8d51-8e90591d4c3e
+[2025-04-30 20:35:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [AbilityPanel] Selecting earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Domna is planning to use earth_attack on null
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated area of sight for Domna, viewing 12 tiles
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 0 tiles
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 0 tiles
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Domna is planning to use earth_attack on [3, 7]
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Domna lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bijy
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bijy
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 20.0 damage after defenses for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Domna is planning to use earth_attack on [3, 6]
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Domna is planning to use earth_attack on [2, 6]
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Domna is planning to use earth_attack on [2, 5]
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:01] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Domna lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Teaia
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Teaia
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] 20.0 damage after defenses for earth_attack
+[2025-04-30 20:35:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Domna is planning to use earth_attack on [2, 6]
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Domna is planning to use earth_attack on [3, 6]
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Domna is planning to use earth_attack on [3, 7]
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Domna lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bijy
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bijy
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] 20.0 damage after defenses for earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Domna is planning to use earth_attack on null
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 0 tiles
+[2025-04-30 20:35:06] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 0 tiles
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use earth_attack
+[2025-04-30 20:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Domna is planning to use oblation on null
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Domna is planning to use oblation on [4, 7]
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Domna is planning to use oblation on [3, 7]
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bijy
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bijy
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bijy
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bijy
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Domna is planning to use oblation on [3, 6]
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Domna is planning to use oblation on [2, 6]
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Domna is planning to use oblation on [2, 5]
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:07] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Teaia
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Teaia defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Teaia
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Domna lands a CRIT bonus with oblation for -7.5
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -12.5 damage after modifiers for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Teaia
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -12.5 Raw damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Teaia defends with Same-Type-Defense-Bonus from oblation for -8.75
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Teaia
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] -3.409091 damage after defenses for oblation
+[2025-04-30 20:35:07] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:07] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Domna is planning to use oblation on [1, 5]
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 2 tiles
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Domna is planning to use oblation on [1, 4]
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 1 tiles
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Domna lands a CRIT bonus with oblation for -7.5
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] -12.5 damage after modifiers for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] -12.5 Raw damage after defenses for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Domna
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] -10.416666 damage after defenses for oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Domna is planning to use oblation on [0, 4]
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 2 tiles
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Domna is planning to use oblation on [0, 3]
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 3 tiles
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Domna is planning to use oblation on [0, 2]
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 4 tiles
+[2025-04-30 20:35:12] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 1 tiles
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 20:35:13] [INFO] [AbilitySystem] Domna is planning to use oblation on null
+[2025-04-30 20:35:13] [INFO] [AbilitySystem] Updated line of sight for Domna, viewing 0 tiles
+[2025-04-30 20:35:13] [INFO] [AbilitySystem] Updated area of effect for Domna viewing 0 tiles
+[2025-04-30 20:35:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 20:35:13] [INFO] [CombatSystem] Started constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:13] [INFO] [CombatSystem] Finished constructing damage mappings for Domna to use oblation
+[2025-04-30 20:35:13] [INFO] [CombatSystem] Started constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:13] [INFO] [CombatSystem] Finished constructing cost mappings for Domna to use oblation
+[2025-04-30 20:35:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

@@ -1,0 +1,27 @@
+[2025-05-03 16:21:47] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-03 16:21:47] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-03 16:21:47] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-03 16:21:47] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-03 16:21:47] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-03 16:21:47] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-03 16:21:47] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-03 16:21:47] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-03 16:21:47] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-03 16:21:47] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-03 16:21:47] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-03 16:21:47] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-03 16:21:48] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-03 16:21:48] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-03 21:00:49] [INFO] [Component] Setting dark_dragon_Jayuiy_cad76fe8-0888-496b-be7f-1c8b67303418 on to {"row":4,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Jayuiy_cad76fe8-0888-496b-be7f-1c8b67303418","structure":""}.
+[2025-05-03 21:00:49] [INFO] [SpeedQueue] Added unit enemy:Jayuiy into queue
+[2025-05-03 21:00:49] [INFO] [Component] Setting light_dragon_Yimioe_281c30af-7eef-4669-a1e1-3dddf214c47e on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Yimioe_281c30af-7eef-4669-a1e1-3dddf214c47e","structure":""}.
+[2025-05-03 21:00:49] [INFO] [SpeedQueue] Added unit enemy:Yimioe into queue
+[2025-05-03 21:00:49] [INFO] [Component] Setting dragon_Lusrk_2f9cfa29-5b1a-4d25-a146-c4e50e2fd5a7 on to {"row":5,"column":2,"height":0,"collider":"","unit":"dragon_Lusrk_2f9cfa29-5b1a-4d25-a146-c4e50e2fd5a7","structure":""}.
+[2025-05-03 21:00:49] [INFO] [SpeedQueue] Added unit enemy:Lusrk into queue
+[2025-05-03 21:00:49] [INFO] [Component] Setting dark_dragon_Lucio_e48d61ce-d8a6-4802-8bae-c892e2c48e11 on to {"row":1,"column":2,"height":0,"collider":"","unit":"dark_dragon_Lucio_e48d61ce-d8a6-4802-8bae-c892e2c48e11","structure":""}.
+[2025-05-03 21:00:49] [INFO] [SpeedQueue] Added unit enemy:Lucio into queue
+[2025-05-03 21:00:49] [INFO] [Component] Setting air_dragon_Oyau_6c3a167f-7477-4830-903b-63437293e566 on to {"row":0,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Oyau_6c3a167f-7477-4830-903b-63437293e566","structure":""}.
+[2025-05-03 21:00:49] [INFO] [SpeedQueue] Added unit enemy:Oyau into queue
+[2025-05-03 21:00:49] [INFO] [Component] Setting earth_dragon_Cyvu_69b3cfae-76fc-4252-b1b2-85b1df90dce1 on to {"row":2,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Cyvu_69b3cfae-76fc-4252-b1b2-85b1df90dce1","structure":""}.
+[2025-05-03 21:00:49] [INFO] [SpeedQueue] Added unit user:Cyvu into queue
+[2

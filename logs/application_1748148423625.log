@@ -1,0 +1,360 @@
+[2025-05-24 21:47:03] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-24 21:47:03] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-24 21:47:03] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-24 21:47:03] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-24 21:47:03] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-24 21:47:03] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-24 21:47:03] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-24 21:47:03] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-24 21:47:03] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-24 21:47:03] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-24 21:47:03] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-24 21:47:03] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-24 21:47:03] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-24 21:47:03] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Xokq___901aed9d-9d68-46db-a747-b57ab1adcf4c on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"UNIT_dark_dragon___NICKNAME_Xokq___901aed9d-9d68-46db-a747-b57ab1adcf4c","structure":"","total_elevation":4}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Xokq___901aed9d-9d68-46db-a747-b57ab1adcf4c into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c","structure":"","total_elevation":7}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Qimgzi___32dc9320-7cb9-4c89-a6d5-a598e6573997 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"UNIT_fire_dragon___NICKNAME_Qimgzi___32dc9320-7cb9-4c89-a6d5-a598e6573997","structure":"","total_elevation":5}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Qimgzi___32dc9320-7cb9-4c89-a6d5-a598e6573997 into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Suyu___5e4e648e-e2a9-4e36-a019-d7f3ac3952a2 on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"UNIT_earth_dragon___NICKNAME_Suyu___5e4e648e-e2a9-4e36-a019-d7f3ac3952a2","structure":"","total_elevation":7}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Suyu___5e4e648e-e2a9-4e36-a019-d7f3ac3952a2 into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Yeqdus___e5857a3b-e2d4-4687-934f-270371d67a08 on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"UNIT_air_dragon___NICKNAME_Yeqdus___e5857a3b-e2d4-4687-934f-270371d67a08","structure":"","total_elevation":4}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Yeqdus___e5857a3b-e2d4-4687-934f-270371d67a08 into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Raci___7f746c9e-17d5-430d-a352-b1b1b1339cc0 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"UNIT_dragon___NICKNAME_Raci___7f746c9e-17d5-430d-a352-b1b1b1339cc0","structure":"","total_elevation":6}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Raci___7f746c9e-17d5-430d-a352-b1b1b1339cc0 into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xycuhw___2f1ecefc-97c1-4aad-842b-97b457788edf on to {"row":1,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"UNIT_water_dragon___NICKNAME_Xycuhw___2f1ecefc-97c1-4aad-842b-97b457788edf","structure":"","total_elevation":7}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Xycuhw___2f1ecefc-97c1-4aad-842b-97b457788edf into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Geiove___a72f0438-e2d5-4147-865d-5a08b8b32357 on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"UNIT_water_dragon___NICKNAME_Geiove___a72f0438-e2d5-4147-865d-5a08b8b32357","structure":"","total_elevation":9}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Geiove___a72f0438-e2d5-4147-865d-5a08b8b32357 into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Buymce___59484147-9ca4-46f7-b6c5-9716f72e89f4 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"UNIT_earth_dragon___NICKNAME_Buymce___59484147-9ca4-46f7-b6c5-9716f72e89f4","structure":"","total_elevation":8}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Buymce___59484147-9ca4-46f7-b6c5-9716f72e89f4 into queue
+[2025-05-24 21:47:04] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Hotso___27912193-0890-48b8-89ed-e2199e9fd9ce on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"UNIT_dark_dragon___NICKNAME_Hotso___27912193-0890-48b8-89ed-e2199e9fd9ce","structure":"","total_elevation":9}.
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Hotso___27912193-0890-48b8-89ed-e2199e9fd9ce into queue
+[2025-05-24 21:47:04] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-24 21:47:04] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-24 21:47:04] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-24 21:47:04] [INFO] [FontPool] Started initializing FontPool
+[2025-05-24 21:47:04] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-24 21:47:04] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-24 21:47:04] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-24 21:47:04] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-24 21:47:04] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-24 21:47:04] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:04] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-24 21:47:04] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:04] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:04] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-24 21:47:04] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-24 21:47:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-24 21:47:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-24 21:47:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-24 21:47:04] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-24 21:47:04] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-24 21:47:05] [INFO] [VisualsSystem] Finished creating blurred background after 0.4892716109752655 seconds
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:05] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-24 21:47:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:05] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-24 21:47:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:05] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-24 21:47:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___54625d6a-3e72-434a-bdb9-547521aa8dbf
+[2025-05-24 21:47:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_1___54625d6a-3e72-434a-bdb9-547521aa8dbf
+[2025-05-24 21:47:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c
+[2025-05-24 21:47:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-24 21:47:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Diqa
+[2025-05-24 21:47:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___54625d6a-3e72-434a-bdb9-547521aa8dbf
+[2025-05-24 21:47:07] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-24 21:47:07] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement range to 7 for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 4] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement range to 7 for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 4] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 3] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 3] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 3] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 3] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 2] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 2] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [5, 2] for Diqa
+[2025-05-24 21:47:08] [INFO] [MovementSystem] Updated movement path from [6, 1] to [5, 2] for Diqa
+[2025-05-24 21:47:09] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c on to {"row":5,"column":2,"base_elevation":0,"collider":"","unit":"UNIT_air_dragon___NICKNAME_Diqa___af8aff50-6b0c-4540-86bd-b25d4770787c","structure":"","total_elevation":8}.
+[2025-05-24 21:47:09] [INFO] [MovementSystem] Moved from [6, 1] to [5, 2]
+[2025-05-24 21:47:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-24 21:47:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Diqa
+[2025-05-24 21:47:09] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_2___88b9ccc0-f489-44bb-9ded-be82ce2146c0
+[2025-05-24 21:47:09] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_2___88b9ccc0-f489-44bb-9ded-be82ce2146c0
+[2025-05-24 21:47:10] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_2___88b9ccc0-f489-44bb-9ded-be82ce2146c0
+[2025-05-24 21:47:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [7, 6]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of sight for Diqa, viewing 12 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 2 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on null
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 0 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 0 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [7, 4]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 4 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [7, 3]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 4 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [7, 2]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 3 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [6, 2]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 2 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [6, 1]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 3 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [6, 0]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 4 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Diqa
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Diqa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Diqa
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qimgzi
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qimgzi
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Diqa is planning to use air_attack on [5, 0]
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated line of sight for Diqa, viewing 3 tiles
+[2025-05-24 21:47:11] [INFO] [AbilitySystem] Updated area of effect for Diqa viewing 1 tiles
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Diqa
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Diqa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Diqa
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xokq
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xokq
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-24 21:47:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Checking cost requirements for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Diqa is able to pay for air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Started constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Finished constructing cost mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Paying cost requirements for Diqa using air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilitySystem] Used from air_attack on [5, 0]
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Diqa
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Diqa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Diqa
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xokq
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xokq
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [CombatSystem] Started dealing damage with air_attack to Xokq 
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Diqa
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Diqa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Diqa
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xokq
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xokq
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Diqa
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Diqa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Diqa
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xokq
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xokq
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-24 21:47:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Diqa to use air_attack
+[2025-05-24 21:47:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-24 21:47:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-24 21:48:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_2___88b9ccc0-f489-44bb-9ded-be82ce2146c0
+[2025-05-24 21:48:18] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_2___88b9ccc0-f489-44bb-9ded-be82ce2146c0
+[2025-05-24 21:48:18] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_2___88b9ccc0-f489-44bb-9ded-be82ce2146c0
+[2025-05-24 21:48:19] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_0___65d68f30-6ff6-4ee4-af03-0c1dc526f7cf
+[2025-05-24 21:48:19] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_0___65d68f30-6ff6-4ee4-af03-0c1dc526f7cf
+[2025-05-24 21:48:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Yeqdus___e5857a3b-e2d4-4687-934f-270371d67a08
+[2025-05-24 21:48:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Yeqdus___e5857a3b-e2d4-4687-934f-270371d67a08
+[2025-05-24 21:48:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-24 21:48:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Yeqdus
+[2025-05-24 21:48:19] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_0___0314ac0b-ef9a-482c-a5a0-9be96db89dab
+[2025-05-24 21:48:19] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_0___0314ac0b-ef9a-482c-a5a0-9be96db89dab
+[2025-05-24 21:48:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Qimgzi___32dc9320-7cb9-4c89-a6d5-a598e6573997
+[2025-05-24 21:48:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Qimgzi___32dc9320-7cb9-4c89-a6d5-a598e6573997
+[2025-05-24 21:48:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-24 21:48:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Qimgzi
+[2025-05-24 21:48:20] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_11___42a01da2-86f0-469d-ad00-ddb5c8917383
+[2025-05-24 21:48:20] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_11___42a01da2-86f0-469d-ad00-ddb5c8917383
+[2025-05-24 21:48:20] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Geiove___a72f0438-e2d5-4147-865d-5a08b8b32357
+[2025-05-24 21:48:20] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Geiove___a72f0438-e2d5-4147-865d-5a08b8b32357
+[2025-05-24 21:48:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-24 21:48:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Geiove

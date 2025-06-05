@@ -1,0 +1,30 @@
+[2025-06-02 04:00:35] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 04:00:35] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 04:00:35] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 04:00:35] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 04:00:35] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 04:00:35] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 04:00:35] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 04:00:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 04:00:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 04:00:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 04:00:35] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 04:00:35] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 04:00:36] [INFO] [VisualsSystem] Finished creating blurred background after 0.3213137984275818 seconds
+[2025-06-02 04:00:37] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 04:00:37] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 04:00:37] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 04:00:37] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 04:00:37] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 04:00:37] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Xuyz___99801f63-ed48-4684-829f-3a2319ceb385 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Xuyz___99801f63-ed48-4684-829f-3a2319ceb385","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 04:00:37] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Xuyz___99801f63-ed48-4684-829f-3a2319ceb385 into queue
+[2025-06-02 04:00:37] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xuyuai___3075618c-e56a-4e49-ae33-24fbea7339ad on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Xuyuai___3075618c-e56a-4e49-ae33-24fbea7339ad","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 04:00:37] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:00:37] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Xuyuai___3075618c-e56a-4e49-ae33-24fbea7339ad into queue
+[2025-06-02 04:00:37] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 04:00:37] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 04:00:37] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 04:00:37] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 04:00:37] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:00:37] [INFO] [GameModel] Updated area of sight for Xuyz, viewing 5 tiles
+[2025-06-02 04:00:37] [INFO] [GameModel] Updated line of sight for Xuyz, viewi

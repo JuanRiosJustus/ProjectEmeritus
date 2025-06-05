@@ -1,0 +1,337 @@
+[2025-04-28 03:03:33] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 03:03:33] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 03:03:33] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 03:03:33] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 03:03:33] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 03:03:33] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 03:03:33] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 03:03:33] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 03:03:33] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 03:03:33] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 03:03:33] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 03:03:33] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 03:03:33] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 03:03:33] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 03:03:33] [INFO] [Component] Setting light_dragon_Vozi_3f3596e0-e67e-4b3e-a9ab-fa02b04c2e86 on to {"row":4,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Vozi_3f3596e0-e67e-4b3e-a9ab-fa02b04c2e86","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit enemy:Vozi into queue
+[2025-04-28 03:03:33] [INFO] [Component] Setting dark_dragon_Sevot_68fa41f7-fe33-4cfa-bc9b-2bb67884fb1f on to {"row":5,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Sevot_68fa41f7-fe33-4cfa-bc9b-2bb67884fb1f","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit enemy:Sevot into queue
+[2025-04-28 03:03:33] [INFO] [Component] Setting light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5 on to {"row":7,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit enemy:Syuu into queue
+[2025-04-28 03:03:33] [INFO] [Component] Setting dark_dragon_Soxjt_525f0ba7-f3d0-4e94-96a6-fffcff3f8eb6 on to {"row":4,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Soxjt_525f0ba7-f3d0-4e94-96a6-fffcff3f8eb6","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit enemy:Soxjt into queue
+[2025-04-28 03:03:33] [INFO] [Component] Setting water_dragon_Yojkbi_23159404-f701-4c01-8efa-4eaf259edb0b on to {"row":7,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Yojkbi_23159404-f701-4c01-8efa-4eaf259edb0b","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit user:Yojkbi into queue
+[2025-04-28 03:03:33] [INFO] [Component] Setting air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb on to {"row":1,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit user:Habgua into queue
+[2025-04-28 03:03:33] [INFO] [Component] Setting light_dragon_Vita_ebc04767-7d68-4bf0-9b7f-46fe0cc44c28 on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Vita_ebc04767-7d68-4bf0-9b7f-46fe0cc44c28","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit user:Vita into queue
+[2025-04-28 03:03:33] [INFO] [Component] Setting water_dragon_Uyki_ee841986-2b02-4596-85c6-eb4f90b89147 on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Uyki_ee841986-2b02-4596-85c6-eb4f90b89147","structure":""}.
+[2025-04-28 03:03:33] [INFO] [SpeedQueue] Added unit user:Uyki into queue
+[2025-04-28 03:03:33] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 03:03:33] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 03:03:33] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 03:03:33] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 03:03:33] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 03:03:34] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 03:03:34] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 03:03:34] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 03:03:34] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 03:03:34] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:34] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 03:03:34] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:34] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:03:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:03:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 03:03:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 03:03:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 03:03:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 03:03:34] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 03:03:35] [INFO] [VisualsSystem] Finished creating blurred background after 0.48853203654289246 seconds
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:03:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:03:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:03:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:37] [INFO] [MovementSystem] Updated movement range to 10 for Habgua
+[2025-04-28 03:03:37] [INFO] [MovementSystem] Updated movement path from [1, 2] to [2, 1] for Habgua
+[2025-04-28 03:03:37] [INFO] [Component] Setting air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb","structure":""}.
+[2025-04-28 03:03:37] [INFO] [MovementSystem] Moved from [1, 2] to [2, 1]
+[2025-04-28 03:03:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Habgua_adb2ce57-e07c-47b8-965c-35dc30d6bbdb
+[2025-04-28 03:03:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 03:03:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Habgua
+[2025-04-28 03:03:37] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_b4335094-fa50-4cb8-898c-21352aea370f
+[2025-04-28 03:03:37] [INFO] [InputHandler] Gliding 1 camera to new tile 2_1_b4335094-fa50-4cb8-898c-21352aea370f
+[2025-04-28 03:03:37] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:37] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:37] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:03:37] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:03:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 03:03:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 03:03:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 03:03:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Syuu
+[2025-04-28 03:03:37] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_02c73936-90a1-4b2e-b59e-369d122ef8f8
+[2025-04-28 03:03:37] [INFO] [InputHandler] Gliding 1 camera to new tile 7_2_02c73936-90a1-4b2e-b59e-369d122ef8f8
+[2025-04-28 03:03:40] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_02c73936-90a1-4b2e-b59e-369d122ef8f8
+[2025-04-28 03:03:40] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:03:40] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:03:41] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-28 03:03:41] [INFO] [AbilitySystem] Syuu is planning to use oblation on null
+[2025-04-28 03:03:41] [INFO] [AbilitySystem] Updated area of sight for Syuu, viewing 8 tiles
+[2025-04-28 03:03:41] [INFO] [AbilitySystem] Updated line of sight for Syuu, viewing 0 tiles
+[2025-04-28 03:03:41] [INFO] [AbilitySystem] Updated area of effect for Syuu viewing 0 tiles
+[2025-04-28 03:03:41] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:41] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:41] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:03:41] [INFO] [CombatSystem] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:41] [INFO] [CombatSystem] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:41] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:41] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:41] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Syuu is planning to use oblation on [7, 3]
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated line of sight for Syuu, viewing 2 tiles
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated area of effect for Syuu viewing 1 tiles
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yojkbi
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yojkbi
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for -6.0
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -11.0 damage after modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yojkbi
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -11.0 Raw damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yojkbi
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -10.0 damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Syuu is planning to use oblation on [6, 3]
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated line of sight for Syuu, viewing 3 tiles
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated area of effect for Syuu viewing 1 tiles
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Syuu is planning to use oblation on [6, 2]
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated line of sight for Syuu, viewing 2 tiles
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated area of effect for Syuu viewing 1 tiles
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Syuu is planning to use oblation on [5, 2]
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated line of sight for Syuu, viewing 3 tiles
+[2025-04-28 03:03:42] [INFO] [AbilitySystem] Updated area of effect for Syuu viewing 1 tiles
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for -6.0
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -11.0 damage after modifiers for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -11.0 Raw damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] -10.0 damage after defenses for oblation
+[2025-04-28 03:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Checking cost requirements for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Syuu is able to pay for oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Paying cost requirements for Syuu using oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilitySystem] Used from oblation on [5, 2]
+[2025-04-28 03:03:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:43] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:43] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:43] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:03:43] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:03:43] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:43] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Syuu_b9b8651a-9d29-48e0-8b00-e60c078f92f5
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Started constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Finished constructing cost mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for -4.8
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.8 damage after modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.8 Raw damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.0 damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [CombatSystem] Started dealing damage with oblation to Uyki 
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for -4.8
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.8 damage after modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.8 Raw damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.0 damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for 15.000001
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 27.5 damage after modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 27.5 Raw damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] 25.0 damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Syuu lands a Same-Type-Attack-Bonus with oblation, for -4.8
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.8 damage after modifiers for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Syuu
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.8 Raw damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uyki
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] -8.0 damage after defenses for oblation
+[2025-04-28 03:03:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Syuu to use oblation
+[2025-04-28 03:03:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:03:43] [INFO] [AbilitySystem] Finished update updating {} because of ability

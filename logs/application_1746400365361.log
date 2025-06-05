@@ -1,0 +1,501 @@
+[2025-05-04 16:12:45] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 16:12:45] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 16:12:45] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 16:12:45] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 16:12:45] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 16:12:45] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 16:12:45] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 16:12:45] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 16:12:45] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 16:12:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 16:12:45] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 16:12:45] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 16:12:45] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 16:12:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 16:12:45] [INFO] [Component] Setting air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102 on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102 into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68 on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68 into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting earth_dragon_Xydlta_0d2fc464-f9d3-47ee-b2aa-eca6e8f6dc61 on to {"row":3,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Xydlta_0d2fc464-f9d3-47ee-b2aa-eca6e8f6dc61","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit earth_dragon_Xydlta_0d2fc464-f9d3-47ee-b2aa-eca6e8f6dc61 into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting fire_dragon_Qesaw_09b0962b-b3a5-497e-b63c-b7e640f6d6fd on to {"row":4,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Qesaw_09b0962b-b3a5-497e-b63c-b7e640f6d6fd","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit fire_dragon_Qesaw_09b0962b-b3a5-497e-b63c-b7e640f6d6fd into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting dragon_Xexo_1d974333-27d3-47b1-a1fb-1381be8b2f3f on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Xexo_1d974333-27d3-47b1-a1fb-1381be8b2f3f","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit dragon_Xexo_1d974333-27d3-47b1-a1fb-1381be8b2f3f into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting dark_dragon_Iohcc_3dcf220f-c0e7-488e-a2cb-a89d3159421c on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Iohcc_3dcf220f-c0e7-488e-a2cb-a89d3159421c","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit dark_dragon_Iohcc_3dcf220f-c0e7-488e-a2cb-a89d3159421c into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting earth_dragon_Yutd_931a38dc-bc30-4242-8b0c-f2717374ef2c on to {"row":6,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Yutd_931a38dc-bc30-4242-8b0c-f2717374ef2c","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit earth_dragon_Yutd_931a38dc-bc30-4242-8b0c-f2717374ef2c into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting water_dragon_Yixuq_a50a39ea-0100-4438-a024-0f88711879f0 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Yixuq_a50a39ea-0100-4438-a024-0f88711879f0","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit water_dragon_Yixuq_a50a39ea-0100-4438-a024-0f88711879f0 into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting light_dragon_Zyzil_86792192-8d6e-423c-9157-9a237ec9a6ef on to {"row":0,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Zyzil_86792192-8d6e-423c-9157-9a237ec9a6ef","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit light_dragon_Zyzil_86792192-8d6e-423c-9157-9a237ec9a6ef into queue
+[2025-05-04 16:12:45] [INFO] [Component] Setting air_dragon_Jecyu_966033e2-ec9a-4cbf-b7d6-7315071f9452 on to {"row":1,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Jecyu_966033e2-ec9a-4cbf-b7d6-7315071f9452","structure":""}.
+[2025-05-04 16:12:45] [INFO] [SpeedQueue] Added unit air_dragon_Jecyu_966033e2-ec9a-4cbf-b7d6-7315071f9452 into queue
+[2025-05-04 16:12:45] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 16:12:45] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 16:12:45] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 16:12:45] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 16:12:46] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 16:12:46] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 16:12:46] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 16:12:46] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 16:12:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 16:12:46] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:46] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 16:12:46] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:46] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:46] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 16:12:46] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 16:12:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 16:12:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 16:12:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 16:12:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 16:12:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 16:12:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.48730817437171936 seconds
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:47] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:47] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 16:12:47] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:47] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:47] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 16:12:47] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:47] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:47] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 16:12:47] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:48] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_a5d2735d-a719-49bf-bf10-28d29e879646
+[2025-05-04 16:12:48] [INFO] [InputHandler] Gliding 1 camera to new tile 4_0_a5d2735d-a719-49bf-bf10-28d29e879646
+[2025-05-04 16:12:48] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:48] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Euiaiz_51d11220-ce48-43ae-a7ee-f3f3a097b102
+[2025-05-04 16:12:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 16:12:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Euiaiz
+[2025-05-04 16:12:50] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_a5d2735d-a719-49bf-bf10-28d29e879646
+[2025-05-04 16:12:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:51] [INFO] [AbilityPanel] Selecting air_force
+[2025-05-04 16:12:51] [INFO] [AbilitySystem] Euiaiz is planning to use air_force on [7, 4]
+[2025-05-04 16:12:51] [INFO] [AbilitySystem] Updated area of sight for Euiaiz, viewing 1 tiles
+[2025-05-04 16:12:51] [INFO] [AbilitySystem] Updated line of sight for Euiaiz, viewing 2 tiles
+[2025-05-04 16:12:51] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 0 tiles
+[2025-05-04 16:12:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use air_force
+[2025-05-04 16:12:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use air_force
+[2025-05-04 16:12:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:51] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use air_force
+[2025-05-04 16:12:51] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use air_force
+[2025-05-04 16:12:51] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use air_force
+[2025-05-04 16:12:51] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use air_force
+[2025-05-04 16:12:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Euiaiz is planning to use oblation on [7, 4]
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of sight for Euiaiz, viewing 6 tiles
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 1 tiles
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Euiaiz is planning to use oblation on [6, 4]
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated line of sight for Euiaiz, viewing 2 tiles
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 1 tiles
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Euiaiz is planning to use oblation on [6, 3]
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated line of sight for Euiaiz, viewing 2 tiles
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 1 tiles
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Euiaiz is planning to use oblation on [5, 3]
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated line of sight for Euiaiz, viewing 2 tiles
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 1 tiles
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Euiaiz is planning to use oblation on [5, 2]
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated line of sight for Euiaiz, viewing 2 tiles
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 1 tiles
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Euiaiz is planning to use oblation on [4, 2]
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated line of sight for Euiaiz, viewing 2 tiles
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 1 tiles
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Euiaiz is planning to use oblation on [4, 1]
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated line of sight for Euiaiz, viewing 2 tiles
+[2025-05-04 16:12:52] [INFO] [AbilitySystem] Updated area of effect for Euiaiz viewing 1 tiles
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-04 16:12:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Checking cost requirements for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Euiaiz is able to pay for oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Started constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Finished constructing cost mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Paying cost requirements for Euiaiz using oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilitySystem] Used from oblation on [4, 1]
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [CombatSystem] Started dealing damage with oblation to Qesaw 
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Euiaiz
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-04 16:12:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Euiaiz to use oblation
+[2025-05-04 16:12:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:12:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:21:16] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:16] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 16:21:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 16:21:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 16:21:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 16:21:16] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:16] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 16:21:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Zabs
+[2025-05-04 16:21:16] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_1bf10308-0087-44d8-b033-e5d2999e5fd6
+[2025-05-04 16:21:16] [INFO] [InputHandler] Gliding 1 camera to new tile 7_1_1bf10308-0087-44d8-b033-e5d2999e5fd6
+[2025-05-04 16:21:17] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_1bf10308-0087-44d8-b033-e5d2999e5fd6
+[2025-05-04 16:21:17] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-04 16:21:17] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement range to 8 for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 3] for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement range to 8 for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 3] for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 2] for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 2] for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [6, 2] for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [6, 2] for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [6, 1] for Zabs
+[2025-05-04 16:21:17] [INFO] [MovementSystem] Updated movement path from [7, 1] to [6, 1] for Zabs
+[2025-05-04 16:21:18] [INFO] [Component] Setting fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68 on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68","structure":""}.
+[2025-05-04 16:21:18] [INFO] [MovementSystem] Moved from [7, 1] to [6, 1]
+[2025-05-04 16:21:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 16:21:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Zabs
+[2025-05-04 16:21:18] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_36ff02e3-2f34-4107-96fc-4199beb0a3ad
+[2025-05-04 16:21:18] [INFO] [InputHandler] Gliding 1 camera to new tile 6_1_36ff02e3-2f34-4107-96fc-4199beb0a3ad
+[2025-05-04 16:21:19] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_36ff02e3-2f34-4107-96fc-4199beb0a3ad
+[2025-05-04 16:21:19] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:19] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Zabs is planning to use oblation on null
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of sight for Zabs, viewing 11 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated line of sight for Zabs, viewing 0 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of effect for Zabs viewing 0 tiles
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Zabs is planning to use oblation on [7, 4]
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated line of sight for Zabs, viewing 5 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of effect for Zabs viewing 1 tiles
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Zabs is planning to use oblation on [7, 3]
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated line of sight for Zabs, viewing 4 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of effect for Zabs viewing 1 tiles
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Zabs is planning to use oblation on [6, 3]
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated line of sight for Zabs, viewing 3 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of effect for Zabs viewing 1 tiles
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Zabs is planning to use oblation on [6, 2]
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated line of sight for Zabs, viewing 2 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of effect for Zabs viewing 1 tiles
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Zabs is planning to use oblation on [5, 2]
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated line of sight for Zabs, viewing 3 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of effect for Zabs viewing 1 tiles
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Zabs is planning to use oblation on [4, 1]
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated line of sight for Zabs, viewing 3 tiles
+[2025-05-04 16:21:20] [INFO] [AbilitySystem] Updated area of effect for Zabs viewing 1 tiles
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Zabs
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Zabs
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Zabs
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Zabs
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-04 16:21:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Checking cost requirements for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Zabs is able to pay for oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Paying cost requirements for Zabs using oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-04 16:21:21] [INFO] [AbilitySystem] Used from oblation on [4, 1]
+[2025-05-04 16:21:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 16:21:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 16:21:21] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:21] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 16:21:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 16:21:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Zabs_4edde34f-c871-4514-a0ed-c69984b25f68
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Started constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [CombatSystem] Finished constructing cost mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zabs to use oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Zabs
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Zabs
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Zabs
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Zabs
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qesaw
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qesaw
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-04 16:21:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zabs to u

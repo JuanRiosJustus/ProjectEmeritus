@@ -1,0 +1,425 @@
+[2025-06-01 11:35:00] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-01 11:35:00] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-01 11:35:00] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-01 11:35:00] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-01 11:35:00] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-01 11:35:00] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-01 11:35:00] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-01 11:35:00] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-01 11:35:00] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-01 11:35:00] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-01 11:35:00] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-01 11:35:00] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-01 11:35:00] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-01 11:35:00] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Jyyo___ccee4224-579a-4301-8a03-20057b1e3a0d on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Jyyo___ccee4224-579a-4301-8a03-20057b1e3a0d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Jyyo___ccee4224-579a-4301-8a03-20057b1e3a0d into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Uygo___72bfa686-8a36-49ad-8084-d38eaf9035e0 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Uygo___72bfa686-8a36-49ad-8084-d38eaf9035e0","layers":{"empty":false},"total_elevation":8}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Uygo___72bfa686-8a36-49ad-8084-d38eaf9035e0 into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Daek___babcdda9-a551-422b-a19a-192925bf0882 on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Daek___babcdda9-a551-422b-a19a-192925bf0882","layers":{"empty":false},"total_elevation":7}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Daek___babcdda9-a551-422b-a19a-192925bf0882 into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e","layers":{"empty":false},"total_elevation":9}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Jolyyn___e56da3b5-55c6-478b-85cb-8caf6f8d1501 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Jolyyn___e56da3b5-55c6-478b-85cb-8caf6f8d1501","layers":{"empty":false},"total_elevation":7}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Jolyyn___e56da3b5-55c6-478b-85cb-8caf6f8d1501 into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Aoyij___1e9358ea-96d6-4824-8940-1af167423b20 on to {"row":6,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Aoyij___1e9358ea-96d6-4824-8940-1af167423b20","layers":{"empty":false},"total_elevation":8}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Aoyij___1e9358ea-96d6-4824-8940-1af167423b20 into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb","layers":{"empty":false},"total_elevation":10}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63","layers":{"empty":false},"total_elevation":8}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63 into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0","layers":{"empty":false},"total_elevation":7}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0 into queue
+[2025-06-01 11:35:00] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Iaeke___7a017fd7-938e-4e54-af13-22be01c9f158 on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Iaeke___7a017fd7-938e-4e54-af13-22be01c9f158","layers":{"empty":false},"total_elevation":8}.
+[2025-06-01 11:35:00] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Iaeke___7a017fd7-938e-4e54-af13-22be01c9f158 into queue
+[2025-06-01 11:35:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-01 11:35:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-01 11:35:00] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-01 11:35:00] [INFO] [FontPool] Started initializing FontPool
+[2025-06-01 11:35:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-01 11:35:00] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-01 11:35:01] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:01] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-01 11:35:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-01 11:35:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:01] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-01 11:35:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-01 11:35:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.48636412620544434 seconds
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:01] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-01 11:35:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:01] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-01 11:35:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:02] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Lona is planning to use air_attack on ROW_4___COLUMN_12___259b4f31-6d15-4018-9a73-f69c101ff05b
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Updated area of sight for Lona, viewing 9 tiles
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Updated line of sight for Lona, viewing 3 tiles
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Updated area of sight for Lona, viewing 1 tiles
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Started constructing cost mappings for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Checking cost requirements for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Lona is able to pay for air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Started constructing cost mappings for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Paying cost requirements for Lona using air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Used from air_attack on ROW_4___COLUMN_12___259b4f31-6d15-4018-9a73-f69c101ff05b
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lona
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Lona lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lona
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iaeke
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iaeke
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-06-01 11:35:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lona to use air_attack
+[2025-06-01 11:35:02] [INFO] [CombatSystem] Started dealing damage with air_attack to Iaeke 
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:03] [INFO] [MovementSystem] Updated movement range to 8 for Lona
+[2025-06-01 11:35:03] [INFO] [MovementSystem] Updated movement path from [2, 12] to [2, 10] for Lona
+[2025-06-01 11:35:03] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb on to {"row":2,"column":10,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb","layers":{"empty":false},"total_elevation":10}.
+[2025-06-01 11:35:03] [INFO] [MovementSystem] Moved from [2, 12] to [2, 10]
+[2025-06-01 11:35:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lona___c023ff58-246c-499a-86a6-5f401d97c7fb
+[2025-06-01 11:35:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Lona
+[2025-06-01 11:35:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_10___224ab603-236b-43fa-976d-587b97694128
+[2025-06-01 11:35:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_10___224ab603-236b-43fa-976d-587b97694128
+[2025-06-01 11:35:04] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_10___224ab603-236b-43fa-976d-587b97694128
+[2025-06-01 11:35:04] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_10___224ab603-236b-43fa-976d-587b97694128
+[2025-06-01 11:35:04] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63
+[2025-06-01 11:35:04] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63
+[2025-06-01 11:35:04] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-01 11:35:04] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-01 11:35:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:04] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63
+[2025-06-01 11:35:04] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63
+[2025-06-01 11:35:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Sados
+[2025-06-01 11:35:04] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_11___6fdd5990-de20-4c06-91dc-60cf041d94ac
+[2025-06-01 11:35:04] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_11___6fdd5990-de20-4c06-91dc-60cf041d94ac
+[2025-06-01 11:35:05] [INFO] [MovementSystem] Updated movement range to 8 for Sados
+[2025-06-01 11:35:05] [INFO] [MovementSystem] Updated movement path from [8, 11] to [7, 12] for Sados
+[2025-06-01 11:35:05] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63 on to {"row":7,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Sados___9e98db82-3552-4ce0-9c00-fbe599126a63","layers":{"empty":false},"total_elevation":7}.
+[2025-06-01 11:35:05] [INFO] [MovementSystem] Moved from [8, 11] to [7, 12]
+[2025-06-01 11:35:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Sados
+[2025-06-01 11:35:05] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_12___33396350-71af-4355-af70-bdcf89c85dcd
+[2025-06-01 11:35:05] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_12___33396350-71af-4355-af70-bdcf89c85dcd
+[2025-06-01 11:35:06] [INFO] [AbilitySystem] Sados is planning to use blunt_attack on ROW_6___COLUMN_12___c3b957b7-2829-4b95-a809-89f9b413c3ad
+[2025-06-01 11:35:06] [INFO] [AbilitySystem] Updated area of sight for Sados, viewing 4 tiles
+[2025-06-01 11:35:06] [INFO] [AbilitySystem] Updated line of sight for Sados, viewing 2 tiles
+[2025-06-01 11:35:06] [INFO] [AbilitySystem] Updated area of sight for Sados, viewing 1 tiles
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Started constructing cost mappings for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Finished constructing cost mappings for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Checking cost requirements for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Sados is able to pay for blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Started constructing cost mappings for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Finished constructing cost mappings for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Paying cost requirements for Sados using blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilitySystem] Used from blunt_attack on ROW_6___COLUMN_12___c3b957b7-2829-4b95-a809-89f9b413c3ad
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sados
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] 20.0 Raw damage before modifiers for blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Sados lands a CRIT bonus with blunt_attack for 30.0
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] 50.0 damage after modifiers for blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sados
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Aoyij
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] 50.0 Raw damage after defenses for blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Aoyij
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] 41.666664 damage after defenses for blunt_attack
+[2025-06-01 11:35:06] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sados to use blunt_attack
+[2025-06-01 11:35:06] [INFO] [CombatSystem] Started dealing damage with blunt_attack to Aoyij 
+[2025-06-01 11:35:06] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0
+[2025-06-01 11:35:06] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0
+[2025-06-01 11:35:06] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-01 11:35:06] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-01 11:35:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0
+[2025-06-01 11:35:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0
+[2025-06-01 11:35:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Iyicai
+[2025-06-01 11:35:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_12___532a7ef9-1f37-4421-b619-647b4a605648
+[2025-06-01 11:35:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_12___532a7ef9-1f37-4421-b619-647b4a605648
+[2025-06-01 11:35:07] [INFO] [MovementSystem] Updated movement range to 6 for Iyicai
+[2025-06-01 11:35:07] [INFO] [MovementSystem] Updated movement path from [8, 12] to [9, 11] for Iyicai
+[2025-06-01 11:35:07] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0 on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Iyicai___72005905-fad6-41ff-aece-db763d3f50c0","layers":{"empty":false},"total_elevation":8}.
+[2025-06-01 11:35:07] [INFO] [MovementSystem] Moved from [8, 12] to [9, 11]
+[2025-06-01 11:35:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Iyicai
+[2025-06-01 11:35:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_11___3420bb83-ec42-493f-add9-0bf389a7188a
+[2025-06-01 11:35:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_9___COLUMN_11___3420bb83-ec42-493f-add9-0bf389a7188a
+[2025-06-01 11:35:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-01 11:35:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-01 11:35:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-01 11:35:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Jimojj
+[2025-06-01 11:35:08] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___e320c2ab-3d90-42cc-963c-abb2bc505da6
+[2025-06-01 11:35:08] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_0___e320c2ab-3d90-42cc-963c-abb2bc505da6
+[2025-06-01 11:35:10] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___e320c2ab-3d90-42cc-963c-abb2bc505da6
+[2025-06-01 11:35:10] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-01 11:35:11] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement range to 7 for Jimojj
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 2] for Jimojj
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement range to 7 for Jimojj
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 2] for Jimojj
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 1] for Jimojj
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 1] for Jimojj
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 1] for Jimojj
+[2025-06-01 11:35:11] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 1] for Jimojj
+[2025-06-01 11:35:12] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 2] for Jimojj
+[2025-06-01 11:35:12] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 2] for Jimojj
+[2025-06-01 11:35:12] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 1] for Jimojj
+[2025-06-01 11:35:12] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 1] for Jimojj
+[2025-06-01 11:35:13] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e","layers":{"empty":false},"total_elevation":8}.
+[2025-06-01 11:35:13] [INFO] [MovementSystem] Moved from [8, 0] to [8, 1]
+[2025-06-01 11:35:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-01 11:35:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Jimojj
+[2025-06-01 11:35:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_1___7a393792-a35c-43fc-9d86-09d7a9e43370
+[2025-06-01 11:35:13] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_1___7a393792-a35c-43fc-9d86-09d7a9e43370
+[2025-06-01 11:35:15] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_1___7a393792-a35c-43fc-9d86-09d7a9e43370
+[2025-06-01 11:35:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [AbilityPanel] Selecting water_attack
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Jimojj is planning to use water_attack on null
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated area of sight for Jimojj, viewing 11 tiles
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated line of sight for Jimojj, viewing 0 tiles
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated area of sight for Jimojj, viewing 0 tiles
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Jimojj is planning to use water_attack on ROW_9___COLUMN_4___a038d89a-1648-4b89-8012-0653344b508b
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated line of sight for Jimojj, viewing 3 tiles
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated area of sight for Jimojj, viewing 1 tiles
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Jimojj is planning to use water_attack on ROW_8___COLUMN_3___25e521b0-c4c7-4a49-9eba-345f76d12077
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated line of sight for Jimojj, viewing 3 tiles
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated area of sight for Jimojj, viewing 1 tiles
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Jimojj is planning to use water_attack on ROW_7___COLUMN_2___ec38d6a4-68ca-4abc-ac96-abd9818fe679
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated line of sight for Jimojj, viewing 3 tiles
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated area of sight for Jimojj, viewing 1 tiles
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Jimojj is planning to use water_attack on ROW_7___COLUMN_1___308527c5-8380-412e-b749-bd644810a9ac
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated line of sight for Jimojj, viewing 2 tiles
+[2025-06-01 11:35:16] [INFO] [AbilitySystem] Updated area of sight for Jimojj, viewing 1 tiles
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:17] [INFO] [AbilitySystem] Jimojj is planning to use water_attack on ROW_6___COLUMN_1___93972472-9a78-48fb-9378-f928cde83037
+[2025-06-01 11:35:17] [INFO] [AbilitySystem] Updated line of sight for Jimojj, viewing 3 tiles
+[2025-06-01 11:35:17] [INFO] [AbilitySystem] Updated area of sight for Jimojj, viewing 1 tiles
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Jimojj lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Jolyyn defends with Same-Type-Defense-Bonus from water_attack for 15.4
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for water_attack
+[2025-06-01 11:35:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:17] [INFO] [CombatSystem] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [CombatSystem] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Checking cost requirements for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Jimojj is able to pay for water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Paying cost requirements for Jimojj using water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilitySystem] Used from water_attack on ROW_6___COLUMN_1___93972472-9a78-48fb-9378-f928cde83037
+[2025-06-01 11:35:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:18] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:18] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-01 11:35:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-01 11:35:18] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:18] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Jimojj___b660f599-810f-40b3-9e15-566e1a5d016e
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Started constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Finished constructing cost mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Jimojj lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Jolyyn defends with Same-Type-Defense-Bonus from water_attack for 15.4
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [CombatSystem] Started dealing damage with water_attack to Jolyyn 
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Jimojj lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Jolyyn defends with Same-Type-Defense-Bonus from water_attack for 15.4
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Jimojj lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Jimojj
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Jolyyn defends with Same-Type-Defense-Bonus from water_attack for 15.4
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jolyyn
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for water_attack
+[2025-06-01 11:35:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Jimojj to use water_attack
+[2025-06-01 11:35:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-01 11:35:18] [INFO] [AbilitySystem] Finished update updating {} because of ability

@@ -1,0 +1,1432 @@
+[2025-05-01 00:12:27] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-01 00:12:27] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-01 00:12:27] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-01 00:12:27] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-01 00:12:27] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-01 00:12:27] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-01 00:12:27] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-01 00:12:27] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-01 00:12:27] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-01 00:12:27] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-01 00:12:27] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-01 00:12:27] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-01 00:12:27] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-01 00:12:27] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-01 00:12:27] [INFO] [Component] Setting earth_dragon_Neluu_0b7c6044-a6a7-4716-bdd7-bcad5eda71a0 on to {"row":3,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Neluu_0b7c6044-a6a7-4716-bdd7-bcad5eda71a0","structure":""}.
+[2025-05-01 00:12:27] [INFO] [SpeedQueue] Added unit enemy:Neluu into queue
+[2025-05-01 00:12:27] [INFO] [Component] Setting light_dragon_Iiky_8c593fdc-6366-4d99-be11-c13fdc8e85af on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Iiky_8c593fdc-6366-4d99-be11-c13fdc8e85af","structure":""}.
+[2025-05-01 00:12:27] [INFO] [SpeedQueue] Added unit enemy:Iiky into queue
+[2025-05-01 00:12:27] [INFO] [Component] Setting water_dragon_Cajgyo_12c5a19c-6a13-437d-9fb5-dc6be5d30b85 on to {"row":0,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Cajgyo_12c5a19c-6a13-437d-9fb5-dc6be5d30b85","structure":""}.
+[2025-05-01 00:12:27] [INFO] [SpeedQueue] Added unit enemy:Cajgyo into queue
+[2025-05-01 00:12:27] [INFO] [Component] Setting light_dragon_Born_8355847d-f5ec-43a6-9ada-99b000fff055 on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Born_8355847d-f5ec-43a6-9ada-99b000fff055","structure":""}.
+[2025-05-01 00:12:27] [INFO] [SpeedQueue] Added unit user:Born into queue
+[2025-05-01 00:12:27] [INFO] [Component] Setting earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be on to {"row":7,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be","structure":""}.
+[2025-05-01 00:12:27] [INFO] [SpeedQueue] Added unit user:Eawvi into queue
+[2025-05-01 00:12:27] [INFO] [Component] Setting air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e","structure":""}.
+[2025-05-01 00:12:27] [INFO] [SpeedQueue] Added unit user:Rokot into queue
+[2025-05-01 00:12:27] [INFO] [Component] Setting fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75 on to {"row":2,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75","structure":""}.
+[2025-05-01 00:12:27] [INFO] [SpeedQueue] Added unit user:Silyud into queue
+[2025-05-01 00:12:27] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-01 00:12:27] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-01 00:12:27] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-01 00:12:27] [INFO] [FontPool] Started initializing FontPool
+[2025-05-01 00:12:27] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-01 00:12:27] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-01 00:12:28] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-01 00:12:28] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-01 00:12:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-01 00:12:28] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-01 00:12:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:12:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:12:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:12:28] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 00:12:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-01 00:12:29] [INFO] [VisualsSystem] Finished creating blurred background after 0.4930483102798462 seconds
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:12:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:12:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:12:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:30] [INFO] [MovementSystem] Updated movement range to 11 for Rokot
+[2025-05-01 00:12:30] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Rokot
+[2025-05-01 00:12:30] [INFO] [Component] Setting air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e","structure":""}.
+[2025-05-01 00:12:30] [INFO] [MovementSystem] Moved from [5, 1] to [5, 2]
+[2025-05-01 00:12:30] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:30] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Rokot_205c4e54-afcc-4e6a-8094-ce920b51816e
+[2025-05-01 00:12:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:12:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Rokot
+[2025-05-01 00:12:30] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_341d6525-9121-4ce4-9ff2-608a32c55559
+[2025-05-01 00:12:30] [INFO] [InputHandler] Gliding 1 camera to new tile 5_2_341d6525-9121-4ce4-9ff2-608a32c55559
+[2025-05-01 00:12:31] [INFO] [AbilitySystem] Rokot is planning to use air_attack on [7, 2]
+[2025-05-01 00:12:31] [INFO] [AbilitySystem] Updated area of sight for Rokot, viewing 10 tiles
+[2025-05-01 00:12:31] [INFO] [AbilitySystem] Updated line of sight for Rokot, viewing 3 tiles
+[2025-05-01 00:12:31] [INFO] [AbilitySystem] Updated area of effect for Rokot viewing 1 tiles
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Started constructing cost mappings for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Finished constructing cost mappings for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Checking cost requirements for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Rokot is able to pay for air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Started constructing cost mappings for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Finished constructing cost mappings for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Paying cost requirements for Rokot using air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-01 00:12:31] [INFO] [AbilitySystem] Used from air_attack on [7, 2]
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Started constructing damage mappings for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Rokot
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Rokot lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Rokot
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eawvi
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eawvi
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-01 00:12:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Rokot to use air_attack
+[2025-05-01 00:12:31] [INFO] [CombatSystem] Started dealing damage with air_attack to Eawvi 
+[2025-05-01 00:12:31] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75
+[2025-05-01 00:12:31] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75
+[2025-05-01 00:12:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:12:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:12:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:31] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75
+[2025-05-01 00:12:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75
+[2025-05-01 00:12:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:12:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Silyud
+[2025-05-01 00:12:31] [INFO] [InputHandler] Gliding 0 camera to new tile 2_2_1946dcec-c62f-4e79-9173-7aa30a39ccea
+[2025-05-01 00:12:31] [INFO] [InputHandler] Gliding 1 camera to new tile 2_2_1946dcec-c62f-4e79-9173-7aa30a39ccea
+[2025-05-01 00:12:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:12:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:12:33] [INFO] [MovementSystem] Updated movement range to 8 for Silyud
+[2025-05-01 00:12:33] [INFO] [MovementSystem] Updated movement path from [2, 2] to [3, 3] for Silyud
+[2025-05-01 00:12:33] [INFO] [Component] Setting fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75 on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Silyud_95e05071-630c-4da3-85f8-726b8356ed75","structure":""}.
+[2025-05-01 00:12:33] [INFO] [MovementSystem] Moved from [2, 2] to [3, 3]
+[2025-05-01 00:12:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:12:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Silyud
+[2025-05-01 00:12:33] [INFO] [InputHandler] Gliding 0 camera to new tile 3_3_af96ac1d-903b-4793-ab6d-039990d9479d
+[2025-05-01 00:12:33] [INFO] [InputHandler] Gliding 1 camera to new tile 3_3_af96ac1d-903b-4793-ab6d-039990d9479d
+[2025-05-01 00:12:33] [INFO] [InputHandler] Gliding 0 camera to new tile 3_3_af96ac1d-903b-4793-ab6d-039990d9479d
+[2025-05-01 00:12:33] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-01 00:12:33] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-01 00:12:34] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be
+[2025-05-01 00:12:34] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be
+[2025-05-01 00:12:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:12:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:12:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be
+[2025-05-01 00:12:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be
+[2025-05-01 00:12:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:12:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Eawvi
+[2025-05-01 00:12:34] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-01 00:12:34] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-01 00:12:34] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_74a7c2c9-418f-4940-a9f4-5931d79f919b
+[2025-05-01 00:12:34] [INFO] [InputHandler] Gliding 1 camera to new tile 7_2_74a7c2c9-418f-4940-a9f4-5931d79f919b
+[2025-05-01 00:12:35] [INFO] [MovementSystem] Updated movement range to 8 for Eawvi
+[2025-05-01 00:12:35] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 0] for Eawvi
+[2025-05-01 00:12:35] [INFO] [Component] Setting earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be on to {"row":7,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Eawvi_70f457e5-d571-4b8b-a650-8b8c8ddf42be","structure":""}.
+[2025-05-01 00:12:35] [INFO] [MovementSystem] Moved from [7, 2] to [7, 0]
+[2025-05-01 00:12:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:12:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Eawvi
+[2025-05-01 00:12:35] [INFO] [InputHandler] Gliding 0 camera to new tile 7_0_84178c0f-4a11-4148-bb79-cfedf34cdcc0
+[2025-05-01 00:12:35] [INFO] [InputHandler] Gliding 1 camera to new tile 7_0_84178c0f-4a11-4148-bb79-cfedf34cdcc0
+[2025-05-01 00:12:35] [INFO] [InputHandler] Gliding 0 camera to new tile 7_0_84178c0f-4a11-4148-bb79-cfedf34cdcc0
+[2025-05-01 00:12:36] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Neluu_0b7c6044-a6a7-4716-bdd7-bcad5eda71a0
+[2025-05-01 00:12:36] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Neluu_0b7c6044-a6a7-4716-bdd7-bcad5eda71a0
+[2025-05-01 00:12:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:12:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:12:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 00:12:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Neluu_0b7c6044-a6a7-4716-bdd7-bcad5eda71a0
+[2025-05-01 00:12:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Neluu_0b7c6044-a6a7-4716-bdd7-bcad5eda71a0
+[2025-05-01 00:12:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:12:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Neluu
+[2025-05-01 00:12:36] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-01 00:12:36] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-01 00:12:36] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_29905043-0074-43a7-8423-ea9108a5c98e
+[2025-05-01 00:12:36] [INFO] [InputHandler] Gliding 1 camera to new tile 3_4_29905043-0074-43a7-8423-ea9108a5c98e
+[2025-05-01 00:12:37] [INFO] [InputHandler] Gliding 0 camera to new tile 3_4_29905043-0074-43a7-8423-ea9108a5c98e
+[2025-05-01 00:12:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:38] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-01 00:12:38] [INFO] [AbilitySystem] Neluu is planning to use oblation on null
+[2025-05-01 00:12:38] [INFO] [AbilitySystem] Updated area of sight for Neluu, viewing 8 tiles
+[2025-05-01 00:12:38] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 0 tiles
+[2025-05-01 00:12:38] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 0 tiles
+[2025-05-01 00:12:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:38] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:38] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:38] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:38] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 7]
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 6]
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 6]
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 5]
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 5]
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 4]
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:39] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Neluu lands a CRIT bonus with oblation for 18.75
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] 31.25 damage after modifiers for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] 31.25 Raw damage after defenses for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for 21.875
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] 8.522728 damage after defenses for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:12:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:42] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 4]
+[2025-05-01 00:12:42] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 1 tiles
+[2025-05-01 00:12:42] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:42] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 3]
+[2025-05-01 00:12:42] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:42] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:12:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:48] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 4]
+[2025-05-01 00:12:48] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 1 tiles
+[2025-05-01 00:12:48] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:48] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 4]
+[2025-05-01 00:12:48] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:48] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:12:48] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:48] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:49] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 4]
+[2025-05-01 00:12:49] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 1 tiles
+[2025-05-01 00:12:49] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:49] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 3]
+[2025-05-01 00:12:49] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:49] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Neluu lands a CRIT bonus with oblation for 18.75
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 31.25 damage after modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 31.25 Raw damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] 28.409092 damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:12:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:55] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 3]
+[2025-05-01 00:12:55] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:55] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:55] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 4]
+[2025-05-01 00:12:55] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:55] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:12:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 4]
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 1 tiles
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 5]
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iiky
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Iiky defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iiky
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iiky
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Iiky defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iiky
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 4]
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 1 tiles
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Neluu lands a CRIT bonus with oblation for 18.75
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 31.25 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 31.25 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 26.041666 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 4]
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:56] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:12:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 4]
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 6]
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Neluu is planning to use oblation on [7, 7]
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Neluu is planning to use oblation on null
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 0 tiles
+[2025-05-01 00:12:58] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 0 tiles
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 7]
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 6]
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 6]
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 5]
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:12:59] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:12:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:00] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 5]
+[2025-05-01 00:13:00] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:00] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:00] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 4]
+[2025-05-01 00:13:00] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:00] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:13:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 4]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 3]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 2]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [2, 2]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 2]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 3]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 3]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 4]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 5]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 6]
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:03] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 6]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 7]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 7]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on null
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 0 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 0 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 7]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [6, 6]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 6]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 5]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [5, 4]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 4]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Born
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Born defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Born
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [4, 3]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 3]
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:04] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:13:04] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:05] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 2]
+[2025-05-01 00:13:05] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:05] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:05] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 3]
+[2025-05-01 00:13:05] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:05] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:13:05] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 2]
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 1]
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 0]
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Neluu is planning to use oblation on [2, 0]
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Neluu is planning to use oblation on null
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 0 tiles
+[2025-05-01 00:13:10] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 0 tiles
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [1, 0]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [2, 0]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [2, 1]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 1]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 2]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [3, 3]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Neluu
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Neluu
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Silyud
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Silyud
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [2, 3]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 3 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [2, 2]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Neluu is planning to use oblation on [2, 1]
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:11] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Neluu is planning to use oblation on [1, 1]
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Neluu is planning to use oblation on [1, 0]
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Neluu is planning to use oblation on [0, 0]
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 2 tiles
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 1 tiles
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Neluu is planning to use oblation on null
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated line of sight for Neluu, viewing 0 tiles
+[2025-05-01 00:13:12] [INFO] [AbilitySystem] Updated area of effect for Neluu viewing 0 tiles
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing damage mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Started constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [CombatSystem] Finished constructing cost mappings for Neluu to use oblation
+[2025-05-01 00:13:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

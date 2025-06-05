@@ -1,0 +1,473 @@
+[2025-05-04 14:24:24] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:24:24] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:24:24] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:24:24] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:24:24] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:24:24] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:24:24] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:24:24] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:24:24] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:24:24] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:24:24] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:24:24] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:24:24] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:24:24] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:24:24] [INFO] [Component] Setting earth_dragon_Ayquay_4a3490df-dbd3-44c0-bd53-27d28355e659 on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Ayquay_4a3490df-dbd3-44c0-bd53-27d28355e659","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit earth_dragon_Ayquay_4a3490df-dbd3-44c0-bd53-27d28355e659 into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting water_dragon_Iiraoe_422e97b6-88c3-4b43-a546-43e158fa64e1 on to {"row":3,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Iiraoe_422e97b6-88c3-4b43-a546-43e158fa64e1","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit water_dragon_Iiraoe_422e97b6-88c3-4b43-a546-43e158fa64e1 into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035 on to {"row":6,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035 into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting fire_dragon_Tyzpuc_0086b75d-9369-4bbc-aaa4-6fff6561a59d on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Tyzpuc_0086b75d-9369-4bbc-aaa4-6fff6561a59d","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit fire_dragon_Tyzpuc_0086b75d-9369-4bbc-aaa4-6fff6561a59d into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting water_dragon_Nyiu_1898e9ab-c9fc-4c4c-88cc-b7b5709a8492 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Nyiu_1898e9ab-c9fc-4c4c-88cc-b7b5709a8492","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit water_dragon_Nyiu_1898e9ab-c9fc-4c4c-88cc-b7b5709a8492 into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting water_dragon_Qabey_6f2aef8d-09ae-4855-a9c1-5327de7a3dc2 on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Qabey_6f2aef8d-09ae-4855-a9c1-5327de7a3dc2","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit water_dragon_Qabey_6f2aef8d-09ae-4855-a9c1-5327de7a3dc2 into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366 on to {"row":6,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366 into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8 on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8 into queue
+[2025-05-04 14:24:24] [INFO] [Component] Setting water_dragon_Layjea_1accc884-af5c-4182-8a89-ef33807ef67f on to {"row":5,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Layjea_1accc884-af5c-4182-8a89-ef33807ef67f","structure":""}.
+[2025-05-04 14:24:24] [INFO] [SpeedQueue] Added unit water_dragon_Layjea_1accc884-af5c-4182-8a89-ef33807ef67f into queue
+[2025-05-04 14:24:24] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:24:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:24:25] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:24:25] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:24:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:24:25] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:24:25] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:24:25] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:24:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:24:25] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:25] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:24:25] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:25] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:24:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:24:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:24:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:24:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:24:25] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:24:25] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:24:26] [INFO] [VisualsSystem] Finished creating blurred background after 0.48728105425834656 seconds
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:26] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:24:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:26] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:24:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:26] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:24:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:24:27] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_5859f150-4918-4bad-b1ec-753f1ca4ef4e
+[2025-05-04 14:24:27] [INFO] [InputHandler] Gliding 1 camera to new tile 6_0_5859f150-4918-4bad-b1ec-753f1ca4ef4e
+[2025-05-04 14:24:27] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:27] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Ceiyca_13430b2d-acf7-4f08-a980-622675590035
+[2025-05-04 14:24:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:24:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Ceiyca
+[2025-05-04 14:24:28] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_5859f150-4918-4bad-b1ec-753f1ca4ef4e
+[2025-05-04 14:24:28] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:28] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:28] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-04 14:24:28] [INFO] [AbilitySystem] Ceiyca is planning to use air_attack on null
+[2025-05-04 14:24:28] [INFO] [AbilitySystem] Updated area of sight for Ceiyca, viewing 5 tiles
+[2025-05-04 14:24:28] [INFO] [AbilitySystem] Updated line of sight for Ceiyca, viewing 0 tiles
+[2025-05-04 14:24:28] [INFO] [AbilitySystem] Updated area of effect for Ceiyca viewing 0 tiles
+[2025-05-04 14:24:28] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:28] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:28] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:28] [INFO] [CombatSystem] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:28] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:28] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:28] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:28] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Ceiyca is planning to use air_attack on [7, 3]
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated line of sight for Ceiyca, viewing 2 tiles
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated area of effect for Ceiyca viewing 1 tiles
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Ceiyca is planning to use air_attack on [6, 3]
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated line of sight for Ceiyca, viewing 2 tiles
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated area of effect for Ceiyca viewing 1 tiles
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Ceiyca is planning to use air_attack on [6, 2]
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated line of sight for Ceiyca, viewing 2 tiles
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated area of effect for Ceiyca viewing 1 tiles
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Ceiyca is planning to use air_attack on [6, 1]
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated line of sight for Ceiyca, viewing 2 tiles
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated area of effect for Ceiyca viewing 1 tiles
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Ceiyca lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Tyzpuc
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Tyzpuc
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Ceiyca is planning to use air_attack on [5, 1]
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated line of sight for Ceiyca, viewing 2 tiles
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated area of effect for Ceiyca viewing 1 tiles
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Ceiyca is planning to use air_attack on [5, 0]
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated line of sight for Ceiyca, viewing 2 tiles
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Updated area of effect for Ceiyca viewing 1 tiles
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Ceiyca lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Ayquay
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Ayquay
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Checking cost requirements for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Ceiyca is able to pay for air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Finished constructing cost mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Paying cost requirements for Ceiyca using air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Used from air_attack on [5, 0]
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Ceiyca lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Ayquay
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Ayquay
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [CombatSystem] Started dealing damage with air_attack to Ayquay 
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Ceiyca lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Ceiyca
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Ayquay
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Ayquay
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:24:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Ceiyca to use air_attack
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:24:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:08] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Tyzpuc_0086b75d-9369-4bbc-aaa4-6fff6561a59d
+[2025-05-04 14:27:08] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Tyzpuc_0086b75d-9369-4bbc-aaa4-6fff6561a59d
+[2025-05-04 14:27:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Tyzpuc_0086b75d-9369-4bbc-aaa4-6fff6561a59d
+[2025-05-04 14:27:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Tyzpuc_0086b75d-9369-4bbc-aaa4-6fff6561a59d
+[2025-05-04 14:27:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Tyzpuc
+[2025-05-04 14:27:08] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_595e1dea-a465-437c-8d82-b98e778f98cf
+[2025-05-04 14:27:08] [INFO] [InputHandler] Gliding 1 camera to new tile 6_1_595e1dea-a465-437c-8d82-b98e778f98cf
+[2025-05-04 14:27:10] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:10] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:10] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:10] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Ouwu
+[2025-05-04 14:27:10] [INFO] [InputHandler] Gliding 0 camera to new tile 3_11_6ca31fc4-cc88-4634-8ab3-52383426fbc5
+[2025-05-04 14:27:10] [INFO] [InputHandler] Gliding 1 camera to new tile 3_11_6ca31fc4-cc88-4634-8ab3-52383426fbc5
+[2025-05-04 14:27:11] [INFO] [MovementSystem] Updated movement range to 7 for Ouwu
+[2025-05-04 14:27:11] [INFO] [MovementSystem] Updated movement path from [3, 11] to [4, 10] for Ouwu
+[2025-05-04 14:27:11] [INFO] [Component] Setting dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8 on to {"row":4,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8","structure":""}.
+[2025-05-04 14:27:11] [INFO] [MovementSystem] Moved from [3, 11] to [4, 10]
+[2025-05-04 14:27:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Ouwu
+[2025-05-04 14:27:11] [INFO] [InputHandler] Gliding 0 camera to new tile 4_10_a959645b-66b4-4085-a458-aeb3832b2ea8
+[2025-05-04 14:27:11] [INFO] [InputHandler] Gliding 1 camera to new tile 4_10_a959645b-66b4-4085-a458-aeb3832b2ea8
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Ouwu is planning to use pierce_attack on [4, 11]
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Updated area of sight for Ouwu, viewing 5 tiles
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Updated line of sight for Ouwu, viewing 2 tiles
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Updated area of effect for Ouwu viewing 1 tiles
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Started constructing cost mappings for Ouwu to use pierce_attack
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Finished constructing cost mappings for Ouwu to use pierce_attack
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Checking cost requirements for Ouwu to use pierce_attack
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Ouwu is able to pay for pierce_attack
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Started constructing cost mappings for Ouwu to use pierce_attack
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Finished constructing cost mappings for Ouwu to use pierce_attack
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Paying cost requirements for Ouwu using pierce_attack
+[2025-05-04 14:27:12] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use pierce_attack
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Used from pierce_attack on [4, 11]
+[2025-05-04 14:27:12] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:12] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:12] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:12] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Ouwu_11896a86-7466-4b32-b177-751d37de17d8
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:27:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ouwu to use pierce_attack
+[2025-05-04 14:27:12] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:12] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:12] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:12] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Dugnw
+[2025-05-04 14:27:12] [INFO] [InputHandler] Gliding 0 camera to new tile 6_11_66214f2f-051a-43f5-81d0-2f8562875e62
+[2025-05-04 14:27:12] [INFO] [InputHandler] Gliding 1 camera to new tile 6_11_66214f2f-051a-43f5-81d0-2f8562875e62
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Dugnw is planning to use blunt_attack on [5, 11]
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Updated area of sight for Dugnw, viewing 4 tiles
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Updated line of sight for Dugnw, viewing 2 tiles
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Updated area of effect for Dugnw viewing 1 tiles
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Started constructing cost mappings for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Finished constructing cost mappings for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Checking cost requirements for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Dugnw is able to pay for blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Started constructing cost mappings for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Finished constructing cost mappings for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Paying cost requirements for Dugnw using blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Used from blunt_attack on [5, 11]
+[2025-05-04 14:27:13] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:13] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Dugnw
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] 20.0 Raw damage before modifiers for blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] 20.0 damage after modifiers for blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Dugnw
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Layjea
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] 20.0 Raw damage after defenses for blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Layjea
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] 18.181818 damage after defenses for blunt_attack
+[2025-05-04 14:27:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Dugnw to use blunt_attack
+[2025-05-04 14:27:13] [INFO] [CombatSystem] Started dealing damage with blunt_attack to Layjea 
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:27:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:14] [INFO] [MovementSystem] Updated movement range to 5 for Dugnw
+[2025-05-04 14:27:14] [INFO] [MovementSystem] Updated movement path from [6, 11] to [6, 9] for Dugnw
+[2025-05-04 14:27:14] [INFO] [Component] Setting earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366 on to {"row":6,"column":9,"height":0,"collider":"","unit":"earth_dragon_Dugnw_c3ee581a-2e73-4cb7-a70f-027880c4d366","structure":""}.
+[2025-05-04 14:27:14] [INFO] [MovementSystem] Moved from [6, 11] to [6, 9]
+[2025-05-04 14:27:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Dugnw
+[2025-05-04 14:27:14] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_ab5fa046-524b-4188-802c-e74151b5d812
+[2025-05-04 14:27:14] [INFO] [InputHandler] Gliding 1 camera to new tile 6_9_ab5fa046-524b-4188-802c-e74151b5d812
+[2025-05-04 14:27:15] [INFO] [AbilityPanel] Updating ability selection for dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:15] [INFO] [AbilityPanel] Finished ability selection for dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:15] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:15] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:15] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:15] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Kylw
+[2025-05-04 14:27:15] [INFO] [InputHandler] Gliding 0 camera to new tile 4_11_fc81e8be-a81b-4e35-8bdc-86d6eceaf335
+[2025-05-04 14:27:15] [INFO] [InputHandler] Gliding 1 camera to new tile 4_11_fc81e8be-a81b-4e35-8bdc-86d6eceaf335
+[2025-05-04 14:27:16] [INFO] [AbilitySystem] Kylw is planning to use pierce_attack on [4, 10]
+[2025-05-04 14:27:16] [INFO] [AbilitySystem] Updated area of sight for Kylw, viewing 4 tiles
+[2025-05-04 14:27:16] [INFO] [AbilitySystem] Updated line of sight for Kylw, viewing 2 tiles
+[2025-05-04 14:27:16] [INFO] [AbilitySystem] Updated area of effect for Kylw viewing 1 tiles
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Started constructing cost mappings for Kylw to use pierce_attack
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Finished constructing cost mappings for Kylw to use pierce_attack
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Checking cost requirements for Kylw to use pierce_attack
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Kylw is able to pay for pierce_attack
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Started constructing cost mappings for Kylw to use pierce_attack
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Finished constructing cost mappings for Kylw to use pierce_attack
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Paying cost requirements for Kylw using pierce_attack
+[2025-05-04 14:27:16] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use pierce_attack
+[2025-05-04 14:27:16] [INFO] [AbilitySystem] Used from pierce_attack on [4, 10]
+[2025-05-04 14:27:16] [INFO] [AbilityPanel] Updating ability selection for dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:16] [INFO] [AbilityPanel] Finished ability selection for dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:16] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:16] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a
+[2025-05-04 14:27:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:27:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:27:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Kylw to use pierce_attack
+[2025-05-04 14:27:17] [INFO] [MovementSystem] Updated movement range to 4 for Kylw
+[2025-05-04 14:27:17] [INFO] [MovementSystem] Updated movement path from [4, 11] to [3, 11] for Kylw
+[2025-05-04 14:27:17] [INFO] [Component] Setting dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Kylw_9035f9f1-ce51-4fba-bd83-722cf4c8681a","structure":""}.
+[2025-05-04 14:27:17] [INFO] [MovementSystem] Moved from [4, 11] to [3, 11]
+[2025-05-04 14:27:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Kylw
+[2025-05-04 14:27:17] [INFO] [InputHandler] Gliding 0 camera to new tile 3_11_6ca31fc4-cc88-4634-8ab3-52383426fbc5
+[2025-05-04 14:27:17] [INFO] [InputHandler] Gliding 1 camera to new tile 3_11_6ca31fc4-cc88-4634-8ab3-52383426fbc5
+[2025-05-04 14:27:17] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Qabey_6f2aef8d-09ae-4855-a9c1-5327de7a3dc2
+[2025-05-04 14:27:17] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Qabey_6f2aef8d-09ae-4855-a9c1-5327de7a3dc2
+[2025-05-04 14:27:17] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:17] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:17] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Qabey_6f2aef8d-09ae-4855-a9c1-5327de7a3dc2
+[2025-05-04 14:27:17] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Qabey_6f2aef8d-09ae-4855-a9c1-5327de7a3dc2
+[2025-05-04 14:27:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Qabey
+[2025-05-04 14:27:17] [INFO] [InputHandler] Gliding 0 camera to new tile 7_10_675704e1-0323-49e9-ade2-1ad579d4d256
+[2025-05-04 14:27:17] [INFO] [InputHandler] Gliding 1 camera to new tile 7_10_675704e1-0323-49e9-ade2-1ad579d4d256
+[2025-05-04 14:27:18] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Nyiu_1898e9ab-c9fc-4c4c-88cc-b7b5709a8492
+[2025-05-04 14:27:18] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Nyiu_1898e9ab-c9fc-4c4c-88cc-b7b5709a8492
+[2025-05-04 14:27:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:27:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:27:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:27:18] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Nyiu_1898e9ab-c9fc-4c4c-88cc-b7b5709a8492
+[2025-05-04 14:27:18] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Nyiu_1898e9ab-c9fc-4c4c-88cc-b7b5709a8492
+[2025-05-04 14:27:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:27:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Nyiu
+[2025-05-04 14:27:18] [INFO] [InputHandler] Gliding 0 camera to new tile 2_0_b52a27a6-3b50-4607-8248-b0aa2bfcb213
+[2025-05-04 14:27:18] [INFO] [InputHandler] Gliding 1 camera to new tile 2_0_b52a27a6-3b50-4607-8248-b0aa2bfcb213

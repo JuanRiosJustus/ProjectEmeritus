@@ -1,0 +1,129 @@
+[2025-04-28 02:55:59] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 02:55:59] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 02:56:00] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 02:56:00] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 02:56:00] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 02:56:00] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 02:56:00] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 02:56:00] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 02:56:00] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 02:56:00] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 02:56:00] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 02:56:00] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 02:56:00] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 02:56:00] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 02:56:00] [INFO] [Component] Setting water_dragon_Kubeqn_e6e39260-1d71-4355-8781-5f92a17bcef8 on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Kubeqn_e6e39260-1d71-4355-8781-5f92a17bcef8","structure":""}.
+[2025-04-28 02:56:00] [INFO] [SpeedQueue] Added unit enemy:Kubeqn into queue
+[2025-04-28 02:56:00] [INFO] [Component] Setting fire_dragon_Jyuavu_72fb959a-8ff6-480c-a9ea-5a06ae95c9f7 on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Jyuavu_72fb959a-8ff6-480c-a9ea-5a06ae95c9f7","structure":""}.
+[2025-04-28 02:56:00] [INFO] [SpeedQueue] Added unit enemy:Jyuavu into queue
+[2025-04-28 02:56:00] [INFO] [Component] Setting light_dragon_Yyxazz_235c0b89-0dd9-4088-9884-2f1fcc4ddb65 on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Yyxazz_235c0b89-0dd9-4088-9884-2f1fcc4ddb65","structure":""}.
+[2025-04-28 02:56:00] [INFO] [SpeedQueue] Added unit enemy:Yyxazz into queue
+[2025-04-28 02:56:00] [INFO] [Component] Setting earth_dragon_Zescd_5e98e6b8-9a03-4ceb-9877-8b987958d93b on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Zescd_5e98e6b8-9a03-4ceb-9877-8b987958d93b","structure":""}.
+[2025-04-28 02:56:00] [INFO] [SpeedQueue] Added unit enemy:Zescd into queue
+[2025-04-28 02:56:00] [INFO] [Component] Setting earth_dragon_Yaaty_97852fd4-2b4d-4810-b653-872bb3eb2b3c on to {"row":0,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Yaaty_97852fd4-2b4d-4810-b653-872bb3eb2b3c","structure":""}.
+[2025-04-28 02:56:00] [INFO] [SpeedQueue] Added unit user:Yaaty into queue
+[2025-04-28 02:56:00] [INFO] [Component] Setting fire_dragon_Vamog_1d9885a9-9e5d-41f2-8168-15a6b0d8c098 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Vamog_1d9885a9-9e5d-41f2-8168-15a6b0d8c098","structure":""}.
+[2025-04-28 02:56:00] [INFO] [SpeedQueue] Added unit user:Vamog into queue
+[2025-04-28 02:56:00] [INFO] [Component] Setting dragon_Zuzeg_a5589cf0-35cb-4e09-8780-242efc4ce70c on to {"row":0,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Zuzeg_a5589cf0-35cb-4e09-8780-242efc4ce70c","structure":""}.
+[2025-04-28 02:56:00] [INFO] [SpeedQueue] Added unit user:Zuzeg into queue
+[2025-04-28 02:56:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 02:56:00] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 02:56:00] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:56:00] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 02:56:00] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 02:56:00] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 02:56:00] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 02:56:00] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:56:00] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 02:56:00] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 02:56:01] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Vamog_1d9885a9-9e5d-41f2-8168-15a6b0d8c098
+[2025-04-28 02:56:01] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Vamog_1d9885a9-9e5d-41f2-8168-15a6b0d8c098
+[2025-04-28 02:56:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:56:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:56:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 02:56:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 02:56:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 02:56:01] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 02:56:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 02:56:01] [INFO] [VisualsSystem] Finished creating blurred background after 0.4959544837474823 seconds
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Vamog_1d9885a9-9e5d-41f2-8168-15a6b0d8c098
+[2025-04-28 02:56:01] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Vamog_1d9885a9-9e5d-41f2-8168-15a6b0d8c098
+[2025-04-28 02:56:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:56:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:02] [INFO] [AbilitySystem] Vamog is planning to use oblation on [0, 4]
+[2025-04-28 02:56:02] [INFO] [AbilitySystem] Updated area of sight for Vamog, viewing 7 tiles
+[2025-04-28 02:56:02] [INFO] [AbilitySystem] Updated line of sight for Vamog, viewing 2 tiles
+[2025-04-28 02:56:02] [INFO] [AbilitySystem] Updated area of effect for Vamog viewing 1 tiles
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Started constructing cost mappings for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Finished constructing cost mappings for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Checking cost requirements for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Vamog is able to pay for oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Started constructing cost mappings for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Finished constructing cost mappings for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Paying cost requirements for Vamog using oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-28 02:56:02] [INFO] [AbilitySystem] Used from oblation on [0, 4]
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vamog
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vamog
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yyxazz
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Yyxazz defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yyxazz
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vamog
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vamog
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yyxazz
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Yyxazz defends with Same-Type-Defense-Bonus from oblation for -2.8
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yyxazz
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] -1.0909091 damage after defenses for oblation
+[2025-04-28 02:56:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vamog to use oblation
+[2025-04-28 02:56:02] [INFO] [CombatSystem] Started dealing damage with oblation to Yyxazz 
+[2025-04-28 02:56:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:03] [INFO] [AbilitySystem] Finished update updating {} because of ability

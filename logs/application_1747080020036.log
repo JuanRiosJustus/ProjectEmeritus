@@ -1,0 +1,49 @@
+[2025-05-12 16:00:20] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-12 16:00:20] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-12 16:00:20] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-12 16:00:20] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-12 16:00:20] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-12 16:00:20] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-12 16:00:20] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-12 16:00:20] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-12 16:00:20] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-12 16:00:20] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-12 16:00:20] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-12 16:00:20] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-12 16:00:20] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-12 16:00:20] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-12 16:00:20] [INFO] [Component] Setting light_dragon_Wesg_c854b459-073e-4a62-b510-b3a797e20299 on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Wesg_c854b459-073e-4a62-b510-b3a797e20299","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit light_dragon_Wesg_c854b459-073e-4a62-b510-b3a797e20299 into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting light_dragon_Lypqai_40b0e654-b3a3-4e87-ace4-76a13f9ffb24 on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Lypqai_40b0e654-b3a3-4e87-ace4-76a13f9ffb24","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit light_dragon_Lypqai_40b0e654-b3a3-4e87-ace4-76a13f9ffb24 into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting water_dragon_Xeykbs_e551632b-8a15-4dcc-b268-89e0fdedc7a5 on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Xeykbs_e551632b-8a15-4dcc-b268-89e0fdedc7a5","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit water_dragon_Xeykbs_e551632b-8a15-4dcc-b268-89e0fdedc7a5 into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting air_dragon_Tiwvy_d1805660-ee7e-4e15-8451-281c2c18c21f on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Tiwvy_d1805660-ee7e-4e15-8451-281c2c18c21f","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit air_dragon_Tiwvy_d1805660-ee7e-4e15-8451-281c2c18c21f into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting air_dragon_Typiu_915b2555-9acd-440f-8ccc-233f8e518ab1 on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Typiu_915b2555-9acd-440f-8ccc-233f8e518ab1","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit air_dragon_Typiu_915b2555-9acd-440f-8ccc-233f8e518ab1 into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting earth_dragon_Dalyk_68004c1c-9f70-491a-827a-12d3f310567d on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Dalyk_68004c1c-9f70-491a-827a-12d3f310567d","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit earth_dragon_Dalyk_68004c1c-9f70-491a-827a-12d3f310567d into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting water_dragon_Iexi_0e8f2107-c019-433e-88fe-317640359165 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Iexi_0e8f2107-c019-433e-88fe-317640359165","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit water_dragon_Iexi_0e8f2107-c019-433e-88fe-317640359165 into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting dark_dragon_Meyfo_958dea94-defb-4ece-8e2c-56b26804fe4f on to {"row":2,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Meyfo_958dea94-defb-4ece-8e2c-56b26804fe4f","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit dark_dragon_Meyfo_958dea94-defb-4ece-8e2c-56b26804fe4f into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting earth_dragon_Oocs_9d09596b-f876-45f9-ba93-531ff76710ea on to {"row":6,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Oocs_9d09596b-f876-45f9-ba93-531ff76710ea","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit earth_dragon_Oocs_9d09596b-f876-45f9-ba93-531ff76710ea into queue
+[2025-05-12 16:00:20] [INFO] [Component] Setting dark_dragon_Viboy_a1dca9aa-d37b-4fb4-b05d-26c830e80c50 on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Viboy_a1dca9aa-d37b-4fb4-b05d-26c830e80c50","structure":""}.
+[2025-05-12 16:00:20] [INFO] [SpeedQueue] Added unit dark_dragon_Viboy_a1dca9aa-d37b-4fb4-b05d-26c830e80c50 into queue
+[2025-05-12 16:00:20] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-12 16:00:20] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-12 16:00:20] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-12 16:00:20] [INFO] [FontPool] Started initializing FontPool
+[2025-05-12 16:00:20] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-12 16:00:20] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-12 16:00:20] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-12 16:00:20] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-12 16:00:20] [INFO] [InputHandler] Gliding 0 camera to new tile 10_12_69641f18-8281-42ea-8a60-c7e853c5691b
+[2025-05-12 16:00:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-12 16:00:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-12 16:00:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:00:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-12 16:00:21] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-12 16:00:21] [INFO] [VisualsSystem] Finished creating blurred background after 0.48522821068763733 seconds

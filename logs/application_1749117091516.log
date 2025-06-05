@@ -1,0 +1,235 @@
+[2025-06-05 02:51:31] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 02:51:31] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 02:51:31] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 02:51:31] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 02:51:31] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 02:51:31] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 02:51:31] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 02:51:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 02:51:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 02:51:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 02:51:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 02:51:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 02:51:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 02:51:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Qyfg___b7c76e22-0eb9-48e7-8620-8eb1d0ae587d on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Qyfg___b7c76e22-0eb9-48e7-8620-8eb1d0ae587d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Qyfg___b7c76e22-0eb9-48e7-8620-8eb1d0ae587d into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286 on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286 into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Louano___e06942ea-9d83-4854-906d-132457842c3d on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Louano___e06942ea-9d83-4854-906d-132457842c3d","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Louano___e06942ea-9d83-4854-906d-132457842c3d into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Tydub___3662a215-fb9e-4e4e-9c6e-d39fecf5ef2c on to {"row":9,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Tydub___3662a215-fb9e-4e4e-9c6e-d39fecf5ef2c","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Tydub___3662a215-fb9e-4e4e-9c6e-d39fecf5ef2c into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Wasdao___2ec0999e-37dd-4702-9b02-ee7c4e649412 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Wasdao___2ec0999e-37dd-4702-9b02-ee7c4e649412","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Wasdao___2ec0999e-37dd-4702-9b02-ee7c4e649412 into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Jedaih___d22e9532-7d29-40d5-b3e1-45ddf1d0d532 on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Jedaih___d22e9532-7d29-40d5-b3e1-45ddf1d0d532","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Jedaih___d22e9532-7d29-40d5-b3e1-45ddf1d0d532 into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Wievle___fb9558d3-9ae5-467e-9cea-238133612cb7 on to {"row":1,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Wievle___fb9558d3-9ae5-467e-9cea-238133612cb7","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Wievle___fb9558d3-9ae5-467e-9cea-238133612cb7 into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Ciluq___982e817e-d513-4369-ad71-c8944628b83f on to {"row":9,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Ciluq___982e817e-d513-4369-ad71-c8944628b83f","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Ciluq___982e817e-d513-4369-ad71-c8944628b83f into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Mafgy___8ee5f629-40df-4f1a-828b-98f24ca99dd8 on to {"row":7,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Mafgy___8ee5f629-40df-4f1a-828b-98f24ca99dd8","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Mafgy___8ee5f629-40df-4f1a-828b-98f24ca99dd8 into queue
+[2025-06-05 02:51:31] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Hohe___8abb85d8-5dee-464f-9256-1b97c1a5020d on to {"row":3,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Hohe___8abb85d8-5dee-464f-9256-1b97c1a5020d","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:51:31] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Hohe___8abb85d8-5dee-464f-9256-1b97c1a5020d into queue
+[2025-06-05 02:51:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 02:51:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 02:51:32] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 02:51:32] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 02:51:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 02:51:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 02:51:32] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 02:51:32] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286
+[2025-06-05 02:51:32] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286
+[2025-06-05 02:51:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:51:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:51:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:51:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:51:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:51:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 02:51:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 02:51:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.48392534255981445 seconds
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286
+[2025-06-05 02:51:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286
+[2025-06-05 02:51:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:51:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:51:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:51:34] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_0___4ed73ddf-b7dc-46da-9c43-e5da447f7e76
+[2025-06-05 02:51:34] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:51:34] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_6___COLUMN_10___bccff2da-a5ce-41d2-aaed-2ddc9a857d1e
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 17 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_6___COLUMN_9___c0918561-cd28-44e6-b74b-af37a2e07ab9
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 17 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_6___COLUMN_9___c0918561-cd28-44e6-b74b-af37a2e07ab9
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 18 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_7___COLUMN_9___5acf20c7-b3cf-481d-8a46-6f761a05b721
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 18 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_7___COLUMN_9___5acf20c7-b3cf-481d-8a46-6f761a05b721
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 17 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_7___COLUMN_8___9672ec8c-ff68-4832-8c6a-4657ee5cd5fa
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 17 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_7___COLUMN_8___9672ec8c-ff68-4832-8c6a-4657ee5cd5fa
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 18 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_8___93411dd9-24ce-452c-8299-afb3f6067f10
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 18 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_8___93411dd9-24ce-452c-8299-afb3f6067f10
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_7___8378be44-0e18-4735-8292-0f643122b890
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_7___8378be44-0e18-4735-8292-0f643122b890
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_7___5941fbd9-6f16-4d8a-8a97-4cc5ebf42f7e
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_7___5941fbd9-6f16-4d8a-8a97-4cc5ebf42f7e
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_6___36805dd3-0313-4523-9225-d40d238c3cfe
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:34] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_6___36805dd3-0313-4523-9225-d40d238c3cfe
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 8 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_0___COLUMN_0___1593b652-9a29-4674-91d2-b217ba889c21
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 8 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_0___COLUMN_0___1593b652-9a29-4674-91d2-b217ba889c21
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_4___4cc9f1aa-ee33-4d22-be9e-8b02166c30f3
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_4___4cc9f1aa-ee33-4d22-be9e-8b02166c30f3
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 6 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_3___d4d17dc3-3a31-44dd-88d4-c1a0d74b70dc
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 6 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_3___d4d17dc3-3a31-44dd-88d4-c1a0d74b70dc
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_2___11800f4a-0c52-45ce-812c-d8d069bb8b0e
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 0 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_9___COLUMN_2___11800f4a-0c52-45ce-812c-d8d069bb8b0e
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 4 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_2___d6bbb36a-db55-4a58-9bdd-3b938abffbdb
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 4 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_2___d6bbb36a-db55-4a58-9bdd-3b938abffbdb
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 3 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_1___79715d3b-289a-443b-a050-f26a58bd3d36
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 3 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_1___79715d3b-289a-443b-a050-f26a58bd3d36
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 5 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 3 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_1___79715d3b-289a-443b-a050-f26a58bd3d36
+[2025-06-05 02:51:35] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286 on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:51:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286
+[2025-06-05 02:51:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Fatuo___2f308f8d-06e0-493c-bde6-e9f7a8fd3286
+[2025-06-05 02:51:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:51:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Fatuo
+[2025-06-05 02:51:35] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_1___79715d3b-289a-443b-a050-f26a58bd3d36
+[2025-06-05 02:51:35] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_1___79715d3b-289a-443b-a050-f26a58bd3d36
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated range for Fatuo, 7 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated path for Fatuo, 1 tiles
+[2025-06-05 02:51:35] [INFO] [GameModel] Updated target tile Fatuo, ROW_8___COLUMN_1___79715d3b-289a-443b-a050-f26a58bd3d36
+[2025-06-05 02:51:37] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Wievle___fb9558d3-9ae5-467e-9cea-238133612cb7
+[2025-06-05 02:51:37] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Wievle___fb9558d3-9ae5-467e-9cea-238133612cb7
+[2025-06-05 02:51:37] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:51:37] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:51:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:51:37] [INFO] [TimeLinePanel] Finished updating the timeline p

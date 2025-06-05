@@ -1,0 +1,348 @@
+[2025-04-29 21:50:27] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-29 21:50:27] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-29 21:50:27] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-29 21:50:27] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-29 21:50:27] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-29 21:50:27] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-29 21:50:27] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-29 21:50:27] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-29 21:50:27] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-29 21:50:27] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-29 21:50:27] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-29 21:50:27] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-29 21:50:27] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-29 21:50:27] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-29 21:50:27] [INFO] [Component] Setting light_dragon_Fuslth_3da7181b-0706-4b46-a9b5-4e592656a3df on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Fuslth_3da7181b-0706-4b46-a9b5-4e592656a3df","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit enemy:Fuslth into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting water_dragon_Wolwy_9405f027-e8b6-4afc-8812-2ff0633998ff on to {"row":1,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Wolwy_9405f027-e8b6-4afc-8812-2ff0633998ff","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit enemy:Wolwy into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting water_dragon_Yaie_91e8b9bb-c318-4cc2-93be-3b0d102da0bd on to {"row":2,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Yaie_91e8b9bb-c318-4cc2-93be-3b0d102da0bd","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit enemy:Yaie into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8 on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit enemy:Oedccg into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting fire_dragon_Sawyq_683f75e2-1259-4de8-849e-a15a8eda3362 on to {"row":4,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Sawyq_683f75e2-1259-4de8-849e-a15a8eda3362","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit enemy:Sawyq into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting fire_dragon_Cagatu_33eba141-d8c5-4d7e-b5de-dfdb4bbf3c0b on to {"row":0,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Cagatu_33eba141-d8c5-4d7e-b5de-dfdb4bbf3c0b","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit user:Cagatu into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting fire_dragon_Tovke_ef3618f7-c75a-4bb3-8dd6-ac03427a78e1 on to {"row":5,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Tovke_ef3618f7-c75a-4bb3-8dd6-ac03427a78e1","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit user:Tovke into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting fire_dragon_Kiumi_b6e77639-4623-4e03-a131-19b833ee1d2b on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Kiumi_b6e77639-4623-4e03-a131-19b833ee1d2b","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit user:Kiumi into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting water_dragon_Hydoi_5c406edd-b20c-4cd0-8ed1-be36d998d35b on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Hydoi_5c406edd-b20c-4cd0-8ed1-be36d998d35b","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit user:Hydoi into queue
+[2025-04-29 21:50:27] [INFO] [Component] Setting air_dragon_Vunsye_6181444c-562c-46ca-86f0-5d15469d7d17 on to {"row":6,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Vunsye_6181444c-562c-46ca-86f0-5d15469d7d17","structure":""}.
+[2025-04-29 21:50:27] [INFO] [SpeedQueue] Added unit user:Vunsye into queue
+[2025-04-29 21:50:27] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-29 21:50:27] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-29 21:50:27] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-29 21:50:27] [INFO] [FontPool] Started initializing FontPool
+[2025-04-29 21:50:27] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-29 21:50:27] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-29 21:50:28] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-29 21:50:28] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-29 21:50:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-29 21:50:28] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-29 21:50:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-29 21:50:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-29 21:50:28] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-29 21:50:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-29 21:50:28] [INFO] [VisualsSystem] Finished creating blurred background after 0.48894914984703064 seconds
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:38] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_468dd365-601e-4698-a7e1-63d58867a7cc
+[2025-04-29 21:50:38] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-29 21:50:38] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement range to 9 for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 7] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement range to 9 for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 7] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 7] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 7] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 6] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 6] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 7] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 7] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 6] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 6] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 6] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 6] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 5] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 5] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 4] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 4] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 4] for Oedccg
+[2025-04-29 21:50:38] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 4] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 3] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 3] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 3] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 3] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Oedccg
+[2025-04-29 21:50:39] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Oedccg
+[2025-04-29 21:50:40] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 1] for Oedccg
+[2025-04-29 21:50:40] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 1] for Oedccg
+[2025-04-29 21:50:40] [INFO] [Component] Setting air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8","structure":""}.
+[2025-04-29 21:50:40] [INFO] [MovementSystem] Moved from [2, 1] to [3, 1]
+[2025-04-29 21:50:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Oedccg_c3cd37ec-7112-4c56-ae7f-0e8ad55afbf8
+[2025-04-29 21:50:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-29 21:50:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Oedccg
+[2025-04-29 21:50:40] [INFO] [InputHandler] Gliding 0 camera to new tile 3_1_9289e2e7-9f03-4a44-b8d7-04ab17759e86
+[2025-04-29 21:50:40] [INFO] [InputHandler] Gliding 1 camera to new tile 3_1_9289e2e7-9f03-4a44-b8d7-04ab17759e86
+[2025-04-29 21:50:41] [INFO] [InputHandler] Gliding 0 camera to new tile 3_1_9289e2e7-9f03-4a44-b8d7-04ab17759e86
+[2025-04-29 21:50:41] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:41] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilityPanel] Selecting air_attack
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [5, 6]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of sight for Oedccg, viewing 12 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 7 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [6, 5]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 5 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [5, 4]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 5 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [5, 3]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 5 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Oedccg lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Tovke
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Tovke
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [5, 2]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 4 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [4, 2]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 3 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [4, 1]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 2 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Oedccg is planning to use air_attack on [4, 0]
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated line of sight for Oedccg, viewing 3 tiles
+[2025-04-29 21:50:42] [INFO] [AbilitySystem] Updated area of effect for Oedccg viewing 1 tiles
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Oedccg lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Sawyq
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Sawyq
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-29 21:50:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Checking cost requirements for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Oedccg is able to pay for air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Started constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Finished constructing cost mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Paying cost requirements for Oedccg using air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilitySystem] Used from air_attack on [4, 0]
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Oedccg lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Sawyq
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Sawyq
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [CombatSystem] Started dealing damage with air_attack to Sawyq 
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Oedccg lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Sawyq
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Sawyq
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Oedccg lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Oedccg
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Sawyq
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Sawyq
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-29 21:50:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Oedccg to use air_attack
+[2025-04-29 21:50:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-29 21:50:43] [INFO] [AbilitySystem] Finished update updating {} because of ability

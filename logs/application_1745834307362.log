@@ -1,0 +1,95 @@
+[2025-04-28 02:58:27] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 02:58:27] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 02:58:27] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 02:58:27] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 02:58:27] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 02:58:27] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 02:58:27] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 02:58:27] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 02:58:27] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 02:58:27] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 02:58:27] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 02:58:27] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 02:58:27] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 02:58:27] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 02:58:27] [INFO] [Component] Setting light_dragon_Sann_0ca436a1-b1a8-4ddf-be46-d80640223eda on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Sann_0ca436a1-b1a8-4ddf-be46-d80640223eda","structure":""}.
+[2025-04-28 02:58:27] [INFO] [SpeedQueue] Added unit enemy:Sann into queue
+[2025-04-28 02:58:27] [INFO] [Component] Setting dragon_Tatuju_fc5dba9a-eb19-461d-a9da-44e36d153f34 on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Tatuju_fc5dba9a-eb19-461d-a9da-44e36d153f34","structure":""}.
+[2025-04-28 02:58:27] [INFO] [SpeedQueue] Added unit enemy:Tatuju into queue
+[2025-04-28 02:58:27] [INFO] [Component] Setting air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae","structure":""}.
+[2025-04-28 02:58:27] [INFO] [SpeedQueue] Added unit enemy:Eoey into queue
+[2025-04-28 02:58:27] [INFO] [Component] Setting earth_dragon_Jydgy_dbf18092-2136-4f7f-a4ed-b7751c7f7511 on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Jydgy_dbf18092-2136-4f7f-a4ed-b7751c7f7511","structure":""}.
+[2025-04-28 02:58:27] [INFO] [SpeedQueue] Added unit user:Jydgy into queue
+[2025-04-28 02:58:27] [INFO] [Component] Setting dark_dragon_Xigubl_d3220f9b-a2bb-45b1-84dd-1d3fc577abf9 on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Xigubl_d3220f9b-a2bb-45b1-84dd-1d3fc577abf9","structure":""}.
+[2025-04-28 02:58:27] [INFO] [SpeedQueue] Added unit user:Xigubl into queue
+[2025-04-28 02:58:27] [INFO] [Component] Setting dragon_Xuofo_5debaade-bdfa-40d4-aa48-96bcfda2bfd3 on to {"row":5,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Xuofo_5debaade-bdfa-40d4-aa48-96bcfda2bfd3","structure":""}.
+[2025-04-28 02:58:27] [INFO] [SpeedQueue] Added unit user:Xuofo into queue
+[2025-04-28 02:58:27] [INFO] [Component] Setting dragon_Ziyu_59d47ef5-09af-48f0-b219-06d9710308e6 on to {"row":4,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Ziyu_59d47ef5-09af-48f0-b219-06d9710308e6","structure":""}.
+[2025-04-28 02:58:27] [INFO] [SpeedQueue] Added unit user:Ziyu into queue
+[2025-04-28 02:58:27] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 02:58:27] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 02:58:27] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:58:27] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 02:58:27] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 02:58:28] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 02:58:28] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 02:58:28] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:58:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 02:58:28] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 02:58:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:58:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:58:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 02:58:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 02:58:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 02:58:28] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 02:58:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 02:58:29] [INFO] [VisualsSystem] Finished creating blurred background after 0.4823891222476959 seconds
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:58:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:58:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:29] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eoey_976012d2-f1a6-4e21-b2a6-ad933e63baae
+[2025-04-28 02:58:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:58:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:58:29] [INFO] [AbilitySystem] Finished update updating {} because of ability

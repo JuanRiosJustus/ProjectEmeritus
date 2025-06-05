@@ -1,0 +1,30 @@
+[2025-06-02 03:47:02] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 03:47:02] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 03:47:02] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 03:47:02] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 03:47:02] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 03:47:02] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 03:47:02] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 03:47:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 03:47:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 03:47:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 03:47:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 03:47:03] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 03:47:03] [INFO] [VisualsSystem] Finished creating blurred background after 0.32187461853027344 seconds
+[2025-06-02 03:47:05] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 03:47:05] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 03:47:05] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 03:47:05] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 03:47:05] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 03:47:05] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Bojrbe___3dfbf10d-2a0a-4773-95a1-b59516aa95e4 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Bojrbe___3dfbf10d-2a0a-4773-95a1-b59516aa95e4","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:47:05] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Bojrbe___3dfbf10d-2a0a-4773-95a1-b59516aa95e4 into queue
+[2025-06-02 03:47:05] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Cuojd___7a38619c-a317-4221-ba85-02be3884ebe8 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Cuojd___7a38619c-a317-4221-ba85-02be3884ebe8","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:47:05] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Cuojd___7a38619c-a317-4221-ba85-02be3884ebe8 into queue
+[2025-06-02 03:47:05] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:47:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:47:05] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:47:05] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 03:47:05] [INFO] [GameModel] Updated area of sight for Bojrbe, viewing 5 tiles
+[2025-06-02 03:47:05] [INFO] [GameModel] Updated line of sight for Bojrbe, viewing 2 tiles
+[2025-06-02 03:47:05] [INFO] [GameModel] Updated area of sight for Bojrbe, viewing 1 tiles
+[2025-06-02 03:47:05] [INFO] [GameModel] Started gathering co

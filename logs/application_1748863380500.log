@@ -1,0 +1,134 @@
+[2025-06-02 04:23:00] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 04:23:00] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 04:23:00] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 04:23:00] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 04:23:00] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 04:23:00] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 04:23:00] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 04:23:00] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-02 04:23:00] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-02 04:23:00] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 04:23:00] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 04:23:00] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 04:23:00] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 04:23:00] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Eyik___7b28c684-9bde-41db-a3cd-e6f47ab1feba on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Eyik___7b28c684-9bde-41db-a3cd-e6f47ab1feba","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Eyik___7b28c684-9bde-41db-a3cd-e6f47ab1feba into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Dyiyyd___4661146d-094c-4098-97d5-9095bc9c96c1 on to {"row":9,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Dyiyyd___4661146d-094c-4098-97d5-9095bc9c96c1","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Dyiyyd___4661146d-094c-4098-97d5-9095bc9c96c1 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Puvib___b103781f-63fd-46c9-88cf-9de2410fd351 on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Puvib___b103781f-63fd-46c9-88cf-9de2410fd351","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Puvib___b103781f-63fd-46c9-88cf-9de2410fd351 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Guve___d4a3d599-0b89-4cf5-abbf-ce4d6dc93388 on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Guve___d4a3d599-0b89-4cf5-abbf-ce4d6dc93388","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Guve___d4a3d599-0b89-4cf5-abbf-ce4d6dc93388 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Sijms___be27fab2-0738-4413-b0ad-4f3d4e9c91d7 on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Sijms___be27fab2-0738-4413-b0ad-4f3d4e9c91d7","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Sijms___be27fab2-0738-4413-b0ad-4f3d4e9c91d7 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Pypcnv___2145bf55-6b62-428b-8017-e64fcf439c11 on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Pypcnv___2145bf55-6b62-428b-8017-e64fcf439c11","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Pypcnv___2145bf55-6b62-428b-8017-e64fcf439c11 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Eyxidu___6e63f1c9-96af-43c0-9edf-d5de5470a902 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Eyxidu___6e63f1c9-96af-43c0-9edf-d5de5470a902","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Eyxidu___6e63f1c9-96af-43c0-9edf-d5de5470a902 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Cebiu___39217995-09a0-49f6-9c3b-8bba71d828a0 on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Cebiu___39217995-09a0-49f6-9c3b-8bba71d828a0","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Cebiu___39217995-09a0-49f6-9c3b-8bba71d828a0 into queue
+[2025-06-02 04:23:00] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Toay___eca2e5de-e9a5-41d7-ac75-3b3288af51d2 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Toay___eca2e5de-e9a5-41d7-ac75-3b3288af51d2","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 04:23:00] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Toay___eca2e5de-e9a5-41d7-ac75-3b3288af51d2 into queue
+[2025-06-02 04:23:00] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-02 04:23:01] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-02 04:23:01] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-02 04:23:01] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 04:23:01] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 04:23:01] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:01] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 04:23:01] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:01] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 04:23:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 04:23:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 04:23:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 04:23:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 04:23:01] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 04:23:01] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 04:23:02] [INFO] [VisualsSystem] Finished creating blurred background after 0.4854467511177063 seconds
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:02] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:02] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 04:23:02] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:02] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:02] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 04:23:02] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:23:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:23:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_0___5ceb191f-90e2-49c2-824e-7742da391e54
+[2025-06-02 04:23:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_0___5ceb191f-90e2-49c2-824e-7742da391e54
+[2025-06-02 04:23:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Syoujx___4ac95ad9-68dc-4904-aa88-799e3a2e86b4
+[2025-06-02 04:23:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 04:23:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Syoujx
+[2025-06-02 04:23:04] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_0___5ceb191f-90e2-49c2-824e-7742da391e54
+[2025-06-02 04:23:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 04:23:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 04:23:05] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-02 04:23:05] [INFO] [GameModel] Updated area of sight for Syoujx, viewing 4 tiles
+[2025-06-02 04:23:05] [INFO] [GameModel] Updated line of sight for Syoujx, viewing 7 tiles
+[2025-06-02 04:23:05] [INFO] [GameModel] Updated area of sight for Syoujx, viewing 1 tiles
+[2025-06-02 04:23:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 04:23:05] [INFO] [CombatSystem] Started constructing damage mappings for Syoujx to use test_slash

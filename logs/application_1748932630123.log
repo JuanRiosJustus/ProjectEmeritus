@@ -1,0 +1,193 @@
+[2025-06-02 23:37:10] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 23:37:10] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 23:37:10] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 23:37:10] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 23:37:10] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 23:37:10] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 23:37:10] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 23:37:10] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-02 23:37:10] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-02 23:37:10] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 23:37:10] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 23:37:10] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 23:37:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 23:37:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2 on to {"row":9,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2 into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Eiuuo___4ef64712-a0fa-4a3a-9c8a-9732b23acc3e on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Eiuuo___4ef64712-a0fa-4a3a-9c8a-9732b23acc3e","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Eiuuo___4ef64712-a0fa-4a3a-9c8a-9732b23acc3e into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Kipy___228d62f2-d658-449e-848d-3c6658316ab2 on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Kipy___228d62f2-d658-449e-848d-3c6658316ab2","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Kipy___228d62f2-d658-449e-848d-3c6658316ab2 into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Dateio___e0eb6494-6b3c-4bbd-ab53-1978b4d6cf73 on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Dateio___e0eb6494-6b3c-4bbd-ab53-1978b4d6cf73","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Dateio___e0eb6494-6b3c-4bbd-ab53-1978b4d6cf73 into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Uehya___0aecb176-4c6f-4938-86e9-f56c81d1be4a on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Uehya___0aecb176-4c6f-4938-86e9-f56c81d1be4a","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Uehya___0aecb176-4c6f-4938-86e9-f56c81d1be4a into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Muury___3d629362-ba7a-4d59-8fcc-c3fde6fa3390 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Muury___3d629362-ba7a-4d59-8fcc-c3fde6fa3390","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Muury___3d629362-ba7a-4d59-8fcc-c3fde6fa3390 into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Ziopav___55267155-a63a-4a9d-ad7f-796882f470aa on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Ziopav___55267155-a63a-4a9d-ad7f-796882f470aa","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Ziopav___55267155-a63a-4a9d-ad7f-796882f470aa into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Qaefi___bc4369b5-5f52-4fc9-94c6-64791f141bda on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Qaefi___bc4369b5-5f52-4fc9-94c6-64791f141bda","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Qaefi___bc4369b5-5f52-4fc9-94c6-64791f141bda into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Nelu___581596c3-32cd-4713-a311-af2982cf7b8c on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Nelu___581596c3-32cd-4713-a311-af2982cf7b8c","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Nelu___581596c3-32cd-4713-a311-af2982cf7b8c into queue
+[2025-06-02 23:37:10] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Zoot___f4eeebef-19b0-4cea-9a96-005508845fc2 on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Zoot___f4eeebef-19b0-4cea-9a96-005508845fc2","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Zoot___f4eeebef-19b0-4cea-9a96-005508845fc2 into queue
+[2025-06-02 23:37:10] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 23:37:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-02 23:37:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-02 23:37:10] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-02 23:37:10] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 23:37:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 23:37:10] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:37:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:37:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 23:37:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 23:37:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:37:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 23:37:11] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 23:37:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.4788840413093567 seconds
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:37:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:37:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:37:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:37:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_1___296c6a42-118e-4480-a738-991c102a1738
+[2025-06-02 23:37:13] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_9___COLUMN_1___296c6a42-118e-4480-a738-991c102a1738
+[2025-06-02 23:37:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2
+[2025-06-02 23:37:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:37:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Xetori
+[2025-06-02 23:37:14] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_1___296c6a42-118e-4480-a738-991c102a1738
+[2025-06-02 23:37:14] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-02 23:37:14] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-02 23:37:15] [INFO] [MovementSystem] Updated movement range to 4 for Xetori
+[2025-06-02 23:37:15] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 0] for Xetori
+[2025-06-02 23:37:15] [INFO] [MovementSystem] Updated movement range to 4 for Xetori
+[2025-06-02 23:37:15] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 0] for Xetori
+[2025-06-02 23:37:15] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 0] for Xetori
+[2025-06-02 23:37:15] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 0] for Xetori
+[2025-06-02 23:37:16] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 0] for Xetori
+[2025-06-02 23:37:16] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 0] for Xetori
+[2025-06-02 23:37:16] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 1] for Xetori
+[2025-06-02 23:37:16] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 1] for Xetori
+[2025-06-02 23:37:18] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_1___296c6a42-118e-4480-a738-991c102a1738
+[2025-06-02 23:37:20] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 0] for Xetori
+[2025-06-02 23:37:20] [INFO] [MovementSystem] Updated movement path from [9, 1] to [9, 0] for Xetori
+[2025-06-02 23:37:20] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 0] for Xetori
+[2025-06-02 23:37:20] [INFO] [MovementSystem] Updated movement path from [9, 1] to [8, 0] for Xetori
+[2025-06-02 23:37:21] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2 on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Xetori___3df1d134-6f31-4aaa-a164-d6e7d2b6e2b2","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:37:21] [INFO] [MovementSystem] Moved from [9, 1] to [8, 0]
+[2025-06-02 23:37:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:37:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Xetori
+[2025-06-02 23:37:21] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___0d40a440-64e2-456b-a279-20b16fbf9260
+[2025-06-02 23:37:21] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_0___0d40a440-64e2-456b-a279-20b16fbf9260
+[2025-06-02 23:37:22] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___0d40a440-64e2-456b-a279-20b16fbf9260
+[2025-06-02 23:37:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:37:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 2 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 2 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 2 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 2 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 2 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xetori to use test_slash
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated line of sight for Xetori, viewing 2 tiles
+[2025-06-02 23:37:23] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:37:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated line of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xetori to use test_slash
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated line of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:37:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated line of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles
+[2025-06-02 23:37:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:37:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated line of sight for Xetori, viewing 4 tiles
+[2025-06-02 23:37:25] [INFO] [GameModel] Updated area of sight for Xetori, viewing 1 tiles

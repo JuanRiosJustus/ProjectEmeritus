@@ -1,0 +1,592 @@
+[2025-06-02 23:34:46] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 23:34:46] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 23:34:46] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 23:34:46] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 23:34:46] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 23:34:46] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 23:34:46] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 23:34:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-02 23:34:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-02 23:34:46] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 23:34:46] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 23:34:46] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 23:34:47] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 23:34:47] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Kakuyu___7f9ae330-4d2f-4518-ac58-e47a4a2df7dd on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Kakuyu___7f9ae330-4d2f-4518-ac58-e47a4a2df7dd","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Kakuyu___7f9ae330-4d2f-4518-ac58-e47a4a2df7dd into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Qezu___9c291b23-fe70-4c84-964f-570d0c278822 on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Qezu___9c291b23-fe70-4c84-964f-570d0c278822","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Qezu___9c291b23-fe70-4c84-964f-570d0c278822 into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Dujxo___e62310c7-b13f-4ac1-8777-c068042efb97 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Dujxo___e62310c7-b13f-4ac1-8777-c068042efb97","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Dujxo___e62310c7-b13f-4ac1-8777-c068042efb97 into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Yyyumb___095d285a-8f74-4449-8b02-ded25c1f4265 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Yyyumb___095d285a-8f74-4449-8b02-ded25c1f4265","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Yyyumb___095d285a-8f74-4449-8b02-ded25c1f4265 into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Damiv___579b18fe-8aec-4266-8069-cf10bab0b66f on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Damiv___579b18fe-8aec-4266-8069-cf10bab0b66f","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Damiv___579b18fe-8aec-4266-8069-cf10bab0b66f into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Dast___e36273f1-f144-4d4b-9f5e-abfc4c418ff8 on to {"row":3,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Dast___e36273f1-f144-4d4b-9f5e-abfc4c418ff8","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Dast___e36273f1-f144-4d4b-9f5e-abfc4c418ff8 into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Fibhyi___fc1d2faa-e3f8-43a1-ad21-fbca2551b4eb on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Fibhyi___fc1d2faa-e3f8-43a1-ad21-fbca2551b4eb","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Fibhyi___fc1d2faa-e3f8-43a1-ad21-fbca2551b4eb into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Sosuoa___41fab730-7626-47bf-a0d5-25c3742e6dd2 on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Sosuoa___41fab730-7626-47bf-a0d5-25c3742e6dd2","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Sosuoa___41fab730-7626-47bf-a0d5-25c3742e6dd2 into queue
+[2025-06-02 23:34:47] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Mywua___c48536d7-ace7-4c6c-8298-b49b8a446148 on to {"row":1,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Mywua___c48536d7-ace7-4c6c-8298-b49b8a446148","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Mywua___c48536d7-ace7-4c6c-8298-b49b8a446148 into queue
+[2025-06-02 23:34:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 23:34:47] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-02 23:34:47] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-02 23:34:47] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-02 23:34:47] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 23:34:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 23:34:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:47] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb
+[2025-06-02 23:34:47] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb
+[2025-06-02 23:34:47] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:34:47] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:34:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 23:34:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 23:34:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:34:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 23:34:48] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 23:34:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.5009691715240479 seconds
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb
+[2025-06-02 23:34:48] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb
+[2025-06-02 23:34:48] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:34:48] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:34:48] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:34:49] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___617f16a5-1dbe-472b-b085-f5d694ffc62b
+[2025-06-02 23:34:49] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_1___617f16a5-1dbe-472b-b085-f5d694ffc62b
+[2025-06-02 23:34:49] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Yyyumb___095d285a-8f74-4449-8b02-ded25c1f4265
+[2025-06-02 23:34:49] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Yyyumb___095d285a-8f74-4449-8b02-ded25c1f4265
+[2025-06-02 23:34:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:34:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Yyyumb
+[2025-06-02 23:34:51] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___453d5325-1570-46b8-bd5b-25c3796babd0
+[2025-06-02 23:34:51] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-02 23:34:51] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement range to 8 for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [7, 6] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement range to 8 for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [7, 6] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 6] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 6] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 6] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 6] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 5] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 5] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 4] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [9, 4] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 4] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 4] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 3] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 3] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [7, 3] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [7, 3] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [6, 3] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [6, 3] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [6, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [6, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [5, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [5, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [6, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [6, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [7, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [7, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 2] for Xylo
+[2025-06-02 23:34:51] [INFO] [MovementSystem] Updated movement path from [8, 0] to [8, 2] for Xylo
+[2025-06-02 23:34:52] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb on to {"row":8,"column":2,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 23:34:52] [INFO] [MovementSystem] Moved from [8, 0] to [8, 2]
+[2025-06-02 23:34:52] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb
+[2025-06-02 23:34:52] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xylo___9f60ed63-d5e3-4bc2-bc6b-1b3ce493a9fb
+[2025-06-02 23:34:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:34:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Xylo
+[2025-06-02 23:34:52] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_2___b9024804-53a3-42d3-9946-ecb82d6bb3df
+[2025-06-02 23:34:52] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_2___b9024804-53a3-42d3-9946-ecb82d6bb3df
+[2025-06-02 23:34:53] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_2___b9024804-53a3-42d3-9946-ecb82d6bb3df
+[2025-06-02 23:34:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 11 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 11 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:34:54] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:55] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 9 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 9 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:56] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 9 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 9 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:57] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:58] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:58] [INFO] [GameModel] Updated line of sight for Xylo, viewing 11 tiles
+[2025-06-02 23:34:58] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:58] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:58] [INFO] [GameModel] Updated line of sight for Xylo, viewing 11 tiles
+[2025-06-02 23:34:58] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 9 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xylo to use test_slash
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:34:59] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:34:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xylo to use test_slash
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:35:00] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:01] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:01] [INFO] [GameModel] Updated line of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:01] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:01] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:01] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:35:01] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated line of sight for Xylo, viewing 2 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:02] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:03] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:03] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:03] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated line of sight for Xylo, viewing 8 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:04] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:04] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated line of sight for Xylo, viewing 8 tiles
+[2025-06-02 23:35:04] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 4 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated line of sight for Xylo, viewing 11 tiles
+[2025-06-02 23:35:05] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:05] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 3 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 10 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 7 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 6 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated line of sight for Xylo, viewing 5 tiles
+[2025-06-02 23:35:06] [INFO] [GameModel] Updated area of sight for Xylo, viewing 1 tiles
+[2025-06-02 23:35:06] [INFO] [GreaterAbilityPanel] Started updating 

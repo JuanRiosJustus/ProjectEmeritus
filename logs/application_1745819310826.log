@@ -1,0 +1,1336 @@
+[2025-04-27 22:48:30] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-27 22:48:30] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-27 22:48:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-27 22:48:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-27 22:48:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-27 22:48:30] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-27 22:48:30] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-27 22:48:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-27 22:48:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-27 22:48:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-27 22:48:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-27 22:48:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-27 22:48:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-27 22:48:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-27 22:48:31] [INFO] [Component] Setting water_dragon_Tuwuiy_544de8a5-9359-408e-86b2-62aece8ce761 on to {"row":0,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Tuwuiy_544de8a5-9359-408e-86b2-62aece8ce761","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit enemy:Tuwuiy into queue
+[2025-04-27 22:48:31] [INFO] [Component] Setting light_dragon_Lude_a2a2c845-1a0d-41fa-ade2-426a53d94e06 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Lude_a2a2c845-1a0d-41fa-ade2-426a53d94e06","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit enemy:Lude into queue
+[2025-04-27 22:48:31] [INFO] [Component] Setting air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9 on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit enemy:Lijbiq into queue
+[2025-04-27 22:48:31] [INFO] [Component] Setting light_dragon_Noso_f9dc7e35-ebba-4de8-8a3d-90162b0f3056 on to {"row":4,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Noso_f9dc7e35-ebba-4de8-8a3d-90162b0f3056","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit enemy:Noso into queue
+[2025-04-27 22:48:31] [INFO] [Component] Setting earth_dragon_Huauoe_8ddb9fe6-e560-4755-a09d-cfe1b6f91b4c on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Huauoe_8ddb9fe6-e560-4755-a09d-cfe1b6f91b4c","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit user:Huauoe into queue
+[2025-04-27 22:48:31] [INFO] [Component] Setting air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0 on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit user:Fugo into queue
+[2025-04-27 22:48:31] [INFO] [Component] Setting air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f on to {"row":7,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit user:Kydcn into queue
+[2025-04-27 22:48:31] [INFO] [Component] Setting light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a on to {"row":7,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a","structure":""}.
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Added unit user:Reoii into queue
+[2025-04-27 22:48:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-27 22:48:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-27 22:48:31] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-27 22:48:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-27 22:48:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-27 22:48:31] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-27 22:48:31] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-27 22:48:31] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-27 22:48:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-27 22:48:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-27 22:48:31] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:31] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-27 22:48:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-27 22:48:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-27 22:48:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-27 22:48:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.4916057884693146 seconds
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:32] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:32] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:32] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:33] [INFO] [MovementSystem] Updated movement range to 9 for Fugo
+[2025-04-27 22:48:33] [INFO] [MovementSystem] Updated movement path from [6, 6] to [5, 7] for Fugo
+[2025-04-27 22:48:33] [INFO] [Component] Setting air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0 on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0","structure":""}.
+[2025-04-27 22:48:33] [INFO] [MovementSystem] Moved from [6, 6] to [5, 7]
+[2025-04-27 22:48:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Fugo_d84b51d2-42cf-4826-acd9-fcac2ba852e0
+[2025-04-27 22:48:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Fugo
+[2025-04-27 22:48:33] [INFO] [InputHandler] Gliding 0 camera to new tile 5_7_d65a652a-6b0b-4369-8077-0a05fb4bece5
+[2025-04-27 22:48:33] [INFO] [InputHandler] Gliding 1 camera to new tile 5_7_d65a652a-6b0b-4369-8077-0a05fb4bece5
+[2025-04-27 22:48:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:48:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:48:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Lijbiq
+[2025-04-27 22:48:34] [INFO] [AbilitySystem] Fugo is planning to use oblation on [4, 6]
+[2025-04-27 22:48:34] [INFO] [AbilitySystem] Updated area of sight for Fugo, viewing 9 tiles
+[2025-04-27 22:48:34] [INFO] [AbilitySystem] Updated line of sight for Fugo, viewing 3 tiles
+[2025-04-27 22:48:34] [INFO] [AbilitySystem] Updated area of effect for Fugo viewing 1 tiles
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Started constructing cost mappings for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Finished constructing cost mappings for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Checking cost requirements for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Fugo is able to pay for oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Started constructing cost mappings for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Finished constructing cost mappings for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Paying cost requirements for Fugo using oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-27 22:48:34] [INFO] [AbilitySystem] Used from oblation on [4, 6]
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fugo
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fugo
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Noso
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Noso defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Noso
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fugo
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fugo
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Noso
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Noso defends with Same-Type-Defense-Bonus from oblation for -2.8
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Noso
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] -1.0909091 damage after defenses for oblation
+[2025-04-27 22:48:34] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fugo to use oblation
+[2025-04-27 22:48:34] [INFO] [CombatSystem] Started dealing damage with oblation to Noso 
+[2025-04-27 22:48:34] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:34] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-27 22:48:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-27 22:48:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Kydcn
+[2025-04-27 22:48:34] [INFO] [InputHandler] Gliding 0 camera to new tile 7_3_a7c6ead2-8fe6-47b6-9a1f-bebf8d59cedc
+[2025-04-27 22:48:34] [INFO] [InputHandler] Gliding 1 camera to new tile 7_3_a7c6ead2-8fe6-47b6-9a1f-bebf8d59cedc
+[2025-04-27 22:48:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Kydcn is planning to use air_attack on [6, 3]
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Updated area of sight for Kydcn, viewing 6 tiles
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Updated line of sight for Kydcn, viewing 2 tiles
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Updated area of effect for Kydcn viewing 1 tiles
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Started constructing cost mappings for Kydcn to use air_attack
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Finished constructing cost mappings for Kydcn to use air_attack
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Checking cost requirements for Kydcn to use air_attack
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Kydcn is able to pay for air_attack
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Started constructing cost mappings for Kydcn to use air_attack
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Finished constructing cost mappings for Kydcn to use air_attack
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Paying cost requirements for Kydcn using air_attack
+[2025-04-27 22:48:35] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Used from air_attack on [6, 3]
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Kydcn to use air_attack
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Kydcn to use air_attack
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Kydcn to use air_attack
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Kydcn
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Kydcn lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Kydcn
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-04-27 22:48:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Kydcn to use air_attack
+[2025-04-27 22:48:36] [INFO] [CombatSystem] Started dealing damage with air_attack to Huauoe 
+[2025-04-27 22:48:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:48:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:48:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Huauoe_8ddb9fe6-e560-4755-a09d-cfe1b6f91b4c
+[2025-04-27 22:48:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Huauoe_8ddb9fe6-e560-4755-a09d-cfe1b6f91b4c
+[2025-04-27 22:48:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Huauoe
+[2025-04-27 22:48:36] [INFO] [MovementSystem] Updated movement range to 6 for Kydcn
+[2025-04-27 22:48:36] [INFO] [MovementSystem] Updated movement path from [7, 3] to [6, 4] for Kydcn
+[2025-04-27 22:48:36] [INFO] [Component] Setting air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f on to {"row":6,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f","structure":""}.
+[2025-04-27 22:48:36] [INFO] [MovementSystem] Moved from [7, 3] to [6, 4]
+[2025-04-27 22:48:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Kydcn_2cbee04e-e069-4dd8-af8f-6d926457479f
+[2025-04-27 22:48:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Kydcn
+[2025-04-27 22:48:36] [INFO] [InputHandler] Gliding 0 camera to new tile 6_4_419d474a-fce6-4820-8f98-f35f09220a58
+[2025-04-27 22:48:36] [INFO] [InputHandler] Gliding 1 camera to new tile 6_4_419d474a-fce6-4820-8f98-f35f09220a58
+[2025-04-27 22:48:37] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:48:37] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:48:37] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:48:37] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:48:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-27 22:48:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-27 22:48:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:48:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:48:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Lijbiq
+[2025-04-27 22:48:37] [INFO] [InputHandler] Gliding 0 camera to new tile 4_4_342ac0fc-9121-42f9-9c94-69c044b9c79a
+[2025-04-27 22:48:37] [INFO] [InputHandler] Gliding 1 camera to new tile 4_4_342ac0fc-9121-42f9-9c94-69c044b9c79a
+[2025-04-27 22:48:41] [INFO] [InputHandler] Gliding 0 camera to new tile 4_4_342ac0fc-9121-42f9-9c94-69c044b9c79a
+[2025-04-27 22:48:41] [INFO] [InputHandler] Gliding 1 camera to new tile 4_4_342ac0fc-9121-42f9-9c94-69c044b9c79a
+[2025-04-27 22:48:43] [INFO] [InputHandler] Gliding 0 camera to new tile 4_4_342ac0fc-9121-42f9-9c94-69c044b9c79a
+[2025-04-27 22:48:43] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-27 22:48:43] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement range to 10 for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [7, 7] for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement range to 10 for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [7, 7] for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [6, 7] for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [6, 7] for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [6, 6] for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [6, 6] for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [5, 5] for Lijbiq
+[2025-04-27 22:48:43] [INFO] [MovementSystem] Updated movement path from [4, 4] to [5, 5] for Lijbiq
+[2025-04-27 22:48:44] [INFO] [MovementSystem] Updated movement path from [4, 4] to [5, 4] for Lijbiq
+[2025-04-27 22:48:44] [INFO] [MovementSystem] Updated movement path from [4, 4] to [5, 4] for Lijbiq
+[2025-04-27 22:48:45] [INFO] [Component] Setting air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9 on to {"row":5,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9","structure":""}.
+[2025-04-27 22:48:45] [INFO] [MovementSystem] Moved from [4, 4] to [5, 4]
+[2025-04-27 22:48:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:48:45] [INFO] [SelectedTilePanel] Updated selected tile display to view Lijbiq
+[2025-04-27 22:48:45] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:48:45] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:48:45] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:48:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [AbilityPanel] Selecting air_attack
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on null
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated area of sight for Lijbiq, viewing 10 tiles
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 0 tiles
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 0 tiles
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [7, 5]
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [7, 4]
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [7, 3]
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [7, 2]
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:46] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:46] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:47] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 2]
+[2025-04-27 22:48:47] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 3 tiles
+[2025-04-27 22:48:47] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:47] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 3]
+[2025-04-27 22:48:47] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:47] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-04-27 22:48:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 4]
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Kydcn defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [5, 4]
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 1 tiles
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Lijbiq defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [5, 5]
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [4, 5]
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 3 tiles
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [4, 6]
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 4 tiles
+[2025-04-27 22:48:51] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Noso
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Noso
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-27 22:48:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:52] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [5, 5]
+[2025-04-27 22:48:52] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:52] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:52] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:52] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:52] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:52] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [5, 4]
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 1 tiles
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Lijbiq defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 4]
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Kydcn defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 3]
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:53] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-04-27 22:48:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:54] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 4]
+[2025-04-27 22:48:54] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:54] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Kydcn defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-27 22:48:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:54] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:55] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 3]
+[2025-04-27 22:48:55] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:55] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-04-27 22:48:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:55] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 4]
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Lijbiq lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Kydcn defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 5]
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 6]
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 4 tiles
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on [6, 7]
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 5 tiles
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Lijbiq is planning to use air_attack on null
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 0 tiles
+[2025-04-27 22:48:56] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 0 tiles
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use air_attack
+[2025-04-27 22:48:56] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:48:59] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:48:59] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-27 22:48:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on null
+[2025-04-27 22:48:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:48:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:48:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:48:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:48:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:48:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:48:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:48:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [7, 7]
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 6 tiles
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Reoii
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Reoii defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Reoii
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Reoii
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Reoii defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Reoii
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 7]
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 5 tiles
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 6]
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 4 tiles
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [5, 5]
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [5, 4]
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 1 tiles
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 4]
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:49:00] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-27 22:49:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:01] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [5, 4]
+[2025-04-27 22:49:01] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 1 tiles
+[2025-04-27 22:49:01] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-27 22:49:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:01] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:49:02] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 4]
+[2025-04-27 22:49:02] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:49:02] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-27 22:49:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:49:02] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:49:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:58] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 3]
+[2025-04-27 22:50:58] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:50:58] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:58] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 2]
+[2025-04-27 22:50:58] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 3 tiles
+[2025-04-27 22:50:58] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [7, 2]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [7, 3]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 3]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 2]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 3 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 1]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 4 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 2]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 3 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 3]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Huauoe
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 4]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 5]
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:50:59] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:50:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:00] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 4]
+[2025-04-27 22:51:00] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:51:00] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Kydcn
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Kydcn
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-27 22:51:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:00] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:01] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [5, 4]
+[2025-04-27 22:51:01] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 1 tiles
+[2025-04-27 22:51:01] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lijbiq
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:01] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [5, 5]
+[2025-04-27 22:51:01] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 2 tiles
+[2025-04-27 22:51:01] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [5, 6]
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 3 tiles
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 6]
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 4 tiles
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [6, 7]
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 5 tiles
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on [7, 7]
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 6 tiles
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 1 tiles
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Reoii
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Reoii defends with Same-Type-Defense-Bonus from oblation for 8.75
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Reoii
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] 3.409091 damage after defenses for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lijbiq
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Reoii
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Reoii defends with Same-Type-Defense-Bonus from oblation for -3.5
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Reoii
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] -1.3636364 damage after defenses for oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Lijbiq is planning to use oblation on null
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated line of sight for Lijbiq, viewing 0 tiles
+[2025-04-27 22:51:02] [INFO] [AbilitySystem] Updated area of effect for Lijbiq viewing 0 tiles
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing damage mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Started constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [CombatSystem] Finished constructing cost mappings for Lijbiq to use oblation
+[2025-04-27 22:51:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-27 22:51:03] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:51:08] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:51:08] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:51:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-04-27 22:51:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-04-27 22:51:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:51:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-27 22:51:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:51:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-27 22:51:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:51:13] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-27 22:52:33] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:52:33] [INFO] [InputHandler] Gliding 1 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:52:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:52:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lijbiq_1d3be0b0-fb3b-419d-be32-20ce1080fec9
+[2025-04-27 22:52:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:52:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Lijbiq
+[2025-04-27 22:52:35] [INFO] [InputHandler] Gliding 0 camera to new tile 5_4_69ea6ea1-1901-4086-b0f6-0c2a70c4eb1b
+[2025-04-27 22:52:38] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:38] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:52:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:52:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-27 22:52:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-27 22:52:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:52:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Reoii
+[2025-04-27 22:52:38] [INFO] [InputHandler] Gliding 0 camera to new tile 7_7_4664cab6-c627-4050-b39e-febb79b254a2
+[2025-04-27 22:52:38] [INFO] [InputHandler] Gliding 1 camera to new tile 7_7_4664cab6-c627-4050-b39e-febb79b254a2
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Reoii is planning to use light_attack on [5, 7]
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Updated area of sight for Reoii, viewing 6 tiles
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Updated line of sight for Reoii, viewing 3 tiles
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Updated area of effect for Reoii viewing 1 tiles
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Started constructing cost mappings for Reoii to use light_attack
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Finished constructing cost mappings for Reoii to use light_attack
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Checking cost requirements for Reoii to use light_attack
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Reoii is able to pay for light_attack
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Started constructing cost mappings for Reoii to use light_attack
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Finished constructing cost mappings for Reoii to use light_attack
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Paying cost requirements for Reoii using light_attack
+[2025-04-27 22:52:39] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use light_attack
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Used from light_attack on [5, 7]
+[2025-04-27 22:52:39] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:52:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:52:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:52:39] [INFO] [AbilityPanel] Updating ability selection for light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [AbilityPanel] Finished ability selection for light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:52:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:52:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-27 22:52:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Started constructing damage mappings for Reoii to use light_attack
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Reoii to use light_attack
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Reoii to use light_attack
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Reoii
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for light_attack
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Reoii lands a Same-Type-Attack-Bonus with light_attack, for 12.0
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for light_attack
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Reoii
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Fugo
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for light_attack
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Fugo
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] 20.0 damage after defenses for light_attack
+[2025-04-27 22:52:40] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Reoii to use light_attack
+[2025-04-27 22:52:40] [INFO] [CombatSystem] Started dealing damage with light_attack to Fugo 
+[2025-04-27 22:52:40] [INFO] [MovementSystem] Updated movement range to 5 for Reoii
+[2025-04-27 22:52:40] [INFO] [MovementSystem] Updated movement path from [7, 7] to [6, 6] for Reoii
+[2025-04-27 22:52:40] [INFO] [Component] Setting light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Reoii_cd889e8e-a9ad-4610-9de1-afe56c7b143a","structure":""}.
+[2025-04-27 22:52:40] [INFO] [MovementSystem] Moved from [7, 7] to [6, 6]
+[2025-04-27 22:52:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:52:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Reoii
+[2025-04-27 22:52:40] [INFO] [InputHandler] Gliding 0 camera to new tile 6_6_5864b98b-7705-4af7-b031-aced3741cea2
+[2025-04-27 22:52:40] [INFO] [InputHandler] Gliding 1 camera to new tile 6_6_5864b98b-7705-4af7-b031-aced3741cea2
+[2025-04-27 22:52:41] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Tuwuiy_544de8a5-9359-408e-86b2-62aece8ce761
+[2025-04-27 22:52:41] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Tuwuiy_544de8a5-9359-408e-86b2-62aece8ce761
+[2025-04-27 22:52:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-27 22:52:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-27 22:52:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-27 22:52:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-27 22:52:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Tuwuiy_544de8a5-9359-408e-86b2-62aece8ce761
+[2025-04-27 22:52:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Tuwuiy_544de8a5-9359-408e-86b2-62aece8ce761
+[2025-04-27 22:52:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:52:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Tuwuiy
+[2025-04-27 22:52:41] [INFO] [InputHandler] Gliding 0 camera to new tile 0_2_5f50b230-4884-48cb-b628-b7635ee4b446
+[2025-04-27 22:52:41] [INFO] [InputHandler] Gliding 1 camera to new tile 0_2_5f50b230-4884-48cb-b628-b7635ee4b446
+[2025-04-27 22:52:48] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-04-27 22:52:48] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-04-27 22:52:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-27 22:52:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

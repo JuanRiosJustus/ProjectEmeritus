@@ -1,0 +1,149 @@
+[2025-04-28 02:57:33] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 02:57:33] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 02:57:33] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 02:57:34] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 02:57:34] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 02:57:34] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 02:57:34] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 02:57:34] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 02:57:34] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 02:57:34] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 02:57:34] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 02:57:34] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 02:57:34] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 02:57:34] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 02:57:34] [INFO] [Component] Setting light_dragon_Vieh_f05b4021-4aa3-4b48-9f5a-238e2d57c9aa on to {"row":1,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Vieh_f05b4021-4aa3-4b48-9f5a-238e2d57c9aa","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit enemy:Vieh into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting air_dragon_Cefou_ea3427fc-0393-4c88-9585-c48575117029 on to {"row":7,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Cefou_ea3427fc-0393-4c88-9585-c48575117029","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit enemy:Cefou into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting air_dragon_Tunyb_36946b8f-310f-4ce1-a622-7ef92808e6e8 on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Tunyb_36946b8f-310f-4ce1-a622-7ef92808e6e8","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit enemy:Tunyb into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting dark_dragon_Eiliah_35343eb1-787b-46fc-b87a-9787155e2720 on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Eiliah_35343eb1-787b-46fc-b87a-9787155e2720","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit enemy:Eiliah into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting air_dragon_Tugqyo_f188b0d2-f3ca-4ec1-97da-18d88bb27eda on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Tugqyo_f188b0d2-f3ca-4ec1-97da-18d88bb27eda","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit enemy:Tugqyo into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting fire_dragon_Cute_da73f008-4ec6-41fd-a556-78543db88583 on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Cute_da73f008-4ec6-41fd-a556-78543db88583","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit user:Cute into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting air_dragon_Aeyloe_aac0f91c-8bc7-44e1-92f5-b9d1102fa65e on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Aeyloe_aac0f91c-8bc7-44e1-92f5-b9d1102fa65e","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit user:Aeyloe into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting dragon_Cagyw_a8a0ff07-bc0f-41a1-9db3-925afc65ecdd on to {"row":1,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Cagyw_a8a0ff07-bc0f-41a1-9db3-925afc65ecdd","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit user:Cagyw into queue
+[2025-04-28 02:57:34] [INFO] [Component] Setting dragon_Nyrayd_bacee611-a24c-4fbd-b974-59eb4b8259e9 on to {"row":1,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Nyrayd_bacee611-a24c-4fbd-b974-59eb4b8259e9","structure":""}.
+[2025-04-28 02:57:34] [INFO] [SpeedQueue] Added unit user:Nyrayd into queue
+[2025-04-28 02:57:34] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 02:57:34] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 02:57:34] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:57:34] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 02:57:34] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 02:57:34] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 02:57:34] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 02:57:34] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:57:34] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 02:57:34] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 02:57:35] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Cute_da73f008-4ec6-41fd-a556-78543db88583
+[2025-04-28 02:57:35] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Cute_da73f008-4ec6-41fd-a556-78543db88583
+[2025-04-28 02:57:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:57:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:57:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 02:57:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 02:57:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 02:57:35] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 02:57:35] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 02:57:35] [INFO] [VisualsSystem] Finished creating blurred background after 0.49016714096069336 seconds
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Cute_da73f008-4ec6-41fd-a556-78543db88583
+[2025-04-28 02:57:35] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Cute_da73f008-4ec6-41fd-a556-78543db88583
+[2025-04-28 02:57:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:57:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Cute is planning to use oblation on [3, 5]
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Updated area of sight for Cute, viewing 13 tiles
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Updated line of sight for Cute, viewing 3 tiles
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Updated area of effect for Cute viewing 1 tiles
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Started constructing cost mappings for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Finished constructing cost mappings for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Checking cost requirements for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Cute is able to pay for oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Started constructing cost mappings for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Finished constructing cost mappings for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Paying cost requirements for Cute using oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Used from oblation on [3, 5]
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cute
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cute
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eiliah
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eiliah
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cute
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cute
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eiliah
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eiliah
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-28 02:57:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Cute to use oblation
+[2025-04-28 02:57:36] [INFO] [CombatSystem] Started dealing damage with oblation to Eiliah 
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:36] [INFO] [AbilitySystem] Finished update updating {} because of ability

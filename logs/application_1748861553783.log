@@ -1,0 +1,30 @@
+[2025-06-02 03:52:33] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 03:52:33] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 03:52:33] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 03:52:33] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 03:52:33] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 03:52:34] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 03:52:34] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 03:52:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 03:52:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 03:52:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 03:52:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 03:52:34] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 03:52:34] [INFO] [VisualsSystem] Finished creating blurred background after 0.32304444909095764 seconds
+[2025-06-02 03:52:36] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 03:52:36] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 03:52:36] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 03:52:36] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 03:52:36] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 03:52:36] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Mybo___7c69fdf0-7c75-4019-a2fd-1e39fa1c80a0 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_light_dragon___NICKNAME_Mybo___7c69fdf0-7c75-4019-a2fd-1e39fa1c80a0","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:52:36] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Mybo___7c69fdf0-7c75-4019-a2fd-1e39fa1c80a0 into queue
+[2025-06-02 03:52:36] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Keoaey___6ea6c156-6a24-458f-9140-c1797b837b66 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_light_dragon___NICKNAME_Keoaey___6ea6c156-6a24-458f-9140-c1797b837b66","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:52:36] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Keoaey___6ea6c156-6a24-458f-9140-c1797b837b66 into queue
+[2025-06-02 03:52:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:52:36] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:52:36] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:52:36] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 03:52:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:52:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:52:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 03:52:36] [INFO] [AbilityTable] Finishe

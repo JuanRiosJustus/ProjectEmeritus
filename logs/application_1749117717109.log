@@ -1,0 +1,228 @@
+[2025-06-05 03:01:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 03:01:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 03:01:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 03:01:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 03:01:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 03:01:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 03:01:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 03:01:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 03:01:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 03:01:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 03:01:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 03:01:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 03:01:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 03:01:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Kepwyu___ef330906-71d5-48bd-9233-410df9500673 on to {"row":9,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Kepwyu___ef330906-71d5-48bd-9233-410df9500673","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Kepwyu___ef330906-71d5-48bd-9233-410df9500673 into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Sobd___c53a3ab6-0a6d-4ce6-85d7-af13f59ae947 on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Sobd___c53a3ab6-0a6d-4ce6-85d7-af13f59ae947","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Sobd___c53a3ab6-0a6d-4ce6-85d7-af13f59ae947 into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Oevi___59e6f5d1-b592-4137-8962-3dcb64e85322 on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Oevi___59e6f5d1-b592-4137-8962-3dcb64e85322","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Oevi___59e6f5d1-b592-4137-8962-3dcb64e85322 into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Oobe___5d3274d9-9a3b-4db9-99d7-c3c39e0d037d on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Oobe___5d3274d9-9a3b-4db9-99d7-c3c39e0d037d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Oobe___5d3274d9-9a3b-4db9-99d7-c3c39e0d037d into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Yukh___1b2134bd-3e0c-4955-b95d-b6752dc3cbb3 on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Yukh___1b2134bd-3e0c-4955-b95d-b6752dc3cbb3","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Yukh___1b2134bd-3e0c-4955-b95d-b6752dc3cbb3 into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Zeva___058ef452-3001-4399-b420-39ba5bf3f3c3 on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Zeva___058ef452-3001-4399-b420-39ba5bf3f3c3","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Zeva___058ef452-3001-4399-b420-39ba5bf3f3c3 into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Fyziio___c710856d-16d0-4836-80c9-add33335926b on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Fyziio___c710856d-16d0-4836-80c9-add33335926b","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Fyziio___c710856d-16d0-4836-80c9-add33335926b into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Sukko___844efd41-bc8a-4aa2-90df-f0b472240dea on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Sukko___844efd41-bc8a-4aa2-90df-f0b472240dea","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Sukko___844efd41-bc8a-4aa2-90df-f0b472240dea into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Pauem___0885b00a-a5c1-4046-afd6-33226f412680 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Pauem___0885b00a-a5c1-4046-afd6-33226f412680","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Pauem___0885b00a-a5c1-4046-afd6-33226f412680 into queue
+[2025-06-05 03:01:57] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Quyaa___4df6167e-fa4f-481c-99f4-292225e81fb6 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Quyaa___4df6167e-fa4f-481c-99f4-292225e81fb6","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 03:01:57] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Quyaa___4df6167e-fa4f-481c-99f4-292225e81fb6 into queue
+[2025-06-05 03:01:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 03:01:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 03:01:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 03:01:57] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 03:01:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 03:01:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 03:01:58] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 03:01:58] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Kepwyu___ef330906-71d5-48bd-9233-410df9500673
+[2025-06-05 03:01:58] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Kepwyu___ef330906-71d5-48bd-9233-410df9500673
+[2025-06-05 03:01:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 03:01:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 03:01:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 03:01:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 03:01:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 03:01:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 03:01:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 03:01:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.4807942509651184 seconds
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Kepwyu___ef330906-71d5-48bd-9233-410df9500673
+[2025-06-05 03:01:58] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Kepwyu___ef330906-71d5-48bd-9233-410df9500673
+[2025-06-05 03:01:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 03:01:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 03:01:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 03:02:00] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_0___be41ed14-77c4-413c-8907-ee9c291ce4cf
+[2025-06-05 03:02:00] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 03:02:00] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 13 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_6___COLUMN_9___ed4eb140-c34e-460f-8407-7a2e98d4fade
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 14 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_6___COLUMN_8___5b317a05-0d7c-4bbc-9550-cced34e877f2
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 0 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_7___COLUMN_8___558ff72b-1801-4797-9155-5a4455093b52
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 9 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_8___COLUMN_7___ae3a7087-854f-4609-8ef8-8e0e3b3958a4
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 9 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_8___COLUMN_7___ae3a7087-854f-4609-8ef8-8e0e3b3958a4
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 0 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_7___2155d407-4504-4ee6-a8dd-f92e1afb267e
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 0 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_7___2155d407-4504-4ee6-a8dd-f92e1afb267e
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 7 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_6___6816d917-ba5c-4847-a843-784c9cca44c5
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 7 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_6___6816d917-ba5c-4847-a843-784c9cca44c5
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_3___6b4b968f-a93e-4e06-b977-4679135c60ac
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_3___6b4b968f-a93e-4e06-b977-4679135c60ac
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 3 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_2___463b107c-8aa9-49e9-b21c-619e81e2167b
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated path for Kepwyu, 3 tiles
+[2025-06-05 03:02:00] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_2___463b107c-8aa9-49e9-b21c-619e81e2167b
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated path for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_3___6b4b968f-a93e-4e06-b977-4679135c60ac
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated path for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_3___6b4b968f-a93e-4e06-b977-4679135c60ac
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated path for Kepwyu, 5 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_4___ae1942e3-7e1f-4c41-a7f1-625c7268db86
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated path for Kepwyu, 5 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_4___ae1942e3-7e1f-4c41-a7f1-625c7268db86
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:01] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated path for Kepwyu, 1 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_0___be41ed14-77c4-413c-8907-ee9c291ce4cf
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated path for Kepwyu, 1 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated target tile Kepwyu, ROW_9___COLUMN_0___be41ed14-77c4-413c-8907-ee9c291ce4cf
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:02] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:03] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:03] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:03] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:03] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:03] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:03] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:05] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:05] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:05] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f
+[2025-06-05 03:02:05] [INFO] [GameModel] Updated range for Kepwyu, 4 tiles
+[2025-06-05 03:02:05] [INFO] [GameModel] Updated path for Kepwyu, 12 tiles
+[2025-06-05 03:02:05] [INFO] [GameModel] Updated target tile Kepwyu, ROW_0___COLUMN_0___5665184f-306c-46f4-b032-c72473aa5c7f

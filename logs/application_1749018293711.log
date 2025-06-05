@@ -1,0 +1,24 @@
+[2025-06-03 23:24:53] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 23:24:53] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 23:24:53] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 23:24:53] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 23:24:53] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 23:24:53] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 23:24:53] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 23:24:53] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 23:24:53] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 23:24:53] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 23:24:53] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 23:24:53] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 23:24:54] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 23:24:54] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 23:24:54] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Eyje___0517093e-62f6-4cf4-be50-fc643c43aeb4 on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Eyje___0517093e-62f6-4cf4-be50-fc643c43aeb4","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 23:25:24] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Eyje___0517093e-62f6-4cf4-be50-fc643c43aeb4 into queue
+[2025-06-03 23:25:29] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 23:25:29] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Vonu___59da4fd2-d2b1-4229-93ac-78453db50527 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Vonu___59da4fd2-d2b1-4229-93ac-78453db50527","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:25:40] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Vonu___59da4fd2-d2b1-4229-93ac-78453db50527 into queue
+[2025-06-03 23:25:40] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Pyfoi___f34033c1-8d56-428f-ae24-79ca1a92f7c2 on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Pyfoi___f34033c1-8d56-428f-ae24-79ca1a92f7c2","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 23:26:51] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Pyfoi___f34033c1-8d56-428f-ae24-79ca1a92f7c2 into queue
+[2025-06-03 23:26:51] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Gaqyad___d970a5f0-833e-48d0-8df4-582f1745c426 on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Gaqyad___d970a5f0-833e-48d0-8df4-582f1745c426","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 23:26:51] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Gaqyad___d970a5f0-833e-48d0-8df4-582f1745c426 into queue
+[2025-06-03 23:26:51] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Ienkoi___aa3638b9-7a9

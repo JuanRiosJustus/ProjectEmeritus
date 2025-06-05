@@ -1,0 +1,39 @@
+[2025-05-03 21:10:39] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-03 21:10:39] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-03 21:10:39] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-03 21:10:39] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-03 21:10:39] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-03 21:10:39] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-03 21:10:39] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-03 21:10:39] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-03 21:10:39] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-03 21:10:40] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-03 21:10:40] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-03 21:10:40] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-03 21:10:40] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-03 21:10:40] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-03 21:11:07] [INFO] [Component] Setting air_dragon_Guau_8d60f8a3-bfc0-4bca-9eac-606bc6f330e7 on to {"row":0,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Guau_8d60f8a3-bfc0-4bca-9eac-606bc6f330e7","structure":""}.
+[2025-05-03 21:11:10] [INFO] [Component] Setting water_dragon_Hamgc_e80dc6cb-5eb6-4a0a-88d6-a6cc3dddd1fc on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Hamgc_e80dc6cb-5eb6-4a0a-88d6-a6cc3dddd1fc","structure":""}.
+[2025-05-03 21:11:10] [INFO] [Component] Setting dark_dragon_Sudydr_ee441b8d-0946-4551-8dbd-4edfd94cc670 on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Sudydr_ee441b8d-0946-4551-8dbd-4edfd94cc670","structure":""}.
+[2025-05-03 21:11:10] [INFO] [Component] Setting light_dragon_Lycy_a278c255-f7fa-4182-aef6-7085a8abba46 on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Lycy_a278c255-f7fa-4182-aef6-7085a8abba46","structure":""}.
+[2025-05-03 21:11:13] [INFO] [Component] Setting air_dragon_Wayamd_f8bb36f2-c619-4d86-8926-7f94963170f4 on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Wayamd_f8bb36f2-c619-4d86-8926-7f94963170f4","structure":""}.
+[2025-05-03 21:11:13] [INFO] [Component] Setting light_dragon_Fixoji_6d94a0be-c7e2-48d4-a776-9998ba966196 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Fixoji_6d94a0be-c7e2-48d4-a776-9998ba966196","structure":""}.
+[2025-05-03 21:11:13] [INFO] [Component] Setting dark_dragon_Hizoqn_9cd18ac8-099d-4271-98f9-08d193137e15 on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Hizoqn_9cd18ac8-099d-4271-98f9-08d193137e15","structure":""}.
+[2025-05-03 21:11:13] [INFO] [Component] Setting earth_dragon_Jere_26653802-3047-4c39-bffb-cbae7fb13e16 on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Jere_26653802-3047-4c39-bffb-cbae7fb13e16","structure":""}.
+[2025-05-03 21:11:13] [INFO] [Component] Setting dragon_Zoeo_59894be8-8cd9-414e-aa26-2ac7fa53c30e on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Zoeo_59894be8-8cd9-414e-aa26-2ac7fa53c30e","structure":""}.
+[2025-05-03 21:11:13] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-03 21:11:13] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-03 21:11:13] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-03 21:11:13] [INFO] [FontPool] Started initializing FontPool
+[2025-05-03 21:11:13] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-03 21:11:13] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-03 21:11:13] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-03 21:11:13] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-03 21:11:13] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-03 21:11:13] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-03 21:11:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-03 21:11:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-03 21:11:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-03 21:11:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-03 21:11:14] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-03 21:11:14] [INFO] [VisualsSystem] Finished creating blurred background after 0.4854140877723694 seconds

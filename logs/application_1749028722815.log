@@ -1,0 +1,460 @@
+[2025-06-04 02:18:42] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-04 02:18:42] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-04 02:18:42] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-04 02:18:42] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-04 02:18:42] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-04 02:18:42] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-04 02:18:42] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-04 02:18:42] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-04 02:18:42] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-04 02:18:42] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-04 02:18:42] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-04 02:18:43] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-04 02:18:43] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-04 02:18:43] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3 on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3 into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Loveh___d6854f9b-47b7-49dc-9ba2-823edc0ce6ec on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Loveh___d6854f9b-47b7-49dc-9ba2-823edc0ce6ec","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Loveh___d6854f9b-47b7-49dc-9ba2-823edc0ce6ec into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233 on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233 into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816 into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10 on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10 into queue
+[2025-06-04 02:18:43] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e into queue
+[2025-06-04 02:18:43] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-04 02:18:43] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-04 02:18:43] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-04 02:18:43] [INFO] [FontPool] Started initializing FontPool
+[2025-06-04 02:18:43] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-04 02:18:43] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:43] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-04 02:18:43] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-04 02:18:43] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:18:43] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:18:43] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:18:43] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:18:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:18:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-04 02:18:43] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-04 02:18:44] [INFO] [VisualsSystem] Finished creating blurred background after 0.47991734743118286 seconds
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:18:44] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:18:44] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:18:44] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:18:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:18:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:18:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-04 02:18:47] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_0___1955b3cb-068c-4d28-a098-e8f795b1f8e9
+[2025-06-04 02:18:47] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_0___1955b3cb-068c-4d28-a098-e8f795b1f8e9
+[2025-06-04 02:18:47] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:18:47] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:18:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:18:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Laruai
+[2025-06-04 02:18:49] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:18:49] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:18:49] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:18:49] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:18:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:49] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:18:49] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:18:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:18:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Yipvqd
+[2025-06-04 02:18:49] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___20fc0372-5d5d-4c56-a12a-213437b1939c
+[2025-06-04 02:18:49] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_0___20fc0372-5d5d-4c56-a12a-213437b1939c
+[2025-06-04 02:18:50] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:18:50] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:18:50] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:18:50] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:18:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:50] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:18:50] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:18:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:18:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Nine
+[2025-06-04 02:18:50] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_0___18e7290d-b19f-47cd-895b-9ccff920d188
+[2025-06-04 02:18:50] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_0___18e7290d-b19f-47cd-895b-9ccff920d188
+[2025-06-04 02:18:51] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:18:51] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:18:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:18:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:18:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:51] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:18:51] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:18:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:18:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Tizd
+[2025-06-04 02:18:51] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_0___6752d0bf-9c8c-43e9-b30f-15df8057a6b5
+[2025-06-04 02:18:51] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_0___6752d0bf-9c8c-43e9-b30f-15df8057a6b5
+[2025-06-04 02:18:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:18:53] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:18:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:18:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:18:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:18:53] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:18:53] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:18:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:18:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Lihir
+[2025-06-04 02:18:53] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_11___01527051-f1cc-4d71-9453-5d47161acc40
+[2025-06-04 02:18:53] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_11___01527051-f1cc-4d71-9453-5d47161acc40
+[2025-06-04 02:19:01] [INFO] [GameModel] Updated area of sight for Lihir, viewing 5 tiles
+[2025-06-04 02:19:01] [INFO] [GameModel] Updated line of sight for Lihir, viewing 2 tiles
+[2025-06-04 02:19:01] [INFO] [GameModel] Updated area of sight for Lihir, viewing 1 tiles
+[2025-06-04 02:19:01] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:19:01] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:19:01] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:19:01] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:19:01] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:19:01] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:19:01] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:19:02] [INFO] [MovementSystem] Updated movement range to 9 for Lihir
+[2025-06-04 02:19:02] [INFO] [MovementSystem] Updated movement path from [1, 11] to [1, 12] for Lihir
+[2025-06-04 02:19:02] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e on to {"row":1,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:02] [INFO] [MovementSystem] Moved from [1, 11] to [1, 12]
+[2025-06-04 02:19:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Lihir
+[2025-06-04 02:19:02] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_12___04008cca-83aa-4a26-9775-4a0e8b307172
+[2025-06-04 02:19:02] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_12___04008cca-83aa-4a26-9775-4a0e8b307172
+[2025-06-04 02:19:02] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:02] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:02] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:02] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Yuxfjl
+[2025-06-04 02:19:02] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_11___b620978b-f611-46c4-85b7-30e0cd5f91de
+[2025-06-04 02:19:02] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_11___b620978b-f611-46c4-85b7-30e0cd5f91de
+[2025-06-04 02:19:04] [INFO] [MovementSystem] Updated movement range to 7 for Yuxfjl
+[2025-06-04 02:19:04] [INFO] [MovementSystem] Updated movement path from [0, 11] to [1, 10] for Yuxfjl
+[2025-06-04 02:19:04] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b on to {"row":1,"column":10,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:04] [INFO] [MovementSystem] Moved from [0, 11] to [1, 10]
+[2025-06-04 02:19:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Yuxfjl
+[2025-06-04 02:19:04] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_10___9b328023-ce7e-4ae4-8ee3-6cd0318cae59
+[2025-06-04 02:19:04] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_10___9b328023-ce7e-4ae4-8ee3-6cd0318cae59
+[2025-06-04 02:19:05] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:05] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:05] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:05] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Zoheo
+[2025-06-04 02:19:05] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_12___f80be184-453e-4208-9782-2d96f8b7f48d
+[2025-06-04 02:19:05] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_12___f80be184-453e-4208-9782-2d96f8b7f48d
+[2025-06-04 02:19:06] [INFO] [MovementSystem] Updated movement range to 6 for Zoheo
+[2025-06-04 02:19:06] [INFO] [MovementSystem] Updated movement path from [2, 12] to [3, 11] for Zoheo
+[2025-06-04 02:19:06] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10 on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:06] [INFO] [MovementSystem] Moved from [2, 12] to [3, 11]
+[2025-06-04 02:19:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Zoheo
+[2025-06-04 02:19:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_11___746a12e8-1938-4584-a9b7-def97541947c
+[2025-06-04 02:19:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_11___746a12e8-1938-4584-a9b7-def97541947c
+[2025-06-04 02:19:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Cykoqa
+[2025-06-04 02:19:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_12___51c89e56-2c67-4637-a387-28e539a16092
+[2025-06-04 02:19:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_12___51c89e56-2c67-4637-a387-28e539a16092
+[2025-06-04 02:19:08] [INFO] [MovementSystem] Updated movement range to 7 for Cykoqa
+[2025-06-04 02:19:08] [INFO] [MovementSystem] Updated movement path from [5, 12] to [6, 11] for Cykoqa
+[2025-06-04 02:19:08] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:08] [INFO] [MovementSystem] Moved from [5, 12] to [6, 11]
+[2025-06-04 02:19:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Cykoqa
+[2025-06-04 02:19:08] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_11___b96a83fb-558d-43fe-ac13-7aa19f9a6108
+[2025-06-04 02:19:08] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_11___b96a83fb-558d-43fe-ac13-7aa19f9a6108
+[2025-06-04 02:19:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_dragon___NICKNAME_Loveh___d6854f9b-47b7-49dc-9ba2-823edc0ce6ec
+[2025-06-04 02:19:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_dragon___NICKNAME_Loveh___d6854f9b-47b7-49dc-9ba2-823edc0ce6ec
+[2025-06-04 02:19:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dragon___NICKNAME_Loveh___d6854f9b-47b7-49dc-9ba2-823edc0ce6ec
+[2025-06-04 02:19:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dragon___NICKNAME_Loveh___d6854f9b-47b7-49dc-9ba2-823edc0ce6ec
+[2025-06-04 02:19:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Loveh
+[2025-06-04 02:19:09] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___0a1be357-96cd-4d28-a460-60a9676d4b1c
+[2025-06-04 02:19:09] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_1___0a1be357-96cd-4d28-a460-60a9676d4b1c
+[2025-06-04 02:19:13] [INFO] [AbilityPanel] Updating ability selection for UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e
+[2025-06-04 02:19:13] [INFO] [AbilityPanel] Finished ability selection for UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e
+[2025-06-04 02:19:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e
+[2025-06-04 02:19:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e
+[2025-06-04 02:19:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Boiu
+[2025-06-04 02:19:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_12___de04ded1-975f-443f-9d19-13707a5b3720
+[2025-06-04 02:19:13] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_12___de04ded1-975f-443f-9d19-13707a5b3720
+[2025-06-04 02:19:14] [INFO] [MovementSystem] Updated movement range to 8 for Boiu
+[2025-06-04 02:19:14] [INFO] [MovementSystem] Updated movement path from [4, 12] to [4, 10] for Boiu
+[2025-06-04 02:19:14] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e on to {"row":4,"column":10,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Boiu___0a4ad883-d602-49ba-8fff-b170792b460e","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:19:14] [INFO] [MovementSystem] Moved from [4, 12] to [4, 10]
+[2025-06-04 02:19:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Boiu
+[2025-06-04 02:19:14] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_10___a34a77a3-4ecc-499e-88d8-8f8911bba5b1
+[2025-06-04 02:19:14] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_10___a34a77a3-4ecc-499e-88d8-8f8911bba5b1
+[2025-06-04 02:19:15] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-04 02:19:15] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-04 02:19:15] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:19:15] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Laruai___02556100-9ee8-4d6c-9468-6ab34ecd43ed
+[2025-06-04 02:19:15] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:15] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:15] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-06-04 02:19:15] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-06-04 02:19:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-04 02:19:16] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:19:16] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:19:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:16] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:19:16] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Yipvqd___b7f466dd-39cf-4acb-9481-f94bd7883233
+[2025-06-04 02:19:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Yipvqd
+[2025-06-04 02:19:16] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_0___20fc0372-5d5d-4c56-a12a-213437b1939c
+[2025-06-04 02:19:16] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_0___20fc0372-5d5d-4c56-a12a-213437b1939c
+[2025-06-04 02:19:19] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:19:19] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:19:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:19:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Nine___042df76e-d089-4600-a76b-acb350459816
+[2025-06-04 02:19:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Nine
+[2025-06-04 02:19:19] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_0___18e7290d-b19f-47cd-895b-9ccff920d188
+[2025-06-04 02:19:19] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_0___18e7290d-b19f-47cd-895b-9ccff920d188
+[2025-06-04 02:19:21] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:19:21] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:19:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:19:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Tizd___149cf99a-259f-40e8-b90d-be0fb9273df3
+[2025-06-04 02:19:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Tizd
+[2025-06-04 02:19:21] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_0___6752d0bf-9c8c-43e9-b30f-15df8057a6b5
+[2025-06-04 02:19:21] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_0___6752d0bf-9c8c-43e9-b30f-15df8057a6b5
+[2025-06-04 02:19:22] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:22] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:22] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:22] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:22] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:22] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:22] [INFO] [SelectedTilePanel] Updated selected tile display to view Lihir
+[2025-06-04 02:19:22] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_12___04008cca-83aa-4a26-9775-4a0e8b307172
+[2025-06-04 02:19:22] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_12___04008cca-83aa-4a26-9775-4a0e8b307172
+[2025-06-04 02:19:23] [INFO] [MovementSystem] Updated movement range to 7 for Lihir
+[2025-06-04 02:19:23] [INFO] [MovementSystem] Updated movement path from [1, 12] to [3, 12] for Lihir
+[2025-06-04 02:19:23] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e on to {"row":3,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:23] [INFO] [MovementSystem] Moved from [1, 12] to [3, 12]
+[2025-06-04 02:19:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Lihir
+[2025-06-04 02:19:23] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_12___a2c71246-c97e-4316-a324-779d4df48be3
+[2025-06-04 02:19:23] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_12___a2c71246-c97e-4316-a324-779d4df48be3
+[2025-06-04 02:19:24] [INFO] [GameModel] Updated area of sight for Lihir, viewing 4 tiles
+[2025-06-04 02:19:24] [INFO] [GameModel] Updated line of sight for Lihir, viewing 2 tiles
+[2025-06-04 02:19:24] [INFO] [GameModel] Updated area of sight for Lihir, viewing 1 tiles
+[2025-06-04 02:19:24] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:19:24] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:19:24] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:19:24] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:19:24] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 02:19:24] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 02:19:24] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:19:24] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:24] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:24] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:19:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:19:24] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:24] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:24] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lihir___e64e4ed5-f752-4bb8-88e2-59a8f8ce988e
+[2025-06-04 02:19:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:19:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:19:24] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:24] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:24] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:24] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:24] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:24] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b
+[2025-06-04 02:19:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Yuxfjl
+[2025-06-04 02:19:24] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_10___9b328023-ce7e-4ae4-8ee3-6cd0318cae59
+[2025-06-04 02:19:24] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_10___9b328023-ce7e-4ae4-8ee3-6cd0318cae59
+[2025-06-04 02:19:25] [INFO] [MovementSystem] Updated movement range to 11 for Yuxfjl
+[2025-06-04 02:19:25] [INFO] [MovementSystem] Updated movement path from [1, 10] to [1, 12] for Yuxfjl
+[2025-06-04 02:19:25] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b on to {"row":1,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Yuxfjl___dd932451-d78f-4da5-ae6f-1fb388a06a6b","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:25] [INFO] [MovementSystem] Moved from [1, 10] to [1, 12]
+[2025-06-04 02:19:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Yuxfjl
+[2025-06-04 02:19:25] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_12___04008cca-83aa-4a26-9775-4a0e8b307172
+[2025-06-04 02:19:25] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_12___04008cca-83aa-4a26-9775-4a0e8b307172
+[2025-06-04 02:19:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:26] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:26] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Zoheo
+[2025-06-04 02:19:26] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_11___746a12e8-1938-4584-a9b7-def97541947c
+[2025-06-04 02:19:26] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_11___746a12e8-1938-4584-a9b7-def97541947c
+[2025-06-04 02:19:27] [INFO] [GameModel] Updated area of sight for Zoheo, viewing 5 tiles
+[2025-06-04 02:19:27] [INFO] [GameModel] Updated line of sight for Zoheo, viewing 2 tiles
+[2025-06-04 02:19:27] [INFO] [GameModel] Updated area of sight for Zoheo, viewing 1 tiles
+[2025-06-04 02:19:27] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:19:27] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:19:27] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:19:27] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:19:27] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:19:27] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:19:27] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:19:27] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:27] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:19:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:19:27] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:27] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10
+[2025-06-04 02:19:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:19:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:19:28] [INFO] [MovementSystem] Updated movement range to 10 for Zoheo
+[2025-06-04 02:19:28] [INFO] [MovementSystem] Updated movement path from [3, 11] to [4, 12] for Zoheo
+[2025-06-04 02:19:28] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10 on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Zoheo___c6259343-c893-44cc-9c9e-0469b8ccdb10","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:28] [INFO] [MovementSystem] Moved from [3, 11] to [4, 12]
+[2025-06-04 02:19:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Zoheo
+[2025-06-04 02:19:28] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_12___de04ded1-975f-443f-9d19-13707a5b3720
+[2025-06-04 02:19:28] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_12___de04ded1-975f-443f-9d19-13707a5b3720
+[2025-06-04 02:19:28] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:28] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:19:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:19:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:19:28] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:28] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea
+[2025-06-04 02:19:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Cykoqa
+[2025-06-04 02:19:28] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_11___b96a83fb-558d-43fe-ac13-7aa19f9a6108
+[2025-06-04 02:19:28] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_11___b96a83fb-558d-43fe-ac13-7aa19f9a6108
+[2025-06-04 02:19:30] [INFO] [MovementSystem] Updated movement range to 10 for Cykoqa
+[2025-06-04 02:19:30] [INFO] [MovementSystem] Updated movement path from [6, 11] to [5, 12] for Cykoqa
+[2025-06-04 02:19:30] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Cykoqa___0bfdfabc-b6ec-43c2-9373-0c0dde7750ea","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:19:30] [INFO] [MovementSystem] Moved from [6, 11] to [5, 12]
+[2025-06-04 02:19:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:19:3

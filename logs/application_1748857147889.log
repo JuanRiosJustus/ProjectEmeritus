@@ -1,0 +1,31 @@
+[2025-06-02 02:39:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 02:39:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 02:39:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 02:39:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 02:39:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 02:39:08] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 02:39:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 02:39:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 02:39:08] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 02:39:08] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 02:39:08] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Duqj___d9c2d51c-4585-429d-8b8e-2c992b441e98 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Duqj___d9c2d51c-4585-429d-8b8e-2c992b441e98","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:39:08] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Duqj___d9c2d51c-4585-429d-8b8e-2c992b441e98 into queue
+[2025-06-02 02:39:08] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Ouuoe___3a1939b2-beac-4da0-a299-a61758a0ab5c on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Ouuoe___3a1939b2-beac-4da0-a299-a61758a0ab5c","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:39:08] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Ouuoe___3a1939b2-beac-4da0-a299-a61758a0ab5c into queue
+[2025-06-02 02:39:08] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 02:39:08] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 02:39:08] [INFO] [GameModel] Updated area of sight for Duqj, viewing 5 tiles
+[2025-06-02 02:39:08] [INFO] [GameModel] Updated line of sight for Duqj, viewing 2 tiles
+[2025-06-02 02:39:08] [INFO] [GameModel] Updated area of sight for Duqj, viewing 1 tiles
+[2025-06-02 02:39:08] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 02:39:08] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 02:39:08] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-02 02:39:08] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-02 02:39:08] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:39:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:39:08] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:39:08] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-02 02:39:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:39:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:39:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:39:08] [INFO] [SpeedQueu

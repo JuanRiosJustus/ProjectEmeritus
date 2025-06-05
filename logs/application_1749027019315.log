@@ -1,0 +1,172 @@
+[2025-06-04 01:50:19] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-04 01:50:19] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-04 01:50:19] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-04 01:50:19] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-04 01:50:19] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-04 01:50:19] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-04 01:50:19] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-04 01:50:19] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-04 01:50:19] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-04 01:50:19] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-04 01:50:19] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-04 01:50:19] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-04 01:50:19] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-04 01:50:19] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Seiy___692d2042-ec42-4343-9782-fd55f691fd08 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Seiy___692d2042-ec42-4343-9782-fd55f691fd08","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Seiy___692d2042-ec42-4343-9782-fd55f691fd08 into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Mukvi___881bd34d-465f-441f-970a-e5ccbeef0897 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Mukvi___881bd34d-465f-441f-970a-e5ccbeef0897","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Mukvi___881bd34d-465f-441f-970a-e5ccbeef0897 into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Codp___a43e327d-9b95-4add-ad91-0e5aa5f00560 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Codp___a43e327d-9b95-4add-ad91-0e5aa5f00560","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Codp___a43e327d-9b95-4add-ad91-0e5aa5f00560 into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Uoxau___f7e19eb7-662a-4b9e-ad81-b95a2753f0ca on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Uoxau___f7e19eb7-662a-4b9e-ad81-b95a2753f0ca","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Uoxau___f7e19eb7-662a-4b9e-ad81-b95a2753f0ca into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Patoo___ed1e5770-93e2-4db4-9695-7d287e7a8087 on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Patoo___ed1e5770-93e2-4db4-9695-7d287e7a8087","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Patoo___ed1e5770-93e2-4db4-9695-7d287e7a8087 into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Bycio___3b0e836d-6da5-4d3c-95e9-ac90b645320f on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Bycio___3b0e836d-6da5-4d3c-95e9-ac90b645320f","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Bycio___3b0e836d-6da5-4d3c-95e9-ac90b645320f into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Hyly___c00d49ca-9106-400c-b09b-49b631764836 on to {"row":7,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Hyly___c00d49ca-9106-400c-b09b-49b631764836","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Hyly___c00d49ca-9106-400c-b09b-49b631764836 into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Kavieo___e0788016-5708-4d5b-9054-8c5906188f0a on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Kavieo___e0788016-5708-4d5b-9054-8c5906188f0a","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Kavieo___e0788016-5708-4d5b-9054-8c5906188f0a into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285 on to {"row":0,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285 into queue
+[2025-06-04 01:50:19] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Hiyo___c2e1d827-0e3d-4f78-8ba3-e3a22e1524b4 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Hiyo___c2e1d827-0e3d-4f78-8ba3-e3a22e1524b4","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 01:50:19] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Hiyo___c2e1d827-0e3d-4f78-8ba3-e3a22e1524b4 into queue
+[2025-06-04 01:50:19] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-04 01:50:19] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-04 01:50:19] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-04 01:50:19] [INFO] [FontPool] Started initializing FontPool
+[2025-06-04 01:50:19] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-04 01:50:20] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:20] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-04 01:50:20] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-04 01:50:20] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:20] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:20] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 01:50:20] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 01:50:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 01:50:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 01:50:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 01:50:20] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-04 01:50:20] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-04 01:50:20] [INFO] [VisualsSystem] Finished creating blurred background after 0.4970712959766388 seconds
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:21] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 01:50:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:25] [INFO] [GameModel] Updated area of sight for Zegro, viewing 3 tiles
+[2025-06-04 01:50:25] [INFO] [GameModel] Updated line of sight for Zegro, viewing 2 tiles
+[2025-06-04 01:50:25] [INFO] [GameModel] Updated area of sight for Zegro, viewing 1 tiles
+[2025-06-04 01:50:25] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 01:50:25] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 01:50:25] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 01:50:25] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 01:50:25] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 01:50:25] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 01:50:25] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 01:50:29] [INFO] [GameModel] Updated area of sight for Zegro, viewing 3 tiles
+[2025-06-04 01:50:29] [INFO] [GameModel] Updated line of sight for Zegro, viewing 2 tiles
+[2025-06-04 01:50:29] [INFO] [GameModel] Updated area of sight for Zegro, viewing 1 tiles
+[2025-06-04 01:50:29] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 01:50:29] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 01:50:29] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 01:50:29] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 01:50:29] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 01:50:29] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 01:50:29] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 01:50:29] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:29] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 01:50:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 01:50:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:38] [INFO] [GameModel] Updated area of sight for Zegro, viewing 3 tiles
+[2025-06-04 01:50:38] [INFO] [GameModel] Updated line of sight for Zegro, viewing 2 tiles
+[2025-06-04 01:50:38] [INFO] [GameModel] Updated area of sight for Zegro, viewing 1 tiles
+[2025-06-04 01:50:38] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 01:50:38] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 01:50:38] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 01:50:38] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 01:50:38] [INFO] [GameModel] Payed 5.0 out of 10 to use test_slash
+[2025-06-04 01:50:38] [INFO] [GameModel] Payed 5.0 out of 10 to use test_slash
+[2025-06-04 01:50:38] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 01:50:38] [INFO] [GameModel] Started dealing damage with test_slash to Bycio 
+[2025-06-04 01:50:38] [INFO] [GameModel] Started dealing damage with test_slash to Bycio 
+[2025-06-04 01:50:38] [INFO] [GameModel] Started dealing damage with test_slash to Bycio 
+[2025-06-04 01:50:38] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:38] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 01:50:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 01:50:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 01:50:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 01:50:38] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:38] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Zegro___94b245bf-055b-48e3-b764-acb2aef25285
+[2025-06-04 01:50:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 01:50:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[

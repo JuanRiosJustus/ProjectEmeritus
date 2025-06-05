@@ -1,0 +1,324 @@
+[2025-04-28 03:04:04] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 03:04:04] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 03:04:04] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 03:04:04] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 03:04:04] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 03:04:04] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 03:04:04] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 03:04:04] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 03:04:04] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 03:04:04] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 03:04:04] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 03:04:04] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 03:04:04] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 03:04:04] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 03:04:04] [INFO] [Component] Setting dark_dragon_Aoaal_13435c6a-42ac-42e8-8dd9-d4a8f9ea97d2 on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Aoaal_13435c6a-42ac-42e8-8dd9-d4a8f9ea97d2","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit enemy:Aoaal into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting dragon_Oooi_34266980-8e8c-4dec-be57-1809e8c5abb9 on to {"row":2,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Oooi_34266980-8e8c-4dec-be57-1809e8c5abb9","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit enemy:Oooi into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting earth_dragon_Ueeuag_273174f3-56f2-4cce-856f-35e5a331e7b8 on to {"row":3,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Ueeuag_273174f3-56f2-4cce-856f-35e5a331e7b8","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit enemy:Ueeuag into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting water_dragon_Ruxu_a0473c82-6a01-4d8e-8fb8-65d13b0cec70 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Ruxu_a0473c82-6a01-4d8e-8fb8-65d13b0cec70","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit enemy:Ruxu into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862 on to {"row":1,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit enemy:Cemff into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting water_dragon_Nosee_0084ed59-dfcf-4fd8-8c08-2ead6d802295 on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Nosee_0084ed59-dfcf-4fd8-8c08-2ead6d802295","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit user:Nosee into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting dark_dragon_Dawui_b4b8119a-3286-400f-b985-add732922a83 on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Dawui_b4b8119a-3286-400f-b985-add732922a83","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit user:Dawui into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting water_dragon_Gaqvio_cd562205-2ce3-420a-b165-1f800c758409 on to {"row":1,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Gaqvio_cd562205-2ce3-420a-b165-1f800c758409","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit user:Gaqvio into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting earth_dragon_Baxba_332de662-c18a-4b6f-90ce-fd04ce9367e1 on to {"row":4,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Baxba_332de662-c18a-4b6f-90ce-fd04ce9367e1","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit user:Baxba into queue
+[2025-04-28 03:04:04] [INFO] [Component] Setting dark_dragon_Rysu_e6638e24-6050-45ae-9e43-b16268a05f5d on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Rysu_e6638e24-6050-45ae-9e43-b16268a05f5d","structure":""}.
+[2025-04-28 03:04:04] [INFO] [SpeedQueue] Added unit user:Rysu into queue
+[2025-04-28 03:04:04] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 03:04:04] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 03:04:04] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 03:04:04] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 03:04:04] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 03:04:04] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 03:04:04] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 03:04:05] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 03:04:05] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 03:04:05] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 03:04:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 03:04:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 03:04:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 03:04:05] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 03:04:05] [INFO] [VisualsSystem] Finished creating blurred background after 0.4876940846443176 seconds
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Cemff_c52220d3-036b-4994-8255-361275bdd862
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:05] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 03:04:08] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_2de84b7b-32ad-4cf6-8905-757c67ee30c5
+[2025-04-28 03:04:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:09] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-28 03:04:09] [INFO] [AbilitySystem] Cemff is planning to use oblation on [4, 6]
+[2025-04-28 03:04:09] [INFO] [AbilitySystem] Updated area of sight for Cemff, viewing 11 tiles
+[2025-04-28 03:04:09] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 9 tiles
+[2025-04-28 03:04:09] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:09] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:09] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:09] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:09] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [5, 5]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 4 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [5, 4]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 4 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [4, 4]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 4 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [4, 3]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 4 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [3, 2]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 4 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Ueeuag
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Ueeuag
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Ueeuag
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Ueeuag
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [3, 1]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 3 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [2, 1]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 2 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Cemff is planning to use oblation on [2, 0]
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated line of sight for Cemff, viewing 3 tiles
+[2025-04-28 03:04:10] [INFO] [AbilitySystem] Updated area of effect for Cemff viewing 1 tiles
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Oooi
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Oooi
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Oooi
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Oooi
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-28 03:04:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Checking cost requirements for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Cemff is able to pay for oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Started constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Finished constructing cost mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Paying cost requirements for Cemff using oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilitySystem] Used from oblation on [2, 0]
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Cemff lands a CRIT bonus with oblation for -6.0
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -10.0 damage after modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -10.0 Raw damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -9.090909 damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [CombatSystem] Started dealing damage with oblation to Oooi 
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Cemff
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Oooi
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-28 03:04:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Cemff to use oblation
+[2025-04-28 03:04:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 03:04:11] [INFO] [AbilitySystem] Finished update updating {} because of ability

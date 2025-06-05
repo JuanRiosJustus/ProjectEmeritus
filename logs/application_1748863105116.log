@@ -1,0 +1,59 @@
+[2025-06-02 04:18:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 04:18:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 04:18:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 04:18:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 04:18:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 04:18:25] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 04:18:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 04:18:25] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 04:18:25] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 04:18:25] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 04:18:25] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 04:18:25] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 04:18:25] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 04:18:25] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7 into queue
+[2025-06-02 04:18:25] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Viuuj___eb263f09-c889-446d-88b2-158248ff0482 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Viuuj___eb263f09-c889-446d-88b2-158248ff0482","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 04:18:25] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Viuuj___eb263f09-c889-446d-88b2-158248ff0482 into queue
+[2025-06-02 04:18:25] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 04:18:25] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 04:18:25] [INFO] [GameModel] Updated area of sight for Cegoea, viewing 5 tiles
+[2025-06-02 04:18:25] [INFO] [GameModel] Updated line of sight for Cegoea, viewing 2 tiles
+[2025-06-02 04:18:25] [INFO] [GameModel] Updated area of sight for Cegoea, viewing 1 tiles
+[2025-06-02 04:18:25] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 04:18:25] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 04:18:25] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-02 04:18:25] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-02 04:18:25] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 04:18:25] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 04:18:25] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-02 04:18:25] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 04:18:25] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7
+[2025-06-02 04:18:25] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7
+[2025-06-02 04:18:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 04:18:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 04:18:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 04:18:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 04:18:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 04:18:25] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 04:18:25] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 04:18:26] [INFO] [VisualsSystem] Finished creating blurred background after 0.352083295583725 seconds
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7
+[2025-06-02 04:18:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7
+[2025-06-02 04:18:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 04:18:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7
+[2025-06-02 04:18:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7
+[2025-06-02 04:18:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 04:18:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 04:18:26] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d9079ca7
+[2025-06-02 04:18:26] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Cegoea___6ff144e1-04af-4dd4-a00d-6596d90

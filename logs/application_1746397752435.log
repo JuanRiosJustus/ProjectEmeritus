@@ -1,0 +1,292 @@
+[2025-05-04 15:29:12] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 15:29:12] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 15:29:12] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 15:29:12] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 15:29:12] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 15:29:12] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 15:29:12] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 15:29:12] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 15:29:12] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 15:29:12] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 15:29:12] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 15:29:12] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 15:29:12] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 15:29:12] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 15:29:12] [INFO] [Component] Setting fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d on to {"row":5,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting fire_dragon_Iajeep_fb93ce87-e3aa-433c-95b4-4ccc3fdf777d on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Iajeep_fb93ce87-e3aa-433c-95b4-4ccc3fdf777d","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit fire_dragon_Iajeep_fb93ce87-e3aa-433c-95b4-4ccc3fdf777d into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting fire_dragon_Muhyau_03f66b12-d027-4219-a825-b495738bd8cf on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Muhyau_03f66b12-d027-4219-a825-b495738bd8cf","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit fire_dragon_Muhyau_03f66b12-d027-4219-a825-b495738bd8cf into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting air_dragon_Bucob_1d16a3a0-2765-4198-a8e9-1c3f0dd67cd8 on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Bucob_1d16a3a0-2765-4198-a8e9-1c3f0dd67cd8","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit air_dragon_Bucob_1d16a3a0-2765-4198-a8e9-1c3f0dd67cd8 into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting fire_dragon_Xahyiq_0dc86683-a25e-4dda-9266-56449f3cd310 on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Xahyiq_0dc86683-a25e-4dda-9266-56449f3cd310","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit fire_dragon_Xahyiq_0dc86683-a25e-4dda-9266-56449f3cd310 into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting light_dragon_Nuyipe_c27198dd-9ef8-44f8-8ad1-e25a2eb13b63 on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Nuyipe_c27198dd-9ef8-44f8-8ad1-e25a2eb13b63","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit light_dragon_Nuyipe_c27198dd-9ef8-44f8-8ad1-e25a2eb13b63 into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting dragon_Hemucr_9170f795-cd5d-40c3-a785-fdffd4116bf7 on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Hemucr_9170f795-cd5d-40c3-a785-fdffd4116bf7","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit dragon_Hemucr_9170f795-cd5d-40c3-a785-fdffd4116bf7 into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting air_dragon_Bebeu_30c6181c-a643-4be4-bbf6-11d77e2551c0 on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Bebeu_30c6181c-a643-4be4-bbf6-11d77e2551c0","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit air_dragon_Bebeu_30c6181c-a643-4be4-bbf6-11d77e2551c0 into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting light_dragon_Dodi_73b09d0f-d750-445e-aa41-72f4d730db4d on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Dodi_73b09d0f-d750-445e-aa41-72f4d730db4d","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit light_dragon_Dodi_73b09d0f-d750-445e-aa41-72f4d730db4d into queue
+[2025-05-04 15:29:12] [INFO] [Component] Setting water_dragon_Oaouny_5cbe0ee5-67d9-469f-9628-7f0a1b1406fc on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Oaouny_5cbe0ee5-67d9-469f-9628-7f0a1b1406fc","structure":""}.
+[2025-05-04 15:29:12] [INFO] [SpeedQueue] Added unit water_dragon_Oaouny_5cbe0ee5-67d9-469f-9628-7f0a1b1406fc into queue
+[2025-05-04 15:29:12] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 15:29:13] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 15:29:13] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 15:29:13] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 15:29:13] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 15:29:13] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 15:29:13] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 15:29:13] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 15:29:13] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 15:29:13] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:13] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 15:29:13] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d
+[2025-05-04 15:29:13] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d
+[2025-05-04 15:29:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 15:29:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 15:29:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 15:29:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 15:29:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 15:29:13] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 15:29:13] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 15:29:14] [INFO] [VisualsSystem] Finished creating blurred background after 0.4869648516178131 seconds
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d
+[2025-05-04 15:29:14] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d
+[2025-05-04 15:29:14] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 15:29:14] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:14] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_bcdd7949-676d-448e-8169-a8a5ee7aeaa7
+[2025-05-04 15:29:14] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_bcdd7949-676d-448e-8169-a8a5ee7aeaa7
+[2025-05-04 15:29:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d
+[2025-05-04 15:29:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Bybude_f2756cb3-7e4c-4c6d-aba5-ca300ed6840d
+[2025-05-04 15:29:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 15:29:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Bybude
+[2025-05-04 15:29:15] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_bcdd7949-676d-448e-8169-a8a5ee7aeaa7
+[2025-05-04 15:29:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:29:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [AbilityPanel] Selecting fire_attack
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Bybude is planning to use fire_attack on [7, 5]
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated area of sight for Bybude, viewing 12 tiles
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated line of sight for Bybude, viewing 7 tiles
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated area of effect for Bybude viewing 1 tiles
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Bybude is planning to use fire_attack on null
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated line of sight for Bybude, viewing 0 tiles
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated area of effect for Bybude viewing 0 tiles
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Bybude is planning to use fire_attack on [7, 4]
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated line of sight for Bybude, viewing 6 tiles
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated area of effect for Bybude viewing 1 tiles
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Bybude is planning to use fire_attack on [7, 3]
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated line of sight for Bybude, viewing 5 tiles
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated area of effect for Bybude viewing 1 tiles
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Bybude is planning to use fire_attack on [7, 2]
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated line of sight for Bybude, viewing 3 tiles
+[2025-05-04 15:29:16] [INFO] [AbilitySystem] Updated area of effect for Bybude viewing 1 tiles
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Bybude is planning to use fire_attack on [7, 1]
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Updated line of sight for Bybude, viewing 3 tiles
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Updated area of effect for Bybude viewing 1 tiles
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Bybude lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Checking cost requirements for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Bybude is able to pay for fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Started constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Finished constructing cost mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Paying cost requirements for Bybude using fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Used from fire_attack on [7, 1]
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Bybude lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [CombatSystem] Started dealing damage with fire_attack to Bucob 
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Bybude lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Bybude lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Bybude lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Bybude lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Bybude
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Bucob
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Bybude to use fire_attack
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:29:17] [INFO] [AbilitySystem] Finished update updating {} because of ability

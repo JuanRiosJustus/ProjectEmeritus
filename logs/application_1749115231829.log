@@ -1,0 +1,202 @@
+[2025-06-05 02:20:31] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 02:20:31] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 02:20:31] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 02:20:31] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 02:20:31] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 02:20:31] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 02:20:31] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 02:20:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 02:20:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 02:20:32] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 02:20:32] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 02:20:32] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 02:20:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 02:20:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Moxba___c3a38f08-820a-4e3b-8bf6-c845fc8adfc5 on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Moxba___c3a38f08-820a-4e3b-8bf6-c845fc8adfc5","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Moxba___c3a38f08-820a-4e3b-8bf6-c845fc8adfc5 into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Yoqia___97619c7d-4b8d-4d3d-ad06-a6b19cc7ecfd on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Yoqia___97619c7d-4b8d-4d3d-ad06-a6b19cc7ecfd","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Yoqia___97619c7d-4b8d-4d3d-ad06-a6b19cc7ecfd into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Qofu___7d01b09c-48dd-4c00-8d8a-85eb615fff31 on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Qofu___7d01b09c-48dd-4c00-8d8a-85eb615fff31","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Qofu___7d01b09c-48dd-4c00-8d8a-85eb615fff31 into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Iagu___d308a346-2677-4bba-8f13-e0f543972d4a on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Iagu___d308a346-2677-4bba-8f13-e0f543972d4a","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Iagu___d308a346-2677-4bba-8f13-e0f543972d4a into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88 on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88 into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Yipoej___7dfcb7e4-2cdf-40a2-8c9d-9e5a7b75ed48 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Yipoej___7dfcb7e4-2cdf-40a2-8c9d-9e5a7b75ed48","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Yipoej___7dfcb7e4-2cdf-40a2-8c9d-9e5a7b75ed48 into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Qiuoi___03541224-ce96-4dee-8413-a8cc3f700a88 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Qiuoi___03541224-ce96-4dee-8413-a8cc3f700a88","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Qiuoi___03541224-ce96-4dee-8413-a8cc3f700a88 into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Wujm___efd20e3a-98ff-4103-a0f7-42a447d8c7b5 on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Wujm___efd20e3a-98ff-4103-a0f7-42a447d8c7b5","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Wujm___efd20e3a-98ff-4103-a0f7-42a447d8c7b5 into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Iomoy___3451e504-3c97-48fa-a7d7-e75fff5262c6 on to {"row":0,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Iomoy___3451e504-3c97-48fa-a7d7-e75fff5262c6","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Iomoy___3451e504-3c97-48fa-a7d7-e75fff5262c6 into queue
+[2025-06-05 02:20:32] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Zeia___afaf6287-497a-467a-b7e7-36c0c4bfc8f0 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Zeia___afaf6287-497a-467a-b7e7-36c0c4bfc8f0","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Zeia___afaf6287-497a-467a-b7e7-36c0c4bfc8f0 into queue
+[2025-06-05 02:20:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 02:20:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 02:20:32] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 02:20:32] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 02:20:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 02:20:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 02:20:32] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 02:20:32] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88
+[2025-06-05 02:20:32] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88
+[2025-06-05 02:20:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:20:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:20:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:20:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:20:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:20:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 02:20:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 02:20:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.4811394214630127 seconds
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88
+[2025-06-05 02:20:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88
+[2025-06-05 02:20:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:20:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:20:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:20:35] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_0___cf308d49-8565-4a94-963f-fb0549d6cb22
+[2025-06-05 02:20:35] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:20:35] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:20:36] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:20:36] [INFO] [GameModel] Moved from [7, 0] to [6, 1]
+[2025-06-05 02:20:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88
+[2025-06-05 02:20:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Diau___f2bb8f9a-4b02-47f4-b9f7-7b5c5fcb9a88
+[2025-06-05 02:20:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:20:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Diau
+[2025-06-05 02:20:36] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___06d16a33-3dd9-47de-a2d5-de49bb750533
+[2025-06-05 02:20:36] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_1___06d16a33-3dd9-47de-a2d5-de49bb750533
+[2025-06-05 02:20:37] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___06d16a33-3dd9-47de-a2d5-de49bb750533
+[2025-06-05 02:20:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:20:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_0___COLUMN_0___63ad7e52-49fc-45e6-b561-4c68502db19d
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 7 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_9___COLUMN_6___311965ff-a9fe-4034-a635-b4622d7039bd
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_9___COLUMN_5___e5f7c405-af53-4488-b159-fe1fd9c11b79
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_9___COLUMN_5___e5f7c405-af53-4488-b159-fe1fd9c11b79
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 2 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_9___COLUMN_4___0661f590-18ff-48bb-83ae-5a54999708db
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 2 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_9___COLUMN_4___0661f590-18ff-48bb-83ae-5a54999708db
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 2 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_8___COLUMN_3___a1bdb15f-b42d-4b32-aa86-a74e16348863
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 2 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_8___COLUMN_3___a1bdb15f-b42d-4b32-aa86-a74e16348863
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 2 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_7___COLUMN_2___1f0e0204-720a-41fe-9772-2eba24ebe11d
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 2 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of effect for Diau, 1 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating target for Diau, ROW_7___COLUMN_2___1f0e0204-720a-41fe-9772-2eba24ebe11d
+[2025-06-05 02:20:38] [INFO] [GameModel] Updating ability for Diau, test_slash
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated area of sight for Diau, 5 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated line of sight for Diau, 2 tiles
+[2025-06-05 02:20:38] [INFO] [GameModel] Updated 

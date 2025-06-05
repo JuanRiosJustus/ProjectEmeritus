@@ -1,0 +1,366 @@
+[2025-05-28 02:03:24] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-28 02:03:24] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-28 02:03:24] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-28 02:03:24] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-28 02:03:24] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-28 02:03:24] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-28 02:03:24] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-28 02:03:24] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-28 02:03:24] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-28 02:03:24] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-28 02:03:24] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-28 02:03:24] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-28 02:03:24] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-28 02:03:24] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Fuwoh___c3d1f29b-bd72-4982-b91c-9a17ca41d695 on to {"row":0,"column":0,"base_elevation":3,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Fuwoh___c3d1f29b-bd72-4982-b91c-9a17ca41d695","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Fuwoh___c3d1f29b-bd72-4982-b91c-9a17ca41d695 into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be on to {"row":7,"column":1,"base_elevation":3,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xymvei___8007ea88-02ae-46e5-a2ae-086db61b8ecd on to {"row":0,"column":1,"base_elevation":3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Xymvei___8007ea88-02ae-46e5-a2ae-086db61b8ecd","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Xymvei___8007ea88-02ae-46e5-a2ae-086db61b8ecd into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Reueei___18f25a9e-71f1-4956-ad45-4490639293c7 on to {"row":6,"column":1,"base_elevation":3,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Reueei___18f25a9e-71f1-4956-ad45-4490639293c7","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Reueei___18f25a9e-71f1-4956-ad45-4490639293c7 into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Xilimo___8423945f-8b8a-48e8-be56-f0e947c6ac7b on to {"row":1,"column":0,"base_elevation":3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Xilimo___8423945f-8b8a-48e8-be56-f0e947c6ac7b","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Xilimo___8423945f-8b8a-48e8-be56-f0e947c6ac7b into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Uidiid___e6224e72-6172-47b7-b94b-17ef9dced8a7 on to {"row":2,"column":11,"base_elevation":3,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Uidiid___e6224e72-6172-47b7-b94b-17ef9dced8a7","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Uidiid___e6224e72-6172-47b7-b94b-17ef9dced8a7 into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Oosid___39f10400-b8f4-4ded-9edb-567078aefa02 on to {"row":6,"column":10,"base_elevation":3,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Oosid___39f10400-b8f4-4ded-9edb-567078aefa02","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Oosid___39f10400-b8f4-4ded-9edb-567078aefa02 into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Mimha___23d487d8-3e81-4392-a856-0e70b59e67e9 on to {"row":1,"column":11,"base_elevation":3,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Mimha___23d487d8-3e81-4392-a856-0e70b59e67e9","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Mimha___23d487d8-3e81-4392-a856-0e70b59e67e9 into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Kavai___1402dc68-5996-4db3-a77f-229adbee5feb on to {"row":0,"column":11,"base_elevation":3,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Kavai___1402dc68-5996-4db3-a77f-229adbee5feb","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Kavai___1402dc68-5996-4db3-a77f-229adbee5feb into queue
+[2025-05-28 02:03:27] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Poxi___3cdf0725-15b1-4cfc-a1f2-79e530c73156 on to {"row":5,"column":10,"base_elevation":3,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Poxi___3cdf0725-15b1-4cfc-a1f2-79e530c73156","layers":{"empty":false},"total_elevation":13}.
+[2025-05-28 02:03:27] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Poxi___3cdf0725-15b1-4cfc-a1f2-79e530c73156 into queue
+[2025-05-28 02:03:27] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-28 02:03:28] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-28 02:03:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-28 02:03:28] [INFO] [FontPool] Started initializing FontPool
+[2025-05-28 02:03:28] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-28 02:03:28] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-28 02:03:28] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:28] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 02:03:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 02:03:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-28 02:03:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-28 02:03:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 02:03:28] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-28 02:03:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-28 02:03:29] [INFO] [VisualsSystem] Finished creating blurred background after 0.4900034964084625 seconds
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:29] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 02:03:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:29] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 02:03:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:29] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:29] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 02:03:29] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 02:03:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 02:03:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 02:03:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-28 02:03:31] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_1___06f7aae0-8694-4062-9ce2-c54083109296
+[2025-05-28 02:03:31] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_1___06f7aae0-8694-4062-9ce2-c54083109296
+[2025-05-28 02:03:31] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Jovoy___9138e05c-a6c3-4a0b-95ab-63e6d17819be
+[2025-05-28 02:03:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 02:03:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Jovoy
+[2025-05-28 02:03:32] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_1___06f7aae0-8694-4062-9ce2-c54083109296
+[2025-05-28 02:03:32] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-28 02:03:32] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-28 02:03:32] [INFO] [MovementSystem] Updated movement range to 6 for Jovoy
+[2025-05-28 02:03:32] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 1] for Jovoy
+[2025-05-28 02:03:32] [INFO] [MovementSystem] Updated movement range to 6 for Jovoy
+[2025-05-28 02:03:32] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 1] for Jovoy
+[2025-05-28 02:03:32] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 0] for Jovoy
+[2025-05-28 02:03:32] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 0] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 1] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 1] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 2] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 2] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [6, 2] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [6, 2] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 2] for Jovoy
+[2025-05-28 02:03:33] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 2] for Jovoy
+[2025-05-28 02:03:34] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 3] for Jovoy
+[2025-05-28 02:03:34] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 3] for Jovoy
+[2025-05-28 02:03:34] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 4] for Jovoy
+[2025-05-28 02:03:34] [INFO] [MovementSystem] Updated movement path from [7, 1] to [7, 4] for Jovoy
+[2025-05-28 02:03:35] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_1___06f7aae0-8694-4062-9ce2-c54083109296
+[2025-05-28 02:03:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on null
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 5 tiles
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 0 tiles
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 0 tiles
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_7___COLUMN_3___30b230d1-8550-4f3f-982b-6e3480f2a61f
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 3 tiles
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_3___a4683f6a-b745-4dba-8cd7-aceda3d4cf74
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 4 tiles
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_2___dd5711b4-1c29-4456-87fd-59c4112e66cf
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:36] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_1___34eef7a6-b1d6-4449-92ce-6d875ad2b402
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Jovoy
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Jovoy lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Jovoy
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Reueei
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Reueei
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_2___dd5711b4-1c29-4456-87fd-59c4112e66cf
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_7___COLUMN_2___594cd37b-441b-491c-87bb-9948cdd07a44
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:37] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_2___dd5711b4-1c29-4456-87fd-59c4112e66cf
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_3___a4683f6a-b745-4dba-8cd7-aceda3d4cf74
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 4 tiles
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_7___COLUMN_3___30b230d1-8550-4f3f-982b-6e3480f2a61f
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 3 tiles
+[2025-05-28 02:03:38] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:39] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_7___COLUMN_2___594cd37b-441b-491c-87bb-9948cdd07a44
+[2025-05-28 02:03:39] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:39] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:39] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_2___dd5711b4-1c29-4456-87fd-59c4112e66cf
+[2025-05-28 02:03:39] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:39] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:42] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_7___COLUMN_2___594cd37b-441b-491c-87bb-9948cdd07a44
+[2025-05-28 02:03:42] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:42] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:42] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:42] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:42] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:42] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_2___dd5711b4-1c29-4456-87fd-59c4112e66cf
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_6___COLUMN_1___34eef7a6-b1d6-4449-92ce-6d875ad2b402
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_5___COLUMN_0___0479fd6f-f164-4612-9a15-e0c5a86708ad
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on ROW_4___COLUMN_0___099c9a16-a198-4e86-a715-09bc7e2ad473
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 2 tiles
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 1 tiles
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Jovoy is planning to use air_attack on null
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated line of sight for Jovoy, viewing 0 tiles
+[2025-05-28 02:03:47] [INFO] [AbilitySystem] Updated area of sight for Jovoy, viewing 0 tiles
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing damage mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Started constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [CombatSystem] Finished constructing cost mappings for Jovoy to use air_attack
+[2025-05-28 02:03:47] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

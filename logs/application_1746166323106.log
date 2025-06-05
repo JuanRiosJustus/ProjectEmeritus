@@ -1,0 +1,149 @@
+[2025-05-01 23:12:03] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-01 23:12:03] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-01 23:12:03] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-01 23:12:03] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-01 23:12:03] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-01 23:12:03] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-01 23:12:03] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-01 23:12:03] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-01 23:12:03] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-01 23:12:03] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-01 23:12:03] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-01 23:12:03] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-01 23:12:03] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-01 23:12:03] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-01 23:12:03] [INFO] [Component] Setting fire_dragon_Soxme_e36258a3-dfb7-49b4-9ef1-c3734488b7c6 on to {"row":7,"column":5,"height":0,"collider":"","unit":"fire_dragon_Soxme_e36258a3-dfb7-49b4-9ef1-c3734488b7c6","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit enemy:Soxme into queue
+[2025-05-01 23:12:03] [INFO] [Component] Setting water_dragon_Xintp_038b9220-6e2d-42f4-bd9d-9d149d2074d1 on to {"row":1,"column":4,"height":0,"collider":"","unit":"water_dragon_Xintp_038b9220-6e2d-42f4-bd9d-9d149d2074d1","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit enemy:Xintp into queue
+[2025-05-01 23:12:03] [INFO] [Component] Setting air_dragon_Biubz_a3c58444-1ae9-4771-8804-6f74f824b043 on to {"row":7,"column":10,"height":0,"spawn_region":2,"collider":"","unit":"air_dragon_Biubz_a3c58444-1ae9-4771-8804-6f74f824b043","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit enemy:Biubz into queue
+[2025-05-01 23:12:03] [INFO] [Component] Setting light_dragon_Wabaaa_673ae8ec-3799-406d-8656-6978228eaad8 on to {"row":3,"column":8,"height":0,"collider":"","unit":"light_dragon_Wabaaa_673ae8ec-3799-406d-8656-6978228eaad8","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit enemy:Wabaaa into queue
+[2025-05-01 23:12:03] [INFO] [Component] Setting water_dragon_Eylwoy_bfe60260-03cd-435c-a8c1-e101bebb1a7f on to {"row":6,"column":10,"height":0,"spawn_region":2,"collider":"","unit":"water_dragon_Eylwoy_bfe60260-03cd-435c-a8c1-e101bebb1a7f","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit user:Eylwoy into queue
+[2025-05-01 23:12:03] [INFO] [Component] Setting earth_dragon_Qekr_919ae35d-5174-43e5-803a-77f0133e6981 on to {"row":5,"column":8,"height":0,"collider":"","unit":"earth_dragon_Qekr_919ae35d-5174-43e5-803a-77f0133e6981","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit user:Qekr into queue
+[2025-05-01 23:12:03] [INFO] [Component] Setting fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f on to {"row":6,"column":11,"height":0,"spawn_region":2,"collider":"","unit":"fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit user:Lengja into queue
+[2025-05-01 23:12:03] [INFO] [Component] Setting dark_dragon_Sihjea_7cd76d41-793a-4128-9a32-7d872d57b1e3 on to {"row":1,"column":5,"height":0,"collider":"","unit":"dark_dragon_Sihjea_7cd76d41-793a-4128-9a32-7d872d57b1e3","structure":""}.
+[2025-05-01 23:12:03] [INFO] [SpeedQueue] Added unit user:Sihjea into queue
+[2025-05-01 23:12:03] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-01 23:12:03] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-01 23:12:03] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-01 23:12:03] [INFO] [FontPool] Started initializing FontPool
+[2025-05-01 23:12:03] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-01 23:12:03] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-01 23:12:03] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-01 23:12:04] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-01 23:12:04] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-01 23:12:04] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-01 23:12:04] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f
+[2025-05-01 23:12:04] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f
+[2025-05-01 23:12:04] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:12:04] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:12:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 23:12:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 23:12:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:12:04] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 23:12:04] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-01 23:12:04] [INFO] [VisualsSystem] Finished creating blurred background after 0.48405376076698303 seconds
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f
+[2025-05-01 23:12:04] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f
+[2025-05-01 23:12:04] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:12:04] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:12:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:12:05] [INFO] [AbilitySystem] Lengja is planning to use pierce_attack on [6, 10]
+[2025-05-01 23:12:05] [INFO] [AbilitySystem] Updated area of sight for Lengja, viewing 4 tiles
+[2025-05-01 23:12:05] [INFO] [AbilitySystem] Updated line of sight for Lengja, viewing 2 tiles
+[2025-05-01 23:12:05] [INFO] [AbilitySystem] Updated area of effect for Lengja viewing 1 tiles
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Started constructing cost mappings for Lengja to use pierce_attack
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Finished constructing cost mappings for Lengja to use pierce_attack
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Checking cost requirements for Lengja to use pierce_attack
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Lengja is able to pay for pierce_attack
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Started constructing cost mappings for Lengja to use pierce_attack
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Finished constructing cost mappings for Lengja to use pierce_attack
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Paying cost requirements for Lengja using pierce_attack
+[2025-05-01 23:12:05] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use pierce_attack
+[2025-05-01 23:12:05] [INFO] [AbilitySystem] Used from pierce_attack on [6, 10]
+[2025-05-01 23:12:05] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lengja to use pierce_attack
+[2025-05-01 23:12:06] [INFO] [MovementSystem] Updated movement range to 5 for Lengja
+[2025-05-01 23:12:06] [INFO] [MovementSystem] Updated movement path from [6, 11] to [5, 10] for Lengja
+[2025-05-01 23:12:06] [INFO] [Component] Setting fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f on to {"row":5,"column":10,"height":0,"spawn_region":2,"collider":"","unit":"fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f","structure":""}.
+[2025-05-01 23:12:06] [INFO] [MovementSystem] Moved from [6, 11] to [5, 10]
+[2025-05-01 23:12:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f
+[2025-05-01 23:12:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Lengja_7807fdbc-2d71-4e23-a70a-f75ffcbd2d6f
+[2025-05-01 23:12:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:12:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Lengja
+[2025-05-01 23:12:06] [INFO] [InputHandler] Gliding 0 camera to new tile 5_10_610d61c1-bcab-4881-b5ff-df4741e14185
+[2025-05-01 23:12:06] [INFO] [InputHandler] Gliding 1 camera to new tile 5_10_610d61c1-bcab-4881-b5ff-df4741e14185
+[2025-05-01 23:12:07] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Soxme_e36258a3-dfb7-49b4-9ef1-c3734488b7c6
+[2025-05-01 23:12:07] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Soxme_e36258a3-dfb7-49b4-9ef1-c3734488b7c6
+[2025-05-01 23:12:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:12:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:12:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 23:12:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 23:12:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Soxme_e36258a3-dfb7-49b4-9ef1-c3734488b7c6
+[2025-05-01 23:12:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Soxme_e36258a3-dfb7-49b4-9ef1-c3734488b7c6
+[2025-05-01 23:12:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:12:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Soxme
+[2025-05-01 23:12:07] [INFO] [InputHandler] Gliding 0 camera to new tile 7_5_9a681d5c-6165-4076-8d3b-dc034e64f865
+[2025-05-01 23:12:07] [INFO] [InputHandler] Gliding 1 camera to new tile 7_5_9a681d5c-6165-4076-8d3b-dc034e64f865
+[2025-05-01 23:12:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-01 23:12:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-01 23:12:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:12:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 23:12:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:12:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 23:12:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:12:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

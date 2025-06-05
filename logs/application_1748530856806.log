@@ -1,0 +1,333 @@
+[2025-05-29 08:00:56] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-29 08:00:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-29 08:00:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-29 08:00:56] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-29 08:00:56] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-29 08:00:56] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-29 08:00:56] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-29 08:00:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-29 08:00:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-29 08:00:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-29 08:00:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-29 08:00:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-29 08:00:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-29 08:00:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Cegid___63387904-15a1-4ee8-b1aa-f879f29880f7 on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Cegid___63387904-15a1-4ee8-b1aa-f879f29880f7","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Cegid___63387904-15a1-4ee8-b1aa-f879f29880f7 into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Eigezp___0a161e6b-fe42-4875-b843-627e27c3017b on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Eigezp___0a161e6b-fe42-4875-b843-627e27c3017b","layers":{"empty":false},"total_elevation":8}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Eigezp___0a161e6b-fe42-4875-b843-627e27c3017b into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Myii___e25597ac-91f0-44b8-be9b-7c38ad23e06f on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Myii___e25597ac-91f0-44b8-be9b-7c38ad23e06f","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Myii___e25597ac-91f0-44b8-be9b-7c38ad23e06f into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Iyqyey___7ea09868-9e59-46bf-b58e-06c3be69c95c on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Iyqyey___7ea09868-9e59-46bf-b58e-06c3be69c95c","layers":{"empty":false},"total_elevation":9}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Iyqyey___7ea09868-9e59-46bf-b58e-06c3be69c95c into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Foniu___13a7001c-6b85-4a16-86b1-acf5245fd7ef on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Foniu___13a7001c-6b85-4a16-86b1-acf5245fd7ef","layers":{"empty":false},"total_elevation":7}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Foniu___13a7001c-6b85-4a16-86b1-acf5245fd7ef into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Yufhyo___f170f07c-993c-4c6f-a796-aa5a759555c8 on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Yufhyo___f170f07c-993c-4c6f-a796-aa5a759555c8","layers":{"empty":false},"total_elevation":7}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Yufhyo___f170f07c-993c-4c6f-a796-aa5a759555c8 into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Dexy___6e70cd5c-ee86-401f-a10f-9cb49b618dbb on to {"row":6,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Dexy___6e70cd5c-ee86-401f-a10f-9cb49b618dbb","layers":{"empty":false},"total_elevation":8}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Dexy___6e70cd5c-ee86-401f-a10f-9cb49b618dbb into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Pufujy___a9a179e7-50b9-4ba2-a13f-3f8f009c8248 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Pufujy___a9a179e7-50b9-4ba2-a13f-3f8f009c8248","layers":{"empty":false},"total_elevation":7}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Pufujy___a9a179e7-50b9-4ba2-a13f-3f8f009c8248 into queue
+[2025-05-29 08:00:57] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Dupo___52ef99ee-bb0d-4ac9-b791-ac69b2776d71 on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Dupo___52ef99ee-bb0d-4ac9-b791-ac69b2776d71","layers":{"empty":false},"total_elevation":7}.
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Dupo___52ef99ee-bb0d-4ac9-b791-ac69b2776d71 into queue
+[2025-05-29 08:00:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-29 08:00:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-29 08:00:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-29 08:00:57] [INFO] [FontPool] Started initializing FontPool
+[2025-05-29 08:00:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-29 08:00:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:57] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-29 08:00:57] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:57] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:57] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-29 08:00:57] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-29 08:00:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-29 08:00:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-29 08:00:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-29 08:00:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-29 08:00:57] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-29 08:00:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.48521649837493896 seconds
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:58] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-29 08:00:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:58] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-29 08:00:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:58] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:00:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-29 08:00:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:00:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 08:00:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-29 08:00:59] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-29 08:01:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-29 08:01:04] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-29 08:01:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-29 08:01:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-29 08:01:12] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___517e55ef-6663-46ac-b70f-65818757a84a
+[2025-05-29 08:01:12] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_1___517e55ef-6663-46ac-b70f-65818757a84a
+[2025-05-29 08:01:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:01:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a
+[2025-05-29 08:01:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-29 08:01:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Viib
+[2025-05-29 08:01:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___517e55ef-6663-46ac-b70f-65818757a84a
+[2025-05-29 08:01:13] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-29 08:01:13] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement range to 10 for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 6] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement range to 10 for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 6] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [7, 7] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [7, 7] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 7] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 7] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 6] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 6] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [5, 6] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [5, 6] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [5, 5] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [5, 5] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 5] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 5] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 4] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 4] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [3, 4] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [3, 4] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [3, 3] for Viib
+[2025-05-29 08:01:13] [INFO] [MovementSystem] Updated movement path from [3, 1] to [3, 3] for Viib
+[2025-05-29 08:01:14] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 2] for Viib
+[2025-05-29 08:01:14] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 2] for Viib
+[2025-05-29 08:01:15] [INFO] [MovementSystem] Updated movement path from [3, 1] to [3, 3] for Viib
+[2025-05-29 08:01:15] [INFO] [MovementSystem] Updated movement path from [3, 1] to [3, 3] for Viib
+[2025-05-29 08:01:17] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 3] for Viib
+[2025-05-29 08:01:17] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 3] for Viib
+[2025-05-29 08:01:17] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 2] for Viib
+[2025-05-29 08:01:17] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 2] for Viib
+[2025-05-29 08:01:19] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 1] for Viib
+[2025-05-29 08:01:19] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 1] for Viib
+[2025-05-29 08:01:19] [INFO] [MovementSystem] Updated movement path from [3, 1] to [5, 1] for Viib
+[2025-05-29 08:01:19] [INFO] [MovementSystem] Updated movement path from [3, 1] to [5, 1] for Viib
+[2025-05-29 08:01:20] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Viib___d24cb3cb-2689-4441-811b-393681a4e73a","layers":{"empty":false},"total_elevation":8}.
+[2025-05-29 08:01:20] [INFO] [MovementSystem] Moved from [3, 1] to [5, 1]
+[2025-05-29 08:01:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-29 08:01:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Viib
+[2025-05-29 08:01:20] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___a16eab57-91c3-4662-940d-c040dffdfc78
+[2025-05-29 08:01:20] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_1___a16eab57-91c3-4662-940d-c040dffdfc78
+[2025-05-29 08:01:21] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___a16eab57-91c3-4662-940d-c040dffdfc78
+[2025-05-29 08:01:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_7___COLUMN_6___9e552162-4bbd-4e2c-aa36-cafe24841ab4
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 11 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 2 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_8___COLUMN_5___013eac7d-66ff-474d-9ecd-391a4ca41572
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 2 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_8___COLUMN_4___7f7f51ca-b5b9-4a61-8785-c98e75ca355f
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 7 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_7___COLUMN_4___22d5b8d5-922d-4db8-b279-ab5964ca863c
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 2 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_7___COLUMN_3___3e8d4223-bbbc-434a-8581-2626b83f6faf
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 5 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_7___COLUMN_2___c3553554-8f95-49c2-b5e1-1cefa5217412
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 4 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_6___COLUMN_2___2f727c8a-0a4b-4b00-b6a0-588075554fc1
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 3 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_6___COLUMN_1___2fc26710-45b4-4360-9c98-d8f689389f71
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 2 tiles
+[2025-05-29 08:01:22] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:23] [INFO] [AbilitySystem] Viib is planning to use air_attack on ROW_6___COLUMN_0___81808667-d968-43f5-b9a8-d5387af94b95
+[2025-05-29 08:01:23] [INFO] [AbilitySystem] Updated line of sight for Viib, viewing 3 tiles
+[2025-05-29 08:01:23] [INFO] [AbilitySystem] Updated area of sight for Viib, viewing 1 tiles
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Viib
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Viib lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Viib
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eigezp
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eigezp
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-29 08:01:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-29 08:01:23] [INFO] [CombatSystem] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [CombatSystem] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Checking cost requirements for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Viib is able to pay for air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Started constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Finished constructing cost mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Paying cost requirements for Viib using air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilitySystem] Used from air_attack on ROW_6___COLUMN_0___81808667-d968-43f5-b9a8-d5387af94b95
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Viib
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Viib lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Viib
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eigezp
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eigezp
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [CombatSystem] Started dealing damage with air_attack to Eigezp 
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Viib
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Viib lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Viib
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eigezp
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eigezp
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-29 08:01:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Viib to use air_attack
+[2025-05-29 08:01:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 08:01:24] [INFO] [AbilitySystem] Finished update updating {} because of ability

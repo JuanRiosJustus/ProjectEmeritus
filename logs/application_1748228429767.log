@@ -1,0 +1,53 @@
+[2025-05-25 20:00:29] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-25 20:00:29] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-25 20:00:29] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-25 20:00:29] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-25 20:00:29] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-25 20:00:29] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-25 20:00:29] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-25 20:00:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-25 20:00:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-25 20:00:32] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-25 20:00:32] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-25 20:00:32] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-25 20:00:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-25 20:00:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Ueul___4298884c-5cab-45f3-ba13-d7aef27f273e on to {"row":9,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Ueul___4298884c-5cab-45f3-ba13-d7aef27f273e","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Ueul___4298884c-5cab-45f3-ba13-d7aef27f273e into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Myxevr___44e76920-8dd1-4e90-a139-167282199608 on to {"row":5,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Myxevr___44e76920-8dd1-4e90-a139-167282199608","total_elevation":5}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Myxevr___44e76920-8dd1-4e90-a139-167282199608 into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Jieyua___74e3a614-b9e0-4d22-ae2e-d0a5f1bae26f on to {"row":4,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Jieyua___74e3a614-b9e0-4d22-ae2e-d0a5f1bae26f","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Jieyua___74e3a614-b9e0-4d22-ae2e-d0a5f1bae26f into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Yoyoy___1f58d70c-05ae-4bd8-aa00-344a626384bb on to {"row":4,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Yoyoy___1f58d70c-05ae-4bd8-aa00-344a626384bb","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Yoyoy___1f58d70c-05ae-4bd8-aa00-344a626384bb into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Vykf___1dacd351-7f63-4adf-ae28-5392d0971da0 on to {"row":9,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Vykf___1dacd351-7f63-4adf-ae28-5392d0971da0","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Vykf___1dacd351-7f63-4adf-ae28-5392d0971da0 into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Eypgu___5f994b4f-81e8-45d8-838c-fcdf508e7aee on to {"row":6,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Eypgu___5f994b4f-81e8-45d8-838c-fcdf508e7aee","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Eypgu___5f994b4f-81e8-45d8-838c-fcdf508e7aee into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Wabe___d0b8b614-2e9f-43af-be5f-0f3ab16ba821 on to {"row":5,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Wabe___d0b8b614-2e9f-43af-be5f-0f3ab16ba821","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Wabe___d0b8b614-2e9f-43af-be5f-0f3ab16ba821 into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Cypyz___f462ae5a-cd7c-487f-b190-132a79d5d3dd on to {"row":4,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Cypyz___f462ae5a-cd7c-487f-b190-132a79d5d3dd","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Cypyz___f462ae5a-cd7c-487f-b190-132a79d5d3dd into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Kohico___f2b480cd-7f03-4173-aa4d-c7dc24f63a3b on to {"row":7,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Kohico___f2b480cd-7f03-4173-aa4d-c7dc24f63a3b","total_elevation":4}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Kohico___f2b480cd-7f03-4173-aa4d-c7dc24f63a3b into queue
+[2025-05-25 20:00:32] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Toie___01570b84-8e60-48cc-a552-a9622e7f12bb on to {"row":1,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Toie___01570b84-8e60-48cc-a552-a9622e7f12bb","total_elevation":3}.
+[2025-05-25 20:00:32] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Toie___01570b84-8e60-48cc-a552-a9622e7f12bb into queue
+[2025-05-25 20:00:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-25 20:00:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-25 20:00:32] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-25 20:00:32] [INFO] [FontPool] Started initializing FontPool
+[2025-05-25 20:00:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-25 20:00:32] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-25 20:00:33] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-25 20:00:33] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-25 20:00:33] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_10___COLUMN_12___6335f61f-9881-49ad-9e2c-97c2a0a94b63
+[2025-05-25 20:00:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-25 20:00:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-25 20:00:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-25 20:00:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-25 20:00:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-25 20:00:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.4961780607700348 seconds
+[2025-05-25 20:00:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-25 20:00:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-25 20:00:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-25 20:00:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

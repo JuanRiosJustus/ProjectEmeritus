@@ -1,0 +1,144 @@
+[2025-05-22 00:03:07] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-22 00:03:07] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-22 00:03:07] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-22 00:03:07] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-22 00:03:07] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-22 00:03:07] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-22 00:03:07] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-22 00:03:07] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-22 00:03:07] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-22 00:03:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-22 00:03:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-22 00:03:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-22 00:03:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-22 00:03:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-22 00:03:08] [INFO] [Component] Setting earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8 on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8","structure":"","total_elevation":7}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8 into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting light_dragon_Lelz_02999f2c-62f3-460d-bc89-8c40bfff71cb on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Lelz_02999f2c-62f3-460d-bc89-8c40bfff71cb","structure":"","total_elevation":7}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit light_dragon_Lelz_02999f2c-62f3-460d-bc89-8c40bfff71cb into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting dark_dragon_Tomiu_8a464da8-0c51-4ccf-a137-d200214ba9c1 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Tomiu_8a464da8-0c51-4ccf-a137-d200214ba9c1","structure":"","total_elevation":7}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit dark_dragon_Tomiu_8a464da8-0c51-4ccf-a137-d200214ba9c1 into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting earth_dragon_Eynna_76226fd5-2df4-4136-a679-32eac097a475 on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Eynna_76226fd5-2df4-4136-a679-32eac097a475","structure":"","total_elevation":5}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit earth_dragon_Eynna_76226fd5-2df4-4136-a679-32eac097a475 into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting light_dragon_Iycaaa_7c23bbaf-64f2-4393-a1aa-528c26855d85 on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Iycaaa_7c23bbaf-64f2-4393-a1aa-528c26855d85","structure":"","total_elevation":8}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit light_dragon_Iycaaa_7c23bbaf-64f2-4393-a1aa-528c26855d85 into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting water_dragon_Volhi_2ed1301c-bb82-4b28-98fe-454d3ec34f61 on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Volhi_2ed1301c-bb82-4b28-98fe-454d3ec34f61","structure":"","total_elevation":8}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit water_dragon_Volhi_2ed1301c-bb82-4b28-98fe-454d3ec34f61 into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting dark_dragon_Konu_2bcead21-8621-4ca8-9004-d11fd3c47cb7 on to {"row":5,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Konu_2bcead21-8621-4ca8-9004-d11fd3c47cb7","structure":"","total_elevation":8}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit dark_dragon_Konu_2bcead21-8621-4ca8-9004-d11fd3c47cb7 into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting dragon_Ziiyo_293cf164-0edd-47f7-ba59-439675feaaff on to {"row":0,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dragon_Ziiyo_293cf164-0edd-47f7-ba59-439675feaaff","structure":"","total_elevation":2}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit dragon_Ziiyo_293cf164-0edd-47f7-ba59-439675feaaff into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting light_dragon_Cesi_ce4963bb-49b6-4715-b9d7-665a4f364d87 on to {"row":4,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Cesi_ce4963bb-49b6-4715-b9d7-665a4f364d87","structure":"","total_elevation":7}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit light_dragon_Cesi_ce4963bb-49b6-4715-b9d7-665a4f364d87 into queue
+[2025-05-22 00:03:08] [INFO] [Component] Setting dragon_Rahoa_63c67cfe-569c-499f-8fe5-ded137cdc727 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dragon_Rahoa_63c67cfe-569c-499f-8fe5-ded137cdc727","structure":"","total_elevation":8}.
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Added unit dragon_Rahoa_63c67cfe-569c-499f-8fe5-ded137cdc727 into queue
+[2025-05-22 00:03:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-22 00:03:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-22 00:03:08] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-22 00:03:08] [INFO] [FontPool] Started initializing FontPool
+[2025-05-22 00:03:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-22 00:03:08] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-22 00:03:08] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-22 00:03:08] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-22 00:03:08] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-22 00:03:08] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-22 00:03:08] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8
+[2025-05-22 00:03:08] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8
+[2025-05-22 00:03:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-22 00:03:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-22 00:03:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-22 00:03:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-22 00:03:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:03:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-22 00:03:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-22 00:03:09] [INFO] [VisualsSystem] Finished creating blurred background after 0.4898122549057007 seconds
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8
+[2025-05-22 00:03:09] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8
+[2025-05-22 00:03:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-22 00:03:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-22 00:03:09] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-22 00:03:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:03:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-22 00:03:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:03:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-22 00:03:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:03:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-22 00:03:13] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_27ffb436-c0af-4e78-a014-0edc1560580d
+[2025-05-22 00:03:13] [INFO] [InputHandler] Gliding 1 camera to new tile 2_1_27ffb436-c0af-4e78-a014-0edc1560580d
+[2025-05-22 00:03:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8
+[2025-05-22 00:03:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8
+[2025-05-22 00:03:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:03:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Biziuu
+[2025-05-22 00:03:14] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_27ffb436-c0af-4e78-a014-0edc1560580d
+[2025-05-22 00:03:14] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-22 00:03:14] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-22 00:03:14] [INFO] [MovementSystem] Updated movement range to 11 for Biziuu
+[2025-05-22 00:03:14] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Biziuu
+[2025-05-22 00:03:14] [INFO] [MovementSystem] Updated movement range to 11 for Biziuu
+[2025-05-22 00:03:14] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 4] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 4] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 3] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 3] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 1] for Biziuu
+[2025-05-22 00:03:15] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 1] for Biziuu
+[2025-05-22 00:03:16] [INFO] [Component] Setting earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Biziuu_b1732539-90b7-4a16-9553-4f02e41bf3b8","structure":"","total_elevation":10}.
+[2025-05-22 00:03:16] [INFO] [MovementSystem] Moved from [2, 1] to [4, 1]
+[2025-05-22 00:03:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:03:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Biziuu
+[2025-05-22 00:03:16] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_0d991a88-e4a7-4888-99a8-5e9ce8851629
+[2025-05-22 00:03:16] [INFO] [InputHandler] Gliding 1 camera to new tile 4_1_0d991a88-e4a7-4888-99a8-5e9ce8851629

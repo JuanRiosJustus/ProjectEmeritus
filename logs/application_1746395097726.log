@@ -1,0 +1,315 @@
+[2025-05-04 14:44:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:44:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:44:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:44:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:44:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:44:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:44:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:44:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:44:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:44:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:44:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:44:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:44:58] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:44:58] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:44:58] [INFO] [Component] Setting water_dragon_Xenept_f4c0e9df-075b-4f5d-abcc-5c1fc26bed0f on to {"row":0,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Xenept_f4c0e9df-075b-4f5d-abcc-5c1fc26bed0f","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit water_dragon_Xenept_f4c0e9df-075b-4f5d-abcc-5c1fc26bed0f into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7 on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7 into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting dragon_Muqo_b9e73f01-3656-47e9-9a71-c8820d606b51 on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Muqo_b9e73f01-3656-47e9-9a71-c8820d606b51","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit dragon_Muqo_b9e73f01-3656-47e9-9a71-c8820d606b51 into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting light_dragon_Hozzcp_7652d3b8-1887-4b23-8e05-179529a65e13 on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Hozzcp_7652d3b8-1887-4b23-8e05-179529a65e13","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit light_dragon_Hozzcp_7652d3b8-1887-4b23-8e05-179529a65e13 into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting air_dragon_Yaga_31192eff-66e6-44ae-94e1-b19eebcd797a on to {"row":3,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Yaga_31192eff-66e6-44ae-94e1-b19eebcd797a","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit air_dragon_Yaga_31192eff-66e6-44ae-94e1-b19eebcd797a into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting water_dragon_Bysue_c1327288-c5ff-47b7-acd4-7ad042a66254 on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Bysue_c1327288-c5ff-47b7-acd4-7ad042a66254","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit water_dragon_Bysue_c1327288-c5ff-47b7-acd4-7ad042a66254 into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting dragon_Hufe_cb5a2b4a-fb81-4fea-b5ff-f67fd39bbe5c on to {"row":6,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Hufe_cb5a2b4a-fb81-4fea-b5ff-f67fd39bbe5c","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit dragon_Hufe_cb5a2b4a-fb81-4fea-b5ff-f67fd39bbe5c into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting water_dragon_Lieqs_557c86f1-0e81-401a-b67b-356704adb4e9 on to {"row":5,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Lieqs_557c86f1-0e81-401a-b67b-356704adb4e9","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit water_dragon_Lieqs_557c86f1-0e81-401a-b67b-356704adb4e9 into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting water_dragon_Xuvu_4f357828-863c-45be-bf1f-ae3120ac2d9c on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Xuvu_4f357828-863c-45be-bf1f-ae3120ac2d9c","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit water_dragon_Xuvu_4f357828-863c-45be-bf1f-ae3120ac2d9c into queue
+[2025-05-04 14:44:58] [INFO] [Component] Setting fire_dragon_Miur_15ea8e45-9c33-4a08-b26d-8b7ad1d5b846 on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Miur_15ea8e45-9c33-4a08-b26d-8b7ad1d5b846","structure":""}.
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Added unit fire_dragon_Miur_15ea8e45-9c33-4a08-b26d-8b7ad1d5b846 into queue
+[2025-05-04 14:44:58] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:44:58] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:44:58] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:44:58] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:44:58] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:44:58] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:44:58] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:44:58] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:44:58] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:44:58] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:58] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:44:58] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:58] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:44:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:44:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:44:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:44:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:44:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:44:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:44:59] [INFO] [VisualsSystem] Finished creating blurred background after 0.4867109954357147 seconds
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:59] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:44:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:59] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:44:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:59] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:44:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:44:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:44:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:45:00] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_01d3e619-5dde-46b9-a707-3f4f3886ad43
+[2025-05-04 14:45:00] [INFO] [InputHandler] Gliding 1 camera to new tile 2_1_01d3e619-5dde-46b9-a707-3f4f3886ad43
+[2025-05-04 14:45:00] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:45:00] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Byxa_14cfabe8-837a-4877-8e21-7ab35d3442d7
+[2025-05-04 14:45:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:45:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Byxa
+[2025-05-04 14:45:01] [INFO] [InputHandler] Gliding 0 camera to new tile 2_1_01d3e619-5dde-46b9-a707-3f4f3886ad43
+[2025-05-04 14:45:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Byxa is planning to use air_attack on [5, 7]
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of sight for Byxa, viewing 8 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated line of sight for Byxa, viewing 2 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of effect for Byxa viewing 1 tiles
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Byxa is planning to use air_attack on [5, 5]
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated line of sight for Byxa, viewing 2 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of effect for Byxa viewing 1 tiles
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Byxa is planning to use air_attack on [5, 4]
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated line of sight for Byxa, viewing 2 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of effect for Byxa viewing 1 tiles
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Byxa is planning to use air_attack on [4, 3]
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated line of sight for Byxa, viewing 2 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of effect for Byxa viewing 1 tiles
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Byxa is planning to use air_attack on [4, 2]
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated line of sight for Byxa, viewing 2 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of effect for Byxa viewing 1 tiles
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Byxa is planning to use air_attack on [4, 1]
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated line of sight for Byxa, viewing 2 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of effect for Byxa viewing 1 tiles
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Byxa is planning to use air_attack on [3, 1]
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated line of sight for Byxa, viewing 2 tiles
+[2025-05-04 14:45:02] [INFO] [AbilitySystem] Updated area of effect for Byxa viewing 1 tiles
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Byxa
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Byxa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Byxa
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yaga
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Yaga defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yaga
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-04 14:45:02] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:02] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Checking cost requirements for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Byxa is able to pay for air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Started constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Finished constructing cost mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Paying cost requirements for Byxa using air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Used from air_attack on [3, 1]
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Byxa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Yaga defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [CombatSystem] Started dealing damage with air_attack to Yaga 
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Byxa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Yaga defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Byxa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Yaga defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Byxa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Yaga defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Byxa lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Byxa
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Yaga defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yaga
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-04 14:45:03] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Byxa to use air_attack
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:45:03] [INFO] [AbilitySystem] Finished update updating {} because of ability

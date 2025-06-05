@@ -1,0 +1,298 @@
+[2025-05-20 23:03:56] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-20 23:03:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-20 23:03:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-20 23:03:56] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-20 23:03:56] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-20 23:03:56] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-20 23:03:56] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-20 23:03:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-20 23:03:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-20 23:03:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-20 23:03:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-20 23:03:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-20 23:03:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-20 23:03:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-20 23:03:57] [INFO] [Component] Setting dragon_Zucs_e1b74549-d094-4f78-aecf-95928fa632bf on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dragon_Zucs_e1b74549-d094-4f78-aecf-95928fa632bf","structure":"","total_elevation":6}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit dragon_Zucs_e1b74549-d094-4f78-aecf-95928fa632bf into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c","structure":"","total_elevation":4}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting fire_dragon_Sofil_0040e228-4fab-4b91-a9e0-7f4dc72af6e1 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Sofil_0040e228-4fab-4b91-a9e0-7f4dc72af6e1","structure":"","total_elevation":6}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit fire_dragon_Sofil_0040e228-4fab-4b91-a9e0-7f4dc72af6e1 into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting water_dragon_Tuyx_feb61fe3-3fdf-4f79-8386-0621a3380cb3 on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Tuyx_feb61fe3-3fdf-4f79-8386-0621a3380cb3","structure":"","total_elevation":4}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit water_dragon_Tuyx_feb61fe3-3fdf-4f79-8386-0621a3380cb3 into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting light_dragon_Zeimed_045d880e-ef5c-4308-a21c-965efd2e614b on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Zeimed_045d880e-ef5c-4308-a21c-965efd2e614b","structure":"","total_elevation":4}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit light_dragon_Zeimed_045d880e-ef5c-4308-a21c-965efd2e614b into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting dark_dragon_Lybc_b904961a-f95a-4b33-ba9b-ddbfd5d1f8a4 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Lybc_b904961a-f95a-4b33-ba9b-ddbfd5d1f8a4","structure":"","total_elevation":5}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit dark_dragon_Lybc_b904961a-f95a-4b33-ba9b-ddbfd5d1f8a4 into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting fire_dragon_Dabu_ee0b28a4-4a3c-468a-9a06-4cb4045c1d48 on to {"row":1,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Dabu_ee0b28a4-4a3c-468a-9a06-4cb4045c1d48","structure":"","total_elevation":4}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit fire_dragon_Dabu_ee0b28a4-4a3c-468a-9a06-4cb4045c1d48 into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486 on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486","structure":"","total_elevation":6}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486 into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting light_dragon_Setoa_5469dd3d-b097-48fd-893f-01f037efd8f4 on to {"row":5,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Setoa_5469dd3d-b097-48fd-893f-01f037efd8f4","structure":"","total_elevation":4}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit light_dragon_Setoa_5469dd3d-b097-48fd-893f-01f037efd8f4 into queue
+[2025-05-20 23:03:57] [INFO] [Component] Setting dark_dragon_Rulo_0d6fd9da-6ea8-4b7c-8b66-c423eccd7f69 on to {"row":2,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Rulo_0d6fd9da-6ea8-4b7c-8b66-c423eccd7f69","structure":"","total_elevation":3}.
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Added unit dark_dragon_Rulo_0d6fd9da-6ea8-4b7c-8b66-c423eccd7f69 into queue
+[2025-05-20 23:03:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-20 23:03:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-20 23:03:57] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-20 23:03:57] [INFO] [FontPool] Started initializing FontPool
+[2025-05-20 23:03:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-20 23:03:57] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-20 23:03:57] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-20 23:03:57] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-20 23:03:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-20 23:03:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:57] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-20 23:03:57] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:57] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:57] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:03:57] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:03:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-20 23:03:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-20 23:03:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-20 23:03:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-20 23:03:57] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-20 23:03:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.49187949299812317 seconds
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:58] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:03:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:58] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:03:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:58] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:03:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:03:59] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:03:59] [INFO] [InputHandler] Gliding 1 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:03:59] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:59] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c
+[2025-05-20 23:03:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-20 23:03:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Eaduxn
+[2025-05-20 23:04:01] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:04:01] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-20 23:04:01] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement range to 6 for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 5] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement range to 6 for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 5] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 5] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 5] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 4] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 4] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 3] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 3] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Eaduxn
+[2025-05-20 23:04:01] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 2] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 2] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [2, 0] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [2, 0] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [1, 0] for Eaduxn
+[2025-05-20 23:05:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [1, 0] for Eaduxn
+[2025-05-20 23:05:11] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:05:11] [INFO] [InputHandler] Gliding 1 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [2, 0] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [2, 0] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 0] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 3] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 3] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 3] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 3] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 4] for Eaduxn
+[2025-05-20 23:05:12] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 4] for Eaduxn
+[2025-05-20 23:05:14] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:05:14] [INFO] [InputHandler] Gliding 1 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:05:16] [INFO] [InputHandler] Gliding 0 camera to new tile 4_0_97439bf0-fc46-475d-99c7-baaffc6dadd8
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Eaduxn
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Eaduxn
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 4] for Eaduxn
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 4] for Eaduxn
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Eaduxn
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Eaduxn
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 3] for Eaduxn
+[2025-05-20 23:05:16] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 3] for Eaduxn
+[2025-05-20 23:05:17] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Eaduxn
+[2025-05-20 23:05:17] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Eaduxn
+[2025-05-20 23:05:17] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Eaduxn
+[2025-05-20 23:05:17] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Eaduxn
+[2025-05-20 23:05:17] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Eaduxn
+[2025-05-20 23:05:17] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Eaduxn
+[2025-05-20 23:05:17] [INFO] [Component] Setting air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c on to {"row":4,"column":2,"base_elevation":0,"collider":"","unit":"air_dragon_Eaduxn_b32d2d6a-0647-416c-86a8-4b5c5c7f573c","structure":"","total_elevation":7}.
+[2025-05-20 23:05:17] [INFO] [MovementSystem] Moved from [4, 0] to [4, 2]
+[2025-05-20 23:05:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-20 23:05:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Eaduxn
+[2025-05-20 23:05:17] [INFO] [InputHandler] Gliding 0 camera to new tile 4_2_6127061d-57a6-454d-9ea3-0262978c8eb0
+[2025-05-20 23:05:17] [INFO] [InputHandler] Gliding 1 camera to new tile 4_2_6127061d-57a6-454d-9ea3-0262978c8eb0
+[2025-05-20 23:05:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:05:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:05:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-20 23:05:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-20 23:05:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-20 23:05:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Ourpy
+[2025-05-20 23:05:19] [INFO] [InputHandler] Gliding 0 camera to new tile 6_11_ac53c5d6-84da-49d3-b3b7-7f8a4a5eea35
+[2025-05-20 23:05:19] [INFO] [InputHandler] Gliding 1 camera to new tile 6_11_ac53c5d6-84da-49d3-b3b7-7f8a4a5eea35
+[2025-05-20 23:05:20] [INFO] [MovementSystem] Updated movement range to 6 for Ourpy
+[2025-05-20 23:05:20] [INFO] [MovementSystem] Updated movement path from [6, 11] to [6, 9] for Ourpy
+[2025-05-20 23:05:20] [INFO] [Component] Setting air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486 on to {"row":6,"column":9,"base_elevation":0,"collider":"","unit":"air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486","structure":"","total_elevation":3}.
+[2025-05-20 23:05:20] [INFO] [MovementSystem] Moved from [6, 11] to [6, 9]
+[2025-05-20 23:05:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-20 23:05:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Ourpy
+[2025-05-20 23:05:20] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_4dfb50c5-ad67-429d-b7fa-3fcbcbe268c3
+[2025-05-20 23:05:20] [INFO] [InputHandler] Gliding 1 camera to new tile 6_9_4dfb50c5-ad67-429d-b7fa-3fcbcbe268c3
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Ourpy is planning to use air_attack on [5, 10]
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Updated area of sight for Ourpy, viewing 12 tiles
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Updated line of sight for Ourpy, viewing 3 tiles
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Updated area of effect for Ourpy viewing 1 tiles
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Started constructing cost mappings for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Finished constructing cost mappings for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Checking cost requirements for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Ourpy is able to pay for air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Started constructing cost mappings for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Finished constructing cost mappings for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Paying cost requirements for Ourpy using air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Used from air_attack on [5, 10]
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Ourpy_6dc8b70f-93e0-43fb-bb98-f88515b6a486
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Ourpy
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Ourpy lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Ourpy
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Setoa
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Setoa
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-20 23:05:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Ourpy to use air_attack
+[2025-05-20 23:05:21] [INFO] [CombatSystem] Started dealing damage with air_attack to Setoa 
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Sofil_0040e228-4fab-4b91-a9e0-7f4dc72af6e1
+[2025-05-20 23:05:21] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Sofil_0040e228-4fab-4b91-a9e0-7f4dc72af6e1
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-20 23:05:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-20 23:05:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Sofil_0040e228-4fab-4b91-a9e0-7f4dc72af6e1
+[2025-05-20 23:05:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Sofil_0040e228-4fab-4b91-a9e0-7f4dc72af6e1
+[2025-05-20 23:05:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-20 23:05:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Sofil
+[2025-05-20 23:05:21] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_d0e54470-a31c-4e42-b753-9fc7cea0ea26
+[2025-05-20 23:05:21] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_d0e54470-a31c-4e42-b753-9fc7cea0ea26
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-20 23:05:21] [INFO] [AbilitySystem] Finished update updating {} because of ability

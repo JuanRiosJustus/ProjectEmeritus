@@ -1,0 +1,421 @@
+[2025-06-04 02:09:51] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-04 02:09:51] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-04 02:09:51] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-04 02:09:51] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-04 02:09:51] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-04 02:09:51] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-04 02:09:51] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-04 02:09:51] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-04 02:09:51] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-04 02:09:51] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-04 02:09:51] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-04 02:09:51] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-04 02:09:51] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-04 02:09:51] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Ruaou___683c2908-48cb-4053-806c-ffdda9911bdf on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Ruaou___683c2908-48cb-4053-806c-ffdda9911bdf","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Ruaou___683c2908-48cb-4053-806c-ffdda9911bdf into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Tuux___e0baa028-bdd4-4a61-a320-29f2c529e86c on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Tuux___e0baa028-bdd4-4a61-a320-29f2c529e86c","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Tuux___e0baa028-bdd4-4a61-a320-29f2c529e86c into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Xutta___ee779690-7891-48d0-a5c7-d63987270a5c on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Xutta___ee779690-7891-48d0-a5c7-d63987270a5c","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Xutta___ee779690-7891-48d0-a5c7-d63987270a5c into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jizeu___1233c3d0-7a8d-49d9-b3ea-8ae3d03eb766 on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Jizeu___1233c3d0-7a8d-49d9-b3ea-8ae3d03eb766","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Jizeu___1233c3d0-7a8d-49d9-b3ea-8ae3d03eb766 into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Eygd___4cc02eef-9f7c-415f-a999-366ce7351508 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Eygd___4cc02eef-9f7c-415f-a999-366ce7351508","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Eygd___4cc02eef-9f7c-415f-a999-366ce7351508 into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486 into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63 into queue
+[2025-06-04 02:09:51] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Uofi___086fae4a-8f32-40be-b3df-ef5d4672f11c on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Uofi___086fae4a-8f32-40be-b3df-ef5d4672f11c","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:09:51] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Uofi___086fae4a-8f32-40be-b3df-ef5d4672f11c into queue
+[2025-06-04 02:09:51] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-04 02:09:52] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-04 02:09:52] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-04 02:09:52] [INFO] [FontPool] Started initializing FontPool
+[2025-06-04 02:09:52] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-04 02:09:52] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:52] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-04 02:09:52] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-04 02:09:52] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Tuux___e0baa028-bdd4-4a61-a320-29f2c529e86c
+[2025-06-04 02:09:52] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Tuux___e0baa028-bdd4-4a61-a320-29f2c529e86c
+[2025-06-04 02:09:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:09:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:09:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:09:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:09:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:09:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-04 02:09:52] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-04 02:09:53] [INFO] [VisualsSystem] Finished creating blurred background after 0.484241247177124 seconds
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Tuux___e0baa028-bdd4-4a61-a320-29f2c529e86c
+[2025-06-04 02:09:53] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Tuux___e0baa028-bdd4-4a61-a320-29f2c529e86c
+[2025-06-04 02:09:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:09:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:09:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:09:59] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd
+[2025-06-04 02:09:59] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd
+[2025-06-04 02:09:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:09:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:09:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:09:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:09:59] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd
+[2025-06-04 02:09:59] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd
+[2025-06-04 02:09:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:09:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Zidmo
+[2025-06-04 02:09:59] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_11___2176d706-d202-4afb-96f6-1fbee5d2ae56
+[2025-06-04 02:09:59] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_11___2176d706-d202-4afb-96f6-1fbee5d2ae56
+[2025-06-04 02:10:00] [INFO] [MovementSystem] Updated movement range to 6 for Zidmo
+[2025-06-04 02:10:00] [INFO] [MovementSystem] Updated movement path from [8, 11] to [9, 11] for Zidmo
+[2025-06-04 02:10:00] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Zidmo___e86933a6-5f2b-45fd-9be0-38f59addddbd","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:10:00] [INFO] [MovementSystem] Moved from [8, 11] to [9, 11]
+[2025-06-04 02:10:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Zidmo
+[2025-06-04 02:10:00] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_11___6b367e75-de15-4446-a1ac-6d71e91e9d14
+[2025-06-04 02:10:00] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_9___COLUMN_11___6b367e75-de15-4446-a1ac-6d71e91e9d14
+[2025-06-04 02:10:01] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a
+[2025-06-04 02:10:01] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a
+[2025-06-04 02:10:01] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:01] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a
+[2025-06-04 02:10:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a
+[2025-06-04 02:10:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Yyioie
+[2025-06-04 02:10:01] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_11___dfd20884-848d-42dc-bfce-b954a9828131
+[2025-06-04 02:10:01] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_11___dfd20884-848d-42dc-bfce-b954a9828131
+[2025-06-04 02:10:03] [INFO] [MovementSystem] Updated movement range to 9 for Yyioie
+[2025-06-04 02:10:03] [INFO] [MovementSystem] Updated movement path from [3, 11] to [1, 11] for Yyioie
+[2025-06-04 02:10:03] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Yyioie___e2a35281-1eb0-40ba-bf08-2701d00b745a","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 02:10:03] [INFO] [MovementSystem] Moved from [3, 11] to [1, 11]
+[2025-06-04 02:10:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Yyioie
+[2025-06-04 02:10:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_11___53989bb7-9d7b-400e-b34d-132215cccca9
+[2025-06-04 02:10:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_11___53989bb7-9d7b-400e-b34d-132215cccca9
+[2025-06-04 02:10:03] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Jizeu___1233c3d0-7a8d-49d9-b3ea-8ae3d03eb766
+[2025-06-04 02:10:03] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Jizeu___1233c3d0-7a8d-49d9-b3ea-8ae3d03eb766
+[2025-06-04 02:10:03] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:03] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Jizeu___1233c3d0-7a8d-49d9-b3ea-8ae3d03eb766
+[2025-06-04 02:10:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Jizeu___1233c3d0-7a8d-49d9-b3ea-8ae3d03eb766
+[2025-06-04 02:10:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Jizeu
+[2025-06-04 02:10:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_1___614b87e1-d795-4434-b567-3e6decb0c060
+[2025-06-04 02:10:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_1___614b87e1-d795-4434-b567-3e6decb0c060
+[2025-06-04 02:10:05] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486
+[2025-06-04 02:10:05] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486
+[2025-06-04 02:10:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:05] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486
+[2025-06-04 02:10:05] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486
+[2025-06-04 02:10:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Jieki
+[2025-06-04 02:10:05] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_11___a8e548fc-f858-433a-8e57-8d9450e4307b
+[2025-06-04 02:10:05] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_11___a8e548fc-f858-433a-8e57-8d9450e4307b
+[2025-06-04 02:10:07] [INFO] [MovementSystem] Updated movement range to 7 for Jieki
+[2025-06-04 02:10:07] [INFO] [MovementSystem] Updated movement path from [7, 11] to [8, 11] for Jieki
+[2025-06-04 02:10:07] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Jieki___32a80bec-32b4-424b-8f5d-de047a13d486","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 02:10:07] [INFO] [MovementSystem] Moved from [7, 11] to [8, 11]
+[2025-06-04 02:10:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Jieki
+[2025-06-04 02:10:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_11___2176d706-d202-4afb-96f6-1fbee5d2ae56
+[2025-06-04 02:10:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_11___2176d706-d202-4afb-96f6-1fbee5d2ae56
+[2025-06-04 02:10:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Xutta___ee779690-7891-48d0-a5c7-d63987270a5c
+[2025-06-04 02:10:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Xutta___ee779690-7891-48d0-a5c7-d63987270a5c
+[2025-06-04 02:10:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Xutta___ee779690-7891-48d0-a5c7-d63987270a5c
+[2025-06-04 02:10:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Xutta___ee779690-7891-48d0-a5c7-d63987270a5c
+[2025-06-04 02:10:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Xutta
+[2025-06-04 02:10:08] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_1___39f8a802-0c94-4b25-87ed-374348109f32
+[2025-06-04 02:10:08] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_1___39f8a802-0c94-4b25-87ed-374348109f32
+[2025-06-04 02:10:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Eygd___4cc02eef-9f7c-415f-a999-366ce7351508
+[2025-06-04 02:10:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Eygd___4cc02eef-9f7c-415f-a999-366ce7351508
+[2025-06-04 02:10:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:11] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Eygd___4cc02eef-9f7c-415f-a999-366ce7351508
+[2025-06-04 02:10:11] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Eygd___4cc02eef-9f7c-415f-a999-366ce7351508
+[2025-06-04 02:10:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Eygd
+[2025-06-04 02:10:11] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_1___565371ee-9761-420d-aaaf-2c581bd04b60
+[2025-06-04 02:10:11] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_1___565371ee-9761-420d-aaaf-2c581bd04b60
+[2025-06-04 02:10:13] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:13] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 02:10:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 02:10:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Xopt
+[2025-06-04 02:10:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_12___836e2e19-511f-491e-aef1-8cde8aff18a2
+[2025-06-04 02:10:13] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_12___836e2e19-511f-491e-aef1-8cde8aff18a2
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 15 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 10 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 10 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 5 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Payed 5.0 out of 5 to use test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Xopt___42c297a8-e33b-4814-b7d5-9f1f5d5f7c63
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 4 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated line of sight for Xopt, viewing 2 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Updated area of sight for Xopt, viewing 1 tiles
+[2025-06-04 02:10:14] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-04 02:10:14] [INFO] [GameModel] Xopt is unable to pay for test_slash because of stamina
+[2025-06-04 02:10:14] [INFO] [GameModel] Started dealing damage with test_slash to Jieki 
+[2025-06-04 02:10:14] [INFO] [GameModel] Started dealing damage with test_slash to Jieki 
+[2025-06-04 02:10:14] [INFO] [GameModel] Started dealing damage with test_slash to Jieki 
+[2025-06-04 02:10:14] [INFO] [GameModel] Started dealing damage with test_slash to Jieki 
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 02:10:14] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 02:10:14] [INFO] 

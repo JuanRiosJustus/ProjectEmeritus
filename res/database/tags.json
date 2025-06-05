@@ -1,0 +1,43 @@
+[
+    {
+        "tag": "potential_burst",
+        "announcement": "",
+        "duration": 2,
+        "attributes": [
+            {
+                "attribute": "physical_attack",
+                "attribute_key": "physical_attack",
+                "attribute_scaling": "total",
+                "attribute_value": 0.2
+            },
+            {
+                "attribute": "magical_attack",
+                "attribute_key": "magical_attack",
+                "attribute_scaling": "total",
+                "attribute_value": 0.2
+            },
+            {
+                "attribute": "physical_defense",
+                "attribute_key": "physical_defense",
+                "attribute_scaling": "total",
+                "attribute_value": 0.4
+            },
+            {
+                "attribute": "magical_defense",
+                "attribute_key": "magical_defense",
+                "attribute_scaling": "total",
+                "attribute_value": 0.4
+            }
+        ]
+    },
+    {
+        "tag": "Burn",
+        "announcement": "",
+        "duration": 2
+    },
+    {
+        "tag": "Wet",
+        "announcement": "",
+        "duration": 2
+    }
+]

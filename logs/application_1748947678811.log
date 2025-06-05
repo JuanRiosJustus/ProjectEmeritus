@@ -1,0 +1,1179 @@
+[2025-06-03 03:47:58] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 03:47:58] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 03:47:58] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 03:47:58] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 03:47:58] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 03:47:58] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 03:47:58] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 03:47:58] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 03:47:58] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 03:47:58] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 03:47:58] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 03:47:59] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 03:47:59] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 03:47:59] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Saur___bb877b48-e722-43f2-bd34-49fa531bf1e3 on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Saur___bb877b48-e722-43f2-bd34-49fa531bf1e3","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Oaki___6908fc85-d0dd-479d-ada7-e7d2e3c742b0 on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Oaki___6908fc85-d0dd-479d-ada7-e7d2e3c742b0","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Vobar___2725398b-ce15-44f4-b32c-68784b807e0d on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Vobar___2725398b-ce15-44f4-b32c-68784b807e0d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Gaftg___70f07435-68bb-4822-9843-35c5e18e070d on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Gaftg___70f07435-68bb-4822-9843-35c5e18e070d","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5 on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 03:47:59] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Sydj___355d29ee-f772-44a2-b33b-efc1f534f6b9 on to {"row":9,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Sydj___355d29ee-f772-44a2-b33b-efc1f534f6b9","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:47:59] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-03 03:47:59] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-03 03:47:59] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-03 03:47:59] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 03:47:59] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 03:47:59] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:47:59] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:47:59] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:47:59] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:47:59] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:47:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-03 03:47:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-03 03:47:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:47:59] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 03:47:59] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-03 03:48:00] [INFO] [VisualsSystem] Finished creating blurred background after 0.4857901632785797 seconds
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d
+[2025-06-03 03:48:00] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d
+[2025-06-03 03:48:00] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:00] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d
+[2025-06-03 03:48:00] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d
+[2025-06-03 03:48:00] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:00] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:48:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:48:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:48:01] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 03:48:02] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_1___c1cbaaa2-8d8f-4b0d-8a20-ae6c95a88fe6
+[2025-06-03 03:48:02] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_1___c1cbaaa2-8d8f-4b0d-8a20-ae6c95a88fe6
+[2025-06-03 03:48:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:48:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Liae
+[2025-06-03 03:48:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___c438e70b-f73e-4172-8962-2d01021fd252
+[2025-06-03 03:48:03] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-03 03:48:03] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-03 03:48:03] [INFO] [MovementSystem] Updated movement range to 12 for Nusehq
+[2025-06-03 03:48:03] [INFO] [MovementSystem] Updated movement path from [5, 1] to [9, 8] for Nusehq
+[2025-06-03 03:48:03] [INFO] [MovementSystem] Updated movement range to 12 for Nusehq
+[2025-06-03 03:48:03] [INFO] [MovementSystem] Updated movement path from [5, 1] to [9, 8] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [9, 7] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [9, 7] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 6] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 6] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 5] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [8, 5] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 5] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 5] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 4] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [7, 4] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 4] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 4] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 3] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [6, 3] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Nusehq
+[2025-06-03 03:48:04] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Nusehq
+[2025-06-03 03:48:05] [INFO] [MovementSystem] Updated movement path from [5, 1] to [4, 2] for Nusehq
+[2025-06-03 03:48:05] [INFO] [MovementSystem] Updated movement path from [5, 1] to [4, 2] for Nusehq
+[2025-06-03 03:48:05] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Nusehq
+[2025-06-03 03:48:05] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 2] for Nusehq
+[2025-06-03 03:48:05] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Nusehq
+[2025-06-03 03:48:05] [INFO] [MovementSystem] Updated movement path from [5, 1] to [5, 3] for Nusehq
+[2025-06-03 03:48:06] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d on to {"row":5,"column":3,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 03:48:06] [INFO] [MovementSystem] Moved from [5, 1] to [5, 3]
+[2025-06-03 03:48:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d
+[2025-06-03 03:48:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Nusehq___403f7ca3-52b1-4a34-abe3-a1932117929d
+[2025-06-03 03:48:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:48:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Nusehq
+[2025-06-03 03:48:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_3___8b1bfe68-7456-48ff-bdf4-6f1a0d0d6c44
+[2025-06-03 03:48:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_3___8b1bfe68-7456-48ff-bdf4-6f1a0d0d6c44
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:48:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Vedo
+[2025-06-03 03:48:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_11___5ec355b9-6295-49fa-b950-9a61930e6dee
+[2025-06-03 03:48:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_11___5ec355b9-6295-49fa-b950-9a61930e6dee
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementSystem] Updated movement range to 6 for Loxnd
+[2025-06-03 03:48:07] [INFO] [MovementSystem] Updated movement path from [1, 11] to [0, 10] for Loxnd
+[2025-06-03 03:48:07] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68 on to {"row":0,"column":10,"base_elevation":0,"unit":"UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:48:07] [INFO] [MovementSystem] Moved from [1, 11] to [0, 10]
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_11___5ec355b9-6295-49fa-b950-9a61930e6dee
+[2025-06-03 03:48:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_11___5ec355b9-6295-49fa-b950-9a61930e6dee
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:08] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Teuii___db73e1e6-4291-409b-b029-0d2921210de5
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Vedo___70188681-fce6-46c7-9dca-f01e03fa4d2a
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Liae___9d68a518-2b04-49a9-a8ce-e7fdc70cb63e
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Loxnd___aa27e02f-d8ad-4a16-87d9-9b5121e9ef68
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:48:10] [INFO] [MovementPanel] Finished update to Movement Information panel.

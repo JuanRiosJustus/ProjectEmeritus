@@ -1,0 +1,18 @@
+
+
+
+Say we have Strength Stat. It can be influenced by equipment, skills, passives, etc. Has starting value.
+
+
+STARTING STRENGTH VALUE: 7 (BASE) 0 (MODDED)
+
+Every additional added value not from level up is considered non-base modifier.
+
+Say we add armor that increases the value. How will that look?
+ - Will the value be multiplicative or additive?
+ - How is that value represented in a map?
+
+Represent with a map, where the;
+ - the source of the stat mod is the key
+ - the value is a tuple array. First value is modification type, second is value
+

@@ -1,0 +1,30 @@
+[2025-06-03 00:50:16] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 00:50:16] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 00:50:16] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 00:50:16] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 00:50:16] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 00:50:16] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 00:50:16] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 00:50:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-03 00:50:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-03 00:50:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 00:50:16] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 00:50:16] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-03 00:50:17] [INFO] [VisualsSystem] Finished creating blurred background after 0.32054588198661804 seconds
+[2025-06-03 00:50:18] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 00:50:18] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 00:50:18] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 00:50:18] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 00:50:18] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 00:50:18] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xipdob___61b2d6ca-be42-4524-9f6a-f6fd7a1e2203 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Xipdob___61b2d6ca-be42-4524-9f6a-f6fd7a1e2203","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 00:50:18] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Xipdob___61b2d6ca-be42-4524-9f6a-f6fd7a1e2203 into queue
+[2025-06-03 00:50:18] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Joime___53657e9e-8d1b-485f-b890-597559eda86c on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Joime___53657e9e-8d1b-485f-b890-597559eda86c","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 00:50:18] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Joime___53657e9e-8d1b-485f-b890-597559eda86c into queue
+[2025-06-03 00:50:18] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 00:50:18] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 00:50:18] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 00:50:18] [INFO] [GameModel] Updated area of sight for Xipdob, viewing 5 tiles
+[2025-06-03 00:50:18] [INFO] [GameModel] Updated line of sight for Xipdob, viewing 2 tiles
+[2025-06-03 00:50:18] [INFO] [GameModel] Updated area of sight for Xipdob, viewing 1 tiles
+[2025-06-03 00:50:18] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-03 00:50:18] [INFO] [GameModel] Finished gat

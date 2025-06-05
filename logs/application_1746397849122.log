@@ -1,0 +1,265 @@
+[2025-05-04 15:30:49] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 15:30:49] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 15:30:49] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 15:30:49] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 15:30:49] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 15:30:49] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 15:30:49] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 15:30:49] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 15:30:49] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 15:30:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 15:30:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 15:30:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 15:30:49] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 15:30:49] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 15:30:49] [INFO] [Component] Setting dark_dragon_Gikai_4de59545-36fc-45ee-bfb0-29ebd199995d on to {"row":3,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Gikai_4de59545-36fc-45ee-bfb0-29ebd199995d","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit dark_dragon_Gikai_4de59545-36fc-45ee-bfb0-29ebd199995d into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting earth_dragon_Tekyun_c1061816-4928-40e7-b672-4724bd20c6ff on to {"row":0,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Tekyun_c1061816-4928-40e7-b672-4724bd20c6ff","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit earth_dragon_Tekyun_c1061816-4928-40e7-b672-4724bd20c6ff into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting dragon_Yeeu_277b235d-8d30-452d-96b4-8feec121a18d on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Yeeu_277b235d-8d30-452d-96b4-8feec121a18d","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit dragon_Yeeu_277b235d-8d30-452d-96b4-8feec121a18d into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949 on to {"row":0,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949 into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting earth_dragon_Lika_ecd17388-03ed-482c-a7d9-61330b209e03 on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Lika_ecd17388-03ed-482c-a7d9-61330b209e03","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit earth_dragon_Lika_ecd17388-03ed-482c-a7d9-61330b209e03 into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting air_dragon_Miibyu_8617d629-6ab9-4d82-9d17-e0331d7edd1d on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Miibyu_8617d629-6ab9-4d82-9d17-e0331d7edd1d","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit air_dragon_Miibyu_8617d629-6ab9-4d82-9d17-e0331d7edd1d into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting earth_dragon_Hejyy_7269e16f-83b6-454c-bc8e-0f56437a2450 on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Hejyy_7269e16f-83b6-454c-bc8e-0f56437a2450","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit earth_dragon_Hejyy_7269e16f-83b6-454c-bc8e-0f56437a2450 into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting air_dragon_Tyqou_b0dcfc01-07f3-4035-8349-f52895c2cbcf on to {"row":2,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Tyqou_b0dcfc01-07f3-4035-8349-f52895c2cbcf","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit air_dragon_Tyqou_b0dcfc01-07f3-4035-8349-f52895c2cbcf into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting earth_dragon_Paunly_2618716c-a987-430f-9860-b120fbeeec12 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Paunly_2618716c-a987-430f-9860-b120fbeeec12","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit earth_dragon_Paunly_2618716c-a987-430f-9860-b120fbeeec12 into queue
+[2025-05-04 15:30:49] [INFO] [Component] Setting dragon_Muxos_2806adf6-2978-4624-9af3-ecf189d0554a on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Muxos_2806adf6-2978-4624-9af3-ecf189d0554a","structure":""}.
+[2025-05-04 15:30:49] [INFO] [SpeedQueue] Added unit dragon_Muxos_2806adf6-2978-4624-9af3-ecf189d0554a into queue
+[2025-05-04 15:30:49] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 15:30:49] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 15:30:49] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 15:30:49] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 15:30:49] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 15:30:49] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 15:30:49] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 15:30:50] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 15:30:50] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 15:30:50] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 15:30:50] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949
+[2025-05-04 15:30:50] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949
+[2025-05-04 15:30:50] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 15:30:50] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 15:30:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 15:30:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 15:30:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 15:30:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 15:30:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 15:30:50] [INFO] [VisualsSystem] Finished creating blurred background after 0.48515987396240234 seconds
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949
+[2025-05-04 15:30:50] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949
+[2025-05-04 15:30:50] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 15:30:50] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:50] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 15:30:51] [INFO] [InputHandler] Gliding 0 camera to new tile 0_0_f2dbf977-a981-4c86-8f6a-9a2794256bb3
+[2025-05-04 15:30:51] [INFO] [InputHandler] Gliding 1 camera to new tile 0_0_f2dbf977-a981-4c86-8f6a-9a2794256bb3
+[2025-05-04 15:30:51] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949
+[2025-05-04 15:30:51] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Foaoe_4b578e20-a126-4f1e-88b6-4ef5bf14d949
+[2025-05-04 15:30:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 15:30:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Foaoe
+[2025-05-04 15:30:52] [INFO] [InputHandler] Gliding 0 camera to new tile 0_0_f2dbf977-a981-4c86-8f6a-9a2794256bb3
+[2025-05-04 15:30:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [AbilityPanel] Selecting fire_attack
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [3, 5]
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated area of sight for Foaoe, viewing 3 tiles
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [3, 4]
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [3, 3]
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [3, 2]
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [2, 2]
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [2, 1]
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:53] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:53] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [1, 1]
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Foaoe is planning to use fire_attack on [1, 0]
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Updated line of sight for Foaoe, viewing 2 tiles
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Updated area of effect for Foaoe viewing 1 tiles
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Foaoe
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Foaoe lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Foaoe
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yeeu
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yeeu
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Checking cost requirements for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Foaoe is able to pay for fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Started constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Finished constructing cost mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Paying cost requirements for Foaoe using fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Used from fire_attack on [1, 0]
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Foaoe
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Foaoe lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Foaoe
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yeeu
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yeeu
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [CombatSystem] Started dealing damage with fire_attack to Yeeu 
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Foaoe
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Foaoe lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Foaoe
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Yeeu
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Yeeu
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Foaoe to use fire_attack
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 15:30:54] [INFO] [AbilitySystem] Finished update updating {} because of ability

@@ -1,0 +1,25 @@
+[2025-05-03 22:55:45] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-03 22:55:45] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-03 22:55:45] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-03 22:55:45] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-03 22:55:45] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-03 22:55:45] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-03 22:55:45] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-03 22:55:45] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-03 22:55:45] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-03 22:55:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-03 22:55:45] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-03 22:55:45] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-03 22:55:45] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-03 22:55:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-03 22:55:45] [INFO] [Component] Setting fire_dragon_Vaxuiy_ac2d35ce-91a0-401d-866d-aabd8a191fb6 on to {"row":6,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Vaxuiy_ac2d35ce-91a0-401d-866d-aabd8a191fb6","structure":""}.
+[2025-05-03 22:55:45] [INFO] [SpeedQueue] Added unit fire_dragon_Vaxuiy_ac2d35ce-91a0-401d-866d-aabd8a191fb6 into queue
+[2025-05-03 22:58:25] [INFO] [Component] Setting air_dragon_Caqk_2d83323d-ed8c-4ae6-8d1b-8ff2170f3b38 on to {"row":1,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Caqk_2d83323d-ed8c-4ae6-8d1b-8ff2170f3b38","structure":""}.
+[2025-05-03 22:58:25] [INFO] [SpeedQueue] Added unit air_dragon_Caqk_2d83323d-ed8c-4ae6-8d1b-8ff2170f3b38 into queue
+[2025-05-03 22:58:25] [INFO] [Component] Setting water_dragon_Yaioiw_d01cd474-3380-4cd3-aac3-bd39d4f0dd22 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Yaioiw_d01cd474-3380-4cd3-aac3-bd39d4f0dd22","structure":""}.
+[2025-05-03 22:58:25] [INFO] [SpeedQueue] Added unit water_dragon_Yaioiw_d01cd474-3380-4cd3-aac3-bd39d4f0dd22 into queue
+[2025-05-03 22:58:25] [INFO] [Component] Setting dark_dragon_Wuruo_c805f236-da22-4c3f-ab85-0cfc88a146a3 on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Wuruo_c805f236-da22-4c3f-ab85-0cfc88a146a3","structure":""}.
+[2025-05-03 22:58:25] [INFO] [SpeedQueue] Added unit dark_dragon_Wuruo_c805f236-da22-4c3f-ab85-0cfc88a146a3 into queue
+[2025-05-03 22:58:25] [INFO] [Component] Setting water_dragon_Qefio_8ca26d92-9ab5-44cb-81d3-057020bc4173 on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Qefio_8ca26d92-9ab5-44cb-81d3-057020bc4173","structure":""}.
+[2025-05-03 22:58:25] [INFO] [SpeedQueue] Added unit water_dragon_Qefio_8ca26d92-9ab5-44cb-81d3-057020bc4173 into queue
+[2025-05-03 22:58:25] [INFO] [Component] Setting dark_dragon_Paxik_8

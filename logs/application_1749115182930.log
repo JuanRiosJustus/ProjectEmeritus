@@ -1,0 +1,1378 @@
+[2025-06-05 02:19:42] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 02:19:42] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 02:19:43] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 02:19:43] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 02:19:43] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 02:19:43] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 02:19:43] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 02:19:43] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 02:19:43] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 02:19:43] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 02:19:43] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 02:19:43] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 02:19:43] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 02:19:43] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Goap___4bbc48e2-1964-4615-aaaa-599504b9935d on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Goap___4bbc48e2-1964-4615-aaaa-599504b9935d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Goap___4bbc48e2-1964-4615-aaaa-599504b9935d into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Difef___6d43d50e-7d52-40c6-83ca-a7abfb95826b on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Difef___6d43d50e-7d52-40c6-83ca-a7abfb95826b","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Difef___6d43d50e-7d52-40c6-83ca-a7abfb95826b into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Xigooy___ba695e75-ea4b-4708-ab50-abe3af03d0f8 on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Xigooy___ba695e75-ea4b-4708-ab50-abe3af03d0f8","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Xigooy___ba695e75-ea4b-4708-ab50-abe3af03d0f8 into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Rueaai___0d2a18c0-594f-4961-85c2-58ba52442096 on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Rueaai___0d2a18c0-594f-4961-85c2-58ba52442096","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Rueaai___0d2a18c0-594f-4961-85c2-58ba52442096 into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Migegu___e5f4e942-04fd-4731-87d3-c69d4f3d47ea on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Migegu___e5f4e942-04fd-4731-87d3-c69d4f3d47ea","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Migegu___e5f4e942-04fd-4731-87d3-c69d4f3d47ea into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Wist___a4ef06dd-708e-4ae7-b582-304c3f77227c on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Wist___a4ef06dd-708e-4ae7-b582-304c3f77227c","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Wist___a4ef06dd-708e-4ae7-b582-304c3f77227c into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Vegaoe___b5e0e7d3-ce05-4dd1-a3ed-a91dd9e26083 on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Vegaoe___b5e0e7d3-ce05-4dd1-a3ed-a91dd9e26083","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Vegaoe___b5e0e7d3-ce05-4dd1-a3ed-a91dd9e26083 into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Bycfmg___a22a6eee-3ca3-409e-b428-203948fef929 on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Bycfmg___a22a6eee-3ca3-409e-b428-203948fef929","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Bycfmg___a22a6eee-3ca3-409e-b428-203948fef929 into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Quxyyc___5e610640-f0ef-4d87-987e-3983ceb4654a on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Quxyyc___5e610640-f0ef-4d87-987e-3983ceb4654a","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Quxyyc___5e610640-f0ef-4d87-987e-3983ceb4654a into queue
+[2025-06-05 02:19:43] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0 on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0 into queue
+[2025-06-05 02:19:43] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 02:19:43] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 02:19:43] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 02:19:43] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 02:19:43] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 02:19:43] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:43] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 02:19:43] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 02:19:43] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0
+[2025-06-05 02:19:43] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0
+[2025-06-05 02:19:43] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:19:43] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:19:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:19:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:19:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:19:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 02:19:44] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 02:19:44] [INFO] [VisualsSystem] Finished creating blurred background after 0.48729950189590454 seconds
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0
+[2025-06-05 02:19:44] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0
+[2025-06-05 02:19:44] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:19:44] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:19:44] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:19:45] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:19:45] [INFO] [GameModel] Moved from [2, 11] to [1, 11]
+[2025-06-05 02:19:45] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0
+[2025-06-05 02:19:45] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Einuji___5e702e4e-32f1-4679-8895-d46926a161d0
+[2025-06-05 02:19:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:19:45] [INFO] [SelectedTilePanel] Updated selected tile display to view Einuji
+[2025-06-05 02:19:45] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_11___5ea2174c-5bbf-4a20-abe4-79ce1600612a
+[2025-06-05 02:19:45] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_11___5ea2174c-5bbf-4a20-abe4-79ce1600612a
+[2025-06-05 02:19:45] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_11___5ea2174c-5bbf-4a20-abe4-79ce1600612a
+[2025-06-05 02:19:45] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:19:45] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:46] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:47] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating target for Einuji, ROW_0___COLUMN_11___598c43d0-e852-4d08-a912-823735db3a91
+[2025-06-05 02:19:48] [INFO] [GameModel] Updating ability for Einuji, test_slash
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of sight for Einuji, 5 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated line of sight for Einuji, 2 tiles
+[2025-06-05 02:19:48] [INFO] [GameModel] Updated area of effect for Einuji, 1 tiles
+[2025-06-05 02:19:48] [INFO] [GameMo

@@ -1,0 +1,413 @@
+[2025-06-05 02:48:30] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 02:48:30] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 02:48:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 02:48:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 02:48:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 02:48:30] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 02:48:30] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 02:48:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 02:48:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 02:48:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 02:48:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 02:48:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 02:48:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 02:48:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Pamof___40e1b3a7-a036-4f3e-973f-e507913401f0 on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Pamof___40e1b3a7-a036-4f3e-973f-e507913401f0","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Pamof___40e1b3a7-a036-4f3e-973f-e507913401f0 into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Eooyy___038058c9-368f-4a24-ac04-4c0846b1c682 on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Eooyy___038058c9-368f-4a24-ac04-4c0846b1c682","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Eooyy___038058c9-368f-4a24-ac04-4c0846b1c682 into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Yopiu___e98edea3-5f8a-4fbd-954a-510f2dc27d6f on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Yopiu___e98edea3-5f8a-4fbd-954a-510f2dc27d6f","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Yopiu___e98edea3-5f8a-4fbd-954a-510f2dc27d6f into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Nahr___91852c80-d3b2-486e-ac2a-e73cc5cc5c18 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Nahr___91852c80-d3b2-486e-ac2a-e73cc5cc5c18","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Nahr___91852c80-d3b2-486e-ac2a-e73cc5cc5c18 into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Xudzey___ba26730b-8e1d-4342-a2e0-2169b5409d8c on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Xudzey___ba26730b-8e1d-4342-a2e0-2169b5409d8c","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Xudzey___ba26730b-8e1d-4342-a2e0-2169b5409d8c into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Redidy___75df2b5b-4cf2-47f2-b3b4-a15d985f309b on to {"row":1,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Redidy___75df2b5b-4cf2-47f2-b3b4-a15d985f309b","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Redidy___75df2b5b-4cf2-47f2-b3b4-a15d985f309b into queue
+[2025-06-05 02:48:30] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 02:48:30] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78 into queue
+[2025-06-05 02:48:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 02:48:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 02:48:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 02:48:30] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 02:48:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 02:48:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 02:48:31] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 02:48:31] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a
+[2025-06-05 02:48:31] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a
+[2025-06-05 02:48:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:48:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:48:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 02:48:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 02:48:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.4878094792366028 seconds
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a
+[2025-06-05 02:48:31] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a
+[2025-06-05 02:48:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:48:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:32] [INFO] [GameModel] Updated area of sight for Hifubo, 5 tiles
+[2025-06-05 02:48:32] [INFO] [GameModel] Updated line of sight for Hifubo, 2 tiles
+[2025-06-05 02:48:32] [INFO] [GameModel] Updated area of effect for Hifubo, 1 tiles
+[2025-06-05 02:48:32] [INFO] [GameModel] Updating target for Hifubo, ROW_8___COLUMN_12___2459d9b8-be0b-4116-803a-8fb9923b84f9
+[2025-06-05 02:48:32] [INFO] [GameModel] Updating ability for Hifubo, test_slash
+[2025-06-05 02:48:32] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-05 02:48:32] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-05 02:48:32] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-05 02:48:32] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-05 02:48:32] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:48:32] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:48:32] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-05 02:48:33] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_11___1392f40f-926f-4edd-b897-bd6e44d849e6
+[2025-06-05 02:48:33] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:48:33] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:48:33] [INFO] [GameModel] Started dealing damage with test_slash to Roeb 
+[2025-06-05 02:48:33] [INFO] [GameModel] Updated range for Hifubo, 9 tiles
+[2025-06-05 02:48:33] [INFO] [GameModel] Updated path for Hifubo, 2 tiles
+[2025-06-05 02:48:33] [INFO] [GameModel] Updated target tile Hifubo, ROW_8___COLUMN_10___101ba7f0-85f6-4602-a431-1d831ad8d9fc
+[2025-06-05 02:48:33] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a on to {"row":8,"column":10,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 02:48:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a
+[2025-06-05 02:48:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Hifubo___8adab656-8aab-4071-83c9-5c0b1239160a
+[2025-06-05 02:48:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Hifubo
+[2025-06-05 02:48:33] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_10___101ba7f0-85f6-4602-a431-1d831ad8d9fc
+[2025-06-05 02:48:33] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_10___101ba7f0-85f6-4602-a431-1d831ad8d9fc
+[2025-06-05 02:48:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78
+[2025-06-05 02:48:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78
+[2025-06-05 02:48:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:48:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:48:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78
+[2025-06-05 02:48:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78
+[2025-06-05 02:48:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Roeb
+[2025-06-05 02:48:34] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_12___2459d9b8-be0b-4116-803a-8fb9923b84f9
+[2025-06-05 02:48:34] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_12___2459d9b8-be0b-4116-803a-8fb9923b84f9
+[2025-06-05 02:48:36] [INFO] [GameModel] Updated range for Roeb, 7 tiles
+[2025-06-05 02:48:36] [INFO] [GameModel] Updated path for Roeb, 2 tiles
+[2025-06-05 02:48:36] [INFO] [GameModel] Updated target tile Roeb, ROW_9___COLUMN_12___41af28be-14bd-4162-9606-d7f3c6e0a085
+[2025-06-05 02:48:36] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78 on to {"row":9,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Roeb___e921e70a-1182-4647-840f-02dc16e4de78","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 02:48:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Roeb
+[2025-06-05 02:48:36] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_12___41af28be-14bd-4162-9606-d7f3c6e0a085
+[2025-06-05 02:48:36] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_9___COLUMN_12___41af28be-14bd-4162-9606-d7f3c6e0a085
+[2025-06-05 02:48:36] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc
+[2025-06-05 02:48:36] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc
+[2025-06-05 02:48:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:48:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:48:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc
+[2025-06-05 02:48:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc
+[2025-06-05 02:48:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Oocyxo
+[2025-06-05 02:48:36] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_11___3a2c3792-92ab-4a00-8e8f-70c3daa7d05e
+[2025-06-05 02:48:36] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_11___3a2c3792-92ab-4a00-8e8f-70c3daa7d05e
+[2025-06-05 02:48:37] [INFO] [GameModel] Updated range for Oocyxo, 11 tiles
+[2025-06-05 02:48:37] [INFO] [GameModel] Updated path for Oocyxo, 2 tiles
+[2025-06-05 02:48:37] [INFO] [GameModel] Updated target tile Oocyxo, ROW_4___COLUMN_10___9babb978-3a5b-48da-93c7-04b3d5e728cc
+[2025-06-05 02:48:37] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc on to {"row":4,"column":10,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Oocyxo___ebcfb8b9-533a-419b-a22e-46736080c8cc","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:48:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Oocyxo
+[2025-06-05 02:48:37] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_10___9babb978-3a5b-48da-93c7-04b3d5e728cc
+[2025-06-05 02:48:37] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_10___9babb978-3a5b-48da-93c7-04b3d5e728cc
+[2025-06-05 02:48:38] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c
+[2025-06-05 02:48:38] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c
+[2025-06-05 02:48:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:48:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:48:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:48:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c
+[2025-06-05 02:48:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c
+[2025-06-05 02:48:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Lynoql
+[2025-06-05 02:48:38] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_0___db2c70fe-2a91-4ecb-8671-7eb9c70fc2ba
+[2025-06-05 02:48:38] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_0___db2c70fe-2a91-4ecb-8671-7eb9c70fc2ba
+[2025-06-05 02:48:39] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_0___db2c70fe-2a91-4ecb-8671-7eb9c70fc2ba
+[2025-06-05 02:48:39] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:48:39] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated path for Lynoql, 10 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated target tile Lynoql, ROW_6___COLUMN_5___53890414-cfcc-4e8d-95fa-90ab9f9589fe
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated path for Lynoql, 8 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated target tile Lynoql, ROW_5___COLUMN_4___b9bc652d-a75f-419f-b6bd-f93100c9939d
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated path for Lynoql, 8 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated target tile Lynoql, ROW_5___COLUMN_4___b9bc652d-a75f-419f-b6bd-f93100c9939d
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated path for Lynoql, 7 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated target tile Lynoql, ROW_5___COLUMN_3___0b550846-8d9e-4fc1-8ceb-5162107fb419
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated path for Lynoql, 7 tiles
+[2025-06-05 02:48:39] [INFO] [GameModel] Updated target tile Lynoql, ROW_5___COLUMN_3___0b550846-8d9e-4fc1-8ceb-5162107fb419
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_4___COLUMN_3___a8713a50-7410-446f-b4d8-ae68270879ea
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_4___COLUMN_3___a8713a50-7410-446f-b4d8-ae68270879ea
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 0 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_4___COLUMN_2___7e167887-6a9e-4ffa-898d-c4f2b3f44dbd
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 0 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_4___COLUMN_2___7e167887-6a9e-4ffa-898d-c4f2b3f44dbd
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 4 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_3___COLUMN_2___2a799f78-47a4-42b2-94c9-846c5807939b
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 4 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_3___COLUMN_2___2a799f78-47a4-42b2-94c9-846c5807939b
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 3 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 3 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 6 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 3 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:40] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Lynoql___c305858f-0385-4d97-a3f6-0934e38e453c","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:48:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:48:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Lynoql
+[2025-06-05 02:48:40] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:40] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated range for Lynoql, 8 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated path for Lynoql, 1 tiles
+[2025-06-05 02:48:40] [INFO] [GameModel] Updated target tile Lynoql, ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:41] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:41] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:41] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 4 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_0___COLUMN_0___142fb609-2ff7-4021-b4eb-7c59e6fa653b
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_6___COLUMN_5___53890414-cfcc-4e8d-95fa-90ab9f9589fe
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_6___COLUMN_4___dd496b75-395b-41ae-a388-9d5a9a8e0632
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_6___COLUMN_4___dd496b75-395b-41ae-a388-9d5a9a8e0632
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_5___COLUMN_3___0b550846-8d9e-4fc1-8ceb-5162107fb419
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_5___COLUMN_3___0b550846-8d9e-4fc1-8ceb-5162107fb419
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 4 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_5___COLUMN_2___1afdaecd-094d-4b63-8879-baf756d4b3b6
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 4 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_5___COLUMN_2___1afdaecd-094d-4b63-8879-baf756d4b3b6
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_4___COLUMN_2___7e167887-6a9e-4ffa-898d-c4f2b3f44dbd
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_4___COLUMN_2___7e167887-6a9e-4ffa-898d-c4f2b3f44dbd
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 2 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_4___COLUMN_1___792ba54b-ce8b-48e3-b10c-be82fce4627c
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 2 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_4___COLUMN_1___792ba54b-ce8b-48e3-b10c-be82fce4627c
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_3___COLUMN_1___8e460025-ae28-4181-9563-c39909bf715b
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 2 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_3___COLUMN_0___ba55556f-f883-4f38-8181-5e8c355c3249
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lynoql to use test_slash
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated line of sight for Lynoql, 2 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating target for Lynoql, ROW_3___COLUMN_0___ba55556f-f883-4f38-8181-5e8c355c3249
+[2025-06-05 02:48:42] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:43] [INFO] [GameModel] Updated line of sight for Lynoql, 2 tiles
+[2025-06-05 02:48:43] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:43] [INFO] [GameModel] Updating target for Lynoql, ROW_3___COLUMN_0___ba55556f-f883-4f38-8181-5e8c355c3249
+[2025-06-05 02:48:43] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:43] [INFO] [GameModel] Updated line of sight for Lynoql, 2 tiles
+[2025-06-05 02:48:43] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:43] [INFO] [GameModel] Updating target for Lynoql, ROW_3___COLUMN_0___ba55556f-f883-4f38-8181-5e8c355c3249
+[2025-06-05 02:48:43] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:43] [INFO] [GameModel] Started dealing damage with test_slash to Yopiu 
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lynoql to use test_slash
+[2025-06-05 02:48:43] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:48:43] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating target for Lynoql, ROW_2___COLUMN_0___db2c70fe-2a91-4ecb-8671-7eb9c70fc2ba
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated line of sight for Lynoql, 3 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating target for Lynoql, ROW_2___COLUMN_0___db2c70fe-2a91-4ecb-8671-7eb9c70fc2ba
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated line of sight for Lynoql, 4 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating target for Lynoql, ROW_0___COLUMN_0___142fb609-2ff7-4021-b4eb-7c59e6fa653b
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating ability for Lynoql, test_slash
+[2025-06-05 02:48:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:48:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of sight for Lynoql, 5 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated line of sight for Lynoql, 4 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updated area of effect for Lynoql, 1 tiles
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating target for Lynoql, ROW_0___COLUMN_0___142fb609-2ff7-4021-b4eb-7c59e6fa653b
+[2025-06-05 02:48:44] [INFO] [GameModel] Updating ability for Lynoql, test_slash

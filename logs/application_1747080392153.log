@@ -1,0 +1,116 @@
+[2025-05-12 16:06:32] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-12 16:06:32] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-12 16:06:32] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-12 16:06:32] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-12 16:06:32] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-12 16:06:32] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-12 16:06:32] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-12 16:06:32] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-12 16:06:32] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-12 16:06:32] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-12 16:06:32] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-12 16:06:32] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-12 16:06:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-12 16:06:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-12 16:06:32] [INFO] [Component] Setting water_dragon_Tyiszu_b4e75991-adbf-4bcd-907b-f49569fca8a8 on to {"row":3,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Tyiszu_b4e75991-adbf-4bcd-907b-f49569fca8a8","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit water_dragon_Tyiszu_b4e75991-adbf-4bcd-907b-f49569fca8a8 into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting light_dragon_Qyhf_2caa833d-78a8-4853-9ed9-189a88db978c on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Qyhf_2caa833d-78a8-4853-9ed9-189a88db978c","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit light_dragon_Qyhf_2caa833d-78a8-4853-9ed9-189a88db978c into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting water_dragon_Aayua_fd32187a-1af0-40e6-bc37-607dd513da55 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Aayua_fd32187a-1af0-40e6-bc37-607dd513da55","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit water_dragon_Aayua_fd32187a-1af0-40e6-bc37-607dd513da55 into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting fire_dragon_Gyjo_b35f2f93-7afb-44e2-aebb-91305410029f on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Gyjo_b35f2f93-7afb-44e2-aebb-91305410029f","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit fire_dragon_Gyjo_b35f2f93-7afb-44e2-aebb-91305410029f into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting earth_dragon_Gazty_7101637e-10b5-456f-ad39-9b21195b7f9d on to {"row":0,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Gazty_7101637e-10b5-456f-ad39-9b21195b7f9d","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit earth_dragon_Gazty_7101637e-10b5-456f-ad39-9b21195b7f9d into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting dragon_Qosa_497fa0c3-e7bb-4431-a097-b633a9b1a683 on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Qosa_497fa0c3-e7bb-4431-a097-b633a9b1a683","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit dragon_Qosa_497fa0c3-e7bb-4431-a097-b633a9b1a683 into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting dark_dragon_Disa_ea9cee8e-de3e-4186-9e73-a3f3339ab9a2 on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Disa_ea9cee8e-de3e-4186-9e73-a3f3339ab9a2","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit dark_dragon_Disa_ea9cee8e-de3e-4186-9e73-a3f3339ab9a2 into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting fire_dragon_Keqiu_db41fc79-b7c5-4cd6-b4a3-06e6ceb8e9c3 on to {"row":6,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Keqiu_db41fc79-b7c5-4cd6-b4a3-06e6ceb8e9c3","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit fire_dragon_Keqiu_db41fc79-b7c5-4cd6-b4a3-06e6ceb8e9c3 into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting dragon_Votk_15935dee-b639-4c8d-b1c0-e05c143f024e on to {"row":1,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Votk_15935dee-b639-4c8d-b1c0-e05c143f024e","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit dragon_Votk_15935dee-b639-4c8d-b1c0-e05c143f024e into queue
+[2025-05-12 16:06:32] [INFO] [Component] Setting air_dragon_Wunuyy_c9618bbd-9321-4e4f-a7cc-f30e6fcd13a7 on to {"row":6,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Wunuyy_c9618bbd-9321-4e4f-a7cc-f30e6fcd13a7","structure":""}.
+[2025-05-12 16:06:32] [INFO] [SpeedQueue] Added unit air_dragon_Wunuyy_c9618bbd-9321-4e4f-a7cc-f30e6fcd13a7 into queue
+[2025-05-12 16:06:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-12 16:06:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-12 16:06:32] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-12 16:06:32] [INFO] [FontPool] Started initializing FontPool
+[2025-05-12 16:06:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-12 16:06:32] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-12 16:06:32] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-12 16:06:33] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-12 16:06:33] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-12 16:06:33] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-12 16:06:33] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Gyjo_b35f2f93-7afb-44e2-aebb-91305410029f
+[2025-05-12 16:06:33] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Gyjo_b35f2f93-7afb-44e2-aebb-91305410029f
+[2025-05-12 16:06:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-12 16:06:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-12 16:06:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-12 16:06:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-12 16:06:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:06:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-12 16:06:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-12 16:06:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.49467307329177856 seconds
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Gyjo_b35f2f93-7afb-44e2-aebb-91305410029f
+[2025-05-12 16:06:33] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Gyjo_b35f2f93-7afb-44e2-aebb-91305410029f
+[2025-05-12 16:06:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-12 16:06:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:06:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:06:35] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_444d758c-1bec-4895-86ab-eef2c2d3393f
+[2025-05-12 16:06:35] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_444d758c-1bec-4895-86ab-eef2c2d3393f
+[2025-05-12 16:06:35] [INFO] [Statisti

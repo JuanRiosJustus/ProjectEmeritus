@@ -1,0 +1,278 @@
+[2025-05-04 14:18:17] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:18:17] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:18:17] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:18:17] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:18:17] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:18:17] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:18:17] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:18:17] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:18:17] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:18:17] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:18:17] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:18:17] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:18:17] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:18:17] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:18:17] [INFO] [Component] Setting dragon_Nezo_d70a91db-a2ae-4413-bec9-bfbfe4aeda71 on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Nezo_d70a91db-a2ae-4413-bec9-bfbfe4aeda71","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit dragon_Nezo_d70a91db-a2ae-4413-bec9-bfbfe4aeda71 into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting earth_dragon_Xemi_f01331bd-beef-49fe-9b13-2d49ef46c15f on to {"row":5,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Xemi_f01331bd-beef-49fe-9b13-2d49ef46c15f","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit earth_dragon_Xemi_f01331bd-beef-49fe-9b13-2d49ef46c15f into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting light_dragon_Duxiqq_f1935090-c134-40e4-90a8-e64fa01225e7 on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Duxiqq_f1935090-c134-40e4-90a8-e64fa01225e7","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit light_dragon_Duxiqq_f1935090-c134-40e4-90a8-e64fa01225e7 into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting earth_dragon_Augiva_3003ff44-68ea-4041-9a94-069ac89cf3eb on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Augiva_3003ff44-68ea-4041-9a94-069ac89cf3eb","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit earth_dragon_Augiva_3003ff44-68ea-4041-9a94-069ac89cf3eb into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting dark_dragon_Fazi_95ff3b07-ddbe-4329-ae18-b53d1035b88a on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Fazi_95ff3b07-ddbe-4329-ae18-b53d1035b88a","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit dark_dragon_Fazi_95ff3b07-ddbe-4329-ae18-b53d1035b88a into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting water_dragon_Murua_4c13f305-26aa-4039-9020-c9543df1b772 on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Murua_4c13f305-26aa-4039-9020-c9543df1b772","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit water_dragon_Murua_4c13f305-26aa-4039-9020-c9543df1b772 into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting dark_dragon_Yoqmab_ba7af5ca-e23f-4597-8e63-6c2db98c4cb5 on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Yoqmab_ba7af5ca-e23f-4597-8e63-6c2db98c4cb5","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit dark_dragon_Yoqmab_ba7af5ca-e23f-4597-8e63-6c2db98c4cb5 into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting water_dragon_Qagvui_88e7a97e-6590-4382-833a-184f16be7289 on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Qagvui_88e7a97e-6590-4382-833a-184f16be7289","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit water_dragon_Qagvui_88e7a97e-6590-4382-833a-184f16be7289 into queue
+[2025-05-04 14:18:17] [INFO] [Component] Setting light_dragon_Tyaioi_55b9184d-a558-4a00-a840-931c69bf0eb6 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Tyaioi_55b9184d-a558-4a00-a840-931c69bf0eb6","structure":""}.
+[2025-05-04 14:18:17] [INFO] [SpeedQueue] Added unit light_dragon_Tyaioi_55b9184d-a558-4a00-a840-931c69bf0eb6 into queue
+[2025-05-04 14:18:17] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:18:17] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:18:17] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:18:17] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:18:17] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:18:17] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:18:17] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:18:17] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:18:17] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:18:18] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:18:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:18:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:18:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:18:18] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:18:18] [INFO] [VisualsSystem] Finished creating blurred background after 0.4891829490661621 seconds
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:18:19] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_e63234e8-8c78-41f4-87b9-b1351f63b985
+[2025-05-04 14:18:19] [INFO] [InputHandler] Gliding 1 camera to new tile 6_1_e63234e8-8c78-41f4-87b9-b1351f63b985
+[2025-05-04 14:18:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df
+[2025-05-04 14:18:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:18:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Iefym
+[2025-05-04 14:18:20] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_e63234e8-8c78-41f4-87b9-b1351f63b985
+[2025-05-04 14:18:20] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-04 14:18:20] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement range to 7 for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 3] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement range to 7 for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 3] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 2] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [7, 2] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 2] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 2] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 1] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [6, 1] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [5, 1] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [5, 1] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [5, 0] for Iefym
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Updated movement path from [6, 1] to [5, 0] for Iefym
+[2025-05-04 14:18:21] [INFO] [Component] Setting air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Iefym_ce80d84d-7ea8-4142-8046-fc58507e07df","structure":""}.
+[2025-05-04 14:18:21] [INFO] [MovementSystem] Moved from [6, 1] to [5, 0]
+[2025-05-04 14:18:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:18:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Iefym
+[2025-05-04 14:18:21] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_8d8b1737-ceeb-46c5-b5ab-a60ed9eb3eb2
+[2025-05-04 14:18:21] [INFO] [InputHandler] Gliding 1 camera to new tile 5_0_8d8b1737-ceeb-46c5-b5ab-a60ed9eb3eb2
+[2025-05-04 14:18:23] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_8d8b1737-ceeb-46c5-b5ab-a60ed9eb3eb2
+[2025-05-04 14:18:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:18:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Iefym is planning to use air_attack on null
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated area of sight for Iefym, viewing 8 tiles
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated line of sight for Iefym, viewing 0 tiles
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated area of effect for Iefym viewing 0 tiles
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Iefym is planning to use air_attack on [7, 4]
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated line of sight for Iefym, viewing 2 tiles
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated area of effect for Iefym viewing 1 tiles
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Iefym is planning to use air_attack on [7, 3]
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated line of sight for Iefym, viewing 2 tiles
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated area of effect for Iefym viewing 1 tiles
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Iefym is planning to use air_attack on [6, 2]
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated line of sight for Iefym, viewing 2 tiles
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated area of effect for Iefym viewing 1 tiles
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Iefym is planning to use air_attack on [6, 1]
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated line of sight for Iefym, viewing 3 tiles
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated area of effect for Iefym viewing 1 tiles
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Iefym is planning to use air_attack on [5, 1]
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated line of sight for Iefym, viewing 2 tiles
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Updated area of effect for Iefym viewing 1 tiles
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iefym
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Iefym lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iefym
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xemi
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xemi
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:18:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Checking cost requirements for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Iefym is able to pay for air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Started constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Finished constructing cost mappings for Iefym to use air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Paying cost requirements for Iefym using air_attack
+[2025-05-04 14:18:24] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-04 14:18:24] [INFO] [AbilitySystem] Used from air_attack on [5, 1]
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iefym
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Iefym lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iefym
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xemi
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xemi
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [CombatSystem] Started dealing damage with air_attack to Xemi 
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iefym
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Iefym lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iefym
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xemi
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xemi
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-04 14:18:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iefym to use air_attack
+[2025-05-04 14:18:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:18:25] [INFO] [AbilitySystem] Finished update updating {} because of ability

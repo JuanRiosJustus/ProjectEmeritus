@@ -1,0 +1,164 @@
+[2025-04-28 02:56:29] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 02:56:29] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 02:56:29] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 02:56:29] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 02:56:29] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 02:56:29] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 02:56:29] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 02:56:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 02:56:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 02:56:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 02:56:29] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 02:56:29] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 02:56:29] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 02:56:29] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 02:56:29] [INFO] [Component] Setting fire_dragon_Hukyr_e2a2ca93-e601-47e6-8c8b-f52a5312b617 on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Hukyr_e2a2ca93-e601-47e6-8c8b-f52a5312b617","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit enemy:Hukyr into queue
+[2025-04-28 02:56:29] [INFO] [Component] Setting light_dragon_Jehe_ffb2bb39-b0b4-45e8-900f-d28c4f6dfef0 on to {"row":7,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Jehe_ffb2bb39-b0b4-45e8-900f-d28c4f6dfef0","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit enemy:Jehe into queue
+[2025-04-28 02:56:29] [INFO] [Component] Setting dragon_Tusl_3319f80f-69b2-4660-9715-4dbab9101597 on to {"row":1,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Tusl_3319f80f-69b2-4660-9715-4dbab9101597","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit enemy:Tusl into queue
+[2025-04-28 02:56:29] [INFO] [Component] Setting earth_dragon_Iimu_46130cb8-ec4c-44ea-8199-d078f38d94dc on to {"row":4,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Iimu_46130cb8-ec4c-44ea-8199-d078f38d94dc","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit enemy:Iimu into queue
+[2025-04-28 02:56:29] [INFO] [Component] Setting fire_dragon_Aune_d1f27d45-be56-4a03-84f9-607aa784e0c7 on to {"row":2,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Aune_d1f27d45-be56-4a03-84f9-607aa784e0c7","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit user:Aune into queue
+[2025-04-28 02:56:29] [INFO] [Component] Setting air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit user:Roiu into queue
+[2025-04-28 02:56:29] [INFO] [Component] Setting light_dragon_Yufu_b48c258e-4203-4da1-9949-9db61d11859f on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Yufu_b48c258e-4203-4da1-9949-9db61d11859f","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit user:Yufu into queue
+[2025-04-28 02:56:29] [INFO] [Component] Setting earth_dragon_Zimosu_dcb9099e-135d-493f-872f-69a910ccbd8f on to {"row":6,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Zimosu_dcb9099e-135d-493f-872f-69a910ccbd8f","structure":""}.
+[2025-04-28 02:56:29] [INFO] [SpeedQueue] Added unit user:Zimosu into queue
+[2025-04-28 02:56:29] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 02:56:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 02:56:30] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:56:30] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 02:56:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 02:56:30] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 02:56:30] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 02:56:30] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:56:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 02:56:30] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:30] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 02:56:30] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:30] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:56:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:56:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 02:56:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 02:56:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 02:56:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 02:56:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 02:56:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.4870884418487549 seconds
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:31] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:56:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:31] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:56:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:31] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:31] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:56:31] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:32] [INFO] [MovementSystem] Updated movement range to 11 for Roiu
+[2025-04-28 02:56:32] [INFO] [MovementSystem] Updated movement path from [4, 4] to [4, 2] for Roiu
+[2025-04-28 02:56:32] [INFO] [Component] Setting air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c on to {"row":4,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c","structure":""}.
+[2025-04-28 02:56:32] [INFO] [MovementSystem] Moved from [4, 4] to [4, 2]
+[2025-04-28 02:56:32] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:32] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Roiu_cb6b3118-9c2a-4e25-b08a-fe2674daaa1c
+[2025-04-28 02:56:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 02:56:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Roiu
+[2025-04-28 02:56:32] [INFO] [InputHandler] Gliding 0 camera to new tile 4_2_1d13a64a-f960-4b2c-8589-968502012b76
+[2025-04-28 02:56:32] [INFO] [InputHandler] Gliding 1 camera to new tile 4_2_1d13a64a-f960-4b2c-8589-968502012b76
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Roiu is planning to use air_attack on [6, 2]
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Updated area of sight for Roiu, viewing 13 tiles
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Updated line of sight for Roiu, viewing 3 tiles
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Updated area of effect for Roiu viewing 1 tiles
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Started constructing cost mappings for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Finished constructing cost mappings for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Checking cost requirements for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Roiu is able to pay for air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Started constructing cost mappings for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Finished constructing cost mappings for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Paying cost requirements for Roiu using air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Used from air_attack on [6, 2]
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Roiu
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Roiu lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Roiu
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Hukyr
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Hukyr
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-28 02:56:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Roiu to use air_attack
+[2025-04-28 02:56:33] [INFO] [CombatSystem] Started dealing damage with air_attack to Hukyr 
+[2025-04-28 02:56:33] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Aune_d1f27d45-be56-4a03-84f9-607aa784e0c7
+[2025-04-28 02:56:33] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Aune_d1f27d45-be56-4a03-84f9-607aa784e0c7
+[2025-04-28 02:56:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:56:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:56:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 02:56:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 02:56:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Aune_d1f27d45-be56-4a03-84f9-607aa784e0c7
+[2025-04-28 02:56:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Aune_d1f27d45-be56-4a03-84f9-607aa784e0c7
+[2025-04-28 02:56:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 02:56:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Aune
+[2025-04-28 02:56:33] [INFO] [InputHandler] Gliding 0 camera to new tile 2_5_88ff3c3e-0245-4428-9773-a93b179045f5
+[2025-04-28 02:56:33] [INFO] [InputHandler] Gliding 1 camera to new tile 2_5_88ff3c3e-0245-4428-9773-a93b179045f5
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:56:33] [INFO] [AbilitySystem] Finished update updating {} because of ability

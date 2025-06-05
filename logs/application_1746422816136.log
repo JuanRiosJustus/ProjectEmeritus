@@ -1,0 +1,278 @@
+[2025-05-04 22:26:56] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 22:26:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 22:26:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 22:26:56] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 22:26:56] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 22:26:56] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 22:26:56] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 22:26:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 22:26:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 22:26:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 22:26:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 22:26:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 22:26:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 22:26:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 22:26:56] [INFO] [Component] Setting water_dragon_Eyia_7e5a1715-b6b3-4b50-8fac-ba62ba77cd02 on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Eyia_7e5a1715-b6b3-4b50-8fac-ba62ba77cd02","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit water_dragon_Eyia_7e5a1715-b6b3-4b50-8fac-ba62ba77cd02 into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting dark_dragon_Hunu_a03732e4-235a-48e6-bea4-c0ff0ba44fe3 on to {"row":1,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Hunu_a03732e4-235a-48e6-bea4-c0ff0ba44fe3","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit dark_dragon_Hunu_a03732e4-235a-48e6-bea4-c0ff0ba44fe3 into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting earth_dragon_Eytz_ed070603-3a9d-46c7-b031-2bb3edf2a300 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Eytz_ed070603-3a9d-46c7-b031-2bb3edf2a300","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit earth_dragon_Eytz_ed070603-3a9d-46c7-b031-2bb3edf2a300 into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting light_dragon_Sogte_1d0595ff-a577-4eaf-ba56-0bff3db021c5 on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Sogte_1d0595ff-a577-4eaf-ba56-0bff3db021c5","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit light_dragon_Sogte_1d0595ff-a577-4eaf-ba56-0bff3db021c5 into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f on to {"row":1,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting dark_dragon_Woea_44eb23fd-75f1-467b-9ffa-2868ed559221 on to {"row":6,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Woea_44eb23fd-75f1-467b-9ffa-2868ed559221","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit dark_dragon_Woea_44eb23fd-75f1-467b-9ffa-2868ed559221 into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting dragon_Wyri_ac263007-0599-495f-82f1-5fd1bf0c7ab9 on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Wyri_ac263007-0599-495f-82f1-5fd1bf0c7ab9","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit dragon_Wyri_ac263007-0599-495f-82f1-5fd1bf0c7ab9 into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting water_dragon_Godyoo_18e0c901-3809-4886-97e0-673f1d19e2db on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Godyoo_18e0c901-3809-4886-97e0-673f1d19e2db","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit water_dragon_Godyoo_18e0c901-3809-4886-97e0-673f1d19e2db into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting water_dragon_Kuqkui_23a7d1b4-4a4c-4e9e-bd3c-0667b63e690e on to {"row":4,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Kuqkui_23a7d1b4-4a4c-4e9e-bd3c-0667b63e690e","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit water_dragon_Kuqkui_23a7d1b4-4a4c-4e9e-bd3c-0667b63e690e into queue
+[2025-05-04 22:26:56] [INFO] [Component] Setting fire_dragon_Oyrui_7756225b-70af-4744-9922-1093ae04ece2 on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Oyrui_7756225b-70af-4744-9922-1093ae04ece2","structure":""}.
+[2025-05-04 22:26:56] [INFO] [SpeedQueue] Added unit fire_dragon_Oyrui_7756225b-70af-4744-9922-1093ae04ece2 into queue
+[2025-05-04 22:26:56] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 22:26:56] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 22:26:56] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 22:26:56] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 22:26:56] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 22:26:56] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 22:26:56] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 22:26:57] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 22:26:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 22:26:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 22:26:57] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f
+[2025-05-04 22:26:57] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f
+[2025-05-04 22:26:57] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 22:26:57] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 22:26:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 22:26:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 22:26:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 22:26:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 22:26:57] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 22:26:57] [INFO] [VisualsSystem] Finished creating blurred background after 0.4838067889213562 seconds
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f
+[2025-05-04 22:26:57] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f
+[2025-05-04 22:26:57] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 22:26:57] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:26:57] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:27:04] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_b3071627-0902-41e7-ad7d-4c1856f03dd5
+[2025-05-04 22:27:04] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-04 22:27:04] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-04 22:27:04] [INFO] [MovementSystem] Updated movement range to 9 for Guhieo
+[2025-05-04 22:27:04] [INFO] [MovementSystem] Updated movement path from [1, 1] to [7, 9] for Guhieo
+[2025-05-04 22:27:04] [INFO] [MovementSystem] Updated movement range to 9 for Guhieo
+[2025-05-04 22:27:04] [INFO] [MovementSystem] Updated movement path from [1, 1] to [7, 9] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [7, 8] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [7, 8] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [6, 8] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [6, 8] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [6, 7] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [6, 7] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [6, 6] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [6, 6] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [5, 7] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [5, 7] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [5, 6] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [5, 6] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 6] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 6] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 5] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 5] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 4] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 4] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 4] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 4] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 3] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 3] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 2] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 2] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 2] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 2] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 1] for Guhieo
+[2025-05-04 22:27:05] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 1] for Guhieo
+[2025-05-04 22:27:06] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 2] for Guhieo
+[2025-05-04 22:27:06] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 2] for Guhieo
+[2025-05-04 22:27:06] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 2] for Guhieo
+[2025-05-04 22:27:06] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 2] for Guhieo
+[2025-05-04 22:27:06] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 3] for Guhieo
+[2025-05-04 22:27:06] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 3] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 3] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 3] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 4] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 4] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 4] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 4] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 5] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 5] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 5] for Guhieo
+[2025-05-04 22:27:09] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 5] for Guhieo
+[2025-05-04 22:27:16] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_b3071627-0902-41e7-ad7d-4c1856f03dd5
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 6] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 6] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 5] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 5] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 4] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [4, 4] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 4] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 4] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 3] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [3, 3] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 3] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 3] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 2] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 2] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 2] for Guhieo
+[2025-05-04 22:27:17] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 2] for Guhieo
+[2025-05-04 22:27:22] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 3] for Guhieo
+[2025-05-04 22:27:22] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 3] for Guhieo
+[2025-05-04 22:27:22] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 3] for Guhieo
+[2025-05-04 22:27:22] [INFO] [MovementSystem] Updated movement path from [1, 1] to [2, 3] for Guhieo
+[2025-05-04 22:27:23] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 3] for Guhieo
+[2025-05-04 22:27:23] [INFO] [MovementSystem] Updated movement path from [1, 1] to [1, 3] for Guhieo
+[2025-05-04 22:27:23] [INFO] [Component] Setting fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f on to {"row":1,"column":3,"height":0,"collider":"","unit":"fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f","structure":""}.
+[2025-05-04 22:27:24] [INFO] [MovementSystem] Moved from [1, 1] to [1, 3]
+[2025-05-04 22:27:24] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f
+[2025-05-04 22:27:24] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Guhieo_7d7b7b70-f210-4884-82bc-8a2764e80a7f
+[2025-05-04 22:27:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 22:27:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Guhieo
+[2025-05-04 22:27:24] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_4be70d59-8fb6-4d54-b1ac-25c224f6fd74
+[2025-05-04 22:27:24] [INFO] [InputHandler] Gliding 1 camera to new tile 1_3_4be70d59-8fb6-4d54-b1ac-25c224f6fd74
+[2025-05-04 22:27:24] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_4be70d59-8fb6-4d54-b1ac-25c224f6fd74
+[2025-05-04 22:27:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:27:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:27:26] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-04 22:27:26] [INFO] [AbilitySystem] Guhieo is planning to use oblation on [4, 7]
+[2025-05-04 22:27:26] [INFO] [AbilitySystem] Updated area of sight for Guhieo, viewing 12 tiles
+[2025-05-04 22:27:26] [INFO] [AbilitySystem] Updated line of sight for Guhieo, viewing 8 tiles
+[2025-05-04 22:27:26] [INFO] [AbilitySystem] Updated area of effect for Guhieo viewing 1 tiles
+[2025-05-04 22:27:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:27:26] [INFO] [CombatSystem] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:26] [INFO] [CombatSystem] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:26] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:26] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Guhieo is planning to use oblation on [3, 7]
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated line of sight for Guhieo, viewing 7 tiles
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated area of effect for Guhieo viewing 1 tiles
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Guhieo is planning to use oblation on [3, 6]
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated line of sight for Guhieo, viewing 6 tiles
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated area of effect for Guhieo viewing 1 tiles
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Guhieo is planning to use oblation on [2, 6]
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated line of sight for Guhieo, viewing 5 tiles
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated area of effect for Guhieo viewing 1 tiles
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Guhieo is planning to use oblation on [2, 5]
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated line of sight for Guhieo, viewing 4 tiles
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated area of effect for Guhieo viewing 1 tiles
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Guhieo is planning to use oblation on [1, 5]
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated line of sight for Guhieo, viewing 3 tiles
+[2025-05-04 22:27:27] [INFO] [AbilitySystem] Updated area of effect for Guhieo viewing 1 tiles
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing damage mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Checking cost requirements for Guhieo to use oblation
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Guhieo is able to pay for oblation
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Started constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Finished constructing cost mappings for Guhieo to use oblation
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Paying cost requirements for Guhieo using oblation
+[2025-05-04 22:27:28] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-04 22:27:28] [INFO] [AbilitySystem] Used from oblation on [1, 5]
+[2025-05-04 22:31:58] [INFO] [AbilityPanel] Selecting fire_force

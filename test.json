@@ -1,0 +1,1 @@
+[{"env":"prod","settings":{"network":{"timeout":{"connect":30,"read":60},"retry":{"count":5,"strategy":"exponential"}},"features":{"logging":true,"analytics":{"enabled":true,"providers":["segment","mixpanel"]}}}}]

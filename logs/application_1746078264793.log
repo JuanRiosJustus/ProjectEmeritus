@@ -1,0 +1,693 @@
+[2025-04-30 22:44:24] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-30 22:44:24] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-30 22:44:24] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-30 22:44:24] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-30 22:44:24] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-30 22:44:24] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-30 22:44:24] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-30 22:44:24] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-30 22:44:24] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-30 22:44:24] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-30 22:44:24] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-30 22:44:24] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-30 22:44:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-30 22:44:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-30 22:44:25] [INFO] [Component] Setting dark_dragon_Ayyioi_d962de89-8ecd-4853-bf77-5461bbbf384c on to {"row":4,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Ayyioi_d962de89-8ecd-4853-bf77-5461bbbf384c","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit enemy:Ayyioi into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e on to {"row":4,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit enemy:Paoo into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting fire_dragon_Uina_97c79cf1-ae43-4b4e-9f29-87d14ef6438a on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Uina_97c79cf1-ae43-4b4e-9f29-87d14ef6438a","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit enemy:Uina into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting water_dragon_Qegui_6156c1e7-498c-4ac7-98fd-a2b6eb9aaed2 on to {"row":1,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Qegui_6156c1e7-498c-4ac7-98fd-a2b6eb9aaed2","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit enemy:Qegui into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting dark_dragon_Uivy_9ab48000-1d8a-4ef1-92db-5e264635c01c on to {"row":3,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Uivy_9ab48000-1d8a-4ef1-92db-5e264635c01c","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit user:Uivy into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting dark_dragon_Iawce_20c174b5-7347-4487-b205-bd55b0dbf330 on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Iawce_20c174b5-7347-4487-b205-bd55b0dbf330","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit user:Iawce into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting air_dragon_Pyqsdy_5993f009-ca1d-4477-938c-2b647e1b3af0 on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Pyqsdy_5993f009-ca1d-4477-938c-2b647e1b3af0","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit user:Pyqsdy into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting earth_dragon_Mesce_b6c22f1e-7014-4786-955d-3d8b34c6ddf8 on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Mesce_b6c22f1e-7014-4786-955d-3d8b34c6ddf8","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit user:Mesce into queue
+[2025-04-30 22:44:25] [INFO] [Component] Setting fire_dragon_Ganlo_609f853f-396f-4025-8285-1215ba923f23 on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Ganlo_609f853f-396f-4025-8285-1215ba923f23","structure":""}.
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Added unit user:Ganlo into queue
+[2025-04-30 22:44:25] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-30 22:44:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-30 22:44:25] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-30 22:44:25] [INFO] [FontPool] Started initializing FontPool
+[2025-04-30 22:44:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-30 22:44:25] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-30 22:44:25] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-30 22:44:25] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-30 22:44:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-30 22:44:25] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:25] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-30 22:44:25] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:25] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 22:44:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 22:44:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 22:44:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 22:44:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 22:44:26] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-30 22:44:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-30 22:44:26] [INFO] [VisualsSystem] Finished creating blurred background after 0.48644039034843445 seconds
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:26] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 22:44:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:26] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 22:44:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:26] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:44:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 22:44:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 22:44:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 22:45:08] [INFO] [InputHandler] Gliding 0 camera to new tile 4_5_3c84c350-4969-430c-a466-1d8134dbd310
+[2025-04-30 22:45:08] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-30 22:45:08] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement range to 10 for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [6, 7] for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement range to 10 for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [6, 7] for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [6, 6] for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [6, 6] for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [5, 6] for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [5, 6] for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [5, 5] for Paoo
+[2025-04-30 22:45:08] [INFO] [MovementSystem] Updated movement path from [4, 5] to [5, 5] for Paoo
+[2025-04-30 22:45:09] [INFO] [MovementSystem] Updated movement path from [4, 5] to [5, 4] for Paoo
+[2025-04-30 22:45:09] [INFO] [MovementSystem] Updated movement path from [4, 5] to [5, 4] for Paoo
+[2025-04-30 22:45:09] [INFO] [MovementSystem] Updated movement path from [4, 5] to [4, 4] for Paoo
+[2025-04-30 22:45:09] [INFO] [MovementSystem] Updated movement path from [4, 5] to [4, 4] for Paoo
+[2025-04-30 22:45:09] [INFO] [Component] Setting air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e","structure":""}.
+[2025-04-30 22:45:09] [INFO] [MovementSystem] Moved from [4, 5] to [4, 4]
+[2025-04-30 22:45:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:45:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Paoo_4d9650fc-68bb-4887-8eb4-4a21576c4f1e
+[2025-04-30 22:45:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 22:45:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Paoo
+[2025-04-30 22:45:09] [INFO] [InputHandler] Gliding 0 camera to new tile 4_4_d2caaa3c-b928-4407-ba21-7e3e0e61c243
+[2025-04-30 22:45:09] [INFO] [InputHandler] Gliding 1 camera to new tile 4_4_d2caaa3c-b928-4407-ba21-7e3e0e61c243
+[2025-04-30 22:45:11] [INFO] [InputHandler] Gliding 0 camera to new tile 4_4_d2caaa3c-b928-4407-ba21-7e3e0e61c243
+[2025-04-30 22:45:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilityPanel] Selecting air_attack
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on null
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of sight for Paoo, viewing 10 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 0 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 0 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [6, 7]
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 6 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [5, 6]
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 4 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [5, 5]
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [4, 5]
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [4, 4]
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Paoo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Paoo
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Paoo defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Paoo
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [4, 3]
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [3, 3]
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 22:45:12] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Paoo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mesce
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mesce
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-04-30 22:45:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 22:45:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:06:59] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [3, 2]
+[2025-04-30 23:06:59] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 23:06:59] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Paoo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uivy
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uivy
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-04-30 23:06:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:06:59] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:06:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [4, 2]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [4, 3]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [4, 4]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Paoo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Paoo
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Paoo defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Paoo
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [5, 4]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [5, 5]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [5, 6]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 4 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [6, 6]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 4 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on [6, 7]
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 6 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Paoo is planning to use air_attack on null
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 0 tiles
+[2025-04-30 23:07:00] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 0 tiles
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use air_attack
+[2025-04-30 23:07:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on null
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [7, 7]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 4 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [6, 7]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 6 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [6, 6]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 4 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [6, 5]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 4 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pyqsdy
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pyqsdy
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pyqsdy
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pyqsdy
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [5, 5]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [5, 4]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [4, 4]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [4, 3]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Paoo is planning to use oblation on [3, 3]
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 23:07:01] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mesce
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mesce
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Mesce
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Mesce
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] -4.1666665 damage after defenses for oblation
+[2025-04-30 23:07:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:07:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Paoo is planning to use oblation on [3, 2]
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uivy
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uivy
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uivy
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uivy
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Paoo is planning to use oblation on [2, 2]
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Paoo is planning to use oblation on [2, 1]
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uina
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uina
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Paoo
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Uina
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Uina
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Paoo is planning to use oblation on [2, 0]
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 4 tiles
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Paoo is planning to use oblation on [1, 0]
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 3 tiles
+[2025-04-30 23:11:33] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:11:34] [INFO] [AbilitySystem] Paoo is planning to use oblation on [0, 0]
+[2025-04-30 23:11:34] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 2 tiles
+[2025-04-30 23:11:34] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 1 tiles
+[2025-04-30 23:11:34] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 23:11:34] [INFO] [AbilitySystem] Paoo is planning to use oblation on null
+[2025-04-30 23:11:34] [INFO] [AbilitySystem] Updated line of sight for Paoo, viewing 0 tiles
+[2025-04-30 23:11:34] [INFO] [AbilitySystem] Updated area of effect for Paoo viewing 0 tiles
+[2025-04-30 23:11:34] [INFO] [AbilityDamageReport] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Started constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Finished constructing damage mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Started constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [CombatSystem] Finished constructing cost mappings for Paoo to use oblation
+[2025-04-30 23:11:34] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

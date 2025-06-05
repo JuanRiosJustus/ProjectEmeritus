@@ -1,0 +1,314 @@
+[2025-05-28 00:17:29] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-28 00:17:29] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-28 00:17:29] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-28 00:17:29] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-28 00:17:29] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-28 00:17:29] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-28 00:17:29] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-28 00:17:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-28 00:17:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-28 00:17:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-28 00:17:29] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-28 00:17:29] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-28 00:17:29] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-28 00:17:29] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651 on to {"row":2,"column":1,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Iufi___49dafa0a-dbb4-4d5a-b56a-c6279035b2d9 on to {"row":6,"column":0,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Iufi___49dafa0a-dbb4-4d5a-b56a-c6279035b2d9","layers":{"empty":false},"total_elevation":5}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Iufi___49dafa0a-dbb4-4d5a-b56a-c6279035b2d9 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Xofrgs___06f602e3-af63-4ab8-91bb-c37c8b241104 on to {"row":2,"column":0,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Xofrgs___06f602e3-af63-4ab8-91bb-c37c8b241104","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Xofrgs___06f602e3-af63-4ab8-91bb-c37c8b241104 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Kyii___c4b8ef34-3f1a-4f62-b5d6-98bd01550c6e on to {"row":4,"column":1,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Kyii___c4b8ef34-3f1a-4f62-b5d6-98bd01550c6e","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Kyii___c4b8ef34-3f1a-4f62-b5d6-98bd01550c6e into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Fehfe___e7973592-9ae6-4f02-9c31-6092d434f673 on to {"row":4,"column":0,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Fehfe___e7973592-9ae6-4f02-9c31-6092d434f673","layers":{"empty":false},"total_elevation":5}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Fehfe___e7973592-9ae6-4f02-9c31-6092d434f673 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Gand___6ba60005-3ed6-4a2a-816b-fdecd4a7d482 on to {"row":1,"column":11,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Gand___6ba60005-3ed6-4a2a-816b-fdecd4a7d482","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Gand___6ba60005-3ed6-4a2a-816b-fdecd4a7d482 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Yekpa___9e0f9a3a-df67-44d1-a489-49955dc25611 on to {"row":4,"column":10,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Yekpa___9e0f9a3a-df67-44d1-a489-49955dc25611","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Yekpa___9e0f9a3a-df67-44d1-a489-49955dc25611 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Juzu___c371ca39-4b87-4f3f-ab37-fefd944784a0 on to {"row":6,"column":11,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Juzu___c371ca39-4b87-4f3f-ab37-fefd944784a0","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Juzu___c371ca39-4b87-4f3f-ab37-fefd944784a0 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Nibyno___8245da1f-9be3-4d39-92ba-71e7e01ef5d2 on to {"row":5,"column":10,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Nibyno___8245da1f-9be3-4d39-92ba-71e7e01ef5d2","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Nibyno___8245da1f-9be3-4d39-92ba-71e7e01ef5d2 into queue
+[2025-05-28 00:17:29] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Riemg___459c7530-9f11-4a66-9380-7b2f0b9a4d05 on to {"row":5,"column":11,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Riemg___459c7530-9f11-4a66-9380-7b2f0b9a4d05","layers":{"empty":false},"total_elevation":5}.
+[2025-05-28 00:17:29] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Riemg___459c7530-9f11-4a66-9380-7b2f0b9a4d05 into queue
+[2025-05-28 00:17:29] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-28 00:17:29] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-28 00:17:29] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-28 00:17:29] [INFO] [FontPool] Started initializing FontPool
+[2025-05-28 00:17:29] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-28 00:17:29] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:29] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-28 00:17:30] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651
+[2025-05-28 00:17:30] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651
+[2025-05-28 00:17:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 00:17:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 00:17:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-28 00:17:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-28 00:17:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 00:17:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-28 00:17:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-28 00:17:30] [INFO] [VisualsSystem] Finished creating blurred background after 0.4875769317150116 seconds
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651
+[2025-05-28 00:17:30] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651
+[2025-05-28 00:17:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 00:17:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 00:17:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 00:17:33] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_1___26704aaf-3f7c-4ae5-af9a-98d63663ee43
+[2025-05-28 00:17:33] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_1___26704aaf-3f7c-4ae5-af9a-98d63663ee43
+[2025-05-28 00:17:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651
+[2025-05-28 00:17:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651
+[2025-05-28 00:17:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 00:17:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Roga
+[2025-05-28 00:17:34] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_1___26704aaf-3f7c-4ae5-af9a-98d63663ee43
+[2025-05-28 00:17:34] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-28 00:17:34] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement range to 10 for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement range to 10 for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 6] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [6, 6] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 5] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 4] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 4] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 3] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [5, 3] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 3] for Roga
+[2025-05-28 00:17:34] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 3] for Roga
+[2025-05-28 00:17:35] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Roga
+[2025-05-28 00:17:35] [INFO] [MovementSystem] Updated movement path from [2, 1] to [4, 2] for Roga
+[2025-05-28 00:17:35] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Roga
+[2025-05-28 00:17:35] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 2] for Roga
+[2025-05-28 00:17:35] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 1] for Roga
+[2025-05-28 00:17:35] [INFO] [MovementSystem] Updated movement path from [2, 1] to [3, 1] for Roga
+[2025-05-28 00:17:36] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651 on to {"row":3,"column":1,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Roga___1c60b3ab-0a69-4363-9ad9-7a527261b651","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 00:17:36] [INFO] [MovementSystem] Moved from [2, 1] to [3, 1]
+[2025-05-28 00:17:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 00:17:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Roga
+[2025-05-28 00:17:36] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___5d1ff673-1478-4604-b52f-1b6ae6b3b0ee
+[2025-05-28 00:17:36] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_1___5d1ff673-1478-4604-b52f-1b6ae6b3b0ee
+[2025-05-28 00:17:37] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___5d1ff673-1478-4604-b52f-1b6ae6b3b0ee
+[2025-05-28 00:17:39] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___5d1ff673-1478-4604-b52f-1b6ae6b3b0ee
+[2025-05-28 00:17:42] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___5d1ff673-1478-4604-b52f-1b6ae6b3b0ee
+[2025-05-28 00:17:42] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:42] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:43] [INFO] [AbilityPanel] Selecting fire_attack
+[2025-05-28 00:17:43] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [5, 5]
+[2025-05-28 00:17:43] [INFO] [AbilitySystem] Updated area of sight for Roga, viewing 9 tiles
+[2025-05-28 00:17:43] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 7 tiles
+[2025-05-28 00:17:43] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:43] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:43] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:43] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:43] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:43] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:43] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:43] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:43] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [5, 4]
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 6 tiles
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [5, 3]
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 2 tiles
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [4, 3]
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 4 tiles
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [4, 2]
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 2 tiles
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [3, 2]
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 2 tiles
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [2, 2]
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 3 tiles
+[2025-05-28 00:17:44] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:44] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:45] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [3, 2]
+[2025-05-28 00:17:45] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 2 tiles
+[2025-05-28 00:17:45] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:45] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:45] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:45] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:45] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:45] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:45] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:45] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:45] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [3, 1]
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 1 tiles
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Roga
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Roga lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Roga
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Roga
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Roga defends with Same-Type-Defense-Bonus from fire_attack for 15.4
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Roga
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [2, 0]
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 3 tiles
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Roga
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Roga lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Roga
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xofrgs
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xofrgs
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Roga is planning to use fire_attack on [1, 0]
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 4 tiles
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 1 tiles
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Roga is planning to use fire_attack on null
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated line of sight for Roga, viewing 0 tiles
+[2025-05-28 00:17:55] [INFO] [AbilitySystem] Updated area of effect for Roga viewing 0 tiles
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing damage mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Started constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [CombatSystem] Finished constructing cost mappings for Roga to use fire_attack
+[2025-05-28 00:17:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

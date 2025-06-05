@@ -1,0 +1,30 @@
+[2025-06-02 03:53:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 03:53:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 03:53:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 03:53:49] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 03:53:49] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 03:53:50] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 03:53:50] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 03:53:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 03:53:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 03:53:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 03:53:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 03:53:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 03:53:50] [INFO] [VisualsSystem] Finished creating blurred background after 0.320976585149765 seconds
+[2025-06-02 03:53:52] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 03:53:52] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 03:53:52] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 03:53:52] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 03:53:52] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 03:53:52] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Civue___32c80fe1-a344-4cb6-80d7-3b084d259a06 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Civue___32c80fe1-a344-4cb6-80d7-3b084d259a06","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:53:52] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Civue___32c80fe1-a344-4cb6-80d7-3b084d259a06 into queue
+[2025-06-02 03:53:52] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Hiqpo___9f433001-8bc6-4083-b27f-41d30b1f54bd on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_fire_dragon___NICKNAME_Hiqpo___9f433001-8bc6-4083-b27f-41d30b1f54bd","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:53:52] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Hiqpo___9f433001-8bc6-4083-b27f-41d30b1f54bd into queue
+[2025-06-02 03:53:52] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:53:52] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 03:53:52] [INFO] [GameModel] Updated area of sight for Civue, viewing 5 tiles
+[2025-06-02 03:53:52] [INFO] [GameModel] Updated line of sight for Civue, viewing 2 tiles
+[2025-06-02 03:53:52] [INFO] [GameModel] Updated area of sight for Civue, viewing 1 tiles
+[2025-06-02 03:53:52] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 03:53:52] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 03:53:52] [INFO] [Game

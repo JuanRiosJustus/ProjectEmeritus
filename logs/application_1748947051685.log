@@ -1,0 +1,1477 @@
+[2025-06-03 03:37:31] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 03:37:31] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 03:37:31] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 03:37:31] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 03:37:31] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 03:37:31] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 03:37:31] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 03:37:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 03:37:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 03:37:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 03:37:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 03:37:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 03:37:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 03:37:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Gyegu___e5c6001e-835f-4a00-80a2-444fb5aac008 on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Gyegu___e5c6001e-835f-4a00-80a2-444fb5aac008","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Mamxod___b7825db5-35ec-443b-beff-353c5723cbfd on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Mamxod___b7825db5-35ec-443b-beff-353c5723cbfd","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761 on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318 on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Dili___a26777a0-b4b5-4a3e-8097-d032737cd59b on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Dili___a26777a0-b4b5-4a3e-8097-d032737cd59b","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Vyqauy___69672d2f-1d74-488a-8ffb-208e0bf51d0f on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Vyqauy___69672d2f-1d74-488a-8ffb-208e0bf51d0f","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Doqa___fdf0556c-fdb7-46d6-8d8b-ab16aff0bca3 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Doqa___fdf0556c-fdb7-46d6-8d8b-ab16aff0bca3","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4 on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Zeutv___e28ef9f3-a018-4549-b94b-8a5255fcbf7b on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Zeutv___e28ef9f3-a018-4549-b94b-8a5255fcbf7b","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 03:37:32] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Roluun___c30fee7e-75db-4a6c-8b46-2e418716b7f1 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Roluun___c30fee7e-75db-4a6c-8b46-2e418716b7f1","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 03:37:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-03 03:37:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-03 03:37:32] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-03 03:37:32] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 03:37:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 03:37:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:32] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:32] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 03:37:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-03 03:37:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.486083447933197 seconds
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:33] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:34] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementSystem] Updated movement range to 9 for Digpul
+[2025-06-03 03:37:35] [INFO] [MovementSystem] Updated movement path from [5, 11] to [5, 12] for Digpul
+[2025-06-03 03:37:35] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4 on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:37:35] [INFO] [MovementSystem] Moved from [5, 11] to [5, 12]
+[2025-06-03 03:37:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Fyfkgy
+[2025-06-03 03:37:35] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_12___dee83109-1ee3-455b-8f15-ec21bf258a9f
+[2025-06-03 03:37:35] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_12___dee83109-1ee3-455b-8f15-ec21bf258a9f
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Fyfkgy___8863eb6b-5ff9-4eda-9ab8-c719123cf318
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-06-03 03:37:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-06-03 03:37:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:35] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Lijquu
+[2025-06-03 03:37:39] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___6bfdd639-c2d6-4944-a39e-4fa1e1f74e19
+[2025-06-03 03:37:39] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_0___6bfdd639-c2d6-4944-a39e-4fa1e1f74e19
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:39] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementSystem] Updated movement range to 8 for Digpul
+[2025-06-03 03:37:41] [INFO] [MovementSystem] Updated movement path from [5, 12] to [4, 12] for Digpul
+[2025-06-03 03:37:41] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4 on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 03:37:41] [INFO] [MovementSystem] Moved from [5, 12] to [4, 12]
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Digpul
+[2025-06-03 03:37:41] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___6bfdd639-c2d6-4944-a39e-4fa1e1f74e19
+[2025-06-03 03:37:41] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_0___6bfdd639-c2d6-4944-a39e-4fa1e1f74e19
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Digpul___68ca66dd-d5bc-4686-9dfe-78f4d74db7e4
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:41] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761
+[2025-06-03 03:37:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Lijquu
+[2025-06-03 03:37:41] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___6bfdd639-c2d6-4944-a39e-4fa1e1f74e19
+[2025-06-03 03:37:41] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_0___6bfdd639-c2d6-4944-a39e-4fa1e1f74e19
+[2025-06-03 03:37:43] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___6bfdd639-c2d6-4944-a39e-4fa1e1f74e19
+[2025-06-03 03:37:43] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-03 03:37:43] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement range to 6 for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [9, 4] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement range to 6 for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [9, 4] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [9, 5] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [9, 5] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [9, 4] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [9, 4] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [8, 4] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [8, 4] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [8, 3] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [8, 3] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 2] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 2] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 1] for Lijquu
+[2025-06-03 03:37:43] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 1] for Lijquu
+[2025-06-03 03:37:44] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Lijquu
+[2025-06-03 03:37:44] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Lijquu
+[2025-06-03 03:37:44] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Lijquu
+[2025-06-03 03:37:44] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Lijquu
+[2025-06-03 03:37:45] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Lijquu
+[2025-06-03 03:37:45] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Lijquu
+[2025-06-03 03:37:45] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 1] for Lijquu
+[2025-06-03 03:37:45] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 1] for Lijquu
+[2025-06-03 03:37:46] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Lijquu___02301601-bcf1-4f32-9ba3-456552b41761","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 03:37:46] [INFO] [MovementSystem] Moved from [5, 0] to [6, 1]
+[2025-06-03 03:37:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:46] [INFO] [SelectedTilePanel] Updated selected tile display to view Lijquu
+[2025-06-03 03:37:46] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___1f2a9ed8-e4b5-4a29-9406-b8217e09c93f
+[2025-06-03 03:37:46] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_1___1f2a9ed8-e4b5-4a29-9406-b8217e09c93f
+[2025-06-03 03:37:48] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___1f2a9ed8-e4b5-4a29-9406-b8217e09c93f
+[2025-06-03 03:37:50] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Doqa___fdf0556c-fdb7-46d6-8d8b-ab16aff0bca3
+[2025-06-03 03:37:50] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Doqa___fdf0556c-fdb7-46d6-8d8b-ab16aff0bca3
+[2025-06-03 03:37:50] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 03:37:50] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 03:37:50] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Doqa___fdf0556c-fdb7-46d6-8d8b-ab16aff0bca3
+[2025-06-03 03:37:50] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Doqa___fdf0556c-fdb7-46d6-8d8b-ab16aff0bca3
+[2025-06-03 03:37:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 03:37:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Doqa
+[2025-06-03 03:37:50] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_11___921a2dfd-0862-450a-85ce-db15aa921b0f
+[2025-06-03 03:37:50] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_11___921a2dfd-0862-450a-85ce-db15aa921b0f
+[2025-06-03 03:37:54] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_11___921a2dfd-0862-450a-85ce-db15aa921b0f
+[2025-06-03 03:37:54] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-03 03:37:54] [INFO] [StatisticsPanel] Finished updating statistics information panel

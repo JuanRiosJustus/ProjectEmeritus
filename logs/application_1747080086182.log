@@ -1,0 +1,807 @@
+[2025-05-12 16:01:26] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-12 16:01:26] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-12 16:01:26] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-12 16:01:26] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-12 16:01:26] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-12 16:01:26] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-12 16:01:26] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-12 16:01:26] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-12 16:01:26] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-12 16:01:26] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-12 16:01:26] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-12 16:01:26] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-12 16:01:26] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-12 16:01:26] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-12 16:01:26] [INFO] [Component] Setting water_dragon_Cyhkp_4e114f87-980a-4c61-ac23-acebfcc37f39 on to {"row":0,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Cyhkp_4e114f87-980a-4c61-ac23-acebfcc37f39","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit water_dragon_Cyhkp_4e114f87-980a-4c61-ac23-acebfcc37f39 into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting dragon_Queu_c81656e1-5ada-4a6e-9206-1251bdbbf4a2 on to {"row":3,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Queu_c81656e1-5ada-4a6e-9206-1251bdbbf4a2","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit dragon_Queu_c81656e1-5ada-4a6e-9206-1251bdbbf4a2 into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6 on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6 into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting light_dragon_Puty_cc67f535-5ce5-4b9e-8372-dbb08195e55e on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Puty_cc67f535-5ce5-4b9e-8372-dbb08195e55e","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit light_dragon_Puty_cc67f535-5ce5-4b9e-8372-dbb08195e55e into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting fire_dragon_Uycmzo_539cef11-5df9-493a-ad02-a477539222db on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Uycmzo_539cef11-5df9-493a-ad02-a477539222db","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit fire_dragon_Uycmzo_539cef11-5df9-493a-ad02-a477539222db into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting earth_dragon_Iihfle_2dd7e7aa-6899-43d7-9fe6-4ad47cec96fe on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Iihfle_2dd7e7aa-6899-43d7-9fe6-4ad47cec96fe","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit earth_dragon_Iihfle_2dd7e7aa-6899-43d7-9fe6-4ad47cec96fe into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting dark_dragon_Gixie_3d86260f-1aa6-4b8a-afd8-cd0018231e9a on to {"row":1,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Gixie_3d86260f-1aa6-4b8a-afd8-cd0018231e9a","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit dark_dragon_Gixie_3d86260f-1aa6-4b8a-afd8-cd0018231e9a into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting dark_dragon_Henasu_9f2e576e-e540-4e34-8b9a-629caea163c2 on to {"row":6,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Henasu_9f2e576e-e540-4e34-8b9a-629caea163c2","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit dark_dragon_Henasu_9f2e576e-e540-4e34-8b9a-629caea163c2 into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting fire_dragon_Iefo_2cfb2136-be9d-4efc-9769-93c199850373 on to {"row":0,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Iefo_2cfb2136-be9d-4efc-9769-93c199850373","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit fire_dragon_Iefo_2cfb2136-be9d-4efc-9769-93c199850373 into queue
+[2025-05-12 16:01:26] [INFO] [Component] Setting earth_dragon_Tedni_12991580-0809-4da3-b14a-bc8924c6a9ae on to {"row":6,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Tedni_12991580-0809-4da3-b14a-bc8924c6a9ae","structure":""}.
+[2025-05-12 16:01:26] [INFO] [SpeedQueue] Added unit earth_dragon_Tedni_12991580-0809-4da3-b14a-bc8924c6a9ae into queue
+[2025-05-12 16:01:26] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-12 16:01:26] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-12 16:01:26] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-12 16:01:26] [INFO] [FontPool] Started initializing FontPool
+[2025-05-12 16:01:26] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-12 16:01:26] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-12 16:01:26] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-12 16:01:27] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-12 16:01:27] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-12 16:01:27] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-12 16:01:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-12 16:01:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:01:27] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-12 16:01:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-12 16:01:27] [INFO] [VisualsSystem] Finished creating blurred background after 0.48261818289756775 seconds
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-12 16:01:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-12 16:01:32] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_3914e866-c1e7-40db-87b7-9530f925c8b9
+[2025-05-12 16:01:32] [INFO] [InputHandler] Gliding 1 camera to new tile 5_0_3914e866-c1e7-40db-87b7-9530f925c8b9
+[2025-05-12 16:01:32] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:32] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:01:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Raliy
+[2025-05-12 16:01:34] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_3914e866-c1e7-40db-87b7-9530f925c8b9
+[2025-05-12 16:01:34] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-12 16:01:34] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement range to 7 for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 6] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement range to 7 for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 6] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 4] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 4] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 3] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 3] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Raliy
+[2025-05-12 16:01:34] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Raliy
+[2025-05-12 16:01:35] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:35] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:35] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Raliy
+[2025-05-12 16:01:35] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Raliy
+[2025-05-12 16:01:39] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:39] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:39] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Raliy
+[2025-05-12 16:01:39] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 2] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 2] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 2] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 2] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 3] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 3] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [2, 3] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [2, 3] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [2, 4] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [2, 4] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [1, 4] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [1, 4] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [1, 5] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [1, 5] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [0, 5] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [0, 5] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [0, 6] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [0, 6] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [1, 6] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [1, 6] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 4] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 4] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 3] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [3, 3] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 1] for Raliy
+[2025-05-12 16:01:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 1] for Raliy
+[2025-05-12 16:01:41] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:41] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:41] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Raliy
+[2025-05-12 16:01:41] [INFO] [MovementSystem] Updated movement path from [5, 0] to [4, 1] for Raliy
+[2025-05-12 16:01:48] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:48] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Raliy
+[2025-05-12 16:01:49] [INFO] [Component] Setting air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6 on to {"row":5,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6","structure":""}.
+[2025-05-12 16:01:49] [INFO] [MovementSystem] Moved from [5, 0] to [5, 1]
+[2025-05-12 16:01:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:01:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Raliy
+[2025-05-12 16:01:49] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_58424b96-3819-45b4-97bb-e96130dfb4e5
+[2025-05-12 16:01:49] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_58424b96-3819-45b4-97bb-e96130dfb4e5
+[2025-05-12 16:01:50] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_58424b96-3819-45b4-97bb-e96130dfb4e5
+[2025-05-12 16:01:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:51] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-12 16:01:51] [INFO] [AbilitySystem] Raliy is planning to use air_attack on null
+[2025-05-12 16:01:51] [INFO] [AbilitySystem] Updated area of sight for Raliy, viewing 12 tiles
+[2025-05-12 16:01:51] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 0 tiles
+[2025-05-12 16:01:51] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 0 tiles
+[2025-05-12 16:01:51] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:51] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:51] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:51] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:51] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:51] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:51] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:51] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 5]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 7 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 4]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 6 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 4]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 5 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 3]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 4 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 3]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 3 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 2]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 1]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Raliy
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Raliy lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Raliy lands a CRIT bonus with air_attack for 33.0
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 55.0 damage after modifiers for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Raliy
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Raliy
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 55.0 Raw damage after defenses for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Raliy defends with Same-Type-Defense-Bonus from air_attack for 38.5
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Raliy
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 15.0 damage after defenses for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [4, 1]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [4, 0]
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 3 tiles
+[2025-05-12 16:01:52] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Raliy
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Raliy lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Raliy
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Puty
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Puty
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-12 16:01:52] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:52] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [4, 1]
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 1]
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Raliy
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Raliy lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Raliy
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Raliy
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Raliy defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Raliy
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 2]
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 3]
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 4 tiles
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 4]
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 5 tiles
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 4]
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 6 tiles
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 5]
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 7 tiles
+[2025-05-12 16:01:54] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:01:56] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-12 16:01:56] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-12 16:01:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:01:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-12 16:01:57] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_58424b96-3819-45b4-97bb-e96130dfb4e5
+[2025-05-12 16:01:57] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_58424b96-3819-45b4-97bb-e96130dfb4e5
+[2025-05-12 16:01:57] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:57] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Raliy_486017b4-067b-424a-98b9-78a6e5655de6
+[2025-05-12 16:01:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:01:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Raliy
+[2025-05-12 16:01:59] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_58424b96-3819-45b4-97bb-e96130dfb4e5
+[2025-05-12 16:01:59] [INFO] [AbilitySystem] Raliy is planning to use air_attack on null
+[2025-05-12 16:01:59] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 0 tiles
+[2025-05-12 16:01:59] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 0 tiles
+[2025-05-12 16:01:59] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:59] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:59] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:01:59] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:59] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:01:59] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:59] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:01:59] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 4]
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 6 tiles
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 3]
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 5 tiles
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 3]
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 4 tiles
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 2]
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 3 tiles
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 2]
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 1]
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Raliy
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Raliy lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Raliy
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Raliy
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Raliy defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Raliy
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [4, 1]
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:02:00] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:00] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 1]
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Raliy
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Raliy lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Raliy
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Raliy
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Raliy defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Raliy
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 2]
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 3]
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 3 tiles
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 3]
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 4 tiles
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 4]
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 5 tiles
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 4]
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 6 tiles
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 5]
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 7 tiles
+[2025-05-12 16:02:01] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:01] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on null
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 0 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 0 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 5]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 7 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 4]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 6 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 4]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 5 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 3]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 4 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 2]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 3 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 2]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [4, 2]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 3 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [4, 1]
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:02:11] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:11] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [4, 2]
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 3 tiles
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [5, 2]
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 2 tiles
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 3]
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 4 tiles
+[2025-05-12 16:02:12] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:12] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:12] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [6, 4]
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 5 tiles
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 4]
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 6 tiles
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Raliy is planning to use air_attack on [7, 5]
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Updated line of sight for Raliy, viewing 7 tiles
+[2025-05-12 16:02:13] [INFO] [AbilitySystem] Updated area of effect for Raliy viewing 1 tiles
+[2025-05-12 16:02:13] [INFO] [AbilityDamageReport] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Started constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Finished constructing damage mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Started constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [CombatSystem] Finished constructing cost mappings for Raliy to use air_attack
+[2025-05-12 16:02:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-12 16:02:14] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-12 16:02:14] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-12 16:02:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-12 16:02:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

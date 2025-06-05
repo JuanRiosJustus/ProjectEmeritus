@@ -1,0 +1,30 @@
+[2025-06-02 03:47:42] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 03:47:42] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 03:47:42] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 03:47:42] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 03:47:42] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 03:47:42] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 03:47:42] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 03:47:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 03:47:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 03:47:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 03:47:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 03:47:43] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 03:47:43] [INFO] [VisualsSystem] Finished creating blurred background after 0.3205950856208801 seconds
+[2025-06-02 03:47:44] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 03:47:44] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 03:47:44] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 03:47:44] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 03:47:44] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 03:47:44] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Cimgig___59e21ab4-8447-4713-9caa-134c36b04957 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_light_dragon___NICKNAME_Cimgig___59e21ab4-8447-4713-9caa-134c36b04957","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:47:44] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Cimgig___59e21ab4-8447-4713-9caa-134c36b04957 into queue
+[2025-06-02 03:47:44] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Tarya___ef260475-96a2-4388-80f8-c352071901cd on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_dragon___NICKNAME_Tarya___ef260475-96a2-4388-80f8-c352071901cd","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 03:47:44] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Tarya___ef260475-96a2-4388-80f8-c352071901cd into queue
+[2025-06-02 03:47:44] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 03:47:44] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:47:44] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 03:47:45] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 03:47:45] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 03:47:45] [INFO] [GameModel] Updated area of sight for Cimgig, viewing 5 tiles
+[2025-06-02 03:47:45] [INFO] [GameModel] Updated line of sight for Cimgig, viewing 2 tiles
+[2025-06-02 03:47:45] [INFO] [GameModel] Updated area of sight for Cimgig,

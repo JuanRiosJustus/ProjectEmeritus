@@ -1,0 +1,283 @@
+[2025-05-04 22:46:18] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 22:46:18] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 22:46:18] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 22:46:18] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 22:46:18] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 22:46:18] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 22:46:18] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 22:46:18] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 22:46:18] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 22:46:18] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 22:46:18] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 22:46:18] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 22:46:18] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 22:46:18] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 22:46:18] [INFO] [Component] Setting air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354 on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354 into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting dragon_Zuyocu_7482b4a0-6f3c-4fe1-be84-61663fcbc880 on to {"row":0,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Zuyocu_7482b4a0-6f3c-4fe1-be84-61663fcbc880","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit dragon_Zuyocu_7482b4a0-6f3c-4fe1-be84-61663fcbc880 into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting dragon_Dudy_580502f5-78ce-4459-983e-c2da05b44f6d on to {"row":4,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Dudy_580502f5-78ce-4459-983e-c2da05b44f6d","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit dragon_Dudy_580502f5-78ce-4459-983e-c2da05b44f6d into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting water_dragon_Eosfy_9e775a66-1d23-4477-89b3-6e352b576a57 on to {"row":0,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Eosfy_9e775a66-1d23-4477-89b3-6e352b576a57","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit water_dragon_Eosfy_9e775a66-1d23-4477-89b3-6e352b576a57 into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting fire_dragon_Falsye_13e89122-492e-419c-a45c-b274eaa7f6ee on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Falsye_13e89122-492e-419c-a45c-b274eaa7f6ee","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit fire_dragon_Falsye_13e89122-492e-419c-a45c-b274eaa7f6ee into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting fire_dragon_Fiwtyv_0a9d3175-278b-418d-a6a7-1a5a0d883c91 on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Fiwtyv_0a9d3175-278b-418d-a6a7-1a5a0d883c91","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit fire_dragon_Fiwtyv_0a9d3175-278b-418d-a6a7-1a5a0d883c91 into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting water_dragon_Pohae_2a58cfa5-984c-4a96-971b-8ae9aaaa2bc8 on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Pohae_2a58cfa5-984c-4a96-971b-8ae9aaaa2bc8","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit water_dragon_Pohae_2a58cfa5-984c-4a96-971b-8ae9aaaa2bc8 into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting water_dragon_Toueta_bed03034-38bb-407d-ba0c-4c5495d85a49 on to {"row":6,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Toueta_bed03034-38bb-407d-ba0c-4c5495d85a49","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit water_dragon_Toueta_bed03034-38bb-407d-ba0c-4c5495d85a49 into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting water_dragon_Ryvrfi_5c647513-36ca-43ed-bb63-79453f92852f on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Ryvrfi_5c647513-36ca-43ed-bb63-79453f92852f","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit water_dragon_Ryvrfi_5c647513-36ca-43ed-bb63-79453f92852f into queue
+[2025-05-04 22:46:18] [INFO] [Component] Setting dark_dragon_Kyia_00c8daed-fa66-446d-b72f-6ad9ab68975b on to {"row":0,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Kyia_00c8daed-fa66-446d-b72f-6ad9ab68975b","structure":""}.
+[2025-05-04 22:46:18] [INFO] [SpeedQueue] Added unit dark_dragon_Kyia_00c8daed-fa66-446d-b72f-6ad9ab68975b into queue
+[2025-05-04 22:46:18] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 22:46:18] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 22:46:18] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 22:46:18] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 22:46:18] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 22:46:18] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 22:46:18] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 22:46:18] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 22:46:18] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 22:46:19] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 22:46:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 22:46:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 22:46:19] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 22:46:19] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 22:46:19] [INFO] [VisualsSystem] Finished creating blurred background after 0.48388978838920593 seconds
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Suywlx_23b2b0d9-44fb-4df7-a3b0-b21bf0a1a354
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 22:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 22:46:20] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_eb73f3a6-15ae-43f0-91e8-15410af6a26c
+[2025-05-04 22:46:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:46:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:46:21] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-04 22:46:21] [INFO] [AbilitySystem] Suywlx is planning to use air_attack on null
+[2025-05-04 22:46:21] [INFO] [AbilitySystem] Updated area of sight for Suywlx, viewing 5 tiles
+[2025-05-04 22:46:21] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 0 tiles
+[2025-05-04 22:46:21] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:46:21] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:21] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:46:21] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:21] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:21] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_attack
+[2025-05-04 22:46:21] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_attack
+[2025-05-04 22:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:46:22] [INFO] [AbilitySystem] Suywlx is planning to use air_attack on [7, 7]
+[2025-05-04 22:46:22] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 7 tiles
+[2025-05-04 22:46:22] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 1 tiles
+[2025-05-04 22:46:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:46:22] [INFO] [AbilitySystem] Suywlx is planning to use air_attack on null
+[2025-05-04 22:46:22] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 0 tiles
+[2025-05-04 22:46:22] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:46:22] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_attack
+[2025-05-04 22:46:22] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:46:23] [INFO] [AbilityPanel] Selecting air_force
+[2025-05-04 22:46:23] [INFO] [AbilitySystem] Suywlx is planning to use air_force on null
+[2025-05-04 22:46:23] [INFO] [AbilitySystem] Updated area of sight for Suywlx, viewing 1 tiles
+[2025-05-04 22:46:23] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:46:23] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:46:23] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:46:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:46:23] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:46:23] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:46:23] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:46:23] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:46:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:49] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [7, 6]
+[2025-05-04 22:48:49] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 6 tiles
+[2025-05-04 22:48:49] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:49] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:49] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:49] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:49] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:49] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:49] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:49] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:49] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [6, 6]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 7 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [6, 5]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 6 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [5, 5]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 4 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [5, 4]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 4 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [4, 3]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 2 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [4, 2]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 2 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [3, 1]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 2 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on [3, 0]
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 2 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Suywlx is planning to use air_force on null
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated line of sight for Suywlx, viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilitySystem] Updated area of effect for Suywlx viewing 0 tiles
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing damage mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Started constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [CombatSystem] Finished constructing cost mappings for Suywlx to use air_force
+[2025-05-04 22:48:50] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

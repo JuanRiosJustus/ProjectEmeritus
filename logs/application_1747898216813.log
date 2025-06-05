@@ -1,0 +1,54 @@
+[2025-05-22 00:16:56] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-22 00:16:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-22 00:16:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-22 00:16:56] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-22 00:16:56] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-22 00:16:56] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-22 00:16:56] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-22 00:16:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-22 00:16:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-22 00:16:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-22 00:16:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-22 00:16:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-22 00:16:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-22 00:16:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-22 00:16:57] [INFO] [Component] Setting water_dragon_Palai_b50c0dae-095e-4cfe-9743-2949626ddf90 on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Palai_b50c0dae-095e-4cfe-9743-2949626ddf90","structure":"","total_elevation":8}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit water_dragon_Palai_b50c0dae-095e-4cfe-9743-2949626ddf90 into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting earth_dragon_Harii_f71aa972-c18c-46aa-9863-f3b780ab6db5 on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Harii_f71aa972-c18c-46aa-9863-f3b780ab6db5","structure":"","total_elevation":7}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit earth_dragon_Harii_f71aa972-c18c-46aa-9863-f3b780ab6db5 into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting dragon_Pituy_88d0d53a-df55-4231-b7bb-e3226d5347d6 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dragon_Pituy_88d0d53a-df55-4231-b7bb-e3226d5347d6","structure":"","total_elevation":8}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit dragon_Pituy_88d0d53a-df55-4231-b7bb-e3226d5347d6 into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting light_dragon_Regoaz_6adbe411-d33d-4d8d-a69d-188f59b8150b on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Regoaz_6adbe411-d33d-4d8d-a69d-188f59b8150b","structure":"","total_elevation":8}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit light_dragon_Regoaz_6adbe411-d33d-4d8d-a69d-188f59b8150b into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting dragon_Luyaay_571ae386-ecd4-4d3c-b177-ff77e6253980 on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dragon_Luyaay_571ae386-ecd4-4d3c-b177-ff77e6253980","structure":"","total_elevation":6}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit dragon_Luyaay_571ae386-ecd4-4d3c-b177-ff77e6253980 into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting dark_dragon_Tinac_53221b7a-b2bf-4210-9219-e84030eae77f on to {"row":5,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Tinac_53221b7a-b2bf-4210-9219-e84030eae77f","structure":"","total_elevation":4}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit dark_dragon_Tinac_53221b7a-b2bf-4210-9219-e84030eae77f into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting earth_dragon_Macrr_90271cda-7641-440a-b048-66b48423a14f on to {"row":0,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Macrr_90271cda-7641-440a-b048-66b48423a14f","structure":"","total_elevation":5}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit earth_dragon_Macrr_90271cda-7641-440a-b048-66b48423a14f into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting fire_dragon_Hopye_bd24645c-f90b-4e48-b710-d07fe8588119 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Hopye_bd24645c-f90b-4e48-b710-d07fe8588119","structure":"","total_elevation":6}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit fire_dragon_Hopye_bd24645c-f90b-4e48-b710-d07fe8588119 into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting water_dragon_Xyzc_321176fd-bc10-4450-a577-daaa296b28c1 on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Xyzc_321176fd-bc10-4450-a577-daaa296b28c1","structure":"","total_elevation":5}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit water_dragon_Xyzc_321176fd-bc10-4450-a577-daaa296b28c1 into queue
+[2025-05-22 00:16:57] [INFO] [Component] Setting fire_dragon_Hiby_aa0c7876-93b3-4409-905b-b8f0558c5fd6 on to {"row":7,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Hiby_aa0c7876-93b3-4409-905b-b8f0558c5fd6","structure":"","total_elevation":6}.
+[2025-05-22 00:16:57] [INFO] [SpeedQueue] Added unit fire_dragon_Hiby_aa0c7876-93b3-4409-905b-b8f0558c5fd6 into queue
+[2025-05-22 00:16:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-22 00:16:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-22 00:16:57] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-22 00:16:57] [INFO] [FontPool] Started initializing FontPool
+[2025-05-22 00:16:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-22 00:16:57] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-22 00:16:57] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-22 00:16:57] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-22 00:16:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-22 00:16:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-22 00:16:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-22 00:16:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-22 00:16:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:16:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-22 00:16:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-22 00:16:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.48511967062950134 seconds
+[2025-05-22 00:16:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:16:59] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-22 00:17:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-22 00:17:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

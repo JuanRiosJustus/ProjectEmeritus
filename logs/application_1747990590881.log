@@ -1,0 +1,328 @@
+[2025-05-23 01:56:30] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-23 01:56:30] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-23 01:56:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-23 01:56:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-23 01:56:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-23 01:56:31] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-23 01:56:31] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-23 01:56:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-23 01:56:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-23 01:56:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-23 01:56:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-23 01:56:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-23 01:56:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-23 01:56:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-23 01:56:31] [INFO] [Component] Setting dark_dragon_Dyqeba_943dcd07-1461-405e-ab46-6092becffbea on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Dyqeba_943dcd07-1461-405e-ab46-6092becffbea","structure":"","total_elevation":6}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit dark_dragon_Dyqeba_943dcd07-1461-405e-ab46-6092becffbea into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting light_dragon_Yaliou_0e65fa4a-5c0b-4304-b82b-7e71c1230a22 on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Yaliou_0e65fa4a-5c0b-4304-b82b-7e71c1230a22","structure":"","total_elevation":8}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit light_dragon_Yaliou_0e65fa4a-5c0b-4304-b82b-7e71c1230a22 into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting dark_dragon_Mayy_c3c47fb4-172d-4081-b6ff-4cd3b8eb8f78 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Mayy_c3c47fb4-172d-4081-b6ff-4cd3b8eb8f78","structure":"","total_elevation":5}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit dark_dragon_Mayy_c3c47fb4-172d-4081-b6ff-4cd3b8eb8f78 into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting dark_dragon_Euvjb_dc4e3aec-f605-42e4-8973-e6302cea7f76 on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Euvjb_dc4e3aec-f605-42e4-8973-e6302cea7f76","structure":"","total_elevation":7}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit dark_dragon_Euvjb_dc4e3aec-f605-42e4-8973-e6302cea7f76 into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting dark_dragon_Cepiaa_de4e66f3-3fbe-4d84-84bb-b9c68c16bc37 on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Cepiaa_de4e66f3-3fbe-4d84-84bb-b9c68c16bc37","structure":"","total_elevation":6}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit dark_dragon_Cepiaa_de4e66f3-3fbe-4d84-84bb-b9c68c16bc37 into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting earth_dragon_Teoyo_b465b90f-8418-4699-9e04-cbb762568ae4 on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Teoyo_b465b90f-8418-4699-9e04-cbb762568ae4","structure":"","total_elevation":8}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit earth_dragon_Teoyo_b465b90f-8418-4699-9e04-cbb762568ae4 into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e","structure":"","total_elevation":10}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486 on to {"row":7,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486","structure":"","total_elevation":9}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486 into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d on to {"row":3,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d","structure":"","total_elevation":8}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d into queue
+[2025-05-23 01:56:31] [INFO] [Component] Setting earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762 on to {"row":1,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762","structure":"","total_elevation":5}.
+[2025-05-23 01:56:31] [INFO] [SpeedQueue] Added unit earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762 into queue
+[2025-05-23 01:56:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-23 01:56:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-23 01:56:31] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-23 01:56:31] [INFO] [FontPool] Started initializing FontPool
+[2025-05-23 01:56:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-23 01:56:31] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-23 01:56:31] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-23 01:56:31] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-23 01:56:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-23 01:56:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:56:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-23 01:56:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-23 01:56:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.48462367057800293 seconds
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:32] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:33] [INFO] [AbilitySystem] Funul is planning to use air_attack on [3, 11]
+[2025-05-23 01:56:33] [INFO] [AbilitySystem] Updated area of sight for Funul, viewing 9 tiles
+[2025-05-23 01:56:33] [INFO] [AbilitySystem] Updated line of sight for Funul, viewing 3 tiles
+[2025-05-23 01:56:33] [INFO] [AbilitySystem] Updated area of effect for Funul viewing 1 tiles
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Started constructing cost mappings for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Finished constructing cost mappings for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Checking cost requirements for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Funul is able to pay for air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Started constructing cost mappings for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Finished constructing cost mappings for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Paying cost requirements for Funul using air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-23 01:56:33] [INFO] [AbilitySystem] Used from air_attack on [3, 11]
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Funul
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Funul lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Funul
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Teoyo
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Teoyo
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-05-23 01:56:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Funul to use air_attack
+[2025-05-23 01:56:33] [INFO] [CombatSystem] Started dealing damage with air_attack to Teoyo 
+[2025-05-23 01:56:33] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:33] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:34] [INFO] [MovementSystem] Updated movement range to 8 for Funul
+[2025-05-23 01:56:34] [INFO] [MovementSystem] Updated movement path from [5, 11] to [5, 9] for Funul
+[2025-05-23 01:56:34] [INFO] [Component] Setting air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e","structure":"","total_elevation":10}.
+[2025-05-23 01:56:34] [INFO] [MovementSystem] Moved from [5, 11] to [5, 9]
+[2025-05-23 01:56:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Funul_23308762-142f-4e33-b645-5d9e910b0c0e
+[2025-05-23 01:56:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:56:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Funul
+[2025-05-23 01:56:34] [INFO] [InputHandler] Gliding 0 camera to new tile 5_11_4dc84b7b-6d67-47fe-a2d4-9626882b7a26
+[2025-05-23 01:56:34] [INFO] [InputHandler] Gliding 1 camera to new tile 5_11_4dc84b7b-6d67-47fe-a2d4-9626882b7a26
+[2025-05-23 01:56:35] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:35] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:35] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:35] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:56:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Aixe
+[2025-05-23 01:56:35] [INFO] [InputHandler] Gliding 0 camera to new tile 1_10_808a0305-baa3-4260-8d9d-8d2c6caee81b
+[2025-05-23 01:56:35] [INFO] [InputHandler] Gliding 1 camera to new tile 1_10_808a0305-baa3-4260-8d9d-8d2c6caee81b
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Aixe is planning to use earth_attack on [3, 10]
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Updated area of sight for Aixe, viewing 11 tiles
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Updated line of sight for Aixe, viewing 3 tiles
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Updated area of effect for Aixe viewing 1 tiles
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Started constructing cost mappings for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Finished constructing cost mappings for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Checking cost requirements for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Aixe is able to pay for earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Started constructing cost mappings for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Finished constructing cost mappings for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Paying cost requirements for Aixe using earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Used from earth_attack on [3, 10]
+[2025-05-23 01:56:36] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:36] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aixe
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Aixe lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aixe
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qagfr
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Qagfr defends with Same-Type-Defense-Bonus from earth_attack for 15.4
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qagfr
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] 5.5 damage after defenses for earth_attack
+[2025-05-23 01:56:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Aixe to use earth_attack
+[2025-05-23 01:56:36] [INFO] [CombatSystem] Started dealing damage with earth_attack to Qagfr 
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:37] [INFO] [MovementSystem] Updated movement range to 10 for Aixe
+[2025-05-23 01:56:37] [INFO] [MovementSystem] Updated movement path from [1, 10] to [1, 11] for Aixe
+[2025-05-23 01:56:37] [INFO] [Component] Setting earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762 on to {"row":1,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Aixe_ee982d08-7f86-4345-9b6d-39d6418d5762","structure":"","total_elevation":5}.
+[2025-05-23 01:56:37] [INFO] [MovementSystem] Moved from [1, 10] to [1, 11]
+[2025-05-23 01:56:37] [INFO] [InputHandler] Gliding 0 camera to new tile 1_10_808a0305-baa3-4260-8d9d-8d2c6caee81b
+[2025-05-23 01:56:37] [INFO] [InputHandler] Gliding 1 camera to new tile 1_10_808a0305-baa3-4260-8d9d-8d2c6caee81b
+[2025-05-23 01:56:37] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:37] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:37] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:37] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:56:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Qagfr
+[2025-05-23 01:56:37] [INFO] [InputHandler] Gliding 0 camera to new tile 3_10_26080ecd-afd7-4fa6-ab04-68e71c24aff7
+[2025-05-23 01:56:37] [INFO] [InputHandler] Gliding 1 camera to new tile 3_10_26080ecd-afd7-4fa6-ab04-68e71c24aff7
+[2025-05-23 01:56:38] [INFO] [MovementSystem] Updated movement range to 8 for Qagfr
+[2025-05-23 01:56:38] [INFO] [MovementSystem] Updated movement path from [3, 10] to [4, 9] for Qagfr
+[2025-05-23 01:56:38] [INFO] [Component] Setting earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d on to {"row":3,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d","structure":"","total_elevation":8}.
+[2025-05-23 01:56:38] [INFO] [MovementSystem] Moved from [3, 10] to [4, 9]
+[2025-05-23 01:56:38] [INFO] [InputHandler] Gliding 0 camera to new tile 3_10_26080ecd-afd7-4fa6-ab04-68e71c24aff7
+[2025-05-23 01:56:38] [INFO] [InputHandler] Gliding 1 camera to new tile 3_10_26080ecd-afd7-4fa6-ab04-68e71c24aff7
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Qagfr is planning to use earth_attack on [1, 10]
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Updated area of sight for Qagfr, viewing 11 tiles
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Updated line of sight for Qagfr, viewing 3 tiles
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Updated area of effect for Qagfr viewing 1 tiles
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Started constructing cost mappings for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Finished constructing cost mappings for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Checking cost requirements for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Qagfr is able to pay for earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Started constructing cost mappings for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Finished constructing cost mappings for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Paying cost requirements for Qagfr using earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Used from earth_attack on [1, 10]
+[2025-05-23 01:56:39] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:39] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Qagfr_3c42bd6b-ff3a-46d5-b8a6-0e8a321df12d
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-23 01:56:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Qagfr
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Qagfr lands a Same-Type-Attack-Bonus with earth_attack, for 12.0
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Qagfr
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Aixe
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Aixe defends with Same-Type-Defense-Bonus from earth_attack for 15.4
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Aixe
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] 5.5 damage after defenses for earth_attack
+[2025-05-23 01:56:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Qagfr to use earth_attack
+[2025-05-23 01:56:39] [INFO] [CombatSystem] Started dealing damage with earth_attack to Aixe 
+[2025-05-23 01:56:40] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486
+[2025-05-23 01:56:40] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486
+[2025-05-23 01:56:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:40] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486
+[2025-05-23 01:56:40] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486
+[2025-05-23 01:56:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:56:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Zexe
+[2025-05-23 01:56:40] [INFO] [InputHandler] Gliding 0 camera to new tile 7_10_eb968366-df52-4abf-baea-e6ce18be4c35
+[2025-05-23 01:56:40] [INFO] [InputHandler] Gliding 1 camera to new tile 7_10_eb968366-df52-4abf-baea-e6ce18be4c35
+[2025-05-23 01:56:41] [INFO] [MovementSystem] Updated movement range to 6 for Zexe
+[2025-05-23 01:56:41] [INFO] [MovementSystem] Updated movement path from [7, 10] to [7, 11] for Zexe
+[2025-05-23 01:56:41] [INFO] [Component] Setting earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486 on to {"row":7,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Zexe_5ad2e8e5-a7d9-4b42-88cf-ab2ef72f7486","structure":"","total_elevation":9}.
+[2025-05-23 01:56:41] [INFO] [MovementSystem] Moved from [7, 10] to [7, 11]
+[2025-05-23 01:56:41] [INFO] [InputHandler] Gliding 0 camera to new tile 7_10_eb968366-df52-4abf-baea-e6ce18be4c35
+[2025-05-23 01:56:41] [INFO] [InputHandler] Gliding 1 camera to new tile 7_10_eb968366-df52-4abf-baea-e6ce18be4c35
+[2025-05-23 01:56:42] [INFO] [AbilityPanel] Updating ability selection for dark_dragon_Mayy_c3c47fb4-172d-4081-b6ff-4cd3b8eb8f78
+[2025-05-23 01:56:42] [INFO] [AbilityPanel] Finished ability selection for dark_dragon_Mayy_c3c47fb4-172d-4081-b6ff-4cd3b8eb8f78
+[2025-05-23 01:56:42] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-23 01:56:42] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-23 01:56:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-23 01:56:42] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dark_dragon_Mayy_c3c47fb4-172d-4081-b6ff-4cd3b8eb8f78
+[2025-05-23 01:56:42] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dark_dragon_Mayy_c3c47fb4-172d-4081-b6ff-4cd3b8eb8f78
+[2025-05-23 01:56:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-23 01:56:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Mayy
+[2025-05-23 01:56:42] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_6f035037-872b-4975-b02f-ab07f24e9fd4
+[2025-05-23 01:56:42] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_6f035037-872b-4975-b02f-ab07f24e9fd4
+[2025-05-23 01:56:44] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_6f035037-872b-4975-b02f-ab07f24e9fd4
+[2025-05-23 01:56:44] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_6f035037-872b-4975-b02f-ab07f24e9fd4

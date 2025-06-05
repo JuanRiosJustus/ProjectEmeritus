@@ -1,0 +1,107 @@
+[2025-05-02 16:03:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-02 16:03:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-02 16:03:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-02 16:03:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-02 16:03:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-02 16:03:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-02 16:03:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-02 16:03:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-02 16:03:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-02 16:03:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-02 16:03:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-02 16:03:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-02 16:03:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-02 16:03:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-02 16:03:57] [INFO] [Component] Setting earth_dragon_Miji_93b6f1ea-cd44-4b76-8414-a8b73686b369 on to {"row":0,"column":2,"height":0,"collider":"","unit":"earth_dragon_Miji_93b6f1ea-cd44-4b76-8414-a8b73686b369","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit enemy:Miji into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting dark_dragon_Doqiqb_2a4d733a-0992-4b9e-a783-d895f8392eb5 on to {"row":3,"column":0,"height":0,"spawn_region":"1","collider":"","unit":"dark_dragon_Doqiqb_2a4d733a-0992-4b9e-a783-d895f8392eb5","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit enemy:Doqiqb into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting fire_dragon_Sahyyy_2814b5f9-053b-4f00-9f0b-bf7e48e366f6 on to {"row":7,"column":7,"height":0,"collider":"","unit":"fire_dragon_Sahyyy_2814b5f9-053b-4f00-9f0b-bf7e48e366f6","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit enemy:Sahyyy into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting fire_dragon_Qamawa_403dde14-1544-4562-b8f2-bce625378c5f on to {"row":2,"column":6,"height":0,"collider":"","unit":"fire_dragon_Qamawa_403dde14-1544-4562-b8f2-bce625378c5f","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit enemy:Qamawa into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting earth_dragon_Oikie_11d50094-1318-467d-b56e-ec56e4828386 on to {"row":4,"column":0,"height":0,"spawn_region":"1","collider":"","unit":"earth_dragon_Oikie_11d50094-1318-467d-b56e-ec56e4828386","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit enemy:Oikie into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting dark_dragon_Ciii_b8626c6e-03f5-4422-a477-20257d8dc54d on to {"row":0,"column":11,"height":0,"spawn_region":"2","collider":"","unit":"dark_dragon_Ciii_b8626c6e-03f5-4422-a477-20257d8dc54d","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit user:Ciii into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting earth_dragon_Wymby_cf8e6ab7-658a-48a4-bec3-fb361cc29f30 on to {"row":0,"column":1,"height":0,"spawn_region":"1","collider":"","unit":"earth_dragon_Wymby_cf8e6ab7-658a-48a4-bec3-fb361cc29f30","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit user:Wymby into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting earth_dragon_Tugiiy_fa430ab1-aae0-4495-bfaa-d26c09aa901b on to {"row":6,"column":11,"height":0,"spawn_region":"2","collider":"","unit":"earth_dragon_Tugiiy_fa430ab1-aae0-4495-bfaa-d26c09aa901b","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit user:Tugiiy into queue
+[2025-05-02 16:03:57] [INFO] [Component] Setting dragon_Lesuy_9bc5bb2b-939b-4401-9829-1a594aa97617 on to {"row":3,"column":4,"height":0,"collider":"","unit":"dragon_Lesuy_9bc5bb2b-939b-4401-9829-1a594aa97617","structure":""}.
+[2025-05-02 16:03:57] [INFO] [SpeedQueue] Added unit user:Lesuy into queue
+[2025-05-02 16:03:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-02 16:03:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-02 16:03:57] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-02 16:03:57] [INFO] [FontPool] Started initializing FontPool
+[2025-05-02 16:03:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-02 16:03:57] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-02 16:03:58] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-02 16:03:58] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-02 16:03:58] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-02 16:03:58] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-02 16:03:58] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Qamawa_403dde14-1544-4562-b8f2-bce625378c5f
+[2025-05-02 16:03:58] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Qamawa_403dde14-1544-4562-b8f2-bce625378c5f
+[2025-05-02 16:03:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-02 16:03:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-02 16:03:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-02 16:03:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-02 16:03:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-02 16:03:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-02 16:03:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-02 16:03:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.4875715970993042 seconds
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Qamawa_403dde14-1544-4562-b8f2-bce625378c5f
+[2025-05-02 16:03:58] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Qamawa_403dde14-1544-4562-b8f2-bce625378c5f
+[2025-05-02 16:03:58] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-02 16:03:58] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-02 16:03:58] [INFO] [AbilitySystem] Finished update updating {} because of ability

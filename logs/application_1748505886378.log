@@ -1,0 +1,73 @@
+[2025-05-29 01:04:46] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-29 01:04:46] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-29 01:04:46] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-29 01:04:46] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-29 01:04:46] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-29 01:04:46] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-29 01:04:46] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-29 01:04:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-29 01:04:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-29 01:04:46] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-29 01:04:46] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-29 01:04:46] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-29 01:04:46] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-29 01:04:46] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Eylln___e34db5b1-03ec-4e2a-8ea8-e57f68e6f6d6 on to {"row":4,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Eylln___e34db5b1-03ec-4e2a-8ea8-e57f68e6f6d6","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Eylln___e34db5b1-03ec-4e2a-8ea8-e57f68e6f6d6 into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Goyoml___a78d065d-2b6e-41ba-a3c1-c46524fed309 on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Goyoml___a78d065d-2b6e-41ba-a3c1-c46524fed309","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Goyoml___a78d065d-2b6e-41ba-a3c1-c46524fed309 into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Gacvno___5fb2dea1-3baf-43b0-a790-58ff65e71d5c on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Gacvno___5fb2dea1-3baf-43b0-a790-58ff65e71d5c","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Gacvno___5fb2dea1-3baf-43b0-a790-58ff65e71d5c into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Nypue___e87e9d7a-5f5a-4522-b388-387abc64d8d4 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Nypue___e87e9d7a-5f5a-4522-b388-387abc64d8d4","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Nypue___e87e9d7a-5f5a-4522-b388-387abc64d8d4 into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Zopyfg___9a9adbe6-65cd-49cf-a778-ebbf0745bbef on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Zopyfg___9a9adbe6-65cd-49cf-a778-ebbf0745bbef","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Zopyfg___9a9adbe6-65cd-49cf-a778-ebbf0745bbef into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Ziiu___d6171145-0d69-439b-87d6-64e8dba29f19 on to {"row":1,"column":10,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Ziiu___d6171145-0d69-439b-87d6-64e8dba29f19","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Ziiu___d6171145-0d69-439b-87d6-64e8dba29f19 into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Wyyoyz___9c2ae02d-7722-4c75-9401-5346a7596221 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Wyyoyz___9c2ae02d-7722-4c75-9401-5346a7596221","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Wyyoyz___9c2ae02d-7722-4c75-9401-5346a7596221 into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Vepoa___e5650e35-9069-4060-8832-398d244dbe96 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Vepoa___e5650e35-9069-4060-8832-398d244dbe96","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Vepoa___e5650e35-9069-4060-8832-398d244dbe96 into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Nymuu___913c559f-17e7-4b38-b009-3bfe36592d71 on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Nymuu___913c559f-17e7-4b38-b009-3bfe36592d71","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Nymuu___913c559f-17e7-4b38-b009-3bfe36592d71 into queue
+[2025-05-29 01:04:46] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Nysooa___27508509-cbe3-48ed-a107-04ddc1a82b27 on to {"row":6,"column":10,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Nysooa___27508509-cbe3-48ed-a107-04ddc1a82b27","layers":{"empty":false},"total_elevation":10}.
+[2025-05-29 01:04:46] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Nysooa___27508509-cbe3-48ed-a107-04ddc1a82b27 into queue
+[2025-05-29 01:04:46] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-29 01:04:46] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-29 01:04:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-29 01:04:46] [INFO] [FontPool] Started initializing FontPool
+[2025-05-29 01:04:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-29 01:04:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-29 01:04:47] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Zopyfg___9a9adbe6-65cd-49cf-a778-ebbf0745bbef
+[2025-05-29 01:04:47] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Zopyfg___9a9adbe6-65cd-49cf-a778-ebbf0745bbef
+[2025-05-29 01:04:47] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-29 01:04:47] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-29 01:04:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-29 01:04:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-29 01:04:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-29 01:04:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-29 01:04:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-29 01:04:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.4947012662887573 seconds
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-29 01:04:47] [INFO] [AbilitySystem] Finished u

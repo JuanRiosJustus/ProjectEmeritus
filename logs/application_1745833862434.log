@@ -1,0 +1,72 @@
+[2025-04-28 02:51:02] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 02:51:02] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 02:51:02] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 02:51:02] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 02:51:02] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 02:51:02] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 02:51:02] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 02:51:02] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 02:51:02] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 02:51:02] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 02:51:02] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 02:51:02] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 02:51:03] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 02:51:03] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 02:51:03] [INFO] [Component] Setting fire_dragon_Aixfiv_04d96852-3fdf-4e62-b063-49bb45f95e7b on to {"row":2,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Aixfiv_04d96852-3fdf-4e62-b063-49bb45f95e7b","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit enemy:Aixfiv into queue
+[2025-04-28 02:51:03] [INFO] [Component] Setting light_dragon_Zime_7694b48a-faa5-4559-82c4-f874cee8eb2a on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Zime_7694b48a-faa5-4559-82c4-f874cee8eb2a","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit enemy:Zime into queue
+[2025-04-28 02:51:03] [INFO] [Component] Setting earth_dragon_Sufao_a60c079c-b226-49d4-b9dd-b67b92458b7c on to {"row":0,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Sufao_a60c079c-b226-49d4-b9dd-b67b92458b7c","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit enemy:Sufao into queue
+[2025-04-28 02:51:03] [INFO] [Component] Setting air_dragon_Qaoee_b69610ad-3dea-41d9-b012-45f01b01bae4 on to {"row":2,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Qaoee_b69610ad-3dea-41d9-b012-45f01b01bae4","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit enemy:Qaoee into queue
+[2025-04-28 02:51:03] [INFO] [Component] Setting earth_dragon_Xieu_ae2f4ecf-0a04-409d-85fa-020421caeaf4 on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Xieu_ae2f4ecf-0a04-409d-85fa-020421caeaf4","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit user:Xieu into queue
+[2025-04-28 02:51:03] [INFO] [Component] Setting earth_dragon_Vuhfs_7604ce95-136e-43a4-a503-7cd20cd0c7e2 on to {"row":2,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Vuhfs_7604ce95-136e-43a4-a503-7cd20cd0c7e2","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit user:Vuhfs into queue
+[2025-04-28 02:51:03] [INFO] [Component] Setting dragon_Yoyehy_277e4b2a-3ff4-4293-b352-e8c60b0f7a3b on to {"row":1,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Yoyehy_277e4b2a-3ff4-4293-b352-e8c60b0f7a3b","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit user:Yoyehy into queue
+[2025-04-28 02:51:03] [INFO] [Component] Setting earth_dragon_Majis_7a78e1b6-138f-4f84-84fa-8a334acb96a5 on to {"row":7,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Majis_7a78e1b6-138f-4f84-84fa-8a334acb96a5","structure":""}.
+[2025-04-28 02:51:03] [INFO] [SpeedQueue] Added unit user:Majis into queue
+[2025-04-28 02:51:03] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 02:51:03] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 02:51:03] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:51:03] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 02:51:03] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 02:51:03] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 02:51:03] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 02:51:03] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:51:03] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 02:51:03] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:03] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 02:51:04] [INFO] [VisualsSystem] Finished creating blurred background after 0.4922083914279938 seconds
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:51:04] [INFO] [AbilitySystem] Finished update updating {} because of ability

@@ -1,0 +1,30 @@
+[2025-06-02 02:59:41] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 02:59:41] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 02:59:41] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 02:59:41] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 02:59:41] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 02:59:41] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 02:59:41] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 02:59:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 02:59:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 02:59:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 02:59:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 02:59:42] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 02:59:42] [INFO] [VisualsSystem] Finished creating blurred background after 0.32640540599823 seconds
+[2025-06-02 02:59:44] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 02:59:44] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 02:59:44] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 02:59:44] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 02:59:44] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 02:59:44] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Puwca___0358911f-a54f-412c-bc8c-0de7e1e5b031 on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Puwca___0358911f-a54f-412c-bc8c-0de7e1e5b031","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:59:44] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Puwca___0358911f-a54f-412c-bc8c-0de7e1e5b031 into queue
+[2025-06-02 02:59:44] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Oubeo___db442a82-d2c4-48d1-b252-e09abab62e05 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_fire_dragon___NICKNAME_Oubeo___db442a82-d2c4-48d1-b252-e09abab62e05","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:59:44] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Oubeo___db442a82-d2c4-48d1-b252-e09abab62e05 into queue
+[2025-06-02 02:59:44] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 02:59:44] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 02:59:44] [INFO] [GameModel] Updated area of sight for Puwca, viewing 5 tiles
+[2025-06-02 02:59:44] [INFO] [GameModel] Updated line of sight for Puwca, viewing 2 tiles
+[2025-06-02 02:59:44] [INFO] [GameModel] Updated area of sight for Puwca, viewing 1 tiles
+[2025-06-02 02:59:44] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 02:59:44] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 02:59:44] [INFO] [Ga

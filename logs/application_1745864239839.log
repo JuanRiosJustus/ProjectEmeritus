@@ -1,0 +1,249 @@
+[2025-04-28 11:17:19] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 11:17:19] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 11:17:19] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 11:17:19] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 11:17:19] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 11:17:19] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 11:17:19] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 11:17:19] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 11:17:19] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 11:17:20] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 11:17:20] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 11:17:20] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 11:17:20] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 11:17:20] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 11:17:20] [INFO] [Component] Setting water_dragon_Hovlu_2ed7c2ea-488e-4c85-ba09-d62df6b8573c on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Hovlu_2ed7c2ea-488e-4c85-ba09-d62df6b8573c","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Hovlu into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting light_dragon_Gyci_ec9680d2-d6f0-4b2b-93fc-2cd82bd4d434 on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Gyci_ec9680d2-d6f0-4b2b-93fc-2cd82bd4d434","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Gyci into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting light_dragon_Kijlqs_9e312853-4cfe-4106-8f8c-27b0a00cdd30 on to {"row":4,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Kijlqs_9e312853-4cfe-4106-8f8c-27b0a00cdd30","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Kijlqs into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb on to {"row":1,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Sahosd into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting dragon_Pivaih_3f6378be-fefa-47f6-83f9-8e5cbc7a1d3d on to {"row":1,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Pivaih_3f6378be-fefa-47f6-83f9-8e5cbc7a1d3d","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit enemy:Pivaih into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting dragon_Hofai_bd95d356-2e7a-4a5a-9e64-7afeeb969c44 on to {"row":6,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Hofai_bd95d356-2e7a-4a5a-9e64-7afeeb969c44","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit user:Hofai into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting air_dragon_Aaye_4c1b34f8-a62d-4b15-adbb-82d737fff136 on to {"row":6,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Aaye_4c1b34f8-a62d-4b15-adbb-82d737fff136","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit user:Aaye into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting water_dragon_Puygoi_8d8e6fd5-a27f-45dc-98a5-02bfee589782 on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Puygoi_8d8e6fd5-a27f-45dc-98a5-02bfee589782","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit user:Puygoi into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting dragon_Sujur_59e77850-48be-4c88-8585-ed8c7ea76237 on to {"row":5,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Sujur_59e77850-48be-4c88-8585-ed8c7ea76237","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit user:Sujur into queue
+[2025-04-28 11:17:20] [INFO] [Component] Setting air_dragon_Qexai_43453105-446a-44e9-91a8-f688a0993e3e on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Qexai_43453105-446a-44e9-91a8-f688a0993e3e","structure":""}.
+[2025-04-28 11:17:20] [INFO] [SpeedQueue] Added unit user:Qexai into queue
+[2025-04-28 11:17:20] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 11:17:20] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 11:17:20] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 11:17:20] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 11:17:20] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 11:17:20] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 11:17:20] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 11:17:20] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 11:17:20] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 11:17:20] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 11:17:21] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb
+[2025-04-28 11:17:21] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb
+[2025-04-28 11:17:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:17:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:17:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 11:17:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 11:17:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:17:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 11:17:21] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 11:17:21] [INFO] [VisualsSystem] Finished creating blurred background after 0.4762449264526367 seconds
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb
+[2025-04-28 11:17:21] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb
+[2025-04-28 11:17:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 11:17:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 11:17:23] [INFO] [InputHandler] Gliding 0 camera to new tile 1_7_90006fc9-b26d-4ae2-9ac4-bac8db8cb197
+[2025-04-28 11:17:23] [INFO] [InputHandler] Gliding 1 camera to new tile 1_7_90006fc9-b26d-4ae2-9ac4-bac8db8cb197
+[2025-04-28 11:17:23] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb
+[2025-04-28 11:17:23] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Sahosd_39c95520-e771-4950-a87c-655534dec3eb
+[2025-04-28 11:17:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 11:17:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Sahosd
+[2025-04-28 11:17:24] [INFO] [InputHandler] Gliding 0 camera to new tile 1_7_90006fc9-b26d-4ae2-9ac4-bac8db8cb197
+[2025-04-28 11:17:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:17:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:17:25] [INFO] [AbilityPanel] Selecting oblation
+[2025-04-28 11:17:25] [INFO] [AbilitySystem] Sahosd is planning to use oblation on null
+[2025-04-28 11:17:25] [INFO] [AbilitySystem] Updated area of sight for Sahosd, viewing 8 tiles
+[2025-04-28 11:17:25] [INFO] [AbilitySystem] Updated line of sight for Sahosd, viewing 0 tiles
+[2025-04-28 11:17:25] [INFO] [AbilitySystem] Updated area of effect for Sahosd viewing 0 tiles
+[2025-04-28 11:17:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:17:25] [INFO] [CombatSystem] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:25] [INFO] [CombatSystem] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:25] [INFO] [CombatSystem] Started constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:25] [INFO] [CombatSystem] Finished constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Sahosd is planning to use oblation on [2, 7]
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated line of sight for Sahosd, viewing 2 tiles
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated area of effect for Sahosd viewing 1 tiles
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Sahosd is planning to use oblation on [2, 6]
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated line of sight for Sahosd, viewing 3 tiles
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated area of effect for Sahosd viewing 1 tiles
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Sahosd is planning to use oblation on [1, 6]
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated line of sight for Sahosd, viewing 2 tiles
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated area of effect for Sahosd viewing 1 tiles
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Sahosd is planning to use oblation on [1, 5]
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated line of sight for Sahosd, viewing 3 tiles
+[2025-04-28 11:17:26] [INFO] [AbilitySystem] Updated area of effect for Sahosd viewing 1 tiles
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pivaih
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pivaih
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pivaih
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pivaih
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-04-28 11:17:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Started constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [CombatSystem] Finished constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Started constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Finished constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Checking cost requirements for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Sahosd is able to pay for oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Started constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Finished constructing cost mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Paying cost requirements for Sahosd using oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilitySystem] Used from oblation on [1, 5]
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [CombatSystem] Started dealing damage with oblation to Pivaih 
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sahosd
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Pivaih
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-28 11:17:27] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sahosd to use oblation
+[2025-04-28 11:17:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 11:17:27] [INFO] [AbilitySystem] Finished update updating {} because of ability

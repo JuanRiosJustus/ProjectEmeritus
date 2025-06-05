@@ -1,0 +1,309 @@
+[2025-04-23 09:40:09] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-23 09:40:09] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-23 09:40:09] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-23 09:40:09] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-23 09:40:09] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-23 09:40:09] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-23 09:40:09] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-23 09:40:09] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-23 09:40:09] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-23 09:40:09] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-23 09:40:09] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-23 09:40:09] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-23 09:40:09] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-23 09:40:09] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-23 09:40:09] [INFO] [Component] Setting air_dragon_Mooia_63cfeae1-9bae-4e3a-9cdc-c7a498707bbb on to {"row":1,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Mooia_63cfeae1-9bae-4e3a-9cdc-c7a498707bbb","structure":""}.
+[2025-04-23 09:40:09] [INFO] [SpeedQueue] Added unit enemy:Mooia into queue
+[2025-04-23 09:40:09] [INFO] [Component] Setting fire_dragon_Kujaza_b1e3fd4b-0476-41f0-910c-48628c177284 on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Kujaza_b1e3fd4b-0476-41f0-910c-48628c177284","structure":""}.
+[2025-04-23 09:40:09] [INFO] [SpeedQueue] Added unit enemy:Kujaza into queue
+[2025-04-23 09:40:09] [INFO] [Component] Setting air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56 on to {"row":1,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56","structure":""}.
+[2025-04-23 09:40:09] [INFO] [SpeedQueue] Added unit enemy:Sewai into queue
+[2025-04-23 09:40:09] [INFO] [Component] Setting fire_dragon_Eihbii_21caeaad-fcdc-4907-bc3a-6ac7215906cd on to {"row":7,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Eihbii_21caeaad-fcdc-4907-bc3a-6ac7215906cd","structure":""}.
+[2025-04-23 09:40:09] [INFO] [SpeedQueue] Added unit enemy:Eihbii into queue
+[2025-04-23 09:40:09] [INFO] [Component] Setting water_dragon_Sifea_765bcc0f-3476-4342-b1b3-e96047921c9f on to {"row":0,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Sifea_765bcc0f-3476-4342-b1b3-e96047921c9f","structure":""}.
+[2025-04-23 09:40:09] [INFO] [SpeedQueue] Added unit user:Sifea into queue
+[2025-04-23 09:40:09] [INFO] [Component] Setting earth_dragon_Qomuia_488405cb-8231-45eb-8243-acf8ea003e19 on to {"row":4,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Qomuia_488405cb-8231-45eb-8243-acf8ea003e19","structure":""}.
+[2025-04-23 09:40:09] [INFO] [SpeedQueue] Added unit user:Qomuia into queue
+[2025-04-23 09:40:09] [INFO] [Component] Setting earth_dragon_Xozyiu_a6a23833-09f1-44ab-8994-51376377057a on to {"row":5,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Xozyiu_a6a23833-09f1-44ab-8994-51376377057a","structure":""}.
+[2025-04-23 09:40:09] [INFO] [SpeedQueue] Added unit user:Xozyiu into queue
+[2025-04-23 09:40:09] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-23 09:40:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-23 09:40:10] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-23 09:40:10] [INFO] [FontPool] Started initializing FontPool
+[2025-04-23 09:40:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-23 09:40:10] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-23 09:40:10] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-23 09:40:10] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-23 09:40:10] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-23 09:40:10] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:10] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-23 09:40:10] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:10] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-23 09:40:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-23 09:40:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-23 09:40:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-23 09:40:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-23 09:40:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-23 09:40:10] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-23 09:40:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.494564414024353 seconds
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:11] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-23 09:40:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:11] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-23 09:40:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:11] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-23 09:40:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-23 09:40:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-23 09:40:13] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_51c689ea-c5e7-4358-89c9-fbbea2e7ec4b
+[2025-04-23 09:40:13] [INFO] [InputHandler] Gliding 1 camera to new tile 1_3_51c689ea-c5e7-4358-89c9-fbbea2e7ec4b
+[2025-04-23 09:40:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56
+[2025-04-23 09:40:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-23 09:40:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Sewai
+[2025-04-23 09:40:14] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_51c689ea-c5e7-4358-89c9-fbbea2e7ec4b
+[2025-04-23 09:40:14] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-23 09:40:14] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-23 09:40:14] [INFO] [MovementSystem] Updated movement range to 10 for Sewai
+[2025-04-23 09:40:14] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 7] for Sewai
+[2025-04-23 09:40:14] [INFO] [MovementSystem] Updated movement range to 10 for Sewai
+[2025-04-23 09:40:14] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 7] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 6] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 6] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 5] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 5] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 4] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 4] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 3] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [4, 3] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [3, 3] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [3, 3] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [3, 2] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [3, 2] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [2, 2] for Sewai
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Updated movement path from [1, 3] to [2, 2] for Sewai
+[2025-04-23 09:40:15] [INFO] [Component] Setting air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56 on to {"row":2,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Sewai_664134f7-b9b3-4510-b08d-f8009a718b56","structure":""}.
+[2025-04-23 09:40:15] [INFO] [MovementSystem] Moved from [1, 3] to [2, 2]
+[2025-04-23 09:40:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-23 09:40:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Sewai
+[2025-04-23 09:40:15] [INFO] [InputHandler] Gliding 0 camera to new tile 2_2_cba2ccb7-08b6-4ef0-ab25-9cd8c317a479
+[2025-04-23 09:40:15] [INFO] [InputHandler] Gliding 1 camera to new tile 2_2_cba2ccb7-08b6-4ef0-ab25-9cd8c317a479
+[2025-04-23 09:40:16] [INFO] [InputHandler] Gliding 0 camera to new tile 2_2_cba2ccb7-08b6-4ef0-ab25-9cd8c317a479
+[2025-04-23 09:40:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [AbilityPanel] Selecting air_attack
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [5, 7]
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated area of sight for Sewai, viewing 13 tiles
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 9 tiles
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [5, 6]
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 8 tiles
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [5, 5]
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 7 tiles
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [4, 5]
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 6 tiles
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [4, 4]
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 5 tiles
+[2025-04-23 09:40:17] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:18] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [4, 3]
+[2025-04-23 09:40:18] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 3 tiles
+[2025-04-23 09:40:18] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:18] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [4, 2]
+[2025-04-23 09:40:18] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 3 tiles
+[2025-04-23 09:40:18] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Sewai
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Sewai lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Sewai
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Qomuia
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Qomuia
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] 18.333332 damage after defenses for air_attack
+[2025-04-23 09:40:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [4, 3]
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 3 tiles
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [5, 3]
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 3 tiles
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [5, 4]
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 3 tiles
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [5, 5]
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 7 tiles
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [6, 5]
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 3 tiles
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Sewai is planning to use air_attack on [6, 6]
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated line of sight for Sewai, viewing 9 tiles
+[2025-04-23 09:40:20] [INFO] [AbilitySystem] Updated area of effect for Sewai viewing 1 tiles
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing damage mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Started constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [CombatSystem] Finished constructing cost mappings for Sewai to use air_attack
+[2025-04-23 09:40:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-23 09:40:23] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Qomuia_488405cb-8231-45eb-8243-acf8ea003e19
+[2025-04-23 09:40:23] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Qomuia_488405cb-8231-45eb-8243-acf8ea003e19
+[2025-04-23 09:40:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-23 09:40:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Qomuia
+[2025-04-23 09:40:23] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-23 09:40:23] [INFO] [StatisticsPanel] Finished updating statistics information panel

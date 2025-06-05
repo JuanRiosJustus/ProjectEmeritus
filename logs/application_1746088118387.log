@@ -1,0 +1,109 @@
+[2025-05-01 01:28:38] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-01 01:28:38] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-01 01:28:38] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-01 01:28:38] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-01 01:28:38] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-01 01:28:38] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-01 01:28:38] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-01 01:28:38] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-01 01:28:38] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-01 01:28:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-01 01:28:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-01 01:28:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-01 01:28:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-01 01:28:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-01 01:28:38] [INFO] [Component] Setting dragon_Yump_b40288c1-93c0-4eab-8676-97fb276d937e on to {"row":7,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Yump_b40288c1-93c0-4eab-8676-97fb276d937e","structure":""}.
+[2025-05-01 01:28:38] [INFO] [SpeedQueue] Added unit enemy:Yump into queue
+[2025-05-01 01:28:38] [INFO] [Component] Setting air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1 on to {"row":2,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1","structure":""}.
+[2025-05-01 01:28:38] [INFO] [SpeedQueue] Added unit enemy:Yigyi into queue
+[2025-05-01 01:28:38] [INFO] [Component] Setting air_dragon_Yuxi_f78ffc93-6319-4e30-9d58-8d222f1bfff6 on to {"row":0,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Yuxi_f78ffc93-6319-4e30-9d58-8d222f1bfff6","structure":""}.
+[2025-05-01 01:28:38] [INFO] [SpeedQueue] Added unit enemy:Yuxi into queue
+[2025-05-01 01:28:38] [INFO] [Component] Setting air_dragon_Jywev_a7436067-8e61-491f-9ff1-c25eeb9448ae on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Jywev_a7436067-8e61-491f-9ff1-c25eeb9448ae","structure":""}.
+[2025-05-01 01:28:38] [INFO] [SpeedQueue] Added unit enemy:Jywev into queue
+[2025-05-01 01:28:38] [INFO] [Component] Setting light_dragon_Decyci_6b3c3458-8361-41b7-8bdc-2a109fda4f83 on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Decyci_6b3c3458-8361-41b7-8bdc-2a109fda4f83","structure":""}.
+[2025-05-01 01:28:38] [INFO] [SpeedQueue] Added unit user:Decyci into queue
+[2025-05-01 01:28:38] [INFO] [Component] Setting air_dragon_Mugyfm_c366e55d-59cc-441b-a5ed-ce242017afb6 on to {"row":6,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Mugyfm_c366e55d-59cc-441b-a5ed-ce242017afb6","structure":""}.
+[2025-05-01 01:28:38] [INFO] [SpeedQueue] Added unit user:Mugyfm into queue
+[2025-05-01 01:28:38] [INFO] [Component] Setting fire_dragon_Cutiv_ae8a974b-c43f-43d2-b062-1d18430ece1e on to {"row":3,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Cutiv_ae8a974b-c43f-43d2-b062-1d18430ece1e","structure":""}.
+[2025-05-01 01:28:38] [INFO] [SpeedQueue] Added unit user:Cutiv into queue
+[2025-05-01 01:28:38] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-01 01:28:38] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-01 01:28:38] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-01 01:28:38] [INFO] [FontPool] Started initializing FontPool
+[2025-05-01 01:28:38] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-01 01:28:39] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-01 01:28:39] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-01 01:28:39] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-01 01:28:39] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-01 01:28:39] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-01 01:28:39] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:39] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 01:28:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 01:28:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 01:28:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 01:28:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 01:28:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 01:28:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-01 01:28:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.49327754974365234 seconds
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:40] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 01:28:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:40] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 01:28:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:40] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Yigyi_d1f9dce5-bd72-4409-850c-5fd49f5953e1
+[2025-05-01 01:28:40] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 01:28:40] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 01:28:40] [INFO] [AbilitySystem] Finished update updating {} because of ability

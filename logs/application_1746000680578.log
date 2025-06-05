@@ -1,0 +1,398 @@
+[2025-04-30 01:11:20] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-30 01:11:20] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-30 01:11:20] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-30 01:11:20] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-30 01:11:20] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-30 01:11:20] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-30 01:11:20] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-30 01:11:20] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-30 01:11:20] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-30 01:11:20] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-30 01:11:20] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-30 01:11:20] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-30 01:11:20] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-30 01:11:20] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-30 01:11:20] [INFO] [Component] Setting earth_dragon_Savss_58d0c863-c483-4e11-8593-bd70b429a973 on to {"row":3,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Savss_58d0c863-c483-4e11-8593-bd70b429a973","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit enemy:Savss into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting light_dragon_Reioa_953af475-ecea-481c-867d-7f65afac06b0 on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Reioa_953af475-ecea-481c-867d-7f65afac06b0","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit enemy:Reioa into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting dragon_Eejq_6f3a460f-4aa3-40f9-a614-c5417475ee38 on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Eejq_6f3a460f-4aa3-40f9-a614-c5417475ee38","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit enemy:Eejq into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9 on to {"row":7,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit enemy:Iybm into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting dragon_Vyyo_4e35351c-3e6f-4e03-96c4-376a62990395 on to {"row":6,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Vyyo_4e35351c-3e6f-4e03-96c4-376a62990395","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit enemy:Vyyo into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4 on to {"row":1,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit user:Pyam into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting earth_dragon_Sublj_fc4fb144-5ceb-49c2-ae3f-ad32116f3c1e on to {"row":1,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Sublj_fc4fb144-5ceb-49c2-ae3f-ad32116f3c1e","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit user:Sublj into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1 on to {"row":6,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit user:Xywl into queue
+[2025-04-30 01:11:20] [INFO] [Component] Setting light_dragon_Eobzyb_09683ddd-ff93-41d5-9408-583578db937b on to {"row":4,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Eobzyb_09683ddd-ff93-41d5-9408-583578db937b","structure":""}.
+[2025-04-30 01:11:20] [INFO] [SpeedQueue] Added unit user:Eobzyb into queue
+[2025-04-30 01:11:20] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-30 01:11:21] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-30 01:11:21] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-30 01:11:21] [INFO] [FontPool] Started initializing FontPool
+[2025-04-30 01:11:21] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-30 01:11:21] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-30 01:11:21] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-30 01:11:21] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-30 01:11:21] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-30 01:11:21] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:21] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-30 01:11:21] [INFO] [AbilityPanel] Updating ability selection for dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:21] [INFO] [AbilityPanel] Finished ability selection for dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:11:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:11:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:11:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-30 01:11:21] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-30 01:11:22] [INFO] [VisualsSystem] Finished creating blurred background after 0.488002210855484 seconds
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:23] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_e8ba6823-a7fe-4f2a-a61c-2b5c21b33630
+[2025-04-30 01:11:23] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-04-30 01:11:23] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-04-30 01:11:23] [INFO] [MovementSystem] Updated movement range to 7 for Iybm
+[2025-04-30 01:11:23] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 7] for Iybm
+[2025-04-30 01:11:23] [INFO] [MovementSystem] Updated movement range to 7 for Iybm
+[2025-04-30 01:11:23] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 7] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 5] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 5] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 5] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 5] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 4] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 4] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 3] for Iybm
+[2025-04-30 01:11:24] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 3] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 3] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 3] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 2] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 2] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 3] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [7, 3] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 3] for Iybm
+[2025-04-30 01:11:25] [INFO] [MovementSystem] Updated movement path from [7, 2] to [6, 3] for Iybm
+[2025-04-30 01:11:26] [INFO] [Component] Setting dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9 on to {"row":6,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9","structure":""}.
+[2025-04-30 01:11:26] [INFO] [MovementSystem] Moved from [7, 2] to [6, 3]
+[2025-04-30 01:11:26] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:26] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:11:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Iybm
+[2025-04-30 01:11:26] [INFO] [InputHandler] Gliding 0 camera to new tile 6_3_bc1cb053-e7b2-4b18-9bce-a07831a6e2b5
+[2025-04-30 01:11:26] [INFO] [InputHandler] Gliding 1 camera to new tile 6_3_bc1cb053-e7b2-4b18-9bce-a07831a6e2b5
+[2025-04-30 01:11:27] [INFO] [InputHandler] Gliding 0 camera to new tile 6_3_bc1cb053-e7b2-4b18-9bce-a07831a6e2b5
+[2025-04-30 01:11:27] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:27] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:29] [INFO] [AbilityPanel] Selecting water_attack
+[2025-04-30 01:11:29] [INFO] [AbilitySystem] Iybm is planning to use water_attack on null
+[2025-04-30 01:11:29] [INFO] [AbilitySystem] Updated area of sight for Iybm, viewing 11 tiles
+[2025-04-30 01:11:29] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 0 tiles
+[2025-04-30 01:11:29] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 0 tiles
+[2025-04-30 01:11:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:29] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:29] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:29] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:29] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [7, 7]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 6 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [7, 6]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 5 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [6, 6]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 4 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [6, 5]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 3 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [5, 5]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 4 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [5, 4]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 3 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [5, 3]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 2 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Iybm is planning to use water_attack on [4, 3]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated line of sight for Iybm, viewing 3 tiles
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Updated area of effect for Iybm viewing 1 tiles
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iybm
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iybm
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eobzyb
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eobzyb
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] 9.090909 damage after defenses for water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Checking cost requirements for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Iybm is able to pay for water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Paying cost requirements for Iybm using water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Used from water_attack on [4, 3]
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:30] [INFO] [AbilityPanel] Updating ability selection for dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:30] [INFO] [AbilityPanel] Finished ability selection for dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:11:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:11:30] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:30] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Iybm_f32f2caa-9d05-4494-80fb-bf22d5a379c9
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Started constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [CombatSystem] Finished constructing cost mappings for Iybm to use water_attack
+[2025-04-30 01:11:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iybm
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iybm
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eobzyb
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eobzyb
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 9.090909 damage after defenses for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [CombatSystem] Started dealing damage with water_attack to Eobzyb 
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Iybm
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 10.0 damage after modifiers for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Iybm
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Eobzyb
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 10.0 Raw damage after defenses for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Eobzyb
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] 9.090909 damage after defenses for water_attack
+[2025-04-30 01:11:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Iybm to use water_attack
+[2025-04-30 01:11:31] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:31] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:34] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:34] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:11:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:11:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:34] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:34] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:11:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Xywl
+[2025-04-30 01:11:34] [INFO] [InputHandler] Gliding 0 camera to new tile 6_2_e90ee340-6562-4745-909b-36327f331436
+[2025-04-30 01:11:34] [INFO] [InputHandler] Gliding 1 camera to new tile 6_2_e90ee340-6562-4745-909b-36327f331436
+[2025-04-30 01:11:35] [INFO] [MovementSystem] Updated movement range to 9 for Xywl
+[2025-04-30 01:11:35] [INFO] [MovementSystem] Updated movement path from [6, 2] to [7, 2] for Xywl
+[2025-04-30 01:11:35] [INFO] [Component] Setting earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1 on to {"row":7,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1","structure":""}.
+[2025-04-30 01:11:35] [INFO] [MovementSystem] Moved from [6, 2] to [7, 2]
+[2025-04-30 01:11:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:11:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Xywl
+[2025-04-30 01:11:35] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_e8ba6823-a7fe-4f2a-a61c-2b5c21b33630
+[2025-04-30 01:11:35] [INFO] [InputHandler] Gliding 1 camera to new tile 7_2_e8ba6823-a7fe-4f2a-a61c-2b5c21b33630
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Xywl is planning to use oblation on [6, 3]
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Updated area of sight for Xywl, viewing 9 tiles
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Updated line of sight for Xywl, viewing 3 tiles
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Updated area of effect for Xywl viewing 1 tiles
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Started constructing cost mappings for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Finished constructing cost mappings for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Checking cost requirements for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Xywl is able to pay for oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Started constructing cost mappings for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Finished constructing cost mappings for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Paying cost requirements for Xywl using oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Used from oblation on [6, 3]
+[2025-04-30 01:11:36] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:11:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:11:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:36] [INFO] [AbilityPanel] Updating ability selection for earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [AbilityPanel] Finished ability selection for earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:11:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:11:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity earth_dragon_Xywl_e2436113-d9fc-466c-b0ad-7b74c1c087e1
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Xywl
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Xywl
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iybm
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iybm
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Xywl
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Xywl
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Iybm
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Iybm
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-04-30 01:11:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Xywl to use oblation
+[2025-04-30 01:11:36] [INFO] [CombatSystem] Started dealing damage with oblation to Iybm 
+[2025-04-30 01:11:36] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4
+[2025-04-30 01:11:36] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4
+[2025-04-30 01:11:36] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:11:36] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:11:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4
+[2025-04-30 01:11:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4
+[2025-04-30 01:11:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:11:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Pyam
+[2025-04-30 01:11:36] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_d05ce51b-b5a2-433c-a504-25553beae2fe
+[2025-04-30 01:11:36] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_d05ce51b-b5a2-433c-a504-25553beae2fe
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-30 01:11:36] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-30 01:11:38] [INFO] [MovementSystem] Updated movement range to 8 for Pyam
+[2025-04-30 01:11:38] [INFO] [MovementSystem] Updated movement path from [1, 0] to [1, 1] for Pyam
+[2025-04-30 01:11:38] [INFO] [Component] Setting water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4 on to {"row":1,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Pyam_c961770c-231b-4ed0-9db1-4e49085930e4","structure":""}.
+[2025-04-30 01:11:38] [INFO] [MovementSystem] Moved from [1, 0] to [1, 1]
+[2025-04-30 01:11:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:11:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Pyam
+[2025-04-30 01:11:38] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_91cd555e-7832-45f2-88bd-b880f1128704
+[2025-04-30 01:11:38] [INFO] [InputHandler] Gliding 1 camera to new tile 1_1_91cd555e-7832-45f2-88bd-b880f1128704
+[2025-04-30 01:11:38] [INFO] [AbilityPanel] Updating ability selection for dragon_Vyyo_4e35351c-3e6f-4e03-96c4-376a62990395
+[2025-04-30 01:11:38] [INFO] [AbilityPanel] Finished ability selection for dragon_Vyyo_4e35351c-3e6f-4e03-96c4-376a62990395
+[2025-04-30 01:11:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-30 01:11:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-30 01:11:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-30 01:11:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Vyyo_4e35351c-3e6f-4e03-96c4-376a62990395
+[2025-04-30 01:11:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Vyyo_4e35351c-3e6f-4e03-96c4-376a62990395
+[2025-04-30 01:11:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-30 01:11:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Vyyo
+[2025-04-30 01:11:38] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_7cc7d5c4-be6f-478c-9ab6-cf9f382971cd
+[2025-04-30 01:11:38] [INFO] [InputHandler] Gliding 1 camera to new tile 6_0_7cc7d5c4-be6f-478c-9ab6-cf9f382971cd

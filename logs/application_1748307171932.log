@@ -1,0 +1,325 @@
+[2025-05-26 17:52:51] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-26 17:52:51] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-26 17:52:52] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-26 17:52:52] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-26 17:52:52] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-26 17:52:52] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-26 17:52:52] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-26 17:52:52] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-26 17:52:52] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-26 17:52:52] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-26 17:52:52] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-26 17:52:52] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-26 17:52:52] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-26 17:52:52] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb on to {"row":4,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Xycywy___a4b7ec7a-4434-48fe-9b72-306d026a565e on to {"row":6,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Xycywy___a4b7ec7a-4434-48fe-9b72-306d026a565e","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Xycywy___a4b7ec7a-4434-48fe-9b72-306d026a565e into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Yaysam___4dd73a42-879d-44b1-acb4-a6abfadbb07a on to {"row":6,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Yaysam___4dd73a42-879d-44b1-acb4-a6abfadbb07a","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Yaysam___4dd73a42-879d-44b1-acb4-a6abfadbb07a into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Pepfe___737a2726-6b44-49ae-9479-bc31065672c7 on to {"row":8,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Pepfe___737a2726-6b44-49ae-9479-bc31065672c7","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Pepfe___737a2726-6b44-49ae-9479-bc31065672c7 into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Gaaio___d220510a-bb40-4118-b534-ead10b75b4bb on to {"row":3,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Gaaio___d220510a-bb40-4118-b534-ead10b75b4bb","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Gaaio___d220510a-bb40-4118-b534-ead10b75b4bb into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Riqia___b87cb8d6-1e05-4986-9d9b-bb6695ced466 on to {"row":2,"column":9,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Riqia___b87cb8d6-1e05-4986-9d9b-bb6695ced466","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Riqia___b87cb8d6-1e05-4986-9d9b-bb6695ced466 into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Byxbwo___b9b6d720-c551-4119-b2c1-19a7141266ec on to {"row":1,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Byxbwo___b9b6d720-c551-4119-b2c1-19a7141266ec","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Byxbwo___b9b6d720-c551-4119-b2c1-19a7141266ec into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Beru___a8777aab-4ce2-4d37-b0df-3b2a132bba7f on to {"row":0,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Beru___a8777aab-4ce2-4d37-b0df-3b2a132bba7f","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Beru___a8777aab-4ce2-4d37-b0df-3b2a132bba7f into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Bemt___43e959b9-3e3a-4240-bdea-ed87a738c7c4 on to {"row":7,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Bemt___43e959b9-3e3a-4240-bdea-ed87a738c7c4","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Bemt___43e959b9-3e3a-4240-bdea-ed87a738c7c4 into queue
+[2025-05-26 17:52:52] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Eipeo___98844a93-9e3b-4b11-9992-b3929e43d928 on to {"row":9,"column":8,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Eipeo___98844a93-9e3b-4b11-9992-b3929e43d928","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 17:52:52] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Eipeo___98844a93-9e3b-4b11-9992-b3929e43d928 into queue
+[2025-05-26 17:52:52] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-26 17:52:52] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-26 17:52:52] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-26 17:52:52] [INFO] [FontPool] Started initializing FontPool
+[2025-05-26 17:52:52] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-26 17:52:52] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-26 17:52:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb
+[2025-05-26 17:52:53] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb
+[2025-05-26 17:52:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 17:52:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 17:52:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-26 17:52:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-26 17:52:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:52:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-26 17:52:53] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 17:52:53] [INFO] [VisualsSystem] Finished creating blurred background after 0.48332977294921875 seconds
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb
+[2025-05-26 17:52:53] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb
+[2025-05-26 17:52:53] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-26 17:52:53] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:52:53] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:53:02] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_0___e6345b03-6658-4d0a-a265-06bebbdae883
+[2025-05-26 17:53:02] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_0___e6345b03-6658-4d0a-a265-06bebbdae883
+[2025-05-26 17:53:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb
+[2025-05-26 17:53:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb
+[2025-05-26 17:53:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:53:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Hialac
+[2025-05-26 17:53:04] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_0___e6345b03-6658-4d0a-a265-06bebbdae883
+[2025-05-26 17:53:04] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-26 17:53:04] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement range to 7 for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [8, 9] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement range to 7 for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [8, 9] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [9, 8] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [9, 8] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [9, 7] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [9, 7] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [8, 5] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [8, 5] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 5] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 5] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 4] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [7, 4] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 4] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 3] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [6, 3] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 3] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Hialac
+[2025-05-26 17:53:04] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Hialac
+[2025-05-26 17:53:05] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Hialac
+[2025-05-26 17:53:05] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Hialac
+[2025-05-26 17:53:05] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 1] for Hialac
+[2025-05-26 17:53:05] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 1] for Hialac
+[2025-05-26 17:53:05] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Hialac
+[2025-05-26 17:53:05] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Hialac
+[2025-05-26 17:53:09] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Hialac
+[2025-05-26 17:53:09] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Hialac
+[2025-05-26 17:53:09] [INFO] [MovementSystem] Updated movement path from [4, 0] to [2, 1] for Hialac
+[2025-05-26 17:53:09] [INFO] [MovementSystem] Updated movement path from [4, 0] to [2, 1] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [3, 1] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 1] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [4, 2] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 2] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 1] for Hialac
+[2025-05-26 17:53:10] [INFO] [MovementSystem] Updated movement path from [4, 0] to [5, 1] for Hialac
+[2025-05-26 17:53:11] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb on to {"row":5,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Hialac___929274f2-9c51-473d-bf8a-bda4284b44fb","layers":{"empty":false},"total_elevation":3}.
+[2025-05-26 17:53:11] [INFO] [MovementSystem] Moved from [4, 0] to [5, 1]
+[2025-05-26 17:53:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:53:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Hialac
+[2025-05-26 17:53:11] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___6fb04b70-6e5e-40e4-9e1d-4578e5def50e
+[2025-05-26 17:53:11] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_1___6fb04b70-6e5e-40e4-9e1d-4578e5def50e
+[2025-05-26 17:53:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-26 17:53:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-26 17:53:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:53:12] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-26 17:53:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-26 17:53:13] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-26 17:53:15] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___6fb04b70-6e5e-40e4-9e1d-4578e5def50e
+[2025-05-26 17:53:17] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___6fb04b70-6e5e-40e4-9e1d-4578e5def50e
+[2025-05-26 17:53:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [AbilityPanel] Selecting fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Hialac is planning to use fire_attack on [7, 5]
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of sight for Hialac, viewing 9 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated line of sight for Hialac, viewing 7 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of effect for Hialac viewing 1 tiles
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Hialac is planning to use fire_attack on [8, 4]
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated line of sight for Hialac, viewing 2 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of effect for Hialac viewing 1 tiles
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Hialac is planning to use fire_attack on [7, 4]
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated line of sight for Hialac, viewing 6 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of effect for Hialac viewing 1 tiles
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Hialac is planning to use fire_attack on [7, 3]
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated line of sight for Hialac, viewing 2 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of effect for Hialac viewing 1 tiles
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Hialac is planning to use fire_attack on [7, 2]
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated line of sight for Hialac, viewing 2 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of effect for Hialac viewing 1 tiles
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Hialac is planning to use fire_attack on [7, 1]
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated line of sight for Hialac, viewing 2 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of effect for Hialac viewing 1 tiles
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Hialac is planning to use fire_attack on [6, 1]
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated line of sight for Hialac, viewing 2 tiles
+[2025-05-26 17:53:18] [INFO] [AbilitySystem] Updated area of effect for Hialac viewing 1 tiles
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hialac
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Hialac lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hialac
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xycywy
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xycywy
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-26 17:53:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Checking cost requirements for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Hialac is able to pay for fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Started constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Finished constructing cost mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Paying cost requirements for Hialac using fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilitySystem] Used from fire_attack on [6, 1]
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hialac
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Hialac lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hialac
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xycywy
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xycywy
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [CombatSystem] Started dealing damage with fire_attack to Xycywy 
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hialac
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Hialac lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hialac
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xycywy
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xycywy
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:53:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Hialac
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Hialac lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Hialac
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Xycywy
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Xycywy
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] 20.0 damage after defenses for fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Hialac to use fire_attack
+[2025-05-26 17:53:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 17:53:20] [INFO] [AbilitySystem] Finished update updating {} because of ability

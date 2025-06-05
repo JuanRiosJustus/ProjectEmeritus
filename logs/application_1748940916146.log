@@ -1,0 +1,77 @@
+[2025-06-03 01:55:16] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 01:55:16] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 01:55:16] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 01:55:16] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 01:55:16] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 01:55:16] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 01:55:16] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 01:55:16] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 01:55:16] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 01:55:16] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 01:55:16] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Oaca___b0cb3bb9-4638-4d49-9a1d-5af5583d2683 on to {"row":3,"column":4,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Oaca___b0cb3bb9-4638-4d49-9a1d-5af5583d2683","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:16] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Oaca___b0cb3bb9-4638-4d49-9a1d-5af5583d2683 into queue
+[2025-06-03 01:55:16] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Uovyf___3e0a86af-3bed-4262-af9f-9f0cb348d962 on to {"row":3,"column":3,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Uovyf___3e0a86af-3bed-4262-af9f-9f0cb348d962","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:16] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Uovyf___3e0a86af-3bed-4262-af9f-9f0cb348d962 into queue
+[2025-06-03 01:55:16] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Quhyus___1e3bb4d4-30fa-4f3e-af45-1ff464f13953 on to {"row":3,"column":4,"base_elevation":0,"unit":"UNIT_light_dragon___NICKNAME_Quhyus___1e3bb4d4-30fa-4f3e-af45-1ff464f13953","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:16] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Quhyus___1e3bb4d4-30fa-4f3e-af45-1ff464f13953 into queue
+[2025-06-03 01:55:16] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 01:55:16] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 01:55:16] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Yifx___14d7b568-4beb-4a1c-8c72-242be0eda23f on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Yifx___14d7b568-4beb-4a1c-8c72-242be0eda23f","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:16] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Yifx___14d7b568-4beb-4a1c-8c72-242be0eda23f into queue
+[2025-06-03 01:55:16] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Galtue___a1501db1-73b9-4b25-92f4-7d3645443546 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Galtue___a1501db1-73b9-4b25-92f4-7d3645443546","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:16] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Galtue___a1501db1-73b9-4b25-92f4-7d3645443546 into queue
+[2025-06-03 01:55:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 01:55:16] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 01:55:16] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 01:55:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 01:55:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 01:55:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 01:55:16] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 01:55:16] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-03 01:55:16] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Yifx___14d7b568-4beb-4a1c-8c72-242be0eda23f
+[2025-06-03 01:55:16] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Yifx___14d7b568-4beb-4a1c-8c72-242be0eda23f
+[2025-06-03 01:55:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 01:55:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 01:55:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-03 01:55:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-03 01:55:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 01:55:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 01:55:17] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-03 01:55:17] [INFO] [VisualsSystem] Finished creating blurred background after 0.3226476013660431 seconds
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 01:55:17] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Yifx___14d7b568-4beb-4a1c-8c72-242be0eda23f
+[2025-06-03 01:55:17] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Yifx___14d7b568-4beb-4a1c-8c72-242be0eda23f
+[2025-06-03 01:55:17] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 01:55:17] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 01:55:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 01:55:18] [INFO] [GameModel] Updated area of sight for Yifx, viewing 5 tiles
+[2025-06-03 01:55:18] [INFO] [GameModel] Updated line of sight for Yifx, viewing 2 tiles
+[2025-06-03 01:55:18] [INFO] [GameModel] Updated area of sight for Yifx, viewing 1 tiles
+[2025-06-03 01:55:18] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-03 01:55:18] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-03 01:55:18] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-03 01:55:18] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-03 01:55:18] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-03 01:55:18] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-03 01:55:18] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-03 01:55:19] [INFO] [GameModel] Started dealing damage with test_slash to Galtue 
+[2025-06-03 01:55:21] [INFO] [GameModel] Started gathering cost requirements for potential_burst
+[2025-06-03 01:55:21] [INFO] [GameModel] Finished gathering cost requirements for potential_burst
+[2025-06-03 01:55:21] [INFO] [GameModel] Finished checking cost requirements for potential_burst
+[2025-06-03 01:55:21] [INFO] [GameModel] Started paying cost requirements for potential_burst
+[2025-06-03 01:55:21] [INFO] [GameModel] Payed 5.0 out of 20 to use potential_burst
+[2025-06-03 01:55:21] [INFO] [GameModel] Payed 25.0 out of 100 to use potential_burst
+[2025-06-03 01:55:21] [INFO] [GameModel] Finished paying cost requirements for potential_burst
+[2025-06-03 01:55:21] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Uava___b92c7fc4-2ec7-4344-a8b5-594993857afd on to {"row":3,"column":3,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Uava___b92c7fc4-2ec7-4344-a8b5-594993857afd","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:21] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Uava___b92c7fc4-2ec7-4344-a8b5-594993857afd into queue
+[2025-06-03 01:55:21] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Zepojy___15a771c4-50e3-44aa-b8f5-ca0a3c681231 on to {"row":3,"column":4,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Zepojy___15a771c4-50e3-44aa-b8f5-ca0a3c681231","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:21] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Zepojy___15a771c4-50e3-44aa-b8f5-ca0a3c681231 into queue
+[2025-06-03 01:55:21] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Suyoa___f3ef9453-c5b2-49d0-ac8b-94e8032d4cd5 on to {"row":3,"column":6,"base_elevation":0,"unit":"UNIT_dark_dragon___NICKNAME_Suyoa___f3ef9453-c5b2-49d0-ac8b-94e8032d4cd5","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 01:55:21] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Suyoa___f3ef9453-c5b2-49d0-ac8b-94e8032d4cd5 into queue
+[2025-06-03 01:55:21] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Aupyyo___3e1897bb-44fd-4915-8baa-58771f58d10d on to {"row":2,"column":6,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Aupyy

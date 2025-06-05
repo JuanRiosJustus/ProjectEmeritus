@@ -1,0 +1,217 @@
+{
+  "Ability": {
+    "Name": "Ability",
+    "Description": "Description",
+    "UsageType": "UsageType",
+    "Accuracy": 0,
+    "Range": 0,
+    "Travel": "{Melee|Projectile|Instant}",
+    "Area": 0,
+    "Animation": "Physical",
+    "Types": [
+      "List",
+      "Of",
+      "Types"
+    ],
+    "Impact": "{Blunt|Slash|Pierce|Special|None}",
+
+    "{Resource}.{Damage|Cost}.{Stat}": 0,
+    "Mana.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Strength.Total": 0.4,
+
+    "TagsToUser": {
+      "Sleep": 0.2
+    },
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
+  },
+  "Slam": {
+    "Name": "Slam",
+    "Description": "The target is struck bluntly by the user",
+    "Travel": "Melee",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Blunt",
+
+    "Stamina.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Strength.Total": 0.4,
+
+    "Tags.To.Targets.NormalAverse": 0.1
+  },
+  "Slash": {
+    "Name": "Slash",
+    "Description": "The target is swiped us with a sharp edge",
+    "Travel": "Melee",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Slash",
+
+    "Stamina.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Strength.Total": 0.4,
+
+    "Tags.To.Targets.NormalAverse": 0.1
+  },
+  "Flash": {
+    "Name": "Flash",
+    "Description": "User emits a blinding light towards the target",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": "Light",
+    "Animation": "Ranged",
+    "Impact": "Special",
+
+    "Mana.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Intelligence.Total": 0.2,
+
+    "Tags.To.Targets.LightAverse": 0.2,
+    "Traits": [ "CanFriendlyFire" ]
+  },
+  "Bubble": {
+    "Name": "Bubble",
+    "Description": "The user launches a stream of bubbles at the target",
+    "Travel": "Projectile",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [ "Water" ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+
+    "Mana.Cost.Base": 5,
+    "Stamina.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Intelligence.Total": 0.2,
+
+    "Tags.To.Targets.WaterAverse": 0.2,
+    "Traits": [ "CanFriendlyFire" ]
+  },
+  "Blot": {
+    "Name": "Blot",
+    "Description": "The user envelopes the the target in darkness",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [ "Dark" ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+
+    "Mana.Cost.Base": 5,
+    "Stamina.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Intelligence.Total": 0.2,
+
+    "Tags.To.Targets.DarkAverse": 0.2,
+
+    "Traits": [ "CanFriendlyFire" ]
+  },
+  "Ember": {
+    "Name": "Ember",
+    "Description": "The user directs fiery particles towards its target",
+    "Travel": "Projectile",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [ "Fire" ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+
+    "Mana.Cost.Base": 5,
+    "Stamina.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Intelligence.Total": 0.2,
+
+    "Tags.To.Targets.FireAverse": 0.2,
+
+    "Traits": [ "CanFriendlyFire" ]
+  },
+  "Crumble": {
+    "Name": "Crumble",
+    "Description": "The user throws a volley of sediment towards the target",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [ "Nature" ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+
+    "Mana.Cost.Base": 5,
+    "Stamina.Cost.Base": 5,
+    "Health.Damage.Base": 10,
+    "Health.Damage.Intelligence.Total": 0.2,
+
+    "Tags.To.Targets.NatureAverse": 0.2,
+
+    "Traits": [ "CanFriendlyFire" ]
+  },
+  "Rest": {
+    "Name": "Rest",
+    "Description": "The user takes its time to restore some health",
+    "Travel": "None",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [ "Light" ],
+    "Impact": "None",
+    "Animation": "Ranged",
+
+    "Health.Damage.Health.Total": -0.5,
+    "Mana.Damage.Mana.Total": -0.5,
+
+    "Tags.To.User.Sleep": 1,
+
+    "Traits": [
+      "CanFriendlyFire",
+      "IgnoreDefenses",
+      "ShouldFriendFire"
+    ]
+  },
+  "Tailwind": {
+    "Name": "Tailwind",
+    "Description": "User increases their movement speed",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [ "Air" ],
+    "Impact": "None",
+    "Animation": "Ranged",
+
+    "Tags.To.Targets.Speed": 1,
+
+    "Traits": [ "CanFriendlyFire" ]
+  },
+  "Fly": {
+    "Name": "Fly",
+    "Description": "The user launches itself into the air for a period of time",
+    "Travel": "None",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [ "Normal" ],
+    "Impact": "None",
+    "Animation": "Ranged",
+
+    "Tags.To.Targets.Fly": 1,
+
+    "Traits": [ "CanFriendlyFire" ]
+  }
+}

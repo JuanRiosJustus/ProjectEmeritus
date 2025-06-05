@@ -1,0 +1,275 @@
+[2025-05-04 14:43:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 14:43:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 14:43:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 14:43:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 14:43:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 14:43:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 14:43:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 14:43:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 14:43:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 14:43:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 14:43:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 14:43:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 14:43:51] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 14:43:51] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 14:43:51] [INFO] [Component] Setting dragon_Zigoi_55f0c398-739a-492c-85f5-f92c10dd7eb6 on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Zigoi_55f0c398-739a-492c-85f5-f92c10dd7eb6","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit dragon_Zigoi_55f0c398-739a-492c-85f5-f92c10dd7eb6 into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting water_dragon_Judp_3b66c07b-4315-4eab-a2bc-6cda0b798e0f on to {"row":0,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"water_dragon_Judp_3b66c07b-4315-4eab-a2bc-6cda0b798e0f","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit water_dragon_Judp_3b66c07b-4315-4eab-a2bc-6cda0b798e0f into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting light_dragon_Eesuo_84bfe348-3d73-4d8b-b280-a1aaa1a5e8f9 on to {"row":3,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Eesuo_84bfe348-3d73-4d8b-b280-a1aaa1a5e8f9","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit light_dragon_Eesuo_84bfe348-3d73-4d8b-b280-a1aaa1a5e8f9 into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c on to {"row":7,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting light_dragon_Byumo_24638429-a0bd-4bd9-821a-9d147511b638 on to {"row":5,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Byumo_24638429-a0bd-4bd9-821a-9d147511b638","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit light_dragon_Byumo_24638429-a0bd-4bd9-821a-9d147511b638 into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting dragon_Loay_d96b658a-2599-403b-ac6c-3f782a8c45df on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Loay_d96b658a-2599-403b-ac6c-3f782a8c45df","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit dragon_Loay_d96b658a-2599-403b-ac6c-3f782a8c45df into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting earth_dragon_Hopi_bcc33769-772a-4f1a-85c3-4ad5a9e620e5 on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Hopi_bcc33769-772a-4f1a-85c3-4ad5a9e620e5","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit earth_dragon_Hopi_bcc33769-772a-4f1a-85c3-4ad5a9e620e5 into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting fire_dragon_Wiyke_fa780832-1346-412c-aff5-3127d9dd6571 on to {"row":6,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Wiyke_fa780832-1346-412c-aff5-3127d9dd6571","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit fire_dragon_Wiyke_fa780832-1346-412c-aff5-3127d9dd6571 into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting fire_dragon_Zeere_8d80e827-1885-4908-97b9-da7ea1c372ca on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Zeere_8d80e827-1885-4908-97b9-da7ea1c372ca","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit fire_dragon_Zeere_8d80e827-1885-4908-97b9-da7ea1c372ca into queue
+[2025-05-04 14:43:51] [INFO] [Component] Setting fire_dragon_Huvli_f8a77ac2-02f5-4ba8-a9fa-647aa9276dac on to {"row":3,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Huvli_f8a77ac2-02f5-4ba8-a9fa-647aa9276dac","structure":""}.
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Added unit fire_dragon_Huvli_f8a77ac2-02f5-4ba8-a9fa-647aa9276dac into queue
+[2025-05-04 14:43:51] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 14:43:51] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 14:43:51] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:43:51] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 14:43:51] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 14:43:51] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 14:43:51] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 14:43:51] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 14:43:51] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 14:43:51] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:51] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 14:43:51] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:51] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:43:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:43:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 14:43:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 14:43:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:43:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 14:43:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 14:43:52] [INFO] [VisualsSystem] Finished creating blurred background after 0.4898296296596527 seconds
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:52] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:43:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:52] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:43:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:52] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 14:43:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 14:43:53] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_e1975c02-c348-4dac-a109-b65e86c1226a
+[2025-05-04 14:43:53] [INFO] [InputHandler] Gliding 1 camera to new tile 7_1_e1975c02-c348-4dac-a109-b65e86c1226a
+[2025-05-04 14:43:53] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:53] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Vaho_dbf5ea27-e119-43d8-b9b9-00785603bc6c
+[2025-05-04 14:43:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 14:43:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Vaho
+[2025-05-04 14:43:54] [INFO] [InputHandler] Gliding 0 camera to new tile 7_1_e1975c02-c348-4dac-a109-b65e86c1226a
+[2025-05-04 14:43:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:54] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-04 14:43:54] [INFO] [AbilitySystem] Vaho is planning to use air_attack on null
+[2025-05-04 14:43:54] [INFO] [AbilitySystem] Updated area of sight for Vaho, viewing 8 tiles
+[2025-05-04 14:43:54] [INFO] [AbilitySystem] Updated line of sight for Vaho, viewing 0 tiles
+[2025-05-04 14:43:54] [INFO] [AbilitySystem] Updated area of effect for Vaho viewing 0 tiles
+[2025-05-04 14:43:54] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:54] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:54] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:54] [INFO] [CombatSystem] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:54] [INFO] [CombatSystem] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:54] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:54] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:54] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Vaho is planning to use air_attack on [7, 3]
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated line of sight for Vaho, viewing 3 tiles
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated area of effect for Vaho viewing 1 tiles
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Vaho is planning to use air_attack on [6, 2]
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated line of sight for Vaho, viewing 3 tiles
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated area of effect for Vaho viewing 1 tiles
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Vaho is planning to use air_attack on [6, 1]
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated line of sight for Vaho, viewing 2 tiles
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated area of effect for Vaho viewing 1 tiles
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Vaho is planning to use air_attack on [5, 1]
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated line of sight for Vaho, viewing 3 tiles
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated area of effect for Vaho viewing 1 tiles
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vaho
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Vaho lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vaho
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Byumo
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Byumo
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Vaho is planning to use air_attack on [5, 0]
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated line of sight for Vaho, viewing 3 tiles
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated area of effect for Vaho viewing 1 tiles
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Vaho is planning to use air_attack on [5, 1]
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated line of sight for Vaho, viewing 3 tiles
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Updated area of effect for Vaho viewing 1 tiles
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vaho
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Vaho lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vaho
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Byumo
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Byumo
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 14:43:55] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Checking cost requirements for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Vaho is able to pay for air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Started constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Finished constructing cost mappings for Vaho to use air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Paying cost requirements for Vaho using air_attack
+[2025-05-04 14:43:55] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-04 14:43:55] [INFO] [AbilitySystem] Used from air_attack on [5, 1]
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vaho
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Vaho lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vaho
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Byumo
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Byumo
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [CombatSystem] Started dealing damage with air_attack to Byumo 
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vaho
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Vaho lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vaho
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Byumo
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Byumo
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 14:43:56] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vaho to use air_attack
+[2025-05-04 14:43:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 14:43:56] [INFO] [AbilitySystem] Finished update updating {} because of ability

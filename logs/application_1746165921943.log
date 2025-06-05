@@ -1,0 +1,239 @@
+[2025-05-01 23:05:21] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-01 23:05:21] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-01 23:05:22] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-01 23:05:22] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-01 23:05:22] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-01 23:05:22] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-01 23:05:22] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-01 23:05:22] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-01 23:05:22] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-01 23:05:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-01 23:05:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-01 23:05:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-01 23:05:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-01 23:05:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-01 23:05:22] [INFO] [Component] Setting dark_dragon_Fuouue_27c1540a-7579-4c57-9c8a-5105f6b161f6 on to {"row":7,"column":1,"height":0,"spawn_region":1,"collider":"","unit":"dark_dragon_Fuouue_27c1540a-7579-4c57-9c8a-5105f6b161f6","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit enemy:Fuouue into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting air_dragon_Qacmke_7a0b47ff-c084-47d1-8009-ce3ed112e486 on to {"row":1,"column":7,"height":0,"spawn_region":2,"collider":"","unit":"air_dragon_Qacmke_7a0b47ff-c084-47d1-8009-ce3ed112e486","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit enemy:Qacmke into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting water_dragon_Livul_4d187174-ec75-4629-9928-250f706c6dd6 on to {"row":2,"column":6,"height":0,"spawn_region":2,"collider":"","unit":"water_dragon_Livul_4d187174-ec75-4629-9928-250f706c6dd6","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit enemy:Livul into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting light_dragon_Sielit_72d7d478-7781-4bbb-8fca-036c768406a4 on to {"row":7,"column":2,"height":0,"collider":"","unit":"light_dragon_Sielit_72d7d478-7781-4bbb-8fca-036c768406a4","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit enemy:Sielit into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting fire_dragon_Noenou_ee9c2e58-574c-4fbf-bea8-9feced59f1b4 on to {"row":6,"column":6,"height":0,"spawn_region":2,"collider":"","unit":"fire_dragon_Noenou_ee9c2e58-574c-4fbf-bea8-9feced59f1b4","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit enemy:Noenou into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499 on to {"row":5,"column":2,"height":0,"collider":"","unit":"fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit user:Jyxpo into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting light_dragon_Xuvya_2495b7d3-348d-40e4-824f-4a405385910e on to {"row":5,"column":3,"height":0,"collider":"","unit":"light_dragon_Xuvya_2495b7d3-348d-40e4-824f-4a405385910e","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit user:Xuvya into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting dragon_Jafrso_b1571839-8f41-41b9-97f7-923f777738a8 on to {"row":1,"column":1,"height":0,"spawn_region":1,"collider":"","unit":"dragon_Jafrso_b1571839-8f41-41b9-97f7-923f777738a8","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit user:Jafrso into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83 on to {"row":2,"column":2,"height":0,"collider":"","unit":"air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit user:Tikus into queue
+[2025-05-01 23:05:22] [INFO] [Component] Setting dark_dragon_Tizrih_f4cbbf04-6586-4f86-b60a-0f2e7b2bdac6 on to {"row":2,"column":4,"height":0,"collider":"","unit":"dark_dragon_Tizrih_f4cbbf04-6586-4f86-b60a-0f2e7b2bdac6","structure":""}.
+[2025-05-01 23:05:22] [INFO] [SpeedQueue] Added unit user:Tizrih into queue
+[2025-05-01 23:05:22] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-01 23:05:22] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-01 23:05:22] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-01 23:05:22] [INFO] [FontPool] Started initializing FontPool
+[2025-05-01 23:05:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-01 23:05:22] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-01 23:05:22] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-01 23:05:22] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-01 23:05:22] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-01 23:05:22] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:22] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 23:05:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 23:05:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:05:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 23:05:23] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-01 23:05:23] [INFO] [VisualsSystem] Finished creating blurred background after 0.4956922233104706 seconds
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:23] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:24] [INFO] [AbilitySystem] Tikus is planning to use oblation on [1, 1]
+[2025-05-01 23:05:24] [INFO] [AbilitySystem] Updated area of sight for Tikus, viewing 13 tiles
+[2025-05-01 23:05:24] [INFO] [AbilitySystem] Updated line of sight for Tikus, viewing 3 tiles
+[2025-05-01 23:05:24] [INFO] [AbilitySystem] Updated area of effect for Tikus viewing 1 tiles
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Started constructing cost mappings for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Finished constructing cost mappings for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Checking cost requirements for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Tikus is able to pay for oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Started constructing cost mappings for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Finished constructing cost mappings for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Paying cost requirements for Tikus using oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-01 23:05:24] [INFO] [AbilitySystem] Used from oblation on [1, 1]
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Tikus
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Tikus
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jafrso
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jafrso
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Tikus
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Tikus
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Jafrso
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Jafrso
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-01 23:05:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Tikus to use oblation
+[2025-05-01 23:05:24] [INFO] [CombatSystem] Started dealing damage with oblation to Jafrso 
+[2025-05-01 23:05:24] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:24] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:25] [INFO] [MovementSystem] Updated movement range to 11 for Tikus
+[2025-05-01 23:05:25] [INFO] [MovementSystem] Updated movement path from [2, 2] to [3, 2] for Tikus
+[2025-05-01 23:05:25] [INFO] [Component] Setting air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83 on to {"row":3,"column":2,"height":0,"collider":"","unit":"air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83","structure":""}.
+[2025-05-01 23:05:25] [INFO] [MovementSystem] Moved from [2, 2] to [3, 2]
+[2025-05-01 23:05:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Tikus_e0821863-1f41-4528-bb48-1bcc4daeca83
+[2025-05-01 23:05:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:05:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Tikus
+[2025-05-01 23:05:25] [INFO] [InputHandler] Gliding 0 camera to new tile 3_2_9b878d15-c8aa-4c0c-a443-0e3076f2db4e
+[2025-05-01 23:05:25] [INFO] [InputHandler] Gliding 1 camera to new tile 3_2_9b878d15-c8aa-4c0c-a443-0e3076f2db4e
+[2025-05-01 23:05:26] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:26] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:26] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:26] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 23:05:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 23:05:26] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:26] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:05:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Jyxpo
+[2025-05-01 23:05:26] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_8ac5763e-184e-4e3b-97c6-0f4a9c42b4fa
+[2025-05-01 23:05:26] [INFO] [InputHandler] Gliding 1 camera to new tile 5_2_8ac5763e-184e-4e3b-97c6-0f4a9c42b4fa
+[2025-05-01 23:05:26] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-01 23:05:26] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-01 23:05:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:05:26] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Jyxpo is planning to use pierce_attack on [5, 3]
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Updated area of sight for Jyxpo, viewing 5 tiles
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Updated line of sight for Jyxpo, viewing 2 tiles
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Updated area of effect for Jyxpo viewing 1 tiles
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Started constructing cost mappings for Jyxpo to use pierce_attack
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Finished constructing cost mappings for Jyxpo to use pierce_attack
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Checking cost requirements for Jyxpo to use pierce_attack
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Jyxpo is able to pay for pierce_attack
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Started constructing cost mappings for Jyxpo to use pierce_attack
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Finished constructing cost mappings for Jyxpo to use pierce_attack
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Paying cost requirements for Jyxpo using pierce_attack
+[2025-05-01 23:05:27] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use pierce_attack
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Used from pierce_attack on [5, 3]
+[2025-05-01 23:05:27] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:27] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:27] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:27] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:27] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:27] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 23:05:27] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 23:05:27] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jyxpo to use pierce_attack
+[2025-05-01 23:05:28] [INFO] [MovementSystem] Updated movement range to 9 for Jyxpo
+[2025-05-01 23:05:28] [INFO] [MovementSystem] Updated movement path from [5, 2] to [5, 1] for Jyxpo
+[2025-05-01 23:05:28] [INFO] [Component] Setting fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499 on to {"row":5,"column":1,"height":0,"spawn_region":1,"collider":"","unit":"fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499","structure":""}.
+[2025-05-01 23:05:28] [INFO] [MovementSystem] Moved from [5, 2] to [5, 1]
+[2025-05-01 23:05:28] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:28] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Jyxpo_2ba8c710-85d9-4192-bbbd-5be094222499
+[2025-05-01 23:05:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:05:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Jyxpo
+[2025-05-01 23:05:28] [INFO] [InputHandler] Gliding 0 camera to new tile 5_1_56bd772b-3e59-407c-a60c-aa08fd90f301
+[2025-05-01 23:05:28] [INFO] [InputHandler] Gliding 1 camera to new tile 5_1_56bd772b-3e59-407c-a60c-aa08fd90f301
+[2025-05-01 23:05:28] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Qacmke_7a0b47ff-c084-47d1-8009-ce3ed112e486
+[2025-05-01 23:05:28] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Qacmke_7a0b47ff-c084-47d1-8009-ce3ed112e486
+[2025-05-01 23:05:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 23:05:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 23:05:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 23:05:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 23:05:28] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Qacmke_7a0b47ff-c084-47d1-8009-ce3ed112e486
+[2025-05-01 23:05:28] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Qacmke_7a0b47ff-c084-47d1-8009-ce3ed112e486
+[2025-05-01 23:05:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 23:05:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Qacmke
+[2025-05-01 23:05:28] [INFO] [InputHandler] Gliding 0 camera to new tile 1_7_92b9ed33-b69a-40fd-a5e9-5d870c7a4938
+[2025-05-01 23:05:28] [INFO] [InputHandler] Gliding 1 camera to new tile 1_7_92b9ed33-b69a-40fd-a5e9-5d870c7a4938

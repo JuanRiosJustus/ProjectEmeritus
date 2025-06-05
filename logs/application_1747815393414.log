@@ -1,0 +1,231 @@
+[2025-05-21 01:16:33] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-21 01:16:33] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-21 01:16:33] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-21 01:16:33] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-21 01:16:33] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-21 01:16:33] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-21 01:16:33] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-21 01:16:33] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-21 01:16:33] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-21 01:16:33] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-21 01:16:33] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-21 01:16:33] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-21 01:16:33] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-21 01:16:33] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-21 01:16:33] [INFO] [Component] Setting dark_dragon_Capr_bcf85794-e7d4-467e-95ee-7fc55a5d3c6c on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Capr_bcf85794-e7d4-467e-95ee-7fc55a5d3c6c","structure":"","total_elevation":7}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit dark_dragon_Capr_bcf85794-e7d4-467e-95ee-7fc55a5d3c6c into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting dragon_Hafra_c4ed02d5-932b-4421-a5b4-c7be5d80fdfe on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dragon_Hafra_c4ed02d5-932b-4421-a5b4-c7be5d80fdfe","structure":"","total_elevation":10}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit dragon_Hafra_c4ed02d5-932b-4421-a5b4-c7be5d80fdfe into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting earth_dragon_Oyxky_9af9a29f-4046-45c5-afad-46830eb9645d on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Oyxky_9af9a29f-4046-45c5-afad-46830eb9645d","structure":"","total_elevation":8}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit earth_dragon_Oyxky_9af9a29f-4046-45c5-afad-46830eb9645d into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting dragon_Ririol_f816ca19-543c-4a01-8440-63cc789ac1b3 on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"dragon_Ririol_f816ca19-543c-4a01-8440-63cc789ac1b3","structure":"","total_elevation":9}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit dragon_Ririol_f816ca19-543c-4a01-8440-63cc789ac1b3 into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting light_dragon_Siho_ef4be53e-d34f-4a5e-885d-4d1547c07f12 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Siho_ef4be53e-d34f-4a5e-885d-4d1547c07f12","structure":"","total_elevation":5}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit light_dragon_Siho_ef4be53e-d34f-4a5e-885d-4d1547c07f12 into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting dragon_Ravov_f1e30723-ab82-4c86-9a56-790bd10ae29d on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dragon_Ravov_f1e30723-ab82-4c86-9a56-790bd10ae29d","structure":"","total_elevation":8}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit dragon_Ravov_f1e30723-ab82-4c86-9a56-790bd10ae29d into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting dragon_Cyzhu_134d18dd-81a1-496c-816e-03523263220f on to {"row":3,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"dragon_Cyzhu_134d18dd-81a1-496c-816e-03523263220f","structure":"","total_elevation":8}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit dragon_Cyzhu_134d18dd-81a1-496c-816e-03523263220f into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372","structure":"","total_elevation":10}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372 into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6 on to {"row":4,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6","structure":"","total_elevation":9}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6 into queue
+[2025-05-21 01:16:33] [INFO] [Component] Setting water_dragon_Zidu_6c12310c-82a3-4aba-84cf-ea440031c46e on to {"row":0,"column":10,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Zidu_6c12310c-82a3-4aba-84cf-ea440031c46e","structure":"","total_elevation":4}.
+[2025-05-21 01:16:33] [INFO] [SpeedQueue] Added unit water_dragon_Zidu_6c12310c-82a3-4aba-84cf-ea440031c46e into queue
+[2025-05-21 01:16:33] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-21 01:16:34] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-21 01:16:34] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-21 01:16:34] [INFO] [FontPool] Started initializing FontPool
+[2025-05-21 01:16:34] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-21 01:16:34] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-21 01:16:34] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-21 01:16:34] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-21 01:16:34] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-21 01:16:34] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:34] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-21 01:16:34] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:34] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:34] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:34] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-21 01:16:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-21 01:16:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-21 01:16:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-21 01:16:34] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-21 01:16:35] [INFO] [VisualsSystem] Finished creating blurred background after 0.4888896942138672 seconds
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:35] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:35] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:35] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:35] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:36] [INFO] [MovementSystem] Updated movement range to 6 for Fuzuo
+[2025-05-21 01:16:36] [INFO] [MovementSystem] Updated movement path from [7, 11] to [5, 11] for Fuzuo
+[2025-05-21 01:16:36] [INFO] [Component] Setting air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372 on to {"row":5,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372","structure":"","total_elevation":10}.
+[2025-05-21 01:16:36] [INFO] [MovementSystem] Moved from [7, 11] to [5, 11]
+[2025-05-21 01:16:36] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:36] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Fuzuo_00681dc8-30c2-4e65-9a0b-8c6b638d8372
+[2025-05-21 01:16:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-21 01:16:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Fuzuo
+[2025-05-21 01:16:36] [INFO] [InputHandler] Gliding 0 camera to new tile 5_11_c640b337-ea64-407c-879a-643b1d268ed6
+[2025-05-21 01:16:36] [INFO] [InputHandler] Gliding 1 camera to new tile 5_11_c640b337-ea64-407c-879a-643b1d268ed6
+[2025-05-21 01:16:37] [INFO] [AbilitySystem] Fuzuo is planning to use air_attack on [3, 11]
+[2025-05-21 01:16:37] [INFO] [AbilitySystem] Updated area of sight for Fuzuo, viewing 9 tiles
+[2025-05-21 01:16:37] [INFO] [AbilitySystem] Updated line of sight for Fuzuo, viewing 3 tiles
+[2025-05-21 01:16:37] [INFO] [AbilitySystem] Updated area of effect for Fuzuo viewing 1 tiles
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Started constructing cost mappings for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Finished constructing cost mappings for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Checking cost requirements for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Fuzuo is able to pay for air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Started constructing cost mappings for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Finished constructing cost mappings for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Paying cost requirements for Fuzuo using air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-21 01:16:37] [INFO] [AbilitySystem] Used from air_attack on [3, 11]
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fuzuo
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Fuzuo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fuzuo
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Ravov
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Ravov
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-21 01:16:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fuzuo to use air_attack
+[2025-05-21 01:16:37] [INFO] [CombatSystem] Started dealing damage with air_attack to Ravov 
+[2025-05-21 01:16:37] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:37] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:37] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:37] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-21 01:16:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-21 01:16:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-21 01:16:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Vagga
+[2025-05-21 01:16:37] [INFO] [InputHandler] Gliding 0 camera to new tile 4_10_8ea75127-7d69-44ed-8edc-4cc8a33199fd
+[2025-05-21 01:16:37] [INFO] [InputHandler] Gliding 1 camera to new tile 4_10_8ea75127-7d69-44ed-8edc-4cc8a33199fd
+[2025-05-21 01:16:37] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:37] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Vagga is planning to use pierce_attack on [3, 10]
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Updated area of sight for Vagga, viewing 5 tiles
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Updated line of sight for Vagga, viewing 2 tiles
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Updated area of effect for Vagga viewing 1 tiles
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Started constructing cost mappings for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Finished constructing cost mappings for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Checking cost requirements for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Vagga is able to pay for pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Started constructing cost mappings for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Finished constructing cost mappings for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Paying cost requirements for Vagga using pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Paying 2.0 stamina out of 20.0 stamina to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Used from pierce_attack on [3, 10]
+[2025-05-21 01:16:38] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:38] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:38] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:38] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Vagga
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] 20.0 Raw damage before modifiers for pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] 20.0 damage after modifiers for pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Vagga
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Cyzhu
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] 20.0 Raw damage after defenses for pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Cyzhu defends with Same-Type-Defense-Bonus from pierce_attack for 14.0
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Cyzhu
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] 5.4545455 damage after defenses for pierce_attack
+[2025-05-21 01:16:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Vagga to use pierce_attack
+[2025-05-21 01:16:38] [INFO] [CombatSystem] Started dealing damage with pierce_attack to Cyzhu 
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-21 01:16:38] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-21 01:16:39] [INFO] [MovementSystem] Updated movement range to 8 for Vagga
+[2025-05-21 01:16:39] [INFO] [MovementSystem] Updated movement path from [4, 10] to [4, 11] for Vagga
+[2025-05-21 01:16:39] [INFO] [Component] Setting fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Vagga_b72440df-fa89-4c1a-81ec-019a06b232a6","structure":"","total_elevation":9}.
+[2025-05-21 01:16:39] [INFO] [MovementSystem] Moved from [4, 10] to [4, 11]
+[2025-05-21 01:16:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-21 01:16:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Vagga
+[2025-05-21 01:16:39] [INFO] [InputHandler] Gliding 0 camera to new tile 4_11_abdb8e81-0d40-4161-bb07-77258767ec38
+[2025-05-21 01:16:39] [INFO] [InputHandler] Gliding 1 camera to new tile 4_11_abdb8e81-0d40-4161-bb07-77258767ec38
+[2025-05-21 01:16:39] [INFO] [AbilityPanel] Updating ability selection for dragon_Hafra_c4ed02d5-932b-4421-a5b4-c7be5d80fdfe
+[2025-05-21 01:16:39] [INFO] [AbilityPanel] Finished ability selection for dragon_Hafra_c4ed02d5-932b-4421-a5b4-c7be5d80fdfe
+[2025-05-21 01:16:39] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-21 01:16:39] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-21 01:16:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-21 01:16:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-21 01:16:39] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity dragon_Hafra_c4ed02d5-932b-4421-a5b4-c7be5d80fdfe
+[2025-05-21 01:16:39] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity dragon_Hafra_c4ed02d5-932b-4421-a5b4-c7be5d80fdfe
+[2025-05-21 01:16:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-21 01:16:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Hafra
+[2025-05-21 01:16:39] [INFO] [InputHandler] Gliding 0 camera to new tile 1_0_1de9acbd-ed09-4b73-9627-3be04ec9549a
+[2025-05-21 01:16:39] [INFO] [InputHandler] Gliding 1 camera to new tile 1_0_1de9acbd-ed09-4b73-9627-3be04ec9549a

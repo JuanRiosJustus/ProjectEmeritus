@@ -1,0 +1,31 @@
+[2025-06-02 02:38:13] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 02:38:13] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 02:38:13] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 02:38:13] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 02:38:13] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 02:38:13] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 02:38:13] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 02:38:20] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 02:38:20] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 02:38:20] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 02:38:20] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Xoiwzu___243b631b-e1fd-4d6a-9ad1-134898eeaa6d on to {"row":4,"column":4,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Xoiwzu___243b631b-e1fd-4d6a-9ad1-134898eeaa6d","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:38:20] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Xoiwzu___243b631b-e1fd-4d6a-9ad1-134898eeaa6d into queue
+[2025-06-02 02:38:20] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Nadu___470b423b-3c1a-4a3e-be7d-8b242e158eb7 on to {"row":4,"column":5,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Nadu___470b423b-3c1a-4a3e-be7d-8b242e158eb7","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 02:38:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 02:38:20] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Nadu___470b423b-3c1a-4a3e-be7d-8b242e158eb7 into queue
+[2025-06-02 02:38:20] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 02:38:20] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 02:38:20] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 02:38:20] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 02:38:20] [INFO] [GameModel] Updated area of sight for Xoiwzu, viewing 5 tiles
+[2025-06-02 02:38:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 02:38:20] [INFO] [GameModel] Updated line of sight for Xoiwzu, viewing 2 tiles
+[2025-06-02 02:38:20] [INFO] [GameModel] Updated area of sight for Xoiwzu, viewing 1 tiles
+[2025-06-02 02:38:20] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-02 02:38:20] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-02 02:38:20] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-02 02:38:20] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-02 02:38:20] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:38:20] [INFO] [GameModel] Payed 25.0 out of 100 to use test_slash
+[2025-06-02 02:38:20] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-02 02:38:20] [INFO]

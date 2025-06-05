@@ -1,0 +1,193 @@
+[2025-06-02 23:12:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-02 23:12:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-02 23:12:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-02 23:12:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-02 23:12:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-02 23:12:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-02 23:12:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-02 23:12:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-02 23:12:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-02 23:12:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-02 23:12:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-02 23:12:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-02 23:12:50] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-02 23:12:50] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06 on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06 into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Nuvy___c4e66a68-1672-4096-85be-2242f0afe895 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Nuvy___c4e66a68-1672-4096-85be-2242f0afe895","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Nuvy___c4e66a68-1672-4096-85be-2242f0afe895 into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Uoqy___f608bdcc-c83c-4785-a837-edfe616731d7 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Uoqy___f608bdcc-c83c-4785-a837-edfe616731d7","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Uoqy___f608bdcc-c83c-4785-a837-edfe616731d7 into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Vegmek___3d3eef20-3a0a-463b-8011-91114bb29360 on to {"row":7,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Vegmek___3d3eef20-3a0a-463b-8011-91114bb29360","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Vegmek___3d3eef20-3a0a-463b-8011-91114bb29360 into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Aodos___39a19ed0-7555-4794-8db0-4102d92b6a11 on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Aodos___39a19ed0-7555-4794-8db0-4102d92b6a11","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Aodos___39a19ed0-7555-4794-8db0-4102d92b6a11 into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Eyao___5addd21c-7478-4275-b2bd-71ad6679e53f on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Eyao___5addd21c-7478-4275-b2bd-71ad6679e53f","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Eyao___5addd21c-7478-4275-b2bd-71ad6679e53f into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Jyonao___8d4c01c7-5df1-456c-bc7c-ca86edd6691a on to {"row":9,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Jyonao___8d4c01c7-5df1-456c-bc7c-ca86edd6691a","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Jyonao___8d4c01c7-5df1-456c-bc7c-ca86edd6691a into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Kubyli___02ece932-a309-4e04-a159-76b0d7865ea0 on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Kubyli___02ece932-a309-4e04-a159-76b0d7865ea0","layers":{"empty":false},"total_elevation":10}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Kubyli___02ece932-a309-4e04-a159-76b0d7865ea0 into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Hisyy___e78a53c7-a7ff-433a-b2aa-4e18e18a8723 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Hisyy___e78a53c7-a7ff-433a-b2aa-4e18e18a8723","layers":{"empty":false},"total_elevation":9}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Hisyy___e78a53c7-a7ff-433a-b2aa-4e18e18a8723 into queue
+[2025-06-02 23:12:50] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Viwol___bedec999-8367-486b-8da9-3647a5fae69b on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Viwol___bedec999-8367-486b-8da9-3647a5fae69b","layers":{"empty":false},"total_elevation":8}.
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Viwol___bedec999-8367-486b-8da9-3647a5fae69b into queue
+[2025-06-02 23:12:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-02 23:12:50] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-02 23:12:51] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-02 23:12:51] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-02 23:12:51] [INFO] [FontPool] Started initializing FontPool
+[2025-06-02 23:12:51] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-02 23:12:51] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:51] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06
+[2025-06-02 23:12:51] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06
+[2025-06-02 23:12:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:12:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:12:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-02 23:12:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-02 23:12:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:12:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-02 23:12:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-02 23:12:52] [INFO] [VisualsSystem] Finished creating blurred background after 0.4843851625919342 seconds
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06
+[2025-06-02 23:12:52] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06
+[2025-06-02 23:12:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-02 23:12:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-02 23:12:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-02 23:12:53] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_0___1a5e117b-3463-4d7b-b5fb-b298bd78d7b4
+[2025-06-02 23:12:53] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-02 23:12:53] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement range to 8 for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 9] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement range to 8 for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 9] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 8] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 8] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 8] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 8] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 7] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 7] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 7] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 7] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 6] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 6] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [9, 6] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [9, 6] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [9, 5] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [9, 5] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 5] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 5] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 4] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 4] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 3] for Gaglo
+[2025-06-02 23:12:53] [INFO] [MovementSystem] Updated movement path from [6, 0] to [8, 3] for Gaglo
+[2025-06-02 23:12:54] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 1] for Gaglo
+[2025-06-02 23:12:54] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 1] for Gaglo
+[2025-06-02 23:12:54] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 0] for Gaglo
+[2025-06-02 23:12:54] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 0] for Gaglo
+[2025-06-02 23:12:54] [INFO] [MovementSystem] Updated movement path from [6, 0] to [4, 0] for Gaglo
+[2025-06-02 23:12:54] [INFO] [MovementSystem] Updated movement path from [6, 0] to [4, 0] for Gaglo
+[2025-06-02 23:12:54] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_1___2957e405-adb1-46bd-9ae2-edfc2cc418de
+[2025-06-02 23:12:54] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_1___2957e405-adb1-46bd-9ae2-edfc2cc418de
+[2025-06-02 23:12:54] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Nuvy___c4e66a68-1672-4096-85be-2242f0afe895
+[2025-06-02 23:12:54] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Nuvy___c4e66a68-1672-4096-85be-2242f0afe895
+[2025-06-02 23:12:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:12:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Nuvy
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [3, 0] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [3, 0] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [4, 1] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [4, 1] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [4, 2] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [4, 2] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 2] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 2] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 4] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [5, 4] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 5] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 5] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 6] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 6] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 7] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 7] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 7] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 7] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 5] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 5] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [7, 4] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 3] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 3] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 2] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 2] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 1] for Gaglo
+[2025-06-02 23:12:55] [INFO] [MovementSystem] Updated movement path from [6, 0] to [6, 1] for Gaglo
+[2025-06-02 23:12:57] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06","layers":{"empty":false},"total_elevation":7}.
+[2025-06-02 23:12:57] [INFO] [MovementSystem] Moved from [6, 0] to [6, 1]
+[2025-06-02 23:12:57] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06
+[2025-06-02 23:12:57] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Gaglo___de33f750-539a-4aa0-a976-645b3c41ed06
+[2025-06-02 23:12:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-02 23:12:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Gaglo
+[2025-06-02 23:12:57] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___1013bad5-541f-46ef-b5e8-bed8717fe66a
+[2025-06-02 23:12:57] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_1___1013bad5-541f-46ef-b5e8-bed8717fe66a
+[2025-06-02 23:12:57] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___1013bad5-541f-46ef-b5e8-bed8717fe66a
+[2025-06-02 23:12:57] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:12:57] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-02 23:12:58] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-02 23:12:58] [INFO] [GameModel] Updated area of sight for Gaglo, viewing 5 tiles
+[2025-06-02 23:12:58] [INFO] [GameModel] Updated line of sight for Gaglo, viewing 3 tiles
+[2025-06-02 23:12:58] [INFO] [GameModel] Updated area of sight for Gaglo, viewing 1 tiles
+[2025-06-02 23:12:58] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-02 23:12:58] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

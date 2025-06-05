@@ -1,0 +1,250 @@
+[2025-05-28 01:10:09] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-28 01:10:09] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-28 01:10:09] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-28 01:10:09] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-28 01:10:09] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-28 01:10:09] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-28 01:10:09] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-28 01:10:09] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-28 01:10:09] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-28 01:10:09] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-28 01:10:09] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-28 01:10:09] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-28 01:10:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-28 01:10:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Nuqee___7095d21a-7e3b-4be6-933e-0c3d0efbd36b on to {"row":0,"column":0,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Nuqee___7095d21a-7e3b-4be6-933e-0c3d0efbd36b","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Nuqee___7095d21a-7e3b-4be6-933e-0c3d0efbd36b into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Borey___868552d2-1563-4b9d-8c2f-bbd105137836 on to {"row":7,"column":1,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Borey___868552d2-1563-4b9d-8c2f-bbd105137836","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Borey___868552d2-1563-4b9d-8c2f-bbd105137836 into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b on to {"row":7,"column":0,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Wahoe___a71836ac-990f-4516-b4f2-16062e5e739d on to {"row":4,"column":1,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Wahoe___a71836ac-990f-4516-b4f2-16062e5e739d","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Wahoe___a71836ac-990f-4516-b4f2-16062e5e739d into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Eocg___eb08f31e-2416-45c4-b2c3-86933224da7e on to {"row":0,"column":1,"base_elevation":-5,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Eocg___eb08f31e-2416-45c4-b2c3-86933224da7e","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Eocg___eb08f31e-2416-45c4-b2c3-86933224da7e into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Doyasj___60aa4c14-4078-4466-bafa-0825a76bc699 on to {"row":4,"column":10,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Doyasj___60aa4c14-4078-4466-bafa-0825a76bc699","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Doyasj___60aa4c14-4078-4466-bafa-0825a76bc699 into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Mozve___8ac0fb44-ec82-4125-a1bd-4b5e0d5df661 on to {"row":4,"column":11,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Mozve___8ac0fb44-ec82-4125-a1bd-4b5e0d5df661","layers":{"empty":false},"total_elevation":4}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Mozve___8ac0fb44-ec82-4125-a1bd-4b5e0d5df661 into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Yaree___cb39bd71-8ba1-4755-af3c-9ad5c958036d on to {"row":1,"column":11,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Yaree___cb39bd71-8ba1-4755-af3c-9ad5c958036d","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Yaree___cb39bd71-8ba1-4755-af3c-9ad5c958036d into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Juyrii___87753c6f-4027-4ded-9823-cd83bff475ca on to {"row":0,"column":10,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Juyrii___87753c6f-4027-4ded-9823-cd83bff475ca","layers":{"empty":false},"total_elevation":3}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Juyrii___87753c6f-4027-4ded-9823-cd83bff475ca into queue
+[2025-05-28 01:10:10] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Koche___cac9dc7f-3df6-4fa0-8e12-ffd476011152 on to {"row":5,"column":11,"base_elevation":-5,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Koche___cac9dc7f-3df6-4fa0-8e12-ffd476011152","layers":{"empty":false},"total_elevation":5}.
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Koche___cac9dc7f-3df6-4fa0-8e12-ffd476011152 into queue
+[2025-05-28 01:10:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-28 01:10:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-28 01:10:10] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-28 01:10:10] [INFO] [FontPool] Started initializing FontPool
+[2025-05-28 01:10:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-28 01:10:10] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:10] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-28 01:10:10] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:10] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 01:10:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 01:10:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-28 01:10:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-28 01:10:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 01:10:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-28 01:10:10] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-28 01:10:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.4911441206932068 seconds
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 01:10:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 01:10:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-28 01:10:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-28 01:10:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-28 01:10:12] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_0___861b6932-7f43-45ac-8a71-42ad570141be
+[2025-05-28 01:10:12] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_0___861b6932-7f43-45ac-8a71-42ad570141be
+[2025-05-28 01:10:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xijz___366255f1-5950-4ed3-a6bf-a43f9faac14b
+[2025-05-28 01:10:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-28 01:10:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Xijz
+[2025-05-28 01:10:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_0___861b6932-7f43-45ac-8a71-42ad570141be
+[2025-05-28 01:10:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:14] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-28 01:10:14] [INFO] [AbilitySystem] Xijz is planning to use air_attack on null
+[2025-05-28 01:10:14] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:14] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 0 tiles
+[2025-05-28 01:10:14] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 0 tiles
+[2025-05-28 01:10:14] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:14] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:14] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:14] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:14] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:14] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [7, 2]
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 2 tiles
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 4 tiles
+[2025-05-28 01:10:15] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [6, 2]
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 2 tiles
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:15] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [6, 1]
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 3 tiles
+[2025-05-28 01:10:15] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:15] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [6, 2]
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 2 tiles
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [5, 2]
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [6, 2]
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 2 tiles
+[2025-05-28 01:10:16] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:16] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:17] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [6, 1]
+[2025-05-28 01:10:17] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 3 tiles
+[2025-05-28 01:10:17] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 5 tiles
+[2025-05-28 01:10:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:17] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:17] [INFO] [AbilitySystem] Xijz is planning to use air_attack on [6, 0]
+[2025-05-28 01:10:17] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 2 tiles
+[2025-05-28 01:10:17] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 4 tiles
+[2025-05-28 01:10:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-28 01:10:18] [INFO] [AbilitySystem] Xijz is planning to use air_attack on null
+[2025-05-28 01:10:18] [INFO] [AbilitySystem] Updated line of sight for Xijz, viewing 0 tiles
+[2025-05-28 01:10:18] [INFO] [AbilitySystem] Updated area of sight for Xijz, viewing 0 tiles
+[2025-05-28 01:10:18] [INFO] [AbilityDamageReport] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Started constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Finished constructing damage mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Started constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [CombatSystem] Finished constructing cost mappings for Xijz to use air_attack
+[2025-05-28 01:10:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

@@ -1,0 +1,1522 @@
+[2025-05-26 23:14:21] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-26 23:14:21] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-26 23:14:22] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-26 23:14:22] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-26 23:14:22] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-26 23:14:22] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-26 23:14:22] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-26 23:14:22] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-26 23:14:22] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-26 23:14:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-26 23:14:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-26 23:14:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-26 23:14:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-26 23:14:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Gorlia___4066128c-2585-4a07-9abb-a76e0c338943 on to {"row":3,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Gorlia___4066128c-2585-4a07-9abb-a76e0c338943","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Gorlia___4066128c-2585-4a07-9abb-a76e0c338943 into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Nedltf___0c81e5ea-a924-4bdb-994a-c1720e5a823d on to {"row":3,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Nedltf___0c81e5ea-a924-4bdb-994a-c1720e5a823d","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Nedltf___0c81e5ea-a924-4bdb-994a-c1720e5a823d into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Huxyi___1ac2eed4-35d4-4912-8ec9-3251dad30adc on to {"row":7,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Huxyi___1ac2eed4-35d4-4912-8ec9-3251dad30adc","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Huxyi___1ac2eed4-35d4-4912-8ec9-3251dad30adc into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Iimse___44b826b2-35c6-4567-9649-965900c339d8 on to {"row":1,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Iimse___44b826b2-35c6-4567-9649-965900c339d8","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Iimse___44b826b2-35c6-4567-9649-965900c339d8 into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Putbvo___9139a3a4-0593-4154-b8f5-5dbf46f04768 on to {"row":0,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Putbvo___9139a3a4-0593-4154-b8f5-5dbf46f04768","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Putbvo___9139a3a4-0593-4154-b8f5-5dbf46f04768 into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Piza___4460d1a5-23cb-43e5-8851-3b233fbf10f8 on to {"row":5,"column":11,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Piza___4460d1a5-23cb-43e5-8851-3b233fbf10f8","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Piza___4460d1a5-23cb-43e5-8851-3b233fbf10f8 into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Mafa___b42d1b7b-981c-480f-bda8-121bbc10b255 on to {"row":3,"column":11,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Mafa___b42d1b7b-981c-480f-bda8-121bbc10b255","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Mafa___b42d1b7b-981c-480f-bda8-121bbc10b255 into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Eeoax___7a106e21-5625-4979-8ca0-0028e62a9f8a on to {"row":3,"column":10,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Eeoax___7a106e21-5625-4979-8ca0-0028e62a9f8a","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Eeoax___7a106e21-5625-4979-8ca0-0028e62a9f8a into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Oora___78d57ae4-3350-4548-a712-8919db67cdec on to {"row":6,"column":10,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Oora___78d57ae4-3350-4548-a712-8919db67cdec","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Oora___78d57ae4-3350-4548-a712-8919db67cdec into queue
+[2025-05-26 23:14:25] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Tode___79489e6a-a840-420a-87e6-89aaf95bdba9 on to {"row":4,"column":10,"base_elevation":-3,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Tode___79489e6a-a840-420a-87e6-89aaf95bdba9","layers":{"empty":false},"total_elevation":1}.
+[2025-05-26 23:14:25] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Tode___79489e6a-a840-420a-87e6-89aaf95bdba9 into queue
+[2025-05-26 23:14:25] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-26 23:14:26] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-26 23:14:26] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-26 23:14:26] [INFO] [FontPool] Started initializing FontPool
+[2025-05-26 23:14:26] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-26 23:14:26] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.01662345975637436 seconds
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.373329717665911E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.629169802181423E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.652090232819319E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.652920274063945E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.365409888327122E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.375419907271862E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.916670197620988E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.338749710470438E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.297089857980609E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.741249769926071E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.022080196999013E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.77332975808531E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.817089742980897E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.578330019488931E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.179169868119061E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.294160266406834E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.33792020380497E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.621669745072722E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.503330030478537E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.619170260615647E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.466250004246831E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.384170217439532E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.974160158075392E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.789999850094318E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.506249774247408E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.145000224933028E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.134170107543468E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.479590130969882E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.171659915708005E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.075419903732836E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.861659883521497E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.219170125201344E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.751660210080445E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.421249756589532E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.355419849976897E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0011948749888688326 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0011276659788563848 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0013142080279067159 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0011542909778654575 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.001149917021393776 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0013771250378340483 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0012414170196279883 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.012499845586717E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.897919858805835E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.502919713966548E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.055830210447311E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.905000191181898E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.234580068849027E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.571250269189477E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.446249851956964E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.29084010142833E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.162089994177222E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.739579988177866E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8766699940897524E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.303329766727984E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.220000261440873E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.014999817125499E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.176669849082828E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.302089896053076E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.542920018546283E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.293330225162208E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.358749862760305E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.169159896671772E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.937920068390667E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.400839774869382E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.226659752428532E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.103750249370933E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.200830197893083E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.277919794432819E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.942920106463134E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.754579953849316E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.280000088736415E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.230410024523735E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.05541979894042E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.768749979324639E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.313329795375466E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.671249866485596E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.880839889869094E-4 seconds
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:26] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.388750091195107E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.465829792432487E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.178329979069531E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.042089710012078E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.152910063974559E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0010376659920439124 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0011767919640988111 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0010590000310912728 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.720829940401018E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.432500038295984E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.314169779419899E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.685830255970359E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.390420068986714E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.231670267879963E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.932089989073575E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.430420278571546E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.43624977581203E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.157910054549575E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.517079844139516E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.196669953875244E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.754579858854413E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.955829936079681E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.457919953390956E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.088339771144092E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.20667012501508E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.162910187616944E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.619169726036489E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.356249796226621E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.61791006475687E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.617910159751773E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.592919817194343E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.643339875154197E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.465420010499656E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.347079808823764E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.660419796593487E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.377080037258565E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.229589973576367E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.47332994453609E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.549169775098562E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.576249772682786E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.839579971507192E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.343750283122063E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.256250198930502E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.003750022500753E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.552920094691217E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.325829890556633E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.275000050663948E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.098339799791574E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.489999941550195E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.702080136165023E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.117500015534461E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.752500241622329E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.601249915547669E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.110839942470193E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.242080173455179E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.792909746058285E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.835840271785855E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.249159971252084E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0010461669880896807 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0012580830371007323 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.001300874981097877 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.001163249951787293 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 9.406669996678829E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.187500013969839E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.117500015534461E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.664170068688691E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.874999915249646E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.577499978244305E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.437079817056656E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.521249840967357E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.198749713599682E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.282909842208028E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.572499940171838E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.238329806365073E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.824579904787242E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.647499976679683E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.097080233506858E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.775829824618995E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.817079847678542E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.146670202724636E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0012113749980926514 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.73333993088454E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.366249872371554E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.467080045491457E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.870000120718032E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.399169749580324E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.526249926537275E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.977079854346812E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.698340246453881E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.698329769074917E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.458749947138131E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.012910162098706E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.872499896213412E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.465000285767019E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.078329752199352E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.662500043399632E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.254580221138895E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.482499836944044E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.877080257050693E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.711669800803065E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.472920067608356E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.660000024363399E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.609170184470713E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.219170172698796E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.52915972750634E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.572920246981084E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.689169771969318E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.832500221207738E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.852910155430436E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.782499840483069E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.37958010379225E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.391250062733889E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.564159994013608E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.50790985673666E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.324999801814556E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.631669773720205E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.287089734338224E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.347920232452452E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.631669773720205E-4 seconds
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:27] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.006250041536987E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.766249960288405E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.088339723646641E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.719169857911766E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.56709012016654E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.51624980289489E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.466250004246831E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.0374999884516E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.274590221233666E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.051249754615128E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.223330274224281E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.805420223623514E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.322080105543137E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.019169766455889E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.979579873383045E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.537500255741179E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.19416993483901E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.532080005854368E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.139579927548766E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.569169879890978E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.8587500350549817E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.780000017490238E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.609170184470713E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.167499766685069E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.799159989692271E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.588749820366502E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.499169976450503E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.180420216172934E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.215419853106141E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.135409978218377E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.029579767026007E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 9.904999751597643E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.482920191250741E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0012182500213384628 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0011146250180900097 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0011425829725340009 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.562909740954638E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.907500210218132E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.864590104669333E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.828330224379897E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.202919805422425E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0010347500210627913 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.95709022693336E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.178329979069531E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.932499771006405E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.934159853495657E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.476250080391765E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.385419983416796E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.387500277720392E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.8787502348423E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.305000279098749E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.960839916951954E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.078329799696803E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.964169929735363E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.412499886006117E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.510419723577797E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.133749800734222E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0018613750580698252 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7404099819250405E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.497909929137677E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.4287499147467315E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.37334000505507E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.97874998068437E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3725000210106373E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.680830075405538E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.6308398810215294E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8170899420510978E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3099999816622585E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.848329895641655E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3499999952036887E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.3579199225641787E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0083300478290766E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3495900677517056E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4691701401025057E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8520800222177058E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8170899420510978E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.5949999690055847E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1395800285972655E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.9175000488758087E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.031659871339798E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.833330072462559E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.894169883802533E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.876250073313713E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.2462499802932143E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.8741700700484216E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.843329857569188E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7658301405608654E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.7175001236610115E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.192090127617121E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.643750191666186E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.182920140214264E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.942499799653888E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0291700386442244E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.5604100665077567E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.147089981008321E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4229199334513396E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.913330099545419E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1141600154805928E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.952920040115714E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.321250067325309E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8762500258162618E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.9604200972244143E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.66040995484218E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4654099252074957E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2004199854563922E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.567080129869282E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.1450000824406743E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.5979100610129535E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.5966699942946434E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.871250130236149E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.922500134445727E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 9.803749853745103E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.657909983303398E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.832499734126031E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.8570800572633743E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.422499914653599E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.54832993960008E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.9075000202283263E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1187499805819243E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0545800109393895E-4 seconds
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:28] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.666249929461628E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.695840084925294E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.6883400278165936E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.3912499202415347E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.939580103382468E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.670419926289469E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.5049998657777905E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.106250078417361E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4245800159405917E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7245801175013185E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.3283300581388175E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.637910122051835E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.6704100309871137E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.274579743854702E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.6216699411161244E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.8245801008306444E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.40292011667043E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.8766701365821064E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.743749788962305E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.725840069819242E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.49459015019238E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1845799346920103E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.5433299015276134E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.117920132353902E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3424999380949885E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.9624998569488525E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.602909855544567E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.3079201239161193E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0795900491066277E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.9962500664405525E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.698749885894358E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1475000539794564E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.6237498968839645E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0858299578540027E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.477079979144037E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.347919944440946E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.499170077499002E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.655420103110373E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.5320801069028676E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.4508301177993417E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2375000116880983E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.891670007258654E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.899160074070096E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.924999909941107E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.704999980982393E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.7445800262503326E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.090410027652979E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3308300296775997E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1179199393372983E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1145799837540835E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.9683300342876464E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.900000061141327E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8383300630375743E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.777500001480803E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.682910126168281E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1683299564756453E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.834160113707185E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.136669984087348E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.378329856786877E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.2062500142492354E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.494579815305769E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 9.261249797418714E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0016814999980852008 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.001453583943657577 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0015021669678390026 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.40833003167063E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.810000097379088E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.380410097539425E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.187090232037008E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.760419928468764E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.495829973369837E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.462910096161067E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.17958018463105E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.495420238934457E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.448340184055269E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.729590240865946E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.478329887613654E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.557499825954437E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.639999872073531E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.677079945802689E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.070840172469616E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.338329985737801E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.422909839078784E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.968749755993485E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.783329929225147E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.002910133451223E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.762919995002449E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.377910078503191E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.068329723551869E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.163329817354679E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.10666985064745E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.963339935988188E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.525830201804638E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.385829717852175E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.280419765971601E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.94375014770776E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.727500003762543E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.592909874394536E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.04583993460983E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.112079718150198E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.979170043952763E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.975419724360108E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.411250262521207E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.543340230360627E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.395410164259374E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.036660004407167E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.498750251717865E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.455829716287553E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.779580096714199E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.682910025119781E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.873749709688127E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.071250049397349E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.074580062180758E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.475829868577421E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.305829785764217E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.247499888762832E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 9.126659715548158E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0013094589812681079 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 9.781250264495611E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.990409990772605E-4 seconds
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:29] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.083340267650783E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.568750250153244E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.810000049881637E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.435000104829669E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.428749766200781E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.485420162789524E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.920410039834678E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.386669749394059E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.728750256821513E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.357079837471247E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.641669944860041E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.292500231415033E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.200000061653554E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.186250247992575E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.171669858507812E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.699589964933693E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.295000250451267E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.962079740129411E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.239159942604601E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.314580143429339E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.267500041052699E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.328750168904662E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.541250040754676E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.66000007186085E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.702920120209455E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.790420109406114E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.149589898996055E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.687910063192248E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.502079777419567E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.829579990357161E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.094999891705811E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.252499879337847E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.66000007186085E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.402499904856086E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.577500025741756E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.669579888693988E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.960000027902424E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.81874982547015E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.795420242473483E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.002089987508953E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.191670010797679E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.566249744035304E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 8.290840196423233E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.737500127404928E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.003129374934360385 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6633399354759604E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.5504199331626296E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.477499994914979E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.498330140952021E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.827499993145466E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.770000137388706E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.667499938979745E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3916599457152188E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2429099772125483E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7337498613633215E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3533300554845482E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.429999924264848E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3962500563357025E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4987501092255116E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3950000468175858E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.767500118352473E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2354199609253556E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1595800353679806E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4058300186879933E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1345799905247986E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.864580019377172E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 9.375420049764216E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.774579963646829E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.7616701340302825E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.637500096578151E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7237500762566924E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.4054200407117605E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.886249709874392E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.18417010223493E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.293750050943345E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.894159988500178E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.9791699489578605E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0516699189320207E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7749998844228685E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2200000239536166E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.227920096833259E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0229100482538342E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6083300579339266E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.960829879157245E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3950000468175858E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.1904200073331594E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.842080139089376E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0541599951684475E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.905830042436719E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.78625006810762E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.2366698724217713E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3249999503605068E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.189579874742776E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.317080070497468E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.059580001514405E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0375001369975507E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.997499930439517E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.569170028436929E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.321250067325309E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1962499886285514E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.54084006883204E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.95750010991469E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.8329199994914234E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.764590026345104E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.3554199035279453E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.9404100496321917E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1970800298731774E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.773340092971921E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7895899256691337E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.460000105202198E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.3229100042954087E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.246670046588406E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2158300271257758E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.3208300010301173E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.854999911505729E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.570830110926181E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2491700656246394E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0212500132620335E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.768749934853986E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.7600000137463212E-4 seconds
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:30] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0037499780301005E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.136249968316406E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.067090001422912E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.1516700508072972E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.8995799948461354E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.847500145435333E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.705410006456077E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.374159957980737E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0683301156386733E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7083398890681565E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.435419930610806E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.473339893389493E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.510409976821393E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.9762499616481364E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.356670011067763E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.233749885112047E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.517500008456409E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.878340019378811E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.2900000223889947E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.4245901042595506E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.857910003513098E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.250419977121055E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.37458007177338E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0033400980755687E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.939589903689921E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0604199380613863E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.344999957131222E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0333299471531063E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.291670000180602E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.9525000718422234E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.3420900581404567E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7395901270210743E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.460000105202198E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.072920080740005E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.1458400189876556E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.827499993145466E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8741599342320114E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.167910035699606E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.000840079039335E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4666599347256124E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4295899493154138E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.1516700983047485E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.0195899307727814E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.623329928610474E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.6116700610145926E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.8533401200547814E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.089579986408353E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.301250108052045E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.5166600719094276E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.212919935118407E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.512499922886491E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.530000056140125E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.6620799326337874E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.4850000045262277E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.210419963579625E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.6362499920651317E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 3.223750100005418E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.0812499860767275E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.2124999668449163E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.7108300128020346E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.667499938979745E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.247920148074627E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.680419901385903E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.099159993231297E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.085829809308052E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.057500140741467E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.307919975370169E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.465829792432487E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.607919931411743E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.728749722242355E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.965420277789235E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.215409957803786E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.674160202033818E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.148330237716436E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 4.939999780617654E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.624999805353582E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.977500113658607E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.075000273995101E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.167080136947334E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.091669831424952E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.083750097081065E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.749589811079204E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.92084024194628E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.704169791191816E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.181659991852939E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.817500106990337E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.493330001831055E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.885420250706375E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.455410039052367E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.96374976541847E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.267499993555248E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.789169808849692E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.386659806594253E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.174580194056034E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.36290991678834E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 6.88791973516345E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 5.792080191895366E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 7.479590130969882E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.004068249836564064 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.017499937210232E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4241600001696497E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.3600000238511711E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6495799354743212E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6724999295547605E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 0.0020320420153439045 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.669589983066544E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5666699619032443E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6337500710505992E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.571669999975711E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5170799451880157E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5199999324977398E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.544580009067431E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.3662500714417547E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.7662500613369048E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5454199456144124E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.2833399523515254E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5966600039973855E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5258300118148327E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.2791699555236846E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4945899602025747E-4 seconds
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:31] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6558299830649048E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.584169949637726E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.3433299318421632E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5624999650754035E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5308399451896548E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.111250021494925E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5137500304263085E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.728750066831708E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5350000467151403E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6066699754446745E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.7600000137463212E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4904100680723786E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6445800429210067E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5375000657513738E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.871249987743795E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5770900063216686E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4074999489821494E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5941700257826596E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4474999625235796E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.3770800433121622E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6520799545105547E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.631659979466349E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5395799709949642E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4375000318977982E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4162500156089664E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.4370800636243075E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.1795799946412444E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.488330017309636E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.229170011356473E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.401250046910718E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.1824999819509685E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.3625000428874046E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.8333300249651074E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6108299314510077E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.1824999819509685E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 2.8641699464060366E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.5620799968019128E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.3662500714417547E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6312500520143658E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.7491700418759137E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.569580053910613E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.6087500262074172E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Unable to finished creating blurred background after 1.441670028725639E-4 seconds
+[2025-05-26 23:14:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-26 23:14:32] [INFO] 

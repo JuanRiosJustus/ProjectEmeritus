@@ -1,0 +1,630 @@
+[2025-06-05 02:22:11] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 02:22:11] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 02:22:11] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 02:22:11] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 02:22:11] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 02:22:11] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 02:22:11] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 02:22:11] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 02:22:11] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 02:22:11] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 02:22:11] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 02:22:11] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 02:22:11] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 02:22:11] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Kouy___ebc6d4fe-405d-4f8a-b6a1-f294ce1b1f59 on to {"row":8,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Kouy___ebc6d4fe-405d-4f8a-b6a1-f294ce1b1f59","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Kouy___ebc6d4fe-405d-4f8a-b6a1-f294ce1b1f59 into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6 into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Oyuoa___1faaae56-4ed2-498d-b47f-84c726a5a08e on to {"row":6,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Oyuoa___1faaae56-4ed2-498d-b47f-84c726a5a08e","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Oyuoa___1faaae56-4ed2-498d-b47f-84c726a5a08e into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34 on to {"row":9,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34 into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721 on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721 into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Lonii___49e87e65-b24f-4177-8b63-bf899521c181 on to {"row":7,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Lonii___49e87e65-b24f-4177-8b63-bf899521c181","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Lonii___49e87e65-b24f-4177-8b63-bf899521c181 into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Aunyl___0cf2be4a-a364-4292-beaf-e73efb68d239 on to {"row":1,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Aunyl___0cf2be4a-a364-4292-beaf-e73efb68d239","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Aunyl___0cf2be4a-a364-4292-beaf-e73efb68d239 into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Zafa___9c9f6565-c65d-4704-a235-34185b90eafa on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Zafa___9c9f6565-c65d-4704-a235-34185b90eafa","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Zafa___9c9f6565-c65d-4704-a235-34185b90eafa into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Gevji___e3861778-4498-4991-81cf-d600bb6dd078 on to {"row":0,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Gevji___e3861778-4498-4991-81cf-d600bb6dd078","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Gevji___e3861778-4498-4991-81cf-d600bb6dd078 into queue
+[2025-06-05 02:22:12] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Oanbsu___8522576b-ec9b-4605-bf25-5b1e7b83f211 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Oanbsu___8522576b-ec9b-4605-bf25-5b1e7b83f211","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Oanbsu___8522576b-ec9b-4605-bf25-5b1e7b83f211 into queue
+[2025-06-05 02:22:12] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 02:22:12] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 02:22:12] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 02:22:12] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 02:22:12] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 02:22:12] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:12] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 02:22:12] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 02:22:12] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6
+[2025-06-05 02:22:12] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6
+[2025-06-05 02:22:12] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:22:12] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:22:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:22:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:22:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:22:12] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 02:22:12] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 02:22:13] [INFO] [VisualsSystem] Finished creating blurred background after 0.4834132790565491 seconds
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilityPanel] Updating ability selection for UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6
+[2025-06-05 02:22:13] [INFO] [AbilityPanel] Finished ability selection for UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6
+[2025-06-05 02:22:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:22:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:22:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:22:14] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_1___3a3983b6-979c-4aee-9cbb-8cab0177c3b6
+[2025-06-05 02:22:14] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:22:14] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:22:16] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6 on to {"row":5,"column":2,"base_elevation":0,"unit":"UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:22:16] [INFO] [GameModel] Moved from [4, 1] to [5, 2]
+[2025-06-05 02:22:16] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6
+[2025-06-05 02:22:16] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Zalqe___f05c3108-9252-4c5b-b19e-9c4118ed1ea6
+[2025-06-05 02:22:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:22:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Zalqe
+[2025-06-05 02:22:16] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_2___e950a27e-cf1d-458c-9e6d-3293d5534fee
+[2025-06-05 02:22:16] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_2___e950a27e-cf1d-458c-9e6d-3293d5534fee
+[2025-06-05 02:22:18] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721
+[2025-06-05 02:22:18] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721
+[2025-06-05 02:22:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:22:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:22:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:22:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:22:18] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721
+[2025-06-05 02:22:18] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721
+[2025-06-05 02:22:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:22:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Qeaue
+[2025-06-05 02:22:18] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:18] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:19] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:19] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:22:19] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:22:20] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721 on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Qeaue___7874bd8d-5395-459e-af74-b75922ca4721","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:22:20] [INFO] [GameModel] Moved from [0, 0] to [2, 0]
+[2025-06-05 02:22:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:22:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Qeaue
+[2025-06-05 02:22:20] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_0___ae3d363a-93d2-4023-920b-ad0ef3290d0c
+[2025-06-05 02:22:20] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_0___ae3d363a-93d2-4023-920b-ad0ef3290d0c
+[2025-06-05 02:22:21] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34
+[2025-06-05 02:22:21] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34
+[2025-06-05 02:22:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:22:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:22:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:22:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:22:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34
+[2025-06-05 02:22:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34
+[2025-06-05 02:22:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:22:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Zady
+[2025-06-05 02:22:21] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_1___d7fd6360-7e5a-4c50-86a7-375c266033dc
+[2025-06-05 02:22:21] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_9___COLUMN_1___d7fd6360-7e5a-4c50-86a7-375c266033dc
+[2025-06-05 02:22:23] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_1___d7fd6360-7e5a-4c50-86a7-375c266033dc
+[2025-06-05 02:22:23] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:22:23] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:22:23] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34 on to {"row":8,"column":2,"base_elevation":0,"unit":"UNIT_air_dragon___NICKNAME_Zady___6785c1ae-fd4c-49ee-a685-71c206001f34","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:22:23] [INFO] [GameModel] Moved from [9, 1] to [8, 2]
+[2025-06-05 02:22:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:22:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Zady
+[2025-06-05 02:22:24] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:24] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:24] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:25] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-05 02:22:25] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:25] [INFO] [GameModel] Updated line of sight for Zady, 6 tiles
+[2025-06-05 02:22:25] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:25] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_4___e88bf02e-6df6-4b32-9f73-efe0800a414a
+[2025-06-05 02:22:25] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:25] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:25] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:25] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:25] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:25] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:25] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_4___c52e4fc5-38e7-48aa-81a5-79e1b907b457
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_2___9b52b20d-0fd1-4532-b25e-99ff7a48c872
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_1___5a9079b2-ef38-41ae-b72d-8d80f868ead9
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zady to use test_slash
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_1___d806bffb-dfca-4e9e-984d-986da6146dda
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_0___8b126a05-ad51-41f8-a387-ed8c71d947b9
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_1___5a9079b2-ef38-41ae-b72d-8d80f868ead9
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_1___5a9079b2-ef38-41ae-b72d-8d80f868ead9
+[2025-06-05 02:22:26] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:27] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:27] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:27] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:27] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_1___5a9079b2-ef38-41ae-b72d-8d80f868ead9
+[2025-06-05 02:22:27] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_1___5a9079b2-ef38-41ae-b72d-8d80f868ead9
+[2025-06-05 02:22:31] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:31] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:31] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:31] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:31] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:31] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_0___7635ee6c-73f1-4ea7-ba02-ad608e0eca08
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_0___7635ee6c-73f1-4ea7-ba02-ad608e0eca08
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_1___5a9079b2-ef38-41ae-b72d-8d80f868ead9
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_1___5a9079b2-ef38-41ae-b72d-8d80f868ead9
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:33] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zady to use test_slash
+[2025-06-05 02:22:33] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zady to use test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_3___ccd76532-79d8-4c76-91da-1e75ff5b9287
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_3___ccd76532-79d8-4c76-91da-1e75ff5b9287
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_3___87525611-7105-46f2-a11c-964b556ce879
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_3___87525611-7105-46f2-a11c-964b556ce879
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_4___2956d2c3-bf1c-44d2-b930-140fa0d05798
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_4___2956d2c3-bf1c-44d2-b930-140fa0d05798
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_4___41dd2a4f-e9a4-4e16-b2e6-ce558866bd45
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_4___41dd2a4f-e9a4-4e16-b2e6-ce558866bd45
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 6 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_5___1a825dc0-9ec2-4318-b68c-452491f447bf
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 6 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_5___1a825dc0-9ec2-4318-b68c-452491f447bf
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_5___183c809f-4839-4c6e-b503-961298e591ac
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_5___183c809f-4839-4c6e-b503-961298e591ac
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_5___ed59f502-71d2-4abd-9075-2e437f40aa70
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_5___ed59f502-71d2-4abd-9075-2e437f40aa70
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_4___c52e4fc5-38e7-48aa-81a5-79e1b907b457
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_4___c52e4fc5-38e7-48aa-81a5-79e1b907b457
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:33] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_1___d7fd6360-7e5a-4c50-86a7-375c266033dc
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_1___d7fd6360-7e5a-4c50-86a7-375c266033dc
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_0___7635ee6c-73f1-4ea7-ba02-ad608e0eca08
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_0___7635ee6c-73f1-4ea7-ba02-ad608e0eca08
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_0___8b126a05-ad51-41f8-a387-ed8c71d947b9
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:35] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:35] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:35] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_0___b66df6fa-c466-43ca-b828-84845cd10ac3
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_0___b66df6fa-c466-43ca-b828-84845cd10ac3
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_2___ddd32299-970c-4d1c-a687-81420a86828d
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Started constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Zady to use test_slash
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_3___3766b789-9f7d-439d-986d-d30b6b1f0aac
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_9___COLUMN_3___3766b789-9f7d-439d-986d-d30b6b1f0aac
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_3___ccd76532-79d8-4c76-91da-1e75ff5b9287
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated line of sight for Zady, 2 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_3___ccd76532-79d8-4c76-91da-1e75ff5b9287
+[2025-06-05 02:22:37] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_4___988912fa-081e-4478-8044-cee46a8090ff
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 3 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_8___COLUMN_4___988912fa-081e-4478-8044-cee46a8090ff
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_4___2956d2c3-bf1c-44d2-b930-140fa0d05798
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_7___COLUMN_5___183c809f-4839-4c6e-b503-961298e591ac
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 6 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_5___1a825dc0-9ec2-4318-b68c-452491f447bf
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 6 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_5___1a825dc0-9ec2-4318-b68c-452491f447bf
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 7 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_6___ad41def9-e52e-4ee8-96c6-05c746613c14
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated line of sight for Zady, 7 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating target for Zady, ROW_6___COLUMN_6___ad41def9-e52e-4ee8-96c6-05c746613c14
+[2025-06-05 02:22:38] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 7 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_6___7d293367-db1a-4725-a7d5-ed6c8a0b4933
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 7 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_6___7d293367-db1a-4725-a7d5-ed6c8a0b4933
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 9 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_7___98b9cee5-d1c0-46e3-9b9e-517920b319ee
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 9 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_7___98b9cee5-d1c0-46e3-9b9e-517920b319ee
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 7 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_6___7d293367-db1a-4725-a7d5-ed6c8a0b4933
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 7 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_6___7d293367-db1a-4725-a7d5-ed6c8a0b4933
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 6 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_5___COLUMN_4___e88bf02e-6df6-4b32-9f73-efe0800a414a
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of sight for Zady, 5 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated line of sight for Zady, 4 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updated area of effect for Zady, 1 tiles
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating target for Zady, ROW_0___COLUMN_0___32bd6601-88ea-41fc-bf0c-2639650a451e
+[2025-06-05 02:22:39] [INFO] [GameModel] Updating ability for Zady, test_slash
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:22:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

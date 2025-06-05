@@ -1,0 +1,158 @@
+[2025-05-14 08:36:27] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-14 08:36:27] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-14 08:36:27] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-14 08:36:27] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-14 08:36:27] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-14 08:36:27] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-14 08:36:27] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-14 08:36:27] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-14 08:36:27] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-14 08:36:27] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-14 08:36:27] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-14 08:36:27] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-14 08:36:27] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-14 08:36:27] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-14 08:36:27] [INFO] [Component] Setting dragon_Weyj_dda47885-e48c-4df3-b17d-d66fabc41213 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Weyj_dda47885-e48c-4df3-b17d-d66fabc41213","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit dragon_Weyj_dda47885-e48c-4df3-b17d-d66fabc41213 into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting dark_dragon_Puhub_76579ad3-4f8e-4731-baaa-2319ab414e37 on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Puhub_76579ad3-4f8e-4731-baaa-2319ab414e37","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit dark_dragon_Puhub_76579ad3-4f8e-4731-baaa-2319ab414e37 into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting dark_dragon_Yooaie_c6bedfb3-0d51-4f3a-ac48-a7c418bd42ff on to {"row":1,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Yooaie_c6bedfb3-0d51-4f3a-ac48-a7c418bd42ff","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit dark_dragon_Yooaie_c6bedfb3-0d51-4f3a-ac48-a7c418bd42ff into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting light_dragon_Oaoo_c648c4e7-807b-40ec-b86f-0ebca4fca4d6 on to {"row":7,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Oaoo_c648c4e7-807b-40ec-b86f-0ebca4fca4d6","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit light_dragon_Oaoo_c648c4e7-807b-40ec-b86f-0ebca4fca4d6 into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting light_dragon_Xuzuy_56f190f2-a367-418d-b2d1-6b67deed72c9 on to {"row":7,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"light_dragon_Xuzuy_56f190f2-a367-418d-b2d1-6b67deed72c9","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit light_dragon_Xuzuy_56f190f2-a367-418d-b2d1-6b67deed72c9 into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting dragon_Eiit_42894275-bf63-4c4d-b647-43ea31227987 on to {"row":0,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Eiit_42894275-bf63-4c4d-b647-43ea31227987","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit dragon_Eiit_42894275-bf63-4c4d-b647-43ea31227987 into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting fire_dragon_Yiqi_488a95c7-c483-4c70-a900-1ac27babd239 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"fire_dragon_Yiqi_488a95c7-c483-4c70-a900-1ac27babd239","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit fire_dragon_Yiqi_488a95c7-c483-4c70-a900-1ac27babd239 into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting earth_dragon_Hegbna_e5af4d8b-e26d-4b1b-b613-a7e757949718 on to {"row":2,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Hegbna_e5af4d8b-e26d-4b1b-b613-a7e757949718","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit earth_dragon_Hegbna_e5af4d8b-e26d-4b1b-b613-a7e757949718 into queue
+[2025-05-14 08:36:27] [INFO] [Component] Setting water_dragon_Iidugw_17981005-5ad1-4864-83d1-3d1d04d548b9 on to {"row":6,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Iidugw_17981005-5ad1-4864-83d1-3d1d04d548b9","structure":""}.
+[2025-05-14 08:36:27] [INFO] [SpeedQueue] Added unit water_dragon_Iidugw_17981005-5ad1-4864-83d1-3d1d04d548b9 into queue
+[2025-05-14 08:36:27] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-14 08:36:27] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-14 08:36:27] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-14 08:36:27] [INFO] [FontPool] Started initializing FontPool
+[2025-05-14 08:36:27] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-14 08:36:27] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-14 08:36:27] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-14 08:36:28] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-14 08:36:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-14 08:36:28] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-14 08:36:28] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:28] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-14 08:36:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-14 08:36:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-14 08:36:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-14 08:36:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:28] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-14 08:36:28] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-14 08:36:28] [INFO] [VisualsSystem] Finished creating blurred background after 0.4832644462585449 seconds
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:28] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:28] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-14 08:36:28] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-14 08:36:28] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-14 08:36:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-14 08:36:31] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_61e449dc-b05d-4487-ac76-9088324ecbbd
+[2025-05-14 08:36:31] [INFO] [InputHandler] Gliding 1 camera to new tile 5_0_61e449dc-b05d-4487-ac76-9088324ecbbd
+[2025-05-14 08:36:31] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Vakq
+[2025-05-14 08:36:32] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-05-14 08:36:32] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-05-14 08:36:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-14 08:36:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-14 08:36:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-14 08:36:37] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_61e449dc-b05d-4487-ac76-9088324ecbbd
+[2025-05-14 08:36:37] [INFO] [InputHandler] Gliding 1 camera to new tile 5_0_61e449dc-b05d-4487-ac76-9088324ecbbd
+[2025-05-14 08:36:37] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:37] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf
+[2025-05-14 08:36:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Vakq
+[2025-05-14 08:36:40] [INFO] [InputHandler] Gliding 0 camera to new tile 5_0_61e449dc-b05d-4487-ac76-9088324ecbbd
+[2025-05-14 08:36:40] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-05-14 08:36:40] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement range to 7 for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement range to 7 for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 4] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 3] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 3] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [6, 2] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Vakq
+[2025-05-14 08:36:40] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 1] for Vakq
+[2025-05-14 08:36:41] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Vakq
+[2025-05-14 08:36:41] [INFO] [MovementSystem] Updated movement path from [5, 0] to [5, 2] for Vakq
+[2025-05-14 08:36:41] [INFO] [Component] Setting fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf on to {"row":5,"column":2,"height":0,"collider":"","unit":"fire_dragon_Vakq_5e229e9e-b457-4c16-b18a-9bce7a9fd4cf","structure":""}.
+[2025-05-14 08:36:41] [INFO] [MovementSystem] Moved from [5, 0] to [5, 2]
+[2025-05-14 08:36:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-14 08:36:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Vakq
+[2025-05-14 08:36:41] [INFO] [InputHandler] Gliding 0 camera to new tile 5_2_755f7d20-7d9c-4d99-9206-3748a4386c4a
+[2025-05-14 08:36:41] [INFO] [InputHandler] Gliding 1 camera to new tile 5_2_755f7d20-7d9c-4d99-9206-3748a4386c4a

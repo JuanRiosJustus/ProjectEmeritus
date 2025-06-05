@@ -1,0 +1,506 @@
+[2025-06-05 02:34:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 02:34:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 02:34:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 02:34:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 02:34:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 02:34:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 02:34:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 02:34:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 02:34:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 02:34:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 02:34:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 02:34:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 02:34:51] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 02:34:51] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Byko___e97fade4-a147-4853-b11d-f4f898321117 on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Byko___e97fade4-a147-4853-b11d-f4f898321117","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Byko___e97fade4-a147-4853-b11d-f4f898321117 into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Niqm___b3e66c95-2d31-421f-b811-e2bf4ceda024 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Niqm___b3e66c95-2d31-421f-b811-e2bf4ceda024","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Niqm___b3e66c95-2d31-421f-b811-e2bf4ceda024 into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Guvoyo___81b339af-42f6-49f1-a4b6-0726f0522f6c on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Guvoyo___81b339af-42f6-49f1-a4b6-0726f0522f6c","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Guvoyo___81b339af-42f6-49f1-a4b6-0726f0522f6c into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108 on to {"row":7,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108 into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Loplu___f70d33a5-4ab7-4e71-8f55-225adec9b6fc on to {"row":8,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Loplu___f70d33a5-4ab7-4e71-8f55-225adec9b6fc","layers":{"empty":false},"total_elevation":10}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Loplu___f70d33a5-4ab7-4e71-8f55-225adec9b6fc into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Vomu___b68d0072-9321-48c8-84a5-d1f9eeca61d2 on to {"row":0,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Vomu___b68d0072-9321-48c8-84a5-d1f9eeca61d2","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Vomu___b68d0072-9321-48c8-84a5-d1f9eeca61d2 into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Kijeia___e3410d78-ce0b-4855-8e27-665959e4f24f on to {"row":7,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Kijeia___e3410d78-ce0b-4855-8e27-665959e4f24f","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Kijeia___e3410d78-ce0b-4855-8e27-665959e4f24f into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6 on to {"row":3,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6 into queue
+[2025-06-05 02:34:51] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25 into queue
+[2025-06-05 02:34:51] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 02:34:51] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 02:34:51] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 02:34:51] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 02:34:51] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 02:34:51] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:51] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 02:34:51] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 02:34:51] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108
+[2025-06-05 02:34:51] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108
+[2025-06-05 02:34:51] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:34:51] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:34:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:34:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:34:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:34:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 02:34:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 02:34:52] [INFO] [VisualsSystem] Finished creating blurred background after 0.48658472299575806 seconds
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108
+[2025-06-05 02:34:52] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108
+[2025-06-05 02:34:52] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:34:52] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:34:52] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:34:54] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_0___d010c3c7-9464-4423-906d-58ea2951ec45
+[2025-06-05 02:34:54] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:34:54] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated path for Wucuii, 12 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated target tile Wucuii, ROW_6___COLUMN_10___7dcfa011-29a8-49ee-9a1e-464b6e72ead3
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated path for Wucuii, 10 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_9___8664a7f5-c63d-4169-9c70-f2312260dd8d
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated path for Wucuii, 10 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_9___8664a7f5-c63d-4169-9c70-f2312260dd8d
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated path for Wucuii, 10 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated target tile Wucuii, ROW_8___COLUMN_8___5bd5be7a-7a31-4b81-a588-999d38bdbb7c
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated path for Wucuii, 10 tiles
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated target tile Wucuii, ROW_8___COLUMN_8___5bd5be7a-7a31-4b81-a588-999d38bdbb7c
+[2025-06-05 02:34:54] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 9 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_8___COLUMN_7___980013b1-3a90-4d4c-a28d-f5621bb96aaf
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 9 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_8___COLUMN_7___980013b1-3a90-4d4c-a28d-f5621bb96aaf
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_9___COLUMN_7___460066a2-9fa8-4283-a8ce-514885fb2841
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_9___COLUMN_7___460066a2-9fa8-4283-a8ce-514885fb2841
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_0___COLUMN_0___e645b5c2-00ee-4ee8-9930-ac4590c5c766
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_0___COLUMN_0___e645b5c2-00ee-4ee8-9930-ac4590c5c766
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 8 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_9___COLUMN_5___759bcdc7-d030-4f6e-8ca7-e72c2df1e730
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 8 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_9___COLUMN_5___759bcdc7-d030-4f6e-8ca7-e72c2df1e730
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_9___COLUMN_4___f0e4e4f8-9b65-4fe8-91af-1f3f282bdf8d
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_9___COLUMN_4___f0e4e4f8-9b65-4fe8-91af-1f3f282bdf8d
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 6 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_9___COLUMN_3___7e66516b-2244-4616-a2f3-b3bc3ba8f07a
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 5 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_8___COLUMN_3___1e2c0e3c-c9b9-4f40-8a22-453ee0a28fee
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 4 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_8___COLUMN_2___4973f955-5513-4b74-9f46-4809bcc8db41
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 4 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_8___COLUMN_2___4973f955-5513-4b74-9f46-4809bcc8db41
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 3 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated path for Wucuii, 3 tiles
+[2025-06-05 02:34:55] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated path for Wucuii, 4 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_3___7df1a2af-cc0a-420a-ae02-e7e8901e2958
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated path for Wucuii, 4 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_3___7df1a2af-cc0a-420a-ae02-e7e8901e2958
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated path for Wucuii, 5 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_4___1e177a03-e7cd-425f-ac11-ee5f4ceb919d
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated path for Wucuii, 5 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_4___1e177a03-e7cd-425f-ac11-ee5f4ceb919d
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated path for Wucuii, 6 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_5___e64fd41d-c028-4796-86be-ad5a53e14a48
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated path for Wucuii, 6 tiles
+[2025-06-05 02:34:56] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_5___e64fd41d-c028-4796-86be-ad5a53e14a48
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_6___da36bdd2-f50a-4643-afaf-5ceccd3395dd
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_6___da36bdd2-f50a-4643-afaf-5ceccd3395dd
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 8 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_7___4b63acdf-3001-4441-aad5-bc195e975010
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 8 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_7___4b63acdf-3001-4441-aad5-bc195e975010
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 9 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_8___70b86a32-bfab-477f-91d3-44a417c5b561
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 9 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_8___70b86a32-bfab-477f-91d3-44a417c5b561
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_6___COLUMN_8___0c8aa970-e256-44a4-84fc-cb18b979df3f
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_6___COLUMN_8___0c8aa970-e256-44a4-84fc-cb18b979df3f
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_8___be75691f-9e5a-4464-90d5-c9fa4a97250f
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_8___be75691f-9e5a-4464-90d5-c9fa4a97250f
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 12 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_4___COLUMN_8___638a9bb0-4b2f-40e4-b771-705961dea95e
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 12 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_4___COLUMN_8___638a9bb0-4b2f-40e4-b771-705961dea95e
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_8___23d3ae6f-3528-462b-9f44-1497ab833cad
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_8___23d3ae6f-3528-462b-9f44-1497ab833cad
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_9___bb2df980-4e38-40e4-818b-6b7a24e72363
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:57] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_9___bb2df980-4e38-40e4-818b-6b7a24e72363
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_8___23d3ae6f-3528-462b-9f44-1497ab833cad
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_8___23d3ae6f-3528-462b-9f44-1497ab833cad
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated path for Wucuii, 18 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_8___58c365e1-7f68-48fd-beb3-9c6fe001e7d8
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated path for Wucuii, 18 tiles
+[2025-06-05 02:34:59] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_8___58c365e1-7f68-48fd-beb3-9c6fe001e7d8
+[2025-06-05 02:35:00] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:00] [INFO] [GameModel] Updated path for Wucuii, 18 tiles
+[2025-06-05 02:35:00] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_8___58c365e1-7f68-48fd-beb3-9c6fe001e7d8
+[2025-06-05 02:35:00] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:00] [INFO] [GameModel] Updated path for Wucuii, 18 tiles
+[2025-06-05 02:35:00] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_8___58c365e1-7f68-48fd-beb3-9c6fe001e7d8
+[2025-06-05 02:35:02] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:02] [INFO] [GameModel] Updated path for Wucuii, 19 tiles
+[2025-06-05 02:35:02] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_7___d1569ab2-c4b8-4ec7-b00b-113079162bb5
+[2025-06-05 02:35:02] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:02] [INFO] [GameModel] Updated path for Wucuii, 19 tiles
+[2025-06-05 02:35:02] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_7___d1569ab2-c4b8-4ec7-b00b-113079162bb5
+[2025-06-05 02:35:03] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:03] [INFO] [GameModel] Updated path for Wucuii, 20 tiles
+[2025-06-05 02:35:03] [INFO] [GameModel] Updated target tile Wucuii, ROW_1___COLUMN_7___47f56d30-1347-4e35-88bf-cd8998e65fcf
+[2025-06-05 02:35:03] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:03] [INFO] [GameModel] Updated path for Wucuii, 20 tiles
+[2025-06-05 02:35:03] [INFO] [GameModel] Updated target tile Wucuii, ROW_1___COLUMN_7___47f56d30-1347-4e35-88bf-cd8998e65fcf
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 19 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_7___d1569ab2-c4b8-4ec7-b00b-113079162bb5
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 19 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_7___d1569ab2-c4b8-4ec7-b00b-113079162bb5
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 18 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_8___58c365e1-7f68-48fd-beb3-9c6fe001e7d8
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 18 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_2___COLUMN_8___58c365e1-7f68-48fd-beb3-9c6fe001e7d8
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_8___23d3ae6f-3528-462b-9f44-1497ab833cad
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_3___COLUMN_8___23d3ae6f-3528-462b-9f44-1497ab833cad
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 12 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_4___COLUMN_8___638a9bb0-4b2f-40e4-b771-705961dea95e
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated path for Wucuii, 12 tiles
+[2025-06-05 02:35:04] [INFO] [GameModel] Updated target tile Wucuii, ROW_4___COLUMN_8___638a9bb0-4b2f-40e4-b771-705961dea95e
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 11 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_4___COLUMN_7___6ac8bb0a-bb7a-42bd-9c97-d24533af57e8
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 11 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_4___COLUMN_7___6ac8bb0a-bb7a-42bd-9c97-d24533af57e8
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_7___546c3740-27c2-46ab-bb91-912b134f23df
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 0 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_7___546c3740-27c2-46ab-bb91-912b134f23df
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 9 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_6___2e50d688-cfbc-4547-a01f-50decb9681f8
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 9 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_6___2e50d688-cfbc-4547-a01f-50decb9681f8
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 8 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_5___9b02d142-aed8-4965-bd5c-e3a446a02524
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 8 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_5___9b02d142-aed8-4965-bd5c-e3a446a02524
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_4___07dadb25-616e-461f-a083-da7cf0e94d6d
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_4___07dadb25-616e-461f-a083-da7cf0e94d6d
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 6 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_3___27b0be76-efe3-4fee-9e06-c1ff0990a243
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 6 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_5___COLUMN_3___27b0be76-efe3-4fee-9e06-c1ff0990a243
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 5 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_6___COLUMN_3___407f3f19-2dff-47cd-b199-024d4a23b84f
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 5 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_6___COLUMN_3___407f3f19-2dff-47cd-b199-024d4a23b84f
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 4 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_3___7df1a2af-cc0a-420a-ae02-e7e8901e2958
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated path for Wucuii, 4 tiles
+[2025-06-05 02:35:05] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_3___7df1a2af-cc0a-420a-ae02-e7e8901e2958
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated path for Wucuii, 3 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated path for Wucuii, 3 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated range for Wucuii, 7 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated path for Wucuii, 3 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:35:06] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108 on to {"row":7,"column":2,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:35:06] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108
+[2025-06-05 02:35:06] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Wucuii___6aa4694c-41c2-416a-9cf1-7528452fa108
+[2025-06-05 02:35:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Wucuii
+[2025-06-05 02:35:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:35:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated range for Wucuii, 11 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated path for Wucuii, 1 tiles
+[2025-06-05 02:35:06] [INFO] [GameModel] Updated target tile Wucuii, ROW_7___COLUMN_2___468f2db4-0c65-42f5-907b-324032a89c3c
+[2025-06-05 02:35:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:35:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:35:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Mieaai
+[2025-06-05 02:35:09] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_12___f19ad548-d367-4c68-8172-29e4ca0c21eb
+[2025-06-05 02:35:09] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_12___f19ad548-d367-4c68-8172-29e4ca0c21eb
+[2025-06-05 02:35:10] [INFO] [GameModel] Updated range for Mieaai, 5 tiles
+[2025-06-05 02:35:10] [INFO] [GameModel] Updated path for Mieaai, 3 tiles
+[2025-06-05 02:35:10] [INFO] [GameModel] Updated target tile Mieaai, ROW_7___COLUMN_11___7d9033a1-8999-44b3-b4fe-2bb1b872e7ce
+[2025-06-05 02:35:10] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:35:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Mieaai
+[2025-06-05 02:35:10] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_7___COLUMN_11___7d9033a1-8999-44b3-b4fe-2bb1b872e7ce
+[2025-06-05 02:35:10] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_7___COLUMN_11___7d9033a1-8999-44b3-b4fe-2bb1b872e7ce
+[2025-06-05 02:35:11] [INFO] [GameModel] Updated area of sight for Mieaai, 5 tiles
+[2025-06-05 02:35:11] [INFO] [GameModel] Updated line of sight for Mieaai, 2 tiles
+[2025-06-05 02:35:11] [INFO] [GameModel] Updated area of effect for Mieaai, 1 tiles
+[2025-06-05 02:35:11] [INFO] [GameModel] Updating target for Mieaai, ROW_7___COLUMN_12___dd7107ab-baa7-464c-bb9e-16f1a11c57ed
+[2025-06-05 02:35:11] [INFO] [GameModel] Updating ability for Mieaai, test_slash
+[2025-06-05 02:35:11] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-05 02:35:11] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-05 02:35:11] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-05 02:35:11] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-05 02:35:11] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:35:11] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:35:11] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-05 02:35:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:35:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:35:11] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:35:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:35:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:35:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:35:11] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Mieaai___cccd55c6-36fd-4346-b471-eb94de175e25
+[2025-06-05 02:35:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:35:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:35:11] [INFO] [GameModel] Started dealing damage with test_slash to Kijeia 
+[2025-06-05 02:35:11] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c
+[2025-06-05 02:35:11] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c
+[2025-06-05 02:35:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:35:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:35:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:11] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c
+[2025-06-05 02:35:11] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c
+[2025-06-05 02:35:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Yazyo
+[2025-06-05 02:35:11] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_9___COLUMN_11___8e4c9a07-e53f-419a-8b3e-8d1c133483e4
+[2025-06-05 02:35:11] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_9___COLUMN_11___8e4c9a07-e53f-419a-8b3e-8d1c133483e4
+[2025-06-05 02:35:12] [INFO] [GameModel] Updated range for Yazyo, 5 tiles
+[2025-06-05 02:35:12] [INFO] [GameModel] Updated path for Yazyo, 3 tiles
+[2025-06-05 02:35:12] [INFO] [GameModel] Updated target tile Yazyo, ROW_8___COLUMN_12___f19ad548-d367-4c68-8172-29e4ca0c21eb
+[2025-06-05 02:35:12] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Yazyo___bd09183e-5207-4990-89c5-1a570bd5bb6c","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:35:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Yazyo
+[2025-06-05 02:35:12] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_12___f19ad548-d367-4c68-8172-29e4ca0c21eb
+[2025-06-05 02:35:12] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_12___f19ad548-d367-4c68-8172-29e4ca0c21eb
+[2025-06-05 02:35:13] [INFO] [GameModel] Updated area of sight for Yazyo, 4 tiles
+[2025-06-05 02:35:13] [INFO] [GameModel] Updated line of sight for Yazyo, 2 tiles
+[2025-06-05 02:35:13] [INFO] [GameModel] Updated area of effect for Yazyo, 1 tiles
+[2025-06-05 02:35:13] [INFO] [GameModel] Updating target for Yazyo, ROW_7___COLUMN_12___dd7107ab-baa7-464c-bb9e-16f1a11c57ed
+[2025-06-05 02:35:13] [INFO] [GameModel] Updating ability for Yazyo, test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-05 02:35:13] [INFO] [GameModel] Started dealing damage with test_slash to Kijeia 
+[2025-06-05 02:35:13] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6
+[2025-06-05 02:35:13] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6
+[2025-06-05 02:35:13] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:35:13] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:35:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6
+[2025-06-05 02:35:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6
+[2025-06-05 02:35:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Gepe
+[2025-06-05 02:35:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_12___f39bc2b3-8570-4914-9811-f31b1523a51e
+[2025-06-05 02:35:13] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_12___f39bc2b3-8570-4914-9811-f31b1523a51e
+[2025-06-05 02:35:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:35:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:35:13] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:35:13] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:35:14] [INFO] [GameModel] Updated range for Gepe, 9 tiles
+[2025-06-05 02:35:14] [INFO] [GameModel] Updated path for Gepe, 3 tiles
+[2025-06-05 02:35:14] [INFO] [GameModel] Updated target tile Gepe, ROW_2___COLUMN_11___363bf88c-b647-4fb7-8820-c8ff5b9a36cc
+[2025-06-05 02:35:14] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6 on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Gepe___2030fa30-78f3-466f-8860-2f649d570eb6","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:35:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Gepe
+[2025-06-05 02:35:14] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_11___363bf88c-b647-4fb7-8820-c8ff5b9a36cc
+[2025-06-05 02:35:14] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_11___363bf88c-b647-4fb7-8820-c8ff5b9a36cc
+[2025-06-05 02:35:15] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Niqm___b3e66c95-2d31-421f-b811-e2bf4ceda024
+[2025-06-05 02:35:15] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Niqm___b3e66c95-2d31-421f-b811-e2bf4ceda024
+[2025-06-05 02:35:15] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:35:15] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:35:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:35:15] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Niqm___b3e66c95-2d31-421f-b811-e2bf4ceda024
+[2025-06-05 02:35:15] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Niqm___b3e66c95-2d31-421f-b811-e2bf4ceda024
+[2025-06-05 02:35:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:35:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Niqm
+[2025-06-05 0

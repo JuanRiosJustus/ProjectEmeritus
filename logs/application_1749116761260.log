@@ -1,0 +1,901 @@
+[2025-06-05 02:46:01] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-05 02:46:01] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-05 02:46:01] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-05 02:46:01] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-05 02:46:01] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-05 02:46:01] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-05 02:46:01] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-05 02:46:01] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-05 02:46:01] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-05 02:46:01] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-05 02:46:01] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-05 02:46:01] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-05 02:46:01] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-05 02:46:01] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Fufg___53893833-5f4e-4ea0-8261-6532d4dc8372 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Fufg___53893833-5f4e-4ea0-8261-6532d4dc8372","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Fufg___53893833-5f4e-4ea0-8261-6532d4dc8372 into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5 on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5 into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Yaal___46fa15ec-ba43-4703-a491-b222ec560c6a on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Yaal___46fa15ec-ba43-4703-a491-b222ec560c6a","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Yaal___46fa15ec-ba43-4703-a491-b222ec560c6a into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Ioyrt___2aa5e717-73eb-4f79-975e-54f3470c5b2d on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Ioyrt___2aa5e717-73eb-4f79-975e-54f3470c5b2d","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Ioyrt___2aa5e717-73eb-4f79-975e-54f3470c5b2d into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada on to {"row":0,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Lazosa___cfc204c8-3df2-4903-8517-bf073051b04f on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Lazosa___cfc204c8-3df2-4903-8517-bf073051b04f","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Lazosa___cfc204c8-3df2-4903-8517-bf073051b04f into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af into queue
+[2025-06-05 02:46:01] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Uuxuky___38a7b878-fd61-4446-a014-2bab5d3d76f4 on to {"row":1,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Uuxuky___38a7b878-fd61-4446-a014-2bab5d3d76f4","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:01] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Uuxuky___38a7b878-fd61-4446-a014-2bab5d3d76f4 into queue
+[2025-06-05 02:46:01] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-05 02:46:01] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-05 02:46:01] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-05 02:46:01] [INFO] [FontPool] Started initializing FontPool
+[2025-06-05 02:46:01] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-05 02:46:02] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-05 02:46:02] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-05 02:46:02] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada
+[2025-06-05 02:46:02] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada
+[2025-06-05 02:46:02] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:46:02] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:46:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:02] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-05 02:46:02] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-05 02:46:02] [INFO] [VisualsSystem] Finished creating blurred background after 0.48746299743652344 seconds
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada
+[2025-06-05 02:46:02] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada
+[2025-06-05 02:46:02] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:46:02] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:02] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:03] [INFO] [GameModel] Updated range for Giduo, 3 tiles
+[2025-06-05 02:46:03] [INFO] [GameModel] Updated path for Giduo, 3 tiles
+[2025-06-05 02:46:03] [INFO] [GameModel] Updated target tile Giduo, ROW_1___COLUMN_12___7fb3cbc4-94da-423b-9334-00b125cbaa6d
+[2025-06-05 02:46:03] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada on to {"row":1,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada
+[2025-06-05 02:46:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Giduo___28075a23-a19e-450d-a8a6-506d8df33ada
+[2025-06-05 02:46:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Giduo
+[2025-06-05 02:46:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_12___7fb3cbc4-94da-423b-9334-00b125cbaa6d
+[2025-06-05 02:46:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_12___7fb3cbc4-94da-423b-9334-00b125cbaa6d
+[2025-06-05 02:46:04] [INFO] [GameModel] Updated area of sight for Giduo, 4 tiles
+[2025-06-05 02:46:04] [INFO] [GameModel] Updated line of sight for Giduo, 2 tiles
+[2025-06-05 02:46:04] [INFO] [GameModel] Updated area of effect for Giduo, 1 tiles
+[2025-06-05 02:46:04] [INFO] [GameModel] Updating target for Giduo, ROW_1___COLUMN_11___5ba381cb-b055-4300-a26e-ec322f2caca2
+[2025-06-05 02:46:04] [INFO] [GameModel] Updating ability for Giduo, test_slash
+[2025-06-05 02:46:04] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-05 02:46:04] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-05 02:46:04] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-05 02:46:04] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-05 02:46:04] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:46:04] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:46:04] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-05 02:46:05] [INFO] [GameModel] Started dealing damage with test_slash to Uuxuky 
+[2025-06-05 02:46:05] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d
+[2025-06-05 02:46:05] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d
+[2025-06-05 02:46:05] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:46:05] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:46:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:05] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d
+[2025-06-05 02:46:05] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d
+[2025-06-05 02:46:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Kiype
+[2025-06-05 02:46:05] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_11___939e4bd6-b258-4404-bac1-9646768ef9bf
+[2025-06-05 02:46:05] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_11___939e4bd6-b258-4404-bac1-9646768ef9bf
+[2025-06-05 02:46:06] [INFO] [GameModel] Updated range for Kiype, 6 tiles
+[2025-06-05 02:46:06] [INFO] [GameModel] Updated path for Kiype, 3 tiles
+[2025-06-05 02:46:06] [INFO] [GameModel] Updated target tile Kiype, ROW_2___COLUMN_10___2571cf79-6c3b-432e-8d81-a86ac76a900c
+[2025-06-05 02:46:06] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d on to {"row":2,"column":10,"base_elevation":0,"unit":"UNIT_earth_dragon___NICKNAME_Kiype___d3f9cdf9-a14e-4e8b-a58f-5fa07bc1222d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-05 02:46:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Kiype
+[2025-06-05 02:46:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_10___2571cf79-6c3b-432e-8d81-a86ac76a900c
+[2025-06-05 02:46:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_10___2571cf79-6c3b-432e-8d81-a86ac76a900c
+[2025-06-05 02:46:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af
+[2025-06-05 02:46:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af
+[2025-06-05 02:46:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:46:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:46:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af
+[2025-06-05 02:46:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af
+[2025-06-05 02:46:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Ziqauo
+[2025-06-05 02:46:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_11___4da9ef92-91f1-45b2-8b47-125fcf550ffe
+[2025-06-05 02:46:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_11___4da9ef92-91f1-45b2-8b47-125fcf550ffe
+[2025-06-05 02:46:08] [INFO] [GameModel] Updated range for Ziqauo, 10 tiles
+[2025-06-05 02:46:08] [INFO] [GameModel] Updated path for Ziqauo, 3 tiles
+[2025-06-05 02:46:08] [INFO] [GameModel] Updated target tile Ziqauo, ROW_8___COLUMN_11___5917109e-69e4-494d-aba1-b129f35d4a7a
+[2025-06-05 02:46:08] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Ziqauo___3888f72d-59ac-4ce5-a5cf-1bd10803c0af","layers":{"empty":false},"total_elevation":9}.
+[2025-06-05 02:46:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Ziqauo
+[2025-06-05 02:46:08] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_8___COLUMN_11___5917109e-69e4-494d-aba1-b129f35d4a7a
+[2025-06-05 02:46:08] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_8___COLUMN_11___5917109e-69e4-494d-aba1-b129f35d4a7a
+[2025-06-05 02:46:09] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef
+[2025-06-05 02:46:09] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef
+[2025-06-05 02:46:09] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:46:09] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:46:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef
+[2025-06-05 02:46:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef
+[2025-06-05 02:46:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Jaaei
+[2025-06-05 02:46:09] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___7e2aff07-f204-4769-af4f-14379e994d31
+[2025-06-05 02:46:09] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_0___7e2aff07-f204-4769-af4f-14379e994d31
+[2025-06-05 02:46:11] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___7e2aff07-f204-4769-af4f-14379e994d31
+[2025-06-05 02:46:11] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:46:11] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 10 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_7___COLUMN_7___2cdafa22-c3c3-4c96-b93d-66d3544c21b1
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_9___COLUMN_6___2f38a3d2-c286-41f6-aadf-eddb5f7ee639
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_9___COLUMN_6___2f38a3d2-c286-41f6-aadf-eddb5f7ee639
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 12 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_8___COLUMN_6___e0d37a76-5f60-4c0a-a4c0-1fe09d7564e6
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 12 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_8___COLUMN_6___e0d37a76-5f60-4c0a-a4c0-1fe09d7564e6
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_7___COLUMN_5___a04c0f11-aa45-4d38-85d9-98e5c1011f27
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_7___COLUMN_5___a04c0f11-aa45-4d38-85d9-98e5c1011f27
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 7 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_6___COLUMN_5___b055f4d2-0225-45aa-965c-8704bbbf7e0c
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 7 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_6___COLUMN_5___b055f4d2-0225-45aa-965c-8704bbbf7e0c
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 6 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_6___COLUMN_4___ff427d87-07d5-416d-ace6-4d3da540b68a
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 6 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_6___COLUMN_4___ff427d87-07d5-416d-ace6-4d3da540b68a
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 5 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 5 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 4 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 4 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_4___COLUMN_3___e83b0e94-cd80-496e-b177-2fae74af04e9
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_4___COLUMN_3___e83b0e94-cd80-496e-b177-2fae74af04e9
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 3 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 3 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 0 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 3 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated path for Jaaei, 3 tiles
+[2025-06-05 02:46:11] [INFO] [GameModel] Updated target tile Jaaei, ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:12] [INFO] [GameModel] Updated range for Jaaei, 8 tiles
+[2025-06-05 02:46:12] [INFO] [GameModel] Updated path for Jaaei, 3 tiles
+[2025-06-05 02:46:12] [INFO] [GameModel] Updated target tile Jaaei, ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:12] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Jaaei___aa2cbb06-44d7-4c1a-8d9c-a42b8b3cfeef","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Jaaei
+[2025-06-05 02:46:12] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:12] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:12] [INFO] [GameModel] Updated range for Jaaei, 6 tiles
+[2025-06-05 02:46:12] [INFO] [GameModel] Updated path for Jaaei, 1 tiles
+[2025-06-05 02:46:12] [INFO] [GameModel] Updated target tile Jaaei, ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:13] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:13] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [AbilityPanel] Selecting test_slash
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_10___c03fb0ae-b1f5-4770-b065-0f42688c9a28
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_6___COLUMN_4___ff427d87-07d5-416d-ace6-4d3da540b68a
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_3___e83b0e94-cd80-496e-b177-2fae74af04e9
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_3___e83b0e94-cd80-496e-b177-2fae74af04e9
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_2___e2440c0d-3120-47bc-a5c6-c057c9fffb4a
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_2___e2440c0d-3120-47bc-a5c6-c057c9fffb4a
+[2025-06-05 02:46:14] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:15] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jaaei to use test_slash
+[2025-06-05 02:46:15] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jaaei to use test_slash
+[2025-06-05 02:46:15] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Jaaei to use test_slash
+[2025-06-05 02:46:15] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Jaaei to use test_slash
+[2025-06-05 02:46:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated line of sight for Jaaei, 3 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:15] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:15] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated line of sight for Jaaei, 3 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:15] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_3___e83b0e94-cd80-496e-b177-2fae74af04e9
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:16] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated line of sight for Jaaei, 5 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:17] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:17] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated line of sight for Jaaei, 5 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:17] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated line of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_1___a3435c2f-91b7-4ef1-90ab-393b941a9567
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated line of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_1___a3435c2f-91b7-4ef1-90ab-393b941a9567
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated line of sight for Jaaei, 3 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated line of sight for Jaaei, 3 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating target for Jaaei, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:18] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:18] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:18] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:19] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:19] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:19] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:19] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Started gathering cost requirements for test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Finished gathering cost requirements for test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Finished checking cost requirements for test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Started paying cost requirements for test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Payed 5.0 out of 20 to use test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Finished paying cost requirements for test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:19] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:19] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:19] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:19] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:19] [INFO] [GameModel] Started dealing damage with test_slash to Fufg 
+[2025-06-05 02:46:19] [INFO] [AbilityDamageReport] Started constructing damage mappings for Jaaei to use test_slash
+[2025-06-05 02:46:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Jaaei to use test_slash
+[2025-06-05 02:46:19] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Jaaei to use test_slash
+[2025-06-05 02:46:19] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Jaaei to use test_slash
+[2025-06-05 02:46:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-05 02:46:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_2___e2440c0d-3120-47bc-a5c6-c057c9fffb4a
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_2___e2440c0d-3120-47bc-a5c6-c057c9fffb4a
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating target for Jaaei, ROW_2___COLUMN_3___73a35127-ab68-454a-bfa3-7e146fff930e
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating target for Jaaei, ROW_2___COLUMN_3___73a35127-ab68-454a-bfa3-7e146fff930e
+[2025-06-05 02:46:20] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_2___COLUMN_4___9ba29b6f-059b-4136-82c6-788b4eb83b76
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_2___COLUMN_4___9ba29b6f-059b-4136-82c6-788b4eb83b76
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_4___c0445de1-6b80-4974-a6f6-2c41cdfa3c30
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_4___c0445de1-6b80-4974-a6f6-2c41cdfa3c30
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_5___334f12f5-a9a2-4e8d-be88-999f271ebd49
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_5___334f12f5-a9a2-4e8d-be88-999f271ebd49
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_6___b5d5cadb-272c-4ccf-aa27-5fc72c901d3a
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_6___b5d5cadb-272c-4ccf-aa27-5fc72c901d3a
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_0___COLUMN_6___dae8c703-641a-4d8d-be35-d96bea65ec01
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_0___COLUMN_6___dae8c703-641a-4d8d-be35-d96bea65ec01
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_6___b5d5cadb-272c-4ccf-aa27-5fc72c901d3a
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_1___COLUMN_6___b5d5cadb-272c-4ccf-aa27-5fc72c901d3a
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_2___COLUMN_7___1d656825-dfbc-44bc-9b61-f19669b2bb33
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_2___COLUMN_7___1d656825-dfbc-44bc-9b61-f19669b2bb33
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_7___f31ede00-8c2e-4528-823e-7ad0cd8c1234
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_3___COLUMN_7___f31ede00-8c2e-4528-823e-7ad0cd8c1234
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_7___7324f8ee-9a1f-4bcb-923a-0f4180707ee1
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_5___COLUMN_7___7324f8ee-9a1f-4bcb-923a-0f4180707ee1
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_8___COLUMN_7___a52ee498-3317-4c56-86ba-39b197a0bd54
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_8___COLUMN_7___a52ee498-3317-4c56-86ba-39b197a0bd54
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_8___COLUMN_6___e0d37a76-5f60-4c0a-a4c0-1fe09d7564e6
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_8___COLUMN_6___e0d37a76-5f60-4c0a-a4c0-1fe09d7564e6
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_6___COLUMN_4___ff427d87-07d5-416d-ace6-4d3da540b68a
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of sight for Jaaei, 4 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated line of sight for Jaaei, 2 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updated area of effect for Jaaei, 1 tiles
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating target for Jaaei, ROW_6___COLUMN_4___ff427d87-07d5-416d-ace6-4d3da540b68a
+[2025-06-05 02:46:21] [INFO] [GameModel] Updating ability for Jaaei, test_slash
+[2025-06-05 02:46:23] [INFO] [AbilityPanel] Updating ability selection for UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5
+[2025-06-05 02:46:23] [INFO] [AbilityPanel] Finished ability selection for UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5
+[2025-06-05 02:46:23] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-05 02:46:23] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-05 02:46:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-05 02:46:23] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5
+[2025-06-05 02:46:23] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5
+[2025-06-05 02:46:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Poook
+[2025-06-05 02:46:23] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_0___cc4b5f80-805d-4eab-81e1-e0230f943357
+[2025-06-05 02:46:23] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_0___cc4b5f80-805d-4eab-81e1-e0230f943357
+[2025-06-05 02:46:27] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_0___cc4b5f80-805d-4eab-81e1-e0230f943357
+[2025-06-05 02:46:27] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-05 02:46:27] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 8 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_4___9249ea0e-ef3a-43ad-b09d-1872589f4318
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_5___48de8678-d952-4c9c-b82e-a553efcd7249
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_5___48de8678-d952-4c9c-b82e-a553efcd7249
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 9 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_5___e8210e79-e0c1-46b8-9d7c-08aab9d7979b
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 9 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_5___e8210e79-e0c1-46b8-9d7c-08aab9d7979b
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 8 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_4___9249ea0e-ef3a-43ad-b09d-1872589f4318
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 8 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_4___9249ea0e-ef3a-43ad-b09d-1872589f4318
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 7 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_3___c1076047-161d-4e9e-b301-27a70102b0c0
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated path for Poook, 7 tiles
+[2025-06-05 02:46:27] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_3___c1076047-161d-4e9e-b301-27a70102b0c0
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated path for Poook, 6 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated target tile Poook, ROW_2___COLUMN_3___73a35127-ab68-454a-bfa3-7e146fff930e
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated path for Poook, 6 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated target tile Poook, ROW_2___COLUMN_3___73a35127-ab68-454a-bfa3-7e146fff930e
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated path for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated target tile Poook, ROW_2___COLUMN_2___4dbe8a00-f1e8-4155-b24d-6ef86461df4a
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated path for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated target tile Poook, ROW_2___COLUMN_2___4dbe8a00-f1e8-4155-b24d-6ef86461df4a
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated path for Poook, 4 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated target tile Poook, ROW_1___COLUMN_2___2ee62c34-9b63-466f-bcf3-72606e75e3a6
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated path for Poook, 4 tiles
+[2025-06-05 02:46:28] [INFO] [GameModel] Updated target tile Poook, ROW_1___COLUMN_2___2ee62c34-9b63-466f-bcf3-72606e75e3a6
+[2025-06-05 02:46:29] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:29] [INFO] [GameModel] Updated path for Poook, 3 tiles
+[2025-06-05 02:46:29] [INFO] [GameModel] Updated target tile Poook, ROW_1___COLUMN_1___24a18ddf-7449-492d-9c65-0965780d4e09
+[2025-06-05 02:46:29] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:29] [INFO] [GameModel] Updated path for Poook, 3 tiles
+[2025-06-05 02:46:29] [INFO] [GameModel] Updated target tile Poook, ROW_1___COLUMN_1___24a18ddf-7449-492d-9c65-0965780d4e09
+[2025-06-05 02:46:30] [INFO] [GameModel] Updated range for Poook, 5 tiles
+[2025-06-05 02:46:30] [INFO] [GameModel] Updated path for Poook, 3 tiles
+[2025-06-05 02:46:30] [INFO] [GameModel] Updated target tile Poook, ROW_1___COLUMN_1___24a18ddf-7449-492d-9c65-0965780d4e09
+[2025-06-05 02:46:30] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5 on to {"row":1,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Poook___e88c2e24-4262-47d3-8b59-ce6ef80449c5","layers":{"empty":false},"total_elevation":8}.
+[2025-06-05 02:46:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-05 02:46:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Poook
+[2025-06-05 02:46:30] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_1___24a18ddf-7449-492d-9c65-0965780d4e09
+[2025-06-05 02:46:30] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_1___24a18ddf-7449-492d-9c65-0965780d4e09
+[2025-06-05 02:46:30] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:30] [INFO] [GameModel] Updated path for Poook, 1 tiles
+[2025-06-05 02:46:30] [INFO] [GameModel] Updated target tile Poook, ROW_1___COLUMN_1___24a18ddf-7449-492d-9c65-0965780d4e09
+[2025-06-05 02:46:32] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_1___24a18ddf-7449-492d-9c65-0965780d4e09
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 6 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_4___9249ea0e-ef3a-43ad-b09d-1872589f4318
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_5___e8210e79-e0c1-46b8-9d7c-08aab9d7979b
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_5___e8210e79-e0c1-46b8-9d7c-08aab9d7979b
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_7___7324f8ee-9a1f-4bcb-923a-0f4180707ee1
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_7___7324f8ee-9a1f-4bcb-923a-0f4180707ee1
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_6___5956be79-da7f-4871-9842-df648dba74a9
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_6___5956be79-da7f-4871-9842-df648dba74a9
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 9 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_6___6627cfc7-8722-45ff-ae02-ee9536e8c922
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 9 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_6___6627cfc7-8722-45ff-ae02-ee9536e8c922
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 8 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_5___48de8678-d952-4c9c-b82e-a553efcd7249
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated path for Poook, 8 tiles
+[2025-06-05 02:46:32] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_5___48de8678-d952-4c9c-b82e-a553efcd7249
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated path for Poook, 0 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_4___630bc614-adec-4c4a-a06d-e69b1aa41fc3
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated path for Poook, 0 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_4___630bc614-adec-4c4a-a06d-e69b1aa41fc3
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated target tile Poook, ROW_6___COLUMN_4___ff427d87-07d5-416d-ace6-4d3da540b68a
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:33] [INFO] [GameModel] Updated target tile Poook, ROW_6___COLUMN_4___ff427d87-07d5-416d-ace6-4d3da540b68a
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated path for Poook, 10 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_4___fe422c8d-a815-40e3-8ece-af9f771b53ad
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated path for Poook, 12 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated path for Poook, 12 tiles
+[2025-06-05 02:46:34] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated path for Poook, 13 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_1___a3435c2f-91b7-4ef1-90ab-393b941a9567
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated path for Poook, 13 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_1___a3435c2f-91b7-4ef1-90ab-393b941a9567
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated path for Poook, 14 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated path for Poook, 14 tiles
+[2025-06-05 02:46:35] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:36] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:36] [INFO] [GameModel] Updated path for Poook, 15 tiles
+[2025-06-05 02:46:36] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_0___3ff4e008-ee49-4010-bcba-813f8674f31c
+[2025-06-05 02:46:36] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:36] [INFO] [GameModel] Updated path for Poook, 15 tiles
+[2025-06-05 02:46:36] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_0___3ff4e008-ee49-4010-bcba-813f8674f31c
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 14 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_0___7e2aff07-f204-4769-af4f-14379e994d31
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 14 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_0___7e2aff07-f204-4769-af4f-14379e994d31
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 13 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_1___a3435c2f-91b7-4ef1-90ab-393b941a9567
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 13 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_1___a3435c2f-91b7-4ef1-90ab-393b941a9567
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 12 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 12 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated path for Poook, 11 tiles
+[2025-06-05 02:46:37] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_3___7d6196aa-9bd4-46a8-8d97-636b82ea80ed
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 12 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 12 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_5___COLUMN_2___5bb72584-51d2-4c2e-bead-3367d44e4c5c
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 0 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 0 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_2___5b5461e3-ac84-4e42-8292-eaa4985bc328
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 14 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 14 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_4___COLUMN_1___2128ae94-742f-46d7-a24e-c65cfeeff1dc
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 0 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_1___59266743-949d-4978-b283-36a4d19f57bd
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 0 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_3___COLUMN_0___3d2a841e-787c-474f-9cb1-2f92ce83e378
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 3 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_2___COLUMN_0___c05b8a71-9c4f-4ae5-8980-20e455306371
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated range for Poook, 7 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated path for Poook, 3 tiles
+[2025-06-05 02:46:38] [INFO] [GameModel] Updated target tile Poook, ROW_0___COLUMN_0___cc4b5f80-805d-4eab-81e1-e0230f943357

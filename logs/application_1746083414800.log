@@ -1,0 +1,698 @@
+[2025-05-01 00:10:14] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-01 00:10:14] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-01 00:10:14] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-01 00:10:14] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-01 00:10:14] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-01 00:10:14] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-01 00:10:14] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-01 00:10:14] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-01 00:10:14] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-01 00:10:14] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-01 00:10:14] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-01 00:10:14] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-01 00:10:15] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-01 00:10:15] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-01 00:10:15] [INFO] [Component] Setting dark_dragon_Zaub_c5b842e6-5f4a-40b6-a026-e1269102eee9 on to {"row":5,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dark_dragon_Zaub_c5b842e6-5f4a-40b6-a026-e1269102eee9","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit enemy:Zaub into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting dragon_Bypn_7f9da0c4-4013-441b-b346-125f14da138f on to {"row":4,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Bypn_7f9da0c4-4013-441b-b346-125f14da138f","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit enemy:Bypn into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting water_dragon_Fetyue_777ae2e0-752e-4e72-8f62-d3fa3ca07ad1 on to {"row":7,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Fetyue_777ae2e0-752e-4e72-8f62-d3fa3ca07ad1","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit enemy:Fetyue into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting earth_dragon_Cyki_cf96deb6-9f38-4639-850a-ca98c4c3e315 on to {"row":5,"column":2,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Cyki_cf96deb6-9f38-4639-850a-ca98c4c3e315","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit enemy:Cyki into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting water_dragon_Vuxjo_6716e6db-4bbe-4957-9e94-6a1e50786f05 on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Vuxjo_6716e6db-4bbe-4957-9e94-6a1e50786f05","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit enemy:Vuxjo into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting water_dragon_Qaica_37b03923-908c-4594-9bfc-9553ed7b5b2f on to {"row":3,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Qaica_37b03923-908c-4594-9bfc-9553ed7b5b2f","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit user:Qaica into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting dragon_Wyti_00a06017-0e09-48f7-ac29-db6ed0e6eaa4 on to {"row":7,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Wyti_00a06017-0e09-48f7-ac29-db6ed0e6eaa4","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit user:Wyti into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting earth_dragon_Coaoe_b349461d-a4fb-4f7f-92ef-5a04653650f0 on to {"row":5,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Coaoe_b349461d-a4fb-4f7f-92ef-5a04653650f0","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit user:Coaoe into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4 on to {"row":2,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit user:Woaano into queue
+[2025-05-01 00:10:15] [INFO] [Component] Setting fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27 on to {"row":6,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27","structure":""}.
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Added unit user:Ouuaw into queue
+[2025-05-01 00:10:15] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-01 00:10:15] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-01 00:10:15] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-01 00:10:15] [INFO] [FontPool] Started initializing FontPool
+[2025-05-01 00:10:15] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-01 00:10:15] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-01 00:10:15] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-01 00:10:15] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-01 00:10:15] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-01 00:10:15] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:15] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-01 00:10:15] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27
+[2025-05-01 00:10:15] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27
+[2025-05-01 00:10:15] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:15] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 00:10:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 00:10:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:10:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-01 00:10:16] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-01 00:10:16] [INFO] [VisualsSystem] Finished creating blurred background after 0.48831555247306824 seconds
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilityPanel] Updating ability selection for fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27
+[2025-05-01 00:10:16] [INFO] [AbilityPanel] Finished ability selection for fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27
+[2025-05-01 00:10:16] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:16] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:16] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:17] [INFO] [AbilitySystem] Ouuaw is planning to use fire_attack on [5, 6]
+[2025-05-01 00:10:17] [INFO] [AbilitySystem] Updated area of sight for Ouuaw, viewing 12 tiles
+[2025-05-01 00:10:17] [INFO] [AbilitySystem] Updated line of sight for Ouuaw, viewing 3 tiles
+[2025-05-01 00:10:17] [INFO] [AbilitySystem] Updated area of effect for Ouuaw viewing 1 tiles
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Started constructing cost mappings for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Finished constructing cost mappings for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Checking cost requirements for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Ouuaw is able to pay for fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Started constructing cost mappings for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Finished constructing cost mappings for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Paying cost requirements for Ouuaw using fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilitySystem] Used from fire_attack on [5, 6]
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Started constructing damage mappings for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Ouuaw
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Ouuaw lands a Same-Type-Attack-Bonus with fire_attack, for 12.0
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Ouuaw lands a CRIT bonus with fire_attack for 33.0
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] 55.0 damage after modifiers for fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Ouuaw
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Coaoe
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] 55.0 Raw damage after defenses for fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Coaoe
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] 45.833332 damage after defenses for fire_attack
+[2025-05-01 00:10:17] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Ouuaw to use fire_attack
+[2025-05-01 00:10:17] [INFO] [CombatSystem] Started dealing damage with fire_attack to Coaoe 
+[2025-05-01 00:10:17] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:17] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:18] [INFO] [MovementSystem] Updated movement range to 9 for Ouuaw
+[2025-05-01 00:10:18] [INFO] [MovementSystem] Updated movement path from [6, 5] to [6, 7] for Ouuaw
+[2025-05-01 00:10:18] [INFO] [Component] Setting fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27 on to {"row":6,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27","structure":""}.
+[2025-05-01 00:10:18] [INFO] [MovementSystem] Moved from [6, 5] to [6, 7]
+[2025-05-01 00:10:18] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27
+[2025-05-01 00:10:18] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Ouuaw_a9a618f8-9e6d-4224-8ecb-17a48eb01a27
+[2025-05-01 00:10:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:10:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Ouuaw
+[2025-05-01 00:10:18] [INFO] [InputHandler] Gliding 0 camera to new tile 6_7_b3192985-82db-4b5b-81ab-905757c67dea
+[2025-05-01 00:10:18] [INFO] [InputHandler] Gliding 1 camera to new tile 6_7_b3192985-82db-4b5b-81ab-905757c67dea
+[2025-05-01 00:10:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 00:10:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 00:10:19] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:19] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:10:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Woaano
+[2025-05-01 00:10:19] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_6c37b3ab-732d-446f-a29e-6b768e55ed39
+[2025-05-01 00:10:19] [INFO] [InputHandler] Gliding 1 camera to new tile 2_4_6c37b3ab-732d-446f-a29e-6b768e55ed39
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Woaano is planning to use air_attack on [2, 6]
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Updated area of sight for Woaano, viewing 13 tiles
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Updated line of sight for Woaano, viewing 3 tiles
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Updated area of effect for Woaano viewing 1 tiles
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Started constructing cost mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Finished constructing cost mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Checking cost requirements for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Woaano is able to pay for air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Started constructing cost mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Finished constructing cost mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Paying cost requirements for Woaano using air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Used from air_attack on [2, 6]
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [InputHandler] Gliding 0 camera to new tile 2_4_6c37b3ab-732d-446f-a29e-6b768e55ed39
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Woaano lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Started constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Finished constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Started constructing cost mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Finished constructing cost mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Woaano lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [CombatSystem] Started dealing damage with air_attack to Vuxjo 
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Woaano lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Woaano lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Woaano
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Vuxjo
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-01 00:10:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Woaano to use air_attack
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-01 00:10:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-01 00:10:21] [INFO] [MovementSystem] Updated movement range to 11 for Woaano
+[2025-05-01 00:10:21] [INFO] [MovementSystem] Updated movement path from [2, 4] to [0, 4] for Woaano
+[2025-05-01 00:10:21] [INFO] [Component] Setting air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4 on to {"row":0,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Woaano_a7c26efb-3e97-464a-b812-d6e288cfdbc4","structure":""}.
+[2025-05-01 00:10:21] [INFO] [MovementSystem] Moved from [2, 4] to [0, 4]
+[2025-05-01 00:10:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:10:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Woaano
+[2025-05-01 00:10:21] [INFO] [InputHandler] Gliding 0 camera to new tile 0_4_d631cd21-040b-4cda-a556-4efa927b0cf6
+[2025-05-01 00:10:21] [INFO] [InputHandler] Gliding 1 camera to new tile 0_4_d631cd21-040b-4cda-a556-4efa927b0cf6
+[2025-05-01 00:10:21] [INFO] [AbilityPanel] Updating ability selection for water_dragon_Fetyue_777ae2e0-752e-4e72-8f62-d3fa3ca07ad1
+[2025-05-01 00:10:21] [INFO] [AbilityPanel] Finished ability selection for water_dragon_Fetyue_777ae2e0-752e-4e72-8f62-d3fa3ca07ad1
+[2025-05-01 00:10:21] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-01 00:10:21] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-01 00:10:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-01 00:10:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-01 00:10:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity water_dragon_Fetyue_777ae2e0-752e-4e72-8f62-d3fa3ca07ad1
+[2025-05-01 00:10:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity water_dragon_Fetyue_777ae2e0-752e-4e72-8f62-d3fa3ca07ad1
+[2025-05-01 00:10:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-01 00:10:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Fetyue
+[2025-05-01 00:10:21] [INFO] [InputHandler] Gliding 0 camera to new tile 7_6_cfda0451-650d-4d47-a604-10fa5a06f02d
+[2025-05-01 00:10:21] [INFO] [InputHandler] Gliding 1 camera to new tile 7_6_cfda0451-650d-4d47-a604-10fa5a06f02d
+[2025-05-01 00:10:23] [INFO] [InputHandler] Gliding 0 camera to new tile 7_6_cfda0451-650d-4d47-a604-10fa5a06f02d
+[2025-05-01 00:10:23] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:23] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:24] [INFO] [AbilityPanel] Selecting water_attack
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on null
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Updated area of sight for Fetyue, viewing 8 tiles
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 0 tiles
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 0 tiles
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on [7, 3]
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on [7, 4]
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:24] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Fetyue lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] 20.0 damage after defenses for water_attack
+[2025-05-01 00:10:24] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:24] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:25] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:29] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on [6, 5]
+[2025-05-01 00:10:29] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:29] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:29] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:29] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:29] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:29] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:29] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:29] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:29] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:29] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:30] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on [6, 4]
+[2025-05-01 00:10:30] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 4 tiles
+[2025-05-01 00:10:30] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:30] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on [7, 4]
+[2025-05-01 00:10:30] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:30] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Fetyue lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] 20.0 damage after defenses for water_attack
+[2025-05-01 00:10:30] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:30] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on [7, 5]
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 2 tiles
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on [7, 6]
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 1 tiles
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Fetyue lands a Same-Type-Attack-Bonus with water_attack, for 12.0
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Fetyue
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Fetyue defends with Same-Type-Defense-Bonus from water_attack for 15.4
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Fetyue
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Fetyue is planning to use water_attack on null
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 0 tiles
+[2025-05-01 00:10:31] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 0 tiles
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use water_attack
+[2025-05-01 00:10:31] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:32] [INFO] [AbilityPanel] Selecting oblation
+[2025-05-01 00:10:32] [INFO] [AbilitySystem] Fetyue is planning to use oblation on null
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:32] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [7, 5]
+[2025-05-01 00:10:32] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 2 tiles
+[2025-05-01 00:10:32] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:32] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [7, 4]
+[2025-05-01 00:10:32] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:32] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Fetyue lands a CRIT bonus with oblation for -7.5
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] -12.5 damage after modifiers for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] -12.5 Raw damage after defenses for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] -11.363637 damage after defenses for oblation
+[2025-05-01 00:10:32] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:32] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [6, 4]
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 4 tiles
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [6, 3]
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [7, 4]
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -5.0 damage after modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -5.0 Raw damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -4.5454545 damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [7, 5]
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 2 tiles
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Fetyue is planning to use oblation on null
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 0 tiles
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 0 tiles
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [7, 4]
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:36] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Fetyue lands a CRIT bonus with oblation for -7.5
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -12.5 damage after modifiers for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -12.5 Raw damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Wyti
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] -11.363637 damage after defenses for oblation
+[2025-05-01 00:10:36] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:36] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [6, 3]
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [6, 2]
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [5, 2]
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Cyki
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Cyki
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] 10.416666 damage after defenses for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] -5.0 Raw damage before modifiers for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Fetyue lands a CRIT bonus with oblation for -7.5
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] -12.5 damage after modifiers for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Fetyue
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Cyki
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] -12.5 Raw damage after defenses for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Cyki
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] -10.416666 damage after defenses for oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [5, 1]
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [4, 0]
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Fetyue is planning to use oblation on [3, 0]
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 3 tiles
+[2025-05-01 00:10:38] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 1 tiles
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:38] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-01 00:10:39] [INFO] [AbilitySystem] Fetyue is planning to use oblation on null
+[2025-05-01 00:10:39] [INFO] [AbilitySystem] Updated line of sight for Fetyue, viewing 0 tiles
+[2025-05-01 00:10:39] [INFO] [AbilitySystem] Updated area of effect for Fetyue viewing 0 tiles
+[2025-05-01 00:10:39] [INFO] [AbilityDamageReport] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:39] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:39] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-01 00:10:39] [INFO] [CombatSystem] Started constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:39] [INFO] [CombatSystem] Finished constructing damage mappings for Fetyue to use oblation
+[2025-05-01 00:10:39] [INFO] [CombatSystem] Started constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:39] [INFO] [CombatSystem] Finished constructing cost mappings for Fetyue to use oblation
+[2025-05-01 00:10:39] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel

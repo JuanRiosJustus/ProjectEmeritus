@@ -1,0 +1,273 @@
+[2025-05-13 20:08:17] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-13 20:08:17] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-13 20:08:17] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-13 20:08:17] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-13 20:08:17] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-13 20:08:17] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-13 20:08:17] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-13 20:08:17] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-13 20:08:17] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-13 20:08:17] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-13 20:08:17] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-13 20:08:17] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-13 20:08:18] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-13 20:08:18] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-13 20:08:18] [INFO] [Component] Setting dragon_Hypi_382739a0-b7dd-43a6-8bd0-ab861d301fb1 on to {"row":3,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Hypi_382739a0-b7dd-43a6-8bd0-ab861d301fb1","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit dragon_Hypi_382739a0-b7dd-43a6-8bd0-ab861d301fb1 into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting dark_dragon_Gadx_9e97328f-a460-47eb-8b5b-c0b53f6583c3 on to {"row":0,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dark_dragon_Gadx_9e97328f-a460-47eb-8b5b-c0b53f6583c3","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit dark_dragon_Gadx_9e97328f-a460-47eb-8b5b-c0b53f6583c3 into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting dragon_Robave_b5e7674a-251c-437b-baf7-b4422804f376 on to {"row":5,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Robave_b5e7674a-251c-437b-baf7-b4422804f376","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit dragon_Robave_b5e7674a-251c-437b-baf7-b4422804f376 into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting earth_dragon_Huky_ac9dbd96-2959-4b91-802c-e75b5d50e9b7 on to {"row":6,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Huky_ac9dbd96-2959-4b91-802c-e75b5d50e9b7","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit earth_dragon_Huky_ac9dbd96-2959-4b91-802c-e75b5d50e9b7 into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting earth_dragon_Fixq_660ad00a-8203-4b19-ae6f-e57381beec57 on to {"row":2,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"earth_dragon_Fixq_660ad00a-8203-4b19-ae6f-e57381beec57","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit earth_dragon_Fixq_660ad00a-8203-4b19-ae6f-e57381beec57 into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting earth_dragon_Myhber_fc417da2-a139-4fc7-89e4-ce8eb4ac0b3a on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Myhber_fc417da2-a139-4fc7-89e4-ce8eb4ac0b3a","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit earth_dragon_Myhber_fc417da2-a139-4fc7-89e4-ce8eb4ac0b3a into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting water_dragon_Pihf_5e063217-8656-424d-bfd6-f7fe0f39cd90 on to {"row":4,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"water_dragon_Pihf_5e063217-8656-424d-bfd6-f7fe0f39cd90","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit water_dragon_Pihf_5e063217-8656-424d-bfd6-f7fe0f39cd90 into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e on to {"row":5,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223 on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223 into queue
+[2025-05-13 20:08:18] [INFO] [Component] Setting air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61 on to {"row":3,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61","structure":""}.
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Added unit air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61 into queue
+[2025-05-13 20:08:18] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-13 20:08:18] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-13 20:08:18] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-13 20:08:18] [INFO] [FontPool] Started initializing FontPool
+[2025-05-13 20:08:18] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-13 20:08:18] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-13 20:08:18] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-13 20:08:18] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-13 20:08:18] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-13 20:08:18] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:18] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-13 20:08:18] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:18] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:18] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:18] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-13 20:08:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-13 20:08:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-13 20:08:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-13 20:08:19] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-13 20:08:19] [INFO] [VisualsSystem] Finished creating blurred background after 0.48652154207229614 seconds
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:19] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:19] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:19] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:19] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Aakyor is planning to use oblation on [3, 10]
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Updated area of sight for Aakyor, viewing 12 tiles
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Updated line of sight for Aakyor, viewing 3 tiles
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Updated area of effect for Aakyor viewing 1 tiles
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Started constructing cost mappings for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Finished constructing cost mappings for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Checking cost requirements for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Aakyor is able to pay for oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Started constructing cost mappings for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Finished constructing cost mappings for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Paying cost requirements for Aakyor using oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Paying 4.0 mana out of 20.0 mana to use oblation
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Used from oblation on [3, 10]
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Started constructing damage mappings for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aakyor
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] 12.5 Raw damage before modifiers for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] 12.5 damage after modifiers for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aakyor
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lugeea
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] 12.5 Raw damage after defenses for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lugeea
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] 11.363637 damage after defenses for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Aakyor
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] -4.0 Raw damage before modifiers for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] -4.0 damage after modifiers for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Aakyor
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Lugeea
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] -4.0 Raw damage after defenses for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Lugeea
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] -3.6363637 damage after defenses for oblation
+[2025-05-13 20:08:20] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Aakyor to use oblation
+[2025-05-13 20:08:20] [INFO] [CombatSystem] Started dealing damage with oblation to Lugeea 
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:20] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:21] [INFO] [MovementSystem] Updated movement range to 8 for Aakyor
+[2025-05-13 20:08:21] [INFO] [MovementSystem] Updated movement path from [5, 10] to [4, 9] for Aakyor
+[2025-05-13 20:08:21] [INFO] [Component] Setting air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e on to {"row":4,"column":9,"height":0,"collider":"","unit":"air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e","structure":""}.
+[2025-05-13 20:08:21] [INFO] [MovementSystem] Moved from [5, 10] to [4, 9]
+[2025-05-13 20:08:21] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:21] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Aakyor_e1d65bb4-1578-4866-820f-c4467f7f617e
+[2025-05-13 20:08:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-13 20:08:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Aakyor
+[2025-05-13 20:08:21] [INFO] [InputHandler] Gliding 0 camera to new tile 4_9_bd7147d0-84cd-4a77-962f-ae71140509a1
+[2025-05-13 20:08:21] [INFO] [InputHandler] Gliding 1 camera to new tile 4_9_bd7147d0-84cd-4a77-962f-ae71140509a1
+[2025-05-13 20:08:22] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223
+[2025-05-13 20:08:22] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223
+[2025-05-13 20:08:22] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:22] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-13 20:08:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-13 20:08:22] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223
+[2025-05-13 20:08:22] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223
+[2025-05-13 20:08:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-13 20:08:22] [INFO] [SelectedTilePanel] Updated selected tile display to view Zigy
+[2025-05-13 20:08:22] [INFO] [InputHandler] Gliding 0 camera to new tile 1_11_fe8ea2b0-afb7-43c4-989b-bd7ae11a0fd2
+[2025-05-13 20:08:22] [INFO] [InputHandler] Gliding 1 camera to new tile 1_11_fe8ea2b0-afb7-43c4-989b-bd7ae11a0fd2
+[2025-05-13 20:08:24] [INFO] [MovementSystem] Updated movement range to 8 for Zigy
+[2025-05-13 20:08:24] [INFO] [MovementSystem] Updated movement path from [1, 11] to [0, 11] for Zigy
+[2025-05-13 20:08:24] [INFO] [Component] Setting air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223 on to {"row":0,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"air_dragon_Zigy_e0dddc9a-1a4f-4c1f-81f1-fa1d8d7e6223","structure":""}.
+[2025-05-13 20:08:24] [INFO] [MovementSystem] Moved from [1, 11] to [0, 11]
+[2025-05-13 20:08:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-13 20:08:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Zigy
+[2025-05-13 20:08:24] [INFO] [InputHandler] Gliding 0 camera to new tile 0_11_744b03a4-50ec-4b33-8fbb-d77d5d0fc7cb
+[2025-05-13 20:08:24] [INFO] [InputHandler] Gliding 1 camera to new tile 0_11_744b03a4-50ec-4b33-8fbb-d77d5d0fc7cb
+[2025-05-13 20:08:24] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:24] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:24] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:24] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-13 20:08:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-13 20:08:24] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:24] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-13 20:08:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Lugeea
+[2025-05-13 20:08:24] [INFO] [InputHandler] Gliding 0 camera to new tile 3_10_01796204-6d9a-427e-839c-f9651003b6bc
+[2025-05-13 20:08:24] [INFO] [InputHandler] Gliding 1 camera to new tile 3_10_01796204-6d9a-427e-839c-f9651003b6bc
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Lugeea is planning to use air_attack on [4, 9]
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Updated area of sight for Lugeea, viewing 12 tiles
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Updated line of sight for Lugeea, viewing 3 tiles
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Updated area of effect for Lugeea viewing 1 tiles
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Started constructing cost mappings for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Finished constructing cost mappings for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Checking cost requirements for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Lugeea is able to pay for air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Started constructing cost mappings for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Finished constructing cost mappings for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Paying cost requirements for Lugeea using air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Used from air_attack on [4, 9]
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Lugeea_0077e50d-9293-4218-a73e-126dd58d0a61
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Started constructing damage mappings for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Lugeea
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Lugeea lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Lugeea
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Aakyor
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Aakyor defends with Same-Type-Defense-Bonus from air_attack for 15.4
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Aakyor
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] 6.0000005 damage after defenses for air_attack
+[2025-05-13 20:08:25] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Lugeea to use air_attack
+[2025-05-13 20:08:25] [INFO] [CombatSystem] Started dealing damage with air_attack to Aakyor 
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-13 20:08:25] [INFO] [AbilitySystem] Finished update updating {} because of ability

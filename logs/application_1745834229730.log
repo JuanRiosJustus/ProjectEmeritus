@@ -1,0 +1,127 @@
+[2025-04-28 02:57:09] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-28 02:57:09] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-28 02:57:09] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-28 02:57:09] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-28 02:57:09] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-28 02:57:09] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-28 02:57:09] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-28 02:57:09] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-28 02:57:09] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-28 02:57:09] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-28 02:57:09] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-28 02:57:09] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-28 02:57:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-28 02:57:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-28 02:57:10] [INFO] [Component] Setting air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5 on to {"row":0,"column":3,"height":0,"spawn_region":[],"collider":"","unit":"air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit enemy:Howa into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting water_dragon_Eiau_c40b5d18-420f-4132-ab1d-b7eafaa9014c on to {"row":5,"column":0,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Eiau_c40b5d18-420f-4132-ab1d-b7eafaa9014c","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit enemy:Eiau into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting fire_dragon_Qiqry_0c70914c-1416-4cc9-9367-414bcf994db2 on to {"row":2,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Qiqry_0c70914c-1416-4cc9-9367-414bcf994db2","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit enemy:Qiqry into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting dragon_Wonul_41a1a6b0-9648-4fee-8c47-bba14ee46587 on to {"row":4,"column":7,"height":0,"spawn_region":[],"collider":"","unit":"dragon_Wonul_41a1a6b0-9648-4fee-8c47-bba14ee46587","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit enemy:Wonul into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting light_dragon_Latiii_138ff328-4e63-4da3-8aec-8eb8950b2650 on to {"row":6,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"light_dragon_Latiii_138ff328-4e63-4da3-8aec-8eb8950b2650","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit enemy:Latiii into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting water_dragon_Uynawa_091e8706-c0d6-4975-931b-1e7618377c1a on to {"row":3,"column":1,"height":0,"spawn_region":[],"collider":"","unit":"water_dragon_Uynawa_091e8706-c0d6-4975-931b-1e7618377c1a","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit user:Uynawa into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting earth_dragon_Yuaahu_86b87cd5-4287-4644-a7c3-a32092136e60 on to {"row":2,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Yuaahu_86b87cd5-4287-4644-a7c3-a32092136e60","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit user:Yuaahu into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting earth_dragon_Qecdq_444042fd-c160-4947-999b-3879a1e519ff on to {"row":2,"column":6,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Qecdq_444042fd-c160-4947-999b-3879a1e519ff","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit user:Qecdq into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting earth_dragon_Kajan_13dff754-f12f-421b-87b7-4b6f506f483d on to {"row":4,"column":4,"height":0,"spawn_region":[],"collider":"","unit":"earth_dragon_Kajan_13dff754-f12f-421b-87b7-4b6f506f483d","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit user:Kajan into queue
+[2025-04-28 02:57:10] [INFO] [Component] Setting fire_dragon_Bekio_f5a10d8c-b594-4c53-a41e-7d3413e74bbc on to {"row":3,"column":5,"height":0,"spawn_region":[],"collider":"","unit":"fire_dragon_Bekio_f5a10d8c-b594-4c53-a41e-7d3413e74bbc","structure":""}.
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Added unit user:Bekio into queue
+[2025-04-28 02:57:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-28 02:57:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-28 02:57:10] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:57:10] [INFO] [FontPool] Started initializing FontPool
+[2025-04-28 02:57:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-28 02:57:10] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-28 02:57:10] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-28 02:57:10] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-28 02:57:10] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-28 02:57:10] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:10] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-28 02:57:10] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:10] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:10] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:57:10] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:57:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-28 02:57:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-28 02:57:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-28 02:57:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-28 02:57:10] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-28 02:57:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.4879857897758484 seconds
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:11] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:57:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:11] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:57:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:11] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Howa_362627a9-b985-4ece-9bf5-90ce432622e5
+[2025-04-28 02:57:11] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-04-28 02:57:11] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-04-28 02:57:11] [INFO] [AbilitySystem] Finished update updating {} because of ability

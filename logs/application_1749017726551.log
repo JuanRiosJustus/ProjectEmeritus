@@ -1,0 +1,259 @@
+[2025-06-03 23:15:26] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 23:15:26] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 23:15:26] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 23:15:26] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 23:15:26] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 23:15:26] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 23:15:26] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 23:15:26] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 23:15:26] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 23:15:26] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 23:15:26] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 23:15:26] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 23:15:26] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 23:15:26] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 23:15:26] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:15:26] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15 into queue
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Capoo___a853f5e8-7576-4196-bf4a-8251fbc9463b on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Capoo___a853f5e8-7576-4196-bf4a-8251fbc9463b","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Capoo___a853f5e8-7576-4196-bf4a-8251fbc9463b into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Dujjs___69df4336-e83c-44d2-9e8c-879365d8bdca on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Dujjs___69df4336-e83c-44d2-9e8c-879365d8bdca","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Dujjs___69df4336-e83c-44d2-9e8c-879365d8bdca into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Fory___6ffc5558-e5e0-4f8d-b418-f124debb9201 on to {"row":6,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Fory___6ffc5558-e5e0-4f8d-b418-f124debb9201","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Fory___6ffc5558-e5e0-4f8d-b418-f124debb9201 into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Lyiu___22534194-f27b-4a0c-b1ef-dd189c892cb3 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_fire_dragon___NICKNAME_Lyiu___22534194-f27b-4a0c-b1ef-dd189c892cb3","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_fire_dragon___NICKNAME_Lyiu___22534194-f27b-4a0c-b1ef-dd189c892cb3 into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Oisue___363dc0f4-440b-46f8-afda-4ed846cadd61 on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Oisue___363dc0f4-440b-46f8-afda-4ed846cadd61","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Oisue___363dc0f4-440b-46f8-afda-4ed846cadd61 into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Mozf___7967e285-4818-4d80-94bd-4a96caf76802 on to {"row":3,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Mozf___7967e285-4818-4d80-94bd-4a96caf76802","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Mozf___7967e285-4818-4d80-94bd-4a96caf76802 into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Gooi___2e457360-98dd-44db-a3ea-9d7b3ffefeac on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Gooi___2e457360-98dd-44db-a3ea-9d7b3ffefeac","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Gooi___2e457360-98dd-44db-a3ea-9d7b3ffefeac into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Eylmio___51618640-305f-4291-9d16-707d80d2392d on to {"row":2,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Eylmio___51618640-305f-4291-9d16-707d80d2392d","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Eylmio___51618640-305f-4291-9d16-707d80d2392d into queue
+[2025-06-03 23:15:29] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5 on to {"row":0,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:15:29] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5 into queue
+[2025-06-03 23:15:29] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-03 23:15:29] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-03 23:15:29] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-03 23:15:29] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 23:15:29] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 23:15:30] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:30] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 23:15:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 23:15:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-03 23:15:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-03 23:15:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 23:15:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-03 23:15:30] [INFO] [VisualsSystem] Finished creating blurred background after 0.4876707196235657 seconds
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilityPanel] Updating ability selection for UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:30] [INFO] [AbilityPanel] Finished ability selection for UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:30] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 23:15:30] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 23:15:30] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 23:15:33] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___8a7da05d-5b8a-43cc-9cf1-56be5c701e01
+[2025-06-03 23:15:33] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_1___8a7da05d-5b8a-43cc-9cf1-56be5c701e01
+[2025-06-03 23:15:33] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:33] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Wiwe
+[2025-06-03 23:15:40] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_1___8a7da05d-5b8a-43cc-9cf1-56be5c701e01
+[2025-06-03 23:15:40] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-03 23:15:40] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-03 23:15:40] [INFO] [MovementSystem] Updated movement range to 6 for Wiwe
+[2025-06-03 23:15:40] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 5] for Wiwe
+[2025-06-03 23:15:40] [INFO] [MovementSystem] Updated movement range to 6 for Wiwe
+[2025-06-03 23:15:40] [INFO] [MovementSystem] Updated movement path from [3, 1] to [6, 5] for Wiwe
+[2025-06-03 23:15:42] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 0] for Wiwe
+[2025-06-03 23:15:42] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 0] for Wiwe
+[2025-06-03 23:15:42] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 1] for Wiwe
+[2025-06-03 23:15:42] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 1] for Wiwe
+[2025-06-03 23:15:43] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 2] for Wiwe
+[2025-06-03 23:15:43] [INFO] [MovementSystem] Updated movement path from [3, 1] to [4, 2] for Wiwe
+[2025-06-03 23:15:43] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15 on to {"row":4,"column":2,"base_elevation":0,"unit":"UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:15:43] [INFO] [MovementSystem] Moved from [3, 1] to [4, 2]
+[2025-06-03 23:15:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Wiwe
+[2025-06-03 23:15:43] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:43] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:48] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-03 23:15:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-03 23:15:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-03 23:15:48] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity null
+[2025-06-03 23:15:48] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity null
+[2025-06-03 23:15:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-03 23:15:50] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:50] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:50] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:50] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Wiwe
+[2025-06-03 23:15:53] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:53] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:53] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:15:53] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:15:53] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:15:53] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:15:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Noswy
+[2025-06-03 23:15:54] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:54] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:54] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:54] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:15:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Wiwe
+[2025-06-03 23:15:58] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:58] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:15:59] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:15:59] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:15:59] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:15:59] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:15:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:15:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Noswy
+[2025-06-03 23:16:00] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:00] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:00] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:16:00] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:16:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Wiwe
+[2025-06-03 23:16:00] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:00] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:01] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:16:01] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:16:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:16:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:16:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Noswy
+[2025-06-03 23:16:01] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_6___COLUMN_1___6920ba85-9d56-47de-9130-6fa76cc634eb
+[2025-06-03 23:16:01] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_6___COLUMN_1___6920ba85-9d56-47de-9130-6fa76cc634eb
+[2025-06-03 23:16:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Fory___6ffc5558-e5e0-4f8d-b418-f124debb9201
+[2025-06-03 23:16:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Fory___6ffc5558-e5e0-4f8d-b418-f124debb9201
+[2025-06-03 23:16:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Fory
+[2025-06-03 23:16:01] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_1___7b9a15c9-d195-490d-a2c3-85984bc925c3
+[2025-06-03 23:16:01] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_1___7b9a15c9-d195-490d-a2c3-85984bc925c3
+[2025-06-03 23:16:01] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Dujjs___69df4336-e83c-44d2-9e8c-879365d8bdca
+[2025-06-03 23:16:01] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Dujjs___69df4336-e83c-44d2-9e8c-879365d8bdca
+[2025-06-03 23:16:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Dujjs
+[2025-06-03 23:16:02] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_1___77654111-7988-4c87-973f-10222be39a34
+[2025-06-03 23:16:02] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_1___77654111-7988-4c87-973f-10222be39a34
+[2025-06-03 23:16:02] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Capoo___a853f5e8-7576-4196-bf4a-8251fbc9463b
+[2025-06-03 23:16:02] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Capoo___a853f5e8-7576-4196-bf4a-8251fbc9463b
+[2025-06-03 23:16:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Capoo
+[2025-06-03 23:16:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_1___77654111-7988-4c87-973f-10222be39a34
+[2025-06-03 23:16:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_1___77654111-7988-4c87-973f-10222be39a34
+[2025-06-03 23:16:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:16:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:16:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Wiwe
+[2025-06-03 23:16:04] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_1___77654111-7988-4c87-973f-10222be39a34
+[2025-06-03 23:16:04] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_1___77654111-7988-4c87-973f-10222be39a34
+[2025-06-03 23:16:04] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Capoo___a853f5e8-7576-4196-bf4a-8251fbc9463b
+[2025-06-03 23:16:04] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Capoo___a853f5e8-7576-4196-bf4a-8251fbc9463b
+[2025-06-03 23:16:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Capoo
+[2025-06-03 23:16:05] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_1___7b9a15c9-d195-490d-a2c3-85984bc925c3
+[2025-06-03 23:16:05] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_1___7b9a15c9-d195-490d-a2c3-85984bc925c3
+[2025-06-03 23:16:05] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Dujjs___69df4336-e83c-44d2-9e8c-879365d8bdca
+[2025-06-03 23:16:05] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Dujjs___69df4336-e83c-44d2-9e8c-879365d8bdca
+[2025-06-03 23:16:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Dujjs
+[2025-06-03 23:16:06] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_2___COLUMN_1___7b9a15c9-d195-490d-a2c3-85984bc925c3
+[2025-06-03 23:16:06] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_2___COLUMN_1___7b9a15c9-d195-490d-a2c3-85984bc925c3
+[2025-06-03 23:16:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_12___a8c440ae-fd4a-4cba-ab86-05289ab6d060
+[2025-06-03 23:16:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_12___a8c440ae-fd4a-4cba-ab86-05289ab6d060
+[2025-06-03 23:16:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Mozf___7967e285-4818-4d80-94bd-4a96caf76802
+[2025-06-03 23:16:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Mozf___7967e285-4818-4d80-94bd-4a96caf76802
+[2025-06-03 23:16:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Mozf
+[2025-06-03 23:16:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_1___c8f4642c-07e3-4b42-9888-43573176132a
+[2025-06-03 23:16:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_1___c8f4642c-07e3-4b42-9888-43573176132a
+[2025-06-03 23:16:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Lyiu___22534194-f27b-4a0c-b1ef-dd189c892cb3
+[2025-06-03 23:16:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_fire_dragon___NICKNAME_Lyiu___22534194-f27b-4a0c-b1ef-dd189c892cb3
+[2025-06-03 23:16:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Lyiu
+[2025-06-03 23:16:08] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:16:08] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:16:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:16:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Noswy___2c51d1c8-75c2-49aa-8277-cf5a37b8b8d5
+[2025-06-03 23:16:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Noswy
+[2025-06-03 23:16:09] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:16:09] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_0___COLUMN_12___f13fbb72-fe75-4a7d-be19-6b65609ee8b4
+[2025-06-03 23:16:09] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:09] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_2___0e037139-0e17-406d-bb6d-6c211ffbff73
+[2025-06-03 23:16:09] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:16:09] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Wiwe___f0b2310f-8f17-4a05-905c-82550b3d0d15
+[2025-06-03 23:16:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-03 23:16:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Wiwe

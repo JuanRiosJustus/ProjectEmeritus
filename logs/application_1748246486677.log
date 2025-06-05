@@ -1,0 +1,23 @@
+[2025-05-26 01:01:26] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-26 01:01:26] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-26 01:01:26] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-26 01:01:26] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-26 01:01:26] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-26 01:01:26] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-26 01:01:26] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-26 01:01:26] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-26 01:01:26] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-26 01:01:26] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-26 01:01:26] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-26 01:01:26] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-26 01:01:27] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-26 01:01:27] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-26 01:01:27] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Qitfu___076232cd-fff1-48a1-8e35-08beb4bec36f on to {"row":2,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Qitfu___076232cd-fff1-48a1-8e35-08beb4bec36f","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 01:01:27] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Qitfu___076232cd-fff1-48a1-8e35-08beb4bec36f into queue
+[2025-05-26 01:01:27] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Uewiu___61ad8a4c-b47a-403f-8f4c-875139c84413 on to {"row":2,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Uewiu___61ad8a4c-b47a-403f-8f4c-875139c84413","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 01:01:27] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Uewiu___61ad8a4c-b47a-403f-8f4c-875139c84413 into queue
+[2025-05-26 01:01:27] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Niaumu___80a3ffed-8345-4155-bef9-622d2dc190c4 on to {"row":6,"column":1,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Niaumu___80a3ffed-8345-4155-bef9-622d2dc190c4","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 01:01:27] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Niaumu___80a3ffed-8345-4155-bef9-622d2dc190c4 into queue
+[2025-05-26 01:01:27] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Jatae___bf91d32b-95de-45d4-8827-193d4f73c451 on to {"row":0,"column":0,"base_elevation":-3,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Jatae___bf91d32b-95de-45d4-8827-193d4f73c451","layers":{"empty":false},"total_elevation":4}.
+[2025-05-26 01:01:27] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Jatae___bf91d32b-95de-45d4-8827-193d4f73c451 into queue
+[2025-05-26 01:01:27] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Waqz___c03c5cb9-c749-4993-abd0-7ad44620fa18 on to {"row":9,"

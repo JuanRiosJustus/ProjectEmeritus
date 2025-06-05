@@ -1,0 +1,270 @@
+[2025-05-04 13:48:05] [INFO] [UnitTable] Started initializing UnitTable
+[2025-05-04 13:48:05] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-05-04 13:48:05] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-05-04 13:48:05] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-05-04 13:48:05] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-05-04 13:48:05] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-05-04 13:48:05] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-05-04 13:48:05] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-05-04 13:48:05] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-05-04 13:48:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-05-04 13:48:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-05-04 13:48:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-05-04 13:48:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-05-04 13:48:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-05-04 13:48:05] [INFO] [Component] Setting dragon_Zeic_51b5e2e0-d342-4005-aa8d-001d7ba6d332 on to {"row":0,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"dragon_Zeic_51b5e2e0-d342-4005-aa8d-001d7ba6d332","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit dragon_Zeic_51b5e2e0-d342-4005-aa8d-001d7ba6d332 into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting light_dragon_Kuora_0ce0e210-33fb-4d0d-8379-a56e0e906697 on to {"row":4,"column":0,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Kuora_0ce0e210-33fb-4d0d-8379-a56e0e906697","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit light_dragon_Kuora_0ce0e210-33fb-4d0d-8379-a56e0e906697 into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting light_dragon_Noad_9b1f9095-239e-4c26-b9f2-a2d3d6f1c3ab on to {"row":2,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"light_dragon_Noad_9b1f9095-239e-4c26-b9f2-a2d3d6f1c3ab","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit light_dragon_Noad_9b1f9095-239e-4c26-b9f2-a2d3d6f1c3ab into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4 on to {"row":1,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4 into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting fire_dragon_Aukufh_123957ef-f0ae-48fe-998d-6e18a893b9a6 on to {"row":6,"column":1,"height":0,"spawn_region":"Left","collider":"","unit":"fire_dragon_Aukufh_123957ef-f0ae-48fe-998d-6e18a893b9a6","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit fire_dragon_Aukufh_123957ef-f0ae-48fe-998d-6e18a893b9a6 into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting dark_dragon_Wiwpc_de99dd47-31a3-4f9a-989f-5f3d865058e5 on to {"row":0,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dark_dragon_Wiwpc_de99dd47-31a3-4f9a-989f-5f3d865058e5","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit dark_dragon_Wiwpc_de99dd47-31a3-4f9a-989f-5f3d865058e5 into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting earth_dragon_Oyywa_0f0cc904-a64e-4247-a6c9-ca00c1d8b85f on to {"row":1,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Oyywa_0f0cc904-a64e-4247-a6c9-ca00c1d8b85f","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit earth_dragon_Oyywa_0f0cc904-a64e-4247-a6c9-ca00c1d8b85f into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting dragon_Marvho_3feed3e4-71fb-4b94-a8fb-315420fe346f on to {"row":7,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Marvho_3feed3e4-71fb-4b94-a8fb-315420fe346f","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit dragon_Marvho_3feed3e4-71fb-4b94-a8fb-315420fe346f into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting earth_dragon_Toyboi_ad3692cd-e9a3-4f08-8e8f-6aadfa4499b5 on to {"row":2,"column":11,"height":0,"spawn_region":"Right","collider":"","unit":"earth_dragon_Toyboi_ad3692cd-e9a3-4f08-8e8f-6aadfa4499b5","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit earth_dragon_Toyboi_ad3692cd-e9a3-4f08-8e8f-6aadfa4499b5 into queue
+[2025-05-04 13:48:05] [INFO] [Component] Setting dragon_Zyjt_56a8e091-2cf6-4553-b84a-c9bc3ce0ab1b on to {"row":4,"column":10,"height":0,"spawn_region":"Right","collider":"","unit":"dragon_Zyjt_56a8e091-2cf6-4553-b84a-c9bc3ce0ab1b","structure":""}.
+[2025-05-04 13:48:05] [INFO] [SpeedQueue] Added unit dragon_Zyjt_56a8e091-2cf6-4553-b84a-c9bc3ce0ab1b into queue
+[2025-05-04 13:48:05] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-05-04 13:48:05] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-05-04 13:48:05] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-05-04 13:48:05] [INFO] [FontPool] Started initializing FontPool
+[2025-05-04 13:48:05] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-05-04 13:48:05] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-05-04 13:48:05] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-05-04 13:48:05] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-05-04 13:48:05] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-05-04 13:48:06] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [SpeedQueue] Speed queue updated.
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-05-04 13:48:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-05-04 13:48:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 13:48:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-05-04 13:48:06] [INFO] [VisualsSystem] Started creating blurred background
+[2025-05-04 13:48:06] [INFO] [VisualsSystem] Finished creating blurred background after 0.4862823486328125 seconds
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Updating ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [AbilityPanel] Finished ability selection for air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:06] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:48:07] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_4001d633-88ef-4313-9105-a54092e8fc66
+[2025-05-04 13:48:07] [INFO] [InputHandler] Gliding 1 camera to new tile 1_1_4001d633-88ef-4313-9105-a54092e8fc66
+[2025-05-04 13:48:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:48:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 13:48:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Gyqo
+[2025-05-04 13:48:08] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_4001d633-88ef-4313-9105-a54092e8fc66
+[2025-05-04 13:48:08] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:08] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [AbilityPanel] Selecting air_attack
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Gyqo is planning to use air_attack on [4, 6]
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated area of sight for Gyqo, viewing 5 tiles
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated line of sight for Gyqo, viewing 2 tiles
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated area of effect for Gyqo viewing 1 tiles
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Gyqo is planning to use air_attack on [4, 5]
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated line of sight for Gyqo, viewing 2 tiles
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated area of effect for Gyqo viewing 1 tiles
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Gyqo is planning to use air_attack on [4, 4]
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated line of sight for Gyqo, viewing 2 tiles
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated area of effect for Gyqo viewing 1 tiles
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Gyqo is planning to use air_attack on [3, 3]
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated line of sight for Gyqo, viewing 2 tiles
+[2025-05-04 13:48:09] [INFO] [AbilitySystem] Updated area of effect for Gyqo viewing 1 tiles
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:09] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Gyqo is planning to use air_attack on [3, 2]
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Updated line of sight for Gyqo, viewing 2 tiles
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Updated area of effect for Gyqo viewing 1 tiles
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Gyqo is planning to use air_attack on [2, 2]
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Updated line of sight for Gyqo, viewing 2 tiles
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Updated area of effect for Gyqo viewing 1 tiles
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Gyqo is planning to use air_attack on [2, 1]
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Updated line of sight for Gyqo, viewing 2 tiles
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Updated area of effect for Gyqo viewing 1 tiles
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Gyqo
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Gyqo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Gyqo
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Noad
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Noad
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [GreaterAbilityPanel] Started updating Greater Ability Information Panel
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [GreaterAbilityPanel] Finished updating Greater Ability Information Panel
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Checking cost requirements for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Gyqo is able to pay for air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Finished constructing cost mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Paying cost requirements for Gyqo using air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Used from air_attack on [2, 1]
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Gyqo
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Gyqo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Gyqo
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Noad
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Noad
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [CombatSystem] Started dealing damage with air_attack to Noad 
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started constructing damage mappings after defense Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started calculating damage after modifiers for Gyqo
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 10.0 Raw damage before modifiers for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Gyqo lands a Same-Type-Attack-Bonus with air_attack, for 12.0
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 22.0 damage after modifiers for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished calculating damage after modifiers for Gyqo
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Started calculating damage after defenses for Noad
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 22.0 Raw damage after defenses for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished calculating damage after defenses for Noad
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] 20.0 damage after defenses for air_attack
+[2025-05-04 13:48:10] [INFO] [AbilityDamageReport] Finished constructing damage mappings after for Gyqo to use air_attack
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-05-04 13:48:10] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-05-04 13:49:31] [INFO] [InputHandler] Gliding 0 camera to new tile 6_1_f1c5d785-f5d0-40d4-8c1e-8093e772bfd0
+[2025-05-04 13:49:31] [INFO] [InputHandler] Gliding 1 camera to new tile 6_1_f1c5d785-f5d0-40d4-8c1e-8093e772bfd0
+[2025-05-04 13:49:31] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity fire_dragon_Aukufh_123957ef-f0ae-48fe-998d-6e18a893b9a6
+[2025-05-04 13:49:31] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity fire_dragon_Aukufh_123957ef-f0ae-48fe-998d-6e18a893b9a6
+[2025-05-04 13:49:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 13:49:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Aukufh
+[2025-05-04 13:49:32] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_4001d633-88ef-4313-9105-a54092e8fc66
+[2025-05-04 13:49:32] [INFO] [InputHandler] Gliding 1 camera to new tile 1_1_4001d633-88ef-4313-9105-a54092e8fc66
+[2025-05-04 13:49:32] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:49:32] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity air_dragon_Gyqo_57315acb-3c46-4d4e-be1b-d417765511c4
+[2025-05-04 13:49:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-05-04 13:49:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Gyqo

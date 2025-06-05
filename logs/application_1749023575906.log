@@ -1,0 +1,210 @@
+[2025-06-04 00:52:55] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-04 00:52:55] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-04 00:52:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-04 00:52:56] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-04 00:52:56] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-04 00:52:56] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-04 00:52:56] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-04 00:52:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-04 00:52:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-04 00:52:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-04 00:52:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-04 00:52:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-04 00:52:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-04 00:52:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938 on to {"row":1,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932 on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Miqiai___28b7e522-2d51-4e06-ad6a-343db1f1ef58 on to {"row":0,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Miqiai___28b7e522-2d51-4e06-ad6a-343db1f1ef58","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Miqiai___28b7e522-2d51-4e06-ad6a-343db1f1ef58 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Eaufyo___f78cb536-62b5-494f-8c39-288e70327163 on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Eaufyo___f78cb536-62b5-494f-8c39-288e70327163","layers":{"empty":false},"total_elevation":8}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Eaufyo___f78cb536-62b5-494f-8c39-288e70327163 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Yudao___d3e0e5d7-2626-4122-8b86-03932c489028 on to {"row":9,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_water_dragon___NICKNAME_Yudao___d3e0e5d7-2626-4122-8b86-03932c489028","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Yudao___d3e0e5d7-2626-4122-8b86-03932c489028 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Uejq___bedac701-f68f-402c-a5ff-85caa95f7c52 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_light_dragon___NICKNAME_Uejq___bedac701-f68f-402c-a5ff-85caa95f7c52","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Uejq___bedac701-f68f-402c-a5ff-85caa95f7c52 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Eilxyi___4e43eb8d-10d4-479d-b81d-14be34af0865 on to {"row":7,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Eilxyi___4e43eb8d-10d4-479d-b81d-14be34af0865","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Eilxyi___4e43eb8d-10d4-479d-b81d-14be34af0865 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Maloeh___5dac7679-4fc8-424a-b990-8bf1026d77af on to {"row":4,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Maloeh___5dac7679-4fc8-424a-b990-8bf1026d77af","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Maloeh___5dac7679-4fc8-424a-b990-8bf1026d77af into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208 on to {"row":5,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208 into queue
+[2025-06-04 00:52:56] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Vubuq___d8570d56-d3b5-4afd-9edb-b6d1bb70e557 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Vubuq___d8570d56-d3b5-4afd-9edb-b6d1bb70e557","layers":{"empty":false},"total_elevation":9}.
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Vubuq___d8570d56-d3b5-4afd-9edb-b6d1bb70e557 into queue
+[2025-06-04 00:52:56] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-04 00:52:56] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-04 00:52:56] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-04 00:52:56] [INFO] [FontPool] Started initializing FontPool
+[2025-06-04 00:52:56] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-04 00:52:56] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:52:56] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-04 00:52:56] [INFO] [UpdateSystem] ============================== New Round ================================
+[2025-06-04 00:52:56] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938
+[2025-06-04 00:52:56] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938
+[2025-06-04 00:52:56] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 00:52:56] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 00:52:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 00:53:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 00:53:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-06-04 00:53:00] [INFO] [VisualsSystem] Started creating blurred background
+[2025-06-04 00:53:00] [INFO] [VisualsSystem] Finished creating blurred background after 0.49384376406669617 seconds
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilityPanel] Updating ability selection for UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938
+[2025-06-04 00:53:00] [INFO] [AbilityPanel] Finished ability selection for UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938
+[2025-06-04 00:53:00] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 00:53:00] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-04 00:53:00] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-04 00:53:03] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_0___ee283210-046a-46f6-a5df-ea880cf74cda
+[2025-06-04 00:53:03] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_1___COLUMN_0___ee283210-046a-46f6-a5df-ea880cf74cda
+[2025-06-04 00:53:03] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938
+[2025-06-04 00:53:03] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938
+[2025-06-04 00:53:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Jetxi
+[2025-06-04 00:53:04] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_1___COLUMN_0___ee283210-046a-46f6-a5df-ea880cf74cda
+[2025-06-04 00:53:04] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-04 00:53:04] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement range to 6 for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 5] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement range to 6 for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 5] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 6] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 6] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 5] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 5] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 4] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 4] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 3] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [5, 3] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 2] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 2] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 1] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 1] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 0] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [4, 0] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 0] for Jetxi
+[2025-06-04 00:53:04] [INFO] [MovementSystem] Updated movement path from [1, 0] to [3, 0] for Jetxi
+[2025-06-04 00:53:05] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938 on to {"row":3,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Jetxi___8bc73d94-f7ad-4296-9308-819fc9466938","layers":{"empty":false},"total_elevation":7}.
+[2025-06-04 00:53:05] [INFO] [MovementSystem] Moved from [1, 0] to [3, 0]
+[2025-06-04 00:53:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Jetxi
+[2025-06-04 00:53:05] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_3___COLUMN_0___5db484fe-8c65-488f-bfdf-2d595fb37c18
+[2025-06-04 00:53:05] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_3___COLUMN_0___5db484fe-8c65-488f-bfdf-2d595fb37c18
+[2025-06-04 00:53:07] [INFO] [AbilityPanel] Updating ability selection for UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:07] [INFO] [AbilityPanel] Finished ability selection for UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:07] [INFO] [MovementPanel] Started update to Movement Information panel.
+[2025-06-04 00:53:07] [INFO] [MovementPanel] Finished update to Movement Information panel.
+[2025-06-04 00:53:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-06-04 00:53:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-06-04 00:53:07] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:07] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Heqa
+[2025-06-04 00:53:07] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___276ed704-ca5a-4fdb-98b5-62ef8f3d2048
+[2025-06-04 00:53:07] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_0___276ed704-ca5a-4fdb-98b5-62ef8f3d2048
+[2025-06-04 00:53:08] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:08] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:08] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208
+[2025-06-04 00:53:08] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208
+[2025-06-04 00:53:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Xulot
+[2025-06-04 00:53:09] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:09] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:10] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___276ed704-ca5a-4fdb-98b5-62ef8f3d2048
+[2025-06-04 00:53:10] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_0___276ed704-ca5a-4fdb-98b5-62ef8f3d2048
+[2025-06-04 00:53:10] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:10] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Heqa
+[2025-06-04 00:53:11] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:11] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:11] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208
+[2025-06-04 00:53:11] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208
+[2025-06-04 00:53:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:11] [INFO] [SelectedTilePanel] Updated selected tile display to view Xulot
+[2025-06-04 00:53:12] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___276ed704-ca5a-4fdb-98b5-62ef8f3d2048
+[2025-06-04 00:53:12] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_0___276ed704-ca5a-4fdb-98b5-62ef8f3d2048
+[2025-06-04 00:53:12] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:12] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_dark_dragon___NICKNAME_Heqa___1bacf9e2-ac34-4a52-8f35-7473879a6932
+[2025-06-04 00:53:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Heqa
+[2025-06-04 00:53:13] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_4___COLUMN_12___ecd5be2f-5bce-4918-9af1-6e52609b14ca
+[2025-06-04 00:53:13] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_4___COLUMN_12___ecd5be2f-5bce-4918-9af1-6e52609b14ca
+[2025-06-04 00:53:13] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Maloeh___5dac7679-4fc8-424a-b990-8bf1026d77af
+[2025-06-04 00:53:13] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_water_dragon___NICKNAME_Maloeh___5dac7679-4fc8-424a-b990-8bf1026d77af
+[2025-06-04 00:53:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Maloeh
+[2025-06-04 00:53:15] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:15] [INFO] [InputHandler] Gliding 1 camera to new tile ROW_5___COLUMN_12___45942e7c-153d-421a-a2ee-709e4d46605a
+[2025-06-04 00:53:15] [INFO] [StatisticsPanel] Started updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208
+[2025-06-04 00:53:15] [INFO] [StatisticsPanel] Finished updating Statistics Information Panel for entity UNIT_air_dragon___NICKNAME_Xulot___51c1f3e1-44e1-40af-8b76-e996234e5208
+[2025-06-04 00:53:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-06-04 00:53:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Xulot
+[2025-06-04 00:53:17] [INFO] [InputHandler] Gliding 0 camera to new tile ROW_5___COLUMN_0___276ed704-ca5a-4fdb-98b5-62ef8f3d2048
+[2025-06-04 00:53:17] [INFO] [StatisticsPanel] Started updating statistics information panel
+[2025-06-04 00:53:17] [INFO] [StatisticsPanel] Finished updating statistics information panel
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement range to 8 for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 12] for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement range to 8 for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 12] for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 11] for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 11] for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 10] for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 10] for Heqa
+[2025-06-04 00:53:17] [INFO] [MovementSystem] Updated movement path from [5, 0] to [7, 9] for Heqa
+[2025-06-04 00:53:17] [INFO] [Mo

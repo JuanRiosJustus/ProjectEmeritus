@@ -1,0 +1,41 @@
+[2025-06-03 23:18:24] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 23:18:24] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 23:18:24] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 23:18:24] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 23:18:24] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 23:18:24] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 23:18:24] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 23:18:24] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 23:18:24] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 23:18:24] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 23:18:24] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 23:18:24] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 23:18:24] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 23:18:24] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Cusjey___80003fa0-7f61-4b9b-9276-18736e3bd39f on to {"row":5,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Cusjey___80003fa0-7f61-4b9b-9276-18736e3bd39f","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Cusjey___80003fa0-7f61-4b9b-9276-18736e3bd39f into queue
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Speed queue updated.
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Fuvza___6d5e4723-7c8c-41f8-88d5-b9066ef4c6dc on to {"row":0,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dragon___NICKNAME_Fuvza___6d5e4723-7c8c-41f8-88d5-b9066ef4c6dc","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Fuvza___6d5e4723-7c8c-41f8-88d5-b9066ef4c6dc into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Suje___e8128ba0-0763-4bde-b70c-503ee74f0a45 on to {"row":4,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Suje___e8128ba0-0763-4bde-b70c-503ee74f0a45","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_light_dragon___NICKNAME_Suje___e8128ba0-0763-4bde-b70c-503ee74f0a45 into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Jymou___d0c491f7-90a2-41ec-8a45-f892cf8c795d on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Jymou___d0c491f7-90a2-41ec-8a45-f892cf8c795d","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Jymou___d0c491f7-90a2-41ec-8a45-f892cf8c795d into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Sere___d3503909-ef38-43ee-be07-fdf760ae0d0a on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Sere___d3503909-ef38-43ee-be07-fdf760ae0d0a","layers":{"empty":false},"total_elevation":7}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_earth_dragon___NICKNAME_Sere___d3503909-ef38-43ee-be07-fdf760ae0d0a into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Nowau___a0671916-9003-4883-b2ff-ace7be94dde1 on to {"row":2,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_air_dragon___NICKNAME_Nowau___a0671916-9003-4883-b2ff-ace7be94dde1","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_air_dragon___NICKNAME_Nowau___a0671916-9003-4883-b2ff-ace7be94dde1 into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jaxoou___8bc3729f-98d7-457d-b580-4f92a3882c36 on to {"row":9,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Jaxoou___8bc3729f-98d7-457d-b580-4f92a3882c36","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Jaxoou___8bc3729f-98d7-457d-b580-4f92a3882c36 into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Eoukao___471e1da9-04fb-4bb7-a6d0-9d983fa6bc02 on to {"row":9,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Eoukao___471e1da9-04fb-4bb7-a6d0-9d983fa6bc02","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_dark_dragon___NICKNAME_Eoukao___471e1da9-04fb-4bb7-a6d0-9d983fa6bc02 into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Gytoj___1b2ef8b9-8a3a-46c0-93ae-2ca0b0b4c1e0 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Gytoj___1b2ef8b9-8a3a-46c0-93ae-2ca0b0b4c1e0","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_water_dragon___NICKNAME_Gytoj___1b2ef8b9-8a3a-46c0-93ae-2ca0b0b4c1e0 into queue
+[2025-06-03 23:18:25] [INFO] [Component] Setting UNIT_dragon___NICKNAME_Tycepo___e0e173c1-a1a8-4455-8006-e5565fa7fe08 on to {"row":8,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dragon___NICKNAME_Tycepo___e0e173c1-a1a8-4455-8006-e5565fa7fe08","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 23:18:25] [INFO] [SpeedQueue] Added unit UNIT_dragon___NICKNAME_Tycepo___e0e173c1-a1a8-4455-8006-e5565fa7fe08 into queue
+[2025-06-03 23:18:25] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-03 23:18:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-03 23:18:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-03 23:18:25] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 23:18:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 23:18:25] [INFO] 

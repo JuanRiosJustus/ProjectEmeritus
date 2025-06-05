@@ -1,0 +1,46 @@
+[2025-06-03 22:05:53] [INFO] [UnitTable] Started initializing UnitTable
+[2025-06-03 22:05:53] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-06-03 22:05:53] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-06-03 22:05:53] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-06-03 22:05:53] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-06-03 22:05:53] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-06-03 22:05:53] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-06-03 22:05:53] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-06-03 22:05:53] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-06-03 22:05:53] [INFO] [AssetPool] Started initializing AssetPool
+[2025-06-03 22:05:53] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-06-03 22:05:53] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-06-03 22:05:53] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-06-03 22:05:53] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_earth_dragon___NICKNAME_Qyseiu___5edcf9b4-504a-44cf-b863-9c812d29e813 on to {"row":3,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_earth_dragon___NICKNAME_Qyseiu___5edcf9b4-504a-44cf-b863-9c812d29e813","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Biact___3722cc96-3846-4231-98e4-561b45b89e3a on to {"row":9,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Biact___3722cc96-3846-4231-98e4-561b45b89e3a","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_light_dragon___NICKNAME_Keadqe___efab2d0c-ed03-45c2-ab5b-8e8a3e8c29bd on to {"row":2,"column":0,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_light_dragon___NICKNAME_Keadqe___efab2d0c-ed03-45c2-ab5b-8e8a3e8c29bd","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Zohawg___7c134ea5-062b-4c59-89f3-89245f202bfc on to {"row":2,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_dark_dragon___NICKNAME_Zohawg___7c134ea5-062b-4c59-89f3-89245f202bfc","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_air_dragon___NICKNAME_Gydbua___82c2f9c9-63fb-4557-9ca5-86a7b49fd271 on to {"row":5,"column":1,"base_elevation":0,"spawn_region":"Left","unit":"UNIT_air_dragon___NICKNAME_Gydbua___82c2f9c9-63fb-4557-9ca5-86a7b49fd271","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Jaany___30ab56a3-92d5-4941-b6a8-b009de161213 on to {"row":6,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Jaany___30ab56a3-92d5-4941-b6a8-b009de161213","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_fire_dragon___NICKNAME_Lolt___52b576c2-d544-464a-8233-5c022427f8b5 on to {"row":4,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_fire_dragon___NICKNAME_Lolt___52b576c2-d544-464a-8233-5c022427f8b5","layers":{"empty":false},"total_elevation":9}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_water_dragon___NICKNAME_Hykmg___072d1a59-2a05-4c5d-bf9c-e175d5be1b7a on to {"row":3,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_water_dragon___NICKNAME_Hykmg___072d1a59-2a05-4c5d-bf9c-e175d5be1b7a","layers":{"empty":false},"total_elevation":10}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Jupv___fbaa5256-bcda-4eb3-9b27-9ef24eff3651 on to {"row":8,"column":11,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Jupv___fbaa5256-bcda-4eb3-9b27-9ef24eff3651","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 22:05:53] [INFO] [Component] Setting UNIT_dark_dragon___NICKNAME_Oogsiy___6495fad3-9833-43ee-a0ea-f25216063c0f on to {"row":6,"column":12,"base_elevation":0,"spawn_region":"Right","unit":"UNIT_dark_dragon___NICKNAME_Oogsiy___6495fad3-9833-43ee-a0ea-f25216063c0f","layers":{"empty":false},"total_elevation":8}.
+[2025-06-03 22:05:53] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-06-03 22:05:53] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-06-03 22:05:53] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-06-03 22:05:53] [INFO] [FontPool] Started initializing FontPool
+[2025-06-03 22:05:53] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-06-03 22:05:54] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Finished update updating {} because of ability
+[2025-06-03 22:05:54] [INFO] [AbilitySystem] Started updating {} because of ability
+[2025-06-03 22:05:54] [IN
