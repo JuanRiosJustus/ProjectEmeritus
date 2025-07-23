@@ -1,7 +1,7 @@
 package main.game.map.base;
 
 import main.constants.Constants;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 
 import java.util.HashMap;
 import java.util.List;
@@ -32,13 +32,13 @@ public class TileMapParameters {
     public static TileMapParameters getDefaultParameters(int rows, int columns, String spriteMap) {
         Random random = new Random();
 
-        List<String> list = AssetPool.getInstance().getWallTileSets();
+        List<String> list = AnimationPool.getInstance().getWallTileSets();
         String wall = list.get(random.nextInt(list.size()));
 
-        list = AssetPool.getInstance().getFloorTileSets();
+        list = AnimationPool.getInstance().getFloorTileSets();
         String floor = list.get(random.nextInt(list.size()));
 
-        list = AssetPool.getInstance().getLiquidTileSets();
+        list = AnimationPool.getInstance().getLiquidTileSets();
         String liquid = list.get(random.nextInt(list.size()));
 
         TileMapParameters tileMapParameters = TileMapParameters.getBuilder()

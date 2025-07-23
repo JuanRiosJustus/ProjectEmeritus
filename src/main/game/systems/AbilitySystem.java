@@ -1,16 +1,11 @@
 package main.game.systems;
 
 import com.alibaba.fastjson2.JSONArray;
-import main.game.components.*;
-import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.AbilityTable;
-import main.game.systems.actions.behaviors.AggressiveBehavior;
-import main.game.systems.actions.behaviors.RandomnessBehavior;
-import main.game.systems.combat.CombatSystem;
 import main.logging.EmeritusLogger;
 import com.alibaba.fastjson2.JSONObject;
 
@@ -190,7 +185,7 @@ public class AbilitySystem extends GameSystem {
                     value = scalingMagnitude;
                 }
 
-                statisticsComponent.putAdditiveModification(passiveAbility, passiveAbility, scalingAttribute, value);
+                statisticsComponent.addFlatBonus(passiveAbility, passiveAbility, scalingAttribute, value);
             }
 
             statisticsComponent.addTag(passiveAbility);

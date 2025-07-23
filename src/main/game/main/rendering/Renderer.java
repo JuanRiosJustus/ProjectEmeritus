@@ -14,7 +14,7 @@ import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 import main.game.stores.FontPool;
 import main.game.systems.texts.FloatingText;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 
 import java.util.*;
 
@@ -24,7 +24,7 @@ public abstract class Renderer {
     public abstract void render(GraphicsContext gc, RenderContext rc);
 
     public Entity getEntityWithID(String entityID) { return EntityStore.getInstance().get(entityID); }
-    public Image getImageWithID(String id) { return AssetPool.getInstance().getImage(id); }
+    public Image getImageWithID(String id) { return AnimationPool.getInstance().getImage(id); }
     /**
      * Calculates the drawing position for an image to align its bottom with the tile's bottom
      * and center it horizontally on the tile.

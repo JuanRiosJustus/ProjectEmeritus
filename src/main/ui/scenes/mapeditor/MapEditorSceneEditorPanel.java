@@ -10,7 +10,7 @@ import javafx.util.Callback;
 import main.constants.JavaFXUtils;
 import main.constants.Tuple;
 import main.game.stores.ColorPalette;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
 
@@ -155,18 +155,16 @@ public class MapEditorSceneEditorPanel extends VBox  {
     }
     private void setupComboBoxImages(String bucketName, Tuple<HBox, Button, ComboBox<Object>> row) {
 
-        List<String> bucket = AssetPool.getInstance().getBucket(bucketName);
+        List<String> bucket = AnimationPool.getInstance().getBucket(bucketName);
         for (String asset: bucket) {
             // This spritesheet can be many frames, but its of the same "Sprite"/Thing
-            String id = AssetPool.getInstance().getOrCreateAsset(
-                    AssetPool.getInstance().getNativeSpriteSize(),
-                    AssetPool.getInstance().getNativeSpriteSize(),
+            String id = AnimationPool.getInstance().getOrCreateStatic(
                     asset,
-                    AssetPool.STATIC_ANIMATION,
-                    -1,
+                    AnimationPool.getInstance().getNativeSpriteSize(),
+                    AnimationPool.getInstance().getNativeSpriteSize(),
                     asset + " rrrr"
             );
-            Image image = AssetPool.getInstance().getImage(id);
+            Image image = AnimationPool.getInstance().getImage(id);
 
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(row.getSecond().getPrefWidth());

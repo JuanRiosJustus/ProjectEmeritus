@@ -8,7 +8,7 @@ import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 
 
 public class StructureRenderer extends Renderer {
@@ -28,7 +28,7 @@ public class StructureRenderer extends Renderer {
 //            Animation animation = asset.getAnimation();
             // Retrieve the image dimensions
 //            Image animationImage = SwingFXUtils.toFXImage(animation.toImage(), null);
-            Image animationImage = AssetPool.getInstance().getImage(id);
+            Image animationImage = AnimationPool.getInstance().getImage(id);
 
             if (animationImage == null) { return; }
 

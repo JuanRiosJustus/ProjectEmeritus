@@ -11,7 +11,7 @@ import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.logging.EmeritusLogger;
 
 import main.utils.ImageUtils;
@@ -20,7 +20,9 @@ import main.utils.MathUtils;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class VisualsSystem extends GameSystem {
 
@@ -30,6 +32,8 @@ public class VisualsSystem extends GameSystem {
     private int mSpriteHeight = 0;
     private Image mBackgroundWallpaper = null;
     private boolean mStartedBackgroundWallpaperWork = false;
+
+    private Map<String, Float> mLiquidFlickerSpeeds = new HashMap<>();
     private final List<String> mEphemeralList = new ArrayList<>();
     private final EmeritusLogger mLogger = EmeritusLogger.create(VisualsSystem.class);
 
@@ -56,49 +60,7 @@ public class VisualsSystem extends GameSystem {
     }
 
 
-    public void updateLiquidV2(GameModel gameModel, Entity tileEntity) {
-        TileComponent tile = tileEntity.get(TileComponent.class);
-        AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-        if (!tile.isTopLayerLiquid()) { return; }
-
-
-        String liquid = tile.getTopLayerAsset();
-        IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
-
-        String id = AssetPool.getInstance().getOrCreateFlickerAsset(
-                mSpriteWidth,
-                mSpriteHeight,
-                liquid,
-                -1,
-                gameModel.getGameState().hashCode() + identityComponent.getID() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
-        );
-
-        assetComponent.putMainID(id);
-        AssetPool.getInstance().update(id);
-
-
-//        String depthShadowID = getOrCreateDepthShadows(gameModel, tileEntity);
-//        String directionalShadowsID = getOrCreateDirectionalShadows(gameModel, tileEntity);
-//
-//        mEphemeralList.clear();
-////        mEphemeralList.add(depthShadowID);
-////        mEphemeralList.add(directionalShadowsID);
-//        mEphemeralList.add(id);
-//
-//        String finalizedMergedTileAssetID = AssetPool.getInstance().getOrCreateMergedAssets(
-//                mSpriteWidth,
-//                mSpriteHeight,
-//                mEphemeralList,
-//                String.valueOf(mEphemeralList.hashCode())
-//        );
-//
-//
-//        assetComponent.putMainID(finalizedMergedTileAssetID);
-//        AssetPool.getInstance().update(finalizedMergedTileAssetID);
-
-    }
-
-    public void updateLiquid(GameModel model, Entity tileEntity) {
+    private void updateLiquid(GameModel model, Entity tileEntity) {
         TileComponent tile = tileEntity.get(TileComponent.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
         if (!tile.isTopLayerLiquid()) { return; }
@@ -106,16 +68,25 @@ public class VisualsSystem extends GameSystem {
         String liquid = tile.getTopLayerAsset();
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
 
-        String id = AssetPool.getInstance().getOrCreateFlickerAsset(
+        String id = AnimationPool.getInstance().getOrCreateFlicker(
+                liquid,
                 mSpriteWidth,
                 mSpriteHeight,
-                liquid,
-                -1,
-                mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
+                 mSpriteWidth + "_" +  mSpriteHeight + liquid + tile.getRow() + "_" + tile.getColumn()
         );
-
         assetComponent.putMainID(id);
-        AssetPool.getInstance().update(id);
+
+
+        // Set the initial flicker speeds multiplier
+        float initialSpeed = mLiquidFlickerSpeeds.getOrDefault(id, 0f);
+        if (initialSpeed == 0) {
+            initialSpeed = mRandom.nextFloat(0.1f, 0.35f);
+            mLiquidFlickerSpeeds.put(id, initialSpeed);
+            AnimationPool.getInstance().setSpeed(id, initialSpeed);
+        }
+
+        double deltaTime = model.getGameState().getDeltaTime();
+        AnimationPool.getInstance().update(id, deltaTime);
     }
 
 
@@ -138,10 +109,12 @@ public class VisualsSystem extends GameSystem {
         String directionalShadowsID = getOrCreateDirectionalShadows(gameModel, tileEntity);
 
         mEphemeralList.clear();
-        mEphemeralList.add(depthShadowID);
-        mEphemeralList.add(directionalShadowsID);
+        if (depthShadowID != null) { mEphemeralList.add(depthShadowID); }
+        if (directionalShadowsID != null) { mEphemeralList.add(directionalShadowsID); }
 
-        String finalizedMergedTileAssetID = AssetPool.getInstance().getOrCreateMergedAssets(
+        if (mEphemeralList.isEmpty()) { return; }
+
+        String finalizedMergedTileAssetID = AnimationPool.getInstance().getOrCreateMergedAssets(
                 mSpriteWidth,
                 mSpriteHeight,
                 mEphemeralList,
@@ -183,24 +156,24 @@ public class VisualsSystem extends GameSystem {
             if (isCurrentTileLiquid && isAdjacentTileLiquid) { continue; }
             if (isCurrentTileLiquid && isAdjacentTileSolid && adjacentElevation > currentElevation) { continue; }
 
-            String id = AssetPool.getInstance().getOrCreateDirectionalShadows(
+            String id = AnimationPool.getInstance().getOrCreateStatic(
+                    (directionName + "_shadow").intern(),
                     mSpriteWidth,
                     mSpriteHeight,
-                    directionIndex,
                     "directional_shadows" + directionName + mSpriteWidth + mSpriteHeight
             );
             currentIds.add(id);
         }
 
         int directionalShadowsHash = currentIds.hashCode();
-        String mergedDirectionalShadowsID = AssetPool.getInstance().getOrCreateMergedAssets(
+        String mergedDirectionalShadowsID = AnimationPool.getInstance().getOrCreateMergedAssets(
                 mSpriteWidth,
                 mSpriteHeight,
                 currentIds,
                 String.valueOf(directionalShadowsHash)
         );
 
-        return  mergedDirectionalShadowsID;
+        return mergedDirectionalShadowsID;
     }
 
     private String getOrCreateSprite(GameModel gameModel, Entity tileEntity) {
@@ -208,11 +181,10 @@ public class VisualsSystem extends GameSystem {
         String baseTileSprite = tile.getTopLayerAsset();
         // If this is null, maybe blackness or void?
         if (baseTileSprite == null) { return null; }
-        String baseTileSpriteID = AssetPool.getInstance().getOrCreateStaticAsset(
+        String baseTileSpriteID = AnimationPool.getInstance().getOrCreateStatic(
+                baseTileSprite,
                 mSpriteWidth,
                 mSpriteHeight,
-                baseTileSprite,
-                -1,
                 "static_tile_sprite" + baseTileSprite + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
         );
         return baseTileSpriteID;
@@ -223,13 +195,25 @@ public class VisualsSystem extends GameSystem {
         int tileHeight = tile.getModifiedElevation();
         mMinTileHeight = Math.min(mMinTileHeight, tileHeight);
         mMaxTileHeight = Math.max(mMaxTileHeight, tileHeight);
-        int depthShadowFrame = (int) MathUtils.map(tileHeight, mMinTileHeight, mMaxTileHeight, 3, 0); // lights depth is first
-        String depthShadowID = AssetPool.getInstance().getOrCreateDepthShadows(
+//        int depthShadowFrame = MathUtils.map(tileHeight, mMinTileHeight, mMaxTileHeight, 1, 0); // lights depth is first
+//        String depthShadowID = AnimationPool.getInstance().getOrCreateDepthShadows(
+//                mSpriteWidth,
+//                mSpriteHeight,
+//                depthShadowFrame,
+//                "depth_shadows_" + depthShadowFrame + mSpriteWidth + mSpriteHeight
+//        );
+
+        if (mMinTileHeight == mMaxTileHeight) { return null; }
+        float opacity = MathUtils.map(tileHeight, mMinTileHeight, mMaxTileHeight, 0.6f, 0.3f); // lights depth is first
+        String id = "depth_shadows_" + opacity + mSpriteWidth + mSpriteHeight;
+        String depthShadowID = AnimationPool.getInstance().getOrCreateStatic(
+                "shadow",
                 mSpriteWidth,
                 mSpriteHeight,
-                depthShadowFrame,
-                "depth_shadows_" + depthShadowFrame + mSpriteWidth + mSpriteHeight
+                id
         );
+
+        AnimationPool.getInstance().setOpacity(id, opacity);
         return depthShadowID;
     }
 
@@ -252,11 +236,10 @@ public class VisualsSystem extends GameSystem {
 
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
 
-        String id = AssetPool.getInstance().getOrCreateStaticAsset(
+        String id = AnimationPool.getInstance().getOrCreateStatic(
+                sprite,
                 mSpriteWidth,
                 mSpriteHeight,
-                sprite,
-                -1,
                 identityComponent.getID() + sprite + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
         );
 //        int originFrame = AssetPool.getInstance().getOriginFrame(id);
@@ -288,6 +271,7 @@ public class VisualsSystem extends GameSystem {
 //        AssetPool.getInstance().update(id);
 //    }
 
+    private final Map<String, Float> mStructureSpeedMultipliers = new HashMap<>();
     public void updateStructures(GameModel model, Entity tileEntity) {
         TileComponent tile = tileEntity.get(TileComponent.class);
         String structureID = tile.getStructureID();
@@ -296,19 +280,25 @@ public class VisualsSystem extends GameSystem {
 
         IdentityComponent identityComponent = structureEntity.get(IdentityComponent.class);
         AssetComponent assetComponent = structureEntity.get(AssetComponent.class);
-        String id = AssetPool.getInstance().getOrCreateTopSwayingAsset(
+        String id = AnimationPool.getInstance().getOrCreateTopSwaying(
+                identityComponent.getNickname(),
                 mSpriteWidth,
                 mSpriteHeight,
-                identityComponent.getNickname(),
-                -1,
-                identityComponent.getNickname() + tile + mSpriteWidth + mSpriteHeight
+                identityComponent.getNickname() + tile.getRow() + tile.getColumn() + mSpriteWidth + mSpriteHeight
         );
-
         assetComponent.putMainID(id);
 
-//        Asset asset = AssetPool.getInstance().getAsset(id);
-//        asset.getAnimation().update();
-        AssetPool.getInstance().update(id);
+
+        // Set the initial speed multiplier
+        float initialSpeed = mStructureSpeedMultipliers.getOrDefault(id, 0f);
+        if (initialSpeed == 0) {
+            initialSpeed = mRandom.nextFloat(0.1f, 0.35f);
+            mStructureSpeedMultipliers.put(id, initialSpeed);
+            AnimationPool.getInstance().setSpeed(id, initialSpeed);
+        }
+
+        double deltaTime = model.getDeltaTime();
+        AnimationPool.getInstance().update(id, deltaTime);
     }
 
 
@@ -358,7 +348,7 @@ public class VisualsSystem extends GameSystem {
                     // Draw the base of the tile
                     if (tile.getTopLayerAsset() != null) {
                         String id = assetComponent.getMainID();
-                        Image image = AssetPool.getInstance().getImage(id);
+                        Image image = AnimationPool.getInstance().getImage(id);
                         scaledImage = SwingFXUtils.fromFXImage(image, null);
                         scaledImage = ImageUtils.getResizedImage(scaledImage, tileWidth, tileHeight);
                         backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);

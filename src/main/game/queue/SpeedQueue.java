@@ -26,11 +26,10 @@ public class SpeedQueue extends GameQueue {
     };
 
 
-    private int mHashCode = -1;
+    private int mHashCode = 0;
     private final PriorityQueue<String> mSpeedQueue = new PriorityQueue<>(turnOrdering);
+    private final PriorityQueue<String> mSpeedQueue2 = new PriorityQueue<>(turnOrdering);
     private final PriorityQueue<String> mFinished = new PriorityQueue<>(turnOrdering);
-//    private final PriorityQueue<Entity> mSpeedQueue = new PriorityQueue<>(turnOrdering());
-//    private final PriorityQueue<Entity> mFinished = new PriorityQueue<>(turnOrdering());
     private final Map<String, Entity> mEntityMap = new LinkedHashMap<>();
 
     public String peek() { String entityID = mSpeedQueue.peek(); return entityID; }
@@ -44,7 +43,6 @@ public class SpeedQueue extends GameQueue {
         mSpeedQueue.addAll(mEntityMap.keySet());
         mHashCode = Objects.hashCode(mSpeedQueue.toString());
         mFinished.clear();
-//        mIterations++;
         mLogger.info("Speed queue updated.");
         return true;
     }
@@ -67,10 +65,11 @@ public class SpeedQueue extends GameQueue {
 
         mEntityMap.put(entityID, entity);
 
+        mHashCode = Objects.hashCode(mSpeedQueue.toString());
         mLogger.info("Added unit {} into queue", entityID);
     }
 
-    public JSONArray getAllEntityIDsPendingTurnInTurnQueue() {
+    public JSONArray turnOrder() {
         PriorityQueue<String> copy = new PriorityQueue<>(turnOrdering);
         copy.addAll(mSpeedQueue);
         JSONArray ordering = new JSONArray();
@@ -81,9 +80,19 @@ public class SpeedQueue extends GameQueue {
         return ordering;
     }
 
+    public JSONArray nextTurnOrder() {
+        PriorityQueue<String> copy = new PriorityQueue<>(turnOrdering);
+        copy.addAll(mEntityMap.keySet());
+        JSONArray ordering = new JSONArray();
+        while (!copy.isEmpty()) {
+            String id = copy.poll();
+            ordering.add(id);
+        }
+        return ordering;
+    }
+
     private static Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
 
-    public List<String> order() { return new ArrayList<>(mEntityMap.keySet()); }
     public int hashCode() { return mHashCode; }
 
 }

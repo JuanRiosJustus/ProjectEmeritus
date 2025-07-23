@@ -4,7 +4,6 @@ import com.alibaba.fastjson2.JSONObject;
 import javafx.embed.swing.JFXPanel;
 import main.game.main.GameController;
 import main.game.queue.InitiativeQueue;
-import main.game.stores.EntityStore;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -50,17 +49,17 @@ public class InitiativeQueueTest extends GameTests {
     public void testPeekChangesAfterTick() {
 
         // Setup
-        GameController game = initializeGame(10, 10, true);
+        GameController game = createGameWithDefaults(10, 10, true);
         InitiativeQueue queue = new InitiativeQueue(1000f);
 
-        String unit1 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit1, "speed", 33); // same speed
+        String unit1 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit1, "speed", 33); // same speed
 
-        String unit2 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit2, "speed", 66); // same speed
+        String unit2 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit2, "speed", 66); // same speed
 
-        String unit3 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit3, "speed", 99); // same speed
+        String unit3 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit3, "speed", 99); // same speed
 
         queue.add(unit1);
         queue.add(unit2);
@@ -84,17 +83,17 @@ public class InitiativeQueueTest extends GameTests {
     public void testQueueHasOrderDuringAdd() {
 
         // Setup
-        GameController game = initializeGame(10, 10, true);
+        GameController game = createGameWithDefaults(10, 10, true);
         InitiativeQueue queue = new InitiativeQueue(1000f);
 
-        String unit1 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit1, "speed", 10); // same speed
+        String unit1 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit1, "speed", 10); // same speed
 
-        String unit2 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit2, "speed", 20); // same speed
+        String unit2 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit2, "speed", 20); // same speed
 
-        String unit3 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit3, "speed", 30); // same speed
+        String unit3 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit3, "speed", 30); // same speed
 
         queue.add(unit1);
         queue.add(unit2);
@@ -112,14 +111,14 @@ public class InitiativeQueueTest extends GameTests {
         GameController game = GameController.create();
         InitiativeQueue queue = new InitiativeQueue(1000f);
 
-        String unit1 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit1, "speed", 10);
+        String unit1 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit1, "speed", 10);
 
-        String unit2 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit2, "speed", 20); // same speed
+        String unit2 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit2, "speed", 20); // same speed
 
-        String unit3 = game.createUnit().getString("unit_id");
-        setUnitAttributeTotalValue(game, unit3, "speed", 30); // same speed
+        String unit3 = game.createCpuUnit().getString("unit_id");
+        setUnitAttributeToValue(game, unit3, "speed", 30); // same speed
 
         queue.add(unit1);
         queue.add(unit2);
@@ -154,16 +153,16 @@ public class InitiativeQueueTest extends GameTests {
 
     @Test
     public void testDequeueWithSimultaneousThreshold() {
-        GameController game = initializeGame(10, 10, true);
+        GameController game = createGameWithDefaults(10, 10, true);
         InitiativeQueue queue = new InitiativeQueue(1000f);
 
-        JSONObject unitA = game.createUnit();
+        JSONObject unitA = game.createCpuUnit();
         String unit1 = unitA.getString("unit_id");
-        setUnitAttributeTotalValue(game, unit1, "speed", 100); // same speed
+        setUnitAttributeToValue(game, unit1, "speed", 100); // same speed
 
-        JSONObject unitB = game.createUnit();
+        JSONObject unitB = game.createCpuUnit();
         String unit2 = unitB.getString("unit_id");
-        setUnitAttributeTotalValue(game, unit2, "speed", 100); // same speed
+        setUnitAttributeToValue(game, unit2, "speed", 100); // same speed
 
         queue.add(unit1);
         queue.add(unit2);
@@ -195,17 +194,17 @@ public class InitiativeQueueTest extends GameTests {
 
     @Test
     public void initiativeQueueGetsPopulatedCorrectly() {
-        GameController game = initializeGame(10, 10, true);
+        GameController game = createGameWithDefaults(10, 10, true);
         InitiativeQueue initiativeQueue = new InitiativeQueue();
 
         // Setup unit1
-        JSONObject response = game.createUnit();
+        JSONObject response = game.createCpuUnit();
         String unit1 = response.getString("unit_id");
-        setUnitAttributeTotalValue(game, unit1, "speed", 160);
+        setUnitAttributeToValue(game, unit1, "speed", 160);
 
-        response = game.createUnit();
+        response = game.createCpuUnit();
         String unit2 = response.getString("unit_id");
-        setUnitAttributeTotalValue(game, unit2, "speed", 120);
+        setUnitAttributeToValue(game, unit2, "speed", 120);
 
 
         initiativeQueue.add(unit1);
@@ -218,17 +217,17 @@ public class InitiativeQueueTest extends GameTests {
 
     @Test
     public void fillMetersUntilNextTurnProcessesTurnsInCorrectOrder() {
-        GameController game = initializeGame(10, 10, true);
+        GameController game = createGameWithDefaults(10, 10, true);
         InitiativeQueue initiativeQueue = new InitiativeQueue();
 
         // Create two units with different speeds
-        JSONObject response1 = game.createUnit();
+        JSONObject response1 = game.createCpuUnit();
         String unit1 = response1.getString("unit_id");
-        setUnitAttributeTotalValue(game, unit1, "speed", 33);
+        setUnitAttributeToValue(game, unit1, "speed", 33);
 
-        JSONObject response2 = game.createUnit();
+        JSONObject response2 = game.createCpuUnit();
         String unit2 = response2.getString("unit_id");
-        setUnitAttributeTotalValue(game, unit2, "speed", 100);
+        setUnitAttributeToValue(game, unit2, "speed", 100);
 
         initiativeQueue.add(unit1);
         initiativeQueue.add(unit2);
@@ -258,12 +257,12 @@ public class InitiativeQueueTest extends GameTests {
 
     @Test
     public void testDequeueSingleUnitLoopsCorrectly() {
-        GameController game = initializeGame(10, 10, true);
+        GameController game = createGameWithDefaults(10, 10, true);
         InitiativeQueue queue = new InitiativeQueue(1000f);
 
-        JSONObject unitObj = game.createUnit();
+        JSONObject unitObj = game.createCpuUnit();
         String unit = unitObj.getString("unit_id");
-        setUnitAttributeTotalValue(game, unit, "speed", 250);
+        setUnitAttributeToValue(game, unit, "speed", 250);
 
         queue.add(unit);
 

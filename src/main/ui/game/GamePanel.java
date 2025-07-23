@@ -10,7 +10,7 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 import main.game.stores.FontPool;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import com.alibaba.fastjson2.JSONObject;
 
 import java.util.LinkedHashMap;
@@ -51,33 +51,14 @@ public class GamePanel extends StackPane {
 
     }
 
-
-//    protected ImageView createAndCacheEntityIcon(String entityID) {
-//        Entity entity = EntityStore.getInstance().get(entityID);
-//        AssetComponent assetComponent = entity.get(AssetComponent.class);
-//        String id = assetComponent.getMainID();
-//        AssetV2 asset = AssetPool.getInstance().getAsset(id);
-//        if (asset == null) return null;
-//
-//        Animation animation = asset.getAnimation();
-//        Image image = SwingFXUtils.toFXImage(animation.toImage(), null);
-//
-//
-//        ImageView view = new ImageView(image);
-//        view.setPickOnBounds(false);
-//        view.setFocusTraversable(false);
-//
-//        return view;
-//    }
-
     protected ImageView createAndCacheEntityIcon(String entityID) {
         Entity entity = EntityStore.getInstance().get(entityID);
         if (entity == null) { return null; }
         AssetComponent assetComponent = entity.get(AssetComponent.class);
         String id = assetComponent.getMainID();
-        Image image = AssetPool.getInstance().getImage(id);
+        Image image = AnimationPool.getInstance().getImage(id);
 
-        if (id == null) { return null; }
+        if (id == null || id.isEmpty()) { return null; }
 
         ImageView view = new ImageView(image);
         view.setPickOnBounds(false);

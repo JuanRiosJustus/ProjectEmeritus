@@ -1,6 +1,6 @@
 package main.game.stores;
 
-import main.game.components.InventoryComponent;
+import main.game.components.EquipmentComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.logging.EmeritusLogger;
@@ -74,6 +74,6 @@ public class ItemPool {
     public void equip(Entity entity, Entity item) {
 
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-        InventoryComponent inventoryComponent = entity.get(InventoryComponent.class);
+        EquipmentComponent equipmentComponent = entity.get(EquipmentComponent.class);
     }
 }

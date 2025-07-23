@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import main.game.stores.ColorPalette;
 import main.game.stores.FontPool;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.ui.custom.UpwardGrowingUI;
 import main.ui.foundation.BeveledLabel;
 
@@ -73,10 +73,10 @@ public class TileLayersPanel extends UpwardGrowingUI.Pane {
 
         int imageWidth = Math.min(newPaneHeight, newPaneWidth);
         int imageHeight = imageWidth;
-        String id = AssetPool.getInstance().getOrCreateStaticAsset(
-                imageWidth, imageHeight, asset, -1, asset + "_map_editor_scene_structure"
+        String id = AnimationPool.getInstance().getOrCreateStatic(
+                asset, imageWidth, imageHeight,  asset + "_map_editor_scene_structure"
         );
-        Image image = AssetPool.getInstance().getImage(id);
+        Image image = AnimationPool.getInstance().getImage(id);
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(imageWidth);
         imageView.setFitHeight(imageHeight);
@@ -132,10 +132,10 @@ public class TileLayersPanel extends UpwardGrowingUI.Pane {
 
         int imageWidth = Math.min(newPaneHeight, newPaneWidth);
         int imageHeight = imageWidth;
-        String id = AssetPool.getInstance().getOrCreateStaticAsset(
-                imageWidth, imageHeight, asset, -1, asset + "_map_editor_scene"
+        String id = AnimationPool.getInstance().getOrCreateStatic(
+                asset, imageWidth, imageHeight,  asset + "_map_editor_scene"
         );
-        Image image = AssetPool.getInstance().getImage(id);
+        Image image = AnimationPool.getInstance().getImage(id);
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(imageWidth);
         imageView.setFitHeight(imageHeight);
@@ -185,11 +185,11 @@ public class TileLayersPanel extends UpwardGrowingUI.Pane {
 
         int imageWidth = (int) Math.min(getItemWidth(), getItemHeight());
         int imageHeight = imageWidth;
-        String id = AssetPool.getInstance().getOrCreateStaticAsset(
-                imageWidth, imageHeight, asset, -1, asset + "_map_layers_backgrounds"
+        String id = AnimationPool.getInstance().getOrCreateStatic(
+                asset, imageWidth, imageHeight, asset + "_map_layers_backgrounds"
         );
 
-        Image image = AssetPool.getInstance().getImage(id);
+        Image image = AnimationPool.getInstance().getImage(id);
         BackgroundSize newBackgroundSize = new BackgroundSize(
                 100, 100, true, true, false, false
         );

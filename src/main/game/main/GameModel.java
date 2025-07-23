@@ -1,6 +1,8 @@
 package main.game.main;
 
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import main.constants.EmeritusDatabase;
 import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.components.animation.AnimationTrack;
@@ -22,6 +24,7 @@ import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
 import com.alibaba.fastjson2.JSONObject;
 import main.logging.EmeritusLogger;
+import main.utils.MathUtils;
 import main.utils.StringUtils;
 
 import java.util.*;
@@ -98,12 +101,17 @@ public class GameModel {
 
 
 
-    public void setDeltaTime(double newDeltaTime) { getGameState().setDeltaTime(newDeltaTime); }
+//    public void setDeltaTime(double newDeltaTime) { getGameState().setDeltaTime(newDeltaTime); }
 
 
     public void update() {
         if (!mRunning || mSystem == null) { return; }
+        getGameState().updateGameStartTime();
+        getGameState().updateGameDeltaTime();
+
         mSystem.update(this);
+        long startTime = System.nanoTime();
+
 //        mCameraHandler.update(mGameState);
     }
 
@@ -144,7 +152,7 @@ public class GameModel {
     }
 
     public boolean isRunning() { return mRunning; }
-    public void run() { mRunning = true; }
+    public void start() { mRunning = true; }
     public void stop() { mRunning = false; }
 
     public int getRows() { return mTileMap.getRows(); }
@@ -227,11 +235,6 @@ public class GameModel {
         mGameState.addTileToGlideTo(currentActiveEntityTileID, mGameState.getSecondaryCameraID());
     }
 
-    public void setSelectedTiles() {
-        String currentActiveEntityTileID = getCurrentActiveEntityTileID();
-
-    }
-
 
 
     private static Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
@@ -245,9 +248,9 @@ public class GameModel {
     }
     public GameState getGameState() { return mGameState; }
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
-//    public GameQueue getInitiativeQueue() { return mSpeedQueue; }
     public Image getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
     public JSONEventBus getEventBus() { return mEventBus; }
+    public double getDeltaTime() { return mGameState.getDeltaTime(); }
 
 
 
@@ -969,6 +972,10 @@ public class GameModel {
         return hashCode;
     }
 
+    public void disableAutoBehavior() {
+        getGameState().setAutoBehaviorEnabled(false);
+    }
+
     public int getSpecificEntityStatisticsComponentHash(String entityID) {
         Entity entity = EntityStore.getInstance().get(entityID);
         if (entity == null) { return -1; }
@@ -1233,7 +1240,7 @@ public class GameModel {
         Set<String> keys = statisticsComponent.getAttributes();
         for (String key : keys) {
             int base = statisticsComponent.getBase(key);
-            int modified = statisticsComponent.getModified(key);
+            int modified = statisticsComponent.getBonus(key);
             int current = statisticsComponent.getCurrent(key);
             int total = statisticsComponent.getTotal(key);
             JSONObject attribute = new JSONObject();
@@ -1254,7 +1261,7 @@ public class GameModel {
         response.put("other_ability", statisticsComponent.getOtherAbility());
 
         JSONObject tags = new JSONObject();
-        keys = statisticsComponent.getTags();
+        keys = statisticsComponent.getTagNames();
         for (String key : keys) {
             int duration = statisticsComponent.getTagDuration(key);
 
@@ -1339,6 +1346,48 @@ public class GameModel {
         mGameState.setShouldForcefullyEndTurn(true);
     }
 
+    public JSONObject getAbility(JSONObject request) {
+        String ability = request.getString("ability");
+        JSONArray results = EmeritusDatabase.getInstance().getAbility(ability);
+        if (results.isEmpty()) {
+            return new JSONObject().fluentPut("error", "no abilities found");
+        }
+        if (results.size() > 1) {
+            return new JSONObject().fluentPut("error", "more than 1 ability with name similar to " + ability);
+        }
+        JSONObject sourceData = results.getJSONObject(0);
+
+        JSONObject result = new JSONObject();
+        for (String key : sourceData.keySet()) {
+            Object value = sourceData.get(key);
+            if (value instanceof JSONObject || value instanceof  JSONArray) {
+                continue;
+            }
+            result.put(key, value);
+        }
+
+        // Get damage potential. Since no unit info is provided, use heuristic
+        JSONArray rawDamageInputMap = sourceData.getJSONArray("damage");
+        JSONObject damageMap = new JSONObject();
+        for (int i = 0; i < rawDamageInputMap.size(); i++) {
+            String[] tokens = rawDamageInputMap.getString(i).split("\\s+");
+            double valuePart = parseNumericToDouble(tokens[0]);
+            String statisticPart = tokens[tokens.length - 1];
+            if (tokens.length == 3) {
+                String magnitude = tokens[1];
+            }
+            double currentValue = (double) damageMap.getOrDefault(statisticPart, 0d);
+            damageMap.put(statisticPart, currentValue + valuePart);
+        }
+        result.put("damage", damageMap);
+
+
+//        AbilityDamageReport adr = new AbilityDamageReport(null, ability, null);
+//        Map<String, Float> finalDamageMap = adr.getFinalDamageMap();
+//        Map<String, Float> upperDamageMap = adr.getUpperDamageMap();
+//        Map<String, Float> lowerDamageMap = adr.getLowerDamageMap();
+        return result;
+    }
     /**
      * Attempts to place a unit on a tile using the provided {@link JSONObject} input.
      *
@@ -1594,6 +1643,13 @@ public class GameModel {
         return tileID;
     }
 
+    public String getTile(int row, int column) {
+        JSONObject request = new JSONObject();
+        request.put("row", row);
+        request.put("column", column);
+        return getTile(request);
+    }
+
 
     /**
      * Retrieves detailed metadata about a tile specified by a row/column or tile ID.
@@ -1816,30 +1872,6 @@ public class GameModel {
      * @return a {@link JSONArray} of tile IDs from origin to destination (inclusive), or an empty array if no valid path exists
      */
     public JSONArray getTilesInMovementPath(JSONObject request) {
-        String tileID = request.getString(START_TILE_ID); //getTile(request);
-        int range = request.getIntValue(RANGE);
-        boolean respectfully = request.getBooleanValue(RESPECTFULLY, true);
-        String endTileID = request.getString(END_TILE_ID);
-
-        Map<String, String> graph = mTileMap.createDirectedGraph(tileID, range, respectfully);
-
-        JSONArray response = new JSONArray();
-        if (!graph.containsKey(tileID)) { return response; }
-        if (!graph.containsKey(endTileID)) { return response; }
-
-
-        LinkedList<String> queue = new LinkedList<>();
-        String currentTileID = endTileID;
-        while (currentTileID != null) {
-            queue.addFirst(currentTileID);
-            currentTileID = graph.get(currentTileID);
-        }
-
-        response.addAll(queue);
-        return response;
-    }
-
-    public JSONArray getTilesInMovementPathV2(JSONObject request) {
         String tileID = request.getString("start_tile_id"); //getTile(request);
         int range = request.getIntValue("range");
         boolean respectfully = request.getBooleanValue("respect", true);
@@ -1933,16 +1965,9 @@ public class GameModel {
      */
     public JSONArray getTilesInAreaOfSight(JSONObject request) {
         String tileID = getTile(request);
-        int range = request.getIntValue(RANGE);
-        boolean respectfully = request.getBooleanValue(RESPECTFULLY, true);
-        JSONArray response = mTileMap.computeAreaOfSightJSON(tileID, range, respectfully);
-        return response;
-    }
-    public JSONArray getTilesInAreaOfSightV2(JSONObject request) {
-        String startTileID = getTile(request);
         int range = request.getIntValue("range");
         boolean respectfully = request.getBooleanValue("respect", true);
-        JSONArray response = mTileMap.computeAreaOfSightJSON(startTileID, range, respectfully);
+        JSONArray response = mTileMap.computeAreaOfSightJSON(tileID, range, respectfully);
         return response;
     }
 
@@ -2002,17 +2027,16 @@ public class GameModel {
      * @param request a {@link JSONObject} containing unit ID, attribute, value, and scaling mode
      * @return a {@link JSONObject} with the result of the operation, including before/after stats or an error
      */
-    public JSONObject addUOrSubtractUnitStatisticModification(JSONObject request) {
-        String unitID = request.getString("unit_id");
-        String attribute = request.getString("attribute");
-        String scaling = request.getString("scaling");
-        float value = request.getFloatValue("value");
-        String name = request.getString("name");
+    public JSONObject addUnitStatisticBonus(JSONObject request) {
+        String unitID = request.getString("id");
+
+        String name = (String) request.getOrDefault("name", UUID.randomUUID().toString());
         String source = (String) request.getOrDefault("source", "system");
+        String bonus = (String) request.getOrDefault("bonus", request.get("scaling"));
 
         Entity unitEntity = getEntityWithID(unitID);
-        if (unitEntity == null || attribute == null) {
-            return new JSONObject().fluentPut("error", "Invalid unit or attribute");
+        if (unitEntity == null || bonus == null) {
+            return new JSONObject().fluentPut("error", "Invalid unit or scaling");
         }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -2020,28 +2044,153 @@ public class GameModel {
             return new JSONObject().fluentPut("error", "No statistics component found");
         }
 
-        float before = statisticsComponent.getTotal(attribute);
-        boolean isFlat = scaling.equalsIgnoreCase("flat");
-        if (isFlat) {
-            statisticsComponent.putAdditiveModification(source, name, attribute, value);
-        } else {
+        // Examples of input equation
+        //  "10% total mana to mana"
+        //  "44 to mana"
+        //  "-83% bonus speed to speed"
+        //  "-91 to health"
+        //  "55% base speed to speed"
+        //  This should only impact the current/missing values of stats, only if the stat is a resource (Lowest values = 0)
+        String[] datums = bonus.trim().split(" ");
+        double value = datums[0].contains("%") ? parseNumericToDouble(datums[0]) : Double.parseDouble(datums[0]);
+        String magnitude = null;
+        String sourceAttribute = null;
+        String destinationAttribute = null;
+        if (datums.length == 5) {
+            magnitude = datums[1];
+            sourceAttribute = datums[2];
+            destinationAttribute = datums[4];
+
             // Interpret value as percent (e.g. 0.1f = +10%)
-            statisticsComponent.putMultiplicativeModification(source, name, attribute, value);
+            statisticsComponent.addPercentBonus(source, name, sourceAttribute, (float) value);
+        } else if (datums.length == 3) {
+            destinationAttribute = datums[2];
+            statisticsComponent.addFlatBonus(source, name, destinationAttribute, (float) value);
         }
-        float after = statisticsComponent.getTotal(attribute);
 
-        return new JSONObject()
-                .fluentPut("before", before)
-                .fluentPut("after", after)
-                .fluentPut("delta", after - before)
-                .fluentPut("source", source)
-                .fluentPut("scaling", scaling);
+        request.put("attribute", destinationAttribute);
+        JSONObject result = getStatisticsFromUnit(request);
+
+        return result;
     }
 
-    public JSONObject addUOrSubtractUnitStatisticResource(JSONObject request) {
+    /**
+     * Sets a base value for a specific statistic on a given unit.
+     * <p>
+     * This method processes a JSON request with the following keys:
+     * <ul>
+     *   <li><b>unit_id</b> (String): The ID of the unit to update.</li>
+     *   <li><b>statistic</b> (String): The name of the statistic to modify (e.g., "strength", "speed").</li>
+     *   <li><b>value</b> (int): The new base value to set for the specified statistic.</li>
+     * </ul>
+     * <p>
+     * If the unit or its {@code StatisticsComponent} is not found, the method returns a JSON object with
+     * an error message. Otherwise, it updates the statistic and returns the unit’s current statistics
+     * using {@code getStatisticsFromUnit()}.
+     *
+     * <p>Example success response:
+     * <pre>
+     * {
+     *   "unit_id": "unit_001",
+     *   "strength": 15,
+     *   "speed": 12,
+     *   ...
+     * }
+     * </pre>
+     *
+     * <p>Example error response:
+     * <pre>
+     * {
+     *   "error": "Invalid unit or scaling"
+     * }
+     * </pre>
+     *
+     * @param request A {@link JSONObject} containing the unit ID, statistic name, and new value.
+     * @return A {@link JSONObject} with updated statistics or an error message.
+     */
+    public JSONObject setStatisticForUnit(JSONObject request) {
+
         String unitID = request.getString("unit_id");
+        String statistic = request.getString("statistic");
+        int value = request.getIntValue("value");
+
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null) {
+            return new JSONObject().fluentPut("error", "Invalid unit or scaling");
+        }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        if (statisticsComponent == null) {
+            return new JSONObject().fluentPut("error", "No statistics component found");
+        }
+
+        statisticsComponent.setStatistic(statistic, value);
+
+        JSONObject result = getStatisticsFromUnit(request);
+
+        return result;
+    }
+
+
+//
+    private static float parseStringNumber(String input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Input must be a non-null string ending with %");
+        }
+
+        // Remove the % sign
+        String trimmed = input;
+        if (input.endsWith("%")) {
+            trimmed = input.substring(0, input.length() - 1);
+        }
+
+        // Determine sign
+        float value;
+        if (trimmed.startsWith("+")) {
+            value = Float.parseFloat(trimmed.substring(1));
+        } else if (trimmed.startsWith("-")) {
+            value = -Float.parseFloat(trimmed.substring(1));
+        } else {
+            value = Float.parseFloat(trimmed);
+        }
+
+        if (input.endsWith("%")) { value = (float) (value * 0.01d); }
+
+        return value;
+    }
+//
+
+    private static double parseNumericToDouble(String input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Input must be a non-null string ending with %");
+        }
+
+        if (!input.contains("%")) {
+            return Double.parseDouble(input);
+        }
+
+        // Remove the % sign
+        String trimmed = input.substring(0, input.length() - 1);
+
+        // Determine sign
+        double value;
+        if (trimmed.startsWith("+")) {
+            value = Float.parseFloat(trimmed.substring(1));
+        } else if (trimmed.startsWith("-")) {
+            value = -Float.parseFloat(trimmed.substring(1));
+        } else {
+            value = Float.parseFloat(trimmed);
+        }
+
+        value = value * 0.01d;
+
+        return value;
+    }
+
+    public JSONObject addUnitStatisticsResources(JSONObject request) {
+        String unitID = request.getString("id");
         String attribute = request.getString("attribute");
-        float value = request.getFloatValue("value");
+        int value = request.getIntValue("value");
         String source = (String) request.getOrDefault("source", "system");
 
         Entity unitEntity = getEntityWithID(unitID);
@@ -2053,17 +2202,120 @@ public class GameModel {
         if (statisticsComponent == null) {
             return new JSONObject().fluentPut("error", "No statistics component found");
         }
+        statisticsComponent.addToResource(attribute, value);
 
-        float before = statisticsComponent.getTotal(attribute);
-        statisticsComponent.toResource(attribute, value);
-        float after = statisticsComponent.getTotal(attribute);
-
-        return new JSONObject()
-                .fluentPut("before", before)
-                .fluentPut("after", after)
-                .fluentPut("delta", after - before)
-                .fluentPut("source", source);
+        JSONObject result = getStatisticsFromUnit(request);
+        return result;
     }
+
+    /**
+     * Attaches a piece of equipment to a unit, applying its statistical modifiers to the unit’s attributes.
+     * <p>
+     * This method accepts a request JSON with the following keys:
+     * <ul>
+     *   <li><b>unit_id</b> (String): ID of the unit that will equip the item.</li>
+     *   <li><b>equipment_name</b> (String): Name of the equipment type to attach.</li>
+     *   <li><b>equipment_id</b> (optional, String): ID of an existing equipment entity. If omitted,
+     *       a new equipment entity is created using the provided equipment name.</li>
+     * </ul>
+     * <p>
+     * The method will:
+     * <ol>
+     *   <li>Verify the existence of the target unit.</li>
+     *   <li>Equip the equipment item in the unit's inventory.</li>
+     *   <li>Retrieve and parse the equipment’s statistics expressions.</li>
+     *   <li>Apply each statistic as either a flat or percentage-based modifier to the unit's attributes.</li>
+     *   <li>Record the unit’s attribute totals before applying each bonus to calculate the deltas.</li>
+     * </ol>
+     * <p>
+     * The returned JSON contains the change (delta) in each affected attribute:
+     * <pre>
+     * {
+     *   "strength": +5,
+     *   "speed": +10,
+     *   ...
+     * }
+     * </pre>
+     * or an error message if the unit ID is invalid:
+     * <pre>
+     * {
+     *   "error": "No entity with id ..."
+     * }
+     * </pre>
+     *
+     * @param request A JSONObject with unit and equipment information.
+     * @return A JSONObject containing attribute deltas or an error message.
+     */
+    public JSONObject attachEquipment(JSONObject request) {
+        String unitID = request.getString("unit_id");
+        String equipmentName = request.getString("equipment_name");
+        String equipmentID = (String) request.getOrDefault("equipment_id",
+                EntityStore.getInstance().createEquipment(equipmentName));
+        String equipSlot = (String) request.getOrDefault("equip_slot", "pocket_slot");
+
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null) {
+            return new JSONObject().fluentPut("error", "No entity with id " + unitID);
+        }
+        StatisticsComponent unitStatistics = unitEntity.get(StatisticsComponent.class);
+        EquipmentComponent unitEquipment = unitEntity.get(EquipmentComponent.class);
+
+        unitEquipment.equip(equipSlot, equipmentName);
+
+        Entity equipmentEntity = getEntityWithID(equipmentID);
+        StatisticsComponent equipmentStats = equipmentEntity.get(StatisticsComponent.class);
+//        JSONArray equipped = equipmentStats.getStatistics();
+//
+        JSONObject previousTotals = new JSONObject();
+//
+//        for (int i = 0; i < equipped.size(); i++) {
+//            String expression = equipped.getString(i);
+//            String[] parts = expression.split("\\s+");
+//
+//            String raw = parts[0];
+//            float value = parseStringNumber(raw);
+//            String attribute = parts[parts.length - 1];
+//
+//            previousTotals.computeIfAbsent(attribute, v -> unitStatistics.getTotal(attribute));
+//
+//            if (raw.contains("%")) {
+//                unitStatistics.addPercentBonus(equipmentID, equipmentName, attribute, value);
+//            } else {
+//                unitStatistics.addFlatBonus(equipmentID, equipmentName, attribute, value);
+//            }
+//            unitStatistics.fillResource(attribute);
+//        }
+
+        // Calculate the deltas
+        JSONObject response = new JSONObject();
+        for (String attribute : previousTotals.keySet()) {
+            int previousTotal = previousTotals.getIntValue(attribute);
+            int currentTotal = unitStatistics.getTotal(attribute);
+            response.put(attribute, currentTotal - previousTotal);
+        }
+
+        return response;
+    }
+
+    public JSONObject getEquipment(JSONObject request) {
+        String unitID = request.getString("unit_id");
+
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null) {
+            return new JSONObject().fluentPut("error", "No entity with id " + unitID);
+        }
+        EquipmentComponent unitEquipment = unitEntity.get(EquipmentComponent.class);
+
+        JSONObject response = new JSONObject();
+        for (String slot: unitEquipment.keySet()) {
+            String equipment = unitEquipment.getString(slot);
+            response.put(slot, equipment);
+        }
+
+        return response;
+    }
+
+
 
     public JSONObject addUOrSubtractFromUnitStatisticResource(JSONObject request) {
         String unitID = request.getString("unit_id");
@@ -2135,21 +2387,21 @@ public class GameModel {
      * @return a {@link JSONObject} containing the base, modified, current, missing, and total values of the attribute
      */
     public JSONObject getStatisticsFromUnit(JSONObject request) {
-        String unitID = request.getString("unit_id");
-        String attribute = request.getString("attribute");
+        String unitID = (String) request.getOrDefault("unit_id", request.getString("id"));
+        String attribute = (String) request.getOrDefault("statistic", request.getString("attribute"));
 
         Entity unitEntity = getEntityWithID(unitID);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
-        float total = statisticsComponent.getTotal(attribute);
-        float base = statisticsComponent.getBase(attribute);
-        float modified = statisticsComponent.getModified(attribute);
-        float current = statisticsComponent.getCurrent(attribute);
-        float missing = statisticsComponent.getMissing(attribute);
+        int total = statisticsComponent.getTotal(attribute);
+        int base = statisticsComponent.getBase(attribute);
+        int bonus = statisticsComponent.getBonus(attribute);
+        int current = statisticsComponent.getCurrent(attribute);
+        int missing = statisticsComponent.getMissing(attribute);
 
         JSONObject result = new JSONObject();
         result.put("base", base);
-        result.put("modified", modified);
+        result.put("bonus", bonus);
         result.put("current", current);
         result.put("missing", missing);
         result.put("total", total);
@@ -2157,51 +2409,63 @@ public class GameModel {
         return result;
     }
 
+
+    /**
+     * Computes the total resource costs associated with using a specific ability by a given unit.
+     * <p>
+     * The method interprets each cost entry from the ability's definition and calculates the final
+     * cost values based on static values or dynamic scaling factors (e.g., scaling with another stat).
+     * The result is returned as a {@link JSONObject} mapping resource names (e.g., "mana", "hp")
+     * to the total computed cost.
+     * </p>
+     *
+     * <p>
+     * Cost formats supported in the ability definition (via {@code AbilityTable}):
+     * <ul>
+     *     <li>{@code "25 hp"} – flat cost of 25 to the "hp" resource</li>
+     *     <li>{@code "10% of STR hp"} – 10% of the unit's STR stat applied as cost to "hp"</li>
+     *     <li>{@code "-15% of MANA mp"} – 15% of the unit's MANA stat deducted from "mp"</li>
+     * </ul>
+     * </p>
+     *
+//     * @param  A {@link JSONObject} containing:
+     *                <ul>
+     *                    <li>{@code "id"} or {@code "unit_id"} – the ID of the unit performing the ability</li>
+     *                    <li>{@code "ability"} – the name of the ability to evaluate costs for</li>
+     *                </ul>
+     * @return A {@link JSONObject} mapping each affected resource (e.g., "hp", "mp") to its calculated cost
+     *         as a {@code float}.
+     *
+     * @throws IllegalArgumentException if cost data is malformed or the ability is undefined.
+     *
+     * @see AbilityTable#getCost(String)
+     * @see StatisticsComponent#getScaling(String, String)
+     */
     public JSONObject getCostMap(String userID, String ability) {
+
         Entity userEntity = getEntityWithID(userID);
         StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
         JSONObject costMap = new JSONObject();
 
-        JSONArray costs = AbilityTable.getInstance().getCosts(ability);
+        JSONObject cost = AbilityTable.getInstance().getCost(ability);
+        for (String resource : cost.keySet()) {
+            JSONObject data = cost.getJSONObject(resource);
+            int constant = (int) data.getOrDefault("constant", 0);
+            double result = 0;
 
-        for (int i = 0; i < costs.size(); i++) {
-            JSONObject abilityCost = costs.getJSONObject(i);
-            String resource = AbilityTable.getInstance().getAttribute(abilityCost);
-            String equation = AbilityTable.getInstance().getEquation(abilityCost);
-            String[] partitions = equation.split(" ");
-
-            // Handle the number
-            float value = 0;
-            boolean isPercentage = false;
-            String equationValue = partitions[0].trim();
-            if (partitions.length == 3 && equationValue.endsWith("%")) {
-                isPercentage = true;
-                if (equationValue.startsWith("+") || equationValue.startsWith("*")) {
-                    value = Float.parseFloat(equationValue.substring(1, equationValue.length() - 1));
-                } else if (Character.isDigit(equationValue.charAt(0))) {
-                    value = Float.parseFloat(equationValue.substring(0, equationValue.length() - 1));
-                } else {
-                    return new JSONObject().fluentPut("error", "Unable to parse equation value " + equationValue);
+            for (String magnitude : data.keySet()) {
+                double magnitudeScaling = data.getDoubleValue(magnitude);
+                double statisticValue = 0;
+                switch (magnitude) {
+                    case "base" -> statisticValue = statisticsComponent.getBase(resource);
+                    case "bonus" -> statisticValue = statisticsComponent.getBonus(resource);
+                    case "total" -> statisticValue = statisticsComponent.getBase(resource) + statisticsComponent.getBonus(resource);
+                    case "current" -> statisticValue = statisticsComponent.getCurrent(resource);
+                    case "missing" -> statisticValue = statisticsComponent.getMissing(resource);
                 }
-                value = value * .01f; // Make into percentage
-            } else {
-                value = Float.parseFloat(equationValue);
+                result += statisticValue * magnitudeScaling;
             }
-            String scaling = partitions[1].trim();
-            String attribute = partitions[2].trim();
-
-            // Calculate based on scaling or flat
-            float currentAccruedCost = (float) costMap.getOrDefault(resource, 0f);
-            float additionalCost = 0;
-            if (isPercentage) {
-                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(attribute, scaling);
-                additionalCost = baseModifiedTotalMissingCurrent * value;
-            } else {
-                additionalCost += value;
-            }
-
-            float newAccruedCost = currentAccruedCost + additionalCost;
-            costMap.put(resource,newAccruedCost);
+            costMap.put(resource, constant + result);
         }
         return costMap;
     }
@@ -2211,46 +2475,25 @@ public class GameModel {
         StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
         JSONObject damageMap = new JSONObject();
 
-        JSONArray damages = AbilityTable.getInstance().getDamages(ability);
+        JSONObject damage = AbilityTable.getInstance().getDamage(ability);
+        for (String resource : damage.keySet()) {
+            JSONObject data = damage.getJSONObject(resource);
+            int constant = (int) data.getOrDefault("constant", 0);
+            double result = 0;
 
-        for (int i = 0; i < damages.size(); i++) {
-            JSONObject abilityDamage = damages.getJSONObject(i);
-            String resource = AbilityTable.getInstance().getAttribute(abilityDamage);
-            String equation = AbilityTable.getInstance().getEquation(abilityDamage);
-            String[] partitions = equation.split(" ");
-
-            // Handle the number
-            float value = 0;
-            boolean isPercentage = false;
-            String equationValue = partitions[0].trim();
-            if (partitions.length == 3 && equationValue.endsWith("%")) {
-                isPercentage = true;
-                if (equationValue.startsWith("+") || equationValue.startsWith("*")) {
-                    value = Float.parseFloat(equationValue.substring(1, equationValue.length() - 1));
-                } else if (Character.isDigit(equationValue.charAt(0))) {
-                    value = Float.parseFloat(equationValue.substring(0, equationValue.length() - 1));
-                } else {
-                    return new JSONObject().fluentPut("error", "Unable to parse equation value " + equationValue);
+            for (String magnitude : data.keySet()) {
+                double magnitudeScaling = data.getDoubleValue(magnitude);
+                double statisticValue = 0;
+                switch (magnitude) {
+                    case "base" -> statisticValue = statisticsComponent.getBase(resource);
+                    case "bonus" -> statisticValue = statisticsComponent.getBonus(resource);
+                    case "total" -> statisticValue = statisticsComponent.getBase(resource) + statisticsComponent.getBonus(resource);
+                    case "current" -> statisticValue = statisticsComponent.getCurrent(resource);
+                    case "missing" -> statisticValue = statisticsComponent.getMissing(resource);
                 }
-                value = value * .01f; // Make into percentage
-            } else {
-                value = Float.parseFloat(equationValue);
+                result += statisticValue * magnitudeScaling;
             }
-
-            // Calculate based on scaling or flat
-            float currentAccruedDamage = (float) damageMap.getOrDefault(resource, 0f);
-            float additionalCost = 0;
-            if (isPercentage) {
-                String scaling = partitions[1].trim();
-                String attribute = partitions[2].trim();
-                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(attribute, scaling);
-                additionalCost = baseModifiedTotalMissingCurrent * value;
-            } else {
-                additionalCost = value;
-            }
-
-            float newAccruedDamage = currentAccruedDamage + additionalCost;
-            damageMap.put(resource, newAccruedDamage);
+            damageMap.put(resource, constant + result);
         }
         return damageMap;
     }
@@ -2280,12 +2523,11 @@ public class GameModel {
      *
      * Logs important information about the cost validation and payment process using the internal logger.
      *
-     * @see AbilityTable#getCosts(String)
+     * @see AbilityTable#getCost(String)
      * @see StatisticsComponent#toResource(String, float)
-     * @see #getCostMap(String, String)
      */
     public JSONObject payAbilityCost(JSONObject request) {
-        String unitID = request.getString("unit_id");
+        String unitID = (String) request.getOrDefault("id", request.get("unit_id"));
         String ability = request.getString("ability");
         boolean commit = request.getBooleanValue("commit", false);
 
@@ -2297,7 +2539,7 @@ public class GameModel {
         mLogger.info("Finished gathering cost requirements for {}", ability);
 
         for (String attribute : costMap.keySet()) {
-            float cost = costMap.getFloatValue(attribute);
+            double cost = costMap.getDoubleValue(attribute);
             int currentValue = statisticsComponent.getCurrent(attribute);
             if (currentValue >= cost) { continue; }
             mLogger.info("{} is unable to pay for {} because of {}", userEntity, ability, attribute);
@@ -2305,20 +2547,18 @@ public class GameModel {
         }
         mLogger.info("Finished checking cost requirements for {}", ability);
 
-        JSONObject response = new JSONObject();
         if (commit) {
             mLogger.info("Started paying cost requirements for {}", ability);
             for (String attribute : costMap.keySet()) {
-                float cost = - costMap.getFloatValue(attribute);
+                double cost = - costMap.getDoubleValue(attribute);
                 int current = statisticsComponent.getCurrent(attribute);
-                response.put(attribute, cost);
-                statisticsComponent.toResource(attribute, cost);
+                statisticsComponent.removeFromResource(attribute, cost);
                 mLogger.info("Payed {} out of {} to use {}", Math.abs(cost), Math.abs(current), ability);
             }
             mLogger.info("Finished paying cost requirements for {}", ability);
         }
 
-        return response;
+        return costMap;
     }
 
 //    public JSONObject canPayAbilityCosts(String userUnitID, String ability) {
@@ -2375,18 +2615,20 @@ public class GameModel {
         String ability = request.getString("ability");
         boolean commit = request.getBooleanValue("commit", false);
 
+//        System.out.println(unitID + " is using ability " + ability);
         if (ability == null) {
             return new JSONObject().fluentPut("error", "No Ability Specified");
-        }
-
-        if (targetTileID == null) {
-            return new JSONObject().fluentPut("error", "No Tile Selected");
         }
 
         Entity unitEntity = getEntityWithID(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
+
+        abilityComponent.stageTarget(targetTileID);
+        mLogger.info("Updated staged target for {}, to {}", unitEntity, targetTileID);
+        abilityComponent.stageAbility(ability);
+        mLogger.info("Updating staged ability for {}, to {}", unitEntity, ability);
 
         String currentTileID = movementComponent.getCurrentTileID();
         int range = AbilityTable.getInstance().getRange(ability);
@@ -2398,10 +2640,14 @@ public class GameModel {
         request.put("range", range);
         request.put("respect", true);
 
-        JSONArray response = getTilesInAreaOfSightV2(request);
+        JSONArray response = getTilesInAreaOfSight(request);
         List<String> aos = response.toJavaList(String.class);
         abilityComponent.stageRange(aos);
         mLogger.info("Updated area of sight for {}, {} tiles", unitEntity, aos.size());
+
+        if (targetTileID == null) {
+            return new JSONObject().fluentPut("error", "No Tile Selected");
+        }
 
         // Setup Line of Sight
         request = new JSONObject();
@@ -2414,7 +2660,6 @@ public class GameModel {
         abilityComponent.stageLineOfSight(los);
         mLogger.info("Updated line of sight for {}, {} tiles", unitEntity, los.size());
 
-
         // Setup Area of Effect
         request = new JSONObject();
         request.put("tile_id", targetTileID);
@@ -2425,14 +2670,6 @@ public class GameModel {
         List<String> aoe = response.toJavaList(String.class);
         abilityComponent.stageAreaOfEffect(aoe);
         mLogger.info("Updated area of effect for {}, {} tiles", unitEntity, aoe.size());
-
-
-
-        abilityComponent.stageTarget(targetTileID);
-        mLogger.info("Updating target for {}, {}", unitEntity, targetTileID);
-
-        abilityComponent.stageAbility(ability);
-        mLogger.info("Updating ability for {}, {}", unitEntity, ability);
 
         // try executing action only if specified
         // - Target is not null
@@ -2512,14 +2749,14 @@ public class GameModel {
         request.put("end_tile_id", toTileID);
         request.put("respect", true);
 
-        response = getTilesInMovementPathV2(request);
+        response = getTilesInMovementPath(request);
         List<String> path = response.toJavaList(String.class);
         movementComponent.stageMovementPath(path);
         mLogger.info("Updated path for {}, {} tiles", unitEntity, path.size());
 
 
         movementComponent.stageTarget(toTileID);
-        mLogger.info("Updated target tile {}, {}", unitEntity, toTileID);
+        mLogger.info("Updated target tile for {}, {}", unitEntity, toTileID);
 
         // try executing action only if specified
         // - Target is not null
@@ -2570,6 +2807,7 @@ public class GameModel {
         if (announcement.isEmpty()) {
             announcement = StringUtils.convertSnakeCaseToCapitalized(ability);
         }
+
         getEventBus().publish(FloatingTextSystem.createFloatingTextEvent( announcement, actorEntityID ));
 
         Entity actorEntity = getEntityWithID(actorEntityID);
@@ -2681,15 +2919,30 @@ public class GameModel {
     }
 
 
+    private final JSONObject mResponse = new JSONObject();
     /**
      * Creates a unit entity with the given parameters and sets its type to "unit".
      * @param request the unit creation parameters
      * @return a {@link JSONObject} containing the new unit ID
      */
     public JSONObject createUnit(JSONObject request) {
-        request.put("type", "unit");
-        return createEntity(request);
+        String unit = request.getString("unit");
+        String nickname = request.getString("nickname");
+        boolean isAI = request.getBooleanValue("ai", true);
+
+        String id = null;
+        if (unit == null || nickname == null) {
+            id = EntityStore.getInstance().createUnit(isAI);
+        } else {
+            id = EntityStore.getInstance().createUnit(unit, nickname, isAI);
+        }
+
+        mResponse.clear();
+        mResponse.put("id", id);
+        return mResponse;
     }
+    public JSONObject createCpuUnit(JSONObject request) { request.put("ai", true); return createUnit(request); }
+    public JSONObject createUserUnit(JSONObject request) { request.put("ai", false); return createUnit(request); }
     /**
      * Creates a structure entity with the given parameters and sets its type to "structure".
      * @param request the structure creation parameters
@@ -2730,7 +2983,6 @@ public class GameModel {
      */
     public JSONObject createEntity(JSONObject request) {
         String type = request.getString("type");
-
         String unit = request.getString("unit");
         String structure = request.getString("structure");
         String tile = request.getString("tile");
@@ -2738,16 +2990,16 @@ public class GameModel {
         int row = request.getIntValue("row", -1);
         int column = request.getIntValue("column", -1);
         int elevation = request.getIntValue("elevation", -1);
-        boolean playable = request.getBooleanValue("playable", false);
+        boolean isAI = request.getBooleanValue("ai", true);
 
         JSONObject response = new JSONObject();
         String id = null;
         switch (type) {
             case "unit" -> {
-                if (unit == null && nickname == null && !playable) {
-                    id = EntityStore.getInstance().createUnit(true);
+                if (unit == null) {
+                    id = EntityStore.getInstance().createUnit(isAI);
                 } else {
-                    id = EntityStore.getInstance().createUnit(unit, nickname, playable);
+                    id = EntityStore.getInstance().createUnit(unit, nickname, isAI);
                 }
                 response.put("unit_id", id);
             }
@@ -2894,26 +3146,44 @@ public class GameModel {
         String ability = request.getString("ability");
         String actedOnEntityID = request.getString("acted_on_unit_id");
 
-
+        JSONObject abilityData = EmeritusDatabase.getInstance().getAbility(ability).getJSONObject(0);
         JSONObject damageMap = getDamageMap(actorEntityID, ability);
 
         Entity actedOnEntity = getEntityWithID(actedOnEntityID);
         StatisticsComponent actedOnStatisticsComponent = actedOnEntity.get(StatisticsComponent.class);
         mLogger.info("Started dealing damage with {} to {} ", ability, actedOnEntity);
-//
+
         for (String attribute : damageMap.keySet()) {
             int finalDamage = damageMap.getIntValue(attribute);
-            actedOnStatisticsComponent.toResource(attribute, -finalDamage);
+            actedOnStatisticsComponent.removeFromResource(attribute, finalDamage);
 
             String displayText = (finalDamage < 0 ? "+" : "") + Math.abs(finalDamage);
 
-            mEventBus.publish(FloatingTextSystem.createFloatingTextEvent( displayText, actedOnEntityID ));
+            String color = "grey";
+            int priority = 1;
+            switch (attribute.toLowerCase(Locale.ROOT)) {
+                case "health" -> { color = Color.ORANGERED.brighter().toString(); priority = 1; displayText += ""; }
+                case "mana" -> { color = Color.CORNFLOWERBLUE.toString(); priority = 2; displayText += ""; }
+                case "stamina" -> { color = Color.CORAL.toString(); priority = 2; displayText += ""; }
+            }
+            mEventBus.publish(FloatingTextSystem.createFloatingTextEvent( displayText, actedOnEntityID, priority, color ));
+        }
+
+
+        JSONObject targetTags = abilityData.getJSONObject("target_tags");
+        if (targetTags != null) {
+            for (String key : targetTags.keySet()) {
+                JSONObject data = targetTags.getJSONObject(key);
+                double probability = data.getDoubleValue("probability");
+                boolean passesCheck = MathUtils.passesChanceOutOf100((float) probability);
+                if (!passesCheck) { continue; }
+                actedOnStatisticsComponent.putTag(key);
+            }
         }
 
         Entity actorEntity = getEntityWithID(actorEntityID);
         ActionsComponent actionsComponent = actorEntity.get(ActionsComponent.class);
         actionsComponent.setHasFinishedUsingAbility(true);
-
 
         return damageMap;
     }
@@ -2925,6 +3195,22 @@ public class GameModel {
 
     public JSONObject unpause() {
         return new JSONObject();
+    }
+
+    public JSONObject getTagsFromUnit(JSONObject request) {
+        String unitID = request.getString("unit_id");
+
+        Entity unitEntity = getEntityWithID(unitID);
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+        JSONObject result = new JSONObject();
+
+        Set<String> tags = statisticsComponent.getTagNames();
+        for (String tag : tags) {
+            result.put(tag, tag);
+        }
+
+        return result;
     }
 
 //

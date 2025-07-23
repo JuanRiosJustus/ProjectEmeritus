@@ -122,12 +122,6 @@ public class AbilityPanel extends EscapablePanel {
 
             abilityButton.getUnderlyingButton().setOnMouseReleased(e -> {
                 JSONObject request = new JSONObject();
-                request.put("id", currentEntityID);
-                request.put("ability", ability);
-                mLogger.info("Selecting " + ability);
-
-//                gameModel.stageAbilityForUnit(request);
-
 
                 request.put("unit_id", currentEntityID);
                 request.put("ability", ability);

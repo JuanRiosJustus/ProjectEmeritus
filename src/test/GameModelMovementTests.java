@@ -11,10 +11,48 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GameModelMovementTests extends GameTests {
+
+    @Test
+    public void movesUnitAround() {
+        GameController game = createGameWithDefaults(10, 10, false);
+        game.start();
+
+        // Setup unit1
+        JSONObject response = game.createCpuUnit();
+        String unit1 = response.getString("unit_id");
+        game.setUnit(new JSONObject().fluentPut("unit_id", unit1).fluentPut("row", 3).fluentPut("column", 3));
+
+        // Setup unit1
+        response = game.createCpuUnit();
+        String unit2 = response.getString("unit_id");
+        game.setUnit(new JSONObject().fluentPut("unit_id", unit2).fluentPut("row", 3).fluentPut("column", 6));
+
+
+        simulateUserInactivity(game, 2000);
+
+
+        // Pause game to wait for ui to show
+//        game.start();
+//
+//        try {
+//            Thread.sleep(10000);
+//        } catch (Exception ex) {
+//
+//        }
+//        pauseGame(game, 2000);
+//        game.triggerTurnOrderQueue();
+
+
+
+//        game.triggerTurnOrderQueue();
+//        pauseGame(game, 2000);
+//        game.triggerTurnOrderQueue();
+
+    }
     @Test
     public void initGameModelIsRunning() {
         GameController gameController = GameController.create(10, 10, 400, 400);
-        gameController.run();
+        gameController.start();
         assertTrue(gameController.isRunning());
     }
 

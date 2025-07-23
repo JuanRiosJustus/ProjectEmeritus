@@ -1,11 +1,8 @@
 package main.game.main;
 
-import main.constants.Direction;
 import main.game.components.AbilityComponent;
-import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
@@ -761,30 +758,6 @@ public class GameAPI {
         return value;
     }
 
-
-    public JSONObject getStatisticsForUnit(GameModel mGameModel, JSONObject request) {
-        String unitID = request.getString(ID);
-        Entity unitEntity = getEntityWithID(unitID);
-
-        JSONObject response = new JSONObject();
-        if (unitEntity == null) { return response; }
-
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        Set<String> nodes = statisticsComponent.getAttributes();
-        for (String node : nodes) {
-            int base = statisticsComponent.getBase(node);
-            int modified = statisticsComponent.getModified(node);
-            int current = statisticsComponent.getCurrent(node);
-            JSONObject nodeData = new JSONObject();
-            nodeData.put("base", base);
-            nodeData.put("modified", modified);
-            nodeData.put("current", current);
-
-            response.put(node, nodeData);
-        }
-
-        return response;
-    }
 
 
 

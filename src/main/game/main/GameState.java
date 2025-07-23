@@ -70,7 +70,7 @@ public class GameState extends JSONObject {
         gameState.setSpriteHeight(64);
 
         gameState.put(FLOATING_TEXT_MAP, new JSONObject());
-        gameState.setFloatingTextFontSize(30);
+        gameState.setFloatingTextFontSize(20);
 
         gameState.setIsDebugMode(false);
         gameState.setGameMode(GAMEPLAY_MODE_REGULAR);
@@ -461,6 +461,14 @@ public class GameState extends JSONObject {
 
 
 
+    private static final String MANUALLY_PASS_THROUGH_TURNS = "manually.pass.through.turns";
+    public GameState setManuallyPassThroughTurns(boolean value) {
+        return (GameState) fluentPut(MANUALLY_PASS_THROUGH_TURNS, value);
+    }
+    public boolean getManuallyPassThroughTurns() {
+        return getBooleanValue(MANUALLY_PASS_THROUGH_TURNS);
+    }
+
 
     public void setGameMode(String mode) { put(GAMEPLAY_MODE, mode); }
     public void setModeAsUnitDeploymentMode() { put(GAMEPLAY_MODE, GAMEPLAY_MODE_UNIT_DEPLOYMENT); }
@@ -562,10 +570,18 @@ public class GameState extends JSONObject {
     }
 
 
-    public void setAbilitySelectedFromUI(String ability) { put(ABILITY_SELECTED_FROM_UI, ability == null ? EMPTY_STRING : ability); }
 
     public void setDeltaTime(double deltaTime) { put(DELTA_TIME, deltaTime); }
     public double getDeltaTime() { return getDouble(DELTA_TIME); }
+    private double mDeltaTime = 0;
+    private double mLateUpdatedTime = 0;
+    public void updateGameDeltaTime() {
+        long currentTime = System.nanoTime();
+        mDeltaTime = (currentTime - mLateUpdatedTime) / 1.0E9D;
+        mLateUpdatedTime = currentTime;
+        setDeltaTime(mDeltaTime);
+//        System.out.println(mDeltaTime + " ?");
+    }
 
 
 
@@ -593,5 +609,30 @@ public class GameState extends JSONObject {
     }
     public double getCpuTurnStartDelayInSeconds() {
         return getDoubleValue(TURN_START_DELAY_IN_SECONDS);
+    }
+
+
+
+    private static final String GAME_TIME_START_NS = "game.time.start.ns";
+    public void updateGameStartTime() {
+        if (containsKey(GAME_TIME_START_NS)) { return; }
+        long startTime = System.nanoTime();
+        put(GAME_TIME_START_NS, startTime);
+    }
+    public long getStartTime() { return getLongValue(GAME_TIME_START_NS, 0); }
+
+    private static final String GAME_TIME_DURATION = "game.time.duration.ns";
+    public long getGameDurationTime() {
+        long duration = System.nanoTime() - getStartTime();
+        return duration;
+    }
+
+    private static final String AUTO_BEHAVIOR_ENABLED = "auto.behavior";
+    public GameState setAutoBehaviorEnabled(boolean value) {
+        return (GameState) fluentPut(AUTO_BEHAVIOR_ENABLED, value);
+    }
+
+    public boolean isAutoBehaviorEnabled() {
+        return (boolean) getOrDefault(AUTO_BEHAVIOR_ENABLED, true);
     }
 }

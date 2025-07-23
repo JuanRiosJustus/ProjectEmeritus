@@ -7,7 +7,7 @@ import java.util.*;
 import main.constants.Direction;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.logging.EmeritusLogger;
 
 
@@ -23,7 +23,7 @@ public abstract class TileMapAlgorithm {
 
     public static void placeObstructions(TileMap tileMap) {
 
-        List<String> structures = AssetPool.getInstance().getBucket("structures");
+        List<String> structures = AnimationPool.getInstance().getBucket("structures");
 
         mRandom.setSeed(tileMap.getSeed());
         String obstruction = structures.get(mRandom.nextInt(structures.size()));

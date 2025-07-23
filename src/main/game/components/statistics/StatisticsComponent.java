@@ -1,11 +1,10 @@
 package main.game.components.statistics;
 
 import main.game.components.Component;
-import main.game.stats.Attribute;
+import main.game.stats.Statistic;
 import main.game.stats.Tag;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
-import org.w3c.dom.Attr;
 
 import java.util.*;
 
@@ -19,11 +18,42 @@ public class StatisticsComponent extends Component {
     private static final String MAGICAL_ATTACK = "magical_attack", MAGICAL_DEFENSE = "magical_defense";
     private static final String MOVE = "move", CLIMB = "climb", SPEED = "speed";
     private static final String UNIT = "unit";
-    private final Map<String, Attribute> mAttributeMap = new LinkedHashMap<>();
+    private final Map<String, Statistic> mAttributeMap = new LinkedHashMap<>();
     private final Map<String, Tag> mTagMap = new LinkedHashMap<>();
+    private final String STATISTICS = "statistics";
+    private JSONObject mStatisticsMap = new JSONObject();
+
+    private final String TAGS = "tags";
+    private JSONObject mTagsMap = new JSONObject();
+
 //    private final List<>
     private int mHashCode = 0;
-    public StatisticsComponent() { }
+    public StatisticsComponent() {
+
+        mStatisticsMap = new JSONObject();
+        put(STATISTICS, mStatisticsMap);
+
+        mTagsMap = new JSONObject();
+        put(TAGS, mTagsMap);
+    }
+
+
+    public JSONObject getTags() { return getJSONObject(TAGS); }
+    public JSONObject getStatistics() { return getJSONObject(STATISTICS); }
+
+    public void putStatistics(JSONArray statsList) {
+        JSONArray stats = getJSONArray(STATISTICS);
+        if (stats != null) {
+            return;
+        }
+        put(STATISTICS, statsList);
+    }
+
+//    public JSONArray getStatistics() {
+//        return getJSONArray(STATISTICS);
+//    }
+
+
 
     public void addTag(String key) {
         Tag tag = new Tag(key, "????", -1);
@@ -69,29 +99,43 @@ public class StatisticsComponent extends Component {
         return result;
     }
 
-    public Set<String> getAttributes() { return mAttributeMap.keySet(); }
+    public Set<String> getAttributes() { return mStatisticsMap.keySet(); }
     public void putAttributes(JSONObject attributes) {
-        Map<String, Attribute> updatedMap = mAttributeMap;
+        JSONObject updatedMap = mStatisticsMap;
+
         updatedMap.clear();
 
         for (String key : attributes.keySet()) {
             float value = attributes.getFloat(key);
 
-            Attribute attribute = new Attribute(key, value);
-            updatedMap.put(key, attribute);
+            Statistic statistic = new Statistic(key, value);
+            updatedMap.put(key, statistic);
         }
         recalculateHash();
     }
 
+    public void setStatistic(String key, int value) {
+        JSONObject updatedMap = mStatisticsMap;
+
+        if (value <= 0) {
+            value = 0;
+        }
+
+        Statistic statistic = new Statistic(key, value);
+        updatedMap.put(key, statistic);
+
+        recalculateHash();
+    }
+
     public void getStatChanges(JSONObject attributes) {
-        Map<String, Attribute> updatedMap = mAttributeMap;
+        Map<String, Statistic> updatedMap = mAttributeMap;
         updatedMap.clear();
 
         for (String key : attributes.keySet()) {
             float value = attributes.getFloat(key);
 
-            Attribute attribute = new Attribute(key, value);
-            updatedMap.put(key, attribute);
+            Statistic statistic = new Statistic(key, value);
+            updatedMap.put(key, statistic);
         }
         recalculateHash();
     }
@@ -115,66 +159,100 @@ public class StatisticsComponent extends Component {
     public int getTotalMagicalAttack() { return getTotal(StatisticsComponent.MAGICAL_ATTACK); }
     public int getTotalPhysicalDefense() { return getTotal(StatisticsComponent.PHYSICAL_DEFENSE); }
     public int getTotalMagicalDefense() { return getTotal(StatisticsComponent.MAGICAL_DEFENSE); }
-    public int getModified(String attribute) {
-        Attribute statisticNode = mAttributeMap.get(attribute);
-        return statisticNode.getModified();
+
+    private Statistic createOrGetNode(String statistic) {
+        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        if (node == null) {
+            node = new Statistic(statistic, 0);
+            mStatisticsMap.put(statistic, node);
+        }
+        return node;
     }
-    public int getTotal(String attribute) {
-        Attribute statisticNode = mAttributeMap.get(attribute);
-        return statisticNode.getTotal();
+    public int getBonus(String statistic) {
+        Statistic node = createOrGetNode(statistic);
+        return node.getBonus();
     }
-    public int getBase(String attribute) {
-        Attribute statisticNode = mAttributeMap.get(attribute);
-        return statisticNode.getBase();
+    public int getTotal(String statistic) {
+        Statistic node = createOrGetNode(statistic);
+        return node.getTotal();
     }
-    public int getCurrent(String attribute) {
-        Attribute statisticNode = mAttributeMap.get(attribute);
-        return statisticNode.getCurrent();
+    public int getBase(String statistic) {
+        Statistic node = createOrGetNode(statistic);
+        return node.getBase();
     }
-    public int getMissing(String attribute) {
-        Attribute statisticNode = mAttributeMap.get(attribute);
-        return statisticNode.getMissing();
+    public int getCurrent(String statistic) {
+        Statistic node = createOrGetNode(statistic);
+        return node.getCurrent();
     }
-    public float getScaling(String attribute, String type) {
-        Attribute statisticNode = mAttributeMap.get(attribute);
-        return statisticNode.getScaling(type);
+    public int getMissing(String statistic) {
+        Statistic node = createOrGetNode(statistic);
+        return node.getMissing();
     }
 
-    public void toResource(String attribute, float value) {
-        Attribute attributeNode = mAttributeMap.get(attribute);
-        attributeNode.setCurrent(attributeNode.getCurrent() + value);
+    public float getScaling(String statistic, String type) {
+        Statistic node = createOrGetNode(statistic);
+        return node.getScaling(type);
+    }
+
+    public void toResource(String statistic, float value) {
+        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        node.setCurrent(node.getCurrent() + value);
+        recalculateHash();
+    }
+
+    public void addToResource(String statistic, double value) {
+        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        node.setCurrent(node.getCurrent() + value);
+        recalculateHash();
+    }
+
+    public void removeFromResource(String statistic, double value) {
+        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        node.setCurrent(node.getCurrent() - value);
         recalculateHash();
     }
 
 
 
 
-    public void putAdditiveModification(String source, String name,  String attribute, float value) {
-        Attribute node = mAttributeMap.get(attribute);
-        node.putAdditiveModification(source, name, value);
+    public void addFlatBonus(String source, String name, String statistic, float value) {
+        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        node.addFlatBonus(source, name, value);
         recalculateHash();
     }
 
-    public void putMultiplicativeModification(String source, String name, String attribute, float value) {
-        Attribute node = mAttributeMap.get(attribute);
-        node.putMultiplicativeModification(source, name, value);
+    public void addPercentBonus(String source, String name, String statistic, float value) {
+        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        node.addPercentBonus(source, name, value);
+        recalculateHash();
+    }
+
+    public void fillResource(String statistic) {
+        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        node.fill();
+        recalculateHash();
+    }
+
+    public void putSimpleModification(String source, String name, String attribute, float value) {
+        Statistic node = mAttributeMap.get(attribute);
+        node.addPercentBonus(source, name, value);
         recalculateHash();
     }
 
 
     public void removeModification(String source) {
-        Map<String, Attribute> attributes = mAttributeMap;
-        for (Map.Entry<String, Attribute> entry : attributes.entrySet()) {
-            Attribute attribute = entry.getValue();
-            attribute.removeModification(source);
+        Map<String, Statistic> attributes = mAttributeMap;
+        for (Map.Entry<String, Statistic> entry : attributes.entrySet()) {
+            Statistic statistic = entry.getValue();
+            statistic.removeModification(source);
         }
     }
     private void recalculateHash() {
         Set<Integer> hashCodes = new HashSet<>();
-        for (Map.Entry<String, Attribute> entry : mAttributeMap.entrySet()) {
+        for (Map.Entry<String, Statistic> entry : mAttributeMap.entrySet()) {
             String key = entry.getKey();
-            Attribute attribute = entry.getValue();
-            int hashcode = attribute.hashCode();
+            Statistic statistic = entry.getValue();
+            int hashcode = statistic.hashCode();
             hashCodes.add(hashcode);
         }
 
@@ -231,9 +309,35 @@ public class StatisticsComponent extends Component {
         return (int) Math.floor(baseXP * Math.pow(level, exponent));
     }
 
-    public Set<String> getTags() { return mTagMap.keySet(); }
     public int getTagDuration(String tag) { return mTagMap.get(tag).getDuration(); }
 
 
+    public Set<String> getTagNames() { return mTagMap.keySet(); }
+    public void putTag(String key) {
+        JSONObject tags = getTags();
+
+        JSONObject data = tags.getJSONObject(key);
+        if (data == null) {
+            data = new JSONObject()
+                    .fluentPut("name", key)
+                    .fluentPut("duration", 2)
+                    .fluentPut("stacks", 1);
+        } else {
+            data.fluentPut("stacks", data.getIntValue("stacks") + 1);
+        }
+    }
+
+    public JSONObject getTagDetails(String key) {
+        JSONObject tags = getTags();
+        JSONObject tagData = tags.getJSONObject(key);
+        JSONObject result = new JSONObject();
+        for (String tagDataKey : tagData.keySet()) {
+            Object value = tagData.get(tagDataKey);
+            if (value instanceof JSONObject || value instanceof JSONArray) { continue; }
+            result.put(tagDataKey, value);
+        }
+        return result;
+
+    }
     public int hashCode() { return mHashCode; }
 }

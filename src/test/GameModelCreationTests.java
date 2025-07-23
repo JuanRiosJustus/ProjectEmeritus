@@ -3,7 +3,7 @@ package test;
 import com.alibaba.fastjson2.JSONObject;
 import main.game.main.GameConfigs;
 import main.game.main.GameController;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import org.junit.Test;
 
 import java.util.HashSet;
@@ -15,6 +15,19 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class GameModelCreationTests extends GameTests {
+
+    @Test
+    public void assertCreatesStructure() {
+        GameController gameController = GameController.create();
+        assertEquals(gameController.getRows(), 0);
+        assertEquals(gameController.getColumns(), 0);
+
+        JSONObject structure = gameController.createStructure();
+        assertNotNull(structure);
+
+        assertTrue(structure.getString("id").toLowerCase().contains("structure"));
+
+    }
 
     @Test
     public void assertEmptyGameCreated() {
@@ -203,7 +216,7 @@ public class GameModelCreationTests extends GameTests {
         assertEquals(gameController.getColumns(), 10);
 
 
-        List<String> structures = AssetPool.getInstance().getStructureTileSets();
+        List<String> structures = AnimationPool.getInstance().getStructureTileSets();
         Random random = new Random();
         for (int i = 0; i < 10; i++) {
             int row = random.nextInt(gameController.getRows());

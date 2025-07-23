@@ -84,35 +84,35 @@ public class AbilityDamageReport  {
 
 
 
-    public Map<String, Float> getRawDamageMap(String actorEntityID, String ability) {
-        // Calculate the raw damage from the ability
-        Entity actorEntity = getEntityWithID(actorEntityID);
-        StatisticsComponent actorStats = actorEntity.get(StatisticsComponent.class);
-        JSONArray rawDamages = AbilityTable.getInstance().getDamage(ability);
-        Map<String, Float> damageMap = new LinkedHashMap<>();
-        for (int i = 0; i < rawDamages.size(); i++) {
-            JSONObject damage = rawDamages.getJSONObject(i);
-            String targetAttribute = AbilityTable.getInstance().getAttribute(damage);
-            String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(damage);
-            String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(damage);
-            float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(damage);
-            boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(damage);
-
-            // Get previous calculations if available
-            float currentAccruedDamage = damageMap.getOrDefault(targetAttribute, 0f);
-            float additionalCost = 0;
-            if (isBaseScaling) {
-                additionalCost += scalingValue;
-            } else {
-                float baseModifiedTotalMissingCurrent = actorStats.getScaling(scalingAttribute, scalingType);
-                additionalCost = baseModifiedTotalMissingCurrent * scalingValue;
-            }
-
-            float newAccruedDamage = currentAccruedDamage + additionalCost;
-            damageMap.put(targetAttribute, newAccruedDamage);
-        }
-        return damageMap;
-    }
+//    public Map<String, Float> getRawDamageMap(String actorEntityID, String ability) {
+//        // Calculate the raw damage from the ability
+//        Entity actorEntity = getEntityWithID(actorEntityID);
+//        StatisticsComponent actorStats = actorEntity.get(StatisticsComponent.class);
+//        JSONArray rawDamages = AbilityTable.getInstance().getDamage(ability);
+//        Map<String, Float> damageMap = new LinkedHashMap<>();
+//        for (int i = 0; i < rawDamages.size(); i++) {
+//            JSONObject damage = rawDamages.getJSONObject(i);
+//            String targetAttribute = AbilityTable.getInstance().getAttribute(damage);
+//            String scalingAttribute = AbilityTable.getInstance().getScalingAttributeKey(damage);
+//            String scalingType = AbilityTable.getInstance().getScalingAttributeScaling(damage);
+//            float scalingValue = AbilityTable.getInstance().getScalingAttributeValue(damage);
+//            boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(damage);
+//
+//            // Get previous calculations if available
+//            float currentAccruedDamage = damageMap.getOrDefault(targetAttribute, 0f);
+//            float additionalCost = 0;
+//            if (isBaseScaling) {
+//                additionalCost += scalingValue;
+//            } else {
+//                float baseModifiedTotalMissingCurrent = actorStats.getScaling(scalingAttribute, scalingType);
+//                additionalCost = baseModifiedTotalMissingCurrent * scalingValue;
+//            }
+//
+//            float newAccruedDamage = currentAccruedDamage + additionalCost;
+//            damageMap.put(targetAttribute, newAccruedDamage);
+//        }
+//        return damageMap;
+//    }
 
     private float getDamageAfterDefenses(String actedOnEntityID, String ability, float damage, String damageType) {
         if (damage == 0) { return 0; }

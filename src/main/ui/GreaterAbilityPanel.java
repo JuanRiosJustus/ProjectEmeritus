@@ -8,7 +8,6 @@ import main.constants.JavaFXUtils;
 import main.constants.Tuple;
 import main.game.main.GameModel;
 import main.game.stores.AbilityTable;
-import main.game.systems.combat.CombatSystem;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledLabel;
@@ -178,6 +177,7 @@ public class GreaterAbilityPanel extends GamePanel {
 //        }
 
 
+        request = new JSONObject().fluentPut("id", entityID).fluentPut("ability", selectedAbility);
         JSONObject costMap = gameModel.getCostMap(entityID, selectedAbility);
         for (String key : costMap.keySet()) {
             float value = costMap.getFloatValue(key);

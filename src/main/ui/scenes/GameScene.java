@@ -24,7 +24,7 @@ public class GameScene extends EngineRunnable {
         if (mGameController == null) {
             mGameController = GameController.create(10, 10, mWidth, mHeight);
         }
-        mGameController.initialize();
+        mGameController.run();
 
         sp.getChildren().add(mGameController.getGamePanel());
         return new Scene(sp, mWidth, mHeight);

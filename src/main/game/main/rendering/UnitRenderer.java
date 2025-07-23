@@ -12,7 +12,7 @@ import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 //import java.awt.Point;
 //import java.awt.image.BufferedImage;
 
@@ -31,17 +31,20 @@ public class UnitRenderer extends Renderer {
             MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
             PositionComponent positionComponent = unitEntity.get(PositionComponent.class);
             String id = unitAssetComponent.getMainID();
-            Image image = AssetPool.getInstance().getImage(id);
+            Image image = AnimationPool.getInstance().getImage(id);
             if (image == null) { return; } // TODO why is this null sometimes??
 
             // Default origin with not animation consideration
+            Image rrrrr = AnimationPool.getInstance().getImage(id);
             int x = positionComponent.getX();
             int y = positionComponent.getY();
 //            int x = movementComponent.getX();
 //            int y = movementComponent.getY();
 
             // Offset Y just a bit so it looks more natural
-            y = (int) (y - (model.getGameState().getSpriteHeight() * .1));
+//            y = (int) (y - (model.getGameState().getSpriteHeight() * .1));
+//            System.out.println(image.getWidth() + " xxx " + image.getHeight() + " " + image.hashCode() + " " + entityID);
+//            System.out.println(x + ", " + y);
 
             Point p = calculateWorldPosition(model, camera, x, y, image);
             graphics.drawImage(image, p.x, p.y);

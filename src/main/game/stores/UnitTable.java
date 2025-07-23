@@ -46,8 +46,8 @@ public class UnitTable {
     public JSONObject getUnit(String unit) {
         return mUnitMap.get(unit);
     }
-    public JSONObject getAttributes(String unit) {
-        return getUnit(unit).getJSONObject("attributes");
+    public JSONObject getStatistics(String unit) {
+        return getUnit(unit).getJSONObject("statistics");
     }
     public JSONArray getType(String unit) {
         return getUnit(unit).getJSONArray("type");

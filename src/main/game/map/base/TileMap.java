@@ -9,7 +9,7 @@ import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 
 import main.utils.MathUtils;
 import main.utils.noise.SimplexNoise;
@@ -82,8 +82,8 @@ public class TileMap extends JSONArray {
         int rows = request.getIntValue("rows", 0);
         int columns = request.getIntValue("columns", 0);
 
-        List<String> floors = AssetPool.getInstance().getFloorTileSets();
-        List<String> liquids = AssetPool.getInstance().getLiquidTileSets();
+        List<String> floors = AnimationPool.getInstance().getFloorTileSets();
+        List<String> liquids = AnimationPool.getInstance().getLiquidTileSets();
         Random random = new Random();
 
         String foundationAsset = request.getString("foundation_asset");
@@ -109,7 +109,7 @@ public class TileMap extends JSONArray {
             noiseMap = applySimplexNoise(rows, columns, lowerTerrainElevation, upperTerrainElevation, terrainElevationNoise, terrainElevationSeed);
         }
 
-        List<String> list = AssetPool.getInstance().getFloorTileSets();
+        List<String> list = AnimationPool.getInstance().getFloorTileSets();
         if (terrainAsset == null || terrainAsset.isEmpty()) {
             terrainAsset = list.get(mRandom.nextInt(list.size()));
         }
@@ -167,7 +167,7 @@ public class TileMap extends JSONArray {
         float noiseZoom = configs.getMapGenerationHeightNoise();
         int[][] noiseMap = applySimplexNoise(rows, columns, terrainStartingElevation, terrainEndingElevation, noiseZoom);
 
-        List<String> list = AssetPool.getInstance().getFloorTileSets();
+        List<String> list = AnimationPool.getInstance().getFloorTileSets();
         if (terrainAsset == null || terrainAsset.isEmpty()) {
             terrainAsset = list.get(mRandom.nextInt(list.size()));
         }

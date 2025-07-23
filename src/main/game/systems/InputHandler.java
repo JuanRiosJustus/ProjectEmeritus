@@ -232,6 +232,7 @@ public class InputHandler {
             request.put("tile_id", hoveredTileID);
             request.put("commit", isPressed);
 
+            System.out.println(abilitySelected + " <<<");
             model.useAbility(request);
 
 //            mEventBus.publish(AbilitySystem.createUseAbilityEvent(currentEntityID, abilitySelected, hoveredTileID, isPressed));

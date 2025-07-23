@@ -159,16 +159,49 @@ public class ImageUtils {
         return new BufferedImage(cm, raster, isAlphaMultiplied, null);
     }
 
-    public static BufferedImage getResizedImage(BufferedImage src, int newWidth, int newHeight){
-        BufferedImage resized = new BufferedImage(newWidth, newHeight, src.getType());
+
+    public static BufferedImage getResizedImage(BufferedImage src, int newWidth, int newHeight) {
+        return getResizedImage(src, newWidth, newHeight, 1.0f);
+    }
+
+
+    public static BufferedImage getResizedImage(BufferedImage src, int newWidth, int newHeight, float newOpacity) {
+        if (newOpacity < 0f || newOpacity > 1f) {
+            newOpacity = 1.0f;
+        }
+
+        // Always use a type that supports transparency
+        BufferedImage resized = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = resized.createGraphics();
+
         g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
         g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g.drawImage(src.getScaledInstance(newWidth, newHeight, src.getType()), 0, 0, null);
+
+        // Set alpha composite BEFORE drawing
+        g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, newOpacity));
+        g.drawImage(src, 0, 0, newWidth, newHeight, null);
+
         g.dispose();
         return resized;
     }
+
+//    public static BufferedImage getResizedImage(BufferedImage src, int newWidth, int newHeight, float newOpacity) {
+//        if (newOpacity > 1 || newOpacity < 0) { newOpacity = 1.0f; } // For 100% opacity
+//
+//        BufferedImage resized = new BufferedImage(newWidth, newHeight, src.getType());
+//        Graphics2D g = resized.createGraphics();
+//        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+//        g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+//        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+//        g.drawImage(src.getScaledInstance(newWidth, newHeight, src.getType()), 0, 0, null);
+//
+//        AlphaComposite ac = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, newOpacity);
+//        g.setComposite(ac);
+//
+//        g.dispose();
+//        return resized;
+//    }
 
     public static void resizeImagesWithSubtraction(BufferedImage[] source, int subtractedWidth, int subtractedHeight) {
         for (int i = 0; i < source.length; i++) {
@@ -511,6 +544,8 @@ public class ImageUtils {
 //
 //        return animationFrames;
 //    }
+
+
 
     public static BufferedImage[] createShearingAnimation(BufferedImage image, int length, double shear) {
         BufferedImage[] animationFrames = new BufferedImage[length];

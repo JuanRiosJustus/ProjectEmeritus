@@ -29,7 +29,7 @@ public class GameTests {
         return object;
     }
 
-    protected void pauseGame(GameController gc, long waitTime) {
+    protected void simulateUserInactivity(GameController gc, long waitTime) {
         try {
             System.out.println("Started pausing");
             Thread waiter = new Thread(() -> {
@@ -65,7 +65,13 @@ public class GameTests {
             System.err.println("Unable to sleep");
         }
     }
-    protected GameController initializeGame(int rows, int columns, boolean headless) {
+
+    protected GameController createAndStartGameWithDefaults() {
+        GameController gameController = createGameWithDefaults(10, 10, false);
+        gameController.start();
+        return gameController;
+    }
+    protected GameController createGameWithDefaults(int rows, int columns, boolean headless) {
         int width = 1280;
         int height = 720;
         GameController rc = GameController.create(rows, columns, width, height);
@@ -76,15 +82,16 @@ public class GameTests {
 
         if (headless) {
             new Thread(() -> {
-                rc.initialize();
+                rc.run();
                 while (rc.isRunning()) {
-                    rc.updateDeltaTime();
+//                    rc.updateDeltaTime();
                 }
             }).start();
         } else {
             try {
+                new JFXPanel();
                 JavaFXTestUtils.runAndWait(() -> {
-                    rc.initialize();
+                    rc.run();
                     Stage stage = new Stage();
                     stage.setScene(new Scene(rc.getGamePanel(), width, height));
                     stage.show();
@@ -97,26 +104,14 @@ public class GameTests {
     }
 
 
-    public static JSONObject fillUnitResource(GameController gc, String unitID, String att, float val, boolean fill) {
-        setUnitAttributeTotalValue(gc, unitID, att, val);
-        if (fill) {
-            setUnitResourceToToValue(gc, unitID, att, val);
-        }
-
-        JSONObject request = new JSONObject()
-                .fluentPut("unit_id", unitID)
-                .fluentPut("attribute", att);
-        JSONObject result = gc.getStatisticsFromUnit(request);
-
-
-        assertEquals(result.getFloatValue("current"), result.getFloatValue("total"));
-        return new JSONObject();
+    public static JSONObject fillUnitResource(GameController gc, String unitID, String att, int val, boolean fill) {
+        return setUnitStatistic(gc, unitID, att, val);
     }
 
-    public static JSONObject fillAllUnitResources(GameController gc, String unitID, float val) {
-        fillUnitResource(gc, unitID, "health", val, true);
-        fillUnitResource(gc, unitID, "mana", val, true);
-        fillUnitResource(gc, unitID, "stamina", val, true);
+    public static JSONObject fillUnitResources(GameController gc, String unitID, int val) {
+        setUnitStatistic(gc, unitID, "health", val);
+        setUnitStatistic(gc, unitID, "mana", val);
+        setUnitStatistic(gc, unitID, "stamina", val);
         return new JSONObject();
     }
 
@@ -142,89 +137,132 @@ public class GameTests {
         return response;
     }
 
-    public static JSONObject setUnitAttributeTotalValue(GameController gc, String unitID, String att, float val) {
-        // work with 100's. Very easy
-        JSONObject request = new JSONObject()
-                .fluentPut("unit_id", unitID)
-                .fluentPut("attribute", att);
+    public static JSONObject setUnitAttributeToValue(GameController gc, String id, String attribute, int value) {
+        return setUnitAttributeToValue(gc, id, attribute, value, false);
+    }
+    public static JSONObject setUnitAttributeToValue(GameController gc, String id, String attribute, int value, boolean fill) {
+        assertTrue(value >= 0);
+
+        // Get Unit Attribute
+        JSONObject request = new JSONObject().fluentPut("id", id).fluentPut("attribute", attribute);
         JSONObject before = gc.getStatisticsFromUnit(request);
-        float toAddOrSubtract = 0f;
-        boolean isIncreasingValue = before.getFloatValue("total") < val;
-        boolean isDecreasingValue = before.getFloatValue("total") > val;
-        if (isIncreasingValue) {
-            toAddOrSubtract += val - before.getFloatValue("total");
-        } else if (isDecreasingValue) {
-            toAddOrSubtract -= Math.abs(before.getFloatValue("total") - val);
-        }
+        assertTrue(before.getIntValue("base") >= 0);
+        assertTrue(before.getIntValue("bonus") >= 0);
+        assertTrue(before.getIntValue("total") >= 0);
+        assertTrue(before.getIntValue("current") >= 0);
+        assertTrue(before.getIntValue("missing") >= 0);
+
+        // Calculate the difference between current total/max and the input
+        int currentTotal = before.getIntValue("total");
+        int difference = Math.abs(currentTotal - value) * (value < currentTotal ? -1 : 1);
+
         // Start request
         request = new JSONObject()
-                .fluentPut("unit_id", unitID)
-                .fluentPut("attribute", att)
-                .fluentPut("scaling", "flat")
-                .fluentPut("value", toAddOrSubtract)
-                .fluentPut("source", "testTwoBuffWithSameNameDoNotOverlap");
-        JSONObject result = gc.addUOrSubtractUnitStatisticModification(request);
+                .fluentPut("id", id)
+                .fluentPut("attribute", attribute)
+                .fluentPut("scaling", difference + " to " + attribute)
+                .fluentPut("source", "setUnitAttributeToValue");
+        JSONObject result = gc.addStatisticBonus(request);
 
+        // Check state is still valid results
+        request = new JSONObject().fluentPut("id", id).fluentPut("attribute", attribute);
+        JSONObject after = gc.getStatisticsFromUnit(request);
+//        assertTrue(before.getIntValue("base") >= 0);
+//        assertTrue(before.getIntValue("bonus") >= 0);
+        assertTrue(after.getIntValue("total") >= 0);
+        assertTrue(after.getIntValue("current") >= 0);
+        assertTrue(after.getIntValue("missing") >= 0);
+
+        assertEquals(before.getIntValue("base"), after.getIntValue("base"));
+        if (difference > 0) {
+            assertTrue(before.getIntValue("bonus") < after.getIntValue("bonus"));
+            assertTrue(before.getIntValue("total") < after.getIntValue("total"));
+        } else if (difference < 0) {
+            assertTrue(before.getIntValue("bonus") > after.getIntValue("bonus"));
+            assertTrue(before.getIntValue("total") > after.getIntValue("total"));
+        } else {
+            assertEquals(before.getIntValue("base"), after.getIntValue("base"));
+            assertEquals(before.getIntValue("bonus"), after.getIntValue("bonus"));
+            assertEquals(before.getIntValue("total"), after.getIntValue("total"));
+            assertEquals(before.getIntValue("current"), after.getIntValue("current"));
+            assertEquals(before.getIntValue("missing"), after.getIntValue("missing"));
+        }
+        assertEquals(after.getFloatValue("total"), value);
+
+
+        // If a resource was set, top it off if possible
+        if (fill) {
+            after = fillUnitResourceToToValue(gc, id, attribute, value);
+            assertEquals(after.getIntValue("current"), after.getIntValue("total"));
+            assertTrue(after.getIntValue("current") >= 0);
+            assertTrue(after.getIntValue("missing") == 0);
+        }
+        return after;
+    }
+
+    public static JSONObject fillUnitResourceToToValue(GameController gc, String unitID, String attribute, int value) {
+        // get current stats
+        JSONObject request = new JSONObject().fluentPut("id", unitID).fluentPut("attribute", attribute);
+        JSONObject before = gc.getStatisticsFromUnit(request);
+
+        // Calculate the difference between current total/max and the input
+        int currentTotal = before.getIntValue("current");
+        int difference = Math.abs(currentTotal - value) * (value < 0 ? -1 : 1);
+
+        // Start request
         request = new JSONObject()
-                .fluentPut("unit_id", unitID)
-                .fluentPut("attribute", att);
+                .fluentPut("id", unitID)
+                .fluentPut("attribute", attribute)
+                .fluentPut("value", value)
+                .fluentPut("source", "setUnitResourceToToValue");
+        JSONObject result = gc.addUnitStatisticsResources(request);
+
+        // Check stats after changes
+        request = new JSONObject().fluentPut("id", unitID).fluentPut("attribute", attribute);
         JSONObject after = gc.getStatisticsFromUnit(request);
 
-        assertEquals(before.getFloatValue("base"), after.getFloatValue("base"));
-        if (isIncreasingValue) {
-//            assertTrue(before.getFloatValue("modified") < after.getFloatValue("modified"));
-            assertTrue(before.getFloatValue("total") < after.getFloatValue("total"));
-//            assertEquals(before.getFloatValue("current"), after.getFloatValue("current"));
-//            assertTrue(before.getFloatValue("missing") < after.getFloatValue("missing"));
-//            assertTrue(after.getFloatValue("current") > 0);
-        } else if (isDecreasingValue) {
-//            assertTrue(before.getFloatValue("modified") > after.getFloatValue("modified"));
-            assertTrue(before.getFloatValue("total") > after.getFloatValue("total"));
-//            assertTrue(before.getFloatValue("missing") >= after.getFloatValue("missing"));
+        assertTrue(after.getIntValue("current") > 0);
+        if (difference > 0) {
+            assertTrue(before.getIntValue("current") <= after.getIntValue("current"));
         } else {
-            assertEquals(before.getFloatValue("total"), after.getFloatValue("total"));
+            assertTrue(before.getIntValue("current") >= after.getIntValue("current"));
         }
 
-        assertEquals(after.getFloatValue("total"), val);
-//        addUOrSubtractUnitStatisticResource
         return after;
     }
 
 
-    public static JSONObject setUnitResourceToToValue(GameController gc, String unitID, String att, float val) {
-        // work with 100's. Very easy
+    public static JSONObject setUnitStatistic(GameController gc, String unitID, String stat, int value) {
         JSONObject request = new JSONObject()
                 .fluentPut("unit_id", unitID)
-                .fluentPut("attribute", att);
+                .fluentPut("statistic", stat);
         JSONObject before = gc.getStatisticsFromUnit(request);
 
+        if (before.getIntValue("base") == value) {
+            return before;
+        }
 
         // Start request
         request = new JSONObject()
                 .fluentPut("unit_id", unitID)
-                .fluentPut("attribute", att)
-                .fluentPut("value", val)
-                .fluentPut("source", "setUnitResourceToToValue");
-        JSONObject result = gc.addUOrSubtractUnitStatisticResource(request);
+                .fluentPut("statistic", stat)
+                .fluentPut("value", value);
+        JSONObject result = gc.setStatisticForUnit(request);
+
+        if (result.getIntValue("current") < result.getIntValue("total")) {
+            System.out.println("t,tffl,l");
+        }
 
         request = new JSONObject()
                 .fluentPut("unit_id", unitID)
-                .fluentPut("attribute", att);
+                .fluentPut("statistic", stat);
         JSONObject after = gc.getStatisticsFromUnit(request);
 
-
-        if (val > 0) {
-            assertEquals(before.getFloatValue("base"), after.getFloatValue("base"));
-            assertEquals(before.getFloatValue("modified") ,after.getFloatValue("modified"));
-            assertEquals(before.getFloatValue("total"), after.getFloatValue("total"));
-            assertEquals(after.getFloatValue("current"), after.getFloatValue("total"));
-            assertEquals(after.getFloatValue("missing"), 0);
-        } else {
-            assertEquals(before.getFloatValue("base"), after.getFloatValue("base"));
-            assertEquals(before.getFloatValue("modified") ,after.getFloatValue("modified"));
-            assertEquals(before.getFloatValue("total"), after.getFloatValue("total"));
+        assertTrue(after.getIntValue("current") >= 0);
+        if (value > 0) {
+            assertTrue(after.getIntValue("current") <= value);
+            assertEquals(after.getIntValue("base"), value);
         }
-
         return after;
     }
 
@@ -232,10 +270,17 @@ public class GameTests {
 
 
     protected JSONObject createAndPlaceRandomUnit(GameController gc, int row, int column) {
-        String unit_id = gc.createUnit().getString("id");
+        String unit_id = gc.createCpuUnit().getString("id");
         String tile_id = gc.getTile(toJSON("row", row, "column", column)).getString("id");
         gc.setUnit(toJSON("tile_id", tile_id, "unit_id", unit_id));
         return new JSONObject().fluentPut("tile_id", tile_id).fluentPut("unit_id", unit_id);
+    }
+
+    protected JSONObject createAndPlaceRandomStructure(GameController gc, int row, int column) {
+        String structure_id = gc.createStructure().getString("id");
+        String tile_id = gc.getTile(toJSON("row", row, "column", column)).getString("id");
+        gc.setStructure(toJSON("tile_id", tile_id, "structure_id", structure_id));
+        return new JSONObject().fluentPut("tile_id", tile_id).fluentPut("structure", structure_id);
     }
 
     protected JSONObject createAndPlaceStructure(GameController gc, int row, int column) {

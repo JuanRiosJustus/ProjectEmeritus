@@ -55,12 +55,13 @@ public class OverlaySystem extends GameSystem {
     @Override
     public void update(GameModel model, SystemContext systemContext) {
         // Update all the animations if possible. Remove animations that have finished
+        double deltaTime = model.getGameState().getDeltaTime();
         for (Animation anime : animationsToSetMap.keySet()) {
-            anime.update();
+            anime.update(deltaTime);
             if (anime.hasCompletedLoop()) {
                 toDelete.add(anime);
             } else {
-                anime.update();
+                anime.update(deltaTime);
             }
         }
 

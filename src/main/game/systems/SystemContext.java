@@ -1,5 +1,6 @@
 package main.game.systems;
 
+import com.alibaba.fastjson2.JSONArray;
 import main.game.components.AIComponent;
 import main.game.components.AbilityComponent;
 import main.game.components.MovementComponent;
@@ -9,9 +10,7 @@ import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class SystemContext {
 
@@ -31,12 +30,13 @@ public class SystemContext {
         SystemContext systemContext = new SystemContext(gameModel);
 
 //        Set<String> unitIDs = new HashSet<>(gameModel.getGameState().getAllUnits().toJavaList(String.class));
-        List<String> unitIDs = gameModel.getSpeedQueue().order();
+        JSONArray unitIDs = gameModel.getSpeedQueue().turnOrder();
 //        Set<String> unitIDs = new HashSet<>(gameModel.getInitiativeQueue().getTurnOrder());
 
         systemContext.mCurrentUnit = gameModel.getSpeedQueue().peek();
 
-        for (String unitID : unitIDs) {
+        for (int index = 0; index < unitIDs.size(); index++) {
+            String unitID = unitIDs.getString(index);
             if (unitID == null || unitID.isEmpty()) { continue; }
             Entity unitEntity = EntityStore.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
@@ -76,6 +76,60 @@ public class SystemContext {
         systemContext.mAllTileEntityIDs.addAll(gameModel.getTileMap().getAllTileEntityIDs());
 
         return systemContext;
+
+
+
+
+
+
+//        SystemContext systemContext = new SystemContext(gameModel);
+//
+////        Set<String> unitIDs = new HashSet<>(gameModel.getGameState().getAllUnits().toJavaList(String.class));
+//        List<String> unitIDs = gameModel.getSpeedQueue().turnOrder();
+////        Set<String> unitIDs = new HashSet<>(gameModel.getInitiativeQueue().getTurnOrder());
+//
+//        systemContext.mCurrentUnit = gameModel.getSpeedQueue().peek();
+//
+//        for (String unitID : unitIDs) {
+//            if (unitID == null || unitID.isEmpty()) { continue; }
+//            Entity unitEntity = EntityStore.getInstance().get(unitID);
+//            if (unitEntity == null) { continue; }
+//
+//            ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
+//            AIComponent aiComponent = unitEntity.get(AIComponent.class);
+//
+//            boolean isEntityAI = aiComponent.isAI();
+//            if (isEntityAI) {
+//                systemContext.mNonControlledUnitIDs.add(unitID);
+//            } else {
+//                systemContext.mPlayerUnitIDs.add(unitID);
+//            }
+//
+//            systemContext.mAllUnitIDs.add(unitID);
+//
+//            MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//            boolean hasNotMoved = !actionsComponent.hasFinishedMoving();
+//            if (hasNotMoved) {
+//                systemContext.mUnitsNotMovedThisRoundIDs.add(unitID);
+//                if (isEntityAI) {
+//                    systemContext.mNonPlayerUnitsNotMovedThisRoundIDs.add(unitID);
+//                }
+//            }
+//
+//            AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+//            boolean hasNotUsedAbility = !actionsComponent.hasFinishedUsingAbility();
+//            if (hasNotUsedAbility) {
+//                systemContext.mUnitsNotActedThisRoundIDs.add(unitID);
+//                if (isEntityAI) {
+//                    systemContext.mNonPlayerUnitsNotActedThisRoundIDs.add(unitID);
+//                }
+//            }
+//        }
+//
+//
+//        systemContext.mAllTileEntityIDs.addAll(gameModel.getTileMap().getAllTileEntityIDs());
+//
+//        return systemContext;
     }
 
 

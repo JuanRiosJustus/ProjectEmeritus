@@ -1,10 +1,12 @@
 package main.game.systems.actions.behaviors;
 
+import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
+import main.constants.Direction;
 import main.constants.Pair;
+import main.game.components.AIComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.PositionComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
@@ -12,10 +14,7 @@ import main.game.main.GameModel;
 import main.game.stores.AbilityTable;
 import main.game.stores.EntityStore;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class OmniscientBehavior extends MoveActionBehavior {
     @Override
@@ -24,15 +23,13 @@ public class OmniscientBehavior extends MoveActionBehavior {
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
-
-        List<String> allEnemyUnits = mBehaviorLibrary.getAllEnemyUnits(model, unitID);
-        if (allEnemyUnits.isEmpty()) { return null; }
+        int movement = statisticsComponent.getTotalMovement();
 
         // Tiles this unit can move to
         List<String> movableTiles = mAlgorithm.getMovementRange(
                 model,
                 currentTileID,
-                statisticsComponent.getTotalMovement()
+                movement
         );
 
         // Exclude current tile (optional)
@@ -43,20 +40,55 @@ public class OmniscientBehavior extends MoveActionBehavior {
         String bestTile = null;
         int minDistance = Integer.MAX_VALUE;
 
-        for (String tileID : movableTiles) {
-            PositionComponent tilePos = getEntityWithID(tileID).get(PositionComponent.class);
+        AIComponent aiComponent = unitEntity.get(AIComponent.class);
 
-            for (String enemyID : allEnemyUnits) {
-                PositionComponent enemyPos = getEntityWithID(enemyID).get(PositionComponent.class);
-                int distance = PositionComponent.getManhattanDistance(tilePos, enemyPos);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    bestTile = tileID;
-                }
+        // Get the closest entity
+        String focusedEntityID = aiComponent.getFocusedEntityID();
+        if (focusedEntityID == null) {
+            List<String> allEnemyUnits = mBehaviorLibrary.getAllEnemyUnits(model, unitID);
+            if (allEnemyUnits.isEmpty()) { return null; }
+            String randomEnemy = allEnemyUnits.get(mRandom.nextInt(allEnemyUnits.size()));
+            aiComponent.focusedEntity(randomEnemy);
+            focusedEntityID = aiComponent.getFocusedEntityID();
+        }
+        // Check if currently adjacent
+
+        // Get tile available tile around focused entity
+        String tileEntityIDAdjacentToFocusedUnitEntity = null;
+        if (tileEntityIDAdjacentToFocusedUnitEntity == null) {
+            Entity focuedEntity = getEntityWithID(focusedEntityID);
+            MovementComponent focusedEntityMC = focuedEntity.get(MovementComponent.class);
+            String focusedTileEntityID = focusedEntityMC.getCurrentTileID();
+            Entity focusedTileEntity = getEntityWithID(focusedTileEntityID);
+            TileComponent tileComponent = focusedTileEntity.get(TileComponent.class);
+            List<Direction> adjacent = new ArrayList<>(Arrays.stream(Direction.cardinal).toList());
+            Collections.shuffle(adjacent);
+            for (Direction direction : adjacent) {
+                int row = tileComponent.getRow() + direction.y;
+                int column = tileComponent.getColumn() + direction.x;
+                String tileID = model.getTile(row, column);
+                Entity adjacentTileEntity = getEntityWithID(tileID);
+                TileComponent adjacentTileComponent = adjacentTileEntity.get(TileComponent.class);
+                if (adjacentTileComponent.isNotNavigable()) { continue; }
+                tileEntityIDAdjacentToFocusedUnitEntity = tileID;
+                break;
             }
         }
 
-        return bestTile;
+
+        JSONObject request = new JSONObject();
+        request.put("start_tile_id", currentTileID);
+        request.put("end_tile_id", tileEntityIDAdjacentToFocusedUnitEntity);
+        request.put("range", -1);
+        JSONArray response = model.getTilesInMovementPath(request);
+
+        String nextBestTile = null;
+        if (response != null && !response.isEmpty()) {
+            nextBestTile = response.getString(movement);
+            mLogger.info("Moving {} from {} to {}", unitID, currentTileID, tileEntityIDAdjacentToFocusedUnitEntity);
+        }
+
+        return nextBestTile;
     }
 
     @Override
@@ -95,15 +127,8 @@ public class OmniscientBehavior extends MoveActionBehavior {
                             // If unit is on same team, skip
                             String myTeam = model.getGameState().getTeam(entityID);
                             String theirTeam = model.getGameState().getTeam(unitEntityID);
-//                            JSONObject request = new JSONObject();
-//                            request.put("unit_1_id", entityID);
-//                            request.put("unit_2_id", unitEntityID);
-//                            boolean sameTeam = model.areUnitsOnSameTeam(request);
-
 
                             return unitOnTile != entity && !myTeam.equalsIgnoreCase(theirTeam);
-//                            return !model.getSpeedQueue().isOnSameTeam(unitEntity, unitOnTile);
-//                            return true;
                         }).toList();
 
                 // Attack one of the units randomly

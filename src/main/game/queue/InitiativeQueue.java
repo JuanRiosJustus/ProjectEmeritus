@@ -2,6 +2,7 @@ package main.game.queue;
 
 import java.util.*;
 
+import com.alibaba.fastjson2.JSONArray;
 import main.constants.Constants;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
@@ -210,19 +211,25 @@ public class InitiativeQueue extends GameQueue {
                 .toList();
     }
 
-    public List<String> order() {
-        return mEntityMap.keySet().stream()
-                .sorted(Comparator.comparingDouble(id -> {
-                    float currentMeter = mTurnMeterMap.getOrDefault(id, 0f);
-                    Entity entity = mEntityMap.get(id);
-                    float speed = entity.get(StatisticsComponent.class).getTotal(Constants.SPEED);
+    public JSONArray turnOrder() {
+        return new JSONArray();
+//        return new mEntityMap.keySet().stream()
+//                .sorted(Comparator.comparingDouble(id -> {
+//                    float currentMeter = mTurnMeterMap.getOrDefault(id, 0f);
+//                    Entity entity = mEntityMap.get(id);
+//                    float speed = entity.get(StatisticsComponent.class).getTotal(Constants.SPEED);
+//
+//                    if (speed <= 0) return Float.MAX_VALUE; // slower units go last
+//
+//                    float remaining = mTurnThreshold - currentMeter;
+//                    return remaining / speed; // lower time = sooner turn
+//                }))
+//                .toList();
+    }
 
-                    if (speed <= 0) return Float.MAX_VALUE; // slower units go last
-
-                    float remaining = mTurnThreshold - currentMeter;
-                    return remaining / speed; // lower time = sooner turn
-                }))
-                .toList();
+    @Override
+    public JSONArray nextTurnOrder() {
+        return new JSONArray();
     }
 
     public List<String> getPredictedTurnOrder(int count) {

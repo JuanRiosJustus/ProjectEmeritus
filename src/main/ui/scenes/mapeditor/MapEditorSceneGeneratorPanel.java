@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Callback;
 import main.constants.JavaFXUtils;
 import main.constants.Tuple;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.ui.foundation.BeveledButton;
 import main.utils.RandomUtils;
 
@@ -177,8 +177,8 @@ public class MapEditorSceneGeneratorPanel extends VBox  {
             Image firstFrame = new WritableImage(rawImage.getPixelReader(),
                     0,
                     0,
-                    AssetPool.getInstance().getNativeSpriteSize(),
-                    AssetPool.getInstance().getNativeSpriteSize()
+                    AnimationPool.getInstance().getNativeSpriteSize(),
+                    AnimationPool.getInstance().getNativeSpriteSize()
             );
 
             ImageView imageView = new ImageView(firstFrame);

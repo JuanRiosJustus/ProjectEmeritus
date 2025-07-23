@@ -16,7 +16,7 @@ public abstract class EngineRunnable {
         mHeight = height;
     }
     public abstract Scene render();
-    public void initialize() {
+    public void run() {
         mUpdateAnimationTimer = new AnimationTimer() { @Override public void handle(long l) {} };
         mUpdateAnimationTimer.start();
     }

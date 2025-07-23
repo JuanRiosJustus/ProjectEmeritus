@@ -11,7 +11,7 @@ import main.engine.EngineRunnable;
 import main.game.main.GameConfigs;
 import main.game.main.GameController;
 import main.game.stores.FontPool;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.logging.EmeritusLogger;
 import main.constants.JavaFXUtils;
 import com.alibaba.fastjson2.JSONObject;
@@ -49,7 +49,7 @@ public class MapEditorScene extends EngineRunnable {
     private Pane mRootPane = null;
 
     private static final String MAP_BRUSH_MODE_ADDITIVE = "Additive";
-    private static final int SPRITE_SIZE = AssetPool.getInstance().getNativeSpriteSize();
+    private static final int SPRITE_SIZE = AnimationPool.getInstance().getNativeSpriteSize();
     private StackPane mStackPane = new StackPane();
     private MapEditorSceneGeneratorPanel mGeneratorPanel = null;
     private MapEditorSceneEditorPanel mEditorPanel = null;
@@ -312,7 +312,7 @@ public class MapEditorScene extends EngineRunnable {
                     .setMapGenerationLiquidAsset("./" + liquid)
                     .setMapGenerationStructureAssets(List.of("./" + structure));
 
-            AssetPool.getInstance().clearPool();
+            AnimationPool.getInstance().clearPool();
             if (mGameController != null && mGameController.isRunning()) { mGameController.stop(); }
 
             mGameController = GameController.create(gc);
@@ -321,7 +321,7 @@ public class MapEditorScene extends EngineRunnable {
             Pane gamesPane = mGameController.getGamePanel();
             mGamePaneContainer.getChildren().add(gamesPane);
 
-            mGameController.initialize();
+            mGameController.run();
             mGameController.setConfigurableStateGameplayHudIsVisible(false);
             glideToCenterOfMapAndZoomCamera(cameraZoom);
 
@@ -355,7 +355,7 @@ public class MapEditorScene extends EngineRunnable {
     }
 
     @Override
-    public void initialize() { mGameController.initialize(); }
+    public void run() { mGameController.run(); }
 
     @Override
     public void stop() { mGameController.stop(); }

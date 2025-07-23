@@ -1,11 +1,13 @@
 package main.game.stores;
 
+import main.constants.EmeritusDatabase;
 import main.game.components.*;
 import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.StructureComponent;
 import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
+import main.graphics.AnimationPool;
 import main.utils.RandomUtils;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
@@ -16,6 +18,7 @@ public class EntityStore {
     private static final String TILE_ENTITY = "tile";
     private static final String UNIT_ENTITY = "unit";
     private static final String STRUCTURE_ENTITY = "structure";
+    private static final String EQUIPMENT_ENTITY = "equipment";
     private final Map<String, Entity> mEntityMap = new HashMap<>();
 
     private static EntityStore mInstance = null;
@@ -51,6 +54,23 @@ public class EntityStore {
         return id;
     }
 
+    public String createEquipment(String name) {
+        String id = createUUID("NAME", name);
+        Entity newEntity = createBaseEntity(id, name, EQUIPMENT_ENTITY);
+
+        StatisticsComponent statisticsComponent = new StatisticsComponent();
+
+        JSONArray data = EmeritusDatabase.getInstance().getEquipment(name);
+        JSONObject equipment = data.getJSONObject(0);
+        JSONArray equipmentStats = equipment.getJSONArray("statistics");
+
+        statisticsComponent.putStatistics(equipmentStats);
+
+        newEntity.add(statisticsComponent);
+
+        return id;
+    }
+
 
     public String createUnit(boolean isAI) {
         List<String> units = new ArrayList<>(UnitTable.getInstance().getAllUnits());
@@ -71,7 +91,7 @@ public class EntityStore {
         newEntity.add(new AnimationComponent());
         newEntity.add(new Overlay());
         newEntity.add(new TagComponent());
-        newEntity.add(new InventoryComponent());
+        newEntity.add(new EquipmentComponent());
         newEntity.add(new History());
         newEntity.add(new DirectionComponent());
         newEntity.add(new AssetComponent());
@@ -79,7 +99,7 @@ public class EntityStore {
 
         unit = unit.toLowerCase();
 
-        JSONObject attributes = UnitTable.getInstance().getAttributes(unit);
+        JSONObject statistics = UnitTable.getInstance().getStatistics(unit);
         JSONArray type = UnitTable.getInstance().getType(unit);
 
         String basicAbility = UnitTable.getInstance().getBasicAbility(unit);
@@ -88,7 +108,7 @@ public class EntityStore {
 
 
         StatisticsComponent statisticsComponent = new StatisticsComponent();
-        statisticsComponent.putAttributes(attributes);
+        statisticsComponent.putAttributes(statistics);
         statisticsComponent.putType(type);
 
         statisticsComponent.putBasicAbility(basicAbility);
@@ -104,7 +124,14 @@ public class EntityStore {
     }
 
 
+    public String createStructure() { return createStructure(null); }
     public String createStructure(String structure) {
+        if (structure == null || structure.isEmpty()) {
+            List<String> structures = AnimationPool.getInstance().getStructureTileSets();
+            structure = structures.get(new Random().nextInt(structures.size()));
+        }
+
+        structure = structure.substring(structure.lastIndexOf("/") + 1, structure.lastIndexOf("."));
         String id = createUUID("STRUCTURE", structure);
         Entity newEntity = createBaseEntity(id, structure, STRUCTURE_ENTITY);
 
@@ -177,6 +204,6 @@ public class EntityStore {
                 sb.append(key).append("_").append(value).append("___");
             }
         }
-        return sb.toString() + UUID.randomUUID();
+        return sb + "UUID_" + UUID.randomUUID();
     }
 }

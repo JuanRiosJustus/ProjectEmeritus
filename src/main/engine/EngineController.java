@@ -64,7 +64,7 @@ public class EngineController {
         // Start the scene
         mView.centerOnScreen();
 
-        runnable.initialize();
+        runnable.run();
         // Set the scene
         InputController.getInstance().setup(toRender);
         toRender.getRoot().requestFocus();

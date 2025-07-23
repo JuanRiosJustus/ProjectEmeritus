@@ -34,6 +34,11 @@ public class BehaviorSystem extends GameSystem {
         AIComponent aiComponent = entity.get(AIComponent.class);
         if (!aiComponent.isAI()) { return; }
 
+        boolean disabledAutoBehavior = mGameState.isAutoBehaviorEnabled() == false;
+        if (disabledAutoBehavior) {
+            return;
+        }
+
         TimerComponent timerComponent = entity.get(TimerComponent.class);
 
         if (!actionsComponent.hasFinishedSetup()) {
@@ -85,6 +90,7 @@ public class BehaviorSystem extends GameSystem {
     private void handleTryUsingAbility(GameModel model, String entityID) {
         Pair<String, String> abilityAndTileID = mRandomnessBehavior.toActOn(model, entityID);
         if (abilityAndTileID == null) {
+            Pair<String, String> abilityAndTileIDjjj = mRandomnessBehavior.toActOn(model, entityID);
             Entity entity = getEntityWithID(entityID);
             ActionsComponent actionsComponent = entity.get(ActionsComponent.class);
             actionsComponent.setHasFinishedUsingAbility(true);
@@ -101,6 +107,5 @@ public class BehaviorSystem extends GameSystem {
         request.put("tile_id",  tileID);
         request.put("commit", true);
         model.useAbility(request);
-//        mEventBus.publish(AbilitySystem.createUseAbilityEvent(entityID, ability, tileID, true));
     }
 }

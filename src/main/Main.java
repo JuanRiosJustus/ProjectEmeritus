@@ -11,7 +11,7 @@ import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.AbilityTable;
 import main.game.stores.UnitTable;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.state.UserSaveStateManager;
 import main.logging.EmeritusLogger;
 import main.game.stores.EntityStore;
@@ -38,14 +38,16 @@ public class Main extends Application {
 
         EngineController engineController = EngineController.getInstance();
 
-        GameController gameController = GameController.createVariousHeightTestMapWithLiquid(10, 13, 1500, 950);
+        GameController gameController = GameController.createVariousHeightTestMapWithLiquid(7, 7, 1500, 950);
+//        GameController gameController = GameController.createVariousHeightTestMapWithLiquid(10, 13, 1500, 950);
         gameController.setCameraZoom(new JSONObject().fluentPut("zoom", 1.4));
 
-        List<String> structures = AssetPool.getInstance().getStructureTileSets();
+        List<String> structures = AnimationPool.getInstance().getStructureTileSets();
         String structure = structures.get(new Random().nextInt(structures.size()));
         gameController.setStructure(new JSONObject().fluentPut("bulk", true).fluentPut("chance", .25).fluentPut("structure", structure));
 
-        setup(gameController, 5);
+        setup(gameController, 1);
+        gameController.start();
 
 
         engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));

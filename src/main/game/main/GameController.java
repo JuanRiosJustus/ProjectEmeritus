@@ -5,10 +5,9 @@ import javafx.scene.CacheHint;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import main.engine.EngineController;
 import main.engine.EngineRunnable;
 import main.game.stores.EntityStore;
-import main.graphics.AssetPool;
+import main.graphics.AnimationPool;
 import main.input.InputController;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
@@ -20,8 +19,7 @@ public class GameController extends EngineRunnable {
     private final GameMapEditorAPI mGameMapEditorAPI;
     private final GameModel mGameModel;
     private final GameView mGameView;
-    private float mDeltaTime = 0;
-    private long mLastTime = 0;
+    private final JSONObject mEmptyJson = new JSONObject();
     private final InputController mInputController = InputController.getInstance();
 
     public static GameController create() {
@@ -119,8 +117,8 @@ public class GameController extends EngineRunnable {
 
     public static GameController create(int rows, int columns, int width, int height) {
 
-        List<String> floors = AssetPool.getInstance().getFloorTileSets();
-        List<String> structures = AssetPool.getInstance().getStructureTileSets();
+        List<String> floors = AnimationPool.getInstance().getFloorTileSets();
+        List<String> structures = AnimationPool.getInstance().getStructureTileSets();
 
         GameConfigs configs = GameConfigs.getDefaults()
                 .setMapGenerationRows(rows)
@@ -192,18 +190,8 @@ public class GameController extends EngineRunnable {
         mGameMapEditorAPI = new GameMapEditorAPI(mGameModel);
     }
 
-    public void initialize() {
-
-//        List<GarbageCollectorMXBean> gcBeans = ManagementFactory.getGarbageCollectorMXBeans();
-//        for (GarbageCollectorMXBean gcBean : gcBeans) {
-//            System.out.println("Name: " + gcBean.getName());
-//            System.out.println("Collection count: " + gcBean.getCollectionCount());
-//            System.out.println("Collection time: " + gcBean.getCollectionTime());
-//            System.out.println("---------------------------");
-//        }
-//
-
-        mGameModel.run();;
+    public void start() {
+        mGameModel.start();;
         mUpdateAnimationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
@@ -222,8 +210,6 @@ public class GameController extends EngineRunnable {
     }
 
     private void updateGame() {
-        double deltaTime = EngineController.getInstance().getDeltaTime();
-        mGameModel.setDeltaTime(deltaTime);
         mGameModel.update();
         mGameView.update();
     }
@@ -269,7 +255,7 @@ public class GameController extends EngineRunnable {
 
     public int getRows() { return mGameModel.getRows(); }
     public int getColumns() { return mGameModel.getColumns(); }
-    public void run() { mGameModel.run(); }
+//    public void start() { mGameModel.start(); }
 
 
 
@@ -277,17 +263,17 @@ public class GameController extends EngineRunnable {
 
 
     public void updateDeltaTime() {
-        long currentTime = System.nanoTime();
-        mDeltaTime = (float) ((currentTime - mLastTime) / 1_000_000_000.0); // Convert ns to seconds
-        mLastTime = currentTime;
-//        System.out.printf("DeltaTime: %.6f seconds%n", mDeltaTime);
-        try {
-            Thread.sleep(16); // ~60 FPS
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-
-        mGameModel.setDeltaTime(mDeltaTime);
+//        long currentTime = System.nanoTime();
+//        mDeltaTime = (float) ((currentTime - mLastTime) / 1_000_000_000.0); // Convert ns to seconds
+//        mLastTime = currentTime;
+////        System.out.printf("DeltaTime: %.6f seconds%n", mDeltaTime);
+//        try {
+//            Thread.sleep(16); // ~60 FPS
+//        } catch (InterruptedException e) {
+//            Thread.currentThread().interrupt();
+//        }
+//
+//        mGameModel.setDeltaTime(mDeltaTime);
     }
 
 
@@ -564,6 +550,44 @@ public class GameController extends EngineRunnable {
     }
 
     /**
+     * Sets a base value for a specific statistic on a given unit.
+     * <p>
+     * This method processes a JSON request with the following keys:
+     * <ul>
+     *   <li><b>unit_id</b> (String): The ID of the unit to update.</li>
+     *   <li><b>statistic</b> (String): The name of the statistic to modify (e.g., "strength", "speed").</li>
+     *   <li><b>value</b> (int): The new base value to set for the specified statistic.</li>
+     * </ul>
+     * <p>
+     * If the unit or its {@code StatisticsComponent} is not found, the method returns a JSON object with
+     * an error message. Otherwise, it updates the statistic and returns the unit’s current statistics
+     * using {@code getStatisticsFromUnit()}.
+     *
+     * <p>Example success response:
+     * <pre>
+     * {
+     *   "unit_id": "unit_001",
+     *   "strength": 15,
+     *   "speed": 12,
+     *   ...
+     * }
+     * </pre>
+     *
+     * <p>Example error response:
+     * <pre>
+     * {
+     *   "error": "Invalid unit or scaling"
+     * }
+     * </pre>
+     *
+     * @param request A {@link JSONObject} containing the unit ID, statistic name, and new value.
+     * @return A {@link JSONObject} with updated statistics or an error message.
+     */
+    public JSONObject setStatisticForUnit(JSONObject request) {
+        return mGameModel.setStatisticForUnit(request);
+    }
+
+    /**
      * Applies a named additive or multiplicative statistic modification to a unit's attribute.
      *
      * <p>This method calculates a value to add (or subtract) based on a specified scaling rule
@@ -619,14 +643,59 @@ public class GameController extends EngineRunnable {
      * @param request a {@link JSONObject} containing unit ID, attribute, value, and scaling mode
      * @return a {@link JSONObject} with the result of the operation, including before/after stats or an error
      */
-    public JSONObject addUOrSubtractUnitStatisticModification(JSONObject request) {
-        return mGameModel.addUOrSubtractUnitStatisticModification(request);
+    public JSONObject addStatisticBonus(JSONObject request) {
+        return mGameModel.addUnitStatisticBonus(request);
     }
 
-    public JSONObject addUOrSubtractUnitStatisticResource(JSONObject request) {
-        return mGameModel.addUOrSubtractUnitStatisticResource(request);
+    public JSONObject addUnitStatisticsResources(JSONObject request) {
+        return mGameModel.addUnitStatisticsResources(request);
     }
 
+    /**
+     * Attaches a piece of equipment to a unit, applying its statistical modifiers to the unit’s attributes.
+     * <p>
+     * This method accepts a request JSON with the following keys:
+     * <ul>
+     *   <li><b>unit_id</b> (String): ID of the unit that will equip the item.</li>
+     *   <li><b>equipment_name</b> (String): Name of the equipment type to attach.</li>
+     *   <li><b>equipment_id</b> (optional, String): ID of an existing equipment entity. If omitted,
+     *       a new equipment entity is created using the provided equipment name.</li>
+     * </ul>
+     * <p>
+     * The method will:
+     * <ol>
+     *   <li>Verify the existence of the target unit.</li>
+     *   <li>Equip the equipment item in the unit's inventory.</li>
+     *   <li>Retrieve and parse the equipment’s statistics expressions.</li>
+     *   <li>Apply each statistic as either a flat or percentage-based modifier to the unit's attributes.</li>
+     *   <li>Record the unit’s attribute totals before applying each bonus to calculate the deltas.</li>
+     * </ol>
+     * <p>
+     * The returned JSON contains the change (delta) in each affected attribute:
+     * <pre>
+     * {
+     *   "strength": +5,
+     *   "speed": +10,
+     *   ...
+     * }
+     * </pre>
+     * or an error message if the unit ID is invalid:
+     * <pre>
+     * {
+     *   "error": "No entity with id ..."
+     * }
+     * </pre>
+     *
+     * @param request A JSONObject with unit and equipment information.
+     * @return A JSONObject containing attribute deltas or an error message.
+     */
+    public JSONObject attachEquipment(JSONObject request) {
+        return mGameModel.attachEquipment(request);
+    }
+
+    public JSONObject getEquipment(JSONObject request) {
+        return mGameModel.getEquipment(request);
+    }
     public JSONObject addUOrSubtractFromUnitStatisticResource(JSONObject request) {
         return mGameModel.addUOrSubtractFromUnitStatisticResource(request);
     }
@@ -730,8 +799,10 @@ public class GameController extends EngineRunnable {
 
 
 
-    public JSONObject createUnit() { return createUnit(new JSONObject()); }
+    public JSONObject createStructure() { return createStructure(new JSONObject()); }
     public JSONObject createUnit(JSONObject request) { return mGameModel.createUnit(request); }
+    public JSONObject createUserUnit() { mEmptyJson.clear(); return  mGameModel.createUserUnit(mEmptyJson); }
+    public JSONObject createCpuUnit() { mEmptyJson.clear(); return  mGameModel.createCpuUnit(mEmptyJson); }
     public JSONObject createStructure(JSONObject request) { return mGameModel.createStructure(request); }
     public JSONObject createTile(JSONObject request) { return mGameModel.createTile(request); }
 
@@ -937,5 +1008,17 @@ public class GameController extends EngineRunnable {
 
     public void removeLayersOfHoveredTileIDs(String depth) {
         mGameMapEditorAPI.removeLayersOfHoveredTileIDs(depth);
+    }
+
+    public void disableAutoBehavior() {
+        mGameModel.disableAutoBehavior();
+    }
+
+    public JSONObject getAbility(JSONObject request) {
+        return mGameModel.getAbility(request);
+    }
+
+    public JSONObject getTagsFromUnit(JSONObject request) {
+        return mGameModel.getTagsFromUnit(request);
     }
 }

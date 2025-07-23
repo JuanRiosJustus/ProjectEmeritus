@@ -33,17 +33,33 @@ public class FloatingTextSystem extends GameSystem {
     private static final String FLOATING_TEXT_EVENT = "floating.text.event";
     private static final String FLOAT_TEXT_EVENT_TEXT = "float.text.event_text";
     private static final String FLOAT_TEXT_EVENT_UNIT_ID = "float.text.event.unit_id";
+    private static final String FLOATING_TEXT_EVENT_PRIORITY = "floating.text.event.priority";
+    private static final String FLOATING_TEXT_EVENT_COLOR = "floating.text.event.color";
+    public static JSONObject createFloatingTextEvent(String txt, String unitID, int priority, String color) {
+        JSONObject event = new JSONObject();
+        event.put("event", FLOATING_TEXT_EVENT);
+        event.put(FLOAT_TEXT_EVENT_TEXT, txt);
+        event.put(FLOAT_TEXT_EVENT_UNIT_ID, unitID);
+        event.put(FLOATING_TEXT_EVENT_PRIORITY, Math.max(priority, 1));
+        event.put(FLOATING_TEXT_EVENT_COLOR, color);
+        return event;
+    }
+
     public static JSONObject createFloatingTextEvent(String txt, String unitID) {
         JSONObject event = new JSONObject();
         event.put("event", FLOATING_TEXT_EVENT);
         event.put(FLOAT_TEXT_EVENT_TEXT, txt);
         event.put(FLOAT_TEXT_EVENT_UNIT_ID, unitID);
+        event.put(FLOATING_TEXT_EVENT_PRIORITY, 1);
+        event.put(FLOATING_TEXT_EVENT_COLOR, "grey");
         return event;
     }
 
     public void handleFloatingTextEvent(JSONObject event) {
         String text = event.getString(FLOAT_TEXT_EVENT_TEXT);
         String unitID = event.getString(FLOAT_TEXT_EVENT_UNIT_ID);
+        int priority = event.getIntValue(FLOATING_TEXT_EVENT_PRIORITY, 1);
+        String color = (String) event.getOrDefault(FLOATING_TEXT_EVENT_COLOR, "grey");
 
         Entity unitEntity = getEntityWithID(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
@@ -66,11 +82,17 @@ public class FloatingTextSystem extends GameSystem {
 
         // Choose the style dynamically or randomly if you like
         float generalFontSize = mGameModel.getGameState().getFloatingTextFontSize();
-        Color color = Color.ANTIQUEWHITE;
-//        FloatingText ft = mFloatingTextFactory.createShrinking(text, x, y,  color, generalFontSize);
-        FloatingText ft = mFloatingTextFactory.createPopUp(text, x, y,  color, generalFontSize);
+        generalFontSize = computeAdjustedValue(priority, generalFontSize);
+//        Color color = Color.RED.toString()
+        FloatingText ft = mFloatingTextFactory.createShrinking(text, x, y, Color.valueOf(color), generalFontSize);
+//        FloatingText ft = mFloatingTextFactory.createPopUp(text, x, y,  color, generalFontSize);
 
         mFloatingTextQueue.add(ft);
+    }
+
+    public float computeAdjustedValue(int input, float factor) {
+        if (input <= 1) return factor;
+        return factor / (float) Math.pow(input, 0.2);
     }
 
     @Override

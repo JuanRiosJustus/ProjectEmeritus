@@ -29,7 +29,7 @@ public class FloatingTextFactory {
      */
     public FloatingText create(String text, int x, int y, Style style, Color color, float fontSize) {
         float variedFontSize = fontSize + mRandom.nextInt((int) (fontSize * 0.25f));
-        double lifeTime = mRandom.nextDouble(2.0, 4.0);
+        double lifeTime = mRandom.nextDouble(1.0, 2.0);
 
         return switch (style) {
             case BASIC -> new FloatingText(text, variedFontSize, x, y, color, lifeTime);

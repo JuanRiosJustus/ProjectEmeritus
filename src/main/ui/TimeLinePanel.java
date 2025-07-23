@@ -7,12 +7,10 @@ import main.constants.HashSlingingSlasher;
 import main.game.components.AIComponent;
 import main.game.components.IdentityComponent;
 import main.game.entity.Entity;
-import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
-import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
@@ -64,38 +62,38 @@ public class TimeLinePanel extends BevelStyle {
     }
 
     public void gameUpdate(GameModel gameModel) {
-//        int speedQueueCheckSum = gameModel.getSpeedQueue().getCheckSum();
-//        if (!mHashSlingingSlasher.setOnDifference(speedQueueCheckSum)) { return; }
         int currentHashCode = gameModel.getSpeedQueue().hashCode();
         if (currentHashCode == mPreviousHashCode) { return; }
         mPreviousHashCode = currentHashCode;
 
         logger.info("Started updating the timeline panel after turn order has changed.");
-        Queue<String> toPlace = prepareTimelineQueue(gameModel);
+        Queue<String> toPlace = prepareTimelinePlacements(gameModel);
         updateTimelineItems(gameModel, toPlace);
         logger.info("Finished updating the timeline panel after turn order has changed.");
     }
 
-    private Queue<String> prepareTimelineQueue(GameModel gameModel) {
-//        JSONArray allUnits = new JSONArray(gameModel.getSpeedQueue().getAllEntitiesInTurnQueue());
-        JSONArray pendingTurn = gameModel.getSpeedQueue().getAllEntityIDsPendingTurnInTurnQueue();
+    private Queue<String> prepareTimelinePlacements(GameModel gameModel) {
+        JSONArray pendingTurnsThisRound = gameModel.getSpeedQueue().turnOrder();
+        JSONArray pendingTurnsNextRound = gameModel.getSpeedQueue().nextTurnOrder();
 
         // Add the units that have yet to go
-        Queue<String> toPlace = new LinkedList<>();
-        for (int i = 0; i < pendingTurn.size(); i++) {
-            String unitID = pendingTurn.getString(i);
-            toPlace.add(unitID);
-        }
-        // Add units that can eventually go again
-        while (toPlace.size() < mTimeLinePanelItems.size()) {
-            toPlace.add(null);
-//            for (int i = 0; i < allUnits.size(); i++) {
-//                String unitID = allUnits.getString(i);
-//                toPlace.add(unitID);
-//            }
+        Queue<String> unitsToPlace = new LinkedList<>();
+        for (int i = 0; i < pendingTurnsThisRound.size(); i++) {
+            String unitID = pendingTurnsThisRound.getString(i);
+            if (unitsToPlace.size() < mTimeLinePanelItems.size()) { unitsToPlace.add(unitID); }
         }
 
-        return toPlace;
+        // Add units that can eventually go again
+        while (unitsToPlace.size() < mTimeLinePanelItems.size()) {
+            unitsToPlace.add(null);
+
+            for (int i = 0; i < pendingTurnsNextRound.size(); i++) {
+                String unitID = pendingTurnsNextRound.getString(i);
+                if (unitsToPlace.size() < mTimeLinePanelItems.size()) { unitsToPlace.add(unitID); }
+            }
+        }
+
+        return unitsToPlace;
     }
     private void updateTimelineItems(GameModel gameModel, Queue<String> toPlace) {
         boolean hasSeenNull = false;
@@ -141,6 +139,8 @@ public class TimeLinePanel extends BevelStyle {
                     imageView.setFocusTraversable(false);
                     timeLinePanelItem.display.setImageView(imageView);
                     timeLinePanelItem.display.setPickOnBounds(false);
+                } else {
+                    mPreviousHashCode = -1;
                 }
 
                 // 🔹 **Set Color Based on Position**

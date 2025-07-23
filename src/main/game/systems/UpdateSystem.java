@@ -32,7 +32,6 @@ public class UpdateSystem {
         mGameSystems.add(new CombatSystem(gameModel));
     }
     public void update(GameModel model) {
-
         SystemContext systemContext = SystemContext.create(model);
         for (GameSystem gameSystem : mGameSystems) {
             gameSystem.update(model, systemContext);

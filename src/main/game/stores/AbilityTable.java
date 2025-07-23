@@ -3,7 +3,6 @@ package main.game.stores;
 import java.util.*;
 
 import main.constants.EmeritusDatabase;
-import main.game.entity.Entity;
 import main.logging.EmeritusLogger;
 
 import main.utils.MathUtils;
@@ -125,18 +124,18 @@ public class AbilityTable {
         return type;
     }
 
-    public boolean shouldUsePhysicalDefense(String action) {
-        int range = AbilityTable.instance.getRange(action);
-        return range <= 1;
-    }
-
-    public boolean hasSameTypeAttackBonus(Entity actorUnitEntity, String action) {
-        return false;
-//        CsvRow actionRow = ActionPool.getInstance().getAction(action);
-//        return !Collections.disjoint(
-//                actorUnitEntity.get(StatisticsComponent.class).getType(),
-//                actionRow.getList("Type"));
-    }
+//    public boolean shouldUsePhysicalDefense(String action) {
+//        int range = AbilityTable.instance.getRange(action);
+//        return range <= 1;
+//    }
+//
+//    public boolean hasSameTypeAttackBonus(Entity actorUnitEntity, String action) {
+//        return false;
+////        CsvRow actionRow = ActionPool.getInstance().getAction(action);
+////        return !Collections.disjoint(
+////                actorUnitEntity.get(StatisticsComponent.class).getType(),
+////                actionRow.getList("Type"));
+//    }
 
     private static final String HEALTH_KEY = "health";
     private static final String MANA_KEY = "mana";
@@ -296,13 +295,15 @@ public class AbilityTable {
         return description;
     }
 
-    public JSONArray getDamages(String ability) {
+    public JSONObject getDamage(String ability) {
+//        JSONObject result = getOrCacheResult(ability);
+//        return result.getJSONArray("damage");
         JSONObject result = getOrCacheResult(ability);
-        return result.getJSONArray("damages");
+        return result.getJSONObject("damage");
     }
-    public JSONArray getCosts(String ability) {
+    public JSONObject getCost(String ability) {
         JSONObject result = getOrCacheResult(ability);
-        return result.getJSONArray("costs");
+        return result.getJSONObject("cost");
     }
     public String getAttribute(JSONObject object) {
         return object.getString("attribute");
@@ -317,10 +318,10 @@ public class AbilityTable {
     public String getScalingAttributeKey(JSONObject attrMod) { return attrMod.getString(ATTRIBUTE_KEY); }
     public float getScalingAttributeValue(JSONObject attrMod) { return attrMod.getFloat(ATTRIBUTE_VALUE); }
 
-    public JSONArray getDamage(String ability) {
-        JSONObject result = getOrCacheResult(ability);
-        return result.getJSONArray("damages");
-    }
+//    public JSONArray getDamage(String ability) {
+//        JSONObject result = getOrCacheResult(ability);
+//        return result.getJSONArray("damage");
+//    }
 
     public String getUserAnimation(String ability) {
         JSONObject result = getOrCacheResult(ability);
