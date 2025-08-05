@@ -15,8 +15,6 @@ public class MovementComponent extends Component {
     private String mFinalTilePosition = null;
 
     private final HashSlingingSlasher mHashSlingingSlasher = new HashSlingingSlasher();
-    private final Vector3f mPosition = new Vector3f();
-
     public void stageTarget(String tileID) {
         mStagedTilePosition = tileID;
     }

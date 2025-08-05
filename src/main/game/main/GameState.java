@@ -16,9 +16,6 @@ public class GameState extends JSONObject {
     public static final String VIEW_SPRITE_HEIGHT = "view.sprite.height";
     public static final String VIEW_ORIGINAL_SPRITE_WIDTH = "view.original.sprite.width";
     public static final String VIEW_ORIGINAL_SPRITE_HEIGHT = "view.original.sprite.height";
-    private static final String TILE_TO_GLIDE_TO_LIST = "tile.to.glide.to";
-    private static final String TILE_TO_GLIDE_TO_ID = "id";
-    private static final String TILE_TO_GLIDE_TO_CAMERA = "camera";
     public static final String GAMEPLAY_MODE = "gameplay.mode";
     public static final String GAMEPLAY_MODE_MAP_EDITOR_MODE = "gameplay.map.editor.mode";
     public static final String GAMEPLAY_MODE_UNIT_DEPLOYMENT = "gameplay.mode.load.out";
@@ -60,7 +57,7 @@ public class GameState extends JSONObject {
         gameState.getOrCreateCamera(MAIN_CAMERA);
         gameState.getOrCreateCamera(SECONDARY_CAMERA);
 
-        gameState.getViewport();
+        gameState.getMainCamera();
         gameState.getSecondaryCamera();
 
         gameState.setViewportZoom(1);
@@ -81,7 +78,7 @@ public class GameState extends JSONObject {
         gameState.setSelectedTileIDs(new JSONArray());
         gameState.setHoveredTile(null);
         gameState.setMapEditorHoveredTiles(new JSONArray());
-        gameState.addTileToGlideTo(null, null);
+//        gameState.addTileToGlideCameraTo(null, null);
         gameState.setDeltaTime(0);
 
         gameState.setHoveredTilesCursorSize(1);
@@ -108,7 +105,7 @@ public class GameState extends JSONObject {
 
 
     public String getMainCameraID() { return MAIN_CAMERA; }
-    private JSONCamera getViewport() { return getOrCreateCamera(MAIN_CAMERA); }
+    private JSONCamera getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
     public String getSecondaryCameraID() { return SECONDARY_CAMERA; }
     public JSONCamera getSecondaryCamera() { return getOrCreateCamera(SECONDARY_CAMERA); }
 
@@ -132,14 +129,14 @@ public class GameState extends JSONObject {
     public float getViewportZoom() { return getFloatValue(VIEWPORT_ZOOM); }
     public void setViewportZoom(float zoom) { put(VIEWPORT_ZOOM, zoom); }
 
-    public GameState setViewportX(float x) { getViewport().setX(x); return this; }
-    public GameState setViewportY(float y) { getViewport().setY(y); return this; }
-    public int getViewportX() { return (int) getViewport().getX(); }
-    public int getViewportY() { return (int) getViewport().getY(); }
-    public GameState setViewportWidth(int width) { getViewport().setWidth(width); return this; }
-    public GameState setViewportHeight(int height) { getViewport().setHeight(height); return this; }
-    public int getMainCameraWidth() { return (int) getViewport().getWidth(); }
-    public int getMainCameraHeight() { return (int) getViewport().getHeight(); }
+    public GameState setViewportX(double x) { getMainCamera().setX(x); return this; }
+    public GameState setViewportY(double y) { getMainCamera().setY(y); return this; }
+    public int getViewportX() { return (int) getMainCamera().getX(); }
+    public int getViewportY() { return (int) getMainCamera().getY(); }
+    public GameState setViewportWidth(int width) { getMainCamera().setWidth(width); return this; }
+    public GameState setViewportHeight(int height) { getMainCamera().setHeight(height); return this; }
+    public int getMainCameraWidth() { return (int) getMainCamera().getWidth(); }
+    public int getMainCameraHeight() { return (int) getMainCamera().getHeight(); }
     public int getGlobalX(int x) { return x - getViewportX(); }
     public int getGlobalY(int y) { return y - getViewportY(); }
 
@@ -151,8 +148,8 @@ public class GameState extends JSONObject {
 
 
 
-    public GameState setCameraX(String camera, float x) { getOrCreateCamera(camera).setX(x); return this; }
-    public GameState setCameraY(String camera, float y) { getOrCreateCamera(camera).setY(y); return this; }
+    public GameState setCameraX(String camera, double x) { getOrCreateCamera(camera).setX(x); return this; }
+    public GameState setCameraY(String camera, double y) { getOrCreateCamera(camera).setY(y); return this; }
     public int getCameraX(String camera) { return (int) getOrCreateCamera(camera).getX(); }
     public int getCameraY(String camera) { return (int) getOrCreateCamera(camera).getY(); }
     public GameState setCameraWidth(String camera, int width) { getOrCreateCamera(camera).setWidth(width); return this; }
@@ -380,9 +377,30 @@ public class GameState extends JSONObject {
     public void setAutomaticallyEndControlledTurns(boolean value) { put(AUTOMATICALLY_END_CONTROLLED_TURNS, value); }
     public boolean shouldAutomaticallyEndControlledTurns() { return getBooleanValue(AUTOMATICALLY_END_CONTROLLED_TURNS, false); }
 
-    private static final String AUTOMATICALLY_GO_TO_HOME_CONTROLS = "automatically.go.to.home.controls";
-    public void setAutomaticallyGoToHomeControls(boolean value) { put(AUTOMATICALLY_GO_TO_HOME_CONTROLS, value); }
-    public boolean shouldAutomaticallyGoToHomeControls() { return getBooleanValue(AUTOMATICALLY_GO_TO_HOME_CONTROLS, false); }
+    private static final String CLOSE_ALL_SUB_CONTROLLERS = "close.all.sub.controllers";
+    public void setCloseAllSubControllers(boolean value) { put(CLOSE_ALL_SUB_CONTROLLERS, value); }
+    public boolean shouldCloseAllSubControllers() { return getBooleanValue(CLOSE_ALL_SUB_CONTROLLERS, false); }
+    public boolean consumeCloseAllSubControllers() {
+        boolean shouldCloseAllSubControllers = shouldCloseAllSubControllers();
+        if (shouldCloseAllSubControllers) {
+            setCloseAllSubControllers(false);
+        }
+        return shouldCloseAllSubControllers;
+    }
+
+    private static final String CLOSE_ABILITY_SUB_CONTROLLER = "close.ability.sub.controller";
+    public void setCloseAbilitySubController(boolean value) { put(CLOSE_ABILITY_SUB_CONTROLLER, value); }
+    public boolean shouldCloseAbilitySubController() { return getBooleanValue(CLOSE_ABILITY_SUB_CONTROLLER, false); }
+    public boolean consumeCloseAbilitySubController() {
+        boolean shouldCloseAbilityController = shouldCloseAbilitySubController();
+        if (shouldCloseAbilityController) {
+            setCloseAllSubControllers(false);
+        }
+        return shouldCloseAbilityController;
+    }
+
+
+
 
 
     private static final String FORCEFULLY_END_TURN = "forcefully.end.turn";
@@ -497,33 +515,44 @@ public class GameState extends JSONObject {
     }
 
 
-    public boolean addTileToGlideTo(String tileID, String camera) {
-        JSONObject tileToGlideToDataList = getJSONObject(TILE_TO_GLIDE_TO_LIST);
-        if (tileToGlideToDataList == null) { tileToGlideToDataList = new JSONObject(); }
-        put(TILE_TO_GLIDE_TO_LIST, tileToGlideToDataList);
 
-        if (tileID == null || camera == null) { return false; }
-        JSONObject newTileToGlideTo = new JSONObject();
-        newTileToGlideTo.put(TILE_TO_GLIDE_TO_ID, tileID);
-        newTileToGlideTo.put(TILE_TO_GLIDE_TO_CAMERA, camera);
-        tileToGlideToDataList.put(camera, newTileToGlideTo);
+    private static final String TILE_TO_GLIDE_TO_LIST = "tile.to.glide.to.list";
+    private static final String TILE_TO_GLIDE_TO_TILE_ID = "tile_id";
+    private static final String TILE_TO_GLIDE_TO_CAMERA_ID = "camera";
+//    public boolean addTileToGlideCameraTo(String tileID, String camera) {
+//        JSONObject tileToGlideToDataList = getJSONObject(TILE_TO_GLIDE_TO_LIST);
+//        if (tileToGlideToDataList == null) {
+//            tileToGlideToDataList = new JSONObject();
+//            put(TILE_TO_GLIDE_TO_LIST, tileToGlideToDataList);
+//        }
+//
+//        if (tileID == null || camera == null) { return false; }
+//        JSONObject newTileToGlideTo = new JSONObject();
+//        newTileToGlideTo.put(TILE_TO_GLIDE_TO_TILE_ID, tileID);
+//        newTileToGlideTo.put(TILE_TO_GLIDE_TO_CAMERA_ID, camera);
+//        tileToGlideToDataList.put(camera, newTileToGlideTo);
+//
+//        return true;
+//    }
+
+    public boolean addCameraGlideRequest(JSONObject request) {
+        // Validate request
+        boolean hasCameraRef = request.containsKey(TILE_TO_GLIDE_TO_CAMERA_ID);
+        boolean hasTileRef = request.containsKey(TILE_TO_GLIDE_TO_TILE_ID);
+
+        if (!hasCameraRef || !hasTileRef) { return false; }
+
+        // Get and/or create listings
+        JSONArray tileToGlideToDataList = getJSONArray(TILE_TO_GLIDE_TO_LIST);
+        if (tileToGlideToDataList == null) {
+            tileToGlideToDataList = new JSONArray();
+            put(TILE_TO_GLIDE_TO_LIST, tileToGlideToDataList);
+        }
+
+        // Add request to listings
+        tileToGlideToDataList.add(request);
         return true;
     }
-
-    public JSONObject consumeTilesToGlideTo() {
-        JSONObject tileToGlideToList = getJSONObject(TILE_TO_GLIDE_TO_LIST);
-        JSONObject result = null;
-        if (!tileToGlideToList.isEmpty()) {
-            result = new JSONObject();
-            for (String key : tileToGlideToList.keySet()) {
-                JSONObject value = tileToGlideToList.getJSONObject(key);
-                result.put(key, value);
-            }
-            tileToGlideToList.clear();
-        }
-        return result;
-    }
-
 
 
     public void setHoveredTilesCursorSize(int size) {

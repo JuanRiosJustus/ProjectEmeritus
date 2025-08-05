@@ -34,7 +34,7 @@ public class BehaviorSystem extends GameSystem {
         AIComponent aiComponent = entity.get(AIComponent.class);
         if (!aiComponent.isAI()) { return; }
 
-        boolean disabledAutoBehavior = mGameState.isAutoBehaviorEnabled() == false;
+        boolean disabledAutoBehavior = !mGameState.isAutoBehaviorEnabled();
         if (disabledAutoBehavior) {
             return;
         }

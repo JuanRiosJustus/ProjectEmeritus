@@ -31,15 +31,18 @@ public class BeveledProgressBar extends BevelStyle {
         StackPane.setAlignment(progressFill, Pos.CENTER_LEFT);
 
         // ** Text (Centered Inside Progress Bar) **
-        mTextNode.setTextAlignment(TextAlignment.CENTER);
-        mTextNode.setFill(Color.WHITE);
+//        setText(mTextNode.getContent(), "", width, height, Color.WHITE);
+        mTextNode.setAlignment(TextAlignment.CENTER);
+        mTextNode.setForegroundColor(Color.WHITE);
+//        mTextNode.setTextAlignment(TextAlignment.CENTER);
         setProgress(100, 100, 100 + "/" + 100);
+        setPadding(new Insets(2, 2, 2, 2));
 
         // ** Ensure Text & Progress Stay Inside Beveled Frame **
-        StackPane.setMargin(mTextNode, new Insets(0, getOuterBevelSize() * 2, 0, getOuterBevelSize() * 2));
+        StackPane.setMargin(mTextNode.getContent(), new Insets(0, getOuterBevelSize() * 2, 0, getOuterBevelSize() * 2));
 
         // ** Add Components to StackPane **
-        getChildren().addAll(progressFill, mTextNode);
+        getChildren().addAll(progressFill, mTextNode.getContent());
 
         // ** Smooth Progress Update (LERP) **
         new AnimationTimer() {
@@ -54,8 +57,14 @@ public class BeveledProgressBar extends BevelStyle {
     public void setProgress(int current, int max, String txt) {
         if (current <= 0 || current > max) { return; }
         targetProgress = Math.max(0, Math.min((double) current / max, 1)); // Clamp between 0 and 1
+//        setText(txt);
+//        setText(mTextNode, txt, mWidth, mHeight, Color.WHITE, mTextNode.getFont());
+
         mTextNode.setText(txt);
+//        mTextNode.setFont(mTextNode.getFont());
     }
+
+//    public void setFont()
 
     /** 🔹 **Smoothly interpolates progress for animation** */
     private void smoothProgressUpdate() {

@@ -3,6 +3,7 @@ package main.ui.game;
 import javafx.scene.CacheHint;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import main.game.components.AssetComponent;
@@ -25,9 +26,7 @@ public class GamePanel extends StackPane {
     protected final int mY;
 
     public GamePanel(int x, int y, int width, int height) {
-        setPrefSize(width, height);
-        setMinSize(width, height);
-        setMaxSize(width, height);
+        setSize(this, width, height);
         setLayoutX(x);
         setLayoutY(y);
 
@@ -44,6 +43,11 @@ public class GamePanel extends StackPane {
         this(0, 0, width, height);
     }
 
+    protected static void setSize(Region region, int width, int height) {
+        region.setPrefSize(width, height);
+        region.setMinSize(width, height);
+        region.setMaxSize(width, height);
+    }
     protected static Font getFontForHeight(int height) {
         return FontPool.getInstance().getFontForHeight(height);
     }

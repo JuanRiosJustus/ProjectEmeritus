@@ -294,20 +294,12 @@ public class GameAPI {
     public static final String ACTION_PANEL_IS_OPEN = "action.panel.is.open";
     public static final String MOVE_PANEL_IS_OPEN = "move.panel.is.open";
 
-    public JSONObject getGameState(GameModel gameModel) {
-        GameState gameState = gameModel.getGameState();
-        mEphemeralObjectResponse.clear();
-        mEphemeralObjectResponse.put(SHOULD_AUTOMATICALLY_GO_TO_HOME_CONTROLS, gameState.shouldAutomaticallyGoToHomeControls());
-        mEphemeralObjectResponse.put(SHOULD_END_THE_TURN, gameState.shouldForcefullyEndTurn());
-        return mEphemeralObjectResponse;
-    }
-
     public void setEndTurn(GameModel gameModel) {
         GameState gameState = gameModel.getGameState();
         gameState.setShouldForcefullyEndTurn(true);
     }
 
-    public void setTileToGlideTo(GameModel gameModel, JSONObject request) {
+    public void addTileToGlideCameraTo(GameModel gameModel, JSONObject request) {
         GameState gameState = gameModel.getGameState();
 
         if (request.isEmpty()) { return; }
@@ -321,12 +313,12 @@ public class GameAPI {
         // Ensure the entity is a tile we can glide to
         TileComponent tile = tileEntity.get(TileComponent.class);
         if (tile == null) { return; }
-        gameState.addTileToGlideTo(tileID, camera);
+//        gameState.addTileToGlideCameraTo(tileID, camera);
     }
 
     public static final String TILE_TO_GLIDE_TO_TILE_ID = "tile_id";
     public static final String TILE_TO_GLIDE_TO_CAMERA = "camera";
-    public JSONObject setTileToGlideToV2(JSONObject request) {
+    public JSONObject addTileToGlideCameraTo(JSONObject request) {
         JSONObject response = new JSONObject();
         if (request.isEmpty()) { return response; }
 
@@ -342,14 +334,14 @@ public class GameAPI {
         if (tile == null) { return response; }
 
         GameState gameState = mGameModel.getGameState();
-        gameState.addTileToGlideTo(tileID, camera);
+        gameState.addCameraGlideRequest(request);
+
+////        mEventBus.publish(CameraSystem.createCameraGlideEvent(key, tileToGlideToID));
+//        System.out.println("HANDLE_GLIDE_DEBUGGING 1. -> Adding Glide Event To " + tileToGlideToID);
+//        mLogger.info("Gliding {} camera to new tile {}", cameraToGlideWith, tileToGlideToID);
 
         response.put("status_code", "success");
         return response;
-    }
-
-    public void setTileToGlideTo(String tileID, String camera) {
-
     }
 
 
@@ -576,11 +568,11 @@ public class GameAPI {
 //    }
 
     // EXPERIMENTAL, should this really consume the state like this
-    public boolean consumeShouldAutomaticallyGoToHomeControls(GameModel mGameModel) {
-        boolean shouldAutomaticallyGoToHomeControls = mGameModel.getGameState().shouldAutomaticallyGoToHomeControls();
-        mGameModel.getGameState().setAutomaticallyGoToHomeControls(false);
-        return shouldAutomaticallyGoToHomeControls;
-    }
+//    public boolean consumeShouldAutomaticallyGoToHomeControls(GameModel mGameModel) {
+//        boolean shouldAutomaticallyGoToHomeControls = mGameModel.getGameState().closeAllSubControllers();
+//        mGameModel.getGameState().setCloseAllSubControllers(false);
+//        return shouldAutomaticallyGoToHomeControls;
+//    }
 
     private static String getID(JSONObject objectWithId) {
         String id = null;
@@ -844,23 +836,23 @@ public class GameAPI {
 
     }
 
-    public JSONObject focusCamerasAndSelectionsOnActiveEntity(JSONObject request) {
-        JSONObject response = new JSONObject();
-
-        JSONArray currentTiles = getCurrentActiveEntityTileID(request);
-        setSelectedTileIDs(mGameModel, currentTiles);
-
-        JSONObject cameraInfoRequest = getCameraInfo(request);
-
-        JSONObject tileToGlideToRequest = new JSONObject();
-        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_CAMERA, cameraInfoRequest.getString("camera"));
-        String cameraSelection = request.getString("camera");
-        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_CAMERA, cameraSelection);
-        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_TILE_ID, currentTiles.getString(0));
-        setTileToGlideToV2(tileToGlideToRequest);
-
-        return response;
-    }
+//    public JSONObject focusCamerasAndSelectionsOnActiveEntity(JSONObject request) {
+//        JSONObject response = new JSONObject();
+//
+//        JSONArray currentTiles = getCurrentActiveEntityTileID(request);
+//        setSelectedTileIDs(mGameModel, currentTiles);
+//
+//        JSONObject cameraInfoRequest = getCameraInfo(request);
+//
+//        JSONObject tileToGlideToRequest = new JSONObject();
+//        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_CAMERA, cameraInfoRequest.getString("camera"));
+//        String cameraSelection = request.getString("camera");
+//        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_CAMERA, cameraSelection);
+//        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_TILE_ID, currentTiles.getString(0));
+//        addTileToGlideCameraTo(tileToGlideToRequest);
+//
+//        return response;
+//    }
 
     public void forcefullyEndTurn() {
         mGameModel.getGameState().setShouldForcefullyEndTurn(true);

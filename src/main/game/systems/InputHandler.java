@@ -68,22 +68,18 @@ public class InputHandler {
         Vector3f currentMousePosition = mouse.getPosition();
         boolean mouseButtonIsBeingHeldDown = mouse.isBeingHeld();
 
-        JSONObject tilesToGlideTo = gameState.consumeTilesToGlideTo();
-        if (tilesToGlideTo != null) {
-            if (tilesToGlideTo.size() > 1) {
-//                System.out.println("yoo");
-            }
-            for (String key : tilesToGlideTo.keySet()) {
-                JSONObject tileToGlideToData = tilesToGlideTo.getJSONObject(key);
-                String tileToGlideToID = tileToGlideToData.getString("id");
-                String cameraToGlideWith = tileToGlideToData.getString("camera");
-                mEventBus.publish(CameraSystem.CAMERA_GLIDE, CameraSystem.createCameraGlideEvent(
-                        key, tileToGlideToID
-                ));
-                mLogger.info("Gliding {} camera to new tile {}", cameraToGlideWith, tileToGlideToID);
-
-            }
-        }
+//        JSONObject tilesToGlideTo = gameState.consumeCameraGlideRequest();
+//        if (tilesToGlideTo != null) {
+//            System.out.println("t");
+//            for (String key : tilesToGlideTo.keySet()) {
+//                JSONObject tileToGlideToData = tilesToGlideTo.getJSONObject(key);
+//                String tileToGlideToID = tileToGlideToData.getString("id");
+//                String cameraToGlideWith = tileToGlideToData.getString("camera");
+//                mEventBus.publish(CameraSystem.createCameraGlideEvent(key, tileToGlideToID));
+//                System.out.println("HANDLE_GLIDE_DEBUGGING 1. -> Adding Glide Event To " + tileToGlideToID);
+//                mLogger.info("Gliding {} camera to new tile {}", cameraToGlideWith, tileToGlideToID);
+//            }
+//        }
 
         tryHandlingMouseDraggedEvent(mouseButtonIsBeingHeldDown, currentMousePosition);
         tryHandlingKeyBoardPressedEvent(gameState, keyboard);

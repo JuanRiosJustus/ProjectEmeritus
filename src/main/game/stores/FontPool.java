@@ -63,6 +63,11 @@ public class FontPool {
     public Font getFitFont(String text, Font font, double maxWidth, double maxHeight) {
         if (text == null || text.isEmpty()) { return null; }
 
+//        Font cachedFont = mCache.get((double) Objects.hash(maxWidth, maxHeight));
+//        if (cachedFont != null) {
+//            return cachedFont;
+//        }
+
         double min = 1;
         double max = 1000; // Arbitrary upper bound
         double bestSize = min;

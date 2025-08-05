@@ -104,7 +104,7 @@ public class TileMap extends JSONArray {
 
         int[][] noiseMap = null;
         if (terrainElevationSeed == 0) {
-            noiseMap = applySimplexNoise(rows, columns, lowerTerrainElevation, upperTerrainElevation, terrainElevationNoise);
+            noiseMap = applySimplexNoise(rows, columns, lowerTerrainElevation, upperTerrainElevation, terrainElevationNoise, mRandom.nextLong());
         } else {
             noiseMap = applySimplexNoise(rows, columns, lowerTerrainElevation, upperTerrainElevation, terrainElevationNoise, terrainElevationSeed);
         }
@@ -129,7 +129,7 @@ public class TileMap extends JSONArray {
                 // Apply simplex noise only if the configuration is enabled
                 int additionalElevation = lowerTerrainElevation;
                 if (terrainElevationNoise >= 0) {
-                    additionalElevation = noiseMap[row][column];
+                    additionalElevation = (int) noiseMap[row][column];
                 }
                 newTileComponent.addSolid(terrainAsset, additionalElevation);
 
@@ -165,7 +165,14 @@ public class TileMap extends JSONArray {
         int terrainEndingElevation = configs.getMapGenerationTerrainEndingElevation();
 
         float noiseZoom = configs.getMapGenerationHeightNoise();
-        int[][] noiseMap = applySimplexNoise(rows, columns, terrainStartingElevation, terrainEndingElevation, noiseZoom);
+        int[][] noiseMap = applySimplexNoise(
+                rows,
+                columns,
+                terrainStartingElevation,
+                terrainEndingElevation,
+                noiseZoom,
+                mRandom.nextLong()
+        );
 
         List<String> list = AnimationPool.getInstance().getFloorTileSets();
         if (terrainAsset == null || terrainAsset.isEmpty()) {
@@ -328,41 +335,57 @@ public class TileMap extends JSONArray {
         mSpawnRegions.put(rightRegionName, rightRegion);
     }
 
-    public JSONObject getSpawnRegionsData() {
+    public JSONObject getSpawnRegions() {
         JSONObject result = new JSONObject();
-        if (mSpawnRegions.isEmpty()) {
-            return result;
-        }
 
-        for (Map.Entry<String, List<String>> entries : mSpawnRegions.entrySet()) {
-            String region = entries.getKey();
-            List<String> tileIDs = entries.getValue();
-            JSONArray regionTiles = new JSONArray();
-            for (String tileID : tileIDs) {
+        for (int rowIndex = 0; rowIndex < size(); rowIndex++) {
+            JSONArray row = getJSONArray(rowIndex);
+            for (int columnIndex = 0; columnIndex < row.size(); columnIndex++) {
+                String tileID = row.getString(columnIndex);
                 Entity entity = getEntityWithID(tileID);
+                if (entity == null) { continue; }
+
                 TileComponent tileComponent = entity.get(TileComponent.class);
-                tileComponent.removetructure();
-                tileComponent.removeUnit();
-                int row = tileComponent.getRow();
-                int column = tileComponent.getColumn();
-                JSONObject tileData = new JSONObject();
-                tileData.put("tile_id", tileID);
-                tileData.put("row", row);
-                tileData.put("column", column);
-                regionTiles.add(tileData);
+                String region = tileComponent.getSpawnRegion();
+
+                if (region == null) { continue; }
+
+                JSONArray regionList = result.getJSONArray(region);
+                if (regionList == null) {
+                    regionList = new JSONArray();
+                    result.put(region, regionList);
+                }
+
+//                JSONObject spawnData = new JSONObject();
+//                spawnData.put("row", rowIndex);
+//                spawnData.put("column", columnIndex);
+//                spawnData.put("tile_id", tileID);
+                regionList.add(tileID);
             }
-            result.put(region, regionTiles);
         }
 
+//        for (Map.Entry<String, List<String>> entries : mSpawnRegions.entrySet()) {
+//            String region = entries.getKey();
+//            List<String> tileIDs = entries.getValue();
+//            JSONArray regionTiles = new JSONArray();
+//            for (String tileID : tileIDs) {
+//                Entity entity = getEntityWithID(tileID);
+//                TileComponent tileComponent = entity.get(TileComponent.class);
+//                tileComponent.removetructure();
+//                tileComponent.removeUnit();
+//                int row = tileComponent.getRow();
+//                int column = tileComponent.getColumn();
+//                JSONObject tileData = new JSONObject();
+//                tileData.put("tile_id", tileID);
+//                tileData.put("row", row);
+//                tileData.put("column", column);
+//                regionTiles.add(tileData);
+//            }
+//            result.put(region, regionTiles);
+//        }
+
         return result;
     }
-
-    public JSONArray getSpawnRegions() {
-        JSONArray result = new JSONArray();
-        result.addAll(mSpawnRegions.keySet());
-        return result;
-    }
-
 
     private static int[][] applySimplexNoise(int rows, int columns, int min, int max, float zoom, long seed) {
         SimplexNoise simplexNoise = new SimplexNoise(seed);
@@ -378,19 +401,52 @@ public class TileMap extends JSONArray {
         return heightMap;
     }
 
-    private static int[][] applySimplexNoise(int rows, int columns, int minHeight, int maxHeight, float zoom) {
-        SimplexNoise simplexNoise = new SimplexNoise();
-        double[][] map = simplexNoise.get2DNoiseMap(rows, columns, zoom);
-        int[][] heightMap = new int[rows][columns];
-        for (int row = 0; row < map.length; row++) {
-            for (int column = 0; column < map[row].length; column++) {
-                double val = map[row][column];
-                int mapped = (int) MathUtils.map((float) val, 0, 1, minHeight, maxHeight);
-                heightMap[row][column] = mapped;
-            }
-        }
-        return heightMap;
-    }
+//    private static float[][] applySimplexNoise(int rows, int columns, int minHeight, int maxHeight, float zoom, long seed) {
+//        SimplexNoise simplexNoise = new SimplexNoise(seed);
+//        double[][] map = simplexNoise.get2DNoiseMap(rows, columns, zoom);
+//        float[][] heightMap = new float[rows][columns];
+//
+//        for (int row = 0; row < map.length; row++) {
+//            for (int column = 0; column < map[row].length; column++) {
+//                float val = (float) map[row][column];
+//                float mapped = MathUtils.map(val, 0, 1, minHeight, maxHeight);
+//
+//                // Round to nearest .0 or .5 only
+//                float base = (float) Math.floor(mapped);
+//                float diff = mapped - base;
+//
+//                float finalVal;
+//                if (diff < 0.25f) {
+//                    finalVal = base;
+//                } else if (diff < 0.75f) {
+//                    finalVal = base + 0.5f;
+//                } else {
+//                    finalVal = base + 1.0f;
+//                }
+//
+//                heightMap[row][column] = finalVal;
+//            }
+//        }
+//
+//        return heightMap;
+//    }
+
+//    private static int[][] applySimplexNoise(int rows, int columns, int minHeight, int maxHeight, float zoom) {
+//        SimplexNoise simplexNoise = new SimplexNoise();
+//        double[][] map = simplexNoise.get2DNoiseMap(rows, columns, zoom);
+//        int[][] heightMap = new int[rows][columns];
+//        for (int row = 0; row < map.length; row++) {
+//            for (int column = 0; column < map[row].length; column++) {
+//                double val = map[row][column];
+//                int mapped = (int) MathUtils.map((float) val, 0, 1, minHeight, maxHeight);
+//
+//
+//
+//                heightMap[row][column] = mapped;
+//            }
+//        }
+//        return heightMap;
+//    }
 
     private Entity tryFetchingTileEntityRaw(int row, int column) {
         if (row < 0 || column < 0 || row >= size() || column >= getJSONArray(row).size()) {

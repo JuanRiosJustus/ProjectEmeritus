@@ -13,11 +13,12 @@ import com.alibaba.fastjson2.JSONObject;
 
 public class GameHud extends GamePanel {
     private final MainControlsPanel mMainControlsPanel;
-    private final AbilityPanel mAbilityPanel;
+    private final AbilitySelectionPanel mAbilitySelectionPanel;
     private final MovementPanel mMovementPanel;
     private final SettingsPanel mSettingsPanel;
     private final StatisticsPanel mStatisticsPanel;
     private final GreaterStatisticsPanel mGreaterStatisticsPanel;
+    private final AbilityDescriptionPanel mAbilityDescriptionPanel;
     private final GreaterAbilityPanel mGreaterAbilityPanel;
     private final TimeLinePanel mTimeLinePanel;
     private final SelectedTilePanel mSelectedTilePanel;
@@ -51,7 +52,7 @@ public class GameHud extends GamePanel {
             gameModel.setUserSelectedStandby(true);
         });
 
-        mAbilityPanel = new AbilityPanel(
+        mAbilitySelectionPanel = new AbilitySelectionPanel(
                 mainControlsX,
                 mainControlsY,
                 mainControlsWidth,
@@ -59,17 +60,28 @@ public class GameHud extends GamePanel {
                 color,
                 4
         );
-        mAbilityPanel.setVisible(false);
+        mAbilitySelectionPanel.setVisible(false);
+
+
         link(
                 mMainControlsPanel,
                 mMainControlsPanel.getAbilitiesButton().getFirst().getUnderlyingButton(),
-                mAbilityPanel, mAbilityPanel.getEscapeButton().getUnderlyingButton(),
+                mAbilitySelectionPanel, mAbilitySelectionPanel.getEscapeButton(),
                 () -> {
-                    JSONObject response = gameModel.getCurrentActiveEntityData();
-                    JSONObject focusRequest = new JSONObject();
-                    focusRequest.put("id", response.getString("id"));
-                    focusRequest.put("camera", "0");
-                    gameModel.focusCamerasAndSelectionsOnActiveEntity(focusRequest);
+                    String currentUnitTileID = gameModel.getActiveUnitTileID();
+
+                    JSONObject request = new JSONObject();
+                    request.put("tile_id", currentUnitTileID);
+                    request.put("camera_id", "0");
+                    request.put("source", "ability_selection_hud");
+                    gameModel.glideCameraToTile(request);
+
+
+//                    JSONObject response = gameModel.getCurrentActiveEntityData();
+//                    JSONObject focusRequest = new JSONObject();
+//                    focusRequest.put("id", response.getString("id"));
+//                    focusRequest.put("camera", "0");
+//                    gameModel.focusCamerasAndSelectionsOnActiveEntity(focusRequest);
                 }
         );
 
@@ -87,13 +99,21 @@ public class GameHud extends GamePanel {
                 mMainControlsPanel,
                 mMainControlsPanel.getMovementButton().getFirst().getUnderlyingButton(),
                 mMovementPanel,
-                mMovementPanel.getEscapeButton().getUnderlyingButton(),
+                mMovementPanel.getEscapeButton(),
                 () -> {
-                    JSONObject entityOfCurrentTurnResponse = gameModel.getCurrentActiveEntityData();
-                    JSONObject focusRequest = new JSONObject();
-                    focusRequest.put("id", entityOfCurrentTurnResponse.getString("id"));
-                    focusRequest.put("camera", "0");
-                    gameModel.focusCamerasAndSelectionsOnActiveEntity(focusRequest);
+                    String currentUnitTileID = gameModel.getActiveUnitTileID();
+
+                    JSONObject request = new JSONObject();
+                    request.put("tile_id", currentUnitTileID);
+                    request.put("camera_id", "0");
+                    request.put("source", "ability_selection_hud");
+                    gameModel.glideCameraToTile(request);
+
+//                    JSONObject entityOfCurrentTurnResponse = gameModel.getCurrentActiveEntityData();
+//                    JSONObject focusRequest = new JSONObject();
+//                    focusRequest.put("id", entityOfCurrentTurnResponse.getString("id"));
+//                    focusRequest.put("camera", "0");
+//                    gameModel.focusCamerasAndSelectionsOnActiveEntity(focusRequest);
                 }
         );
 
@@ -121,7 +141,7 @@ public class GameHud extends GamePanel {
                 mMainControlsPanel,
                 mMainControlsPanel.getSettingsButton().getFirst().getUnderlyingButton(),
                 mSettingsPanel,
-                mSettingsPanel.getEscapeButton().getUnderlyingButton(),
+                mSettingsPanel.getEscapeButton(),
                 () -> {
                     mDevPanel.show();
                 });
@@ -140,7 +160,7 @@ public class GameHud extends GamePanel {
         );
         mStatisticsPanel.setVisible(false);
         link(mMainControlsPanel, mMainControlsPanel.getStatisticsButton().getFirst().getUnderlyingButton(),
-                mStatisticsPanel, mStatisticsPanel.getEscapeButton().getUnderlyingButton());
+                mStatisticsPanel, mStatisticsPanel.getEscapeButton());
 
 
         int greaterStatisticsInformationPanelWidth = mainControlsWidth;
@@ -169,7 +189,17 @@ public class GameHud extends GamePanel {
                 color,
                 6
         );
-        mGreaterAbilityPanel.setVisible(true);
+//        mGreaterAbilityPanel.setVisible(true);
+
+        mAbilityDescriptionPanel = new AbilityDescriptionPanel(
+                greaterAbilityInformationPanelX,
+                greaterAbilityInformationPanelY,
+                greaterAbilityInformationPanelWidth,
+                greaterAbilityInformationPanelHeight / 2,
+                color,
+                6
+        );
+        mAbilityDescriptionPanel.setVisible(false);
 
 
         int turnOrderPanelWidth = mainControlsWidth * 2;
@@ -223,35 +253,37 @@ public class GameHud extends GamePanel {
 
 
         mGreaterStatisticsPanel.setVisible(false);
-        mStatisticsPanel.getBanner().getUnderlyingButton().setOnMousePressed(e -> {
+        mStatisticsPanel.getBanner().setOnMousePressed(e -> {
             mGreaterStatisticsPanel.setVisible(true);
             mGreaterAbilityPanel.setVisible(false);
         });
-        mStatisticsPanel.getEscapeButton().getUnderlyingButton().setOnMousePressed(e -> {
+        mStatisticsPanel.getEscapeButton().setOnMousePressed(e -> {
             mGreaterStatisticsPanel.setVisible(false);
             mGreaterAbilityPanel.setVisible(false);
         });
 
 
         mGreaterAbilityPanel.setVisible(false);
-        mAbilityPanel.getBanner().getUnderlyingButton().setOnMousePressed(e -> {
-            mGreaterAbilityPanel.setVisible(!mGreaterAbilityPanel.isVisible());
+        mAbilitySelectionPanel.getBanner().setOnMousePressed(e -> {
+//            mGreaterAbilityPanel.setVisible(!mGreaterAbilityPanel.isVisible());
+            mAbilityDescriptionPanel.setVisible(!mAbilityDescriptionPanel.isVisible());
             mGreaterStatisticsPanel.setVisible(false);
         });
-        mAbilityPanel.getEscapeButton().getUnderlyingButton().setOnMousePressed(e -> {
-            mGreaterAbilityPanel.setVisible(false);
+        mAbilitySelectionPanel.getEscapeButton().setOnMousePressed(e -> {
+//            mGreaterAbilityPanel.setVisible(false);
+            mAbilityDescriptionPanel.setVisible(false);
             mGreaterStatisticsPanel.setVisible(false);
         });
 
 
-        mMovementPanel.getBanner().getUnderlyingButton().setOnMousePressed(e -> {
-//            mGreaterStatisticsInformationPanel.setVisible(true);
-//            mGreaterAbilityInformationPanel.setVisible(false);
-        });
-        mMovementPanel.getEscapeButton().getUnderlyingButton().setOnMousePressed(e -> {
-//            mGreaterAbilityInformationPanel.setVisible(false);
-//            mGreaterStatisticsInformationPanel.setVisible(false);
-        });
+//        mMovementPanel.getBanner().setOnMousePressed(e -> {
+////            mGreaterStatisticsInformationPanel.setVisible(true);
+////            mGreaterAbilityInformationPanel.setVisible(false);
+//        });
+//        mMovementPanel.getEscapeButton().setOnMousePressed(e -> {
+////            mGreaterAbilityInformationPanel.setVisible(false);
+////            mGreaterStatisticsInformationPanel.setVisible(false);
+//        });
 
 
         mSelectedTilePanel.getLabel().getUnderlyingButton().setOnMousePressed(e -> {
@@ -264,7 +296,7 @@ public class GameHud extends GamePanel {
         containerPane.getChildren().addAll(
                 mTimeLinePanel,
                 mMainControlsPanel,
-                mAbilityPanel,
+                mAbilitySelectionPanel,
                 mMovementPanel,
                 mSettingsPanel,
                 mStatisticsPanel,
@@ -272,7 +304,8 @@ public class GameHud extends GamePanel {
                 mGreaterAbilityPanel,
                 mSelectedTilePanel,
                 mDamagePreviewFromPanel,
-                mDamagePreviewToPanel
+                mDamagePreviewToPanel,
+                mAbilityDescriptionPanel
         );
 
         getChildren().add(containerPane);
@@ -287,18 +320,15 @@ public class GameHud extends GamePanel {
         mLayersStage.gameUpdate(gameModel);
 
         mMainControlsPanel.gameUpdate(gameModel);
-        mAbilityPanel.gameUpdate(gameModel);
+        mAbilitySelectionPanel.gameUpdate(gameModel);
         mMovementPanel.gameUpdate(gameModel);
         mTimeLinePanel.gameUpdate(gameModel);
         mStatisticsPanel.gameUpdate(gameModel);
-
         mSelectedTilePanel.gameUpdate(gameModel);
 
-        mDamagePreviewFromPanel.gameUpdateDamageFrom(gameModel, mAbilityPanel);
+        mDamagePreviewFromPanel.gameUpdateDamageFrom(gameModel, mAbilitySelectionPanel);
         mDamagePreviewToPanel.gameUpdateDamageToPanel(gameModel, mDamagePreviewFromPanel);
 
-//        mGreaterStatisticsPanel.gameUpdate(gameModel);
-//        mGreaterAbilityPanel.gameUpdate(gameModel);
 
         if (mMovementPanel.isVisible()) {
             mGreaterStatisticsPanel.gameUpdate(gameModel, mMovementPanel);
@@ -306,17 +336,33 @@ public class GameHud extends GamePanel {
             mGreaterStatisticsPanel.gameUpdate(gameModel, mStatisticsPanel);
         }
 
-        if (mAbilityPanel.isVisible()) {
-            mGreaterAbilityPanel.gameUpdate(gameModel, mAbilityPanel);
+        // Logic for handling ability selection
+        if (mAbilitySelectionPanel.isVisible()) {
+            mAbilityDescriptionPanel.gameUpdate(gameModel);
+            String selectedAbility = mAbilitySelectionPanel.consumeAbilitySelected();
+            if (selectedAbility != null) { mAbilityDescriptionPanel.setVisible(true); }
+            mGreaterStatisticsPanel.setVisible(false);
         }
 
-        boolean shouldGoToHomeControls = gameModel.consumeShouldAutomaticallyGoToHomeControls();
+        String selectedEntity = mSelectedTilePanel.consumeSelectedEntityID();
+        if (selectedEntity != null) {
+            mGreaterStatisticsPanel.setVisible(true);
+            mAbilityDescriptionPanel.setVisible(false);
+        }
+
+        if (mGreaterStatisticsPanel.isVisible()) {
+            mGreaterStatisticsPanel.gameUpdate(gameModel);
+        }
+
+
+        boolean shouldGoToHomeControls = gameModel.consumeCloseAllSubControllers();
 
         if (shouldGoToHomeControls) {
             mMainControlsPanel.setVisible(true);
             mMovementPanel.setVisible(false);
-            mAbilityPanel.setVisible(false);
+            mAbilitySelectionPanel.setVisible(false);
             mGreaterAbilityPanel.setVisible(false);
+            mAbilityDescriptionPanel.setVisible(false);
             mGreaterStatisticsPanel.setVisible(false);
         }
     }

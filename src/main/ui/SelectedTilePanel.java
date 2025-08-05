@@ -4,7 +4,6 @@ import javafx.geometry.Insets;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
@@ -21,6 +20,7 @@ public class SelectedTilePanel extends BevelStyle {
     private BeveledButton mLabel = null;
     private int mPreviousChecksum = 0;
     private boolean mShouldOpenLargerStatsPanel = false;
+    private String mSelectedEntityID = null;
 
     public SelectedTilePanel(int x, int y, int width, int height, Color color, GameModel gameModel) {
         super(x, y, width, height, color);
@@ -152,6 +152,7 @@ public class SelectedTilePanel extends BevelStyle {
 
             JavaFXUtils.setOnMousePressedEvent(mLabel.getUnderlyingButton(), e -> {
                 JSONObject request1 = new JSONObject();
+                mSelectedEntityID = id;
                 request1.put("id", id);
 
                 JSONArray response2 = gameModel.getCurrentActiveEntityTileID(request1);
@@ -171,7 +172,7 @@ public class SelectedTilePanel extends BevelStyle {
                 tileToGlideToRequest.put("id", currentTileID2);
                 tileToGlideToRequest.put("camera", "1");
                 // Send request
-                gameModel.setTileToGlideTo(tileToGlideToRequest);
+//                gameModel.glideCameraToTile(tileToGlideToRequest);
 
 //                JSONObject mainCameraInfo = gc.getMainCameraInfo();
 //                camera = mainCameraInfo.getString("camera");
@@ -191,6 +192,11 @@ public class SelectedTilePanel extends BevelStyle {
         }
     }
 
+    public String consumeSelectedEntityID() {
+        String consumedSelectedEntityID = mSelectedEntityID;
+        mSelectedEntityID = null;
+        return consumedSelectedEntityID;
+    }
 
     public BeveledButton getLabel() { return mLabel; }
 }

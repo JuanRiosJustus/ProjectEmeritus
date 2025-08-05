@@ -208,7 +208,7 @@ public class AbilityDamageReport  {
         Entity entity = getEntityWithID(entityID);
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
         JSONArray unitTypes = statisticsComponent.getType();
-        JSONArray abilityTypes = AbilityTable.getInstance().getType(ability);
+        JSONArray abilityTypes = new JSONArray(); //AbilityTable.getInstance().getType(ability);
         for (int i = 0; i < abilityTypes.size(); i++) {
             String type = abilityTypes.getString(i);
             boolean sharesType = unitTypes.contains(type);

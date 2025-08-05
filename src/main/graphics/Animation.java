@@ -78,7 +78,7 @@ public class Animation {
 
 
     public void setSpeed(float speed) {
-        if (mIterationSpeedMultiplier != 1.0f) { return; }
+        if (mIterationSpeedMultiplier != 1.0f) { return; } // If the multiplier was set, cannot set again atm
         mIterationSpeedMultiplier = speed;
     }
     public void resetSpeedToDefault() { mIterationSpeedMultiplier = DEFAULT_ITERATION_SPEED_MULTIPLIER; }

@@ -232,6 +232,11 @@ public class InitiativeQueue extends GameQueue {
         return new JSONArray();
     }
 
+    @Override
+    public void remove(String id) {
+
+    }
+
     public List<String> getPredictedTurnOrder(int count) {
         // Clone the state to simulate forward
         Map<String, Float> tempMeters = new HashMap<>(mTurnMeterMap);

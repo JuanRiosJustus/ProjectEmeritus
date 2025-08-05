@@ -10,6 +10,7 @@ import main.game.stores.EntityStore;
 import com.alibaba.fastjson2.JSONObject;
 
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CameraSystem extends GameSystem {
@@ -35,7 +36,7 @@ public class CameraSystem extends GameSystem {
     public CameraSystem(GameModel gameModel) {
         super(gameModel);
 
-        mEventBus.subscribe(CAMERA_GLIDE, this::onCameraGlideEvent);
+        mEventBus.subscribe(GLIDE_CAMERA_TO_POSITION, this::onCameraGlideEvent);
         mEventBus.subscribe(CAMERA_DRAG, this::onCameraDragEvent);
     }
 
@@ -45,48 +46,55 @@ public class CameraSystem extends GameSystem {
     public static JSONObject createCameraGlideEvent(String camera, int x, int y) {
         return createCameraGlideEvent(camera, "", x, y);
     }
-    private static JSONObject createCameraGlideEvent(String camera, String tileID, int x, int y) {
+    private static final String GLIDE_CAMERA_TO_POSITION = "glide_camera_to_position";
+    private static JSONObject createCameraGlideEvent(String cameraID, String tileID, int x, int y) {
         JSONObject event = new JSONObject();
-        event.put("camera", camera);
+        event.put("event", GLIDE_CAMERA_TO_POSITION);
+        event.put("camera", cameraID);
         event.put("tile_id", tileID);
         event.put("x", x);
         event.put("y", y);
+        return createCameraGlideEvent(event);
+    }
+    public static JSONObject createCameraGlideEvent(JSONObject request) {
+        JSONObject event = request != null ? request : new JSONObject();
+        event.put("event", GLIDE_CAMERA_TO_POSITION);
         return event;
     }
+
     private void onCameraGlideEvent(JSONObject event) {
         mLastCameraMovementEvent = CAMERA_GLIDE;
-        String cameraToGlideWith = event.getString("camera");
-        String tileToGlideToID = event.getString("tile_id");
-        int positionX = event.getIntValue("x");
-        int positionY = event.getIntValue("y");
+        String cameraID = event.getString("camera_id");
+        String tileID = event.getString("tile_id");
+        Vector3f toGlideTo = null;
 
-        Vector3f tilePosition = new Vector3f(positionX, positionY);
-        if (tileToGlideToID != null && !tileToGlideToID.isEmpty()) {
-            Entity tileEntity = EntityStore.getInstance().get(tileToGlideToID);
+        if (tileID != null) {
+            Entity tileEntity = EntityStore.getInstance().get(tileID);
             TileComponent tile = tileEntity.get(TileComponent.class);
-            tilePosition = tile.getLocalVector(mGameModel);
+            toGlideTo = tile.getLocalVector(mGameModel);
+        } else if (event.containsKey("x") && event.containsKey("y")){
+            int positionX = event.getIntValue("x");
+            int positionY = event.getIntValue("y");
+            toGlideTo = new Vector3f(positionX, positionY);
         }
 
-        handleGlideEvent(mGameState, cameraToGlideWith, tilePosition);
-    }
+        if (toGlideTo == null) { return; }
 
-
-
-    private void handleGlideEvent(GameState gameState, String camera, Vector3f toPosition) {
         // Adjust the target position relative to the camera's current coordinates
-        int viewportWidth = gameState.getCameraWidth(camera);
-        int viewportHeight = gameState.getCameraHeight(camera);
+        int viewportWidth = mGameState.getCameraWidth(cameraID);
+        int viewportHeight = mGameState.getCameraHeight(cameraID);
 
-        int adjustedX = (int) (toPosition.x - viewportWidth / 2);
-        int adjustedY = (int) (toPosition.y - viewportHeight / 2);
+        int adjustedX = (int) (toGlideTo.x - viewportWidth / 2);
+        int adjustedY = (int) (toGlideTo.y - viewportHeight / 2);
 
-        int spriteWidthOffset = gameState.getSpriteWidth() / 2;
-        int spriteHeightOffset = gameState.getSpriteHeight() / 2;
+        int spriteWidthOffset = mGameState.getSpriteWidth() / 2;
+        int spriteHeightOffset = mGameState.getSpriteHeight() / 2;
 
         int finalDestinationX = adjustedX + spriteWidthOffset;
         int finalDestinationY = adjustedY + spriteHeightOffset;
 
-        mCamerasToMove.put(camera, new Vector3f(finalDestinationX, finalDestinationY));
+        System.out.println("HANDLE_GLIDE_DEBUGGING 2. -> Adding Glide Event to Queue ...");
+        mCamerasToMove.put(cameraID, new Vector3f(finalDestinationX, finalDestinationY));
     }
 
     public static JSONObject createCameraDragEvent(int x, int y, boolean isMouseBeingHeldDown) {
@@ -153,6 +161,10 @@ public class CameraSystem extends GameSystem {
 
     @Override
     public void update(GameModel gameModel, SystemContext systemContext) {
+
+
+
+
         if (gameModel.getGameState().isFixedOnActiveCamera()) {
             String anchoredEntityID = gameModel.getSpeedQueue().peek();
             Entity entity = getEntityWithID(anchoredEntityID);
@@ -224,31 +236,33 @@ public class CameraSystem extends GameSystem {
 
     private void handleCameraGlideUpdate() {
         GameState gameState = mGameState;
-        for (Map.Entry<String, Vector3f> entry : mCamerasToMove.entrySet()) {
+        Map<String, Vector3f> cameras = mCamerasToMove;
+        for (Map.Entry<String, Vector3f> entry : cameras.entrySet()) {
             String camera = entry.getKey();
             Vector3f targetPosition = entry.getValue();
-            int currentX = gameState.getCameraX(camera);
-            int currentY = gameState.getCameraY(camera);
+            double currentX = gameState.getCameraX(camera);
+            double currentY = gameState.getCameraY(camera);
 
             // Interpolate the camera position toward the target position
-            int newX = (int) (currentX + (targetPosition.x - currentX) * GLIDE_EASING);
-            int newY = (int) (currentY + (targetPosition.y - currentY) * GLIDE_EASING);
+            double newX = (int) (currentX + (targetPosition.x - currentX) * GLIDE_EASING);
+            double newY = (int) (currentY + (targetPosition.y - currentY) * GLIDE_EASING);
 
             // Update the camera position
             gameState.setCameraX(camera, newX);
             gameState.setCameraY(camera, newY);
+//
+            boolean isGlideIncomplete = !isGlideComplete(targetPosition, newX, newY);
+            if (isGlideIncomplete) { continue; }
 
             // Stop gliding when the camera is close to the target position
-            if (isGlideComplete(targetPosition, newX, newY)) {
-                gameState.setCameraX(camera, (int) targetPosition.x);
-                gameState.setCameraY(camera, (int) targetPosition.y);
-                mCamerasToMove.remove(camera);
-            }
+            gameState.setCameraX(camera, (int) targetPosition.x);
+            gameState.setCameraY(camera, (int) targetPosition.y);
+            mCamerasToMove.remove(camera);
         }
     }
 
-    private boolean isGlideComplete(Vector3f targetPosition, int currentX, int currentY) {
-        return Math.abs(currentX - targetPosition.x) == 0 && Math.abs(currentY - targetPosition.y) == 0;
+    private boolean isGlideComplete(Vector3f targetPosition, double currentX, double currentY) {
+        return Math.abs(currentX - targetPosition.x) <= 0.1f && Math.abs(currentY - targetPosition.y) <= 0.1f;
 //        return Math.abs(currentX - targetPosition.x) < .001 && Math.abs(currentY - targetPosition.y) < .001;
     }
 }

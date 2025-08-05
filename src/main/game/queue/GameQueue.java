@@ -10,4 +10,5 @@ public abstract class GameQueue {
     public abstract String dequeue();
     public abstract JSONArray turnOrder();
     public abstract JSONArray nextTurnOrder();
+    public abstract void remove(String id);
 }

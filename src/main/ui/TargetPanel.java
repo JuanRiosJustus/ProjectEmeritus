@@ -92,9 +92,10 @@ public class TargetPanel extends GamePanel {
         resourceScrollPane.setPickOnBounds(false); // Allow clicks to pass through
         resourceScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove vertical scrollbar
         resourceScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
+        resourceScrollPane.setPadding(new Insets(2, 2, 2, 2));
 
         mResourceBarWidth = (int) (resourceScrollPaneWidth);
-        mResourceBarHeight = resourceScrollPaneHeight / 3;
+        mResourceBarHeight = (int) ((resourceScrollPaneHeight * .98) / 3);
         HBox row2 = new HBox(mImageDisplay, resourceScrollPane);
 
 

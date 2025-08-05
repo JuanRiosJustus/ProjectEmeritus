@@ -120,15 +120,16 @@ public class TimeLinePanel extends BevelStyle {
                     String currentTileID = response.getString(0);
                     gameModel.setSelectedTileIDs(currentTileID);
 
-                    JSONObject tileToGlideToRequest = new JSONObject();
-                    tileToGlideToRequest.put("id", currentTileID);
-                    tileToGlideToRequest.put("camera", "0");
-                    gameModel.setTileToGlideTo(tileToGlideToRequest);
+                    JSONObject glideCameraToTileRequest = new JSONObject();
+                    glideCameraToTileRequest.put("tile_id", currentTileID);
+                    glideCameraToTileRequest.put("camera_id", "0");
+                    glideCameraToTileRequest.put("source", "time_line_panel_button_selection");
+                    gameModel.glideCameraToTile(glideCameraToTileRequest);
 
-                    tileToGlideToRequest = new JSONObject();
-                    tileToGlideToRequest.put("id", currentTileID);
-                    tileToGlideToRequest.put("camera", "1");
-                    gameModel.setTileToGlideTo(tileToGlideToRequest);
+                    glideCameraToTileRequest = new JSONObject();
+                    glideCameraToTileRequest.put("tile_id", currentTileID);
+                    glideCameraToTileRequest.put("camera_id", "1");
+                    gameModel.glideCameraToTile(glideCameraToTileRequest);
                 });
 
                 ImageView imageView = createAndCacheEntityIcon(entityID);

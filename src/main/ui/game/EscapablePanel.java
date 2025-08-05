@@ -2,6 +2,7 @@ package main.ui.game;
 
 import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -25,13 +26,10 @@ public class EscapablePanel extends GamePanel {
     public EscapablePanel(int x, int y, int width, int height, Color color) {
         super(x, y, width, height);
 
-        setEffect(JavaFXUtils.createBasicDropShadowFixed(width, height));
-        setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
+//        setEffect(JavaFXUtils.createBasicDropShadowFixed(width, height));
+//        setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         mColor = color;
-
-        int bannerWidth = width;
-        int bannerHeight = (int) (height * 0.2); // Banner takes 20% of total height
 
         // ✅ **Main Layout Container**
         mContainer = new VBox();
@@ -40,6 +38,8 @@ public class EscapablePanel extends GamePanel {
         mContainer.setMaxSize(width, height);
 
         // ✅ **Fixed Banner Row**
+        int bannerWidth = (int) (width);
+        int bannerHeight = (int) (height * 0.2); // Banner takes 20% of total height
         HBox bannerRow = new HBox();
         bannerRow.setPrefSize(bannerWidth, bannerHeight);
         bannerRow.setMinSize(bannerWidth, bannerHeight);
@@ -48,12 +48,18 @@ public class EscapablePanel extends GamePanel {
 
         int bannerBackButtonWidth = (int) (bannerWidth * 0.2);
         int bannerBackButtonHeight = bannerHeight;
-        mBannerBackButton = new BeveledButton(bannerBackButtonWidth, bannerBackButtonHeight, "X", color);
+        mBannerBackButton = new BeveledButton(bannerBackButtonWidth, bannerBackButtonHeight);
+        mBannerBackButton.setText("X");
+        mBannerBackButton.setBackgroundColor(color);
+
 
         int bannerTextFieldWidth = bannerWidth - bannerBackButtonWidth;
         int bannerTextFieldHeight = bannerHeight;
-        mBannerTextField = new BeveledButton(bannerTextFieldWidth, bannerTextFieldHeight, "Banner", color);
+        mBannerTextField = new BeveledButton(bannerTextFieldWidth, bannerTextFieldHeight);
+        mBannerTextField.setText("Banner");
+        mBannerTextField.setBackgroundColor(color);
 
+        bannerRow.setPadding(new Insets(1, 1, 1, 1));
         bannerRow.getChildren().addAll(mBannerBackButton, mBannerTextField);
 
         // ✅ **Scrollable Content Panel**
@@ -116,9 +122,12 @@ public class EscapablePanel extends GamePanel {
         return pair;
     }
 
-    public BeveledButton getBanner() { return mBannerTextField; }
+    public Button getBanner() { return mBannerTextField.getUnderlyingButton(); }
+
     public int getContentWidth() { return mContentWidth; }
     public int getContentHeight() { return mContentHeight; }
-    public BeveledButton getEscapeButton() { return mBannerBackButton; }
+//    public BeveledButton getEscapeButton() { return mBannerBackButton; }
+    public Button getEscapeButton() { return mBannerBackButton.getUnderlyingButton(); }
+    public void setBannerText(String txt) { mBannerTextField.setText(txt); }
     public void setMainContent(Node node) { mContentPanel.getChildren().clear(); mContentPanel.getChildren().add(node); }
 }

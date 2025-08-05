@@ -29,6 +29,47 @@ import java.io.File;
 import java.util.Arrays;
 
 public class JavaFXUtils {
+
+    private static final Text mTemporaryText = new Text();
+
+    public static double computeWidth(Font font, String text) {
+        mTemporaryText.setText(text);
+        mTemporaryText.setFont(font);
+        return mTemporaryText.getLayoutBounds().getWidth();
+    }
+
+    public static double computeHeight(Font font, String text) {
+        mTemporaryText.setText(text);
+        mTemporaryText.setFont(font);
+        return mTemporaryText.getLayoutBounds().getHeight();
+    }
+
+
+    public static double findMaxFontSize(String text, double maxWidth, double maxHeight, String fontFamily) {
+        double min = 1;
+        double max = 300; // Arbitrary upper bound
+
+        // Binary search to find max fitting font size
+        while (max - min > 0.5) {
+            double mid = (min + max) / 2.0;
+            Font testFont = new Font(fontFamily, mid);
+            Text temp = mTemporaryText;
+            temp.setText(text);
+            temp.setFont(testFont);
+            double textWidth = temp.getLayoutBounds().getWidth();
+            double textHeight = temp.getLayoutBounds().getHeight();
+
+            if (textWidth <= maxWidth && textHeight <= maxHeight) {
+                min = mid; // Try larger
+            } else {
+                max = mid; // Try smaller
+            }
+        }
+
+        return min;
+    }
+
+
     public static final String TRANSPARENT_STYLING = "-fx-background: transparent; -fx-background-color: transparent;";
 
     public static Pane createWrapperPane(int width, int height) {

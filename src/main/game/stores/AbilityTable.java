@@ -1,8 +1,10 @@
 package main.game.stores;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
-import main.constants.EmeritusDatabase;
+import main.constants.Constants;
 import main.logging.EmeritusLogger;
 
 import main.utils.MathUtils;
@@ -12,18 +14,8 @@ import com.alibaba.fastjson2.JSONObject;
 public class AbilityTable {
     private static AbilityTable instance = null;
     private final Map<String, JSONObject> mActionsMap = new HashMap<>();
-    private final Map<String, JSONObject> mCached = new LinkedHashMap<>();
     private final Map<String, JSONObject> mAbilities = new HashMap<>();
     private final Map<String, Float> mDebugMap = new HashMap<>();
-    private static final String COST_KEY = "cost";
-    private static final String DAMAGE_KEY = "damage";
-    private static final String DAMAGE_FROM_USER_KEY = "damage_from_user";
-    private static final String DAMAGE_FORMULA = "damage_formula";
-    private static final String COST_FORMULA = "cost_formula";
-//    private static final String HEALTH_DAMAGE_FORMULA = "_damage_formula";
-    private static final String COST_FROM_USER_KEY = "cost_from_user";
-    private static final String UNDERSCORE_DELIMITER = "_";
-    private static final String EQUAL_DELIMITER = "=";
     private static final String ATTRIBUTE_KEY = "attribute_key";
     private static final String ATTRIBUTE_SCALING = "attribute_scaling";
     private static final String ATTRIBUTE_VALUE = "attribute_value";
@@ -40,9 +32,8 @@ public class AbilityTable {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            JSONArray rows = EmeritusDatabase.getInstance().execute(
-                    "SELECT * FROM " + EmeritusDatabase.ABILITY_DATABASE
-            );
+            String raw = Files.readString(Paths.get(Constants.ABILITY_DATABASE_PATH));
+            JSONArray rows = JSONArray.parse(raw);
             for (int i = 0; i < rows.size(); i++) {
                 JSONObject data = rows.getJSONObject(i);
                 String ability = data.getString("ability");
@@ -75,15 +66,12 @@ public class AbilityTable {
 
     public int getRange(String ability) {
         JSONObject data = getOrCacheResult(ability);
-        if (data == null) {
-            System.err.println("tttlgmt " + ability);
-        }
         int result = data.getIntValue("range");
         return result;
     }
 
-    public float getAccuracy(String action) {
-        JSONObject data = getOrCacheResult(action);
+    public float getAccuracy(String ability) {
+        JSONObject data = getOrCacheResult(ability);
         float result = data.getFloat("accuracy");
         return result;
     }
@@ -118,10 +106,9 @@ public class AbilityTable {
         return data.getBoolean("makes_physical_contact");
     }
 
-    public JSONArray getType(String ability) {
+    public String getType(String ability) {
         JSONObject data = getOrCacheResult(ability);
-        JSONArray type = data.getJSONArray("type");
-        return type;
+        return data.getString("type");
     }
 
 //    public boolean shouldUsePhysicalDefense(String action) {
@@ -289,11 +276,32 @@ public class AbilityTable {
         return makesContact;
     }
 
-    public String getDescription(String action) {
-        JSONObject data = mActionsMap.get(action);
+    public JSONObject getAbilityData(String ability) {
+        JSONObject data = mAbilities.get(ability);
+        if (data == null) { return null; }
+
+        JSONObject result = new JSONObject();
+
+        result.put("description", getDescription(ability));
+        result.put("range", getRange(ability));
+        result.put("area", getArea(ability));
+        result.put("accuracy", getAccuracy(ability));
+        result.put("type", getType(ability));
+
+        return result;
+
+    }
+    public String getDescription(String ability) {
+        JSONObject data = mAbilities.get(ability);
+        if (data == null) {
+            System.out.println(
+                    "toko"
+            );
+        }
         String description = data.getString("description");
         return description;
     }
+
 
     public JSONObject getDamage(String ability) {
 //        JSONObject result = getOrCacheResult(ability);
@@ -301,6 +309,56 @@ public class AbilityTable {
         JSONObject result = getOrCacheResult(ability);
         return result.getJSONObject("damage");
     }
+
+    private JSONArray getCostOrDamageListing(String ability, boolean isCost) {
+        JSONObject data = getOrCacheResult(ability);
+        String indicator = isCost ? ".cost." : ".damage.";
+
+        JSONArray result = new JSONArray();
+        for (String key : data.keySet()) {
+            boolean isRelatedKey = key.contains(indicator);
+            if (!isRelatedKey) { continue; }
+            String resource = key.substring(0, key.indexOf(indicator));
+            result.add(resource);
+        }
+        return result;
+    }
+
+
+    public JSONArray getResourcesToCost(String ability) {
+        JSONArray result = getCostOrDamageListing(ability, true);
+        return result;
+    }
+    public JSONObject getResourceCost(String ability, String resource) {
+        return getResourceCostOrDamage(ability, resource, true);
+    }
+
+    public JSONArray getResourcesToDamage(String ability) {
+        JSONArray result = getCostOrDamageListing(ability, false);
+        return result;
+    }
+    public JSONObject getResourceDamage(String ability, String resource) {
+        return getResourceCostOrDamage(ability, resource, false);
+    }
+
+    private JSONObject getResourceCostOrDamage(String ability, String resource, boolean isCost) {
+        JSONObject data = getOrCacheResult(ability);
+        String indicator = isCost ? ".cost." : ".damage.";
+
+        JSONObject result = new JSONObject();
+        for (String key : data.keySet()) {
+            int indicatorIndex = key.indexOf(indicator);
+            boolean isRelatedKey = indicatorIndex >= 0;
+            if (!isRelatedKey) { continue; }
+            boolean isResource = key.startsWith(resource);
+            if (!isResource) { continue; }
+            String scaling = key.substring(indicatorIndex + indicator.length());
+            double value = data.getDoubleValue(key);
+            result.put(scaling, value);
+        }
+        return result;
+    }
+
     public JSONObject getCost(String ability) {
         JSONObject result = getOrCacheResult(ability);
         return result.getJSONObject("cost");

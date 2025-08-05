@@ -49,4 +49,6 @@ public abstract class GameSystem {
 
         return updated;
     }
+
+    public JSONEventBus getEventBus() { return mEventBus; }
 }

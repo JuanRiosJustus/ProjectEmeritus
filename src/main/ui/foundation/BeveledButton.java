@@ -6,8 +6,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
-import javafx.scene.layout.Background;
-import javafx.scene.paint.Color;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.*;
+        import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import main.game.stores.ColorPalette;
 import main.constants.JavaFXUtils;
@@ -29,16 +30,12 @@ public class BeveledButton extends BevelStyle {
         mButton.setFocusTraversable(false);
 
         // ** Apply Borders & Background **
-//        mButton.setBorder(new Border(
-//                mOuterBevel.getStrokes().get(0),
-//                mInnerBevel.getStrokes().get(0)
-//        ));
-        mButton.setBorder(getBordering(width, height, baseColor));
+        setBorder((int) (width * 0.025), (int) (height * 0.05), baseColor);
+        mTextNode.setFont(FontPool.getInstance().getFontForHeight((int) (height * .8)));
 
         mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor));
 //
         // ** Text Node ** with left alignment
-        mTextNode.setText(text);
         mButton.setGraphic(mTextNodeContainer);
 
         // ** Add Elements to StackPane **
@@ -73,10 +70,65 @@ public class BeveledButton extends BevelStyle {
         JavaFXUtils.addMouseReleasedEvent(mButton, mButtonReleasedHandler);
     }
 
+    public void setBorder(int borderWidth, int borderHeight, Color baseColor) {
+        Border border = createBorder(borderWidth, borderHeight, baseColor);
+        mButton.setBorder(border);
+    }
+
+
+    public static Border createBorder(int borderWidth, int borderHeight, Color baseColor) {
+        // Outer border color (darker for contrast)
+        Color outer = baseColor.darker();
+
+        // Inner accent color (slightly lighter than base)
+        Color inner = baseColor.brighter();
+
+        // === Flat Fill ===
+//        mButton.setBackground(new Background(
+//                new BackgroundFill(baseColor, CornerRadii.EMPTY, Insets.EMPTY)
+//        ));
+
+        // === Outer Thick Border ===
+        BorderStroke outerStroke = new BorderStroke(
+                outer, outer, outer, outer,
+                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
+                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
+                CornerRadii.EMPTY,
+                new BorderWidths(borderHeight, borderWidth, borderHeight, borderWidth),
+                Insets.EMPTY
+        );
+
+        // === Inner Border Stroke (inset, for pixel-style frame detail) ===
+        BorderStroke innerStroke = new BorderStroke(
+                inner, inner, inner, inner,
+                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
+                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
+                CornerRadii.EMPTY,
+                new BorderWidths(1),
+                new Insets(borderHeight, borderWidth, borderHeight, borderWidth)
+        );
+
+
+//        mButton.setBorder(new Border(outerStroke, innerStroke));
+
+        // Optional: spacing and font for pixel feel
+//        mButton.setPadding(new Insets(3));
+
+        Border border = new Border(outerStroke, innerStroke);
+        return border;
+    }
+
+    public String getText() { return mTextNode.getText(); }
+    //    public void setText(String te)
     public Button getUnderlyingButton() {
         return mButton;
     }
-    public void setTextColor(Color color) { mTextNode.setFill(color); }
+
+    public void setOnMousePressedV2(EventHandler<? super MouseEvent> value) {
+        mButton.setOnMousePressed(value);
+    }
+
+
     public void setBackgroundColor(Color color) {
         mBaseColor = color;
         mButton.setBorder(getBordering(mWidth, mHeight, mBaseColor));
@@ -90,19 +142,32 @@ public class BeveledButton extends BevelStyle {
         mTextNodeContainer.setAlignment(pos);
     }
 
+//    public void setFitText(String text) {
+//        mTextNode.setFont(FontPool.getInstance().getFitFont(text, mTextNode.getFont(), mWidth * .9, mHeight));
+//        mTextNode.setText(text);
+//        mTextNode.setEffect(mDropShadow);
+//    }
+
     public void setFitText(String text) {
-        mTextNode.setFont(FontPool.getInstance().getFitFont(text, mTextNode.getFont(), mWidth * .9, mHeight));
-        mTextNode.setText(text);
-        mTextNode.setEffect(mDropShadow);
+//        double maxSize = JavaFXUtils.findMaxFontSize(text, mWidth, mHeight, mTextNode.getFont().getFamily());
+//        mTextNode.setFont(FontPool.getInstance().getFont(maxSize));
+//        mTextNode.setText(text);
+//        mTextNode.setEffect(mDropShadow);
+//        int current = (int) mTextNode.getFont().getSize();
+
+
+        mTextNode.setFitText(text);
+//        double fontMultiplier = 0.75;
+//        Font font = FontPool.getInstance().getFitFont(text, mTextNode.getFont(), mWidth * fontMultiplier, mHeight);
+//        mTextNode.setFont(font);
+//        mTextNode.setText(text);
     }
 
-    public void setText(String text) {
-        mTextNode.setText(text);
-        mTextNode.setEffect(mDropShadow);
+    public void setFitText(String text, double multiplier) {
+        mTextNode.setFitText(text, multiplier);
     }
-
-    public void setFont(Font font) {
+    public void setFont(Font font, double bFactor) {
         mTextNode.setFont(font);
-        mTextNode.setEffect(mDropShadow);
+        mTextNode.setExtrusionFactor(bFactor);
     }
 }

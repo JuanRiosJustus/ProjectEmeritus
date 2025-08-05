@@ -876,11 +876,11 @@ public class GameController extends EngineRunnable {
     }
 
 //    public JSONArray getSpawnRegions() { return mGameModel.getSpawnRegions(); }
-    public JSONObject getSpawnRegionsData() { return mGameModel.getSpawnRegionsData(); }
+    public JSONObject getSpawnRegions() { return mGameModel.getSpawnRegions(); }
 
     public JSONObject getHoveredTile() { return mGameMapEditorAPI.getHoveredTile(); }
 
-    public void setTileToGlideToAPI(JSONObject request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
+    public void setTileToGlideToAPI(JSONObject request) { mGameAPI.addTileToGlideCameraTo(mGameModel, request); }
 
     //    public void setTileToGlideToID(String request) { setTileToGlideToID(new JSONObject().put(request)); }
 
@@ -913,9 +913,9 @@ public class GameController extends EngineRunnable {
 //            mGameAPI.getMovementStatsOfUnitOfCurrentTurn(mGameModel);
 //    }
 //    public JSONObject getUnitsOnSelectedTiles() { return mGameAPI.getUnitsOnSelectedTiles(mGameModel); }
-    public boolean consumeShouldAutomaticallyGoToHomeControls() {
-        return mGameAPI.consumeShouldAutomaticallyGoToHomeControls(mGameModel);
-    }
+//    public boolean consumeShouldAutomaticallyGoToHomeControls() {
+//        return mGameAPI.consumeShouldAutomaticallyGoToHomeControls(mGameModel);
+//    }
 
 
 
@@ -994,13 +994,6 @@ public class GameController extends EngineRunnable {
         return event;
     }
 
-    public JSONObject focusCamerasAndSelectionsOnActiveEntity(JSONObject request) {
-        return mGameAPI.focusCamerasAndSelectionsOnActiveEntity(request);
-    }
-
-    public void forcefullyEndTurn() {
-        mGameAPI.forcefullyEndTurn();
-    }
 
     public void addLayersToHoveredTileIDs(String asset, String state, String depth) {
         mGameMapEditorAPI.addLayersToHoveredTileIDs(asset, state, depth);
@@ -1021,4 +1014,6 @@ public class GameController extends EngineRunnable {
     public JSONObject getTagsFromUnit(JSONObject request) {
         return mGameModel.getTagsFromUnit(request);
     }
+
+    public void setSpawn(JSONObject request) { mGameModel.setSpawn(request); }
 }

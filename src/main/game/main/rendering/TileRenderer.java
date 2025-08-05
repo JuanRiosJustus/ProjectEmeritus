@@ -25,6 +25,8 @@ public class TileRenderer extends Renderer {
     public void render(GraphicsContext graphicsContext, RenderContext renderContext) {
         GameModel model = renderContext.getGameModel();
         String camera = renderContext.getCamera();
+        int spriteWidth = renderContext.getGameModel().getGameState().getSpriteWidth();
+        int spriteHeight = renderContext.getGameModel().getGameState().getSpriteHeight();
         renderContext.getAllVisibleTiles().forEach(tileEntity -> {
             AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
             TileComponent tile = tileEntity.get(TileComponent.class);
@@ -37,16 +39,24 @@ public class TileRenderer extends Renderer {
             Point p = calculateWorldPosition(model, camera, tile, image);
             graphicsContext.drawImage(image, p.x, p.y);
 
+            String spawnID = assetComponent.getSpawnID();
+            if (spawnID != null) {
+                image = getImageWithID(spawnID);
+                graphicsContext.drawImage(image, p.x, p.y);
+            }
+
             id = assetComponent.getShadowID();
             image = getImageWithID(id);
             if (image == null) { return; }
             graphicsContext.drawImage(image, p.x, p.y);
 
+//            graphicsContext.fillText(tile.getTotalElevation() + "", p.x + (spriteWidth/2), p.y + spriteHeight / 2);
+
 
             // Center within tile
-            String spawnRegion = tile.getSpawnRegion();
-            if (spawnRegion == null || spawnRegion.isEmpty()) { return; }
-            drawCenteredText(graphicsContext, renderContext.getGameModel(), spawnRegion, p);
+//            String spawnRegion = tile.getSpawnRegion();
+//            if (spawnRegion == null || spawnRegion.isEmpty()) { return; }
+//            drawCenteredText(graphicsContext, renderContext.getGameModel(), spawnRegion, p);
         });
     }
 
@@ -71,7 +81,7 @@ public class TileRenderer extends Renderer {
 
         // 4. Draw outline
         double outlineWidth = Math.max(1.0, fontSize * 0.08);
-        gc.setFill(ColorPalette.BLACK_LEVEL_2);
+        gc.setFill(ColorPalette.BLACK_LEVEL_1);
         for (double dx = -outlineWidth; dx <= outlineWidth; dx += outlineWidth) {
             for (double dy = -outlineWidth; dy <= outlineWidth; dy += outlineWidth) {
                 if (dx != 0 || dy != 0) {
@@ -81,7 +91,7 @@ public class TileRenderer extends Renderer {
         }
 
         // 5. Draw main text
-        gc.setFill(ColorPalette.WHITE_LEVEL_2);
+        gc.setFill(ColorPalette.WHITE_LEVEL_1);
         gc.fillText(textStr, centeredX, centeredY);
     }
 

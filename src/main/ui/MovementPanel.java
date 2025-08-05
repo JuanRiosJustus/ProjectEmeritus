@@ -40,7 +40,7 @@ public class MovementPanel extends EscapablePanel {
         mRowWidth = getContentWidth();
 
         setMainContent(mContentPanel);
-        getBanner().setText("Movement");
+        setBannerText("Movement");
 
         JavaFXUtils.setCachingHints(this);
     }
@@ -67,8 +67,8 @@ public class MovementPanel extends EscapablePanel {
         gameModel.updateIsMovementPanelOpen(isShowing);
 
         // Check that the current entities state will update the ui
-        String currentEntityID = gameModel.getActiveEntityID();
-        int newHashCode = gameModel.getSpecificEntityStatisticsComponentHash(currentEntityID);
+        String currentEntityID = gameModel.getActiveUnitID();
+        int newHashCode = gameModel.getEntityStatisticsComponentHashCode(currentEntityID);
         if (newHashCode == mCurrentEntityHash && currentEntityID == mCurrentEntityID) { return; }
         mCurrentEntityHash = newHashCode;
         mCurrentEntityID = currentEntityID;

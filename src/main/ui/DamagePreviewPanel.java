@@ -9,9 +9,7 @@ import javafx.scene.paint.Color;
 import main.constants.JavaFXUtils;
 import main.constants.Tuple;
 import main.game.main.GameModel;
-import main.game.stores.ColorPalette;
 import main.game.systems.combat.AbilityDamageReport;
-import main.game.systems.combat.CombatSystem;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledLabel;
@@ -97,13 +95,13 @@ public class DamagePreviewPanel extends BevelStyle {
 //        setEffect(JavaFXUtils.createBasicDropShadowFixed(width, height));
     }
 
-    public void gameUpdateDamageFrom(GameModel gameModel, AbilityPanel abilityPanel) {
+    public void gameUpdateDamageFrom(GameModel gameModel, AbilitySelectionPanel abilitySelectionPanel) {
         // If an ability panel is not visible, this damage from the panel should not
-        boolean isAbilityPanelOpen = abilityPanel.isVisible();
+        boolean isAbilityPanelOpen = abilitySelectionPanel.isVisible();
         if (!isAbilityPanelOpen) { hide(); return; }
 
 
-        String entityID = gameModel.getActiveEntityID();
+        String entityID = gameModel.getActiveUnitID();
         int newSCHash = gameModel.getActiveEntityStatisticsComponentHash();
         int newACHash = gameModel.getActiveEntityAbilityComponentHash();
 
@@ -113,6 +111,9 @@ public class DamagePreviewPanel extends BevelStyle {
         mACHash = newACHash;
 
         ImageView imageView = getOrCreateImage(entityID);
+        if (imageView == null) {
+            return;
+        }
         mDisplay.setImageView(imageView);
 
         JSONObject request = new JSONObject();
@@ -164,12 +165,12 @@ public class DamagePreviewPanel extends BevelStyle {
         String ability = damageFromPanel.mSelectedAbility;
         if (ability == null) { hide(); return; }
 
-        String activeEntityID = gameModel.getActiveEntityID();
+        String activeEntityID = gameModel.getActiveUnitID();
         String targetEntityID = gameModel.getTargetedUnitFromSpecificEntityID(activeEntityID);
         if (targetEntityID == null) { hide(); return; }
 
-        int newSCHash = gameModel.getSpecificEntityStatisticsComponentHash(targetEntityID);
-        int newACHash = gameModel.getSpecificEntityAbilityComponentHash(targetEntityID);
+        int newSCHash = gameModel.getEntityStatisticsComponentHashCode(targetEntityID);
+        int newACHash = gameModel.getEntityAbilityComponentHashCode(targetEntityID);
 
         if (newSCHash == mSCHash && targetEntityID == mCurrentID && newACHash == mACHash) { return; }
         mSCHash = newSCHash;
@@ -178,6 +179,9 @@ public class DamagePreviewPanel extends BevelStyle {
 
         if (targetEntityID.isEmpty()) { hide(); return; }
         ImageView imageView = getOrCreateImage(targetEntityID);
+        if (imageView == null) {
+            return;
+        }
         mDisplay.setImageView(imageView);
 
 
@@ -248,6 +252,10 @@ public class DamagePreviewPanel extends BevelStyle {
         if (view != null) { return view; }
 
         view = createAndCacheEntityIcon(entityID);
+
+        if (view == null) {
+            return null;
+        }
 
         mViewCache.put(entityID, view);
 

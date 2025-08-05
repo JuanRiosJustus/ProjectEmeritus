@@ -55,19 +55,22 @@ public class AnimationPool {
 
 
     public String getOrCreateStatic(String sheet, int width, int height, String id) {
-        return getOrCreateAsset(sheet, width, height, STATIC_ANIMATION, id);
+        return getOrCreateAsset(sheet, width, height, STATIC_ANIMATION, -1, id);
     }
     public String getOrCreateFlicker(String sheet, int width, int height, String id) {
-        return getOrCreateAsset(sheet, width, height, FLICKER_ANIMATION, id);
+        return getOrCreateAsset(sheet, width, height, FLICKER_ANIMATION, 0, id);
+    }
+    public String getOrCreateFlicker(String sheet, int width, int height, int frame, String id) {
+        return getOrCreateAsset(sheet, width, height, FLICKER_ANIMATION, frame, id);
     }
     public String getOrCreateTopSwaying(String sheet, int width, int height, String id) {
-        return getOrCreateAsset(sheet, width, height, TOP_SWAYING_ANIMATION, id);
+        return getOrCreateAsset(sheet, width, height, TOP_SWAYING_ANIMATION, -1, id);
     }
     public String getOrCreateVerticalStretch(String sheet, int width, int height, String id) {
-        return getOrCreateAsset(sheet, width, height, STRETCH_Y_ANIMATION, id);
+        return getOrCreateAsset(sheet, width, height, STRETCH_Y_ANIMATION, 0, id);
     }
     public String getOrCreateCrop(String sheet, int width, int height, String id) {
-        return getOrCreateAsset(sheet, width, height, STRETCH_ANIMATION, id);
+        return getOrCreateAsset(sheet, width, height, STRETCH_ANIMATION, 0, id);
     }
 
 //    public String getOrCreateStaticAnimation(String sheet, int width, int height, int frame, String id) {
@@ -86,7 +89,7 @@ public class AnimationPool {
 //        return getOrCreateAsset(sheet, width, height, STRETCH_ANIMATION, frame, id);
 //    }
 
-    private String getOrCreateAsset(String sheet, int width, int height, String effect, String id) {
+    private String getOrCreateAsset(String sheet, int width, int height, String effect, int frame, String id) {
         // if this id exists, animation for this already exists
         Animation existingAnimation = mAnimationMap.get(id);
         if (existingAnimation != null) { return id; }
@@ -94,10 +97,9 @@ public class AnimationPool {
         Spritesheet spriteSheet = mSpritesheetNamespace.getAsset(sheet);
         spriteSheet.load();
 
-        // Get random sprite frame if negative
-//        int frameCount = spriteSheet.getFrameCount();
-//        int originFrame = opacity < 0 || opacity > frameCount ? random.nextInt(frameCount) : opacity;
-        BufferedImage rawImage = SwingFXUtils.fromFXImage(spriteSheet.getFrame(0), null);
+        frame = frame < 0 ? random.nextInt(spriteSheet.size()) : frame;
+
+        BufferedImage rawImage = SwingFXUtils.fromFXImage(spriteSheet.getFrame(frame), null);
         // Correctly size the frame for the current width and height
         BufferedImage toProcess = null;
         if (effect.equalsIgnoreCase(TOP_SWAYING_ANIMATION)) {

@@ -68,6 +68,7 @@ public class OmniscientBehavior extends MoveActionBehavior {
                 int column = tileComponent.getColumn() + direction.x;
                 String tileID = model.getTile(row, column);
                 Entity adjacentTileEntity = getEntityWithID(tileID);
+                if (adjacentTileEntity == null) { continue; }
                 TileComponent adjacentTileComponent = adjacentTileEntity.get(TileComponent.class);
                 if (adjacentTileComponent.isNotNavigable()) { continue; }
                 tileEntityIDAdjacentToFocusedUnitEntity = tileID;

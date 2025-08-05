@@ -42,7 +42,7 @@ public class Mouse {
         held = true;
         position.copy((float) e.getX(), (float) e.getY(), (float) e.getZ());
         buttonPressedBuffer = e.getButton().ordinal();
-        System.out.println("Mouse Pressed " + getMouseIdentity(e));
+//        System.out.println("Mouse Pressed " + getMouseIdentity(e));
     }
 
     public void setOnMouseReleased(MouseEvent e) {

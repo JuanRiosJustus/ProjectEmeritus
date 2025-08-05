@@ -28,7 +28,6 @@ public class SpeedQueue extends GameQueue {
 
     private int mHashCode = 0;
     private final PriorityQueue<String> mSpeedQueue = new PriorityQueue<>(turnOrdering);
-    private final PriorityQueue<String> mSpeedQueue2 = new PriorityQueue<>(turnOrdering);
     private final PriorityQueue<String> mFinished = new PriorityQueue<>(turnOrdering);
     private final Map<String, Entity> mEntityMap = new LinkedHashMap<>();
 
@@ -94,6 +93,26 @@ public class SpeedQueue extends GameQueue {
     private static Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
 
     public int hashCode() { return mHashCode; }
+
+    public JSONArray getUnits() {
+        PriorityQueue<String> copy = new PriorityQueue<>();
+        copy.addAll(mEntityMap.keySet());
+        JSONArray ordering = new JSONArray();
+        while (!copy.isEmpty()) {
+            String id = copy.poll();
+            ordering.add(id);
+        }
+        return ordering;
+    }
+
+    @Override
+    public void remove(String id) {
+        mEntityMap.remove(id);
+        mFinished.remove(id);
+        mSpeedQueue.remove(id);
+    }
+
+    //    public Object rrrrr() { return m}
 
 }
 

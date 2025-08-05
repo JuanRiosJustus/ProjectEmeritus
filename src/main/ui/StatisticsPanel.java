@@ -59,7 +59,7 @@ public class StatisticsPanel extends EscapablePanel {
         mRowWidth = getContentWidth();
 
         setMainContent(mContentPanel);
-        getBanner().setText("Statistics");
+        setBannerText("Statistics");
 
         JavaFXUtils.setCachingHints(this);
     }
@@ -70,7 +70,7 @@ public class StatisticsPanel extends EscapablePanel {
         gameModel.updateIsStatisticsPanelOpen(isShowing);
 
         String selectedEntityID = gameModel.getSelectedEntityID();
-        int selectedEntityHash = gameModel.getSpecificEntityStatisticsComponentHash(selectedEntityID);
+        int selectedEntityHash = gameModel.getEntityStatisticsComponentHashCode(selectedEntityID);
         if (selectedEntityHash == mCurrentEntityHash && selectedEntityID == mCurrentEntityID) { return; }
         mCurrentEntityHash = selectedEntityHash;
         mCurrentEntityID = selectedEntityID;

@@ -25,8 +25,8 @@ public class BeveledCheckbox extends BeveledButton {
         isChecked = value;
         mTextNode.setText(isChecked ? "X" : "");
         if (isChecked) {
-            mDropShadow.setInput(mInnerShadow);
-            mTextNode.setEffect(mDropShadow);
+//            mDropShadow.setInput(mInnerShadow);
+//            mTextNode.setEffect(mDropShadow);
         }
     }
 }

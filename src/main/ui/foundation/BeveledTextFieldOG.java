@@ -95,27 +95,27 @@ public class BeveledTextFieldOG extends BevelStyle {
 
         StringBuilder sb = new StringBuilder();
         addEventFilter(KeyEvent.KEY_PRESSED, event -> {
-//            System.out.println(" e " + event.getCode());
-            int allowedHorizontalChars = JavaFXUtils.getMaxCharactersThatFitWithinWidth(mTextNode.getFont(), width);
-            boolean wasUpdated = false;
-            if (event.getCode() == KeyCode.ENTER) {
-//                    commitEdit();
-            } else if (event.getCode() == KeyCode.ESCAPE) {
-//                    cancelEdit();
-            } else if (event.getCode() == KeyCode.BACK_SPACE && !sb.isEmpty()) {
-                sb.delete(sb.length() - 1, sb.length());
-                wasUpdated = true;
-            } else  {
-                sb.append(event.getCode().getChar());
-                wasUpdated = true;
-            }
-
-            if (!wasUpdated) { return; }
-            if (sb.length() + 3 < allowedHorizontalChars) {
-                mTextNode.setText(sb.toString());
-            } else if (sb.length() + 3>= allowedHorizontalChars) {
-                mTextNode.setText(sb.substring(0, allowedHorizontalChars - 3) + "...");
-            }
+////            System.out.println(" e " + event.getCode());
+//            int allowedHorizontalChars = JavaFXUtils.getMaxCharactersThatFitWithinWidth(mTextNode.getFont(), width);
+//            boolean wasUpdated = false;
+//            if (event.getCode() == KeyCode.ENTER) {
+////                    commitEdit();
+//            } else if (event.getCode() == KeyCode.ESCAPE) {
+////                    cancelEdit();
+//            } else if (event.getCode() == KeyCode.BACK_SPACE && !sb.isEmpty()) {
+//                sb.delete(sb.length() - 1, sb.length());
+//                wasUpdated = true;
+//            } else  {
+//                sb.append(event.getCode().getChar());
+//                wasUpdated = true;
+//            }
+//
+//            if (!wasUpdated) { return; }
+//            if (sb.length() + 3 < allowedHorizontalChars) {
+//                mTextNode.setText(sb.toString());
+//            } else if (sb.length() + 3>= allowedHorizontalChars) {
+//                mTextNode.setText(sb.substring(0, allowedHorizontalChars - 3) + "...");
+//            }
         });
 
         // When focus is lost, commit the edit.

@@ -46,6 +46,22 @@ public class Main extends Application {
         String structure = structures.get(new Random().nextInt(structures.size()));
         gameController.setStructure(new JSONObject().fluentPut("bulk", true).fluentPut("chance", .25).fluentPut("structure", structure));
 
+
+        gameController.setSpawn(new JSONObject().fluentPut("row", 1).fluentPut("column", 0).fluentPut("faction", "Left"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 1).fluentPut("column", 1).fluentPut("faction", "Left"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 2).fluentPut("column", 0).fluentPut("faction", "Left"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 2).fluentPut("column", 1).fluentPut("faction", "Left"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 3).fluentPut("column", 0).fluentPut("faction", "Left"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 3).fluentPut("column", 1).fluentPut("faction", "Left"));
+
+        gameController.setSpawn(new JSONObject().fluentPut("row", 3).fluentPut("column", 6).fluentPut("faction", "Right"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 3).fluentPut("column", 5).fluentPut("faction", "Right"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 4).fluentPut("column", 6).fluentPut("faction", "Right"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 4).fluentPut("column", 5).fluentPut("faction", "Right"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 5).fluentPut("column", 6).fluentPut("faction", "Right"));
+        gameController.setSpawn(new JSONObject().fluentPut("row", 5).fluentPut("column", 5).fluentPut("faction", "Right"));
+
+
         setup(gameController, 1);
         gameController.start();
 
@@ -64,26 +80,26 @@ public class Main extends Application {
         });
     }
 
+
+
     private static GameController setup(GameController gameController, int unitsPerTeam) {
 
         // Get available spawns
 //        JSONArray spawns = gameController.getSpawnRegions();
-        JSONObject spawnData = gameController.getSpawnRegionsData();
+        JSONObject spawnData = gameController.getSpawnRegions();
         Iterator<String> spawnIterator = spawnData.keySet().iterator();
 
 
         // Setup enemies
         Entity unitEntity = null;
-        Random random = new Random();
         String spawnRegion = spawnIterator.next();
         JSONArray tiles = spawnData.getJSONArray(spawnRegion);
         Collections.shuffle(tiles);
         for (int i = 0; i < unitsPerTeam; i++) {
 
             String randomUnitID = EntityStore.getInstance().createUnit(false);
-            JSONObject tile = tiles.getJSONObject(0);
+            String tileID = tiles.getString(0);
             tiles.removeFirst();
-            String tileID = tile.getString("tile_id");
 
             JSONObject spawnPlacementData = new JSONObject();
             spawnPlacementData.put("unit_id", randomUnitID);
@@ -99,10 +115,8 @@ public class Main extends Application {
         // Setup friendly
         for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnitID = EntityStore.getInstance().createUnit(true);
-            JSONObject tile = tiles.getJSONObject(0);
+            String tileID = tiles.getString(0);
             tiles.removeFirst();
-
-            String tileID = tile.getString("tile_id");
 
             JSONObject spawnPlacementData = new JSONObject();
             spawnPlacementData.put("unit_id", randomUnitID);

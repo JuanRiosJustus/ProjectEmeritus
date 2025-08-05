@@ -16,4 +16,8 @@ public class AssetComponent extends Component {
     private static final String STRUCTURE = "STRUCTURE";
     public void putStructureID(String id) { put(STRUCTURE, id); }
     public String getStructureID() { return getString(STRUCTURE); }
+
+    private static final String SPAWN = "SPAWN";
+    public void putSpawnID(String id) { put(SPAWN, id); }
+    public String getSpawnID() { return getString(SPAWN); }
 }

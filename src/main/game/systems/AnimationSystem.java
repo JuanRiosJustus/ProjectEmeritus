@@ -50,7 +50,7 @@ public class AnimationSystem extends GameSystem {
         result.put(ANIMATION_NAME, animation);
         JSONArray pathing = new JSONArray();
         result.put(TILE_IDS, pathing);
-        if (tileIDs != null) { for (String tileID : tileIDs) { pathing.add(tileID); } }
+        if (tileIDs != null) { pathing.addAll(tileIDs); }
         if (blockingUnitID != null) { result.put(UNIT_WITH_ANIMATION_TO_WAIT_ON, blockingUnitID); }
         return result;
     }
@@ -90,12 +90,6 @@ public class AnimationSystem extends GameSystem {
             AnimationComponent componentToWaitOn = unitEntityWithAnimationToWaitOn.get(AnimationComponent.class);
             AnimationTrack finalTrack = track;
             componentToWaitOn.addOnCompleteListener(() -> {
-//                mGameModel.getEventBus().publish(
-//                        FloatingTextSystem.FLOATING_TEXT_EVENT,
-//                        FloatingTextSystem.createQueueFloatingTextEvent(
-//                                ability, actorEntityID
-//                ));
-
                 componentToApplyAnimationTo.addTrack(finalTrack);
             });
         } else {

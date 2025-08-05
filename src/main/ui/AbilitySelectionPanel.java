@@ -15,8 +15,8 @@ import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
-public class AbilityPanel extends EscapablePanel {
-    private static final EmeritusLogger mLogger = EmeritusLogger.create(AbilityPanel.class);
+public class AbilitySelectionPanel extends EscapablePanel {
+    private static final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySelectionPanel.class);
     private final HashSlingingSlasher mHashSlingingSlasher = new HashSlingingSlasher();
     private int mCurrentHash = -1;
     private String mCurrentID = "";
@@ -24,8 +24,10 @@ public class AbilityPanel extends EscapablePanel {
     private final Map<String, BeveledButton> mRows = new HashMap<>();
     private final int mButtonHeight;
     private final int mButtonWidth;
+    protected String mSelectedAbility = null;
+    protected boolean mWasAbilityJustPressed = false;
 
-    public AbilityPanel(int x, int y, int width, int height, Color color, int visibleRows) {
+    public AbilitySelectionPanel(int x, int y, int width, int height, Color color, int visibleRows) {
         super(x, y, width, height, color);
 
         // ✅ **Scrollable Content Panel**
@@ -40,7 +42,7 @@ public class AbilityPanel extends EscapablePanel {
 
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
         setMainContent(mContentPanel);
-        getBanner().setText("Abilities");
+        setBannerText("Abilities");
 
         // ✅ **Add Buttons for Testing**
     }
@@ -55,7 +57,8 @@ public class AbilityPanel extends EscapablePanel {
         hBox.setMaxSize(mButtonWidth, mButtonHeight);
         hBox.setFillHeight(true);
 
-        BeveledButton beveledButton = new BeveledButton(mButtonWidth, mButtonHeight, name, mColor);
+        BeveledButton beveledButton = new BeveledButton(mButtonWidth, mButtonHeight);
+        beveledButton.setText(name);
 
         hBox.getChildren().addAll(beveledButton);
         mContentPanel.getChildren().add(hBox); // ✅ Add to the scrollable area
@@ -74,22 +77,22 @@ public class AbilityPanel extends EscapablePanel {
         gameModel.updateIsAbilityPanelOpen(isVisible());
 
         // Check that the current entities state will update the ui
-        String currentEntityID = gameModel.getActiveEntityID();
-        int newHash = gameModel.getSpecificEntityStatisticsComponentHash(currentEntityID);
-        if (newHash == mCurrentHash && Objects.equals(currentEntityID, mCurrentID)) { return; }
+        String activeUnitID = gameModel.getActiveUnitID();
+        int newHash = gameModel.getEntityStatisticsComponentHashCode(activeUnitID);
+        if (newHash == mCurrentHash && Objects.equals(activeUnitID, mCurrentID)) { return; }
         mCurrentHash = newHash;
-        mCurrentID = currentEntityID;
+        mCurrentID = activeUnitID;
         String hoveredTileID = gameModel.getHoveredTileID();
 
-        if (currentEntityID == null) { return; }
+        if (activeUnitID == null) { return; }
 
 
         mEphemeralObject.clear();
-        mEphemeralObject.put("id", currentEntityID);
+        mEphemeralObject.put("id", activeUnitID);
         JSONObject response = gameModel.getStatisticsForEntity(mEphemeralObject);
 
         clear();
-        mLogger.info("Updating ability selection for {}", currentEntityID);
+        mLogger.info("Updating ability selection for {}", activeUnitID);
 
         String passiveAbility = response.getString("passive_ability");
         String basicAbility = response.getString("basic_ability");
@@ -114,7 +117,7 @@ public class AbilityPanel extends EscapablePanel {
                 additionalContext = " (Basic)";
             } else if (index == 1) {
                 abilityButton.setBackgroundColor(Color.DARKGRAY);
-                additionalContext = " (Passive)";
+                additionalContext = " (Trait)";
             } else {
                 abilityButton.setBackgroundColor(Color.DIMGRAY);
             }
@@ -123,16 +126,22 @@ public class AbilityPanel extends EscapablePanel {
             abilityButton.getUnderlyingButton().setOnMouseReleased(e -> {
                 JSONObject request = new JSONObject();
 
-                request.put("unit_id", currentEntityID);
+                request.put("unit_id", activeUnitID);
                 request.put("ability", ability);
                 request.put("tile_id", hoveredTileID);
                 gameModel.useAbility(request);
+                mSelectedAbility = ability;
             });
         }
 
-        mLogger.info("Finished ability selection for {}", currentEntityID);
+        mLogger.info("Finished ability selection for {}", activeUnitID);
     }
 
     public String getCurrentID() { return mCurrentID; }
     public int getCurrentHash() { return mCurrentHash; }
+    public String consumeAbilitySelected() {
+        String consumedAbility = mSelectedAbility;
+        mSelectedAbility = null;
+        return consumedAbility;
+    }
 }

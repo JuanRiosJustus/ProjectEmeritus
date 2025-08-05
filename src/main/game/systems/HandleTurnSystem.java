@@ -1,5 +1,6 @@
 package main.game.systems;
 
+import com.alibaba.fastjson2.JSONObject;
 import main.game.components.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -49,21 +50,45 @@ public class HandleTurnSystem extends GameSystem {
         }
 
 
-        if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
+//        if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
 //        timerComponent.endTurnTimer();
 
+
+
+
+
         // Setup new unit details
-        model.getSpeedQueue().dequeue();
-//        model.getInitiativeQueue().dequeue();
+        String dequeueUnit = model.getSpeedQueue().dequeue();
+
         model.getGameState().setShouldForcefullyEndTurn(false);
-        model.focusCamerasAndSelectionsOfActiveEntity();
-        model.getGameState().setAutomaticallyGoToHomeControls(true);
+//        model.focusCamerasAndSelectionsOfActiveEntity();
+        model.getGameState().setCloseAllSubControllers(true);
         model.getGameState().setUserSelectedStandby(false);
-        System.out.println("tooooo");
+//        model.getSpeedQueue().refill();
+//        System.out.println("tooooo");
 
         actionsComponent = unitEntity.get(ActionsComponent.class);
         actionsComponent.reset();
         timerComponent.reset();
+
+        String currentActiveEntityID = model.getActiveUnitID();
+        if (currentActiveEntityID != null) {
+            Entity currentActiveEntity = getEntityWithID(currentActiveEntityID);
+            MovementComponent movementComponent = currentActiveEntity.get(MovementComponent.class);
+            String currentActiveEntityTileID = movementComponent.getCurrentTileID();
+
+            JSONObject glideCameraToTileRequest = new JSONObject();
+            glideCameraToTileRequest.put("camera_id", "0");
+            glideCameraToTileRequest.put("tile_id", currentActiveEntityTileID);
+            glideCameraToTileRequest.put("source", "end_turn_handler");
+            mGameModel.glideCameraToTile(glideCameraToTileRequest);
+
+            glideCameraToTileRequest = new JSONObject();
+            glideCameraToTileRequest.put("camera_id", "1");
+            glideCameraToTileRequest.put("tile_id", currentActiveEntityTileID);
+            glideCameraToTileRequest.put("source", "end_turn_handler");
+            mGameModel.glideCameraToTile(glideCameraToTileRequest);
+        }
 //        timerComponent.startTurnTimer();
 //        model.handleTurnTransition();
     }

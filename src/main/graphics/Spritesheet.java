@@ -60,4 +60,5 @@ public class Spritesheet {
     public Image getFrame(int index) { return mFrames[index]; }
     public String getName() { return mPath; }
     public boolean isLoaded() { return mFrames != null; }
+    public int size() { return mFrames.length; }
 }

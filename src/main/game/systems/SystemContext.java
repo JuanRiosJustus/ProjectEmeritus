@@ -17,7 +17,7 @@ public class SystemContext {
     private GameModel mGameModel = null;
     public SystemContext(GameModel gameModel) { mGameModel = gameModel; }
 
-    private String mCurrentUnit = null;
+    private String mCurrentUnitID = null;
     private final List<String> mAllUnitIDs = new ArrayList<>();
     private final List<String> mNonControlledUnitIDs = new ArrayList<>();
     private final List<String> mPlayerUnitIDs = new ArrayList<>();
@@ -30,10 +30,10 @@ public class SystemContext {
         SystemContext systemContext = new SystemContext(gameModel);
 
 //        Set<String> unitIDs = new HashSet<>(gameModel.getGameState().getAllUnits().toJavaList(String.class));
-        JSONArray unitIDs = gameModel.getSpeedQueue().turnOrder();
+        JSONArray unitIDs = gameModel.getSpeedQueue().getUnits();
 //        Set<String> unitIDs = new HashSet<>(gameModel.getInitiativeQueue().getTurnOrder());
 
-        systemContext.mCurrentUnit = gameModel.getSpeedQueue().peek();
+        systemContext.mCurrentUnitID = gameModel.getSpeedQueue().peek();
 
         for (int index = 0; index < unitIDs.size(); index++) {
             String unitID = unitIDs.getString(index);
@@ -135,7 +135,7 @@ public class SystemContext {
 
     public List<String> getAllUnitEntityIDs() { return mAllUnitIDs; }
     public List<String> getAllTileEntityIDs() { return mAllTileEntityIDs; }
-    public String getCurrentUnitID() { return mCurrentUnit; }
+    public String getCurrentUnitID() { return mCurrentUnitID; }
     public List<String> getUnitsNotMovedThisRound() { return mUnitsNotMovedThisRoundIDs; }
     public List<String> getNoPlayerUnitsNotMovedThisRound() { return mUnitsNotMovedThisRoundIDs; }
     public List<String> getUnitsNotActedThisRoundIDs() { return mUnitsNotActedThisRoundIDs; }

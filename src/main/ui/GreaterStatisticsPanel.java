@@ -7,13 +7,13 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.Pair;
 import main.game.main.GameModel;
+import main.game.stores.FontPool;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledLabel;
 import main.ui.foundation.BeveledProgressBar;
 import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
-import main.utils.RandomUtils;
 import main.utils.StringUtils;
 import com.alibaba.fastjson2.JSONObject;
 
@@ -81,7 +81,15 @@ public class GreaterStatisticsPanel extends GamePanel {
 
         // Create statistics panel
         // LABEL
-        BeveledButton mStatisticsPanelLabel = new BeveledButton(genericRowWidth, genericRowHeight, "Statistics", mColor);
+        int statisticsBannerWidth = genericRowWidth;
+        int statisticsBannerHeight = genericRowHeight;
+        BeveledButton mStatisticsPanelLabel = new BeveledButton(statisticsBannerWidth, statisticsBannerHeight);
+        mStatisticsPanelLabel.setFitText("Statistics");
+        mStatisticsPanelLabel.setFont(FontPool.getInstance().getFontForHeight(statisticsBannerHeight));
+        mStatisticsPanelLabel.setExtrusionFactor(.1);
+        mStatisticsPanelLabel.setBorder((int) (statisticsBannerWidth * .01), (int) (statisticsBannerHeight * .01), mColor);
+
+
         HBox row4 = new HBox(mStatisticsPanelLabel);
 
         mStatisticsPanelRowHeight = genericRowHeight;
@@ -144,17 +152,22 @@ public class GreaterStatisticsPanel extends GamePanel {
             return newRow;
         }
 
-        int rowWidth = (int) (width * .95);
+        int rowWidth = (int) (width * .98);
         int rowHeight = height;
 
         Color color = mColor;
 
         // ✅ Create Beveled Labels
-        BeveledLabel leftLabel = new BeveledLabel((int) (rowWidth * .666), rowHeight, RandomUtils.createRandomName(3, 6), color);
+        BeveledLabel leftLabel = new BeveledLabel((int) (rowWidth * .666), rowHeight, "???L??", color);
         leftLabel.setAlignment(Pos.CENTER_LEFT);
+        leftLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight));
+        leftLabel.setExtrusionFactor(.08);
 
-        BeveledLabel rightLabel = new BeveledLabel((int) (rowWidth * .333), rowHeight, name, color);
+        BeveledLabel rightLabel = new BeveledLabel((int) (rowWidth * .333), rowHeight, "???R???", color);
         rightLabel.setAlignment(Pos.CENTER_RIGHT);
+        rightLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight));
+        rightLabel.setExtrusionFactor(.08);
+//        rightLabel.setBorder((int) (rowWidth * .01), (int) (rowHeight * .01), mColor);
 
         HBox contentPane = new HBox(leftLabel, rightLabel);
         Pane centeringPane = JavaFXUtils.createHorizontallyCenteringPane(contentPane, width, height, rowWidth);
@@ -171,7 +184,7 @@ public class GreaterStatisticsPanel extends GamePanel {
         gameModel.updateIsGreaterStatisticsPanelOpen(isVisible());
 
         int entityHash = gameModel.getActiveEntityStatisticsComponentHash();;
-        String entityID = gameModel.getActiveEntityID();
+        String entityID = gameModel.getActiveUnitID();
 
         if (entityHash == mCurrentEntityHash && mCurrentEntityID == entityID) { return; }
         mCurrentEntityHash = entityHash;
@@ -186,7 +199,6 @@ public class GreaterStatisticsPanel extends GamePanel {
     }
 
     private void setupStatisticsInformationPanel(GameModel gameModel, String entityID) {
-
         clear();
 
         JSONObject request = new JSONObject();
@@ -204,8 +216,8 @@ public class GreaterStatisticsPanel extends GamePanel {
                         mStatisticsPanelRowWidth,
                         mStatisticsPanelRowHeight
                 );
-                row.getFirst().setText("");
-                row.getSecond().setText("");
+//                row.getFirst().setText("");
+//                row.getSecond().setText("");
             } else {
                 int current = attribute.getIntValue("current");
                 int base = attribute.getIntValue("base");
@@ -218,13 +230,13 @@ public class GreaterStatisticsPanel extends GamePanel {
                         mStatisticsPanelRowHeight
                 );
 
+
                 row.getFirst().setText(StringUtils.convertSnakeCaseToCapitalized(key));
                 String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
                 if (RESOURCES.contains(key)) {
-                    row.getSecond().setText(current + " / " + txt);
-                } else {
-                    row.getSecond().setText(txt);
+                    txt = current + " / " + txt;
                 }
+                row.getSecond().setText(txt);
             }
         }
     }
@@ -241,7 +253,7 @@ public class GreaterStatisticsPanel extends GamePanel {
         gameModel.updateIsGreaterStatisticsPanelOpen(isVisible());
 
         String entityID = movementPanel.getCurrentEntityID();
-        int entityHash = gameModel.getSpecificEntityStatisticsComponentHash(entityID);
+        int entityHash = gameModel.getEntityStatisticsComponentHashCode(entityID);
 
         if (entityHash == mCurrentEntityHash && mCurrentEntityID == entityID) { return; }
         mCurrentEntityHash = entityHash;
@@ -260,7 +272,7 @@ public class GreaterStatisticsPanel extends GamePanel {
         gameModel.updateIsGreaterStatisticsPanelOpen(isVisible());
 
         String entityID = statisticsPanel.getCurrentEntityID();
-        int entityHash = gameModel.getSpecificEntityStatisticsComponentHash(entityID);
+        int entityHash = gameModel.getEntityStatisticsComponentHashCode(entityID);
 
         if (entityHash == mCurrentEntityHash && mCurrentEntityID == entityID) { return; }
         mCurrentEntityHash = entityHash;

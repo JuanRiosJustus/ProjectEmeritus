@@ -204,7 +204,7 @@ public class VisualsSystem extends GameSystem {
 //        );
 
         if (mMinTileHeight == mMaxTileHeight) { return null; }
-        float opacity = MathUtils.map(tileHeight, mMinTileHeight, mMaxTileHeight, 0.6f, 0.3f); // lights depth is first
+        float opacity = MathUtils.map(tileHeight, mMinTileHeight, mMaxTileHeight, 0.6f, 0.2f); // lights depth is first
         String id = "depth_shadows_" + opacity + mSpriteWidth + mSpriteHeight;
         String depthShadowID = AnimationPool.getInstance().getOrCreateStatic(
                 "shadow",
@@ -270,6 +270,40 @@ public class VisualsSystem extends GameSystem {
 ////        asset.getAnimation().update();
 //        AssetPool.getInstance().update(id);
 //    }
+
+    private Map<String, Integer> mSpawns = new HashMap<>();
+    private void updateSpawns(GameModel model, Entity tileEntity) {
+        TileComponent tile = tileEntity.get(TileComponent.class);
+        String spawnRegion = tile.getSpawnRegion();
+        if (spawnRegion == null) { return; }
+
+        int index = mSpawns.getOrDefault(spawnRegion, -1);
+        if (index == -1) {
+            index = mSpawns.size();
+            mSpawns.put(spawnRegion, index);
+        }
+
+        AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
+        String id = AnimationPool.getInstance().getOrCreateFlicker(
+                "spawns",
+                mSpriteWidth,
+                mSpriteHeight,
+                index,
+                "spawn_" + index + mSpriteWidth + mSpriteHeight
+        );
+        assetComponent.putSpawnID(id);
+
+
+        AnimationPool.getInstance().setSpeed(id, mRandom.nextFloat(0.001f, 0.002f));
+
+        double deltaTime = model.getDeltaTime();
+        AnimationPool.getInstance().update(id, deltaTime);
+
+    }
+
+
+
+
 
     private final Map<String, Float> mStructureSpeedMultipliers = new HashMap<>();
     public void updateStructures(GameModel model, Entity tileEntity) {
@@ -383,6 +417,7 @@ public class VisualsSystem extends GameSystem {
 
             updateStructures(model, tileEntity);
             updateLiquid(model, tileEntity);
+            updateSpawns(model, tileEntity);
 //            updateTileAnimation(model, tileEntity);
         });
     }

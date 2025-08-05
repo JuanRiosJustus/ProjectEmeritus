@@ -11,6 +11,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import main.constants.JavaFXUtils;
 import main.game.main.GameModel;
+import main.game.stores.FontPool;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledProgressBar;
 import main.ui.foundation.GraphicButton;
@@ -40,14 +41,19 @@ public class UnitPreviewPanel extends GamePanel {
     private int mResourceBarHeight;
     private Color mColor;
 
+    private int mFirstRowHeight = 0;
+    private int mFirstRowWidth = 0;
+    private HBox mFirstRow = new HBox();
+    private HBox mSecondRows = new HBox();
+    private HBox mThirdRow = new HBox();
     public UnitPreviewPanel(int width, int height, Color color) {
         super(width, height);
 
         mColor = color;
 
-        width = (int) (width * .999);
-        height = (int) (height * .999);
-        int genericRowWidth = width;
+        width = (int) (width * .99);
+        height = (int) (height * .99);
+        int genericRowWidth = (int) (width);
         int genericRowHeight = (int) (height * .2);
         int fortyPercentWidth = (int) (width * .4);
         int sixtyPercentHeight = (int) (height * .6);
@@ -58,20 +64,24 @@ public class UnitPreviewPanel extends GamePanel {
         mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
 
-        int row1fontHeight = (int) (genericRowHeight * .7);
 
-        mLevelLabel = new BeveledButton((int) (genericRowWidth * .15), genericRowHeight, "Lv. 130", color);
-        mLevelLabel.setFont(getFontForHeight(row1fontHeight));
+        mFirstRowWidth = width;
+        mFirstRowHeight = (int) (height * .2);
 
-        mTypeLabel = new BeveledButton((int) (genericRowWidth * .25), genericRowHeight, "Water", color);
-        mTypeLabel.setFont(getFontForHeight(row1fontHeight));
+        mLevelLabel = new BeveledButton((int) (mFirstRowWidth * .15), mFirstRowHeight);
+        mLevelLabel.setBackgroundColor(color);
 
-        mNameLabel = new BeveledButton((int) (genericRowWidth * .6), genericRowHeight, "Heominhon", color);
+        mTypeLabel = new BeveledButton((int) (mFirstRowWidth * .25), mFirstRowHeight);
+        mTypeLabel.setBackgroundColor(color);
+
+        mNameLabel = new BeveledButton((int) (mFirstRowWidth * .6), mFirstRowHeight);
+        mNameLabel.setBackgroundColor(color);
         mNameLabel.setTextAlignment(Pos.CENTER_LEFT);
-        mNameLabel.setFont(getFontForHeight(row1fontHeight));
 
-        HBox row1 = new HBox(mLevelLabel, mTypeLabel, mNameLabel);
-        row1.setFillHeight(true);
+        mFirstRow = new HBox();
+        mFirstRow.getChildren().addAll(mLevelLabel, mTypeLabel, mNameLabel);
+        mFirstRow.setPadding(new Insets(2, 2, 2, 2));
+        mFirstRow.setFillHeight(true);
 
 
         //CREATE RESOURCE AND IMAGE ROW
@@ -80,7 +90,7 @@ public class UnitPreviewPanel extends GamePanel {
         mResourcePanel = new VBox();
 
         int resourceScrollPaneWidth = width - fortyPercentWidth;
-        int resourceScrollPaneHeight = sixtyPercentHeight;
+        int resourceScrollPaneHeight = (int) (height * .6f);
         ScrollPane resourceScrollPane = new ScrollPane(mResourcePanel);
 //        resourceScrollPane.setFitToWidth(true);
         resourceScrollPane.setFitToHeight(true);
@@ -94,14 +104,14 @@ public class UnitPreviewPanel extends GamePanel {
 
         mResourceBarWidth = (int) (resourceScrollPaneWidth);
         mResourceBarHeight = resourceScrollPaneHeight / 3;
-        HBox row2 = new HBox(mImageDisplay, resourceScrollPane);
-
+        mSecondRows = new HBox(mImageDisplay, resourceScrollPane);
 
         // Tags panel
         mTagsPanelMap = new LinkedHashMap<>();
-        mTagsPanelButtonHeights = genericRowHeight;
-        mTagsPanelButtonWidths = genericRowWidth / 5;
+        mTagsPanelButtonHeights = (int) (height * .2);
+        mTagsPanelButtonWidths = width / 5;
         mTagsPanel = new HBox();
+        mTagsPanel.setPadding(new Insets(2, 2, 2, 2));
 
         int tagsScrollPaneWidth = genericRowWidth;
         int tagsScrollPaneHeight = genericRowHeight;
@@ -117,7 +127,7 @@ public class UnitPreviewPanel extends GamePanel {
         tagScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove vertical scrollbar
         tagScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
 
-        HBox row3 = new HBox(tagScrollPane);
+        mThirdRow = new HBox(tagScrollPane);
 
         int tagWidth = (int) (tagsScrollPaneWidth * .3);
         int tagHeight = (int) (tagsScrollPaneHeight * 1);
@@ -128,9 +138,9 @@ public class UnitPreviewPanel extends GamePanel {
 
 
         mContentPanel.getChildren().addAll(
-                row1,
-                row2,
-                row3
+                mFirstRow,
+                mSecondRows,
+                mThirdRow
         );
         getChildren().add(mContentPanel);
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -151,9 +161,15 @@ public class UnitPreviewPanel extends GamePanel {
         int level = response.getIntValue("level");
         String type = response.getString("type");
 
+        double multiplier = .45;
         mNameLabel.setText(nickname + " (" + StringUtils.convertSnakeCaseToCapitalized(unitName) + ")");
-        mLevelLabel.setText("Lv." + level);
+        mLevelLabel.setText("Lv " + level);
         mTypeLabel.setText(type);
+
+
+//        mNameLabel.setFitText(nickname + " (" + StringUtils.convertSnakeCaseToCapitalized(unitName) + ")", multiplier);
+//        mLevelLabel.setFitText("Lv " + level, multiplier);
+//        mTypeLabel.setFitText(type, multiplier);
 
         ImageView iv = createAndCacheEntityIcon(unitID);
         iv.setFitWidth(mImageDisplay.getWidth() * .8);
@@ -178,8 +194,6 @@ public class UnitPreviewPanel extends GamePanel {
         }
 
 
-
-
         JSONObject tags = response.getJSONObject("tags");
         for (String key : tags.keySet()) {
             JSONObject tag = tags.getJSONObject(key);
@@ -187,7 +201,9 @@ public class UnitPreviewPanel extends GamePanel {
             String name = tag.getString("name");
             String fancyName = StringUtils.capitalizeFirstAndAfterUnderscores(name);
 
-            BeveledButton bb = new BeveledButton(mTagsPanelButtonWidths, mTagsPanelButtonHeights, fancyName, mColor);
+            int buttonWidth = mTagsPanelButtonWidths;
+            int buttonHeight = (int) (mTagsPanelButtonHeights * .8);
+            BeveledButton bb = new BeveledButton(buttonWidth, buttonHeight);
             bb.setFitText(fancyName);
 
             Tooltip tooltip = new Tooltip(name);
@@ -202,6 +218,9 @@ public class UnitPreviewPanel extends GamePanel {
         BeveledProgressBar progressBar = mResourcePanelProgressBars.get(key);
         if (progressBar != null) { return  progressBar; }
         progressBar = JavaFXUtils.createResourceProgressBar(mResourceBarWidth, mResourceBarHeight, mColor);
+        Font font = FontPool.getInstance().getFontForHeight((int) (mResourceBarHeight * .8));
+//        progressBar.setText(key, Color.WHITE, font);
+        progressBar.setFont(font);
         mResourcePanel.getChildren().add(progressBar);
         mResourcePanelProgressBars.put(key, progressBar);
         return progressBar;

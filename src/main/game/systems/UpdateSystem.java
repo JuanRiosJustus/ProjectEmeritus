@@ -30,6 +30,7 @@ public class UpdateSystem {
         mGameSystems.add(new UnitVisualsSystem(gameModel));
         mGameSystems.add(new HandleTurnSystem(gameModel));
         mGameSystems.add(new CombatSystem(gameModel));
+        mGameSystems.add(new DeathSystem(gameModel));
     }
     public void update(GameModel model) {
         SystemContext systemContext = SystemContext.create(model);
@@ -38,7 +39,7 @@ public class UpdateSystem {
         }
 
         boolean newRound = model.getSpeedQueue().refill();
-        if (newRound) { mLogger.info("============================== New Round ================================"); }
+//        if (newRound) { mLogger.info("============================== New Round ================================"); }
     }
 
     public Image getBackgroundWallpaper() {

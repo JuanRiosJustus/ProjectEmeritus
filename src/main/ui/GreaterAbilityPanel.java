@@ -72,9 +72,9 @@ public class GreaterAbilityPanel extends GamePanel {
         gameModel.updateIsGreaterAbilityPanelOpen(isVisible());
         // Determine if the panel should be open
         // Check that the current entities state will update the ui
-        String entityID = gameModel.getActiveEntityID();
-        int statsHash = gameModel.getSpecificEntityStatisticsComponentHash(entityID);
-        int abilityHash = gameModel.getSpecificEntityAbilityComponentHash(entityID);
+        String entityID = gameModel.getActiveUnitID();
+        int statsHash = gameModel.getEntityStatisticsComponentHashCode(entityID);
+        int abilityHash = gameModel.getEntityAbilityComponentHashCode(entityID);
 
 
         if (statsHash == mCurrentStatsHash && abilityHash == mCurrentAbilityHash && entityID == mCurrentID) { return; }
@@ -90,13 +90,13 @@ public class GreaterAbilityPanel extends GamePanel {
     }
 
 
-    public void gameUpdate(GameModel gameModel, AbilityPanel abilityPanel) {
+    public void gameUpdate(GameModel gameModel, AbilitySelectionPanel abilitySelectionPanel) {
         gameModel.updateIsGreaterAbilityPanelOpen(isVisible());
         // Determine if the panel should be open
         // Check that the current entities state will update the ui
-        String entityID = abilityPanel.getCurrentID();
-        int statsHash = gameModel.getSpecificEntityStatisticsComponentHash(entityID);
-        int abilityHash = gameModel.getSpecificEntityAbilityComponentHash(entityID);
+        String entityID = abilitySelectionPanel.getCurrentID();
+        int statsHash = gameModel.getEntityStatisticsComponentHashCode(entityID);
+        int abilityHash = gameModel.getEntityAbilityComponentHashCode(entityID);
 
 
         if (statsHash == mCurrentStatsHash && abilityHash == mCurrentAbilityHash && entityID == mCurrentID) { return; }
@@ -190,7 +190,7 @@ public class GreaterAbilityPanel extends GamePanel {
             label.getThird().setText(cost + " " + fancyText);
         }
 
-        JSONArray type = AbilityTable.getInstance().getType(selectedAbility);
+        JSONArray type = new JSONArray();//AbilityTable.getInstance().getType(selectedAbility);
         label = getOrCreateRow("type");
         label.getSecond().setText("Type:");
         label.getThird().setText(type.toString());

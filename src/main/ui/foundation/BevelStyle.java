@@ -16,14 +16,13 @@ import main.ui.game.GamePanel;
 public class BevelStyle extends GamePanel {
     protected DropShadow mDropShadow = null;
     protected InnerShadow mInnerShadow = null;
-    protected Text mTextNode = null;
+    protected BevelText mTextNode = new BevelText();
     protected EventHandler<? super Event> mButtonPressedHandler = null;
     protected EventHandler<? super Event> mButtonReleasedHandler = null;
     protected final double originalScale = 1.0; // Store original scale for reset
     protected Color mBaseColor = null;
     protected Border mOuterBevel;
     protected Border mInnerBevel;
-    protected Font mFont;
     protected double mBevelSize;
 
     protected HBox mTextNodeContainer = null;
@@ -32,9 +31,6 @@ public class BevelStyle extends GamePanel {
     }
     public BevelStyle(int x, int y, int width, int height, Color color) {
         super(x, y, width, height);
-
-
-        mFont = FontPool.getInstance().getFontForHeight(height);
 
         mBaseColor = color;
 
@@ -71,24 +67,20 @@ public class BevelStyle extends GamePanel {
         mDropShadow.setOffsetY(height * 0.05);
         mDropShadow.setSpread(1.0);
 
-        mInnerShadow = new InnerShadow();
-        mInnerShadow.setColor(Color.WHITE);
-        mInnerShadow.setRadius(height * 0.08);
-        mInnerShadow.setOffsetX(-height * 0.03);
-        mInnerShadow.setOffsetY(-height * 0.03);
 
-        mTextNode = new Text("");
-        mTextNode.setFont(mFont);
-        mTextNode.setFill(Color.WHITE);
-        mTextNode.setFocusTraversable(false);
-        mTextNode.setPickOnBounds(false);
-        mTextNode.setMouseTransparent(true);
+        mTextNode = new BevelText(width, height);
+//        mTextNode.setFont(mFont);
+//        mTextNode.setFill(Color.WHITE);
+//        mTextNode.setFocusTraversable(false);
+//        mTextNode.setPickOnBounds(false);
+//        mTextNode.setMouseTransparent(true);
 
 //        mDropShadow.setInput(mInnerShadow);
-        mTextNode.setEffect(mDropShadow);
+//        mTextNode.setEffect(mDropShadow);
 
-        mTextNodeContainer = new HBox(mTextNode);
-        mTextNodeContainer.setAlignment(Pos.CENTER); // Align text to the left
+        mTextNodeContainer = new HBox(mTextNode.getContent());
+        mTextNodeContainer.setAlignment(Pos.CENTER);
+        mTextNodeContainer.setPadding(new Insets(5, 1, 1, 1));
 
     }
 
@@ -142,11 +134,105 @@ public class BevelStyle extends GamePanel {
         return getOuterBevelSize() + getInnerBevelSize();
     }
 
-//    public static Border getBorder(int width, int height, Color color) {
-//        BevelStyle beveled = new BevelStyle(width, height, color);
-//        return new Border(
-//                beveled.mOuterBevel.getStrokes().get(0),
-//                beveled.mInnerBevel.getStrokes().get(0)
-//        );
+    public String getText() { return mTextNode.getText(); }
+    public void setTextColor(Color color) { mTextNode.setForegroundColor(color); }
+//    public void setFont(Font font)
+    public void setText(String txt) {
+//        if (txt.equalsIgnoreCase(mTextNode.getText())) { return; }
+        mTextNode.setText(txt);
+    }
+    public void setExtrusionFactor(double factor) { mTextNode.setExtrusionFactor(factor); }
+    public void setText(String txt, Color color) {
+        setText(mTextNode.getContent(), txt, mWidth, mHeight, color);
+    }
+
+//    public void setText(String txt, Color color, Font font) {
+//        setText(mTextNode, txt, mWidth, mHeight, color);
+//        mTextNode = createText(txt, mWidth, mHeight, color);
+//        mTextNode.setFont(font);
+//        mTextNodeContainer.getChildren().clear();
+//        mTextNodeContainer.getChildren().add(mTextNode);
+//    }
+
+    public static Text createText(String txt, int width, int height, Color color) {
+        Text newText = new Text();
+        setText(newText, txt, width, height, color, 0.05);
+        return newText;
+    }
+    public static Text createText(String txt, int width, int height, Color color, double bFactor) {
+        Text newText = new Text();
+        setText(newText, txt, width, height, color, bFactor, getFontForHeight(height));
+        return newText;
+    }
+
+    public static void setText(Text node, String txt, int width, int height, Color color, Font font) {
+        setText(node, txt, width, height, color, 0.05, font);
+    }
+    public static void setText(Text node, String txt, int width, int height, Color color) {
+        setText(node, txt, width, height, color, 0.05);
+    }
+    public static void setText(Text node, String txt, int width, int height, Color color, double bFactor) {
+//        node.setText(txt);
+
+        setText(node, txt, width, height, color, bFactor, FontPool.getInstance().getFitFont(txt, node.getFont(), width, height));
+    }
+
+    public static void setText(Text node, String txt, int width, int height, Color color, double bFactor, Font font) {
+        // ** Text Outline Effect **
+        DropShadow mDropShadow = new DropShadow();
+        mDropShadow.setColor(Color.BLACK);
+        mDropShadow.setRadius(height * bFactor);
+//        mDropShadow.setOffsetX(mHeight * 0.05);
+//        mDropShadow.setOffsetY(mHeight * 0.05);
+        mDropShadow.setOffsetX(height * 0.025);
+        mDropShadow.setOffsetY(-height * 0.01);
+        mDropShadow.setSpread(1.0);
+
+        node.setText(txt);
+        node.setFill(color);
+        node.setFont(font);
+        node.setFocusTraversable(false);
+        node.setPickOnBounds(false);
+        node.setMouseTransparent(true);
+        node.setEffect(mDropShadow);
+    }
+
+    public void setFont(Font font) {
+
+//        setFont(mTextNode, font);
+        mTextNode.setFont(font);
+    }
+
+    public static void setFont(Text text, Font font) { text.setFont(font); }
+
+//    public void setBFactor(Region text, double v) {
+//        setText(mTextNode, mWidth, mHeight, "", mBaseColor, "", "");
+//    }
+//    public static Text createText(String txt, int width, int height, Color color) {
+//        return createText(txt, width, height, color, 0.05);
+//    }
+//    public static Text createText(String txt, int width, int height, Color color, double bFactor) {
+//        return createText(txt, width, height, color, bFactor, getFontForHeight(height));
+//    }
+//    public static Text createText(String txt, int width, int height, Color color, double bFactor, Font font) {
+//        // ** Text Outline Effect **
+//        DropShadow mDropShadow = new DropShadow();
+//        mDropShadow.setColor(Color.BLACK);
+//        mDropShadow.setRadius(height * bFactor);
+////        mDropShadow.setOffsetX(mHeight * 0.05);
+////        mDropShadow.setOffsetY(mHeight * 0.05);
+//        mDropShadow.setOffsetX(height * 0.025);
+//        mDropShadow.setOffsetY(-height * 0.01);
+//        mDropShadow.setSpread(1.0);
+//
+//        Text textNode = new Text(txt);
+//        textNode.setFill(color);
+//        textNode.setFont(font);
+//        textNode.setFocusTraversable(false);
+//        textNode.setPickOnBounds(false);
+//        textNode.setMouseTransparent(true);
+//        textNode.setEffect(mDropShadow);
+//
+//        return textNode;
 //    }
 }

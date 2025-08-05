@@ -85,6 +85,9 @@ public class MainControlsPanel extends GamePanel {
         if (useCheckbox) {
             int newButtonWidth = (int) (mButtonWidth * .8);
             button = new BeveledButton(newButtonWidth, (int) mButtonHeight, name, color);
+            button.setText(name);
+            button.setBorder((int) (mButtonWidth * .02f), (int) (mButtonHeight * .035f), color);
+            button.setBackgroundColor(color);
 
             int checkboxWidth = (int) (mButtonWidth - newButtonWidth);
             checkBox = new BeveledCheckbox(checkboxWidth, (int) mButtonHeight, color);
@@ -92,7 +95,10 @@ public class MainControlsPanel extends GamePanel {
             checkBox.setMinSize(checkboxWidth, mButtonHeight);
             checkBox.setMaxSize(checkboxWidth, mButtonHeight);
         } else {
-            button = new BeveledButton((int) mButtonWidth, (int) mButtonHeight, name, color);
+            button = new BeveledButton((int) mButtonWidth, (int) mButtonHeight);
+            button.setText(name);
+            button.setBorder((int) (mButtonWidth * .02f), (int) (mButtonHeight * .035f), color);
+            button.setBackgroundColor(color);
         }
 
         hBox.getChildren().add(button);
@@ -105,9 +111,7 @@ public class MainControlsPanel extends GamePanel {
         return pair;
     }
 
-    public Pair<BeveledButton, BeveledCheckbox> getAbilitiesButton() {
-        return getOrCreateRow("Abilities", true);
-    }
+    public Pair<BeveledButton, BeveledCheckbox> getAbilitiesButton() { return getOrCreateRow("Abilities", true); }
 
     public Pair<BeveledButton, BeveledCheckbox> getMovementButton() {
         return getOrCreateRow("Movement", true);

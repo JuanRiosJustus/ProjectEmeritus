@@ -55,16 +55,6 @@ public class MovementSystem extends GameSystem {
         request.put("commit", commit);
 
         mGameModel.useMove(request);
-
-//        boolean moved = move(mGameModel, unitToMoveID, tileToMoveUnitToID, commit);
-//        if (!moved) { return; }
-//
-//        actionsComponent.setHasFinishedMoving(true);
-//        mGameModel.getGameState().setAutomaticallyGoToHomeControls(true);
-//        mGameModel.focusCamerasAndSelectionsOfActiveEntity();
-//        mGameModel.focusCamerasAndSelectionsOfActiveEntity(tileToMoveUnitToID);
-//        mLogger.info("{} has moved");
-
     }
 
     public void update(GameModel model, SystemContext systemContext) { }
