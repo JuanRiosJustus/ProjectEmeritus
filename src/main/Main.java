@@ -10,6 +10,7 @@ import main.engine.EngineController;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.AbilityTable;
+import main.game.stores.TagTable;
 import main.game.stores.UnitTable;
 import main.graphics.AnimationPool;
 import main.state.UserSaveStateManager;
@@ -29,6 +30,7 @@ public class Main extends Application {
     @Override
     public void start(Stage ignored) {
 
+        TagTable.getInstance();
         UnitTable.getInstance();
         AbilityTable.getInstance();
         UserSaveStateManager.getInstance();
@@ -41,6 +43,8 @@ public class Main extends Application {
         GameController gameController = GameController.createVariousHeightTestMapWithLiquid(7, 7, 1500, 950);
 //        GameController gameController = GameController.createVariousHeightTestMapWithLiquid(10, 13, 1500, 950);
         gameController.setCameraZoom(new JSONObject().fluentPut("zoom", 1.4));
+
+
 
         List<String> structures = AnimationPool.getInstance().getStructureTileSets();
         String structure = structures.get(new Random().nextInt(structures.size()));
@@ -62,7 +66,18 @@ public class Main extends Application {
         gameController.setSpawn(new JSONObject().fluentPut("row", 5).fluentPut("column", 5).fluentPut("faction", "Right"));
 
 
-        setup(gameController, 1);
+        JSONObject result = new JSONObject()
+                .fluentPut("unit_id", "water_dragon").fluentPut("ai", false).fluentPut("nickname", "test_unit_user")
+                .fluentPut("row", 3).fluentPut("column", 1);
+        gameController.createUnit(result);
+
+
+        result = new JSONObject()
+                .fluentPut("unit_id", "light_dragon").fluentPut("ai", true).fluentPut("nickname", "test_unit_ai")
+                .fluentPut("row", 4).fluentPut("column", 6);
+        gameController.createUnit(result);
+
+//        setup(gameController, 1);
         gameController.start();
 
 
@@ -90,6 +105,13 @@ public class Main extends Application {
         Iterator<String> spawnIterator = spawnData.keySet().iterator();
 
 
+//        JSONObject result = new JSONObject()
+//                .fluentPut("unit_id", "light_dragon")
+//                .fluentPut("ai", false)
+//                .fluentPut("nickname", "special_test_unit")
+//                .fluentPut("row", 3)
+//                .fluentPut("column", 3);
+//        gameController.createUnit(new JSONObject().fluentPut("unit_id", "light_dragon").fluentPut(""))
         // Setup enemies
         Entity unitEntity = null;
         String spawnRegion = spawnIterator.next();
@@ -111,6 +133,9 @@ public class Main extends Application {
         spawnRegion = spawnIterator.next();
         tiles = spawnData.getJSONArray(spawnRegion);
         Collections.shuffle(tiles);
+
+
+//        String createdUnit = EntityStore.getInstance().createUnit(true);
 
         // Setup friendly
         for (int i = 0; i < unitsPerTeam; i++) {

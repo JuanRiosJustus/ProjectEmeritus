@@ -20,8 +20,12 @@ public class StatisticsComponent extends Component {
     private static final String UNIT = "unit";
     private final Map<String, Statistic> mAttributeMap = new LinkedHashMap<>();
     private final Map<String, Tag> mTagMap = new LinkedHashMap<>();
-    private final String STATISTICS = "statistics";
-    private JSONObject mStatisticsMap = new JSONObject();
+    private final String BASE_STATISTICS = "base_statistics";
+    private JSONObject mBaseStatisticsMap = new JSONObject();
+    private final String BONUS_STATISTICS = "bonus_statistics";
+    private JSONObject mBonusStatisticsMap = new JSONObject();
+    private final String RESOURCE_STATISTICS = "resource_statistics";
+    private JSONObject mResourceStatisticsMap = new JSONObject();
 
     private final String TAGS = "tags";
     private JSONObject mTagsMap = new JSONObject();
@@ -30,8 +34,14 @@ public class StatisticsComponent extends Component {
     private int mHashCode = 0;
     public StatisticsComponent() {
 
-        mStatisticsMap = new JSONObject();
-        put(STATISTICS, mStatisticsMap);
+        mBaseStatisticsMap = new JSONObject();
+        put(BASE_STATISTICS, mBaseStatisticsMap);
+
+        mBonusStatisticsMap = new JSONObject();
+        put(BONUS_STATISTICS, mBonusStatisticsMap);
+
+        mResourceStatisticsMap = new JSONObject();
+        put(RESOURCE_STATISTICS, mResourceStatisticsMap);
 
         mTagsMap = new JSONObject();
         put(TAGS, mTagsMap);
@@ -39,21 +49,15 @@ public class StatisticsComponent extends Component {
 
 
     public JSONObject getTags() { return getJSONObject(TAGS); }
-    public JSONObject getStatistics() { return getJSONObject(STATISTICS); }
+    public JSONObject getStatistics() { return getJSONObject(BASE_STATISTICS); }
 
-    public void putStatistics(JSONArray statsList) {
-        JSONArray stats = getJSONArray(STATISTICS);
-        if (stats != null) {
-            return;
-        }
-        put(STATISTICS, statsList);
-    }
-
-//    public JSONArray getStatistics() {
-//        return getJSONArray(STATISTICS);
+//    public void putStatistics(JSONArray statsList) {
+//        JSONArray stats = getJSONArray(BASE_STATISTICS);
+//        if (stats != null) {
+//            return;
+//        }
+//        put(BASE_STATISTICS, statsList);
 //    }
-
-
 
     public void addTag(String key) {
         Tag tag = new Tag(key, "????", -1);
@@ -83,9 +87,15 @@ public class StatisticsComponent extends Component {
     private static final String BASIC_ABILITY = "basic_ability";
     public void putBasicAbility(String basic) { put(BASIC_ABILITY, basic); }
     public String getBasicAbility() { return getString(BASIC_ABILITY); }
-    private static final String PASSIVE_ABILITY = "passive_ability";
-    public void putPassiveAbility(String passive) { put(PASSIVE_ABILITY, passive); }
-    public String getPassiveAbility() { return getString(PASSIVE_ABILITY); }
+
+    private static final String TRAIT_ABILITY = "trait_ability";
+    public void putTraitAbility(String passive) { put(TRAIT_ABILITY, passive); }
+    public String getTraitAbility() { return getString(TRAIT_ABILITY); }
+
+    private static final String REACTION_ABILITY = "reaction_ability";
+    public void putReactionAbility(String reaction) { put(REACTION_ABILITY, reaction); }
+    public String getReactionAbility() { return getString(REACTION_ABILITY); }
+
     private static final String OTHER_ABILITY = "other_ability";
     public void putOtherAbility(JSONArray other) { put(OTHER_ABILITY, other); }
     public Set<String> getOtherAbility() {
@@ -99,47 +109,27 @@ public class StatisticsComponent extends Component {
         return result;
     }
 
-    public Set<String> getAttributes() { return mStatisticsMap.keySet(); }
-    public void putAttributes(JSONObject attributes) {
-        JSONObject updatedMap = mStatisticsMap;
+    public Set<String> getAttributes() { return mBaseStatisticsMap.keySet(); }
+    public void putStatistics(JSONObject statistics) {
+        JSONObject map = mBaseStatisticsMap;
+        map.clear();
 
-        updatedMap.clear();
-
-        for (String key : attributes.keySet()) {
-            float value = attributes.getFloat(key);
-
-            Statistic statistic = new Statistic(key, value);
-            updatedMap.put(key, statistic);
+        for (String key : statistics.keySet()) {
+            float value = statistics.getFloatValue(key);
+            map.put(key, value);
         }
         recalculateHash();
     }
 
-    public void setStatistic(String key, int value) {
-        JSONObject updatedMap = mStatisticsMap;
+    public void putBaseStat(String key, float value) {
+        JSONObject map = mBaseStatisticsMap;
 
-        if (value <= 0) {
-            value = 0;
-        }
+        if (value <= 0) { value = 0; }
 
-        Statistic statistic = new Statistic(key, value);
-        updatedMap.put(key, statistic);
+        map.put(key, value);
 
         recalculateHash();
     }
-
-    public void getStatChanges(JSONObject attributes) {
-        Map<String, Statistic> updatedMap = mAttributeMap;
-        updatedMap.clear();
-
-        for (String key : attributes.keySet()) {
-            float value = attributes.getFloat(key);
-
-            Statistic statistic = new Statistic(key, value);
-            updatedMap.put(key, statistic);
-        }
-        recalculateHash();
-    }
-
 
 
     public void putUnit(String unit) { put(StatisticsComponent.UNIT, unit); }
@@ -160,55 +150,105 @@ public class StatisticsComponent extends Component {
     public int getTotalPhysicalDefense() { return getTotal(StatisticsComponent.PHYSICAL_DEFENSE); }
     public int getTotalMagicalDefense() { return getTotal(StatisticsComponent.MAGICAL_DEFENSE); }
 
-    private Statistic createOrGetNode(String statistic) {
-        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
-        if (node == null) {
-            node = new Statistic(statistic, 0);
-            mStatisticsMap.put(statistic, node);
-        }
-        return node;
-    }
-    public int getBonus(String statistic) {
-        Statistic node = createOrGetNode(statistic);
-        return node.getBonus();
-    }
     public int getTotal(String statistic) {
-        Statistic node = createOrGetNode(statistic);
-        return node.getTotal();
+        float base = getBase(statistic);
+        float bonus = getBonus(statistic);
+        float total = (base + bonus);
+        return (int) total;
     }
-    public int getBase(String statistic) {
-        Statistic node = createOrGetNode(statistic);
-        return node.getBase();
+
+    public float getBase(String statistic) {
+        float base = (float) mBaseStatisticsMap.getOrDefault(statistic, 0f);
+        return base;
     }
+
+    public float getBonus(String statistic) {
+        JSONObject bonusMap = mBonusStatisticsMap.getJSONObject(statistic);
+        if (bonusMap == null) {
+            bonusMap = new JSONObject();
+            mBonusStatisticsMap.put(statistic, bonusMap);
+        }
+
+        float total = 0;
+        for (String key : bonusMap.keySet()) {
+            float bonus = bonusMap.getFloatValue(key);
+            total += bonus;
+        }
+        return total;
+    }
+
     public int getCurrent(String statistic) {
-        Statistic node = createOrGetNode(statistic);
-        return node.getCurrent();
+        float defaultValue = -1f;
+        float current = (float) mResourceStatisticsMap.getOrDefault(statistic, defaultValue);
+
+        if (current == defaultValue) {
+            float total = getTotal(statistic) * 1f;
+            mResourceStatisticsMap.put(statistic, total);
+            current = total;
+        }
+
+        return (int) current;
     }
+
     public int getMissing(String statistic) {
-        Statistic node = createOrGetNode(statistic);
-        return node.getMissing();
+        float total = getTotal(statistic);
+        float current = getCurrent(statistic);
+        float missing = total - current;
+        return (int) missing;
     }
 
     public float getScaling(String statistic, String type) {
-        Statistic node = createOrGetNode(statistic);
-        return node.getScaling(type);
+        return -1;
+//        Statistic node = createOrGetNode(statistic);
+//        return node.getScaling(type);
+    }
+
+    public void setResourceStat(String statistic, float value) {
+        float total = getTotal(statistic);
+
+
+        if (value > total || value < 0) { return; }
+        mResourceStatisticsMap.put(statistic, value);
     }
 
     public void toResource(String statistic, float value) {
-        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
-        node.setCurrent(node.getCurrent() + value);
+        float total = getTotal(statistic);
+        float currentValue = getCurrent(statistic);
+        float newValue = currentValue + value;
+
+        if (newValue < 0) {
+            mResourceStatisticsMap.put(statistic, 0);
+        } else if (newValue > total) {
+            mResourceStatisticsMap.put(statistic, total);
+        } else {
+            mResourceStatisticsMap.put(statistic, newValue);
+        }
+
         recalculateHash();
     }
 
-    public void addToResource(String statistic, double value) {
-        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
-        node.setCurrent(node.getCurrent() + value);
-        recalculateHash();
+    public void addToResource(String statistic, float value) {
+        toResource(statistic, value);
     }
 
-    public void removeFromResource(String statistic, double value) {
-        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
-        node.setCurrent(node.getCurrent() - value);
+    public void removeFromResource(String statistic, float value) {
+
+        toResource(statistic, - value);
+
+        float currentResourceValue = mResourceStatisticsMap.getFloatValue(statistic);
+
+        float targetValue = currentResourceValue - value;
+
+        float highestPossibleValue = getTotal(statistic);
+
+        if (targetValue < 0) {
+           toResource(statistic, targetValue);
+        } else if (targetValue >= highestPossibleValue) {
+            toResource(statistic, highestPossibleValue);
+        } else {
+            return;
+        }
+
         recalculateHash();
     }
 
@@ -216,19 +256,19 @@ public class StatisticsComponent extends Component {
 
 
     public void addFlatBonus(String source, String name, String statistic, float value) {
-        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
         node.addFlatBonus(source, name, value);
         recalculateHash();
     }
 
     public void addPercentBonus(String source, String name, String statistic, float value) {
-        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
         node.addPercentBonus(source, name, value);
         recalculateHash();
     }
 
     public void fillResource(String statistic) {
-        Statistic node = (Statistic) mStatisticsMap.getJSONObject(statistic);
+        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
         node.fill();
         recalculateHash();
     }
@@ -260,7 +300,7 @@ public class StatisticsComponent extends Component {
         mHashCode = mHashCode * 31 + mAttributeMap.hashCode();
         mHashCode = mHashCode * 31 + (getBasicAbility() == null ? -1 : getBasicAbility().hashCode());
         mHashCode = mHashCode * 31 + (getOtherAbility() == null ? - 1 : getOtherAbility().hashCode());
-        mHashCode = mHashCode * 31 + (getPassiveAbility() == null ? -1 : getPassiveAbility().hashCode());
+        mHashCode = mHashCode * 31 + (getTraitAbility() == null ? -1 : getTraitAbility().hashCode());
     }
 
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }
@@ -298,14 +338,14 @@ public class StatisticsComponent extends Component {
 //    }
 
     public static int getExperienceNeeded(int level) {
-//        double x = Math.pow(level, 3);
-//        double y = Math.pow(level, 2);
+//        float x = Math.pow(level, 3);
+//        float y = Math.pow(level, 2);
 //        return (int)Math.round( 0.04 * x + 0.8 * y + 2 * level);
 
 //        return (int) Math.round((4 * Math.pow(level, 3)) / 5);
 
-        double exponent = 2.1;
-        double baseXP = 10;
+        float exponent = 2.1f;
+        float baseXP = 10;
         return (int) Math.floor(baseXP * Math.pow(level, exponent));
     }
 

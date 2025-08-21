@@ -94,15 +94,18 @@ public class AbilitySelectionPanel extends EscapablePanel {
         clear();
         mLogger.info("Updating ability selection for {}", activeUnitID);
 
-        String passiveAbility = response.getString("passive_ability");
         String basicAbility = response.getString("basic_ability");
-        JSONArray otherAbility = response.getJSONArray("other_ability");
+        String reactiveAbility = response.getString("reactive_ability");
+        String traitAbility = response.getString("trait_ability");
+        JSONArray otherAbility = response.getJSONArray("slot_ability");
 
 //        gameModel.setCurrentActiveEntityAbilityToDefault();
 
+        // SETUP ABILITIES
         JSONArray actions = new JSONArray();
         actions.add(basicAbility);
-        actions.add(passiveAbility);
+        actions.add(traitAbility);
+        actions.add(traitAbility);
         for (int i = 0; i < otherAbility.size(); i++) { actions.add(otherAbility.getString(i)); }
 
         for (int index = 0; index < actions.size(); index++) {

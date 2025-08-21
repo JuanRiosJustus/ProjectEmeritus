@@ -151,8 +151,8 @@ public class AbilitySystem extends GameSystem {
             if (currentHash == hashCode) { return; }
             mLogger.info("Started updating {} because of ability");
 
-            removePassiveAbility(entityID);
-            initializePassiveAbility(entityID);
+//            removePassiveAbility(entityID);
+//            initializePassiveAbility(entityID);
             mState.put(entityID, hashCode);
 
             mLogger.info("Finished update updating {} because of ability");
@@ -168,8 +168,11 @@ public class AbilitySystem extends GameSystem {
     private void initializePassiveAbility(String entityID) {
         Entity entity = getEntityWithID(entityID);
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-        String passiveAbility = statisticsComponent.getPassiveAbility();
+        String passiveAbility = statisticsComponent.getTraitAbility();
+        if (passiveAbility == null) { return; }
         JSONArray attributeModifiers = AbilityTable.getInstance().getPassiveAttributes(passiveAbility);
+        if (attributeModifiers == null) { return; }
+
         if (!attributeModifiers.isEmpty()) {
             for (int i = 0; i < attributeModifiers.size(); i++) {
                 JSONObject attributeModifier = attributeModifiers.getJSONObject(i);

@@ -95,10 +95,11 @@ public class TileComponent extends Component {
         }
 
         mLayers.push(newLayer);
-
-        put("layers", mLayers);
+        put(LAYERS, mLayers);
         put(TOTAL_ELEVATION, getTotalElevation());
     }
+
+
     public void removeLayer() { removeLayer(-1); }
     public void removeLayer(int amount) {
         for (int i = 0; i < amount; i++) {

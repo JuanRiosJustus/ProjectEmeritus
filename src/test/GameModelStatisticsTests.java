@@ -325,13 +325,13 @@ public class GameModelStatisticsTests extends GameTests {
         // Setup unit1
         JSONObject response = game.createCpuUnit();
         String unit1 = response.getString("id");
-        fillUnitResources(game, unit1, 100);
+        fillUnitBaseResourcesTo100Percent(game, unit1, 100);
         getAndSetUnitOnTile(game, unit1, 4, 4);
 
         // Setup unit2
         response = game.createCpuUnit();
         String unit2 = response.getString("id");
-        fillUnitResources(game, unit2, 100);
+        fillUnitBaseResourcesTo100Percent(game, unit2, 100);
         getAndSetUnitOnTile(game, unit2, 4, 5);
 
         // Pause game to wait for ui to show
@@ -364,13 +364,13 @@ public class GameModelStatisticsTests extends GameTests {
         // Setup unit1
         JSONObject response = game.createCpuUnit();
         String unit1 = response.getString("id");
-        fillUnitResources(game, unit1, 100);
+        fillUnitBaseResourcesTo100Percent(game, unit1, 100);
         getAndSetUnitOnTile(game, unit1, 4, 4);
 
         // Setup unit2
         response = game.createCpuUnit();
         String unit2 = response.getString("id");
-        fillUnitResources(game, unit2, 100);
+        fillUnitBaseResourcesTo100Percent(game, unit2, 100);
         getAndSetUnitOnTile(game, unit2, 4, 5);
 
         // Pause game to wait for ui to show

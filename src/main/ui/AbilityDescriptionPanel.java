@@ -3,7 +3,6 @@ package main.ui;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -11,18 +10,13 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import main.constants.JavaFXUtils;
-import main.constants.Tuple;
 import main.game.main.GameModel;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledKeyValue;
-import main.ui.foundation.BeveledLabel;
 import main.ui.game.GamePanel;
 import main.utils.StringUtils;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class AbilityDescriptionPanel extends GamePanel {
     private EmeritusLogger mLogger = EmeritusLogger.create(AbilityDescriptionPanel.class);
@@ -38,7 +32,7 @@ public class AbilityDescriptionPanel extends GamePanel {
     protected ScrollPane mAbilityDescriptionScrollPane = new ScrollPane();
     protected VBox mKeyAbilityPoints = new VBox();
     protected Font mBannerFont = null;
-    protected Font mDescriptionFont = null;
+    protected Font mAbilityDescriptionAreaFont = null;
     protected Font mImportantStuffFont = null;
     protected int mKeyAbilityPointsHeight;
     protected int mKeyAbilityPointsWidth;
@@ -63,7 +57,7 @@ public class AbilityDescriptionPanel extends GamePanel {
         mAbilityTitleAndHidePanel.setPrefSize(bannerWidth, bannerHeight);
 
         mBannerFont = getFontForHeight((int) (bannerHeight * .8));
-        mDescriptionFont = getFontForHeight((int) (height * .1));
+        mAbilityDescriptionAreaFont = getFontForHeight((int) (height * .1));
 
         int titleWidth = (int) (bannerWidth * .85);
         int titleHeight = (bannerHeight);
@@ -83,38 +77,34 @@ public class AbilityDescriptionPanel extends GamePanel {
         mAbilityTitleAndHidePanel.getChildren().addAll(mAbilityTitleButton, mAbilityHideButton);
 
 
-        mKeyAbilityPointsWidth = bannerWidth;
-        mKeyAbilityPointsHeight = bannerHeight;
-
-        mKeyAbilityPoints = new VBox();
-        mKeyAbilityPoints.setPrefSize(mKeyAbilityPointsWidth, mKeyAbilityPointsHeight);
-        mKeyAbilityPoints.setMinSize(mKeyAbilityPointsWidth, mKeyAbilityPointsHeight);
-        mKeyAbilityPoints.setMaxSize(mKeyAbilityPointsWidth, mKeyAbilityPointsHeight);
-        mKeyAbilityPoints.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
-        mKeyAbilityPoints.setPadding(new Insets(5, 5, 5, 5));
-        mKeyAbilityPoints.setAlignment(Pos.CENTER);
-
-        mKeyAbilityPointHeight = mKeyAbilityPointsHeight / 2;
-        mKeyAbilityPointWidth = mKeyAbilityPointsWidth / 2;
+//        mKeyAbilityPointsWidth = bannerWidth;
+//        mKeyAbilityPointsHeight = bannerHeight;
+//
+//        mKeyAbilityPoints = new VBox();
+//        mKeyAbilityPoints.setPrefSize(mKeyAbilityPointsWidth, mKeyAbilityPointsHeight);
+//        mKeyAbilityPoints.setMinSize(mKeyAbilityPointsWidth, mKeyAbilityPointsHeight);
+//        mKeyAbilityPoints.setMaxSize(mKeyAbilityPointsWidth, mKeyAbilityPointsHeight);
+//        mKeyAbilityPoints.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
+//        mKeyAbilityPoints.setPadding(new Insets(5, 5, 5, 5));
+//        mKeyAbilityPoints.setAlignment(Pos.CENTER);
+//
+//        mKeyAbilityPointHeight = mKeyAbilityPointsHeight / 2;
+//        mKeyAbilityPointWidth = mKeyAbilityPointsWidth / 2;
 
 //        mImportantStuff.getChildren().add(new Text("Teest"));
 //        mImportantStuff.getChildren().add(new Text("yoooo"));
 
 
 
-
-
         int descriptionWidth = bannerWidth;
-        int descriptionHeight = (int) ((height * .98) - (bannerHeight + mKeyAbilityPointsHeight));
-        mDescriptionFont = getFontForHeight((int) (descriptionHeight / 5));
-        mAbilityDescriptionArea = new TextFlow();
-        mAbilityDescriptionArea.setPrefSize(descriptionWidth, -1);
-        mAbilityDescriptionArea.setMinSize(descriptionWidth, -1);
-        mAbilityDescriptionArea.setMaxSize(descriptionWidth, -1);
-        mAbilityDescriptionArea.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
-//        mAbilityDescriptionArea.setBorder(BeveledButton.createBorder(4, 4, color));
+        int descriptionHeight = (int) ((height * .98) - (bannerHeight));
 
-//        mAbilityDescriptionArea.setBorder(EmeritusButton.createBorder((int) (descriptionWidth * .005f), (int) (descriptionHeight * .005), color));
+        mAbilityDescriptionAreaFont = getFontForHeight((int) (descriptionHeight / 8));
+        mAbilityDescriptionArea = new TextFlow();
+        mAbilityDescriptionArea.setPrefSize(descriptionWidth, descriptionHeight);
+        mAbilityDescriptionArea.setMinSize(descriptionWidth, descriptionHeight);
+        mAbilityDescriptionArea.setMaxSize(descriptionWidth, descriptionHeight);
+        mAbilityDescriptionArea.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
         mAbilityDescriptionArea.setPadding(new Insets(5, 5, 5, 5));
 
         mAbilityDescriptionScrollPane = new ScrollPane();
@@ -128,7 +118,7 @@ public class AbilityDescriptionPanel extends GamePanel {
         mAbilityDescriptionScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove vertical scrollbar
         mAbilityDescriptionScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
         mAbilityDescriptionScrollPane.setBorder(BeveledButton.createBorder(4, 4, color));
-        mAbilityDescriptionArea.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
+        mAbilityDescriptionScrollPane.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         mContentPanel.setPadding(new Insets(5, 5, 5, 5));
         mContentPanel.getChildren().addAll(
@@ -215,49 +205,58 @@ public class AbilityDescriptionPanel extends GamePanel {
         JSONObject abilityData = gameModel.getAbilityData(selectedAbility);
 
         // Create some rows at the top before description
+//        mAbilityDescriptionArea.getChildren().clear();
+//        String[] details = new String[]{ "area", "range", "accuracy", "type" };
+//        Font font = mAbilityDescriptionAreaFont;
+
+
+//        mKeyAbilityPoints.getChildren().clear();
+//        HBox hBox = new HBox();
+//        for (int i = 0; i < details.length; i += 1) {
+//            String key = details[i];
+//            String value = abilityData.getString(key);
+//
+//            if (key.equalsIgnoreCase("accuracy")) {
+//                value = StringUtils.floatToPercentage(Float.parseFloat(value));
+//            }
+//            key = StringUtils.convertSnakeCaseToCapitalized(key);
+//
+//            BeveledKeyValue kvp = new BeveledKeyValue(
+//                    mKeyAbilityPointWidth,
+//                    mKeyAbilityPointHeight,
+//                    key,
+//                    value,
+//                    mColor
+//            );
+//
+//            boolean isNewRow = i % 2 == 0;
+//            if (isNewRow) { hBox = new HBox(); }
+//            hBox.getChildren().add(kvp);
+//            if (isNewRow) { mKeyAbilityPoints.getChildren().add(hBox); }
+//        }
+
+
         mAbilityDescriptionArea.getChildren().clear();
-        String[] details = new String[]{ "area", "range", "accuracy", "type" };
-        Font font = mDescriptionFont;
-
-
-        mKeyAbilityPoints.getChildren().clear();
-        HBox hBox = new HBox();
-        for (int i = 0; i < details.length; i += 1) {
-            String key = details[i];
-            String value = abilityData.getString(key);
-
-            if (key.equalsIgnoreCase("accuracy")) {
-                value = StringUtils.floatToPercentage(Float.parseFloat(value));
-            }
-            key = StringUtils.convertSnakeCaseToCapitalized(key);
-
-            BeveledKeyValue kvp = new BeveledKeyValue(
-                    mKeyAbilityPointWidth,
-                    mKeyAbilityPointHeight,
-                    key,
-                    value,
-                    mColor
-            );
-
-            boolean isNewRow = i % 2 == 0;
-            if (isNewRow) { hBox = new HBox(); }
-            hBox.getChildren().add(kvp);
-            if (isNewRow) { mKeyAbilityPoints.getChildren().add(hBox); }
-        }
-
+        Font font = mAbilityDescriptionAreaFont;
         String description = abilityData.getString("description");
         JSONArray splits = gameModel.splitOnBracketedWords(description);
+        double width = 10;
+        double height = 10;
+        Text text = null;
         for (int i = 0; i < splits.size(); i++) {
             String split = splits.getString(i);
-            double width = JavaFXUtils.computeWidth(font, split);
-            double height = JavaFXUtils.computeHeight(font, split.replace(System.lineSeparator(), ""));
-            Text text = BevelStyle.createText(split, (int) width, (int) height, Color.WHITE, 0.1f);
+            width = JavaFXUtils.computeWidth(font, split);
+            height = JavaFXUtils.computeHeight(font, split.replace(System.lineSeparator(), ""));
+            text = BevelStyle.createText(split, (int) width, (int) height, Color.WHITE, 0.1f);
             text.setFont(font);
             if (split.startsWith("[") && split.endsWith("]")) {
-                text.setFill(Color.PURPLE);
+                text.setFill(Color.ANTIQUEWHITE);
             }
 
             mAbilityDescriptionArea.getChildren().add(text);
         }
+
+        text = BevelStyle.createText("\n".repeat(10), (int) width, (int) height, Color.WHITE, 0.1f);
+        mAbilityDescriptionArea.getChildren().add(text);
     }
 }

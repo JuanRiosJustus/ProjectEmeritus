@@ -145,7 +145,7 @@ public class GreaterAbilityPanel extends GamePanel {
 //            label.getThird().setText(damage + " " + fancyText);
 //        }
 //
-        JSONObject damageMap = gameModel.getDamageMap(entityID, selectedAbility);
+        JSONObject damageMap = gameModel.getDamages(entityID, selectedAbility);
         for (String key : damageMap.keySet()) {
             float value = damageMap.getFloatValue(key);
 
@@ -178,7 +178,7 @@ public class GreaterAbilityPanel extends GamePanel {
 
 
         request = new JSONObject().fluentPut("id", entityID).fluentPut("ability", selectedAbility);
-        JSONObject costMap = gameModel.getCostMap(entityID, selectedAbility);
+        JSONObject costMap = gameModel.getCosts(entityID, selectedAbility);
         for (String key : costMap.keySet()) {
             float value = costMap.getFloatValue(key);
             int cost = (int) value;

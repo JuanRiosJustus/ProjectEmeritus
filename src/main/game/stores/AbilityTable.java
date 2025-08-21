@@ -66,6 +66,9 @@ public class AbilityTable {
 
     public int getRange(String ability) {
         JSONObject data = getOrCacheResult(ability);
+        if (data == null) {
+            System.out.println("jjoj");
+        }
         int result = data.getIntValue("range");
         return result;
     }
@@ -302,46 +305,102 @@ public class AbilityTable {
         return description;
     }
 
-
-    public JSONObject getDamage(String ability) {
-//        JSONObject result = getOrCacheResult(ability);
-//        return result.getJSONArray("damage");
-        JSONObject result = getOrCacheResult(ability);
-        return result.getJSONObject("damage");
+    public Set<String> getKeys(String ability) {
+        JSONObject data = getOrCacheResult(ability);
+        return data.keySet();
     }
 
-    private JSONArray getCostOrDamageListing(String ability, boolean isCost) {
+    public Object getValue(String ability, String key) {
         JSONObject data = getOrCacheResult(ability);
-        String indicator = isCost ? ".cost." : ".damage.";
+        return data.get(key);
+    }
 
-        JSONArray result = new JSONArray();
+    public Float getFloat(String ability, String key) {
+        JSONObject data = getOrCacheResult(ability);
+        return data.getFloatValue(key);
+    }
+
+
+    public JSONObject getResourcesToCostOrDamage(String ability, boolean isCost) {
+        JSONObject data = getOrCacheResult(ability);
+        String indicator = isCost ? ".cost" : ".damage";
+
+        JSONObject results = new JSONObject();
         for (String key : data.keySet()) {
-            boolean isRelatedKey = key.contains(indicator);
-            if (!isRelatedKey) { continue; }
-            String resource = key.substring(0, key.indexOf(indicator));
-            result.add(resource);
+            // Ensure the key is correctly formatted and has the cost indicator
+            if (!key.contains(indicator)) { continue; }
+
+            int index = key.indexOf(indicator);
+            if (index == -1) { continue; }
+
+            String resource = key.substring(0, key.indexOf("."));
+
+            results.put(resource, resource);
+        }
+        return results;
+    }
+
+
+    public JSONObject getResourcesToCostOrDamageVariables(String ability, String resource, boolean isCost) {
+        JSONObject data = getOrCacheResult(ability);
+        String indicator = isCost ? ".cost" : ".damage";
+
+        JSONObject result = new JSONObject();
+        for (String key : data.keySet()) {
+            // Ensure the key is correctly formatted and has the cost indicator
+            int index = key.indexOf(indicator);
+            if (index == -1) { continue; }
+
+            boolean isRelevant = key.startsWith(resource);
+            if (!isRelevant) { continue; }
+
+            String statistic = key.substring(index + indicator.length());
+            if (statistic.startsWith(".")) { statistic = statistic.substring(1); }
+
+            float value = data.getFloatValue(key);
+            result.put(statistic, value);
         }
         return result;
     }
 
 
-    public JSONArray getResourcesToCost(String ability) {
-        JSONArray result = getCostOrDamageListing(ability, true);
+    private static final String COST_INDICATOR = ".cost";
+    public JSONArray getStatisticsToCost(String ability) {
+        JSONObject data = getOrCacheResult(ability);
+        JSONObject result = new JSONObject();
+
+        for (String key : data.keySet()) {
+            int indicatorIndex = key.indexOf(COST_INDICATOR);
+            boolean isRelatedKey = indicatorIndex >= 0;
+            if (!isRelatedKey) { continue; }
+
+            String statistic = key.substring(0, key.indexOf("."));
+            if (statistic.startsWith(".")) { statistic = statistic.substring(1); }
+
+            float value = data.getFloatValue(key);
+            result.put(statistic, value);
+        }
+
+        return new JSONArray();
+    }
+    public JSONObject getCostOrDamageConstants(String ability, boolean isCost) {
+        JSONObject data = getOrCacheResult(ability);
+        String indicator = isCost ? ".cost" : ".damage";
+
+        JSONObject result = new JSONObject();
+        for (String key : data.keySet()) {
+            int indicatorIndex = key.indexOf(indicator);
+            boolean isRelatedKey = indicatorIndex >= 0;
+            if (!isRelatedKey) { continue; }
+
+            String statistic = key.substring(0, key.indexOf("."));
+            float value = data.getFloatValue(key);
+            result.put(statistic, value);
+        }
         return result;
     }
-    public JSONObject getResourceCost(String ability, String resource) {
-        return getResourceCostOrDamage(ability, resource, true);
-    }
 
-    public JSONArray getResourcesToDamage(String ability) {
-        JSONArray result = getCostOrDamageListing(ability, false);
-        return result;
-    }
-    public JSONObject getResourceDamage(String ability, String resource) {
-        return getResourceCostOrDamage(ability, resource, false);
-    }
-
-    private JSONObject getResourceCostOrDamage(String ability, String resource, boolean isCost) {
+    public JSONObject getCostOrDamageStatisticsToImpactReferences(String ability, String resource, boolean isCost) {
         JSONObject data = getOrCacheResult(ability);
         String indicator = isCost ? ".cost." : ".damage.";
 
@@ -408,6 +467,9 @@ public class AbilityTable {
 
     public JSONArray getPassiveAttributes(String ability) {
         JSONObject result = getOrCacheResult(ability);
+        if (result == null) {
+            System.out.println("tookok");
+        }
         JSONArray attributes = result.getJSONArray("passive_attributes");
         return attributes;
     }

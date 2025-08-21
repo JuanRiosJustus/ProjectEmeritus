@@ -64,7 +64,7 @@ public class EntityStore {
         JSONObject equipment = data.getJSONObject(0);
         JSONArray equipmentStats = equipment.getJSONArray("statistics");
 
-        statisticsComponent.putStatistics(equipmentStats);
+//        statisticsComponent.putStatistics(equipmentStats);
 
         newEntity.add(statisticsComponent);
 
@@ -72,6 +72,7 @@ public class EntityStore {
     }
 
 
+    public Set<String> getUnits() { return UnitTable.getInstance().getUnits(); }
     public String createUnit(boolean isAI) {
         List<String> units = new ArrayList<>(UnitTable.getInstance().getAllUnits());
         Collections.shuffle(units);
@@ -79,7 +80,13 @@ public class EntityStore {
         String nickname = RandomUtils.createRandomName(3, 6);
         return createUnit(randomUnit, nickname, isAI);
     }
+
     public String createUnit(String unit, String nickname, boolean isAI) {
+        Set<String> units = UnitTable.getInstance().getUnits();
+        boolean isValidUnit = units.contains(unit);
+        if (!isValidUnit) { return null; }
+
+        if (unit == null) { unit = RandomUtils.createRandomName(3, 6); }
         String id = createUUID("UNIT", unit, "NICKNAME", nickname);
         Entity newEntity = createBaseEntity(id, nickname, UNIT_ENTITY);
 
@@ -103,16 +110,26 @@ public class EntityStore {
         JSONArray type = UnitTable.getInstance().getType(unit);
 
         String basicAbility = UnitTable.getInstance().getBasicAbility(unit);
-        String passiveAbility = UnitTable.getInstance().getPassiveAbility(unit);
-        JSONArray otherAbility = UnitTable.getInstance().getOtherAbility(unit);
+        String traitAbility = UnitTable.getInstance().getTraitAbility(unit);
+        String reactionAbility = UnitTable.getInstance().getReactionAbility(unit);
+        String[] slots = new String[] {
+                UnitTable.getInstance().getSlot1Ability(unit),
+                UnitTable.getInstance().getSlot2Ability(unit),
+                UnitTable.getInstance().getSlot3Ability(unit),
+                UnitTable.getInstance().getSlot4Ability(unit),
+        };
+
+        JSONArray otherAbility = new JSONArray();
+        otherAbility.addAll(Arrays.asList(slots));
 
 
         StatisticsComponent statisticsComponent = new StatisticsComponent();
-        statisticsComponent.putAttributes(statistics);
+        statisticsComponent.putStatistics(statistics);
         statisticsComponent.putType(type);
 
         statisticsComponent.putBasicAbility(basicAbility);
-        statisticsComponent.putPassiveAbility(passiveAbility);
+        statisticsComponent.putTraitAbility(traitAbility);
+        statisticsComponent.putReactionAbility(reactionAbility);
         statisticsComponent.putOtherAbility(otherAbility);
 
         statisticsComponent.putUnit(unit);

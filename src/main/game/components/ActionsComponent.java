@@ -33,19 +33,19 @@ public class ActionsComponent extends Component {
     public boolean hasStartedMoving() { return mHasStartedMoving; }
 
 
-    private boolean mHasFinishedMoving = false;
-    public void setHasFinishedMoving(boolean b) { mHasFinishedMoving = b; }
-    public boolean hasFinishedMoving() { return mHasFinishedMoving; }
+    private static final String HAS_FINISHED_MOVING = "has_finished_moving";
+    public void setHasFinishedMoving(boolean b) { put(HAS_FINISHED_MOVING, b); }
+    public boolean hasFinishedMoving() { return getBooleanValue(HAS_FINISHED_MOVING, false); }
 
 
-    private boolean mHasStartedUsingAbility = false;
-    public void setHasStartedUsingAbility(boolean val)  {mHasStartedUsingAbility = val;  }
-    public boolean hasStartedUsingAbility() { return mHasStartedUsingAbility; }
+    private static final String HAS_STARTED_USING_ABILITY = "has_started_using_ability";
+    public void setHasStartedUsingAbility(boolean val)  { put(HAS_STARTED_USING_ABILITY, val);  }
+    public boolean hasStartedUsingAbility() { return getBooleanValue(HAS_STARTED_USING_ABILITY); }
 
 
-    private boolean mHasFinishedUsingAbility = false;
-    public void setHasFinishedUsingAbility(boolean b) { mHasFinishedUsingAbility = b; }
-    public boolean hasFinishedUsingAbility() { return mHasFinishedUsingAbility; }
+    private static final String HAS_FINISHED_USING_ABILITY = "has_finished_using_ability";
+    public void setHasFinishedUsingAbility(boolean b) { put(HAS_FINISHED_USING_ABILITY, b); }
+    public boolean hasFinishedUsingAbility() { return getBooleanValue(HAS_FINISHED_USING_ABILITY, false); }
 
 
 

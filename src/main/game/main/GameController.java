@@ -371,6 +371,12 @@ public class GameController extends EngineRunnable {
     public JSONObject getTile(JSONObject input) {
         return mGameModel.getTileWithMetadata(input);
     }
+    public JSONObject getTile(int row, int column) {
+        JSONObject request = new JSONObject()
+                .fluentPut("row", row)
+                .fluentPut("column", column);
+        return getTile(request);
+    }
 
 
 
@@ -583,8 +589,16 @@ public class GameController extends EngineRunnable {
      * @param request A {@link JSONObject} containing the unit ID, statistic name, and new value.
      * @return A {@link JSONObject} with updated statistics or an error message.
      */
-    public JSONObject setStatisticForUnit(JSONObject request) {
-        return mGameModel.setStatisticForUnit(request);
+    public JSONObject setBaseStatForUnit(JSONObject request) {
+        return mGameModel.setBaseStatForUnit(request);
+    }
+    public JSONObject setBaseStatForUnit(String unitID, String stat, float value, boolean fill) {
+        JSONObject request = new JSONObject()
+                .fluentPut("unit_id", unitID)
+                .fluentPut("statistic", stat)
+                .fluentPut("value", value)
+                .fluentPut("fill", true);
+        return setBaseStatForUnit(request);
     }
 
     /**
@@ -793,14 +807,25 @@ public class GameController extends EngineRunnable {
         return mGameModel.setStructure(request);
     }
 
-    public JSONObject updateLayering(JSONObject request) {
-        return mGameModel.updateLayering(request);
-    }
 
 
 
     public JSONObject createStructure() { return createStructure(new JSONObject()); }
     public JSONObject createUnit(JSONObject request) { return mGameModel.createUnit(request); }
+
+    public JSONObject createRandomForgettableUnit(boolean ai, int row, int column) {
+        return createUnit(null, ai, null, row, column);
+    }
+    public JSONObject createUnit(String unit, boolean ai, String nickname, int row, int column) {
+        JSONObject request = new JSONObject()
+                .fluentPut("unit_id", unit)
+                .fluentPut("ai", ai)
+                .fluentPut("nickname", nickname)
+                .fluentPut("row", row)
+                .fluentPut("column", column);
+        JSONObject result = mGameModel.createUnit(request);
+        return result;
+    }
     public JSONObject createUserUnit() { mEmptyJson.clear(); return  mGameModel.createUserUnit(mEmptyJson); }
     public JSONObject createCpuUnit() { mEmptyJson.clear(); return  mGameModel.createCpuUnit(mEmptyJson); }
     public JSONObject createStructure(JSONObject request) { return mGameModel.createStructure(request); }
@@ -1016,4 +1041,44 @@ public class GameController extends EngineRunnable {
     }
 
     public void setSpawn(JSONObject request) { mGameModel.setSpawn(request); }
+
+    public void move() {
+    }
+
+    public JSONObject useMove(JSONObject jsonObject) {
+        return mGameModel.useMove(jsonObject);
+    }
+
+    public JSONObject useMove(String unitID, int row, int column, boolean commit) {
+        return useMove(unitID, row, column, commit, false);
+    }
+    public JSONObject useMove(String unitID, int row, int column, boolean commit, boolean ignoreRules) {
+        JSONObject request = new JSONObject()
+                .fluentPut("unit_id", unitID)
+                .fluentPut("row", row)
+                .fluentPut("column", column)
+                .fluentPut("ignore_rules", ignoreRules)
+                .fluentPut("commit", commit);
+        return useMove(request);
+    }
+
+    public JSONObject useMove(String unitID, String tileID, boolean commit) {
+        JSONObject request = new JSONObject()
+                .fluentPut("unit_id", unitID)
+                .fluentPut("tile_id", tileID)
+                .fluentPut("commit", commit);
+        return useMove(request);
+    }
+
+    public JSONObject raiseTile(JSONObject request) {
+        return mGameModel.updateLayering(request);
+    }
+    public JSONObject raiseTile(int row, int column, int amount) {
+        JSONObject request = new JSONObject()
+                .fluentPut("row", row)
+                .fluentPut("column", column)
+                .fluentPut("function", "add")
+                .fluentPut("depth", amount);
+        return raiseTile(request);
+    }
 }

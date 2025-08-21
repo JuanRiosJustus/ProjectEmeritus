@@ -104,14 +104,16 @@ public class GameTests {
     }
 
 
-    public static JSONObject fillUnitResource(GameController gc, String unitID, String att, int val, boolean fill) {
-        return setUnitStatistic(gc, unitID, att, val);
-    }
+    public static JSONObject fillUnitBaseResourcesTo100Percent(GameController gc, String unitID, int val) {
+        JSONObject result = gc.setBaseStatForUnit(unitID, "health", val, true);
+        assertEquals(result.getIntValue("base"), 100);
 
-    public static JSONObject fillUnitResources(GameController gc, String unitID, int val) {
-        setUnitStatistic(gc, unitID, "health", val);
-        setUnitStatistic(gc, unitID, "mana", val);
-        setUnitStatistic(gc, unitID, "stamina", val);
+        result = gc.setBaseStatForUnit(unitID, "mana", val, true);
+        assertEquals(result.getIntValue("base"), 100);
+
+        result = gc.setBaseStatForUnit(unitID, "stamina", val, true);
+        assertEquals(result.getIntValue("base"), 100);
+
         return new JSONObject();
     }
 
@@ -246,12 +248,9 @@ public class GameTests {
         request = new JSONObject()
                 .fluentPut("unit_id", unitID)
                 .fluentPut("statistic", stat)
-                .fluentPut("value", value);
-        JSONObject result = gc.setStatisticForUnit(request);
-
-        if (result.getIntValue("current") < result.getIntValue("total")) {
-            System.out.println("t,tffl,l");
-        }
+                .fluentPut("value", value)
+                .fluentPut("fill", true);
+        JSONObject result = gc.setBaseStatForUnit(request);
 
         request = new JSONObject()
                 .fluentPut("unit_id", unitID)

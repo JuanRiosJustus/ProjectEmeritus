@@ -13,48 +13,83 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class GameModelMovementTests extends GameTests {
 
     @Test
-    public void movesUnitAround() {
-        GameController game = createGameWithDefaults(10, 10, false);
-        game.start();
+    public void movesUnitAroundFlatMap() {
+        GameController game = createAndStartGameWithDefaults();
+        game.disableAutoBehavior();
 
-        // Setup unit1
-        JSONObject response = game.createCpuUnit();
-        String unit1 = response.getString("unit_id");
-        game.setUnit(new JSONObject().fluentPut("unit_id", unit1).fluentPut("row", 3).fluentPut("column", 3));
+        // Setup units
+        JSONObject unit1 = game.createRandomForgettableUnit(false, 3, 3);
 
-        // Setup unit1
-        response = game.createCpuUnit();
-        String unit2 = response.getString("unit_id");
-        game.setUnit(new JSONObject().fluentPut("unit_id", unit2).fluentPut("row", 3).fluentPut("column", 6));
-
+        // Assert tile placement
+        JSONObject tile1 = game.getTile(3, 3);
+        assertEquals(tile1.get("tile_id"), unit1.get("tile_id"));
 
         simulateUserInactivity(game, 2000);
 
+        // Attempt movement
+        String unitID = unit1.getString("unit_id");
+        JSONObject request = game.useMove(unitID, 3, 5, true);
 
-        // Pause game to wait for ui to show
-//        game.start();
-//
-//        try {
-//            Thread.sleep(10000);
-//        } catch (Exception ex) {
-//
-//        }
-//        pauseGame(game, 2000);
-//        game.triggerTurnOrderQueue();
+        // Assert new tile placement
+        tile1 = game.getTile(3, 5);
+        assertEquals(request.get("destination_tile_id"), tile1.get("tile_id"));
 
-
-
-//        game.triggerTurnOrderQueue();
-//        pauseGame(game, 2000);
-//        game.triggerTurnOrderQueue();
-
+        simulateUserInactivity(game, 2000);
     }
+
+
     @Test
-    public void initGameModelIsRunning() {
-        GameController gameController = GameController.create(10, 10, 400, 400);
-        gameController.start();
-        assertTrue(gameController.isRunning());
+    public void movesUnitAround() {
+        GameController game = createAndStartGameWithDefaults();
+        game.disableAutoBehavior();
+
+        // Setup platform 1 for unit
+        game.raiseTile(2, 1, 1);
+        game.raiseTile(2, 2, 1);
+        game.raiseTile(2, 3, 1);
+
+        game.raiseTile(3, 1, 1);
+        game.raiseTile(3, 2, 1);
+        game.raiseTile(3, 3, 1);
+
+        game.raiseTile(4, 1, 1);
+        game.raiseTile(4, 2, 1);
+        game.raiseTile(4, 3, 1);
+
+        // Create bridge
+        game.raiseTile(3, 4, 2);
+        game.raiseTile(3, 5, 3);
+
+        // Setup platform 2 for unit
+        game.raiseTile(2, 6, 4);
+        game.raiseTile(2, 7, 4);
+        game.raiseTile(2, 8, 4);
+
+        game.raiseTile(3, 6, 4);
+        game.raiseTile(3, 7, 4);
+        game.raiseTile(3, 8, 4);
+
+        game.raiseTile(4, 6, 4);
+        game.raiseTile(4, 7, 4);
+        game.raiseTile(4, 8, 4);
+
+        JSONObject unit1 = game.createRandomForgettableUnit(false, 3, 2);
+
+        simulateUserInactivity(game, 2000);
+
+        String unitID = unit1.getString("unit_id");
+        JSONObject response = game.useMove(unitID, 3, 7, true, true);
+
+
+        JSONObject tileMetaData = game.getTile(3, 7);
+        assertEquals(tileMetaData.get("tile_id"), response.get("tile_id"));
+
+
+        simulateUserInactivity(game, 2000);
     }
+
+
+
 
     @Test
     public void gameModel_successfullyTraversed() {

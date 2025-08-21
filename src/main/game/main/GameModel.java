@@ -28,6 +28,7 @@ import main.utils.MathUtils;
 import main.utils.StringUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static main.game.main.GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED;
 import static main.game.main.GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED;
@@ -1239,8 +1240,8 @@ public class GameModel {
         JSONObject attributes = new JSONObject();
         Set<String> keys = statisticsComponent.getAttributes();
         for (String key : keys) {
-            int base = statisticsComponent.getBase(key);
-            int modified = statisticsComponent.getBonus(key);
+            int base = (int) statisticsComponent.getBase(key);
+            int modified = (int) statisticsComponent.getBonus(key);
             int current = statisticsComponent.getCurrent(key);
             int total = statisticsComponent.getTotal(key);
             JSONObject attribute = new JSONObject();
@@ -1254,10 +1255,12 @@ public class GameModel {
 
 
         JSONArray abilities = new JSONArray();
-        for (String key : statisticsComponent.getOtherAbility()) { abilities.add(key); }
+        abilities.addAll(statisticsComponent.getOtherAbility());
         response.put("abilities", abilities);
         response.put("basic_ability", statisticsComponent.getBasicAbility());
-        response.put("passive_ability", statisticsComponent.getPassiveAbility());
+        response.put("passive_ability", statisticsComponent.getTraitAbility());
+        response.put("reaction_ability", statisticsComponent.getReactionAbility());
+        response.put("slot_ability", statisticsComponent.getOtherAbility());
         response.put("other_ability", statisticsComponent.getOtherAbility());
 
         JSONObject tags = new JSONObject();
@@ -1330,45 +1333,12 @@ public class GameModel {
 
     public JSONObject getAbility(JSONObject request) {
         String ability = request.getString("ability");
-        JSONArray results = EmeritusDatabase.getInstance().getAbility(ability);
+        JSONObject results = AbilityTable.getInstance().getAbilityData(ability);
         if (results.isEmpty()) {
             return new JSONObject().fluentPut("error", "no abilities found");
         }
-        if (results.size() > 1) {
-            return new JSONObject().fluentPut("error", "more than 1 ability with name similar to " + ability);
-        }
-        JSONObject sourceData = results.getJSONObject(0);
 
-        JSONObject result = new JSONObject();
-        for (String key : sourceData.keySet()) {
-            Object value = sourceData.get(key);
-            if (value instanceof JSONObject || value instanceof  JSONArray) {
-                continue;
-            }
-            result.put(key, value);
-        }
-
-        // Get damage potential. Since no unit info is provided, use heuristic
-        JSONArray rawDamageInputMap = sourceData.getJSONArray("damage");
-        JSONObject damageMap = new JSONObject();
-        for (int i = 0; i < rawDamageInputMap.size(); i++) {
-            String[] tokens = rawDamageInputMap.getString(i).split("\\s+");
-            double valuePart = parseNumericToDouble(tokens[0]);
-            String statisticPart = tokens[tokens.length - 1];
-            if (tokens.length == 3) {
-                String magnitude = tokens[1];
-            }
-            double currentValue = (double) damageMap.getOrDefault(statisticPart, 0d);
-            damageMap.put(statisticPart, currentValue + valuePart);
-        }
-        result.put("damage", damageMap);
-
-
-//        AbilityDamageReport adr = new AbilityDamageReport(null, ability, null);
-//        Map<String, Float> finalDamageMap = adr.getFinalDamageMap();
-//        Map<String, Float> upperDamageMap = adr.getUpperDamageMap();
-//        Map<String, Float> lowerDamageMap = adr.getLowerDamageMap();
-        return result;
+        return results;
     }
     /**
      * Attempts to place a unit on a tile using the provided {@link JSONObject} input.
@@ -1414,7 +1384,7 @@ public class GameModel {
     public JSONObject setUnit(JSONObject request) {
         String tileID = getTile(request);
         String unitID = request.getString("unit_id");
-        String teamID = (String) request.getOrDefault("team_id", "neutral");
+        String teamID = request.getString("team_id");
 
         Entity tileEntity = getEntityWithID(tileID);
         if (tileEntity == null) { return null; }
@@ -1433,6 +1403,8 @@ public class GameModel {
 
         mSpeedQueue.add(unitID);
 //        mInitiativeQueue.add(unitID);
+        if (teamID == null) { teamID = "single_person_team_" + unitID; }
+
         mGameState.addUnitToTeam(unitID, teamID);
 
 //        mSpeedQueue.update();
@@ -1752,6 +1724,7 @@ public class GameModel {
         request.put(RESPECTFULLY, respectfully);
         return request;
     }
+
     /**
      * Constructs a directed tile graph representing all reachable tiles from a given origin within a specified range.
      *
@@ -1781,19 +1754,7 @@ public class GameModel {
      * @return a directed graph of reachable tiles within the specified range and constraints, or an empty map if none are reachable
      */
     public JSONArray getTilesInMovementRange(JSONObject request) {
-//        String tileID = request.getString(START_TILE_ID);//getTile(request);
-        String tileID = (String) request.getOrDefault(START_TILE_ID, getTile(request));//getTile(request);
-        int range = request.getIntValue(RANGE);
-        boolean respectfully = request.getBooleanValue(RESPECTFULLY, true);
-
-        Map<String, String> graph = mTileMap.createDirectedGraph(tileID, range, respectfully);
-        List<String> inMovementRange = new ArrayList<>(graph.keySet());
-        JSONArray result = new JSONArray(inMovementRange);
-        return result;
-    }
-
-    public JSONArray getTilesInMovementRangeV2(JSONObject request) {
-        String tileID = (String) getTile(request);
+        String tileID = getTile(request);
         int range = request.getIntValue("range");
         boolean respect = request.getBooleanValue("respect", true);
 
@@ -1802,9 +1763,6 @@ public class GameModel {
         JSONArray result = new JSONArray(inMovementRange);
         return result;
     }
-
-
-
 
     private static final String START_TILE_ID = "start_tile_id";
     private static final String END_TILE_ID = "end_tile_id";
@@ -2090,23 +2048,25 @@ public class GameModel {
      * @param request A {@link JSONObject} containing the unit ID, statistic name, and new value.
      * @return A {@link JSONObject} with updated statistics or an error message.
      */
-    public JSONObject setStatisticForUnit(JSONObject request) {
-
+    public JSONObject setBaseStatForUnit(JSONObject request) {
         String unitID = request.getString("unit_id");
         String statistic = request.getString("statistic");
         int value = request.getIntValue("value");
+        boolean fill = request.getBooleanValue("fill", false);
 
+        // Validate request
         Entity unitEntity = getEntityWithID(unitID);
         if (unitEntity == null) {
             return new JSONObject().fluentPut("error", "Invalid unit or scaling");
         }
-
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         if (statisticsComponent == null) {
             return new JSONObject().fluentPut("error", "No statistics component found");
         }
 
-        statisticsComponent.setStatistic(statistic, value);
+        // Process request
+        statisticsComponent.putBaseStat(statistic, value);
+        if (fill) { statisticsComponent.setResourceStat(statistic, value); }
 
         JSONObject result = getStatisticsFromUnit(request);
 
@@ -2376,8 +2336,8 @@ public class GameModel {
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
         int total = statisticsComponent.getTotal(attribute);
-        int base = statisticsComponent.getBase(attribute);
-        int bonus = statisticsComponent.getBonus(attribute);
+        int base = (int) statisticsComponent.getBase(attribute);
+        int bonus = (int) statisticsComponent.getBonus(attribute);
         int current = statisticsComponent.getCurrent(attribute);
         int missing = statisticsComponent.getMissing(attribute);
 
@@ -2393,93 +2353,135 @@ public class GameModel {
 
 
     /**
-     * Computes the total resource costs associated with using a specific ability by a given unit.
+     * Computes the resource costs required to use a given ability for a specific user.
      * <p>
-     * The method interprets each cost entry from the ability's definition and calculates the final
-     * cost values based on static values or dynamic scaling factors (e.g., scaling with another stat).
-     * The result is returned as a {@link JSONObject} mapping resource names (e.g., "mana", "hp")
-     * to the total computed cost.
-     * </p>
-     *
-     * <p>
-     * Cost formats supported in the ability definition (via {@code AbilityTable}):
+     * This method looks up all cost-related keys for the ability (keys containing ".cost")
+     * from the {@link AbilityTable}. Each cost entry may be either:
      * <ul>
-     *     <li>{@code "25 hp"} – flat cost of 25 to the "hp" resource</li>
-     *     <li>{@code "10% of STR hp"} – 10% of the unit's STR stat applied as cost to "hp"</li>
-     *     <li>{@code "-15% of MANA mp"} – 15% of the unit's MANA stat deducted from "mp"</li>
+     *   <li>A flat value (e.g., {@code mana.cost} = 10)</li>
+     *   <li>A scaling value based on a statistic (e.g., {@code mana.cost.strength} = 0.2 * Strength)</li>
      * </ul>
+     * The costs are accumulated per resource (e.g., mana, health, stamina) and returned as a JSON object.
      * </p>
      *
-//     * @param  A {@link JSONObject} containing:
-     *                <ul>
-     *                    <li>{@code "id"} or {@code "unit_id"} – the ID of the unit performing the ability</li>
-     *                    <li>{@code "ability"} – the name of the ability to evaluate costs for</li>
-     *                </ul>
-     * @return A {@link JSONObject} mapping each affected resource (e.g., "hp", "mp") to its calculated cost
-     *         as a {@code float}.
+     * <h3>Example</h3>
+     * <pre>
+     * {
+     *   "mana": 15.0,
+     *   "health": 5.0
+     * }
+     * </pre>
      *
-     * @throws IllegalArgumentException if cost data is malformed or the ability is undefined.
+     * @param userID  the ID of the entity (user) attempting to use the ability
+     * @param ability the ability identifier whose resource costs should be calculated
+     * @return a {@link JSONObject} mapping each resource (e.g., "mana", "health")
+     *         to the total computed cost as a {@code float}
      *
-     * @see AbilityTable#getCost(String)
-     * @see StatisticsComponent#getScaling(String, String)
+     * @throws IllegalArgumentException if the user entity cannot be found or
+     *          required, statistics are missing
      */
-    public JSONObject getCostMap(String userID, String ability) {
-        return getCostOrDamageMap(userID, ability, true);
-    }
-
-    public JSONObject getDamageMap(String userID, String ability) {
-        return getCostOrDamageMap(userID, ability, false);
-    }
-
-    public JSONObject getCostOrDamageMap(String userID, String ability, boolean isCost) {
+    public JSONObject getCosts(String userID, String ability) {
         Entity userEntity = getEntityWithID(userID);
+        final String indication = ".cost";
         StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
-        JSONObject damageMap = new JSONObject();
+        JSONObject costs = new JSONObject();
 
-        JSONArray resourcesList = null;
-        if (isCost) {
-            resourcesList = AbilityTable.getInstance().getResourcesToCost(ability);
-        } else {
-            resourcesList = AbilityTable.getInstance().getResourcesToDamage(ability);
-        }
+        Set<String> keys = AbilityTable.getInstance()
+                .getKeys(ability)
+                .stream()
+                .filter(e -> e.contains(indication))
+                .collect(Collectors.toSet());
 
-        for (int i = 0; i < resourcesList.size(); i++) {
-            String resource = resourcesList.getString(i);
-            JSONObject resourceToCostOrDamageMap = null;
-            if (isCost) {
-                resourceToCostOrDamageMap =  AbilityTable.getInstance().getResourceCost(ability, resource);
+        keys.forEach(e -> {
+            String[] partitions = e.split("\\.");
+
+            String resource = partitions[0];
+            String identifier = partitions[1];
+            String scalar = partitions.length > 2 ? partitions[2] : "";
+            float value = AbilityTable.getInstance().getFloat(ability, e);
+
+            float scaling = 0;
+            if (!scalar.isEmpty()) {
+                float total = statisticsComponent.getTotal(scalar);
+                scaling = total * value;
             } else {
-                resourceToCostOrDamageMap =  AbilityTable.getInstance().getResourceDamage(ability, resource);
+                scaling = value;
             }
 
-            double value = 0;
-            double result = 0;
-            double constant = 0;
-            for (String resourceToCostOrDamage : resourceToCostOrDamageMap.keySet()) {
-                if (!resourceToCostOrDamage.contains(".")) {
-                    constant = resourceToCostOrDamageMap.getDoubleValue("constant");
-                    continue;
-                }
-                String scaling = resourceToCostOrDamage.substring(0, resourceToCostOrDamage.indexOf("."));
-                String statistic = resourceToCostOrDamage.substring(scaling.length() + 1);
-                double magnitude = resourceToCostOrDamageMap.getDoubleValue(resourceToCostOrDamage);
+            float current = (float) costs.getOrDefault(resource, 0f);
+            costs.put(resource, current + scaling);
+        });
 
-                switch (scaling) {
-                    case "base" -> value = statisticsComponent.getBase(statistic);
-                    case "bonus" -> value = statisticsComponent.getBonus(statistic);
-                    case "total" -> value = statisticsComponent.getBase(statistic) + statisticsComponent.getBonus(statistic);
-                    case "current" -> value = statisticsComponent.getCurrent(statistic);
-                    case "missing" -> value = statisticsComponent.getMissing(statistic);
-                }
-                result += value * magnitude;
-            }
-            damageMap.put(resource, constant + result);
-        }
 
-        return damageMap;
+        return costs;
     }
 
 
+    /**
+     * Calculates the damage values dealt by a specific ability for a given user.
+     * <p>
+     * This method retrieves all damage-related entries (keys containing ".damage")
+     * for the specified ability from the {@link AbilityTable}. Each damage entry may be:
+     * <ul>
+     *   <li>A flat damage value (e.g., {@code fire.damage} = 30)</li>
+     *   <li>A scaling damage value based on a statistic
+     *       (e.g., {@code fire.damage.intelligence} = 0.5 * Intelligence)</li>
+     * </ul>
+     * The resulting damages are accumulated per resource (e.g., fire, ice, physical)
+     * and returned as a JSON object.
+     * </p>
+     *
+     * <h3>Example</h3>
+     * <pre>
+     * {
+     *   "fire": 45.0,
+     *   "physical": 20.0
+     * }
+     * </pre>
+     *
+     * @param userID  the ID of the entity (user) performing the ability
+     * @param ability the ability identifier whose damage values should be calculated
+     * @return a {@link JSONObject} mapping each damage type (e.g., "fire", "physical")
+     *         to the total computed damage as a {@code float}
+     *
+     * @throws IllegalArgumentException if the user entity cannot be found or
+     *          required, statistics are missing
+     */
+    public JSONObject getDamages(String userID, String ability) {
+        Entity userEntity = getEntityWithID(userID);
+        final String indicator = ".damage";
+        StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
+        JSONObject damages = new JSONObject();
+
+        Set<String> keys = AbilityTable.getInstance()
+                .getKeys(ability)
+                .stream()
+                .filter(e -> e.contains(indicator))
+                .collect(Collectors.toSet());
+
+        keys.forEach(e -> {
+            String[] partitions = e.split("\\.");
+
+            String resource = partitions[0];
+            String identifier = partitions[1];
+            String scalar = partitions.length > 2 ? partitions[2] : "";
+            float value = AbilityTable.getInstance().getFloat(ability, e);
+
+            float scaling = 0;
+            if (!scalar.isEmpty()) {
+                float total = statisticsComponent.getTotal(scalar);
+                scaling = total * value;
+            } else {
+                scaling = value;
+            }
+
+            float current = (float) damages.getOrDefault(resource, 0f);
+            damages.put(resource, current + scaling);
+        });
+
+
+        return damages;
+    }
 
     /**
      * Attempts to validate and optionally deduct the resource costs required to use a given ability.
@@ -2505,7 +2507,7 @@ public class GameModel {
      * Logs important information about the cost validation and payment process using the internal logger.
      *
      * @see AbilityTable#getCost(String)
-     * @see StatisticsComponent#toResource(String, float)
+     * @see StatisticsComponent
      */
     public JSONObject payAbilityCost(JSONObject request) {
         String unitID = (String) request.getOrDefault("id", request.get("unit_id"));
@@ -2516,22 +2518,22 @@ public class GameModel {
         StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
 
         mLogger.info("Started gathering cost requirements for {}", ability);
-        JSONObject costMap = getCostMap(unitID, ability);
+        JSONObject costs = getCosts(unitID, ability);
         mLogger.info("Finished gathering cost requirements for {}", ability);
 
-        for (String attribute : costMap.keySet()) {
-            double cost = costMap.getDoubleValue(attribute);
-            int currentValue = statisticsComponent.getCurrent(attribute);
+        for (String statistic : costs.keySet()) {
+            double cost = costs.getDoubleValue(statistic);
+            int currentValue = statisticsComponent.getCurrent(statistic);
             if (currentValue >= cost) { continue; }
-            mLogger.info("{} is unable to pay for {} because of {}", userEntity, ability, attribute);
-            return new JSONObject().fluentPut("error", "Can't pay " + attribute + " cost requirement");
+            mLogger.info("{} is unable to pay for {} because of {}", userEntity, ability, statistic);
+            return new JSONObject().fluentPut("error", "Can't pay " + statistic + " cost requirement");
         }
         mLogger.info("Finished checking cost requirements for {}", ability);
 
         if (commit) {
             mLogger.info("Started paying cost requirements for {}", ability);
-            for (String attribute : costMap.keySet()) {
-                double cost = - costMap.getDoubleValue(attribute);
+            for (String attribute : costs.keySet()) {
+                float cost = costs.getFloatValue(attribute);
                 int current = statisticsComponent.getCurrent(attribute);
                 statisticsComponent.removeFromResource(attribute, cost);
                 mLogger.info("Payed {} out of {} to use {}", Math.abs(cost), Math.abs(current), ability);
@@ -2539,7 +2541,7 @@ public class GameModel {
             mLogger.info("Finished paying cost requirements for {}", ability);
         }
 
-        return costMap;
+        return costs;
     }
 
 //    public JSONObject canPayAbilityCosts(String userUnitID, String ability) {
@@ -2689,25 +2691,24 @@ public class GameModel {
     }
 
     public JSONObject useMove(JSONObject request) {
+        // Unwind parameters
         String unitID = request.getString("unit_id");
-        String toTileID = getTile(request);
+        String destinationTileID = getTile(request);
         boolean commit = request.getBooleanValue("commit", false);
+        boolean ignoreRules = request.getBooleanValue("ignore_rules", false);
 
+        // Get data stores
         Entity unitEntity = getEntityWithID(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
 
-        if (toTileID == null) {
+        if (destinationTileID == null) {
             return new JSONObject().fluentPut("error", "No Tile Specified");
         }
 
-        if (unitID == null) {
-            return new JSONObject().fluentPut("error", "No Unit Selected");
-        }
-
-        int move = statisticsComponent.getTotalMovement();
-        int climb = statisticsComponent.getTotalClimb();
+        int move = ignoreRules ? 999 : statisticsComponent.getTotalMovement();
+        int climb = ignoreRules ? 999 : statisticsComponent.getTotalClimb();
         String fromTileID = movementComponent.getCurrentTileID();
 
         // Get Movement Range
@@ -2716,7 +2717,7 @@ public class GameModel {
         request.put("range", move);
         request.put("respect", true);
 
-        JSONArray response = getTilesInMovementRangeV2(request);
+        JSONArray response = getTilesInMovementRange(request);
         List<String> range = response.toJavaList(String.class);
         movementComponent.stageMovementRange(range);
         mLogger.info("Updated range for {}, {} tiles", unitEntity, range.size());
@@ -2726,7 +2727,7 @@ public class GameModel {
         request = new JSONObject();
         request.put("start_tile_id", fromTileID);
         request.put("range", -1);
-        request.put("end_tile_id", toTileID);
+        request.put("end_tile_id", destinationTileID);
         request.put("respect", true);
 
         response = getTilesInMovementPath(request);
@@ -2735,8 +2736,8 @@ public class GameModel {
         mLogger.info("Updated path for {}, {} tiles", unitEntity, path.size());
 
 
-        movementComponent.stageTarget(toTileID);
-        mLogger.info("Updated target tile for {}, {}", unitEntity, toTileID);
+        movementComponent.stageTarget(destinationTileID);
+        mLogger.info("Updated target tile for {}, {}", unitEntity, destinationTileID);
 
         // try executing action only if specified
         // - Target is not null
@@ -2770,7 +2771,10 @@ public class GameModel {
 
         getGameState().setCloseAllSubControllers(true);
 
-        return new JSONObject().fluentPut("success", "Moved " + unitID + " from " + fromTileID + " to " + toTileID);
+
+        JSONObject response2 = new JSONObject();
+        response2.put("tile_id", destinationTileID);
+        return response2;
     }
 
 
@@ -2879,7 +2883,7 @@ public class GameModel {
         if (passive != null) {
             boolean isRealAbility = AbilityTable.getInstance().exists(passive);
             if (isRealAbility) {
-                statisticsComponent.putPassiveAbility(passive);
+                statisticsComponent.putTraitAbility(passive);
             } else {
                 return new JSONObject().fluentPut("error", "Unable to parse " + passive);
             }
@@ -2908,19 +2912,29 @@ public class GameModel {
     public JSONObject createUnit(JSONObject request) {
         String unit = request.getString("unit");
         String nickname = request.getString("nickname");
-        boolean isAI = request.getBooleanValue("ai", true);
+        boolean isAI = request.getBooleanValue("ai", false);
+        String tileID = getTile(request);
 
-        String id = null;
-        if (unit == null || nickname == null) {
-            id = EntityStore.getInstance().createUnit(isAI);
-        } else {
-            id = EntityStore.getInstance().createUnit(unit, nickname, isAI);
+        Set<String> units = EntityStore.getInstance().getUnits();
+        if (unit == null) { unit = new ArrayList<>(units).get(mRandom.nextInt(units.size())); }
+
+        String unitID = EntityStore.getInstance().createUnit(unit, nickname, isAI);
+        JSONObject result = new JSONObject();
+        result.put("unit_id", unitID);
+        result.put("id", unitID);
+
+        if (tileID != null) {
+            JSONObject unitPlacementRequest = new JSONObject();
+            unitPlacementRequest.put("tile_id", tileID);
+            unitPlacementRequest.put("unit_id", unitID);
+
+            JSONObject unitPlacementResponse = setUnit(unitPlacementRequest);
+            if (unitPlacementResponse != null) { result.put("tile_id", tileID); }
         }
 
-        mResponse.clear();
-        mResponse.put("id", id);
-        return mResponse;
+        return result;
     }
+
     public JSONObject createCpuUnit(JSONObject request) { request.put("ai", true); return createUnit(request); }
     public JSONObject createUserUnit(JSONObject request) { request.put("ai", false); return createUnit(request); }
     /**
@@ -3127,14 +3141,14 @@ public class GameModel {
         String actedOnEntityID = request.getString("acted_on_unit_id");
 
         JSONObject abilityData = EmeritusDatabase.getInstance().getAbility(ability).getJSONObject(0);
-        JSONObject damageMap = getDamageMap(actorEntityID, ability);
+        JSONObject damages = getDamages(actorEntityID, ability);
 
         Entity actedOnEntity = getEntityWithID(actedOnEntityID);
         StatisticsComponent actedOnStatisticsComponent = actedOnEntity.get(StatisticsComponent.class);
         mLogger.info("Started dealing damage with {} to {} ", ability, actedOnEntity);
 
-        for (String attribute : damageMap.keySet()) {
-            int finalDamage = damageMap.getIntValue(attribute);
+        for (String attribute : damages.keySet()) {
+            int finalDamage = damages.getIntValue(attribute);
             actedOnStatisticsComponent.removeFromResource(attribute, finalDamage);
 
             String displayText = (finalDamage < 0 ? "+" : "") + Math.abs(finalDamage);
@@ -3165,7 +3179,7 @@ public class GameModel {
         ActionsComponent actionsComponent = actorEntity.get(ActionsComponent.class);
         actionsComponent.setHasFinishedUsingAbility(true);
 
-        return damageMap;
+        return damages;
     }
 
     public JSONObject pause() {
@@ -3192,7 +3206,6 @@ public class GameModel {
 
         return result;
     }
-
     public String getAbilityDescription(String ability) {
         String description = AbilityTable.getInstance().getDescription(ability);
         return description;
@@ -3243,4 +3256,14 @@ public class GameModel {
 
 
     public boolean consumeCloseAllSubControllers() { return getGameState().consumeCloseAllSubControllers(); }
+
+    public JSONObject raiseTile(JSONObject request) {
+        String tileID = getTile(request);
+
+        Entity tileEntity = getEntityWithID(tileID);
+        TileComponent tileComponent = tileEntity.get(TileComponent.class);
+//        tileComponent.addSolid();
+
+        return updateLayering(request);
+    }
 }
