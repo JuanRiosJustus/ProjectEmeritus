@@ -50,14 +50,14 @@ public class EscapablePanel extends GamePanel {
         int bannerBackButtonHeight = bannerHeight;
         mBannerBackButton = new BeveledButton(bannerBackButtonWidth, bannerBackButtonHeight);
         mBannerBackButton.setText("X");
-        mBannerBackButton.setBackgroundColor(color);
+        mBannerBackButton.setBackground(color);
 
 
         int bannerTextFieldWidth = bannerWidth - bannerBackButtonWidth;
         int bannerTextFieldHeight = bannerHeight;
         mBannerTextField = new BeveledButton(bannerTextFieldWidth, bannerTextFieldHeight);
         mBannerTextField.setText("Banner");
-        mBannerTextField.setBackgroundColor(color);
+        mBannerTextField.setBackground(color);
 
         bannerRow.setPadding(new Insets(1, 1, 1, 1));
         bannerRow.getChildren().addAll(mBannerBackButton, mBannerTextField);
@@ -107,10 +107,10 @@ public class EscapablePanel extends GamePanel {
         Color color = mColor;
 
         int newButtonWidth = (int) (mButtonWidth * .2);
-        BeveledButton leftButton = new BeveledButton(newButtonWidth, mButtonHeight, "", color);
+        BeveledButton leftButton = new BeveledButton(newButtonWidth, mButtonHeight, color);
 
         int rightButtonWidth = (int) (mButtonWidth - newButtonWidth);
-        BeveledButton rightButton = new BeveledButton(rightButtonWidth, mButtonHeight, name, color);
+        BeveledButton rightButton = new BeveledButton(rightButtonWidth, mButtonHeight, color);
 
         hBox.getChildren().addAll(leftButton, rightButton);
 

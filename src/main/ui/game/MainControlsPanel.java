@@ -28,6 +28,7 @@ public class MainControlsPanel extends GamePanel {
         super(x, y, width, height);
 
         // Ensure only 4 buttons are visible
+        width = (int) (width * .99);
         mButtonHeight = height / MAX_VISIBLE_BUTTONS;
         mButtonWidth = width;
 
@@ -84,21 +85,21 @@ public class MainControlsPanel extends GamePanel {
 
         if (useCheckbox) {
             int newButtonWidth = (int) (mButtonWidth * .8);
-            button = new BeveledButton(newButtonWidth, (int) mButtonHeight, name, color);
+            button = new BeveledButton(newButtonWidth, mButtonHeight, color);
             button.setText(name);
-            button.setBorder((int) (mButtonWidth * .02f), (int) (mButtonHeight * .035f), color);
-            button.setBackgroundColor(color);
+//            button.setBorder((int) (mButtonWidth * .02f), (int) (mButtonHeight * .035f), color);
+            button.setBackground(color);
 
-            int checkboxWidth = (int) (mButtonWidth - newButtonWidth);
+            int checkboxWidth = mButtonWidth - newButtonWidth;
             checkBox = new BeveledCheckbox(checkboxWidth, (int) mButtonHeight, color);
             checkBox.setPrefSize(checkboxWidth, mButtonHeight);
             checkBox.setMinSize(checkboxWidth, mButtonHeight);
             checkBox.setMaxSize(checkboxWidth, mButtonHeight);
         } else {
-            button = new BeveledButton((int) mButtonWidth, (int) mButtonHeight);
+            button = new BeveledButton(mButtonWidth, mButtonHeight);
             button.setText(name);
-            button.setBorder((int) (mButtonWidth * .02f), (int) (mButtonHeight * .035f), color);
-            button.setBackgroundColor(color);
+//            button.setBorder((int) (mButtonWidth * .02f), (int) (mButtonHeight * .035f), color);
+            button.setBackground(color);
         }
 
         hBox.getChildren().add(button);

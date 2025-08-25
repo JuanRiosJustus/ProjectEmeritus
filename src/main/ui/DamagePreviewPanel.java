@@ -86,7 +86,7 @@ public class DamagePreviewPanel extends BevelStyle {
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
 
-        BeveledButton container = new BeveledButton(width, height, "", color);
+        BeveledButton container = new BeveledButton(width, height, color);
         container.getUnderlyingButton().setGraphic(mContentPanel);
         getChildren().add(container);
 

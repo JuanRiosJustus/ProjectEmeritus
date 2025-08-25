@@ -9,16 +9,15 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
         import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import main.game.stores.ColorPalette;
 import main.constants.JavaFXUtils;
-import main.game.stores.FontPool;
 
 public class BeveledButton extends BevelStyle {
     protected Button mButton = null;
+    private boolean mDisabledBorder = false;
 
-    public BeveledButton(int width, int height) { this(width, height, "", ColorPalette.getRandomColor()); }
-    public BeveledButton(int width, int height, String text, Color baseColor) {
+    public BeveledButton(int width, int height) { this(width, height, ColorPalette.getRandomColor()); }
+    public BeveledButton(int width, int height, Color baseColor) {
         super(width, height, baseColor);
 
         // ** Create Background Button **
@@ -26,12 +25,16 @@ public class BeveledButton extends BevelStyle {
         mButton.setPrefSize(width, height);
         mButton.setMinSize(width, height);
         mButton.setMaxSize(width, height);
-        mButton.setPadding(new Insets(height * 0.1));
+        mButton.setPadding(new Insets(height * 0.05, width * 0.05, height * 0.05, width * 0.05));
         mButton.setFocusTraversable(false);
 
         // ** Apply Borders & Background **
-        setBorder((int) (width * 0.025), (int) (height * 0.05), baseColor);
-        mTextNode.setFont(FontPool.getInstance().getFontForHeight((int) (height * .8)));
+        enableBevelEffect();
+        enableMouseEnteredAndExitedEffect();
+
+        mTextNode = new BevelText(width, height);
+        mTextNodeContainer.getChildren().clear();
+        mTextNodeContainer.getChildren().add(mTextNode);
 
         mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor));
 //
@@ -42,8 +45,8 @@ public class BeveledButton extends BevelStyle {
         getChildren().addAll(mButton);
 
         // 🔹 **Hover Effects**
-        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
-        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
+//        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
+//        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
 
         // 🔹 **Pressed Effect (Shrink & Move Text)**
         mButtonPressedHandler = (EventHandler<Event>) event -> {
@@ -66,8 +69,30 @@ public class BeveledButton extends BevelStyle {
             mTextNode.setScaleY(originalScale);
             mTextNode.setTranslateY(0);
         };
+
+
         // 🔹 **Release Effect (Restore Text & Button Scale)**
         JavaFXUtils.addMouseReleasedEvent(mButton, mButtonReleasedHandler);
+    }
+
+
+    public void disableBevelEffect() { mButton.setBorder(null); }
+    public void enableBevelEffect() { setBorder((int) (mWidth * 0.025), (int) (mHeight * 0.05), mBaseColor); }
+    public void disableMouseEnteredAndExitedEffect() {
+//        JavaFXUtils.removeMousePressedEvent(mButton, mButtonPressedHandler);
+//        JavaFXUtils.removeMouseReleasedEvent(mButton, mButtonReleasedHandler);
+        JavaFXUtils.removeMouseEnteredEvent(mButton, mButtonEnteredHandler);
+        JavaFXUtils.removeMouseExitedEvent(mButton, mButtonExitedHandler);
+
+//        mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor));
+//        mButton.setBackground(new Background(new BackgroundFill(mBaseColor, CornerRadii.EMPTY, Insets.EMPTY)));
+    }
+    public void enableMouseEnteredAndExitedEffect() {
+        mButtonEnteredHandler = e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor.brighter()));
+        JavaFXUtils.addMouseEnteredEvent(mButton, mButtonEnteredHandler);
+
+        mButtonExitedHandler = e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor));
+        JavaFXUtils.addMouseExitedEvent(mButton, mButtonExitedHandler);
     }
 
     public void setBorder(int borderWidth, int borderHeight, Color baseColor) {
@@ -118,7 +143,7 @@ public class BeveledButton extends BevelStyle {
         return border;
     }
 
-    public String getText() { return mTextNode.getText(); }
+    public String getButtonText() { return mTextNode.getText(); }
     //    public void setText(String te)
     public Button getUnderlyingButton() {
         return mButton;
@@ -129,45 +154,29 @@ public class BeveledButton extends BevelStyle {
     }
 
 
-    public void setBackgroundColor(Color color) {
+    public void setBackground(Color color) {
         mBaseColor = color;
         mButton.setBorder(getBordering(mWidth, mHeight, mBaseColor));
         mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor));
-        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor.brighter())));
-        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor)));
+//
+////        disableBevelEffect();
+////        disableMouseEnteredAndExitedEffect();
+//        enableMouseEnteredAndExitedEffect();
     }
 
-    public void setToolTip(Tooltip toolTip) { mButton.setTooltip(toolTip); }
+    public void setTooltip(Tooltip toolTip) {
+//        mTextNode.setMouseTransparent(true);
+//        mTextNode.setFocusTraversable(false);
+        setMouseTransparent(false);
+        mButton.setMouseTransparent(false);
+        mButton.setTooltip(toolTip);
+    }
     public void setTextAlignment(Pos pos) {
         mTextNodeContainer.setAlignment(pos);
     }
 
-//    public void setFitText(String text) {
-//        mTextNode.setFont(FontPool.getInstance().getFitFont(text, mTextNode.getFont(), mWidth * .9, mHeight));
-//        mTextNode.setText(text);
-//        mTextNode.setEffect(mDropShadow);
-//    }
-
     public void setFitText(String text) {
-//        double maxSize = JavaFXUtils.findMaxFontSize(text, mWidth, mHeight, mTextNode.getFont().getFamily());
-//        mTextNode.setFont(FontPool.getInstance().getFont(maxSize));
-//        mTextNode.setText(text);
-//        mTextNode.setEffect(mDropShadow);
-//        int current = (int) mTextNode.getFont().getSize();
-
 
         mTextNode.setFitText(text);
-//        double fontMultiplier = 0.75;
-//        Font font = FontPool.getInstance().getFitFont(text, mTextNode.getFont(), mWidth * fontMultiplier, mHeight);
-//        mTextNode.setFont(font);
-//        mTextNode.setText(text);
-    }
-
-    public void setFitText(String text, double multiplier) {
-        mTextNode.setFitText(text, multiplier);
-    }
-    public void setFont(Font font, double bFactor) {
-        mTextNode.setFont(font);
-        mTextNode.setExtrusionFactor(bFactor);
     }
 }

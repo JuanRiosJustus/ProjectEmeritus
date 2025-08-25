@@ -143,7 +143,7 @@ public class InputHandler {
 
         String selectedAbility = null;
         if (currentEntity != null) {
-            selectedAbility = currentEntity.get(AbilityComponent.class).getAbility();
+            selectedAbility = currentEntity.get(AbilityComponent.class).getStagedAbility();
         }
 
 
@@ -220,7 +220,7 @@ public class InputHandler {
         shouldPublish = mAbilityMonitor.setOnDifference(isAbilityPanelOpen, isHoveredTileChanged, isPressed, selectedAbility);
         if (isAbilityPanelOpen && shouldPublish && isUserCharacter) {
             AbilityComponent abilityComponent = currentEntity.get(AbilityComponent.class);
-            String abilitySelected = abilityComponent.getAbility();
+            String abilitySelected = abilityComponent.getStagedAbility();
 
             JSONObject request = new JSONObject();
             request.put("unit_id", currentEntityID);

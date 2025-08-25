@@ -8,7 +8,7 @@ public class BeveledCheckbox extends BeveledButton {
     private boolean isChecked = false;
 
     public BeveledCheckbox(int width, int height, Color baseColor) {
-        super(width, height, "", baseColor);
+        super(width, height, baseColor);
 
         // 🔹 **Hover Effects (Maintains Text Outline)**
         JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
@@ -23,7 +23,7 @@ public class BeveledCheckbox extends BeveledButton {
 
     public void setChecked(boolean value) {
         isChecked = value;
-        mTextNode.setText(isChecked ? "X" : "");
+        mTextNode.setContent(isChecked ? "X" : "");
         if (isChecked) {
 //            mDropShadow.setInput(mInnerShadow);
 //            mTextNode.setEffect(mDropShadow);

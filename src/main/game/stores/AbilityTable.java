@@ -3,6 +3,7 @@ package main.game.stores;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import main.constants.Constants;
 import main.logging.EmeritusLogger;
@@ -13,7 +14,6 @@ import com.alibaba.fastjson2.JSONObject;
 
 public class AbilityTable {
     private static AbilityTable instance = null;
-    private final Map<String, JSONObject> mActionsMap = new HashMap<>();
     private final Map<String, JSONObject> mAbilities = new HashMap<>();
     private final Map<String, Float> mDebugMap = new HashMap<>();
     private static final String ATTRIBUTE_KEY = "attribute_key";
@@ -60,16 +60,13 @@ public class AbilityTable {
 
     public int getArea(String ability) {
         JSONObject data = getOrCacheResult(ability);
-        int result = data.getIntValue("area");
+        int result = data.getIntValue("area", 0);
         return result;
     }
 
     public int getRange(String ability) {
         JSONObject data = getOrCacheResult(ability);
-        if (data == null) {
-            System.out.println("jjoj");
-        }
-        int result = data.getIntValue("range");
+        int result = data.getIntValue("range", 0);
         return result;
     }
 
@@ -255,26 +252,51 @@ public class AbilityTable {
 //    }
 
 
-    public boolean isDamagingAbility(String action) {
-        JSONObject data = mActionsMap.get(action);
-//        if (data == null) { return false; }
-//        double damage = data.toMap()
-//                .keySet()
-//                .stream()
-//                .filter(o -> o.contains(DAMAGE_KEY))
-//                .mapToDouble(o -> {
-//                    double value = data.getDouble(o);
-//                    return value;
-//                }).sum();
-//        return damage > 0;
-        return true;
+//    public boolean isDamagingAbility(String action) {
+//        JSONObject data = mActionsMap.get(action);
+////        if (data == null) { return false; }
+////        double damage = data.toMap()
+////                .keySet()
+////                .stream()
+////                .filter(o -> o.contains(DAMAGE_KEY))
+////                .mapToDouble(o -> {
+////                    double value = data.getDouble(o);
+////                    return value;
+////                }).sum();
+////        return damage > 0;
+//        return true;
+//    }
+
+
+
+    public List<String> getStatisticKeysV1(String ability) {
+        JSONObject data = mAbilities.get(ability);
+
+        List<String> keys = data.keySet()
+                .stream()
+                .filter(e -> e.startsWith("statistic"))
+                .filter(e -> e.contains("."))
+                .map(e -> e.substring(e.lastIndexOf(".") + 1))
+                .toList();
+        return keys;
     }
 
+    public Map<String, String> getStatisticKeys(String ability) {
+        JSONObject data = mAbilities.get(ability);
 
+        if (data == null) { return new HashMap<>(); }
 
+        Map<String, String> keys = data.keySet()
+                .stream()
+                .filter(e -> e.startsWith("statistic"))
+                .filter(e -> e.contains("."))
+                .map(k -> Map.entry(k.substring(k.lastIndexOf(".") + 1), k))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        return keys;
+    }
 
     public boolean getMakesPhysicalContact(String action) {
-        JSONObject data = mActionsMap.get(action);
+        JSONObject data = mAbilities.get(action);
         boolean makesContact = data.getBoolean("makes_physical_contact");
         return makesContact;
     }
@@ -318,6 +340,13 @@ public class AbilityTable {
     public Float getFloat(String ability, String key) {
         JSONObject data = getOrCacheResult(ability);
         return data.getFloatValue(key);
+    }
+
+    public boolean isPercentageKey(String ability, String key) {
+        JSONObject data = getOrCacheResult(ability);
+        Object value = data.get(key);
+        if (value instanceof String str) { return str.endsWith("%"); }
+        return false;
     }
 
 

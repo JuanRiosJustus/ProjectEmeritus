@@ -27,6 +27,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
     protected String mSelectedAbility = null;
     protected boolean mWasAbilityJustPressed = false;
 
+    protected GameModel mGameModel = null;
     public AbilitySelectionPanel(int x, int y, int width, int height, Color color, int visibleRows) {
         super(x, y, width, height, color);
 
@@ -85,6 +86,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
         String hoveredTileID = gameModel.getHoveredTileID();
 
         if (activeUnitID == null) { return; }
+        mGameModel = gameModel;
 
 
         mEphemeralObject.clear();
@@ -94,52 +96,61 @@ public class AbilitySelectionPanel extends EscapablePanel {
         clear();
         mLogger.info("Updating ability selection for {}", activeUnitID);
 
-        String basicAbility = response.getString("basic_ability");
-        String reactiveAbility = response.getString("reactive_ability");
-        String traitAbility = response.getString("trait_ability");
-        JSONArray otherAbility = response.getJSONArray("slot_ability");
 
 //        gameModel.setCurrentActiveEntityAbilityToDefault();
 
-        // SETUP ABILITIES
-        JSONArray actions = new JSONArray();
-        actions.add(basicAbility);
-        actions.add(traitAbility);
-        actions.add(traitAbility);
-        for (int i = 0; i < otherAbility.size(); i++) { actions.add(otherAbility.getString(i)); }
-
-        for (int index = 0; index < actions.size(); index++) {
-            String ability = actions.getString(index);
-
-            BeveledButton abilityButton = getOrCreateRow(ability + index);
-            abilityButton.setFont(getFontForHeight(mButtonHeight));
-
-            String additionalContext = "";
-            if (index == 0) {
-                abilityButton.setBackgroundColor(Color.LIGHTGRAY);
-                additionalContext = " (Basic)";
-            } else if (index == 1) {
-                abilityButton.setBackgroundColor(Color.DARKGRAY);
-                additionalContext = " (Trait)";
-            } else {
-                abilityButton.setBackgroundColor(Color.DIMGRAY);
-            }
-            abilityButton.setText(StringUtils.convertSnakeCaseToCapitalized(ability) + additionalContext);
-
-            abilityButton.getUnderlyingButton().setOnMouseReleased(e -> {
-                JSONObject request = new JSONObject();
-
-                request.put("unit_id", activeUnitID);
-                request.put("ability", ability);
-                request.put("tile_id", hoveredTileID);
-                gameModel.useAbility(request);
-                mSelectedAbility = ability;
-            });
-        }
+        JSONObject abilities = response.getJSONObject("abilities");
+        applyAbilities(abilities, activeUnitID, hoveredTileID);
 
         mLogger.info("Finished ability selection for {}", activeUnitID);
     }
 
+    private void applyAbilities(JSONObject abilities, String activeUnitID, String hoveredTileID) {
+        String basic = abilities.getString("basic");
+        String trait = abilities.getString("trait");
+        String reaction = abilities.getString("reaction");
+        JSONArray otherAbility = abilities.getJSONArray("other");
+
+        JSONArray allAbilities = new JSONArray();
+        allAbilities.add(basic);
+        allAbilities.add(trait);
+        allAbilities.add(reaction);
+        for (int i = 0; i < otherAbility.size(); i++) { allAbilities.add(otherAbility.getString(i)); }
+
+        for (int index = 0; index < allAbilities.size(); index++) {
+            String ability = allAbilities.getString(index);
+
+            BeveledButton abilityButton = getOrCreateRow(ability + index);
+            abilityButton.setFont(getFontForHeight(mButtonHeight));
+
+
+            String additionalContext = "";
+            if (ability.equalsIgnoreCase(basic)) {
+                abilityButton.setBackground(mColor);
+                additionalContext = "(Basic)";
+            } else if (ability.equalsIgnoreCase(trait)) {
+                abilityButton.setBackground(mColor);
+                additionalContext = "(Trait)";
+            } else if (ability.equalsIgnoreCase(reaction)) {
+                abilityButton.setBackground(mColor);
+                additionalContext = "(Reaction)";
+            } else {
+                abilityButton.setBackground(mColor);
+            }
+            abilityButton.setText(additionalContext + " " + StringUtils.convertSnakeCaseToCapitalized(ability));
+
+            abilityButton.getUnderlyingButton().setOnMouseReleased(e -> {
+
+                JSONObject request = new JSONObject();
+                request.put("unit_id", activeUnitID);
+                request.put("ability", ability);
+                request.put("tile_id", hoveredTileID);
+
+                mSelectedAbility = ability;
+                if (mGameModel != null) { mGameModel.useAbility(request); }
+            });
+        }
+    }
     public String getCurrentID() { return mCurrentID; }
     public int getCurrentHash() { return mCurrentHash; }
     public String consumeAbilitySelected() {

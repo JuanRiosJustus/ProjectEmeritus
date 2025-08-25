@@ -6,7 +6,6 @@ import javafx.scene.paint.Color;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.GraphicButton;
-import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
 
 public class TimeLinePanelItem extends BevelStyle {
@@ -31,7 +30,7 @@ public class TimeLinePanelItem extends BevelStyle {
 
         int labelWidth = width;
         int labelHeight = height - displayHeight;
-        label = new BeveledButton(labelWidth, labelHeight, "", color);
+        label = new BeveledButton(labelWidth, labelHeight, color);
         label.setFocusTraversable(false);
         label.setFont(getFontForHeight(labelHeight));
         label.setPrefWidth(width); // Ensure full width

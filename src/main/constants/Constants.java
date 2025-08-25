@@ -45,6 +45,7 @@ public class Constants {
 //    public static final String FONT_FILEPATH = file("./res/Born2bSportyFS.otf");\
 //    public static final String FONT_FILEPATH = file("./res/GrapeSoda.ttf");
     public static final String FONT_FILEPATH = file("./res/Lilian.ttf");
+//    public static final String FONT_CLASSPATH = file("/resources/GrapeSoda.ttf");
     public static final String FONT_CLASSPATH = file("/resources/Lilian.ttf");
     public static final String FONT_V2_CLASSPATH = file("/resources/easvhs.ttf");
     public static final String GEMS_SPRITESHEET_PATH = file("res/tiles/gems.png");

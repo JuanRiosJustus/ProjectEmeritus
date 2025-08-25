@@ -2,21 +2,17 @@ package main.ui;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.JavaFXUtils;
 import main.game.main.GameModel;
-import main.game.stores.ColorPalette;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledProgressBar;
 import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
-import main.utils.RandomUtils;
 import main.utils.StringUtils;
-import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 
 import java.util.LinkedHashMap;
@@ -61,13 +57,13 @@ public class TargetPanel extends GamePanel {
 
         int row1fontHeight = (int) (genericRowHeight * .7);
 
-        mLevelLabel = new BeveledButton((int) (genericRowWidth * .15), genericRowHeight, "Lv. 130", color);
+        mLevelLabel = new BeveledButton((int) (genericRowWidth * .15), genericRowHeight, color);
         mLevelLabel.setFont(getFontForHeight(row1fontHeight));
 
-        mTypeLabel = new BeveledButton((int) (genericRowWidth * .25), genericRowHeight, "Water", color);
+        mTypeLabel = new BeveledButton((int) (genericRowWidth * .25), genericRowHeight, color);
         mTypeLabel.setFont(getFontForHeight(row1fontHeight));
 
-        mNameLabel = new BeveledButton((int) (genericRowWidth * .6), genericRowHeight, "Heominhon", color);
+        mNameLabel = new BeveledButton((int) (genericRowWidth * .6), genericRowHeight, color);
         mNameLabel.setTextAlignment(Pos.CENTER_LEFT);
         mNameLabel.setFont(getFontForHeight(row1fontHeight));
 
@@ -187,7 +183,7 @@ public class TargetPanel extends GamePanel {
             JSONObject tag = tags.getJSONObject(key);
 //            int duration = tag.getInt("duration");
             String name = tag.getString("name");
-            BeveledButton bb = new BeveledButton(mTagsPanelButtonWidths, mTagsPanelButtonHeights, name, mColor);
+            BeveledButton bb = new BeveledButton(mTagsPanelButtonWidths, mTagsPanelButtonHeights, mColor);
             mTagsPanel.getChildren().add(bb);
         }
     }

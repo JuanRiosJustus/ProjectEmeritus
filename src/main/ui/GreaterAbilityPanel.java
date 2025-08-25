@@ -54,7 +54,7 @@ public class GreaterAbilityPanel extends GamePanel {
 
         // Create statistics panel
         // LABEL
-        BeveledButton mStatisticsPanelLabel = new BeveledButton(mRowWidth, mRowHeight, "Ability", mColor);
+        BeveledButton mStatisticsPanelLabel = new BeveledButton(mRowWidth, mRowHeight, mColor);
         HBox row4 = new HBox(mStatisticsPanelLabel);
 
         mContentPanel.getChildren().addAll(

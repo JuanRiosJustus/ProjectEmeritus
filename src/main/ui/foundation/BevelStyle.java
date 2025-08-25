@@ -19,6 +19,8 @@ public class BevelStyle extends GamePanel {
     protected BevelText mTextNode = new BevelText();
     protected EventHandler<? super Event> mButtonPressedHandler = null;
     protected EventHandler<? super Event> mButtonReleasedHandler = null;
+    protected EventHandler<? super Event> mButtonEnteredHandler = null;
+    protected EventHandler<? super Event> mButtonExitedHandler = null;
     protected final double originalScale = 1.0; // Store original scale for reset
     protected Color mBaseColor = null;
     protected Border mOuterBevel;
@@ -68,7 +70,9 @@ public class BevelStyle extends GamePanel {
         mDropShadow.setSpread(1.0);
 
 
-        mTextNode = new BevelText(width, height);
+
+//        mTextNode = new BevelText(width, height);
+        mTextNode = new BevelText();
 //        mTextNode.setFont(mFont);
 //        mTextNode.setFill(Color.WHITE);
 //        mTextNode.setFocusTraversable(false);
@@ -77,10 +81,8 @@ public class BevelStyle extends GamePanel {
 
 //        mDropShadow.setInput(mInnerShadow);
 //        mTextNode.setEffect(mDropShadow);
-
-        mTextNodeContainer = new HBox(mTextNode.getContent());
+        mTextNodeContainer = new HBox(mTextNode);
         mTextNodeContainer.setAlignment(Pos.CENTER);
-        mTextNodeContainer.setPadding(new Insets(5, 1, 1, 1));
 
     }
 
@@ -135,15 +137,18 @@ public class BevelStyle extends GamePanel {
     }
 
     public String getText() { return mTextNode.getText(); }
-    public void setTextColor(Color color) { mTextNode.setForegroundColor(color); }
+    public void setTextColor(Color color) { mTextNode.setForeground(color); }
 //    public void setFont(Font font)
     public void setText(String txt) {
 //        if (txt.equalsIgnoreCase(mTextNode.getText())) { return; }
-        mTextNode.setText(txt);
+        mTextNode.setContent(txt, mWidth, mHeight);
+//        mTextNode.setText(txt);
     }
+
+
     public void setExtrusionFactor(double factor) { mTextNode.setExtrusionFactor(factor); }
     public void setText(String txt, Color color) {
-        setText(mTextNode.getContent(), txt, mWidth, mHeight, color);
+        setText(mTextNode, txt, mWidth, mHeight, color);
     }
 
 //    public void setText(String txt, Color color, Font font) {

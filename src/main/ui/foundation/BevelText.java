@@ -1,63 +1,197 @@
 package main.ui.foundation;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
 import main.game.stores.FontPool;
 
-public class BevelText {
-    private DropShadow mDropShadow = new DropShadow();
-    private Text mText = new Text();
-    private int mWidth = 10;
-    private int mHeight = 5;
-    public BevelText() { this(10, 5); }
+public class BevelText extends Text {
+    private final DropShadow mDropShadow;
+    private static final float DEFAULT_SHADOW_SPREAD = 0.85f;
+    private static final float DEFAULT_SHADOW_RADIUS = 0.085f;
+
+    private int mWidth;
+    private int mHeight;
+    private float mShadowSpread;
+    private float mShadowRadius;
+
+    public BevelText() {
+        this(-1, -1);
+    }
+
     public BevelText(int width, int height) {
         mWidth = width;
         mHeight = height;
 
+        mShadowSpread = DEFAULT_SHADOW_SPREAD;
+        mShadowRadius = DEFAULT_SHADOW_RADIUS;
+
         mDropShadow = new DropShadow();
         mDropShadow.setColor(Color.BLACK);
-        mDropShadow.setRadius(height * 0.05);
-//        mDropShadow.setOffsetX(mHeight * 0.05);
-//        mDropShadow.setOffsetY(mHeight * 0.05);
-        mDropShadow.setOffsetX(height * 0.025);
-        mDropShadow.setOffsetY(-height * 0.01);
-        mDropShadow.setSpread(1.0);
 
-        mText = new Text();
-        mText.setText("");
-        mText.setFill(Color.WHITE);
-
-        mText.setFont(FontPool.getInstance().getFontForHeight(mHeight));
-
-        mText.setFocusTraversable(false);
-        mText.setPickOnBounds(false);
-        mText.setMouseTransparent(true);
-        mText.setEffect(mDropShadow);
+        setFill(Color.WHITE);
+        setFont(FontPool.getInstance().getFontForHeight(mHeight));
+        setEffect(mDropShadow);
+        update(width, height);
     }
 
-    public Text getContent() { return mText; }
-    public void setText(String txt) { mText.setText(txt); mText.setEffect(mDropShadow); }
+    /** === Public API (kept same as before) === */
+    public void setContent(String txt, int width, int height) {
+        setText(txt);
+        setEffect(mDropShadow);
+        update(width, height);
+    }
+
+    public void setContent(String txt) {
+        setText(txt);
+        setEffect(mDropShadow);
+        update(mWidth, mHeight);
+    }
+
     public void setFitText(String txt) { setFitText(txt, 1); }
-    public void setFitText(String txt, double multiplier) {
-        if (mText.getText().equalsIgnoreCase(txt)) { return; }
 
-        Font font = FontPool.getInstance().getFitFont(txt, mText.getFont(), mWidth, mHeight * multiplier);
-        mText.setFont(font);
-        mText.setText(txt);
+    public void setFitText(String txt, double multiplier) {
+        if (getText().equalsIgnoreCase(txt)) return;
+        Font font = FontPool.getInstance()
+                .getFitFont(txt, getFont(), mWidth, mHeight * multiplier);
+        setFont(font);
+        setContent(txt);
+        update(mWidth, mHeight);
     }
-    public void setFont(Font font) { mText.setFont(font); }
-    public void setAlignment(TextAlignment textAlignment) { mText.setTextAlignment(textAlignment); }
-    public void setForegroundColor(Color color) { mText.setFill(color); }
-    public void setScaleX(double x) { mText.setScaleX(x); }
-    public void setScaleY(double y) { mText.setScaleY(y); }
-    public void setTranslateX(double x) { mText.setTranslateX(x); }
-    public void setTranslateY(double y) { mText.setTranslateY(y); }
-    public String getText() { return mText.getText(); }
+
+//    public void setFont(Font font) { setFont(font); }
+    public void setAlignment(TextAlignment textAlignment) { setTextAlignment(textAlignment); }
+    public void setForeground(Color color) { setFill(color); }
+
     public void setExtrusionFactor(double bFactor) {
         mDropShadow.setRadius(mHeight * bFactor);
-        mText.setEffect(mDropShadow);
+        setEffect(mDropShadow);
+    }
+
+    private void update(double w, double h) {
+        double padding = Math.min(w, h) * 0.05; // 5% inset
+
+        // Estimate shadow size relative to height
+        double shadowRadius = h * mShadowRadius;
+        double shadowSpread = mShadowSpread;
+        double shadowOffsetX = h * 0.025;
+        double shadowOffsetY = -h * 0.01;
+
+        // The shadow can extend beyond text bounds in every direction.
+        double shadowExtra = shadowRadius * (1 + shadowSpread);
+
+        // Available space = region size - padding - shadow margins
+        double contentW = w - 2 * (padding + shadowExtra + Math.abs(shadowOffsetX));
+        double contentH = h - 2 * (padding + shadowExtra + Math.abs(shadowOffsetY));
+
+        if (contentW <= 0 || contentH <= 0) {
+            return;
+        }
+
+        // Start from max height
+        Font baseFont = getFont();
+        double size = contentH;
+        setFont(Font.font(baseFont.getFamily(), size));
+
+        // Shrink until text fits WITHIN content box
+        while ((getLayoutBounds().getWidth() > contentW ||
+                getLayoutBounds().getHeight() > contentH) && size > 1) {
+            size -= 1;
+            setFont(Font.font(baseFont.getFamily(), size));
+        }
+
+        // Apply final shadow
+        mDropShadow.setRadius(shadowRadius);
+        mDropShadow.setSpread(shadowSpread);
+        mDropShadow.setOffsetX(shadowOffsetX);
+        mDropShadow.setOffsetY(shadowOffsetY);
+
+        // Measure final text
+        double textW = getLayoutBounds().getWidth();
+        double textH = getLayoutBounds().getHeight();
+
+        // Center it (still visually centered even with shadow)
+        setLayoutX((w - textW) / 2);
+        setLayoutY((h + textH) / 2 - getBaselineOffset());
+        setEffect(mDropShadow);
+    }
+
+//    protected void setupContents(double w, double h) {
+//        mWidth = (int) w;
+//        mHeight = (int) h;
+//
+//        double padding = Math.min(w, h) * 0.05; // 5% inset
+//        double contentW = w - 2 * padding;
+//        double contentH = h - 2 * padding;
+//
+//        if (contentW <= 0 || contentH <= 0) {
+//            return;
+//        }
+//
+//        // Start from content height
+//        Font baseFont = getFont();
+//        double size = contentH;
+//        setFont(Font.font(baseFont.getFamily(), size));
+//
+//        // Shrink until it fits inside the padded content box
+//        while ((getLayoutBounds().getWidth() > contentW ||
+//                getLayoutBounds().getHeight() > contentH) && size > 1) {
+//            size -= 1;
+//            setFont(Font.font(baseFont.getFamily(), size));
+//        }
+//
+//        // Update drop shadow relative to content height
+//        mDropShadow.setRadius(contentH * 0.085);
+//        mDropShadow.setSpread(1);
+//        mDropShadow.setOffsetX(contentH * 0.025);
+//        mDropShadow.setOffsetY(-contentH * 0.01);
+//
+//        // Measure text again after resizing
+//        double textW = getLayoutBounds().getWidth();
+//        double textH = getLayoutBounds().getHeight();
+//
+//        // Center within region (ignoring padding, since we shrunk to fit inside content box)
+//        setLayoutX((w - textW) / 2);
+//        setLayoutY((h + textH) / 2 - getBaselineOffset());
+//        setEffect(mDropShadow);
+//    }
+
+//    @Override
+//    protected double computePrefWidth(double height) {
+//        return prefWidth(height);
+//    }
+//
+//    @Override
+//    protected double computePrefHeight(double width) {
+//        return prefHeight(width);
+//    }
+
+    public void setSpread(float v) {
+    }
+
+    /** === Test Application === */
+    public static class BevelTextTest extends Application {
+        @Override
+        public void start(Stage stage) {
+            BevelText bevelText = new BevelText();
+            bevelText.setContent("Hello BevelText!");
+
+            StackPane root = new StackPane(bevelText);
+            Scene scene = new Scene(root, 400, 200);
+
+            stage.setTitle("BevelText Test");
+            stage.setScene(scene);
+            stage.show();
+        }
+
+        public static void main(String[] args) {
+            launch(args);
+        }
     }
 }

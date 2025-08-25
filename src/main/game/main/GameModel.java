@@ -1162,42 +1162,6 @@ public class GameModel {
 //    }
 
 
-    public JSONArray splitOnBracketedWords(String input) {
-        List<String> result = new ArrayList<>();
-        StringBuilder buffer = new StringBuilder();
-        boolean insideBracket = false;
-
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-
-            if (c == '[') {
-                // Flush anything outside brackets
-                if (!buffer.isEmpty() && !insideBracket) {
-                    result.add(buffer.toString());
-                    buffer.setLength(0);
-                }
-                insideBracket = true;
-                buffer.append(c);
-            } else if (c == ']') {
-                buffer.append(c);
-                if (insideBracket) {
-                    result.add(buffer.toString());
-                    buffer.setLength(0);
-                    insideBracket = false;
-                }
-            } else {
-                buffer.append(c);
-            }
-        }
-
-        // Add any remaining text outside brackets
-        if (!buffer.isEmpty()) {
-            result.add(buffer.toString());
-        }
-
-        return new JSONArray(result);
-    }
-
 
     public JSONArray getEntityTileID(JSONObject request) {
         JSONArray response = new JSONArray();
@@ -1241,12 +1205,12 @@ public class GameModel {
         Set<String> keys = statisticsComponent.getAttributes();
         for (String key : keys) {
             int base = (int) statisticsComponent.getBase(key);
-            int modified = (int) statisticsComponent.getBonus(key);
+            int bonus = (int) statisticsComponent.getBonus(key);
             int current = statisticsComponent.getCurrent(key);
             int total = statisticsComponent.getTotal(key);
             JSONObject attribute = new JSONObject();
             attribute.put("base", base);
-            attribute.put("modified", modified);
+            attribute.put("modified", bonus);
             attribute.put("current", current);
             attribute.put("total", total);
             attributes.put(key, attribute);
@@ -1254,14 +1218,12 @@ public class GameModel {
         response.put("attributes", attributes);
 
 
-        JSONArray abilities = new JSONArray();
-        abilities.addAll(statisticsComponent.getOtherAbility());
+        JSONObject abilities = new JSONObject();
+        abilities.put("basic", statisticsComponent.getBasicAbility());
+        abilities.put("trait", statisticsComponent.getTraitAbility());
+        abilities.put("reaction", statisticsComponent.getReactionAbility());
+        abilities.put("other", new JSONArray(statisticsComponent.getOtherAbility()));
         response.put("abilities", abilities);
-        response.put("basic_ability", statisticsComponent.getBasicAbility());
-        response.put("passive_ability", statisticsComponent.getTraitAbility());
-        response.put("reaction_ability", statisticsComponent.getReactionAbility());
-        response.put("slot_ability", statisticsComponent.getOtherAbility());
-        response.put("other_ability", statisticsComponent.getOtherAbility());
 
         JSONObject tags = new JSONObject();
         keys = statisticsComponent.getTagNames();
@@ -1276,10 +1238,8 @@ public class GameModel {
         response.put("tags", tags);
 
         AbilityComponent abilityComponent = entity.get(AbilityComponent.class);
-        String selectedAbility = abilityComponent.getAbility();
-        if (selectedAbility != null) {
-            response.put("selected_ability", selectedAbility);
-        }
+        String selectedAbility = abilityComponent.getStagedAbility();
+        if (selectedAbility != null) { response.put("selected_ability", selectedAbility); }
 
         return response;
     }
@@ -1583,14 +1543,14 @@ public class GameModel {
      * { "row": 4, "column": 2 }
      * }</pre>
      *
-     * @param input a {@link JSONObject} containing either "tile_id", or "row" and "column"
+     * @param request a {@link JSONObject} containing either "tile_id", or "row" and "column"
      * @return the tile's unique identifier, or {@code null} if not found
      */
-    private String getTile(JSONObject input) {
-        String tileID = input.getString("tile_id");
+    private String getTile(JSONObject request) {
+        String tileID = request.getString("tile_id");
         if (tileID == null) {
-            int row = input.getIntValue("row", -1);
-            int column = input.getIntValue("column", -1);
+            int row = request.getIntValue("row", -1);
+            int column = request.getIntValue("column", -1);
             tileID = mTileMap.tryFetchingTileID(row, column);
         }
 
@@ -1755,10 +1715,10 @@ public class GameModel {
      */
     public JSONArray getTilesInMovementRange(JSONObject request) {
         String tileID = getTile(request);
-        int range = request.getIntValue("range");
+        int movementRange = request.getIntValue("range");
         boolean respect = request.getBooleanValue("respect", true);
 
-        Map<String, String> graph = mTileMap.createDirectedGraph(tileID, range, respect);
+        Map<String, String> graph = mTileMap.createDirectedGraph(tileID, movementRange, respect);
         List<String> inMovementRange = new ArrayList<>(graph.keySet());
         JSONArray result = new JSONArray(inMovementRange);
         return result;
@@ -1812,7 +1772,7 @@ public class GameModel {
      * @return a {@link JSONArray} of tile IDs from origin to destination (inclusive), or an empty array if no valid path exists
      */
     public JSONArray getTilesInMovementPath(JSONObject request) {
-        String tileID = request.getString("start_tile_id"); //getTile(request);
+        String tileID = request.getString("start_tile_id");
         int range = request.getIntValue("range");
         boolean respectfully = request.getBooleanValue("respect", true);
         String endTileID = request.getString("end_tile_id");
@@ -1822,7 +1782,6 @@ public class GameModel {
         JSONArray response = new JSONArray();
         if (!graph.containsKey(tileID)) { return response; }
         if (!graph.containsKey(endTileID)) { return response; }
-
 
         LinkedList<String> queue = new LinkedList<>();
         String currentTileID = endTileID;
@@ -2002,10 +1961,10 @@ public class GameModel {
             destinationAttribute = datums[4];
 
             // Interpret value as percent (e.g. 0.1f = +10%)
-            statisticsComponent.addPercentBonus(source, name, sourceAttribute, (float) value);
+//            statisticsComponent.addPercentBonus(source, name, sourceAttribute, (float) value);
         } else if (datums.length == 3) {
             destinationAttribute = datums[2];
-            statisticsComponent.addFlatBonus(source, name, destinationAttribute, (float) value);
+//            statisticsComponent.addFlatBonus(source, name, destinationAttribute, (float) value);
         }
 
         request.put("attribute", destinationAttribute);
@@ -2606,6 +2565,7 @@ public class GameModel {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
+        AbilityTable abilityTable = AbilityTable.getInstance();
 
         abilityComponent.stageTarget(targetTileID);
         mLogger.info("Updated staged target for {}, to {}", unitEntity, targetTileID);
@@ -2613,8 +2573,8 @@ public class GameModel {
         mLogger.info("Updating staged ability for {}, to {}", unitEntity, ability);
 
         String currentTileID = movementComponent.getCurrentTileID();
-        int range = AbilityTable.getInstance().getRange(ability);
-        int area = AbilityTable.getInstance().getArea(ability);
+        int range = abilityTable.getRange(ability);
+        int area = abilityTable.getArea(ability);
 
         // Setup Area of Sight
         request = new JSONObject();
@@ -2693,7 +2653,7 @@ public class GameModel {
     public JSONObject useMove(JSONObject request) {
         // Unwind parameters
         String unitID = request.getString("unit_id");
-        String destinationTileID = getTile(request);
+        String endTileID = getTile(request);
         boolean commit = request.getBooleanValue("commit", false);
         boolean ignoreRules = request.getBooleanValue("ignore_rules", false);
 
@@ -2703,17 +2663,17 @@ public class GameModel {
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
 
-        if (destinationTileID == null) {
+        if (endTileID == null) {
             return new JSONObject().fluentPut("error", "No Tile Specified");
         }
 
         int move = ignoreRules ? 999 : statisticsComponent.getTotalMovement();
         int climb = ignoreRules ? 999 : statisticsComponent.getTotalClimb();
-        String fromTileID = movementComponent.getCurrentTileID();
+        String startTileID = movementComponent.getCurrentTileID();
 
         // Get Movement Range
         request = new JSONObject();
-        request.put("tile_id", fromTileID);
+        request.put("tile_id", startTileID);
         request.put("range", move);
         request.put("respect", true);
 
@@ -2725,9 +2685,9 @@ public class GameModel {
 
         // Get Movement Path
         request = new JSONObject();
-        request.put("start_tile_id", fromTileID);
+        request.put("start_tile_id", startTileID);
         request.put("range", -1);
-        request.put("end_tile_id", destinationTileID);
+        request.put("end_tile_id", endTileID);
         request.put("respect", true);
 
         response = getTilesInMovementPath(request);
@@ -2736,8 +2696,8 @@ public class GameModel {
         mLogger.info("Updated path for {}, {} tiles", unitEntity, path.size());
 
 
-        movementComponent.stageTarget(destinationTileID);
-        mLogger.info("Updated target tile for {}, {}", unitEntity, destinationTileID);
+        movementComponent.stageTarget(endTileID);
+        mLogger.info("Updated target tile for {}, {}", unitEntity, endTileID);
 
         // try executing action only if specified
         // - Target is not null
@@ -2754,7 +2714,8 @@ public class GameModel {
 
         // do the animation for the tile
         mEventBus.publish(AnimationSystem.createPathingAnimationEvent(
-                unitID,  movementComponent.getTilesInFinalMovementPath()
+                unitID,
+                movementComponent.getTilesInFinalMovementPath()
         ));
 
 
@@ -2773,7 +2734,7 @@ public class GameModel {
 
 
         JSONObject response2 = new JSONObject();
-        response2.put("tile_id", destinationTileID);
+        response2.put("tile_id", endTileID);
         return response2;
     }
 
@@ -3228,9 +3189,6 @@ public class GameModel {
 
         Entity entity = getEntityWithID(tileID);
         if (entity == null) { return; }
-//        15 - 7
-//                7 - 11
-//                        8 - 5
 
         TileComponent tileComponent = entity.get(TileComponent.class);
         tileComponent.setSpawnRegion(faction);

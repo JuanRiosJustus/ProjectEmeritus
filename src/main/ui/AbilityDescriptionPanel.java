@@ -14,7 +14,6 @@ import main.game.main.GameModel;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
-import main.ui.foundation.BeveledKeyValue;
 import main.ui.game.GamePanel;
 import main.utils.StringUtils;
 
@@ -25,6 +24,7 @@ public class AbilityDescriptionPanel extends GamePanel {
     private int mCurrentStatsHash = -1;
     private int mCurrentAbilityHash = -1;
     private String mCurrentID = null;
+    private GameModel mGameModel = null;
     protected HBox mAbilityTitleAndHidePanel = new HBox();
     protected BeveledButton mAbilityTitleButton = null;
     protected BeveledButton mAbilityHideButton = null;
@@ -64,7 +64,7 @@ public class AbilityDescriptionPanel extends GamePanel {
         mAbilityTitleButton = new BeveledButton(titleWidth, titleHeight);
         mAbilityTitleButton.setBorder((int) (titleWidth * .025f), (int) (titleHeight * .05f), color);
         mAbilityTitleButton.setFont(mBannerFont);
-        mAbilityTitleButton.setBackgroundColor(color);
+        mAbilityTitleButton.setBackground(color);
 
         int hideWidth = (bannerWidth - titleWidth);
         int hideHeight = bannerHeight;
@@ -72,7 +72,7 @@ public class AbilityDescriptionPanel extends GamePanel {
         mAbilityHideButton.setFont(mBannerFont);
         mAbilityHideButton.setBorder((int) (titleWidth * .025f), (int) (titleHeight * .05f), color);
         mAbilityHideButton.setText("V");
-        mAbilityHideButton.setBackgroundColor(color);
+        mAbilityHideButton.setBackground(color);
 
         mAbilityTitleAndHidePanel.getChildren().addAll(mAbilityTitleButton, mAbilityHideButton);
 
@@ -128,7 +128,7 @@ public class AbilityDescriptionPanel extends GamePanel {
         );
 
         mAbilityHideButton.setOnMousePressedV2(e -> {
-            String currentText = mAbilityHideButton.getText();
+            String currentText = mAbilityHideButton.getButtonText();
             if (currentText.equalsIgnoreCase("V")) {
                 mAbilityDescriptionScrollPane.setVisible(false);
                 mAbilityHideButton.setText("<");
@@ -162,10 +162,11 @@ public class AbilityDescriptionPanel extends GamePanel {
         mCurrentStatsHash = statsHash;
         mCurrentAbilityHash = abilityHash;
         mCurrentID = entityID;
+        mGameModel = gameModel;
 
 
         mLogger.info("Started updating Greater Ability Information Panel");
-        setupAbilityInformationPanel(gameModel, entityID);
+        setupAbilityInformationPanel(entityID);
         mLogger.info("Finished updating Greater Ability Information Panel");
     }
 
@@ -186,11 +187,50 @@ public class AbilityDescriptionPanel extends GamePanel {
 
 
         mLogger.info("Started updating Simple Ability Information Panel");
-        setupAbilityInformationPanel(gameModel, entityID);
+        setupAbilityInformationPanel(entityID);
         mLogger.info("Finished updating Simple Ability Information Panel");
     }
 
-    public void setupAbilityInformationPanel(GameModel gameModel, String entityID) {
+    public void setupAbilityInformationPanel(String entityID) {
+        JSONObject request = new JSONObject();
+        request.put("id", entityID);
+        JSONObject response = mGameModel.getStatisticsForEntity(request);
+        String selectedAbility = response.getString("selected_ability");
+        if (selectedAbility == null) { return; }
+
+        String fancyAbilityText = StringUtils.convertSnakeCaseToCapitalized(selectedAbility);
+        mAbilityTitleButton.setText(fancyAbilityText);
+        JSONObject abilityData = mGameModel.getAbilityData(selectedAbility);
+        if (abilityData == null) { return; }
+
+        mAbilityDescriptionArea.getChildren().clear();
+        Font font = mAbilityDescriptionAreaFont;
+        String description = abilityData.getString("description");
+        if (description == null) { return; }
+
+        JSONArray splits = StringUtils.splitOnBracketedWords(description);
+
+        double width = 10;
+        double height = 10;
+        Text text = null;
+        for (int i = 0; i < splits.size(); i++) {
+            String split = splits.getString(i);
+            width = JavaFXUtils.computeWidth(font, split);
+            height = JavaFXUtils.computeHeight(font, split.replace(System.lineSeparator(), ""));
+            text = BevelStyle.createText(split, (int) width, (int) height, Color.WHITE, 0.1f);
+            text.setFont(font);
+            if (split.startsWith("[") && split.endsWith("]")) {
+                text.setFill(Color.KHAKI);
+            }
+
+            mAbilityDescriptionArea.getChildren().add(text);
+        }
+
+        text = BevelStyle.createText("\n".repeat(10), (int) width, (int) height, Color.WHITE, 0.1f);
+        mAbilityDescriptionArea.getChildren().add(text);
+    }
+
+    public void setupAbilityInformationPanel_v1(GameModel gameModel, String entityID) {
 
         JSONObject request = new JSONObject();
         request.put("id", entityID);
@@ -239,7 +279,7 @@ public class AbilityDescriptionPanel extends GamePanel {
         mAbilityDescriptionArea.getChildren().clear();
         Font font = mAbilityDescriptionAreaFont;
         String description = abilityData.getString("description");
-        JSONArray splits = gameModel.splitOnBracketedWords(description);
+        JSONArray splits = StringUtils.splitOnBracketedWords(description);
         double width = 10;
         double height = 10;
         Text text = null;

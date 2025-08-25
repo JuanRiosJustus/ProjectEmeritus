@@ -1,7 +1,10 @@
 package main.utils;
 
+import com.alibaba.fastjson2.JSONArray;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class StringUtils {
@@ -250,5 +253,41 @@ public class StringUtils {
         }
 
         return result.toString();
+    }
+
+    public static JSONArray splitOnBracketedWords(String input) {
+        List<String> result = new ArrayList<>();
+        StringBuilder buffer = new StringBuilder();
+        boolean insideBracket = false;
+
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+
+            if (c == '[') {
+                // Flush anything outside brackets
+                if (!buffer.isEmpty() && !insideBracket) {
+                    result.add(buffer.toString());
+                    buffer.setLength(0);
+                }
+                insideBracket = true;
+                buffer.append(c);
+            } else if (c == ']') {
+                buffer.append(c);
+                if (insideBracket) {
+                    result.add(buffer.toString());
+                    buffer.setLength(0);
+                    insideBracket = false;
+                }
+            } else {
+                buffer.append(c);
+            }
+        }
+
+        // Add any remaining text outside brackets
+        if (!buffer.isEmpty()) {
+            result.add(buffer.toString());
+        }
+
+        return new JSONArray(result);
     }
 }

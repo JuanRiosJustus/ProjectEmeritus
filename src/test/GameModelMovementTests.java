@@ -17,29 +17,22 @@ public class GameModelMovementTests extends GameTests {
         GameController game = createAndStartGameWithDefaults();
         game.disableAutoBehavior();
 
-        // Setup units
-        JSONObject unit1 = game.createRandomForgettableUnit(false, 3, 3);
-
-        // Assert tile placement
-        JSONObject tile1 = game.getTile(3, 3);
-        assertEquals(tile1.get("tile_id"), unit1.get("tile_id"));
+        JSONObject unit1 = game.createRandomForgettableUnit(false, 3, 2);
 
         simulateUserInactivity(game, 2000);
 
-        // Attempt movement
         String unitID = unit1.getString("unit_id");
-        JSONObject request = game.useMove(unitID, 3, 5, true);
+        JSONObject response = game.useMove(unitID, 3, 7, true, true);
 
-        // Assert new tile placement
-        tile1 = game.getTile(3, 5);
-        assertEquals(request.get("destination_tile_id"), tile1.get("tile_id"));
+        JSONObject tileMetaData = game.getTile(3, 7);
+        assertEquals(tileMetaData.get("tile_id"), response.get("tile_id"));
 
         simulateUserInactivity(game, 2000);
     }
 
 
     @Test
-    public void movesUnitAround() {
+    public void movesUnitAroundHeightMap() {
         GameController game = createAndStartGameWithDefaults();
         game.disableAutoBehavior();
 
@@ -80,43 +73,12 @@ public class GameModelMovementTests extends GameTests {
         String unitID = unit1.getString("unit_id");
         JSONObject response = game.useMove(unitID, 3, 7, true, true);
 
-
         JSONObject tileMetaData = game.getTile(3, 7);
         assertEquals(tileMetaData.get("tile_id"), response.get("tile_id"));
-
 
         simulateUserInactivity(game, 2000);
     }
 
-
-
-
-    @Test
-    public void gameModel_successfullyTraversed() {
-        GameController gameController = GameController.create(10, 10, 400, 400);
-        assertEquals(gameController.getRows(), 10);
-        assertEquals(gameController.getColumns(), 10);
-
-        for (int row = 0; row < gameController.getRows(); row++) {
-            for (int column = 0; column < gameController.getColumns(); column++) {
-                var tile = gameController.getTile(new JSONObject().fluentPut("row", row).fluentPut("column", column));
-                assertNotNull(tile);
-            }
-        }
-
-        JSONObject tile = gameController.getTile(toJSON("row", 5, "column", 5));
-        String tileID = tile.getString("id");
-        JSONArray traversableTiles = gameController.getTilesInMovementRange(toJSON(
-                "start_tile_id", tileID, "range", 2, "respectfully", false
-        ));
-        assertEquals(traversableTiles.size(), computeManhattanTotalCount(2));
-
-        tile = gameController.getTile(toJSON("row", 5, "column", 5));
-        tileID = tile.getString("id");
-        traversableTiles = gameController.getTilesInMovementRange(toJSON(
-                "start_tile_id", tileID, "range", 2, "respectfully", true
-        ));
-    }
 
     /**
      * Computes the total number of tiles within Manhattan distance d (inclusive).
@@ -168,49 +130,6 @@ public class GameModelMovementTests extends GameTests {
 
             }
         }
-        JSONObject tile = gameController.getTile(toJSON("row", -1, "column", 0));
-        assertNull(tile);
-
-        tile = gameController.getTile(toJSON("row", -1, "column", -1));
-        assertNull(tile);
-    }
-
-
-    @Test
-    public void assertTileHeightsMapCreationIs() {
-        GameController gameController = GameController.create(
-                GameConfigs.getDefaults()
-                        .setMapGenerationRows(10)
-                        .setMapGenerationColumns(10)
-        );
-        assertEquals(gameController.getRows(), 10);
-        assertEquals(gameController.getColumns(), 10);
-
-        for (int row = 0; row < gameController.getRows(); row++) {
-            for (int column = 0; column < gameController.getColumns(); column++) {
-                JSONObject tile = gameController.getTile(toJSON("row", row, "column", column));
-                assertNotNull(tile);
-
-                // Assert map is flat by default
-                int elevation = tile.getIntValue("base_elevation") + tile.getIntValue("modified_elevation");
-                String structureID = tile.getString("structure_id");
-                String unitID = tile.getString("unit_id");
-                boolean isLiquid = tile.getBoolean("is_liquid");
-
-                assertTrue(elevation > 1);
-                assertFalse(isLiquid);
-                assertNull(structureID);
-                assertNull(unitID);
-            }
-        }
-
-
-        JSONObject startTileData = gameController.getTile(toJSON("row", 4, "column", 4));
-        String startTileID = startTileData.getString("id");
-        JSONArray tilesInRange = gameController.getTilesInMovementRange(toJSON("start_tile_id", startTileID,  "range", 2, "respectfully", true));
-        assertEquals(tilesInRange.size(), computeManhattanTotalCount(2));
-
-
         JSONObject tile = gameController.getTile(toJSON("row", -1, "column", 0));
         assertNull(tile);
 

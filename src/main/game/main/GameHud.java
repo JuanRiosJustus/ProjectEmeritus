@@ -33,7 +33,7 @@ public class GameHud extends GamePanel {
         int verticalPadding = (int) (height * .01);
         int horizontalPadding = (int) (width * .01);
 
-        Color color = Color.DIMGRAY;
+        Color color = Color.GREY;
 
         // Create main controls panel
         int mainControlsWidth = (int) (width * .25);
@@ -381,7 +381,7 @@ public class GameHud extends GamePanel {
     }
 
     private void link(Region source, Button sourceToDestination, Region destination, Button destinationToSource, Runnable runnable) {
-        sourceToDestination.addEventHandler(MouseEvent.MOUSE_PRESSED, e -> {
+        sourceToDestination.addEventHandler(MouseEvent.MOUSE_RELEASED, e -> {
             source.setVisible(false);
             destination.setVisible(true);
             runnable.run();

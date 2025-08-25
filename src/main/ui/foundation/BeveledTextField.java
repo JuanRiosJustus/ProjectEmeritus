@@ -146,7 +146,7 @@ public class BeveledTextField extends BevelStyle {
         textField.setVisible(false);
         mButton.setGraphic(mTextNodeContainer);
 
-        mTextNode.setText(textField.getText());
+        mTextNode.setContent(textField.getText());
         mTextNodeContainer.requestFocus();
         mEditing = false;
     }

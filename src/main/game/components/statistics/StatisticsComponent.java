@@ -20,12 +20,15 @@ public class StatisticsComponent extends Component {
     private static final String UNIT = "unit";
     private final Map<String, Statistic> mAttributeMap = new LinkedHashMap<>();
     private final Map<String, Tag> mTagMap = new LinkedHashMap<>();
-    private final String BASE_STATISTICS = "base_statistics";
-    private JSONObject mBaseStatisticsMap = new JSONObject();
-    private final String BONUS_STATISTICS = "bonus_statistics";
-    private JSONObject mBonusStatisticsMap = new JSONObject();
-    private final String RESOURCE_STATISTICS = "resource_statistics";
-    private JSONObject mResourceStatisticsMap = new JSONObject();
+
+    private final String ALL_ABILITIES_HASH = "all_abilities_hashcode";
+    private final String ALL_ABILITIES = "all_abilities";
+    private JSONObject mAllAbilities = new JSONObject();
+
+    private final String STATS_MAP = "statistics";
+    private Statistics mStatistics = new Statistics();
+
+    private String mAbilitySetHashCode = "";
 
     private final String TAGS = "tags";
     private JSONObject mTagsMap = new JSONObject();
@@ -34,14 +37,15 @@ public class StatisticsComponent extends Component {
     private int mHashCode = 0;
     public StatisticsComponent() {
 
-        mBaseStatisticsMap = new JSONObject();
-        put(BASE_STATISTICS, mBaseStatisticsMap);
+        mStatistics = new Statistics();
+        put(STATS_MAP, mStatistics);
 
-        mBonusStatisticsMap = new JSONObject();
-        put(BONUS_STATISTICS, mBonusStatisticsMap);
-
-        mResourceStatisticsMap = new JSONObject();
-        put(RESOURCE_STATISTICS, mResourceStatisticsMap);
+        mAllAbilities = new JSONObject();
+        put(ALL_ABILITIES, mAllAbilities);
+        mAllAbilities.put(BASIC_ABILITY, null);
+        mAllAbilities.put(TRAIT_ABILITY, null);
+        mAllAbilities.put(REACTION_ABILITY, null);
+        mAllAbilities.put(OTHER_ABILITY, new JSONArray());
 
         mTagsMap = new JSONObject();
         put(TAGS, mTagsMap);
@@ -49,7 +53,7 @@ public class StatisticsComponent extends Component {
 
 
     public JSONObject getTags() { return getJSONObject(TAGS); }
-    public JSONObject getStatistics() { return getJSONObject(BASE_STATISTICS); }
+//    public JSONObject getStatistics() { return getJSONObject(BASE_STATISTICS); }
 
 //    public void putStatistics(JSONArray statsList) {
 //        JSONArray stats = getJSONArray(BASE_STATISTICS);
@@ -85,22 +89,21 @@ public class StatisticsComponent extends Component {
 
 
     private static final String BASIC_ABILITY = "basic_ability";
-    public void putBasicAbility(String basic) { put(BASIC_ABILITY, basic); }
-    public String getBasicAbility() { return getString(BASIC_ABILITY); }
+    public void putBasicAbility(String basic) { mAllAbilities.put(BASIC_ABILITY, basic); setAbilitiesHashCode(); }
+    public String getBasicAbility() { return mAllAbilities.getString(BASIC_ABILITY); }
 
     private static final String TRAIT_ABILITY = "trait_ability";
-    public void putTraitAbility(String passive) { put(TRAIT_ABILITY, passive); }
-    public String getTraitAbility() { return getString(TRAIT_ABILITY); }
+    public void putTraitAbility(String trait) { mAllAbilities.put(TRAIT_ABILITY, trait); setAbilitiesHashCode(); }
+    public String getTraitAbility() { return mAllAbilities.getString(TRAIT_ABILITY); }
 
     private static final String REACTION_ABILITY = "reaction_ability";
-    public void putReactionAbility(String reaction) { put(REACTION_ABILITY, reaction); }
-    public String getReactionAbility() { return getString(REACTION_ABILITY); }
+    public void putReactionAbility(String reaction) { mAllAbilities.put(REACTION_ABILITY, reaction); setAbilitiesHashCode(); }
+    public String getReactionAbility() { return mAllAbilities.getString(REACTION_ABILITY); }
 
     private static final String OTHER_ABILITY = "other_ability";
-    public void putOtherAbility(JSONArray other) { put(OTHER_ABILITY, other); }
+    public void putOtherAbility(JSONArray other) { mAllAbilities.put(OTHER_ABILITY, other); setAbilitiesHashCode(); }
     public Set<String> getOtherAbility() {
-        JSONArray otherAbility = getJSONArray(OTHER_ABILITY);
-        if (otherAbility == null) { otherAbility = new JSONArray(); }
+        JSONArray otherAbility = mAllAbilities.getJSONArray(OTHER_ABILITY);
         Set<String> result = new LinkedHashSet<>();
         for (int i = 0; i < otherAbility.size(); i++) {
             String value = otherAbility.getString(i);
@@ -109,27 +112,41 @@ public class StatisticsComponent extends Component {
         return result;
     }
 
-    public Set<String> getAttributes() { return mBaseStatisticsMap.keySet(); }
+    private void setAbilitiesHashCode() {
+        String basic = getBasicAbility();
+        String reaction = getReactionAbility();
+        String trait = getTraitAbility();
+        Set<String> other = getOtherAbility();
+
+        int hashCode = Objects.hash(basic, reaction, trait, other.hashCode());
+        put(ALL_ABILITIES_HASH, hashCode);
+    }
+
+    public List<String> getAllAbilities() {
+        String basic = getBasicAbility();
+        String reaction = getReactionAbility();
+        String trait = getTraitAbility();
+        Set<String> other = getOtherAbility();
+
+        List<String> abilities = new ArrayList<>();
+        abilities.add(basic);
+        abilities.add(reaction);
+        abilities.add(trait);
+        abilities.addAll(other);
+        return abilities;
+    }
+
+    public int getAllAbilitiesHashCode() {
+        return getInteger(ALL_ABILITIES_HASH);
+    }
+
+    public Set<String> getAttributes() { return mStatistics.getStatistics(); }
     public void putStatistics(JSONObject statistics) {
-        JSONObject map = mBaseStatisticsMap;
-        map.clear();
-
-        for (String key : statistics.keySet()) {
-            float value = statistics.getFloatValue(key);
-            map.put(key, value);
-        }
+        mStatistics.setBases(statistics);
         recalculateHash();
     }
 
-    public void putBaseStat(String key, float value) {
-        JSONObject map = mBaseStatisticsMap;
-
-        if (value <= 0) { value = 0; }
-
-        map.put(key, value);
-
-        recalculateHash();
-    }
+    public void putBaseStat(String key, float value) { mStatistics.setBase(key, value); recalculateHash(); }
 
 
     public void putUnit(String unit) { put(StatisticsComponent.UNIT, unit); }
@@ -157,38 +174,11 @@ public class StatisticsComponent extends Component {
         return (int) total;
     }
 
-    public float getBase(String statistic) {
-        float base = (float) mBaseStatisticsMap.getOrDefault(statistic, 0f);
-        return base;
-    }
+    public float getBase(String statistic) { return mStatistics.getBase(statistic); }
 
-    public float getBonus(String statistic) {
-        JSONObject bonusMap = mBonusStatisticsMap.getJSONObject(statistic);
-        if (bonusMap == null) {
-            bonusMap = new JSONObject();
-            mBonusStatisticsMap.put(statistic, bonusMap);
-        }
+    public float getBonus(String statistic) { return mStatistics.getBonus(statistic); }
 
-        float total = 0;
-        for (String key : bonusMap.keySet()) {
-            float bonus = bonusMap.getFloatValue(key);
-            total += bonus;
-        }
-        return total;
-    }
-
-    public int getCurrent(String statistic) {
-        float defaultValue = -1f;
-        float current = (float) mResourceStatisticsMap.getOrDefault(statistic, defaultValue);
-
-        if (current == defaultValue) {
-            float total = getTotal(statistic) * 1f;
-            mResourceStatisticsMap.put(statistic, total);
-            current = total;
-        }
-
-        return (int) current;
-    }
+    public int getCurrent(String statistic) { return (int) mStatistics.getCurrent(statistic); }
 
     public int getMissing(String statistic) {
         float total = getTotal(statistic);
@@ -203,74 +193,38 @@ public class StatisticsComponent extends Component {
 //        return node.getScaling(type);
     }
 
-    public void setResourceStat(String statistic, float value) {
-        float total = getTotal(statistic);
+    public void setResourceStat(String statistic, float value) { mStatistics.setCurrent(statistic, value); }
 
-
-        if (value > total || value < 0) { return; }
-        mResourceStatisticsMap.put(statistic, value);
-    }
-
-    public void toResource(String statistic, float value) {
-        float total = getTotal(statistic);
-        float currentValue = getCurrent(statistic);
-        float newValue = currentValue + value;
-
-        if (newValue < 0) {
-            mResourceStatisticsMap.put(statistic, 0);
-        } else if (newValue > total) {
-            mResourceStatisticsMap.put(statistic, total);
-        } else {
-            mResourceStatisticsMap.put(statistic, newValue);
-        }
-
-        recalculateHash();
-    }
+    public void toResource(String statistic, float value) { mStatistics.addToCurrent(statistic, value); recalculateHash(); }
 
     public void addToResource(String statistic, float value) {
         toResource(statistic, value);
     }
 
-    public void removeFromResource(String statistic, float value) {
+    public void removeFromResource(String statistic, float value) { toResource(statistic, - value); recalculateHash(); }
 
-        toResource(statistic, - value);
-
-        float currentResourceValue = mResourceStatisticsMap.getFloatValue(statistic);
-
-        float targetValue = currentResourceValue - value;
-
-        float highestPossibleValue = getTotal(statistic);
-
-        if (targetValue < 0) {
-           toResource(statistic, targetValue);
-        } else if (targetValue >= highestPossibleValue) {
-            toResource(statistic, highestPossibleValue);
-        } else {
-            return;
-        }
-
-        recalculateHash();
-    }
+    public void addToStatBonus(String key, float value) { mStatistics.addBonus(key, value); }
+    public void addToStatBonus(String key, float value, String source) { mStatistics.addBonus(key, value, source); }
 
 
 
 
     public void addFlatBonus(String source, String name, String statistic, float value) {
-        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
-        node.addFlatBonus(source, name, value);
-        recalculateHash();
+//        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
+//        node.addFlatBonus(source, name, value);
+//        recalculateHash();
     }
 
     public void addPercentBonus(String source, String name, String statistic, float value) {
-        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
-        node.addPercentBonus(source, name, value);
-        recalculateHash();
+//        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
+//        node.addPercentBonus(source, name, value);
+//        recalculateHash();
     }
 
     public void fillResource(String statistic) {
-        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
-        node.fill();
-        recalculateHash();
+//        Statistic node = (Statistic) mBaseStatisticsMap.getJSONObject(statistic);
+//        node.fill();
+//        recalculateHash();
     }
 
     public void putSimpleModification(String source, String name, String attribute, float value) {
@@ -299,8 +253,9 @@ public class StatisticsComponent extends Component {
         mHashCode = 17;
         mHashCode = mHashCode * 31 + mAttributeMap.hashCode();
         mHashCode = mHashCode * 31 + (getBasicAbility() == null ? -1 : getBasicAbility().hashCode());
-        mHashCode = mHashCode * 31 + (getOtherAbility() == null ? - 1 : getOtherAbility().hashCode());
+        mHashCode = mHashCode * 31 + (getReactionAbility() == null ? -1 : getReactionAbility().hashCode());
         mHashCode = mHashCode * 31 + (getTraitAbility() == null ? -1 : getTraitAbility().hashCode());
+        mHashCode = mHashCode * 31 + (getOtherAbility() == null ? - 1 : getOtherAbility().hashCode());
     }
 
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }

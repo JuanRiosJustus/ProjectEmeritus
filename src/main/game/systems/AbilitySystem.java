@@ -151,6 +151,7 @@ public class AbilitySystem extends GameSystem {
             if (currentHash == hashCode) { return; }
             mLogger.info("Started updating {} because of ability");
 
+
 //            removePassiveAbility(entityID);
 //            initializePassiveAbility(entityID);
             mState.put(entityID, hashCode);
@@ -168,6 +169,31 @@ public class AbilitySystem extends GameSystem {
     private void initializePassiveAbility(String entityID) {
         Entity entity = getEntityWithID(entityID);
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        AbilityTable abilityTable = AbilityTable.getInstance();
+
+        List<String> allAbilities = statisticsComponent.getAllAbilities();
+        for (String ability : allAbilities) {
+            Map<String, String> statistics = abilityTable.getStatisticKeys(ability);
+            for (Map.Entry<String, String> entry : statistics.entrySet()) {
+                String prettyKey = entry.getKey();
+                String rawKey = entry.getValue();
+                float rawValue = abilityTable.getFloat(ability, rawKey);
+//                boolean isPercentageValue = abilityTable.isPercentageKey(ability, rawKey);
+//                if (isPercentageValue) {
+//                    float currentTotalStatValue = statisticsComponent.getTotal(prettyKey);
+//                    rawValue = currentTotalStatValue * rawValue;
+//                }
+                statisticsComponent.addToStatBonus(prettyKey, rawValue);
+            }
+//            for (String prettyKey : statistics.keySet()) {
+//                String rawKey = statistics.;
+//                statisticsComponent.addToStatBonus(prettyKey, );
+//                System.out.println("ktokoko");
+//                statisticsComponent.add
+//            }
+        }
+
+
         String passiveAbility = statisticsComponent.getTraitAbility();
         if (passiveAbility == null) { return; }
         JSONArray attributeModifiers = AbilityTable.getInstance().getPassiveAttributes(passiveAbility);

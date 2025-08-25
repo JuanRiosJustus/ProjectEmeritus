@@ -18,8 +18,6 @@ import java.util.*;
 
 public class TileMap extends JSONArray {
     protected static final EmeritusLogger mLogger = EmeritusLogger.create(TileMapBuilder.class);
-//    private Entity[][] mTileEntityMap;
-//    private String[][] mTileIDMap;
     private final List<String> mTileEntityIDs = new ArrayList<>();
     private final Random mRandom = new Random();
     private TileMapParameters mTileMapParameters = null;
@@ -467,8 +465,27 @@ public class TileMap extends JSONArray {
     }
 
 
-//
-    public Map<String, String> createDirectedGraph(String startTileID, int range, boolean respectfully) {
+    /**
+     * Creates a directed graph of reachable tiles starting from the specified tile ID.
+     * <p>
+     * The graph is built using a breadth-first search (BFS) traversal. Each entry in the
+     * returned map represents a directed edge from a child tile to the tile it was reached from
+     * (its parent). The starting tile is included in the map with a {@code null} parent.
+     * </p>
+     *
+     * <p>
+     * Traversal can be limited by a maximum search range, and optionally restricted to only
+     * navigable tiles if {@code respectfully} is {@code true}.
+     * </p>
+     *
+     * @param startTileID the unique identifier of the tile to start traversal from
+     * @param range the maximum depth to traverse; use a negative value for unlimited range
+     * @param respect if {@code true}, traversal will not proceed through tiles
+     *                     that are marked as non-navigable
+     * @return a map where each key is a discovered tile ID and each value is the parent tile ID
+     *         from which it was reached; the starting tile maps to {@code null}
+     */
+    public Map<String, String> createDirectedGraph(String startTileID, int range, boolean respect) {
         Map<String, Integer> depthMap = new HashMap<>();
         depthMap.put(startTileID, 0);
 
@@ -508,14 +525,13 @@ public class TileMap extends JSONArray {
                 Entity adjacentTileEntity = getEntityWithID(adjacentTileID);
                 if (adjacentTileEntity == null) { continue; }
                 TileComponent adjacentTile = adjacentTileEntity.get(TileComponent.class);
-                if (respectfully && adjacentTile.isNotNavigable()) { continue; }
+                if (respect && adjacentTile.isNotNavigable()) { continue; }
 
                 toVisit.add(adjacentTileID);
                 graphMap.put(adjacentTileID, currentTileID);
                 depthMap.put(adjacentTileID, depth + 1);
             }
         }
-
 
 //        printElevationGrid(new ArrayList<>(graph.keySet()));
         return graphMap;

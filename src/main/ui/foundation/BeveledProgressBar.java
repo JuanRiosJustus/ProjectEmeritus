@@ -2,7 +2,6 @@ package main.ui.foundation;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -20,7 +19,7 @@ public class BeveledProgressBar extends BevelStyle {
         super(width, height, baseColor);
 
         // ** Background of Progress Bar (Beveled) **
-        setBorder(new Border(mOuterBevel.getStrokes().get(0), mInnerBevel.getStrokes().get(0)));
+        setBorder(new Border(mOuterBevel.getStrokes().getFirst(), mInnerBevel.getStrokes().getFirst()));
         setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // ** Progress Fill (Colored Bar) **
@@ -32,17 +31,18 @@ public class BeveledProgressBar extends BevelStyle {
 
         // ** Text (Centered Inside Progress Bar) **
 //        setText(mTextNode.getContent(), "", width, height, Color.WHITE);
+//        mTextNode = new BevelText(width, height);
         mTextNode.setAlignment(TextAlignment.CENTER);
-        mTextNode.setForegroundColor(Color.WHITE);
+        mTextNode.setForeground(Color.WHITE);
 //        mTextNode.setTextAlignment(TextAlignment.CENTER);
         setProgress(100, 100, 100 + "/" + 100);
         setPadding(new Insets(2, 2, 2, 2));
 
         // ** Ensure Text & Progress Stay Inside Beveled Frame **
-        StackPane.setMargin(mTextNode.getContent(), new Insets(0, getOuterBevelSize() * 2, 0, getOuterBevelSize() * 2));
+        StackPane.setMargin(mTextNode, new Insets(0, getOuterBevelSize() * 2, 0, getOuterBevelSize() * 2));
 
         // ** Add Components to StackPane **
-        getChildren().addAll(progressFill, mTextNode.getContent());
+        getChildren().addAll(progressFill, mTextNode);
 
         // ** Smooth Progress Update (LERP) **
         new AnimationTimer() {
@@ -57,11 +57,7 @@ public class BeveledProgressBar extends BevelStyle {
     public void setProgress(int current, int max, String txt) {
         if (current <= 0 || current > max) { return; }
         targetProgress = Math.max(0, Math.min((double) current / max, 1)); // Clamp between 0 and 1
-//        setText(txt);
-//        setText(mTextNode, txt, mWidth, mHeight, Color.WHITE, mTextNode.getFont());
-
-        mTextNode.setText(txt);
-//        mTextNode.setFont(mTextNode.getFont());
+        mTextNode.setContent(txt, mWidth, mHeight);
     }
 
 //    public void setFont()

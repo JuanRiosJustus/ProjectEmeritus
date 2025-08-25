@@ -54,7 +54,7 @@ public class SelectedTilePanel extends BevelStyle {
         // 🔹 **Label Below Canvas**
         int labelWidth = width;
         int labelHeight = (int) (height * 0.2);
-        mLabel = new BeveledButton(labelWidth, labelHeight, "TEST", color);
+        mLabel = new BeveledButton(labelWidth, labelHeight, color);
         mLabel.setFocusTraversable(false);
         mLabel.setFont(getFontForHeight(labelHeight));
         mLabel.setPrefWidth(width);

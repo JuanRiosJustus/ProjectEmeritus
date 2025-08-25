@@ -144,11 +144,23 @@ public class JavaFXUtils {
         node.addEventHandler(MouseEvent.MOUSE_RELEASED, handler);
     }
 
+    public static void removeMouseReleasedEvent(Node node,  EventHandler<? super Event> handler) {
+        node.removeEventHandler(MouseEvent.MOUSE_RELEASED, handler);
+    }
+    public static void removeMousePressedEvent(Node node,  EventHandler<? super Event> handler) {
+        node.removeEventHandler(MouseEvent.MOUSE_PRESSED, handler);
+    }
     public static void setOnMouseEnteredEvent(Node node,  EventHandler<? super Event> handler) {
         node.setOnMouseEntered(handler);
     }
     public static void addMouseEnteredEvent(Node node,  EventHandler<? super Event> handler) {
         node.addEventHandler(MouseEvent.MOUSE_ENTERED, handler);
+    }
+    public static void removeMouseEnteredEvent(Node node,  EventHandler<? super Event> handler) {
+        node.removeEventHandler(MouseEvent.MOUSE_ENTERED, handler);
+    }
+    public static void removeMouseExitedEvent(Node node,  EventHandler<? super Event> handler) {
+        node.removeEventHandler(MouseEvent.MOUSE_EXITED, handler);
     }
     public static void setOnMouseExitedEvent(Node node,  EventHandler<? super Event> handler) {
         node.setOnMouseExited(handler);

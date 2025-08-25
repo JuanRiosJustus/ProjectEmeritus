@@ -1,7 +1,5 @@
 package main.game.components;
 
-import main.constants.HashSlingingSlasher;
-
 import java.util.*;
 
 public class AbilityComponent extends Component {
@@ -67,7 +65,7 @@ public class AbilityComponent extends Component {
         mHash += mStagedActionRange.hashCode();
     }
 
-    public String getAbility() { return mStagedAbility; }
+    public String getStagedAbility() { return mStagedAbility; }
 
     public String getFinalTileTargeted() { return mFinalTarget; }
     public List<String> getTilesInFinalRange() { return mFinalActionRange; }

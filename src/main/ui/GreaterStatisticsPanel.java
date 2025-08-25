@@ -3,14 +3,17 @@ package main.ui;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
 import main.constants.Pair;
 import main.game.main.GameModel;
 import main.game.stores.FontPool;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
-import main.ui.foundation.BeveledLabel;
+import main.ui.foundation.BeveledKVP;
 import main.ui.foundation.BeveledProgressBar;
 import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
@@ -43,15 +46,13 @@ public class GreaterStatisticsPanel extends GamePanel {
     private static final Set<String> RESOURCES = Set.of("health", "mana", "stamina");
     private static final EmeritusLogger mLogger = EmeritusLogger.create(StatisticsPanel.class);
     private final VBox mContentPanel;
-    private final Map<String, Pair<BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
-    private Map<String, BeveledProgressBar> mResourcePanelProgressBars = null;
+    private final Map<String, Pair<BeveledButton, BeveledButton>> mRows = new HashMap<>();
     private Color mColor = null;
     private int mSelectedTilesChecksum = 0;
     private int mStateOfUnitChecksum = 0;
-    private int mResourceBarWidth = 0;
-    private int mResourceBarHeight = 0;
     private BeveledButton levelLabel = null;
-    private final Map<String, Pair<BeveledLabel, BeveledLabel>> mStatisticsPanelMap = new LinkedHashMap<>();
+//    private final Map<String, Pair<BeveledButton, BeveledButton>> mStatisticsPanelMap = new LinkedHashMap<>();
+    private final Map<String, BeveledKVP> mStatisticsPanelMap = new LinkedHashMap<>();
     private VBox mStatisticsPanel = null;
     private int mStatisticsPanelRowWidth = 0;
     private int mStatisticsPanelRowHeight = 0;
@@ -117,7 +118,7 @@ public class GreaterStatisticsPanel extends GamePanel {
         mStatisticsPanelLabel.getUnderlyingButton().setOnMousePressed(e -> {
             mStatisticsPanel.setVisible(!mStatisticsPanel.isVisible());
             mStatisticsPanel.autosize();
-            mStatisticsPanel.setDisable(true);
+//            mStatisticsPanel.setDisable(true);
         });
 
 
@@ -145,46 +146,80 @@ public class GreaterStatisticsPanel extends GamePanel {
     }
 
 
-    public Pair<BeveledLabel, BeveledLabel> getOrCreateKeyValueRow(
-            Map<String, Pair<BeveledLabel, BeveledLabel>> trackingMap, VBox container, String name, int width, int height) {
-        Pair<BeveledLabel, BeveledLabel> newRow = trackingMap.get(name);
+//    public Pair<BeveledButton, BeveledButton> getOrCreateKeyValueRow(
+//            Map<String, Pair<BeveledButton, BeveledButton>> trackingMap, VBox container, String name, int width, int height) {
+//        Pair<BeveledButton, BeveledButton> newRow = trackingMap.get(name);
+//        if (newRow != null) {
+//            return newRow;
+//        }
+//
+//        int rowWidth = (int) (width * .99);
+//        int rowHeight = height;
+//        Color color = mColor;
+//
+//        // ✅ Create Beveled Labels
+//        BeveledButton leftLabel = new BeveledButton((int) (rowWidth * .666), rowHeight, color);
+//        leftLabel.setTextAlignment(Pos.CENTER_LEFT);
+//        leftLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight));
+//        leftLabel.disableBevelEffect();
+//        leftLabel.disableMouseEnteredAndExitedEffect();
+//
+//        BeveledButton rightLabel = new BeveledButton((int) (rowWidth * .333), rowHeight, color);
+//        rightLabel.setTextAlignment(Pos.CENTER_RIGHT);
+//        rightLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight));
+//        rightLabel.disableBevelEffect();
+//        rightLabel.disableMouseEnteredAndExitedEffect();
+//
+//        HBox contentPane = new HBox(leftLabel, rightLabel);
+//        Pane centeringPane = JavaFXUtils.createHorizontallyCenteringPane(contentPane, width, height, rowWidth);
+//        contentPane.setSpacing(2);
+//        container.getChildren().add(centeringPane);
+//
+////        contentPane.setOnMouseEntered(e -> {
+////            leftLabel.setBackground(color.brighter());
+////            rightLabel.setBackground(color.brighter());
+////
+////        });
+////        contentPane.setOnMouseExited(e -> {
+////            leftLabel.setBackground(color);
+////            rightLabel.setBackground(color);
+////        });
+//
+//        Pair<BeveledButton, BeveledButton> pair = new Pair<>(leftLabel, rightLabel);
+//        trackingMap.put(name, pair);
+//
+//        return pair;
+//    }
+
+    public BeveledKVP getOrCreateKeyValueRow( VBox container, String name, int width, int height) {
+        BeveledKVP newRow = mStatisticsPanelMap.get(name);
         if (newRow != null) {
             return newRow;
         }
 
-        int rowWidth = (int) (width * .98);
+        int rowWidth = (int) (width * .99);
         int rowHeight = height;
-
         Color color = mColor;
 
-        // ✅ Create Beveled Labels
-        BeveledLabel leftLabel = new BeveledLabel((int) (rowWidth * .666), rowHeight, "???L??", color);
-        leftLabel.setAlignment(Pos.CENTER_LEFT);
-        leftLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight));
-        leftLabel.setExtrusionFactor(.08);
 
-        BeveledLabel rightLabel = new BeveledLabel((int) (rowWidth * .333), rowHeight, "???R???", color);
-        rightLabel.setAlignment(Pos.CENTER_RIGHT);
-        rightLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight));
-        rightLabel.setExtrusionFactor(.08);
-//        rightLabel.setBorder((int) (rowWidth * .01), (int) (rowHeight * .01), mColor);
-
-        HBox contentPane = new HBox(leftLabel, rightLabel);
+        BeveledKVP contentPane = new BeveledKVP(rowWidth, rowHeight, color);
         Pane centeringPane = JavaFXUtils.createHorizontallyCenteringPane(contentPane, width, height, rowWidth);
+        contentPane.setSpacing(2);
         container.getChildren().add(centeringPane);
 
-        Pair<BeveledLabel, BeveledLabel> pair = new Pair<>(leftLabel, rightLabel);
-        trackingMap.put(name, pair);
+        mStatisticsPanelMap.put(name, contentPane);
+//        trackingMap.put(name, pair);
 
-        return pair;
+        return contentPane;
     }
 
     public void gameUpdate(GameModel gameModel) {
         // Check that the current entities state will update the ui
         gameModel.updateIsGreaterStatisticsPanelOpen(isVisible());
 
-        int entityHash = gameModel.getActiveEntityStatisticsComponentHash();;
-        String entityID = gameModel.getActiveUnitID();
+        int entityHash = gameModel.getActiveEntityStatisticsComponentHash();
+//        String entityID = gameModel.getActiveUnitID();
+        String entityID = gameModel.getSelectedEntityID();
 
         if (entityHash == mCurrentEntityHash && mCurrentEntityID == entityID) { return; }
         mCurrentEntityHash = entityHash;
@@ -209,21 +244,17 @@ public class GreaterStatisticsPanel extends GamePanel {
         for (String key : stats) {
             JSONObject attribute = attributes.getJSONObject(key);
             if (attribute == null) {
-                Pair<BeveledLabel, BeveledLabel> row = getOrCreateKeyValueRow(
-                        mStatisticsPanelMap,
+                BeveledKVP row = getOrCreateKeyValueRow(
                         mStatisticsPanel,
                         UUID.randomUUID().toString(),
                         mStatisticsPanelRowWidth,
                         mStatisticsPanelRowHeight
                 );
-//                row.getFirst().setText("");
-//                row.getSecond().setText("");
             } else {
                 int current = attribute.getIntValue("current");
                 int base = attribute.getIntValue("base");
                 int modified = attribute.getIntValue("modified");
-                Pair<BeveledLabel, BeveledLabel> row = getOrCreateKeyValueRow(
-                        mStatisticsPanelMap,
+                BeveledKVP row = getOrCreateKeyValueRow(
                         mStatisticsPanel,
                         key,
                         mStatisticsPanelRowWidth,
@@ -231,12 +262,22 @@ public class GreaterStatisticsPanel extends GamePanel {
                 );
 
 
-                row.getFirst().setText(StringUtils.convertSnakeCaseToCapitalized(key));
+                row.getLeft().setText(StringUtils.convertSnakeCaseToCapitalized(key));
                 String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
                 if (RESOURCES.contains(key)) {
                     txt = current + " / " + txt;
                 }
-                row.getSecond().setText(txt);
+                row.getRight().setText(txt);
+
+
+                Tooltip tooltip = new Tooltip("name");
+//                tooltip.setFont(Font.font("Verdana", FontPosture.REGULAR, 20));
+//                tooltip.setOpacity(1);
+                tooltip.setStyle("-fx-background-color: yellow; -fx-text-fill: black; -fx-font-size: 20;");
+                row.getRight().setTooltip(tooltip);
+                tooltip.setOnShowing(e -> {
+                    System.out.println("rorok");
+                });
             }
         }
     }
